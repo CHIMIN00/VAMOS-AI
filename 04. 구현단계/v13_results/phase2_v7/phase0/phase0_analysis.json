@@ -1,0 +1,73 @@
+{
+  "session": "session_12",
+  "phase": "phase2_v7_phase0",
+  "analysis_timestamp": "2026-03-21T23:25:00",
+  "fp_analysis": {
+    "0-A": {
+      "raw_errors": 5,
+      "false_positives": 5,
+      "real_errors": 0,
+      "fp_reason": "pipe characters (|) in enum/list values inside table cells (e.g., 'A|B|C'). All 5 cases show actual_cols = expected_cols + N where N matches pipe-separated enum count. Same pattern as v6 Phase 0.",
+      "details": [
+        {"line": "PART1:203", "cause": "enum values with | separator inside cell"},
+        {"line": "PART1:834", "cause": "enum values with | separator inside cell"},
+        {"line": "PART1:1150", "cause": "enum values with | separator inside cell"},
+        {"line": "RPT:83", "cause": "enum values with | separator inside cell"},
+        {"line": "RPT:863", "cause": "enum values with | separator inside cell"}
+      ]
+    },
+    "0-B": {
+      "raw_errors": 11,
+      "false_positives": 11,
+      "real_errors": 0,
+      "fp_reason": "Multiple FP sources: (1) subtotal/grandtotal confusion — sum row sums only direct rows, not sub-sections; (2) currency/percentage numbers parsed alongside counting numbers; (3) version identifiers (V0,V1) parsed as numeric; (4) concatenated number strings (timestamps, IDs) inflating sums",
+      "details": [
+        {"table": "PART1:399-407", "cause": "subtotal sums across sub-sections, not just immediate table rows"},
+        {"table": "PART1:535-541", "cause": "currency values (₩) with different magnitude units (만원 vs 원)"},
+        {"table": "RPT:422-432", "cause": "percentage numbers mixed with count columns"},
+        {"table": "RPT:503-509", "cause": "version numbers parsed as numeric"},
+        {"table": "RPT:696-702", "cause": "ID numbers parsed alongside counts"},
+        {"table": "RPT:751-762", "cause": "timestamp/hash fragments parsed as numbers (1415434435)"},
+        {"table": "RPT:779-786", "cause": "percentage concatenation (35378 from 353+78% cells)"}
+      ]
+    },
+    "0-C": {"raw_errors": 0, "real_errors": 0, "note": "Clean PASS"},
+    "0-D": {
+      "raw_items": 312,
+      "symbolic_verify_conflicts": 2,
+      "real_conflicts": 0,
+      "fp_reason": "2 symbolic-verify 'conflicts' are FP — both are changelog/delta entries where different PART1 vs PART2 sections describe different modifications sharing the same parsed_key pattern ('설계 추가', '4종 교차 검증 반영'). These are not LOCK value inconsistencies but changelog entries about different topics.",
+      "corrected_verdict": "PASS"
+    },
+    "0-E": {"raw_errors": 0, "real_errors": 0, "note": "Clean PASS"},
+    "0-F": {"raw_errors": 0, "real_errors": 0, "note": "Clean PASS"},
+    "0-G": {"raw_errors": 0, "real_errors": 0, "note": "Clean PASS"},
+    "0-H": {
+      "raw_errors": 5,
+      "false_positives": 5,
+      "real_errors": 0,
+      "fp_reason": "Header counts refer to total items across sub-sections/sub-tables, not just the immediate next table",
+      "details": [
+        {"line": "PART1:432", "heading": "소프트웨어 설치 (7건)", "cause": "7 items spread across sub-groups, table shows 3 groups"},
+        {"line": "PART1:730", "heading": "LOCK 확정 사항 (57항목)", "cause": "57 items across 6 sub-categories, each with its own table"},
+        {"line": "PART1:1158", "heading": "극고 위험 2건", "cause": "2 issues, each with multiple detail rows"},
+        {"line": "PART2:2489", "heading": "IPC 커맨드 핸들러 (72개)", "cause": "72 handlers, table shows representative 5 categories"},
+        {"line": "PART2:2611", "heading": "MCP 외부 서버 카탈로그", "cause": "complex heading with V1=7, V2+=3, V3=1 breakdown"}
+      ]
+    }
+  },
+  "consistency_check": {
+    "v6_phase0_sha256": {
+      "PART1": "f43690fa9515337d",
+      "PART2": "e061e932c0c8962f",
+      "RPT": "bcd911541d1cfc82"
+    },
+    "v7_phase0_sha256": {
+      "PART1": "f43690fa9515337d",
+      "PART2": "e061e932c0c8962f",
+      "RPT": "bcd911541d1cfc82"
+    },
+    "files_unchanged": true,
+    "note": "SHA256 identical between v6 and v7 Phase 0 runs — same SOT-corrected files, confirming deterministic execution (/deterministic)"
+  }
+}

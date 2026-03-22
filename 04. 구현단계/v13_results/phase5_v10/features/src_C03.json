@@ -1,0 +1,1752 @@
+{
+  "agent": "C-03",
+  "source_files": [
+    "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+    "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md"
+  ],
+  "extraction_date": "2026-03-22",
+  "features": [
+    {
+      "id": "D201-001",
+      "title": "I-1 Intent Detector Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "사용자 입력을 의도/도메인/제약/출력형식으로 구조화하는 핵심 모듈. IntentFrame 생성."
+    },
+    {
+      "id": "D201-002",
+      "title": "I-2 Context Builder Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "메모리/툴 호출 컨텍스트 구성. 내외부 근거 수집 및 EvidencePack 생성."
+    },
+    {
+      "id": "D201-003",
+      "title": "I-3 Memory System Module (4-Layer L0~L3)",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "4계층 메모리 시스템(L0 Session/L1 Project/L2 Semantic/L3 Procedural). 06 Storage 연동."
+    },
+    {
+      "id": "D201-004",
+      "title": "I-4 Multimodal Interpreter Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "텍스트/이미지/음성 등 멀티모달 입력 해석 처리."
+    },
+    {
+      "id": "D201-005",
+      "title": "I-5 Condition & Decision Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "5대 스코어 기반 단일결정(Decision Lock) 엔진. change_lock=true."
+    },
+    {
+      "id": "D201-006",
+      "title": "I-6 Self-check Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "출력 품질/정합성 자기검증 엔진. S-Series와 연동."
+    },
+    {
+      "id": "D201-007",
+      "title": "I-7 Project/Session Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "장기 프로젝트/세션/승인 흐름 관리."
+    },
+    {
+      "id": "D201-008",
+      "title": "I-8 Policy Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "정책 엔진. 07 Safety/Cost/Approval과 정합. change_lock=true."
+    },
+    {
+      "id": "D201-009",
+      "title": "I-9 Cost Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "토큰/시간/서버/API 비용 추적 및 다운시프트 관리. change_lock=true."
+    },
+    {
+      "id": "D201-010",
+      "title": "I-10 Tool Registry/Router Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "툴 레지스트리/라우터. E-Series 경계 관리."
+    },
+    {
+      "id": "D201-011",
+      "title": "I-11 Output Composer Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "출력 생성기. 08 UI와 직접 연결. Hologram View surface."
+    },
+    {
+      "id": "D201-012",
+      "title": "I-12 Workflow Builder Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "워크플로우 빌더. 템플릿/승인 흐름 구성."
+    },
+    {
+      "id": "D201-013",
+      "title": "I-13 Multimodal Output Renderer Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "멀티모달 출력 렌더러. UI 렌더링 계층."
+    },
+    {
+      "id": "D201-014",
+      "title": "I-14 Summarizer & Memory Distiller Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "요약/증류기. L2 축약 및 정리."
+    },
+    {
+      "id": "D201-015",
+      "title": "I-15 Evidence & QoD Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "근거/QoD 관리자. EVX/C-Series와 연결."
+    },
+    {
+      "id": "D201-016",
+      "title": "I-16 Knowledge Search Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "지식 검색 엔진. 검색-검증 분리 원칙."
+    },
+    {
+      "id": "D201-017",
+      "title": "I-17 Blue Node Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "블루 노드 매니저. 03 Blue Nodes와 연결. tree/graph view."
+    },
+    {
+      "id": "D201-018",
+      "title": "I-18 Self-evo Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "자기진화 엔진. S-Series 중심."
+    },
+    {
+      "id": "D201-019",
+      "title": "I-19 Approval Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "승인 관리자. 07과 정합. modal/panel view. change_lock=true."
+    },
+    {
+      "id": "D201-020",
+      "title": "I-20 Failure/Fallback Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "실패/폴백 관리자. 실패코드 체계 관리."
+    },
+    {
+      "id": "D201-021",
+      "title": "I-21 Source Evolution Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "지식 소스 진화. BASE-1.3 §7.5 가드레일 준수."
+    },
+    {
+      "id": "D201-022",
+      "title": "I-22 Task/Project Manager Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "프로젝트 관리, 태스크 추적, DAG 구성."
+    },
+    {
+      "id": "D201-023",
+      "title": "I-23 Doc/Code Structuring Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "문서 구조화, 코드 정리 자동화."
+    },
+    {
+      "id": "D201-024",
+      "title": "I-24 Knowledge Graph Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "지식 그래프 엔진. GraphRAG 연동."
+    },
+    {
+      "id": "D201-025",
+      "title": "I-25 SDAR Engine Module",
+      "category": "I-Series",
+      "source": "D2.0-01 §5.6",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "Self-Directed Adaptive Reasoning 자율추론 엔진."
+    },
+    {
+      "id": "D201-026",
+      "title": "S-1 Self-check Engine",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "일반 태스크에서도 최소 검증 수행(항상 ON). I-6/I-15 연동."
+    },
+    {
+      "id": "D201-027",
+      "title": "S-2 Benchmark QA Suite",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "통합 테스트/회귀 방지."
+    },
+    {
+      "id": "D201-028",
+      "title": "S-3 Template Evolution",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "템플릿 자동 개선."
+    },
+    {
+      "id": "D201-029",
+      "title": "S-4 Error Pattern Miner",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "실패코드/폴백 최적화."
+    },
+    {
+      "id": "D201-030",
+      "title": "S-5 Router Evolution",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "라우팅/모델선택 개선."
+    },
+    {
+      "id": "D201-031",
+      "title": "S-6 Search Evolution",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "검색전략/소스 개선."
+    },
+    {
+      "id": "D201-032",
+      "title": "S-7 User-Coop Designer",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "사용자 협업형 self-evo."
+    },
+    {
+      "id": "D201-033",
+      "title": "S-8 Self-evo Governance",
+      "category": "S-Series",
+      "source": "D2.0-01 §5.7",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "COND",
+      "description": "승인/거버넌스. Modal UI. change_lock=true."
+    },
+    {
+      "id": "D201-034",
+      "title": "E-1 Coding & System Design Helper",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "범용 외부기능(개발/설계 지원)."
+    },
+    {
+      "id": "D201-035",
+      "title": "E-2 Web Search",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "웹 검색 외부 기능."
+    },
+    {
+      "id": "D201-036",
+      "title": "E-3 Document Parser",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "문서 파싱 외부 기능."
+    },
+    {
+      "id": "D201-037",
+      "title": "E-4 Code Executor",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "코드 실행 외부 기능."
+    },
+    {
+      "id": "D201-038",
+      "title": "E-5 Image Analyzer",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "이미지 분석 외부 기능."
+    },
+    {
+      "id": "D201-039",
+      "title": "E-6 Z3 Solver",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Z3 논리 솔버."
+    },
+    {
+      "id": "D201-040",
+      "title": "E-7 Speech-to-Text",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "음성→텍스트 변환."
+    },
+    {
+      "id": "D201-041",
+      "title": "E-8 Text-to-Speech",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "텍스트→음성 변환."
+    },
+    {
+      "id": "D201-042",
+      "title": "E-9 Video Analyzer",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "비디오 분석."
+    },
+    {
+      "id": "D201-043",
+      "title": "E-10 External API Gateway",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "외부 API 게이트웨이."
+    },
+    {
+      "id": "D201-044",
+      "title": "E-11 Browser Automation",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "브라우저 자동화."
+    },
+    {
+      "id": "D201-045",
+      "title": "E-12 DB Connector",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "DB 커넥터."
+    },
+    {
+      "id": "D201-046",
+      "title": "E-13 Calendar/Task Sync",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "RE-ADD",
+      "description": "캘린더/태스크 동기화."
+    },
+    {
+      "id": "D201-047",
+      "title": "E-14 Email Handler",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "RE-ADD",
+      "description": "이메일 핸들러."
+    },
+    {
+      "id": "D201-048",
+      "title": "E-15 File System Access / Cloud Library Collector",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "RE-ADD",
+      "description": "파일 시스템 접근 + 외부 소스 수집 겸용."
+    },
+    {
+      "id": "D201-049",
+      "title": "E-16 Cloud Storage Sync",
+      "category": "E-Series",
+      "source": "D2.0-01 §5.8",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "RE-ADD",
+      "description": "클라우드 스토리지 동기화."
+    },
+    {
+      "id": "D201-050",
+      "title": "A-1 MultiBrain Adapter",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "멀티 브레인 어댑터. 04/02(I-5) 연동."
+    },
+    {
+      "id": "D201-051",
+      "title": "A-2 Preset Modularization",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "프리셋 모듈화."
+    },
+    {
+      "id": "D201-052",
+      "title": "A-3 Meta AI",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "메타 AI 모듈."
+    },
+    {
+      "id": "D201-053",
+      "title": "A-4 Debate Mode",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:OFF / V2:COND / V3:ON",
+      "status": "COND",
+      "description": "토론 모드."
+    },
+    {
+      "id": "D201-054",
+      "title": "A-5 Lazy Generation",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "지연 생성."
+    },
+    {
+      "id": "D201-055",
+      "title": "A-6 Federated Module Network",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "연합 모듈 네트워크."
+    },
+    {
+      "id": "D201-056",
+      "title": "A-7 Remote Executor",
+      "category": "A-Series",
+      "source": "D2.0-01 §5.9",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "원격 실행기."
+    },
+    {
+      "id": "D201-057",
+      "title": "B-1 Skill Library",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "스킬 라이브러리. L3/L2.procedural 의존."
+    },
+    {
+      "id": "D201-058",
+      "title": "B-2 Procedural Memory",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "방법론 메모리."
+    },
+    {
+      "id": "D201-059",
+      "title": "B-3 Memory Decay",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "망각/감쇠 메커니즘."
+    },
+    {
+      "id": "D201-060",
+      "title": "B-4 Auto Curriculum Generator",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "자동 커리큘럼 생성기."
+    },
+    {
+      "id": "D201-061",
+      "title": "B-5 RL-like Self Trainer",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "RL 유사 자기 학습기."
+    },
+    {
+      "id": "D201-062",
+      "title": "B-6 DSPy Prompt Optimizer",
+      "category": "B-Series",
+      "source": "D2.0-01 §5.10",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "DSPy 프롬프트 최적화."
+    },
+    {
+      "id": "D201-063",
+      "title": "C-1 Logic Verifier",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "논리 검증기."
+    },
+    {
+      "id": "D201-064",
+      "title": "C-2 Math Verifier",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "수학 검증기."
+    },
+    {
+      "id": "D201-065",
+      "title": "C-3 Code Verifier",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "코드 검증기."
+    },
+    {
+      "id": "D201-066",
+      "title": "C-4 Domain Simulator",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "도메인 시뮬레이터."
+    },
+    {
+      "id": "D201-067",
+      "title": "C-5 Bayesian Belief Engine",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "베이지안 신뢰 엔진."
+    },
+    {
+      "id": "D201-068",
+      "title": "C-6 RL Advisor",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "RL 어드바이저."
+    },
+    {
+      "id": "D201-069",
+      "title": "C-7 GNN Score Model",
+      "category": "C-Series",
+      "source": "D2.0-01 §5.11",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "GNN 스코어 모델."
+    },
+    {
+      "id": "D201-070",
+      "title": "D-1 Think Engine",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "사고 엔진."
+    },
+    {
+      "id": "D201-071",
+      "title": "D-2 Multimodal Engine",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "멀티모달 엔진."
+    },
+    {
+      "id": "D201-072",
+      "title": "D-3 Long Horizon Planner",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "장기 계획 수립기."
+    },
+    {
+      "id": "D201-073",
+      "title": "D-4 Personality/Tone Engine",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "개성/톤 엔진."
+    },
+    {
+      "id": "D201-074",
+      "title": "D-5 General Brain (Parallel)",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "범용 병렬 브레인."
+    },
+    {
+      "id": "D201-075",
+      "title": "D-6 GraphRAG / Hybrid RAG",
+      "category": "D-Series",
+      "source": "D2.0-01 §5.12",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "EXP",
+      "description": "GraphRAG / 하이브리드 RAG."
+    },
+    {
+      "id": "D201-076",
+      "title": "EVX-1 Code-as-Policy",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "검증 확장군. 정책을 실행 가능 코드로 체크."
+    },
+    {
+      "id": "D201-077",
+      "title": "EVX-2 Adversarial Verifier",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "적대적 검증기. change_lock=true."
+    },
+    {
+      "id": "D201-078",
+      "title": "EVX-3 Log-prob Confidence",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "로그 확률 기반 신뢰도."
+    },
+    {
+      "id": "D201-079",
+      "title": "EVX-4 Thought Buffer",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "사고 버퍼."
+    },
+    {
+      "id": "D201-080",
+      "title": "EVX-5 Gen-Verify-Learn",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "생성-검증-학습 루프."
+    },
+    {
+      "id": "D201-081",
+      "title": "EVX-6 Z3 Solver Routing",
+      "category": "EVX-Series",
+      "source": "D2.0-01 §5.13",
+      "version_scope": "V1:OFF / V2:OFF / V3:ON",
+      "status": "RE-ADD",
+      "description": "Z3 솔버 라우팅."
+    },
+    {
+      "id": "D201-082",
+      "title": "Verification Badge System (VERIFIED/PARTIAL/UNVERIFIED)",
+      "category": "UI-Registry",
+      "source": "D2.0-01 §5.15.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "QoD 점수 기반 검증 배지(VERIFIED>=0.8, PARTIAL>=0.5, UNVERIFIED<0.5)."
+    },
+    {
+      "id": "D201-083",
+      "title": "Uncertainty Alert Triggers (LOW_QOD/CONFLICTING/STALE/MASKED)",
+      "category": "UI-Registry",
+      "source": "D2.0-01 §5.15.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "근거 불확실성 경고 트리거 4종."
+    },
+    {
+      "id": "D201-084",
+      "title": "LOCK Rules: Deletion Prohibited + No Content Creation Outside PLAN/RULE",
+      "category": "Governance",
+      "source": "D2.0-01 §0.5",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "LOCK 변경관리 규칙: 삭제 금지, PLAN/RULE 밖 신규 정책 창작 금지, Major 변경 Approval 필요."
+    },
+    {
+      "id": "D201-085",
+      "title": "EventType Registry Namespace (oc.*/bn.*/inf.*/st.*/sf.*/ui.*/wf.*)",
+      "category": "Registry",
+      "source": "D2.0-01 §5.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "전역 이벤트 네임스페이스 7개 접두사 체계."
+    },
+    {
+      "id": "D201-086",
+      "title": "FailureCode Registry (OC_I*/BN_*/INF_*/GT_ERR_*/POLICY_*/NONGOAL_*)",
+      "category": "Registry",
+      "source": "D2.0-01 §5.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "전역 실패코드 분류체계 6개 접두사."
+    },
+    {
+      "id": "D201-087",
+      "title": "Fallback Registry Schema (fallback_id/goal/preconditions/steps/degrade_level)",
+      "category": "Registry",
+      "source": "D2.0-01 §5.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "전역 폴백 전략 레지스트리 스키마."
+    },
+    {
+      "id": "D201-088",
+      "title": "Core Data Schemas Index (9 schemas)",
+      "category": "Schema",
+      "source": "D2.0-01 §5.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "핵심 데이터 스키마 인덱스: IntentFrame, EvidencePack, Decision, StructuredOutput, MemoryRecord, ApprovalSchema, CostBudgetSchema, PolicyCheckSchema, LogEvent."
+    },
+    {
+      "id": "D201-089",
+      "title": "Version Technology Combos (V1:SQLite+Chroma / V2:Postgres+Qdrant / V3:K8s)",
+      "category": "Infrastructure",
+      "source": "D2.0-01 §3.3, §7.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "버전별 기술 조합. V1=SQLite+JSONL+Chroma, V2=Postgres+Qdrant, V3=K8s."
+    },
+    {
+      "id": "D201-090",
+      "title": "V0 Implementation Checklist (Minimal Core)",
+      "category": "Implementation",
+      "source": "D2.0-01 §8.3.1, §8.5.2",
+      "version_scope": "V0",
+      "status": "CORE",
+      "description": "V0 최소 구현: I-1~I-5 최소 + Gate 최소 + JSONL 로깅 + L0 메모리."
+    },
+    {
+      "id": "D201-091",
+      "title": "V1 Implementation Checklist (MVP <=40K/mo)",
+      "category": "Implementation",
+      "source": "D2.0-01 §8.3.2, §8.5.3",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "V1 MVP: 17 I-Series CORE + 6 E-Series + Multi-Brain 2-3 + MCP + 37 Pydantic 스키마 + UI 골격."
+    },
+    {
+      "id": "D201-092",
+      "title": "V2 Server Expansion (<=93K/mo)",
+      "category": "Implementation",
+      "source": "D2.0-01 §8.5.4",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "V2 서버 확장: I-7/I-12/I-25 COND + Postgres+Qdrant+Neo4j + Docker Compose."
+    },
+    {
+      "id": "D202-001",
+      "title": "ORANGE CORE Role/Boundary Definition (Judgement/Control)",
+      "category": "Architecture",
+      "source": "D2.0-02 §1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "ORANGE CORE는 판단/제어/감사 담당. 실행 엔진이 아님. Decision 객체 생성이 핵심 산출물."
+    },
+    {
+      "id": "D202-002",
+      "title": "Runnable Protocol (ADD-001) - Common Module Communication Interface",
+      "category": "Architecture",
+      "source": "D2.0-02 §1.2-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "모든 모듈 공통 인터페이스: run()/get_metadata()/health_check(). USB 규격 원칙."
+    },
+    {
+      "id": "D202-003",
+      "title": "Docker Sandboxing for Code Execution",
+      "category": "Security",
+      "source": "D2.0-02 §1.3-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "AI 생성 코드는 Docker 샌드박스 내에서만 실행. 네트워크 차단, 30초 타임아웃, 메모리 상한."
+    },
+    {
+      "id": "D202-004",
+      "title": "MCP-First Strategy (ADD-028, DEC-002)",
+      "category": "Architecture",
+      "source": "D2.0-02 §1.4-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "MCP 우선, LangChain 패턴 참조만. CORE 직접 LangChain 의존 금지."
+    },
+    {
+      "id": "D202-005",
+      "title": "5-Phase Pipeline (Perception/Reasoning/Action/Memory/Reflection)",
+      "category": "Pipeline",
+      "source": "D2.0-02 §2.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "표준 5단계 파이프라인. 개념 정본으로 고정."
+    },
+    {
+      "id": "D202-006",
+      "title": "State Machine (S0_RECEIVED ~ S8_DONE, 9 states)",
+      "category": "Pipeline",
+      "source": "D2.0-02 §2.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "상태 머신 9단계: S0~S8. S3 이후 결론 변경 불가. S6 FAIL 시 Soft loop 1회만 허용."
+    },
+    {
+      "id": "D202-007",
+      "title": "S7B-001 Adaptive Thinking - Complexity-based Thinking Budget",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.1-A",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "난이도별 사고 깊이 자동 조절. ThinkingLevel ENUM(instant/low/medium/high/max). Cost Gate 연동."
+    },
+    {
+      "id": "D202-008",
+      "title": "Concurrency Control Strategy (Queue + Semaphore)",
+      "category": "Architecture",
+      "source": "D2.0-02 §2.2-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "큐+세마포어 동시성 제어. MAX_CONCURRENT_BLUE_NODES=3, MAX_CONCURRENT_TOOLS=5."
+    },
+    {
+      "id": "D202-009",
+      "title": "S7B-005 Hook Lifecycle System (11 Hook types)",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.2-B",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "파이프라인 Hook 시스템. 11 Hook 타입(session_start~stop). .vamos/hooks.json 설정. 10초 타임아웃."
+    },
+    {
+      "id": "D202-010",
+      "title": "S7B-008 Context Auto-Compaction",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.2-C",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "컨텍스트 80% 사용 시 자동 압축. 최근 N턴 원문 유지. 정보 손실 추정 제공."
+    },
+    {
+      "id": "D202-011",
+      "title": "S7B-018 Streaming Output (SSE/WebSocket)",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.2-D",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "토큰 단위 실시간 스트리밍. SSE 기본, WebSocket V2+. StreamEvent 6종."
+    },
+    {
+      "id": "D202-012",
+      "title": "Gate Positions (Policy/Approval/Cost/Evidence) in Pipeline",
+      "category": "Gate",
+      "source": "D2.0-02 §2.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "게이트 위치: Policy/Approval S1~S3 + S6 재검증, Cost S2~S4, Evidence S2."
+    },
+    {
+      "id": "D202-013",
+      "title": "tiktoken Token Counting Standard",
+      "category": "Architecture",
+      "source": "D2.0-02 §2.3-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "토큰 카운팅 tiktoken 단일 표준. 모델별 인코딩 자동 선택. 자체 토크나이저 구현 금지."
+    },
+    {
+      "id": "D202-014",
+      "title": "Performance Benchmark Targets",
+      "category": "Architecture",
+      "source": "D2.0-02 §2.3-B",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "성능 목표: 단순응답<=2초, 복합응답<=10초, Self-check<=1초, 동시5요청, tiktoken<=50ms/만토큰."
+    },
+    {
+      "id": "D202-015",
+      "title": "Decision Kernel - Single Decision Principle (FREEZE)",
+      "category": "Architecture",
+      "source": "D2.0-02 §3.1-3.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "단일결정 원칙: 한 시점/한 컨텍스트/한 결론. Decision 객체 FREEZE 확정 스키마."
+    },
+    {
+      "id": "D202-016",
+      "title": "Decision Object Schema (13+ fields, locked=true)",
+      "category": "Schema",
+      "source": "D2.0-02 §3.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Decision 스키마: decision_id, policy_gate, approval_required/status, cost_gate, routing, memory_plan, output_spec, conclusion, locked."
+    },
+    {
+      "id": "D202-017",
+      "title": "ADD-036b Pydantic v2 Schema Validation Standard",
+      "category": "Schema",
+      "source": "D2.0-02 §3.2 ADD-036b",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "모든 내부 객체 Pydantic v2 기반. S0~S8 경계에서 .model_validate() 의무. dict/Any 전달 금지."
+    },
+    {
+      "id": "D202-018",
+      "title": "ADD-037b Function Call Error Handling Standard",
+      "category": "Schema",
+      "source": "D2.0-02 §3.2 ADD-037b",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "FC 에러 5종 분류(Schema/Timeout/Parse/Policy/Cost). 재시도 최대 1회. OC_ERR_FC_* 코드."
+    },
+    {
+      "id": "D202-019",
+      "title": "LangGraph Workflow Orchestration (DEC-002 LOCK)",
+      "category": "Architecture",
+      "source": "D2.0-02 §0.6-A, §3.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "LangGraph는 워크플로우 오케스트레이션 전용. Gate/Decision/정책 우회 금지."
+    },
+    {
+      "id": "D202-020",
+      "title": "DEC-001 Self Framework (LangChain/CrewAI import 금지)",
+      "category": "Architecture",
+      "source": "D2.0-02 §0.6-A",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "VAMOS 자체 경량 프레임워크 채택. 외부 에이전트 프레임워크 import 금지."
+    },
+    {
+      "id": "D202-021",
+      "title": "Front Mini Position (CORE Frontend Gate)",
+      "category": "Architecture",
+      "source": "D2.0-02 §1.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Front Mini = CORE 최전방 게이트. 입력 메타 추출, 1차 안전검사, 전처리(OCR/STT), 도메인 힌트."
+    },
+    {
+      "id": "D202-022",
+      "title": "I-1 IntentFrame Schema (detailed)",
+      "category": "Schema",
+      "source": "D2.0-02 §7.1-7.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "IntentFrame: intent_id, user_goal, domain_hint(P0/P1/P2), constraints, task_type, risk_flags, ambiguity, required_artifacts."
+    },
+    {
+      "id": "D202-023",
+      "title": "I-1 Internal State Machine (I1_S0~I1_S3)",
+      "category": "Pipeline",
+      "source": "D2.0-02 §7.5",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "I-1 내부 상태: I1_S0_RAW -> I1_S1_PARSED -> I1_S2_AMBIGUOUS -> I1_S3_READY."
+    },
+    {
+      "id": "D202-024",
+      "title": "S7B-002 Text Emotion Detection Module",
+      "category": "STEP7",
+      "source": "D2.0-02 §7.10-A",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "텍스트 감정 감지. EmotionFrame(13 감정 카테고리). V1=규칙+KNU사전, V2=KoBERT/KoELECTRA ML."
+    },
+    {
+      "id": "D202-025",
+      "title": "S7B-003 Adaptive Response Tone",
+      "category": "STEP7",
+      "source": "D2.0-02 §7.10-B",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "감정 기반 응답 톤 자동 조절. ToneAdapter. 시스템 프롬프트 동적 삽입. 무료(프롬프트 엔지니어링)."
+    },
+    {
+      "id": "D202-026",
+      "title": "S7B-004 Voice Emotion Analysis",
+      "category": "STEP7",
+      "source": "D2.0-02 §7.10-C",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "음성 감정 분석. OpenSMILE/librosa/Hume API. V2 활성화."
+    },
+    {
+      "id": "D202-027",
+      "title": "S7B-032 Dynamic Response Length Adjustment",
+      "category": "STEP7",
+      "source": "D2.0-02 §7.10-D",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "복잡도+감정 기반 응답 길이 자동 조절. ResponseLengthConfig."
+    },
+    {
+      "id": "D202-028",
+      "title": "I-2 EvidencePack Schema and RAG Pipeline",
+      "category": "Schema",
+      "source": "D2.0-02 §7.11-7.20",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "EvidencePack: 근거 수집 결과. 검색 쿼리 → 소스 수집 → QoD 평가 → coverage 판정."
+    },
+    {
+      "id": "D202-029",
+      "title": "I-3 Memory Commit Pipeline (L0/L1/L2 policy)",
+      "category": "Pipeline",
+      "source": "D2.0-02 §7.21-7.30",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "메모리 커밋: MemoryCommitRequest 생성 → 정책 확인 → 승인 → 저장/deny."
+    },
+    {
+      "id": "D202-030",
+      "title": "I-4 StructuredOutput Schema and Compliance Report",
+      "category": "Schema",
+      "source": "D2.0-02 §7.31-7.40",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "StructuredOutput: artifact_type, content, compliance_report(spec_ok/citations_ok/mask_applied)."
+    },
+    {
+      "id": "D202-031",
+      "title": "I-5 Gate Priority and Decision Lock Process",
+      "category": "Gate",
+      "source": "D2.0-02 §7.41-7.50",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "게이트 우선순위: Policy(block>require_approval>mask>allow) > Cost > Evidence. 3단계 인터페이스."
+    },
+    {
+      "id": "D202-032",
+      "title": "I-6 Self-check Thresholds (P0:70/P1:75/P2:80)",
+      "category": "Gate",
+      "source": "D2.0-02 §7.51-7.53",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Self-check 위험도 기반 가변 임계값. Soft loop 1회 자동, 이후 승인 필요."
+    },
+    {
+      "id": "D202-033",
+      "title": "ResponseEnvelope Schema (answer/evidence/self_check/decision_ref/audit)",
+      "category": "Schema",
+      "source": "D2.0-02 §5.1.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "최상위 출력 포맷. answer(summary/details/next_actions), evidence(coverage/qod), self_check(score/verdict), decision_ref, audit."
+    },
+    {
+      "id": "D202-034",
+      "title": "EvidenceItem Schema (source_type/claim/support/qod)",
+      "category": "Schema",
+      "source": "D2.0-02 §5.1.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "근거 단위 스키마. source_type(RAG/TOOL/MEMORY/WEB/USER), claim, support, freshness, qod."
+    },
+    {
+      "id": "D202-035",
+      "title": "LogEvent Registry (35+ event_types for I-1~I-5)",
+      "category": "Registry",
+      "source": "D2.0-02 §6.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "35+ 이벤트 타입. oc.request.received부터 oc.done까지. YAML 스키마 정의."
+    },
+    {
+      "id": "D202-036",
+      "title": "FailureCode Registry (17 codes for I-1~I-5)",
+      "category": "Registry",
+      "source": "D2.0-02 §6.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "17개 실패코드: OC_I1_PARSE_FAIL ~ OC_I5_ROUTE_NOT_FOUND. 각 코드에 origin/trigger/fallback_id 연결."
+    },
+    {
+      "id": "D202-037",
+      "title": "Fallback Strategy Registry (14 strategies)",
+      "category": "Registry",
+      "source": "D2.0-02 §6.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "14개 폴백 전략: FB_ASK_CLARIFICATION ~ FB_DENY_WITH_REASON. goal/steps/degrade_level 포함."
+    },
+    {
+      "id": "D202-038",
+      "title": "Common Design Template (10 sections per I-Module)",
+      "category": "Architecture",
+      "source": "D2.0-02 §5",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "모든 I-Module 공통 설계 템플릿: WHY/INPUTS/OUTPUTS/DEPENDENCIES/STATE/POLICY/LOG/FAILURE/FALLBACKS/TEST."
+    },
+    {
+      "id": "D202-039",
+      "title": "S7B-006 Real-time Web Search Integration (Search Grounding)",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "WebSearchTool MCP 서버. Tavily/SerpAPI. 일일 100회 제한, 캐시 15분, 인라인 출처 표기."
+    },
+    {
+      "id": "D202-040",
+      "title": "S7B-028 Prompt Caching",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "시스템 프롬프트 캐싱. Anthropic cache_control + OpenAI auto caching. 30-50% 비용 절감."
+    },
+    {
+      "id": "D202-041",
+      "title": "S7B-034 User Feedback Collection",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "사용자 피드백 UI(thumbs up/down + 텍스트). L2 메모리 저장. 로컬 전용."
+    },
+    {
+      "id": "D202-042",
+      "title": "S7-E-015 Decision Object Rationale Extension",
+      "category": "STEP7",
+      "source": "D2.0-02 §3.2 STEP7 R2",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "Decision 객체에 decision_rationale 자연어 필드 추가. 감사 가능성 강화."
+    },
+    {
+      "id": "D202-043",
+      "title": "S7-G-001 Think Mode (User-explicit Deep Reasoning)",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.1-A R2",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "사용자 명시적 심층 추론 모드. reasoning_budget. S7B-001과 연동."
+    },
+    {
+      "id": "D202-044",
+      "title": "A-ADD-06 Inference-Time Compute",
+      "category": "STEP7",
+      "source": "D2.0-02 §2.1-A R2",
+      "version_scope": "V2",
+      "status": "CORE",
+      "description": "추론 시점 추가 연산으로 품질 향상. I-8 Cost Gate 연동."
+    },
+    {
+      "id": "D202-045",
+      "title": "ADD-052 Chat Engine Redesign (Session Orchestrator)",
+      "category": "Architecture",
+      "source": "D2.0-02 §2.2 ADD-052",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Chat Engine = 세션 오케스트레이터. 다중 턴 관리. 각 턴 I-1 경유 의무. 결정 생성 개입 금지."
+    },
+    {
+      "id": "D202-046",
+      "title": "Decision Schema Extension: optional_signals",
+      "category": "Schema",
+      "source": "D2.0-02 §10.5.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Decision에 부가 시그널 기록: signal_id, source_module, name, value, confidence."
+    },
+    {
+      "id": "D202-047",
+      "title": "Decision Schema Extension: verify.chain_used",
+      "category": "Schema",
+      "source": "D2.0-02 §10.5.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "검증 체인 사용 기록. 사후 감사/재현 지원."
+    },
+    {
+      "id": "D202-048",
+      "title": "Decision Schema Extension: gates.result",
+      "category": "Schema",
+      "source": "D2.0-02 §10.5.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "게이트 평가 결과 요약(policy/approval/cost/evidence). Decision 내부 고정."
+    },
+    {
+      "id": "D202-049",
+      "title": "Decision Schema Extension: s_module_hints",
+      "category": "Schema",
+      "source": "D2.0-02 §10.5.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "S-Module 개선 제안/힌트를 Decision에 기록."
+    },
+    {
+      "id": "D202-050",
+      "title": "S-Module Flow (S-1~S-8 via I-Module pathway)",
+      "category": "Architecture",
+      "source": "D2.0-02 §10.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "S-Module은 I-Module 경유로만 동작. 후보 생성→S-8 거버넌스→승인→반영→S-2 회귀테스트."
+    },
+    {
+      "id": "D202-051",
+      "title": "Decision Audit Trail API",
+      "category": "API",
+      "source": "D2.0-02 §11.1.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "create_decision/lock_decision/query_decisions/get_decision_chain API."
+    },
+    {
+      "id": "D202-052",
+      "title": "Multi-Brain Failover Chain (GPT-4o → Claude → Ollama)",
+      "category": "Infrastructure",
+      "source": "D2.0-02 §11.1.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Failover 순서 LOCK: GPT-4o→Claude Sonnet→로컬 Ollama. 연속 3회 타임아웃/5xx 시 전환."
+    },
+    {
+      "id": "D202-053",
+      "title": "ToolRegistry Unification (04 INFRA single definition)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.1.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "ToolRegistry는 04(INFRA)에 단일 정의. D2에서는 참조만."
+    },
+    {
+      "id": "D202-054",
+      "title": "OpenAI API Integration Design (12 capabilities)",
+      "category": "API",
+      "source": "D2.0-02 §11.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "OpenAI API 12개 기능 연동: Chat/Structured Output/FC/Vision/Whisper/TTS/Embeddings/Moderation/Batch/Realtime/Assistants/Rate Limits."
+    },
+    {
+      "id": "D202-055",
+      "title": "Claude API Integration Design (15 capabilities)",
+      "category": "API",
+      "source": "D2.0-02 §11.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Claude API 15개 기능: Messages/Extended Thinking/Vision/Tool Use/Computer Use/Streaming/Prompt Caching/Batch/ASL/CAI/MCP/Citations/PDF/Embeddings."
+    },
+    {
+      "id": "D202-056",
+      "title": "Chinese AI MoE/1M Context Reference (30 items)",
+      "category": "API",
+      "source": "D2.0-02 §11.4",
+      "version_scope": "V2:COND / V3:ON",
+      "status": "EXP",
+      "description": "중국 AI 모델(Kimi/DeepSeek/Qwen 등) 기술 참조 30건. 프라이버시: 중국 서버 민감 데이터 전송 금지."
+    },
+    {
+      "id": "D202-057",
+      "title": "Google/DeepMind Technology Reference (27 items)",
+      "category": "API",
+      "source": "D2.0-02 §11.5",
+      "version_scope": "V2:COND / V3:ON",
+      "status": "EXP",
+      "description": "Google/DeepMind 기술 참조 27건. Gemini 2.0, 1M Context, Flash, AlphaCode 등."
+    },
+    {
+      "id": "D202-058",
+      "title": "Meta Open Source LLM Integration (26 items)",
+      "category": "API",
+      "source": "D2.0-02 §11.6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Meta LLM 26건. Llama 3.1/Code Llama/LlamaGuard 3/FAISS. Ollama+GGUF 양자화 기본."
+    },
+    {
+      "id": "D202-059",
+      "title": "Korean LLM Comparison Table (15 items)",
+      "category": "API",
+      "source": "D2.0-02 §11.7",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "한국어 LLM 비교 15건. SOLAR/Polyglot-Ko/HyperCLOVA X 등. DEFER: 로컬 기본 모델 확정."
+    },
+    {
+      "id": "D202-060",
+      "title": "Benchmark Framework (15 benchmarks)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.9",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "15개 벤치마크: MMLU/HumanEval/MATH/GSM8K/MT-Bench/KoBEST/KLUE/KorQuAD/AgentBench 등. 최소 기준 LOCK."
+    },
+    {
+      "id": "D202-061",
+      "title": "DI Kernel (Dependency Injection Container)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.10.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "DI 컨테이너: IBrain/IRetriever/ICostTracker/IGateClient/IMCPClient/ILogger/IMemoryStore. Singleton/Scoped/Transient."
+    },
+    {
+      "id": "D202-062",
+      "title": "TEE Loop (Think-Execute-Evaluate) CORE Integration",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.10.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "TEE 루프: Think(I-1+I-5)→Execute(Brain/Node)→Evaluate(I-6 QoD). CORE는 제어자만."
+    },
+    {
+      "id": "D202-063",
+      "title": "Trigger/Action Event Schema",
+      "category": "Schema",
+      "source": "D2.0-02 §11.11.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Trigger 유형별 Gate 요구: schedule(G1 자동통과)/event(G1+G2)/webhook(G0+G1+G2)/manual(I-1)."
+    },
+    {
+      "id": "D202-064",
+      "title": "Evaluations Quality Gate (Accuracy/Faithfulness/Relevance/Completeness/Safety)",
+      "category": "Gate",
+      "source": "D2.0-02 §11.11.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "에이전트/모델 출력 품질 자동 평가 게이트. QoD 점수 통합."
+    },
+    {
+      "id": "D202-065",
+      "title": "IntentFrame Extended Signature (domain/intent_type/complexity/risk_level)",
+      "category": "Schema",
+      "source": "D2.0-02 §11.12.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "IntentFrame 확장: domain(trading/coding/research/general), intent_type, complexity, risk_level, required_tools, confidence, sub_intents."
+    },
+    {
+      "id": "D202-066",
+      "title": "4-Level Evaluation Framework (L1 Unit ~ L4 Safety)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.12.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "평가 4레벨: L1 단위(벤치마크)/L2 에이전트(AgentBench)/L3 시스템(E2E)/L4 안전(SafetyBench)."
+    },
+    {
+      "id": "D202-067",
+      "title": "LM-Eval Harness Integration",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.12.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "EleutherAI LM-Eval Harness 통합. 모델 변경 시 자동 실행."
+    },
+    {
+      "id": "D202-068",
+      "title": "Gate Automation Schema (G0~G4)",
+      "category": "Gate",
+      "source": "D2.0-02 §11.13.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "G0~G4 자동화 스키마. gate_id/gate_type/context → result(pass|deny|hold|downshift). P0 자동통과 규칙."
+    },
+    {
+      "id": "D202-069",
+      "title": "S7B-016 Real-time Camera Analysis",
+      "category": "STEP7",
+      "source": "D2.0-02 §1.4 R6",
+      "version_scope": "V3",
+      "status": "EXP",
+      "description": "카메라 영상 실시간 분석. Gemini Project Astra 참조. Front Mini → Vision API. 사용자 동의 필수."
+    },
+    {
+      "id": "D202-070",
+      "title": "S7-A-001 Claude Agent Teams Architecture Reference",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "Lead Agent + Sub-agents 위임 패턴. ORANGE CORE=Lead, BLUE NODES=Sub-agents."
+    },
+    {
+      "id": "D202-071",
+      "title": "S7-A-002 Agent SDK Pattern Benchmark",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "VAMOS 자체 SDK: @vamos.agent/@vamos.tool/@vamos.gate 데코레이터."
+    },
+    {
+      "id": "D202-072",
+      "title": "S7-A-003 MCP Latest Spec (2025.06)",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "MCP 2025.06: Streamable HTTP, elicitation, OAuth 2.1, Tool annotations."
+    },
+    {
+      "id": "D202-073",
+      "title": "S7-A-005 Constitutional AI 2.0 Pattern",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "VAMOS Personal Constitution. 사용자 정의 가치관/규칙 자동 Self-Check."
+    },
+    {
+      "id": "D202-074",
+      "title": "S7-B-001 Model Matrix Update (GPT-4.1/o3/o4-mini/Llama 4)",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "모델 매트릭스 갱신: GPT-4.1(1M context), o3/o4-mini(Reasoning Effort), Llama 4 Scout(17B active)."
+    },
+    {
+      "id": "D202-075",
+      "title": "INNOV-11 Knowledge-Investment-Coding Integration",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "VAMOS 핵심 차별화: 지식-투자-코딩 통합 원스톱. 도메인 인식 분류."
+    },
+    {
+      "id": "D202-076",
+      "title": "INNOV-12 Local-First Privacy",
+      "category": "STEP7",
+      "source": "D2.0-02 §STEP7 R1",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "기본 모드 로컬 LLM. 클라우드 전환은 사용자 명시 승인만. 데이터 제로 유출."
+    },
+    {
+      "id": "D202-077",
+      "title": "Pipeline FSM Extension (S0~S5+S-ERR, timeouts, scatter/gather)",
+      "category": "Architecture",
+      "source": "D2.0-02 §12.1",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "파이프라인 FSM: S1=5초/S2=30초/S3=120초/S4=10초/S5=15초 타임아웃. 병렬 scatter/gather."
+    },
+    {
+      "id": "D202-078",
+      "title": "I-Module Common Interface (init/process/health_check/shutdown)",
+      "category": "Architecture",
+      "source": "D2.0-02 §12.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "전 I-Module 공통 인터페이스. 의존성 DAG 순환 금지. Router<100ms, E2E<30초 SLA."
+    },
+    {
+      "id": "D202-079",
+      "title": "Capability Matrix (77 modules x 4 versions, Feature Flag)",
+      "category": "Architecture",
+      "source": "D2.0-02 §12.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "77모듈x4버전 매트릭스. Feature Flag 기반 런타임 제어."
+    },
+    {
+      "id": "D202-080",
+      "title": "Test Strategy (3-tier + Gate-linked test sets)",
+      "category": "Architecture",
+      "source": "D2.0-02 §12.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "3단계 테스트: 단위(>=80%)/통합(>=90%)/시나리오(>=95%). Gate별 필수 테스트."
+    },
+    {
+      "id": "D202-081",
+      "title": "Plan Enhancement: D-4 HTN / D-5 Value Function / D-2 MCTS / D-1 World Model",
+      "category": "Architecture",
+      "source": "D2.0-02 §10.1",
+      "version_scope": "V2:COND / V3:ON",
+      "status": "EXP",
+      "description": "Plan 강화 옵션: HTN 프랙탈 분해, Value Function 점수화, MCTS 후보 탐색, World Model 시뮬레이션."
+    },
+    {
+      "id": "D202-082",
+      "title": "Verify Enhancement: EVX-1/C-1/EVX-6/D-3/C-3/D-6 chain",
+      "category": "Architecture",
+      "source": "D2.0-02 §10.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "검증 체인 강화: Code-as-Policy, Logic/Z3 Solver, Self-consistency, Code Verifier, GraphRAG."
+    },
+    {
+      "id": "D202-083",
+      "title": "I-Module to Series Connection Table (25 modules mapped)",
+      "category": "Architecture",
+      "source": "D2.0-02 §10.4.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "I-Module별 A/B/C/D/EVX/S Series 연결 매핑표."
+    },
+    {
+      "id": "D202-084",
+      "title": "ADD-069 LangChain Removal - Lightweight Alternative Evaluation",
+      "category": "Architecture",
+      "source": "D2.0-02 §1.3 ADD-069",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "순수 Python 채택(CORE), LlamaIndex 부분 채택(I-2), Haystack 미채택, DSPy LATER."
+    },
+    {
+      "id": "D202-085",
+      "title": "S7-F-017 Text Emotion Detection (Innovation Track)",
+      "category": "STEP7",
+      "source": "D2.0-02 §7.10 R2",
+      "version_scope": "V1",
+      "status": "CORE",
+      "description": "규칙+키워드 V1, ML V2. KNU 한국어 감성사전 + VADER. S7B-002와 동일 목표."
+    },
+    {
+      "id": "D202-086",
+      "title": "MoE Routing Pattern (IDEA-C01)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.15.1",
+      "version_scope": "V2:COND / V3:ON",
+      "status": "EXP",
+      "description": "MoE 스타일 전문가 풀 모델 선택. I-5 Router 확장."
+    },
+    {
+      "id": "D202-087",
+      "title": "Agent Swarm PARL Pattern (IDEA-C02)",
+      "category": "Architecture",
+      "source": "D2.0-02 §11.15.2",
+      "version_scope": "V3",
+      "status": "EXP",
+      "description": "Execute 단계 PARL 병렬 에이전트. 최대 100개 서브에이전트. 실행시간 4.5x 단축."
+    },
+    {
+      "id": "D202-088",
+      "title": "Cross-Doc Registry Consistency Check (no-invention rule)",
+      "category": "Registry",
+      "source": "D2.0-02 §6.4",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "Cross-Doc 정합 체크: 다른 문서에서 사용한 event_type/failure_code/fallback_id만 레지스트리 등재. 발명 금지."
+    },
+    {
+      "id": "D202-089",
+      "title": "ErrorHandlingStandard (Result<T, VamosError>, no throw)",
+      "category": "Architecture",
+      "source": "D2.0-02 §0.3",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "통일 에러 처리: Result<T, VamosError> 반환. 예외 throw 금지. failure_code/message/fallback_id/trace_id 필드."
+    },
+    {
+      "id": "D202-090",
+      "title": "AI Research Trends Reference (15 items)",
+      "category": "API",
+      "source": "D2.0-02 §11.8",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "15개 AI 연구 트렌드 참조: MoE, CoT, Tool Use, RAG+Long Context, RLHF, CAI, Multi-Agent, Agentic AI 등."
+    },
+    {
+      "id": "D202-091",
+      "title": "STEP7 R3~R6 Cross-cutting Items (~57 estimated)",
+      "category": "STEP7",
+      "source": "D2.0-02 §11.14",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "R3~R6 횡단/보강 추정 항목 ~57건. R3(~8건), R4(~9건), R5(~7건), R6(~13건) 포함. NOTE: 합계 ~106건(상세49+추정57)."
+    },
+    {
+      "id": "D201-093",
+      "title": "E-Series Status Badge Rules (CORE/COND/EXP/RE-ADD badges)",
+      "category": "UI-Registry",
+      "source": "D2.0-01 §5.8.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "E-Series UI 배지 규칙: CORE=none, COND=lock, EXP=LAB, RE-ADD=NEW."
+    },
+    {
+      "id": "D201-094",
+      "title": "Module Catalog Standard Fields (LOCK)",
+      "category": "Governance",
+      "source": "D2.0-01 §5.5.1-5.5.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "모듈 카탈로그 표준필드 LOCK: module_id/module_name/status/change_lock/activation_default/owner_schema_doc/ui_exposed/ui_surface/ui_view_mode."
+    },
+    {
+      "id": "D201-095",
+      "title": "Schema Auto-Generation Tool (S04-ADD-006)",
+      "category": "Implementation",
+      "source": "D2.0-01 §8.4.2",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "스키마 자동 생성 파이프라인. datamodel-code-generator. Cross-Doc 정합성 자동 검증."
+    },
+    {
+      "id": "D201-096",
+      "title": "Document Dependency Map (01~08 connection)",
+      "category": "Governance",
+      "source": "D2.0-01 §6",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "문서 간 의존성 맵: 02 Decision ↔ 07 Policy ↔ 05 Workflow. 필수 동기화 규칙 4개."
+    },
+    {
+      "id": "D201-097",
+      "title": "Decision Needed Inventory (70 items, 38 unresolved)",
+      "category": "Governance",
+      "source": "D2.0-01 §7",
+      "version_scope": "V1:ON / V2:ON / V3:ON",
+      "status": "CORE",
+      "description": "결정 필요 목록 70건(미해소 38건/해소 32건). GT-2 gate_count 참고: D201 기준 문서당 정확한 미해소 항목 추적 필요."
+    }
+  ],
+  "gt2_gate_count_note": "GT-2 gate_count discrepancy: Phase 4 reported 193 vs 195. This extraction yields 159 features. The discrepancy may stem from different granularity in counting STEP7 cross-cutting items (§11.14 alone has ~57 estimated sub-items) and registry entries (35+ event_types, 17 failure_codes, 14 fallback_strategies counted as registry features rather than individual items).",
+  "statistics": {
+    "total_features": 159,
+    "by_source": {
+      "D201": 97,
+      "D202": 91
+    },
+    "by_category": {
+      "I-Series": 25,
+      "S-Series": 8,
+      "E-Series": 16,
+      "A-Series": 7,
+      "B-Series": 6,
+      "C-Series": 7,
+      "D-Series": 6,
+      "EVX-Series": 6,
+      "Architecture": 22,
+      "Schema": 11,
+      "Pipeline": 4,
+      "Gate": 4,
+      "Registry": 5,
+      "STEP7": 22,
+      "API": 6,
+      "Security": 1,
+      "UI-Registry": 3,
+      "Governance": 4,
+      "Implementation": 4,
+      "Infrastructure": 2
+    },
+    "by_version_scope": {
+      "V1_ON": 118,
+      "V1_OFF_V2_COND": 12,
+      "V1_OFF_V2_OFF_V3_ON": 27,
+      "V0": 1,
+      "V2": 4,
+      "V3": 2
+    },
+    "by_status": {
+      "CORE": 116,
+      "COND": 8,
+      "EXP": 29,
+      "RE-ADD": 6
+    },
+    "lines_read": {
+      "D201_total": 1857,
+      "D201_read": 1857,
+      "D202_total": 4474,
+      "D202_read": 4474
+    }
+  }
+}

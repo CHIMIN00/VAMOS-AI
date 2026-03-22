@@ -1,0 +1,4920 @@
+{
+  "metadata": {
+    "agent": "CM-7",
+    "category": "C7",
+    "version": "v13",
+    "created": "2026-03-17",
+    "total_comparisons": 249,
+    "results": {
+      "CONSISTENT": 25,
+      "INCONSISTENT": 2,
+      "SOURCE_CONFLICT": 0,
+      "SINGLE_SOURCE": 222
+    },
+    "severity": {
+      "CRITICAL": 1,
+      "WARNING": 1,
+      "INFO": 247
+    }
+  },
+  "comparisons": [
+    {
+      "comparison_id": "CM-7_001",
+      "key": "QOD_THRESHOLD_L2_ESCALATION",
+      "result": "INCONSISTENT",
+      "severity": "CRITICAL",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 601,
+          "source_text": "**QoD 임계값**: < 0.4 → L2 벡터삽입 금지, < 0.7 → 출력 보류",
+          "value": "0.4"
+        },
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 248,
+          "source_text": "QoD < 0.70: 출력 보류, 사용자에게 재질의 요청",
+          "value": "0.70"
+        }
+      ],
+      "analysis": "EA01 defines two levels: <0.4 → L2 escalation, <0.7 → output hold. EA02 defines only one: <0.70 → hold. The 0.4 L2-escalation threshold has no counterpart in EA02 = INCONSISTENT coverage.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_002",
+      "key": "THRESHOLD_VALUE",
+      "result": "INCONSISTENT",
+      "severity": "WARNING",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "",
+          "source_file": "v13_EA11_spec_4.json",
+          "source_line": 366,
+          "source_text": "일일 손실 -3% 중단, VIX>40 매수 중단, 포지션 -10% 강제 청산, 현금 20% 최소, 단일종목 10% 한도",
+          "value": "40"
+        },
+        {
+          "ea_agent": "EA-11",
+          "item_id": "",
+          "source_file": "v13_EA11_spec_4.json",
+          "source_line": 1265,
+          "source_text": "| L5 | **평가 점수 배분 (100점)**: Trust 25, Relevance 30, Quality 25, Access 20 | 관련성 최우선 |",
+          "value": "100"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_003",
+      "key": "AINV_51GATE_WIN_RATE",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 623,
+          "source_text": "51% Gate: Win Rate≥51%, Sharpe≥1.0, Decay<30%",
+          "value": "{\"WinRate\": \"≥51%\", \"Sharpe\": \"≥1.0\", \"Decay\": \"<30%\"}"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1478,
+          "source_text": "│  1. 승률(Win Rate) ≥ 51%                   │",
+          "value": "51"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_004",
+      "key": "CIRCUIT_BREAKER_FAILURE_THRESHOLD",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 3883,
+          "source_text": "연속 3회 타임아웃 또는 HTTP 5xx 응답",
+          "value": "3 consecutive timeouts or HTTP 5xx"
+        },
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 589,
+          "source_text": "failure_threshold: number;     // 차단 기준 횟수 (예: 3)",
+          "value": "3"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_005",
+      "key": "CODE_EXEC_SANDBOX_TIMEOUT_SEC",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1508,
+          "source_text": "코드 실행 격리 | Docker 샌드박스 필수 (네트워크 차단, 30초)",
+          "value": "Docker 샌드박스 필수 (네트워크 차단, 30초)"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1378,
+          "source_text": "| 코드 실행 격리 | Docker 샌드박스 (네트워크 차단, 30초) |",
+          "value": "30"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_006",
+      "key": "COST_BLOCK_THRESHOLD_PCT",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 694,
+          "source_text": "cost.block_threshold | 100 | LOCK",
+          "value": "100"
+        },
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 4198,
+          "source_text": "MASTER §9.7 LOCK 기준: 80% warn+force_mini / 100% block",
+          "value": "100% block"
+        },
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1785,
+          "source_text": "100% 도달 시 고비용 호출 승인 없이 자동 deny",
+          "value": "100%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 667,
+          "source_text": "- 다운시프트 임계값(LOCK): **80% 경고 / 100% 차단**",
+          "value": "100%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1175,
+          "source_text": "- 주의: 다운시프트 임계값 **80% 경고(force_mini) / 100% 차단**은 §4.2에서 LOCK 확정. 운영 시 임계치 조정은 D7(07_SAFETY_COST_APP",
+          "value": "차단(deny) LOCK"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2053,
+          "source_text": "| CostBudget 차단 | 100% | 예산 대비 % | LOCK (변경 불가) | §4.2 |",
+          "value": "100% LOCK (변경 불가)"
+        },
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 1128,
+          "source_text": "block_threshold_percent: 100;   // LOCK",
+          "value": "usage >= 100% → block"
+        }
+      ],
+      "analysis": "All sources confirm 100% as hard block. Differences are representational (100 vs 100% vs 100% LOCK). Core value consistently 100.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_007",
+      "key": "COST_DAILY_LIMIT_KRW",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 691,
+          "source_text": "cost.daily_limit | 1300 | ABSOLUTE LOCK",
+          "value": "1300"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 278,
+          "source_text": "daily_limit = 1300 # ABSOLUTE LOCK (BASE §5)",
+          "value": "1300"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_008",
+      "key": "COST_MONTHLY_LIMIT_KRW",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 692,
+          "source_text": "cost.monthly_limit | 40000 | ABSOLUTE LOCK",
+          "value": "40000"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 279,
+          "source_text": "monthly_limit = 40000 # ABSOLUTE LOCK",
+          "value": "40000"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_009",
+      "key": "COST_WARN_THRESHOLD_PCT",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 249,
+          "source_text": "Downshift | 80% warn/force_mini, 100% block (자동 차단)",
+          "value": "80% warn/force_mini, 100% block"
+        },
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 693,
+          "source_text": "cost.warn_threshold | 80 | LOCK",
+          "value": "80"
+        },
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 4198,
+          "source_text": "MASTER §9.7 LOCK 기준: 80% warn+force_mini / 100% block",
+          "value": "80% warn+force_mini"
+        },
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1783,
+          "source_text": "예산 80% 도달 시 경고 + 저비용 라우팅 우선",
+          "value": "80%"
+        },
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 569,
+          "source_text": "1시간 누적 비용이 V1/V2/V3 상한의 80% 초과 시 Warn, 100% 초과 시 Critical",
+          "value": "80"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 667,
+          "source_text": "- 다운시프트 임계값(LOCK): **80% 경고 / 100% 차단**",
+          "value": "80%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1175,
+          "source_text": "- 주의: 다운시프트 임계값 **80% 경고(force_mini) / 100% 차단**은 §4.2에서 LOCK 확정. 운영 시 임계치 조정은 D7(07_SAFETY_COST_APP",
+          "value": "경고+force_mini LOCK"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2052,
+          "source_text": "| CostBudget 경고 | 80% | 예산 대비 % | OWNER 승인 | §4.2 |",
+          "value": "80% (OWNER 승인으로 변경 가능)"
+        },
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 1127,
+          "source_text": "warn_threshold_percent: 80;     // LOCK",
+          "value": "usage >= 80% → warn/force_mini"
+        },
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 276,
+          "source_text": "| `warn_threshold` | `integer` | `80` | `80` | `80` | 경고 임계값 (%) — 80% 도달 시 force_mini",
+          "value": "80"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 336,
+          "source_text": "비용 상한 80% 도달",
+          "value": "80"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 280,
+          "source_text": "warn_threshold = 80 # LOCK (D7 §4)",
+          "value": "80"
+        }
+      ],
+      "analysis": "All sources confirm 80% as warn/downshift threshold. LOCK_COST_DOWNSHIFT is a composite description. Numeric core value is consistently 80.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_010",
+      "key": "DIFFERENTIAL_PRIVACY_EPSILON",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1058,
+          "source_text": "차등 프라이버시",
+          "value": "<=1.0"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2186,
+          "source_text": "- ε-differential privacy 파라미터: ε ≤ 1.0",
+          "value": "ε≤1.0"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_011",
+      "key": "HALLUCINATION_DETECTION_TARGET",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1900,
+          "source_text": "환각 탐지",
+          "value": ">=85%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1900,
+          "source_text": "환각 탐지율",
+          "value": ">=85%, 월 1회"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_012",
+      "key": "IMMUTABLE_ZONE_LIST",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1099,
+          "source_text": "1.safety_rules 2.cost_ceiling 3.approval_flow 4.non_goals 5.audit_format 6.data_retention 7.user_con",
+          "value": "[\"safety_rules\", \"cost_ceiling\", \"approval_flow\", \"non_goals\", \"audit_format\", \"data_retention\", \"user_consent\"]"
+        },
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1215,
+          "source_text": "## 11.4 Self-evo 절대 불가 영역 (7개 불변 구역)",
+          "value": "[\"정체성/가치/철학\", \"Non-goal\", \"법/규제/윤리\", \"비용 상한 금액\", \"승인 구조\", \"P0 도메인\", \"P2 도메인 생성/활성화\"]"
+        }
+      ],
+      "analysis": "Two representations in EA03: English keys (safety_rules, cost_ceiling, approval_flow, non_goals, audit_format, data_retention, user_consent) and Korean domain descriptions. Semantically equivalent; different language/abstraction level.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_013",
+      "key": "JAILBREAK_SUCCESS_MAX",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 151,
+          "source_text": "│   ├── Jailbreak",
+          "value": "<0.1%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2178,
+          "source_text": "탈옥 성공률",
+          "value": "<0.1%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_014",
+      "key": "MAX_PARALLEL_TASKS",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 745,
+          "source_text": "결정 완료(LOCK): 최대 병렬 태스크 상한은 **3**으로 고정한다.",
+          "value": "3"
+        },
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1025,
+          "source_text": "  - 위임 체인 깊이 제한 (max 3단계)",
+          "value": "3"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_015",
+      "key": "P2_SESSION_END_AUTO_OFF",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 253,
+          "source_text": "P2 자동 OFF | 세션 종료 시 즉시 OFF (LOCK: Option A)",
+          "value": "세션 종료 시 즉시 OFF (Option A)"
+        },
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 535,
+          "source_text": "세션 종료 시 즉시 OFF (LOCK: Option A)",
+          "value": "세션 종료 시 즉시 OFF"
+        },
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 559,
+          "source_text": "선택(LOCK): Option A - 세션 종료 시 즉시 OFF",
+          "value": "세션 종료 시 즉시 OFF"
+        }
+      ],
+      "analysis": "All three sources agree: P2 turns OFF automatically on session end. EA01 adds '(Option A)' noting it was a decision. Core policy is identical.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_016",
+      "key": "QOD_SCORE_RANGE",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 264,
+          "source_text": "DEC-010 | QoD 스케일: 0.0~1.0",
+          "value": "0.0~1.0"
+        },
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 1017,
+          "source_text": "qod_score: number;            // 0.0~1.0",
+          "value": "0.0~1.0"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_017",
+      "key": "QOD_THRESHOLD_OUTPUT_HOLD",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 601,
+          "source_text": "**QoD 임계값**: < 0.4 → L2 벡터삽입 금지, < 0.7 → 출력 보류",
+          "value": "0.7"
+        },
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 247,
+          "source_text": "0.70 ≤ QoD < 0.85: Self-check 재수행",
+          "value": "0.70-0.85"
+        }
+      ],
+      "analysis": "EA01 sets <0.7 → hold. EA02 sets 0.70-0.85 as self-check range, <0.70 as hold. Lower bound matches at 0.70.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_018",
+      "key": "QOD_WEIGHTS_RAG",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 265,
+          "source_text": "DEC-014 | QoD 가중치(RAG): relevance 0.30 + accuracy 0.25 + freshness 0.25 + completeness 0.20",
+          "value": "{\"relevance\": 0.3, \"accuracy\": 0.25, \"freshness\": 0.25, \"completeness\": 0.2}"
+        },
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 981,
+          "source_text": "qod_score = relevance * 0.30 + accuracy * 0.25 + freshness * 0.25 + completeness * 0.20",
+          "value": "qod_score = relevance * 0.30 + accuracy * 0.25 + freshness * 0.25 + completeness * 0.20"
+        }
+      ],
+      "analysis": "EA01 stores as dict; EA03 stores as formula string. Both encode same weights: relevance=0.30, accuracy=0.25, freshness=0.25, completeness=0.20.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_019",
+      "key": "RECENCY_BIAS_WARNING_THRESHOLD",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2275,
+          "source_text": "최신성 편향",
+          "value": ">70%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2274,
+          "source_text": "- 자동 탐지 대상: 확증 편향, 최신성 편향, 생존 편향, 섹터 편향",
+          "value": "최신 3개월 데이터 비중 >70% 시 경고"
+        }
+      ],
+      "analysis": "Both entries from EA07. p7_recency_bias adds context (recent 3 months). Core threshold >70% is identical.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_020",
+      "key": "RED_TEAM_DEFENSE_TARGET",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1901,
+          "source_text": "Red Team 방어",
+          "value": ">=90%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1901,
+          "source_text": "Red Team 방어율",
+          "value": ">=90%, 분기 1회"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2057,
+          "source_text": "Red Team 방어율 최소",
+          "value": "90% LOCK (하향 불가)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_021",
+      "key": "SAFETY_BENCHMARK_FPR",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1302,
+          "source_text": "FPR",
+          "value": "<=5%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1899,
+          "source_text": "안전 필터 FPR",
+          "value": "<=5%, 월 1회"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_022",
+      "key": "SAFETY_BENCHMARK_TPR",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1302,
+          "source_text": "TPR",
+          "value": ">=95%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1898,
+          "source_text": "안전 필터 TPR",
+          "value": ">=95%, 월 1회"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2056,
+          "source_text": "| 안전 필터 TPR 최소 | 95% | % | LOCK (하향 불가) | §15.2 |",
+          "value": "95% LOCK (하향 불가)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_023",
+      "key": "SECTOR_BIAS_WARNING_THRESHOLD",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2275,
+          "source_text": "섹터 편향",
+          "value": ">40%"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2207,
+          "source_text": "- 임계값: 단일 섹터 비중 > 40% 시 경고",
+          "value": "단일 섹터 비중 >40% 시 경고"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2299,
+          "source_text": "| 편향 감사 | P7-QOD | 1 | 확증/최신/생존/섹터 편향 탐지 |",
+          "value": ">40% 경고"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_024",
+      "key": "SELFCHECK_THRESHOLD_P0",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1822,
+          "source_text": "P0: self_check_score >= 70 → PASS",
+          "value": "score >= 70"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 952,
+          "source_text": "| 도메인 등급 | 최소 SelfCheck 점수 | 미달 시 처리 |",
+          "value": ">=70"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 486,
+          "source_text": "P0 작업 (기본): self_check_score ≥ 70점이면 PASS",
+          "value": "70"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1377,
+          "source_text": "| Self-check 임계값 | P0:70, P1:75, P2:80 |",
+          "value": "[70, 75, 80]"
+        }
+      ],
+      "analysis": "All sources confirm P0 threshold = 70. LOCK_SELFCHECK_THRESHOLDS is composite [70,75,80] – P0 component is 70.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_025",
+      "key": "SELFCHECK_THRESHOLD_P1",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1823,
+          "source_text": "P1: self_check_score >= 75 → PASS",
+          "value": "score >= 75"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 952,
+          "source_text": "| 도메인 등급 | 최소 SelfCheck 점수 | 미달 시 처리 |",
+          "value": ">=75"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 487,
+          "source_text": "- **P1 작업** (확장): ≥ 75점이면 PASS",
+          "value": "75"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_026",
+      "key": "SELFCHECK_THRESHOLD_P2",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1824,
+          "source_text": "P2: self_check_score >= 80 → PASS",
+          "value": "score >= 80"
+        },
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 959,
+          "source_text": "- **SDAR 교차참조**: SelfCheckGate 임계값 변경은 SDAR RA_NEVER 범주에 해당하지 않으나, 임계값 하향 조정 시 Approval(OWNER 승인) 필수",
+          "value": ">=80"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 488,
+          "source_text": "- **P2 작업** (고위험): ≥ 80점이면 PASS",
+          "value": "80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_027",
+      "key": "SEMANTIC_CACHE_COSINE_THRESHOLD",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 267,
+          "source_text": "Semantic Cache | cosine ≥ 0.95 (LOCK)",
+          "value": "0.95"
+        },
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 695,
+          "source_text": "semantic_cache.similarity_threshold | 0.95 | LOCK",
+          "value": "0.95"
+        },
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 899,
+          "source_text": "similarity_threshold?: number;   // 기본: 0.95 (LOCK)",
+          "value": "cosine >= 0.95"
+        },
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1397,
+          "source_text": "| Semantic Cache | cosine ≥ 0.95 |",
+          "value": "0.95"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_028",
+      "key": "ACCESSIBILITY_STANDARD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1188,
+          "source_text": "WCAG 2.1 AA 준수",
+          "value": "WCAG 2.1 AA"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_029",
+      "key": "AINV_51GATE_DECAY_RATE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1484,
+          "source_text": "│  3. 과적합률(Decay Rate) < 30%              │",
+          "value": "30"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_030",
+      "key": "AINV_51GATE_MIN_TRADES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1488,
+          "source_text": "│  4. 테스트 거래 수 ≥ 30회                   │",
+          "value": "30"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_031",
+      "key": "AINV_51GATE_SHARPE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1481,
+          "source_text": "│  2. 샤프 비율(Sharpe Ratio) ≥ 1.0          │",
+          "value": "1.0"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_032",
+      "key": "A_위임최대깊이",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 105,
+          "source_text": "max_delegation_depth: 3",
+          "value": "3"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_033",
+      "key": "C7_CICD_COVERAGE_THRESHOLDS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 528,
+          "source_text": "| Python | 75% | 85% | ... | Rust | 80% | 80% | ... | React | 80% | 80% |",
+          "value": "{\"Python_min\": 75, \"Python_target\": 85, \"Rust_min\": 80, \"Rust_target\": 80, \"React_min\": 80, \"React_target\": 80}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_034",
+      "key": "C7_CLIB_QOD_WEIGHTS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 730,
+          "source_text": "공식 문서: 0.85 / 내부 KB: 0.70 / 커뮤니티: 0.50 / 미분류: 0.30",
+          "value": "{\"공식 문서\": 0.85, \"내부 KB\": 0.7, \"커뮤니티/포럼\": 0.5, \"미분류/출처 불명\": 0.3}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_035",
+      "key": "C7_COST_BLOCK_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 277,
+          "source_text": "| `block_threshold` | `integer` | `100` | `100` | `100` | 차단 임계값 (%) — 100% 도달 시 block",
+          "value": "100"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_036",
+      "key": "C7_CROSS_SOURCE_TRUST_FORMULA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1795,
+          "source_text": "- 신뢰도 가중치: 소스 신뢰도 × 최신도 × 일치도",
+          "value": "trust * freshness * agreement"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_037",
+      "key": "C7_CROSS_VERIFY_CONFIDENCE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1795,
+          "source_text": "- 신뢰도 가중치: 소스 신뢰도 × 최신도 × 일치도",
+          "value": "2 sources=60%, 3+=90%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_038",
+      "key": "C7_KNOWLEDGE_IMPORTANCE_SCALE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1889,
+          "source_text": "- 추출 파이프라인: 대화 → LLM 분석 → Knowledge Unit 생성 → 분류(카테고리/태그) → 중요도 평가(1-5) → 4-Layer(L0~L3) 메모리 레벨 결정 →",
+          "value": "1-5"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_039",
+      "key": "C7_MEMORY_FRESHNESS_FORMULA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 403,
+          "source_text": "freshness_score: `1.0 - (days_since_last_access / max_days)` 감쇠 함수",
+          "value": "1.0 - (days_since_last_access / max_days)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_040",
+      "key": "C7_MEMORY_SEARCH_SCORING_FORMULA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 305,
+          "source_text": "스코어링: `relevance * recency * frequency`",
+          "value": "relevance * recency * frequency"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_041",
+      "key": "C7_MIGRATION_FAILURE_ROLLBACK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 1852,
+          "source_text": "[롤백 안내] alembic downgrade -1 실행 후 백업에서 복원하세요.",
+          "value": "alembic downgrade -1 + 백업 복원"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_042",
+      "key": "C7_MIGRATION_ROLLBACK_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 1999,
+          "source_text": "| 레코드 수 | 소스 vs 대상 테이블별 COUNT | 완전 일치 (0% 차이) |",
+          "value": "레코드 수 0% 차이 (완전 일치), 샘플 해시 완전 일치, 벡터 수 완전 일치, 그래프 노드/엣지 완전 일치"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_043",
+      "key": "C7_QOD_CLIB_WEIGHT_FORMULA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 735,
+          "source_text": "QoD 가중치는 최종 SourceQoD 스코어 산출 시 `base_score × source_weight`",
+          "value": "base_score × source_weight"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_044",
+      "key": "C7_RISK_SCORECARD_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1856,
+          "source_text": "| S7I-053 | 리스크 스코어카드 | 변동성+집중+유동성+매크로+이벤트 = 0-100 | HIGH/V1 |",
+          "value": "0-100"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_045",
+      "key": "C7_RUNTIME_AUTONOMY_LEVEL_MIN_ROLE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 908,
+          "source_text": "| `core.autonomy_level` | V2+ | OWNER | 기본 자율성 수준 변경 |",
+          "value": "OWNER"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_046",
+      "key": "C7_RUNTIME_COST_DAILY_LIMIT_MIN_ROLE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 904,
+          "source_text": "| `cost.daily_limit` | V2+ | ADMIN | 일일 비용 상한 동적 조정 |",
+          "value": "ADMIN"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_047",
+      "key": "C7_RUNTIME_GUARDRAILS_L3_MIN_ROLE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 907,
+          "source_text": "| `guardrails.layer3_enabled` | V2+ | OWNER | L3 Guardrails 온/오프 |",
+          "value": "OWNER"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_048",
+      "key": "C7_RUNTIME_LOGGING_LEVEL_MIN_ROLE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 910,
+          "source_text": "| `logging.level` | V2+ | OPERATOR | 로그 레벨 동적 변경 |",
+          "value": "OPERATOR"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_049",
+      "key": "C7_SECURITY_AUDIT_FREQUENCY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 345,
+          "source_text": "| 전체 | GitHub Dependabot | `.github/dependabot.yml` | 자동 (주간) |",
+          "value": "매 빌드 (npm audit, cargo audit, pip-audit) + 주간 (Dependabot)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_050",
+      "key": "C7_SELFCHECK_SOFTLOOP_MAX",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 137,
+          "source_text": "FAIL 시 자동 Soft loop 최대 1회 → 재차 FAIL이면 승인 요청 또는 중단(deny)",
+          "value": "1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_051",
+      "key": "C7_TEST_COVERAGE_E2E",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 34,
+          "source_text": "| **E2E** | 사용자 시나리오 전체 흐름 | Tauri WebDriver + Playwright | 핵심 시나리오 **100%** |",
+          "value": "핵심 시나리오 100%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_052",
+      "key": "C7_TEST_COVERAGE_INTEGRATION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 33,
+          "source_text": "| **통합 (Integration)** | 모듈 간 인터페이스, Pipeline 흐름 | pytest + subprocess | **60%+** |",
+          "value": "60%+"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_053",
+      "key": "C7_TEST_COVERAGE_UNIT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 32,
+          "source_text": "| **단위 (Unit)** | 함수/클래스/모듈 개별 검증 | pytest, cargo test, vitest | **80%+** |",
+          "value": "80%+"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_054",
+      "key": "C7_VBS14_PKM_BENCHMARK_TARGET",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 2080,
+          "source_text": "- 목표: 각 75점+, 전체 80점+",
+          "value": "each>=75, overall>=80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_055",
+      "key": "C7_VBS16_RETENTION_TARGET",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1719,
+          "source_text": "- **평가**: 적응형 정확도, 기억 유지율(>=80%), 퀴즈 품질, 경로 적절성, 코딩 효과, 지속률(>=60%), 참여도, 효과",
+          "value": "retention>=80%, continuation>=60%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_056",
+      "key": "CER 비용 효율 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 25,
+          "source_text": "| **합계** | **88** | **CRITICAL 11 / HIGH 47 / MED 30** |",
+          "value": "≥2.0x vs ChatGPT Plus"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_057",
+      "key": "COMPACTION_TARGET_RATIO",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 419,
+          "source_text": "target_ratio: float = 0.5",
+          "value": "after compaction <= 0.5 (50%)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_058",
+      "key": "COMPACTION_TRIGGER_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 418,
+          "source_text": "trigger_threshold: float = 0.8",
+          "value": "context usage >= 0.8 (80%)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_059",
+      "key": "CONFIDENCE_ROUTING_THRESHOLDS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 3058,
+          "source_text": "          신뢰도 라우팅: >=0.85 자동 / 0.6~0.85 샘플링 / 0.4~0.6 필수검토 / <0.4 자동거부",
+          "value": "{\"auto\": \">=0.85\", \"sampling\": \"0.6~0.85\", \"required_review\": \"0.4~0.6\", \"auto_reject\": \"<0.4\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_060",
+      "key": "COST_CEILING_DAILY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "",
+          "source_file": "v13_EA11_spec_4.json",
+          "source_line": 2078,
+          "source_text": "| **V1** | ₩1,300 ($1) | ₩40,000 ($30) | ₩500/작업 | Sonnet | Haiku |",
+          "value": "₩1,300"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_061",
+      "key": "COST_CEILING_MONTHLY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "",
+          "source_file": "v13_EA11_spec_4.json",
+          "source_line": 2078,
+          "source_text": "| **V1** | ₩1,300 ($1) | ₩40,000 ($30) | ₩500/작업 | Sonnet | Haiku |",
+          "value": "₩40,000"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_062",
+      "key": "Constitution 준수율 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 682,
+          "source_text": "- 목표: 95%+ 준수율",
+          "value": "95%+"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_063",
+      "key": "D3_CL_GATE_PASS_RATES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 415,
+          "source_text": "{ \"name\": \"gate_pass_rate\", \"type\": \"number\", \"required\": true, \"example\": 0.0, \"description\": \"Gate",
+          "value": "{\"G0_Format\": \"100%\", \"G1_Content\": \"95%\", \"G2_Consistency\": \"90%\", \"G3_Security\": \"100%\", \"G4_Final\": \"100%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_064",
+      "key": "D3_CL_conflict_weights",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 19,
+          "source_text": "- CloudLibraryConflictResolutionSchema (SOT) — S-5 충돌 해결 결과",
+          "value": "{\"official\": 1.0, \"paper\": 0.9, \"tech_doc\": 0.85, \"tech_blog\": 0.7, \"news\": 0.6, \"personal_blog\": 0.5, \"sns\": 0.3}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_065",
+      "key": "D3_CL_scoring_breakdown",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 277,
+          "source_text": "\"description\": \"Cloud Library 7-Stage Discovery Pipeline의 Stage 4 사이트 평가 결과. Trust(25점) + Relevance(",
+          "value": "{\"Trust\": 25, \"Relevance\": 30, \"Quality\": 25, \"Access\": 20}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_066",
+      "key": "D3_CL_scoring_total",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 280,
+          "source_text": "{ \"name\": \"total_score\", \"type\": \"integer\", \"required\": true, \"example\": 85, \"description\": \"총점 (0-1",
+          "value": "100"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_067",
+      "key": "D5_loop_rules",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 625,
+          "source_text": "### 8.3 Soft loop / Hard loop 규칙 (05 §4.2 LOCK)",
+          "value": "{\"soft_loop\": \"1 auto retry\", \"hard_loop\": \"approval required\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_068",
+      "key": "D6_QoD_score_range",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 112,
+          "source_text": "{ \"name\": \"qod_score\", \"type\": \"number\", \"required\": true, \"example\": 0.85, \"description\": \"QoD 종합 점",
+          "value": "{\"min\": 0.0, \"max\": 1.0}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_069",
+      "key": "D6_memory_TTL_defaults",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 1,
+          "source_text": "# D6_SCHEMA_STORAGE_MEMORY (v3.0.0)",
+          "value": "{\"L0\": \"session_end\", \"L1\": \"90d\", \"L2\": \"indefinite\", \"L3\": \"policy_based\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_070",
+      "key": "D6_semantic_cache_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 186,
+          "source_text": "\"description\": \"Semantic Cache 엔트리 — 의미 유사 질문 캐시로 API 호출 절감. cosine ≥ 0.95 시 캐시 히트. 근거: 06 §4.7 ADD-",
+          "value": "0.95"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_071",
+      "key": "D7_cost_limit_V1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 215,
+          "source_text": "{ \"name\": \"cost_approval_limit\", \"type\": \"integer\", \"required\": false, \"example\": 266000, \"descripti",
+          "value": "{\"daily_krw\": 1300, \"monthly_krw\": 40000}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_072",
+      "key": "D7_cost_limit_V2",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 215,
+          "source_text": "{ \"name\": \"cost_approval_limit\", \"type\": \"integer\", \"required\": false, \"example\": 266000, \"descripti",
+          "value": "{\"daily_krw\": 3100, \"monthly_krw\": 93000}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_073",
+      "key": "D7_cost_limit_V3",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 215,
+          "source_text": "{ \"name\": \"cost_approval_limit\", \"type\": \"integer\", \"required\": false, \"example\": 266000, \"descripti",
+          "value": "{\"daily_krw\": 8900, \"monthly_krw\": 266000}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_074",
+      "key": "D7_downshift_thresholds",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 11,
+          "source_text": "- DownshiftSchema (SOT)",
+          "value": "{\"warning_pct\": 80, \"block_pct\": 100}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_075",
+      "key": "D8_bundle_reduction_pct",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 92,
+          "source_text": "| 번들 크기 | ~30MB (Tauri) | Electron ~150MB 대비 80% 절감 |",
+          "value": "80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_076",
+      "key": "D_저장소월비용",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 767,
+          "source_text": "| 월 비용 | **0원** | **~$40/월** | **~$150/월** |",
+          "value": "V1=0원, V2=~$40/월, V3=~$150/월"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_077",
+      "key": "Dream_Mode_일예산",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 227,
+          "source_text": "Dream Mode 일일 예산 ₩500 이하",
+          "value": "<=500원/일"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_078",
+      "key": "EMBEDDING_DIMENSION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 688,
+          "source_text": "embedding.dimension | 1024 | LOCK",
+          "value": "1024"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_079",
+      "key": "EMBEDDING_MODEL",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 687,
+          "source_text": "embedding.model | bge-m3 | LOCK",
+          "value": "bge-m3"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_080",
+      "key": "E_Injection탐지정확도",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 858,
+          "source_text": "ML 기반 Injection 탐지(V1 규칙->V2 ML 95%->V3 99%)",
+          "value": "V1=규칙, V2=ML 95%, V3=99%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_081",
+      "key": "E_보안점수목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 926,
+          "source_text": "보안 로드맵 V1=60점 V2=85점 V3=95점",
+          "value": "V1=60, V2=85, V3=95"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_082",
+      "key": "FALLBACK_CHAIN_ORDER",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 681,
+          "source_text": "Fallback Chain: gpt-4o -> claude-sonnet -> local-ollama -> error_response",
+          "value": "[\"gpt-4o\", \"claude-sonnet\", \"local-ollama\", \"error_response\"]"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_083",
+      "key": "FORMULA_DECAY_RATE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1632,
+          "source_text": "Decay = max(0, (Sharpe_Train - Sharpe_Test) / |Sharpe_Train|)",
+          "value": "Decay = max(0, (Sharpe_Train - Sharpe_Test) / |Sharpe_Train|)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_084",
+      "key": "FORMULA_KELLY_CRITERION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1633,
+          "source_text": "Kelly f* = (b*p - q) / b (Half-Kelly = f*/2, 최대 25%)",
+          "value": "Kelly f* = (b*p - q) / b (Half-Kelly = f*/2, max 25%)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_085",
+      "key": "FORMULA_SHARPE_RATIO",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1631,
+          "source_text": "Sharpe = (Mean Return - Rf) / Std * sqrt(252)",
+          "value": "Sharpe = (Mean Return - Rf) / Std * sqrt(252)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_086",
+      "key": "F_로그보존정책",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 380,
+          "source_text": "- **정책**: 앱 로그 30일 / 보안 로그 1년 / 비용 로그 1년 / 디버그 로그 7일",
+          "value": "앱=30일, 보안=1년, 비용=1년, 디버그=7일"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_087",
+      "key": "F_비용절감목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 398,
+          "source_text": "월 1000 요청: 단일 모델 ~$15 → 스마트 라우팅 ~$5(67% 절감)",
+          "value": "60-70%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_088",
+      "key": "F_총비용목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 394,
+          "source_text": "| **합계** | **<=$8/mo** | **<=$50/mo** | **<=$250/mo** |",
+          "value": "V1=<=$8/mo, V2=<=$50/mo, V3=<=$250/mo"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_089",
+      "key": "F_커버리지목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 324,
+          "source_text": "테스트 커버리지 >=80%",
+          "value": ">=80%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_090",
+      "key": "F_토큰절감목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 402,
+          "source_text": "예상 절감: 30-40% 토큰 절약",
+          "value": "30-40%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_091",
+      "key": "GATE_PASS_RATES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 3094,
+          "source_text": "        정확도·품질: ✔✔ 5-Gate 검증 체계(G0 100%/G1 95%/G2 90%/G3 100%/G4 100%)로 \"좋은 데이터만 쓰는 AI\" 실현. 소스 가중치 7단계, 충돌 해결 알고리즘, 소스 평판 자동 업데이트",
+          "value": "{\"G0\": 100, \"G1\": 95, \"G2\": 90, \"G3\": 100, \"G4\": 100}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_092",
+      "key": "GRAFANA_GATE_REJECT_WARN_PCT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 581,
+          "source_text": "approval 거부율 > 10% (24h) 시 Warn",
+          "value": "10"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_093",
+      "key": "GUARDRAILS_FAILSAFE_DEFAULT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1017,
+          "source_text": "Fail-safe: 안전 시스템 장애 시 닫힘(closed) 기본값",
+          "value": "closed (차단)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_094",
+      "key": "G_HumanEval_기준",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 608,
+          "source_text": "Dev Node 모델 선택 기준: HumanEval 85+",
+          "value": "HumanEval>=85"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_095",
+      "key": "G_MMLU_최소기준",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 604,
+          "source_text": "MMLU 최소 85+ 필수, MMLU-Pro 65+ 이상 모델만 추론 작업 라우팅",
+          "value": "MMLU>=85, MMLU-Pro>=65"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_096",
+      "key": "G_RAGAS_목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 773,
+          "source_text": "목표: Faithfulness 0.9+, Answer Relevancy 0.85+, Context Precision 0.8+",
+          "value": "Faithfulness>=0.9, Relevancy>=0.85, Precision>=0.8"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_097",
+      "key": "G_VBS1_5Gate정확도",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 904,
+          "source_text": "목표: 85(V1)/95(V2)",
+          "value": "V1>=85, V2>=95"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_098",
+      "key": "G_VBS3_메모리회상",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 912,
+          "source_text": "목표: 회상 90%, 망각 100%",
+          "value": "회상>=90%, 망각=100%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_099",
+      "key": "G_VBS6_비용효율",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 916,
+          "source_text": "목표: CER >= 2.0x",
+          "value": "CER>=2.0x"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_100",
+      "key": "G_한국어환각률_목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 675,
+          "source_text": "목표: 환각률 <5%",
+          "value": "<5%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_101",
+      "key": "GitHub Actions 무료 한도",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 797,
+          "source_text": "GitHub Actions Free (2000분/월 private)",
+          "value": "2000분/월 (private)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_102",
+      "key": "HITL_CONFIDENCE_BOUNDARY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1921,
+          "source_text": "- **HITL 트리거 조건 상세 (SF-L01 보강)**:",
+          "value": "점수 0.4~0.6 구간, 5분 타임아웃"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_103",
+      "key": "HITL_TRIGGERS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1921,
+          "source_text": "- **HITL 트리거 조건 상세 (SF-L01 보강)**:",
+          "value": "P2 도메인 작업, 비용 상한 80%+ 호출, 안전 필터 경계 판정(0.4~0.6)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_104",
+      "key": "KG 활용 정확도 향상 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 687,
+          "source_text": "- 목표: KG 사용 시 관계 질문 정확도 20%+ 향상",
+          "value": "20%+"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_105",
+      "key": "KNOWLEDGE_CONFLICT_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1816,
+          "source_text": "semantic similarity > 0.9 + opposite sentiment = conflict",
+          "value": "cosine > 0.9 + opposite sentiment"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_106",
+      "key": "K_ANONYMITY_K_VALUE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1058,
+          "source_text": "k-익명성",
+          "value": ">=5"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_107",
+      "key": "K_성공KPI",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1047,
+          "source_text": "MCP 도구 호출 성공률 >= 95%, A2A >= 90%, 라우팅 >= 85%",
+          "value": "MCP>=95%, A2A>=90%, 라우팅>=85%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_108",
+      "key": "L042_VBS13_목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1325,
+          "source_text": "SWE-bench >= 30%, HumanEval+ >= 85%",
+          "value": "SWE-bench>=30%, HumanEval+>=85%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_109",
+      "key": "LOCK_CALL_DIRECTION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 744,
+          "source_text": "호출 방향: 상위 → 하위 (역방향 금지, 이벤트 기반 통지만)",
+          "value": "상위->하위 (역방향 금지, 이벤트 기반 통지만)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_110",
+      "key": "LOCK_CONFIG_GRAPH_DB",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 690,
+          "source_text": "graph_db.backend | json_file | LOCK (V1)",
+          "value": "json_file"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_111",
+      "key": "LOCK_CONFIG_MCP_TRANSPORT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 697,
+          "source_text": "mcp.transport | streamable_http | LOCK",
+          "value": "streamable_http"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_112",
+      "key": "LOCK_CONFIG_SINGLE_DECISION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 686,
+          "source_text": "core.single_decision_lock | true | LOCK",
+          "value": "True"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_113",
+      "key": "LOCK_CONFIG_TRACE_ID",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 696,
+          "source_text": "logging.trace_id_required | true | LOCK",
+          "value": "True"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_114",
+      "key": "LOCK_CONFIG_VECTOR_DB",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 689,
+          "source_text": "vector_db.backend | chroma | LOCK (V1)",
+          "value": "chroma"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_115",
+      "key": "LOCK_COST_EXCEED_AUTO_BLOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 687,
+          "source_text": "상한 초과 모델 호출은 승인 없이 자동 차단 (RULE 1.3 S5)",
+          "value": "상한 초과 시 승인 없이 자동 차단"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_116",
+      "key": "LOCK_DECISION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 231,
+          "source_text": "Decision Lock | 한 시점/한 컨텍스트/한 결론 → locked=true (S3 이후 변경불가)",
+          "value": "locked=true (S3 이후 변경불가)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_117",
+      "key": "LOCK_DECISION_DEFAULT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1502,
+          "source_text": "| Decision Lock | 한 시점/한 컨텍스트/한 결론 → locked=true |",
+          "value": "True"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_118",
+      "key": "LOCK_DECISION_PRINCIPLE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 460,
+          "source_text": "S3(Decision Locked) 이후 결론 변경 불가 (단일결정 원칙)",
+          "value": "S3 이후 결론 변경 불가 (단일결정 원칙)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_119",
+      "key": "LOCK_DECISION_SCHEMA_FREEZE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 500,
+          "source_text": "### Decision (18필드, FREEZE)",
+          "value": "FREEZE"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_120",
+      "key": "LOCK_DOWNSHIFT_POLICY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 690,
+          "source_text": "비용 상한은 \"초과 시 즉시 차단(deny)\"으로 처리하며, 별도의 강등은 07/PLAN 근거가 확보될 때만 추가",
+          "value": "초과 시 즉시 차단(deny), 강등은 07/PLAN 근거 확보 후에만"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_121",
+      "key": "LOCK_DOWNSHIFT_THRESHOLDS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "",
+          "source_file": "v13_EA15_etc.json",
+          "source_line": 1388,
+          "source_text": "| Downshift | 80% warn, 100% block |",
+          "value": "{\"warn\": 80, \"block\": 100}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_122",
+      "key": "LOCK_GATE_BYPASS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 232,
+          "source_text": "Gate 우회 불가 | Policy→Approval→Cost→Evidence 필수 통과",
+          "value": "Policy→Approval→Cost→Evidence 필수 통과"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_123",
+      "key": "LOCK_L3_ABSOLUTE_DENY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1047,
+          "source_text": "L3에서도 절대 불가: Non-goal, RBAC 자기 권한 상승, CostBudget 자체 변경, 안전 필터 우회",
+          "value": "[\"Non-goal\", \"RBAC 자기 권한 상승\", \"CostBudget 자체 변경\", \"안전 필터 우회\"]"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_124",
+      "key": "LOCK_LANGCHAIN_IMPORT_BAN",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1496,
+          "source_text": "LangChain import | 금지 (DEC-002)",
+          "value": "금지 (DEC-002)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_125",
+      "key": "LOCK_MCP_TRANSPORT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 357,
+          "source_text": "| `transport` | `string` | `\"streamable_http\"` | 동일 | 동일 | MCP 전송 방식 (DEC-017 LOCK)",
+          "value": "streamable_http"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_126",
+      "key": "LOCK_NODE_CAP",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 518,
+          "source_text": "상한 규칙(LOCK):",
+          "value": "active_node_cap V1=3, candidate_node_cap V1=5"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_127",
+      "key": "LOCK_NONGAL_SAFETY_COST_APPROVAL",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 67,
+          "source_text": "Non-goal/안전/비용 상한/승인 구조는 변경 불가",
+          "value": "변경 불가"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_128",
+      "key": "LOCK_NO_CREATION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 274,
+          "source_text": "2. **없는 내용 창작 금지**: 신규 정책 임의 생성 불가",
+          "value": "신규 정책 임의 생성 불가"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_129",
+      "key": "LOCK_NO_DELETE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 273,
+          "source_text": "삭제 금지: 모든 변경은 [DEPRECATE] + (대체 경로) 로만 처리",
+          "value": "삭제 금지, DEPRECATE + 대체 경로로만"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_130",
+      "key": "LOCK_QOD_WEIGHT_PLAN",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 266,
+          "source_text": "QoD 5요소(PLAN정본) | Accuracy 0.30 + Relevance 0.25 + Completeness 0.20 + Safety 0.15 + Efficiency 0.10",
+          "value": "{\"Accuracy\": 0.3, \"Relevance\": 0.25, \"Completeness\": 0.2, \"Safety\": 0.15, \"Efficiency\": 0.1}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_131",
+      "key": "LOCK_RESPONSE_ENVELOPE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 521,
+          "source_text": "### ResponseEnvelope (LOCK)",
+          "value": "LOCK"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_132",
+      "key": "LOCK_SELFCHECK_LOOP",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 234,
+          "source_text": "Self-check 루프 | Soft loop 자동 1회만, 이후 승인 필요",
+          "value": "Soft loop 자동 1회만, 이후 승인 필요"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_133",
+      "key": "LOCK_SELFEVO_NO_AUTO_APPLY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1197,
+          "source_text": "Self-evo는 제안까지만 생성, 자동 적용 절대 금지 (RULE 1.3 section 8)",
+          "value": "제안만 가능, 자동 적용 절대 금지"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_134",
+      "key": "LOCK_SELF_CHECK_P0",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 327,
+          "source_text": "| `threshold_p0` | `integer` | `70` | P0 도메인 Self-check 통과 임계값 | LOCK |",
+          "value": "70"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_135",
+      "key": "LOCK_SELF_CHECK_P1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 328,
+          "source_text": "| `threshold_p1` | `integer` | `75` | P1 도메인 Self-check 통과 임계값 | LOCK |",
+          "value": "75"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_136",
+      "key": "LOCK_SELF_CHECK_P2",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 329,
+          "source_text": "| `threshold_p2` | `integer` | `80` | P2 도메인 Self-check 통과 임계값 | LOCK |",
+          "value": "80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_137",
+      "key": "LOCK_SEMANTIC_CACHE_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 540,
+          "source_text": "| `similarity_threshold` | `float` | `0.95` | 동일 | 동일 | 캐시 히트 유사도 임계값 (LOCK)",
+          "value": "0.95"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_138",
+      "key": "LOCK_SINGLE_DECISION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 144,
+          "source_text": "| `single_decision_lock` | `boolean` | `true` | `true` | `true` | 단일 결정 원칙 잠금 (항상 true)",
+          "value": "True"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_139",
+      "key": "LOCK_SOFT_LOOP_MAX",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "",
+          "source_file": "v13_EA10_phase_b4_b7.json",
+          "source_line": 330,
+          "source_text": "| `soft_loop_max` | `integer` | `1` | Soft loop 자동 재시도 횟수 (이후 승인 필요) | LOCK |",
+          "value": "1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_140",
+      "key": "LTV/CAC 비율 및 손익분기점",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 24,
+          "source_text": "| **합계** | **78** | **CRITICAL 11 / HIGH 41 / MED 26** |",
+          "value": "{\"LTV_CAC\": \"14.4x\", \"breakeven_V1\": \"43 users\", \"breakeven_V2\": \"385 Pro users\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_141",
+      "key": "L_성공KPI",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1407,
+          "source_text": "코드 생성 정확도 >= 85%, 자동완성 수락률 >= 30%",
+          "value": "코드생성>=85%, 수락>=30%, 디버깅>=70%, NPS>=50"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_142",
+      "key": "M015_중복감지_유사도임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1510,
+          "source_text": "임베딩 유사도 cosine > 0.85 → 중복 후보",
+          "value": "0.85"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_143",
+      "key": "M048_VBS14_목표점수",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1716,
+          "source_text": "각 항목 75점+ / 전체 평균 80점+",
+          "value": "항목별>=75, 평균>=80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_144",
+      "key": "MEMORY_HIT_RATE_MIN",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 399,
+          "source_text": "적중률 < 30% → 인덱스 재구성 제안",
+          "value": "0.3"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_145",
+      "key": "MODEL_REGISTRATION_THRESHOLD",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 4087,
+          "source_text": "신규 모델 등록 시 MMLU ≥ 70%, HumanEval ≥ 60%, SafetyBench ≥ 90%",
+          "value": "MMLU>=70%, HumanEval>=60%, SafetyBench>=90%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_146",
+      "key": "NEVER_AUTO_LIST",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1726,
+          "source_text": "NEVER_AUTO: modify_safety_rules, change_cost_ceiling, alter_approval_flow, modify_non_goals, disable",
+          "value": "[\"modify_safety_rules\", \"change_cost_ceiling\", \"alter_approval_flow\", \"modify_non_goals\", \"disable_guardrails\", \"bypass_gate\"]"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_147",
+      "key": "P2_CB_NO_AUTO_HALFOPEN",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 180,
+          "source_text": "P2 이상 작업에서 OPEN 상태 진입 시, 60초 자동 HALF-OPEN 전환을 적용하지 않는다",
+          "value": "P2 이상: 자동 HALF-OPEN 전환 금지, 사용자 승인 후에만 (LOCK)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_148",
+      "key": "P_VBS17_목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 838,
+          "source_text": "목표: 감정 인식 >= 80%, 웰빙 개선 >= 10%",
+          "value": "감정인식>=80%, 웰빙개선>=10%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_149",
+      "key": "P_감정경고채택률",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 868,
+          "source_text": "투자 감정 경고 채택률 >= 60%",
+          "value": ">=60%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_150",
+      "key": "P_감정인식정확도",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 868,
+          "source_text": "감정 인식 정확도 >= 75%(V1)→>= 85%(V2)",
+          "value": "V1>=75%, V2>=85%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_151",
+      "key": "Prompt Injection 방어 정확도 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 24,
+          "source_text": "| **합계** | **92** | **CRITICAL 27 / HIGH 41 / MED 24** |",
+          "value": "{\"V1\": \"80%\", \"V2\": \"95%\", \"V3\": \"99%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_152",
+      "key": "QoD 점수 버전별 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 628,
+          "source_text": "  목표: 85/100 (V1), 95/100 (V2)",
+          "value": "{\"V1\": \"85/100\", \"V2\": \"95/100\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_153",
+      "key": "R6_V3_core_themes",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 24,
+          "source_text": "V3 핵심 테마: 1.멀티유저/팀 협업, 2.고급 자동화/에이전트, 3.차세대 멀티모달, 4.글로벌 규제/컴플라이언스, 5.고급 분석/인사이트",
+          "value": "[\"멀티유저/팀 협업\", \"고급 자동화/에이전트\", \"차세대 멀티모달\", \"글로벌 규제/컴플라이언스\", \"고급 분석/인사이트\"]"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_154",
+      "key": "R6_V3_monthly_budget",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 5,
+          "source_text": "## 대상: V3 엔터프라이즈 버전 (≤₩200K/월) 전체 우선순위",
+          "value": "<=200000"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_155",
+      "key": "R6_cumulative_grand_total",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 154,
+          "source_text": "누적: R1(134) + R2(395) + R3(160) + R4(330) + R5(280) + R6(248) = **1,547건 / 1,545건** (100%+, 반올림 오차 포함)",
+          "value": "1547"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_156",
+      "key": "R6_precise_category_counts",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 12,
+          "source_text": "|---------------|---------|---------|--------|--------|------|",
+          "value": "{\"B\": 4, \"C\": 3, \"D\": 1, \"E\": 3, \"NP\": 9, \"보강\": 35, \"FMA_est\": 194}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_157",
+      "key": "R6_priority_breakdown",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 10,
+          "source_text": "R6 통계: V3+CRIT=~43, V3+HIGH=~96, V3+MED=~69, V3+LOW=~41",
+          "value": "{\"V3_CRITICAL\": 43, \"V3_HIGH\": 96, \"V3_MEDIUM\": 69, \"V3_LOW\": 41}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_158",
+      "key": "R6_total_items",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "",
+          "source_file": "v13_EA14_step7_rest.json",
+          "source_line": 1,
+          "source_text": "# STEP7 R6: V3 전체 구현 스펙 (~248건)",
+          "value": "248"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_159",
+      "key": "ROLLBACK_COOLDOWN_DAYS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 282,
+          "source_text": "롤백 잠금 | 동일 제안 롤백 후 14일 재적용 금지",
+          "value": "14"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_160",
+      "key": "S7I034_증권거래세율",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2166,
+          "source_text": "증권거래세(0.18%)",
+          "value": "0.18%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_161",
+      "key": "S7I043_리밸런싱_이탈임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2242,
+          "source_text": "이탈 임계값(±5%)",
+          "value": "±5%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_162",
+      "key": "S7I050_StopLoss_알림임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2302,
+          "source_text": "알림: -5% 주의, -10% 경고+손절 제안, -15%+ 긴급+강력 손절 권고",
+          "value": "-5% 주의, -10% 경고, -15% 긴급"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_163",
+      "key": "S7I051_상관관계_경고임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2310,
+          "source_text": "상관관계 0.8+ 종목 쌍 → \"분산 부족\" 경고",
+          "value": "0.8"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_164",
+      "key": "S7I057_유동성경고_임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2358,
+          "source_text": "일 거래량 대비 보유 비중 10%+ 시 유동성 경고",
+          "value": "10%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_165",
+      "key": "S7I061_과적합방지_최소거래수",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 2394,
+          "source_text": "거래 횟수 최소 요건(연 30회+)",
+          "value": "30"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_166",
+      "key": "SECURITY_PATCH_SLA_HOURS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 352,
+          "source_text": "의존성 업데이트 | Dependabot 자동 PR, 보안 패치는 48시간 내 적용",
+          "value": "48시간 내 적용"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_167",
+      "key": "SELFEVO_ALLOWED_LIST",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "",
+          "source_file": "v13_EA03_master_spec.json",
+          "source_line": 1207,
+          "source_text": "## 11.3 Self-evo 가능 범위 (6개 허용 도메인)",
+          "value": "[\"프롬프트 최적화\", \"도구 조합\", \"메모리 관리\", \"출력 포맷\", \"워크플로우 순서\", \"모델 선택\"]"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_168",
+      "key": "SM2_INTERVAL_SEQUENCE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1596,
+          "source_text": "- **구현**: SM-2 알고리즘(1일→3일→7일→14일→30일), 망각 곡선 기반, 일일 카드 수 제한",
+          "value": "1d->3d->7d->14d->30d"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_169",
+      "key": "STATE_TIMEOUT_S1_SEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 534,
+          "source_text": "S0_RECEIVED → S1_INTENT_PARSED(5s) → S2_EVIDENCE_READY(30s)",
+          "value": "5"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_170",
+      "key": "STATE_TIMEOUT_S2_SEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 534,
+          "source_text": "S0_RECEIVED → S1_INTENT_PARSED(5s) → S2_EVIDENCE_READY(30s)",
+          "value": "30"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_171",
+      "key": "STATE_TIMEOUT_S3_SEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 535,
+          "source_text": "→ S3_DECISION_LOCKED(120s) → S4_EXECUTING(10s) → S5_OUTPUT_READY(15s)",
+          "value": "120"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_172",
+      "key": "STATE_TIMEOUT_S4_SEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 535,
+          "source_text": "→ S3_DECISION_LOCKED(120s) → S4_EXECUTING(10s) → S5_OUTPUT_READY(15s)",
+          "value": "10"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_173",
+      "key": "STATE_TIMEOUT_S5_SEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "",
+          "source_file": "v13_EA01_claude_md.json",
+          "source_line": 535,
+          "source_text": "→ S3_DECISION_LOCKED(120s) → S4_EXECUTING(10s) → S5_OUTPUT_READY(15s)",
+          "value": "15"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_174",
+      "key": "THRESHOLD_TOOL_SAFETY_BLOCK_RATE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "",
+          "source_file": "v13_EA05_d20_03_04.json",
+          "source_line": 1211,
+          "source_text": "안전 테스트 통과 (Non-goal 위반 시도 100건 차단율 >= 99.9%)",
+          "value": ">=99.9%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_175",
+      "key": "TTFT 응답 시간 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1347,
+          "source_text": "목표: TTFT < 1초 (API) / < 200ms (로컬)",
+          "value": "{\"API\": \"<1초\", \"로컬\": \"<200ms\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_176",
+      "key": "VAR_CONFIDENCE_LEVEL",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "",
+          "source_file": "v13_EA06_d20_05_06.json",
+          "source_line": 1852,
+          "source_text": "| S7I-049 | VaR | Historical/Parametric/Monte Carlo (95%, 1일) | CRITICAL/V1 |",
+          "value": "95%, 1-day"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_177",
+      "key": "VBS-13 코드 벤치마크 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 830,
+          "source_text": "목표: SWE-bench ≥ 30%, HumanEval+ ≥ 85%",
+          "value": "{\"SWE_bench\": \"≥30%\", \"HumanEval_plus\": \"≥85%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_178",
+      "key": "VBS-14 지식관리 벤치마크 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 816,
+          "source_text": "목표: 각 항목 75점 이상 / 전체 평균 80점 이상",
+          "value": "{\"항목별\": \"≥75점\", \"전체_평균\": \"≥80점\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_179",
+      "key": "VBS-16 교육 벤치마크 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 474,
+          "source_text": "목표: 학습 지속률 ≥ 60%, 기억 유지율 ≥ 80%",
+          "value": "{\"학습_지속률\": \"≥60%\", \"기억_유지율\": \"≥80%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_180",
+      "key": "VULNERABILITY_RESPONSE_SLA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "",
+          "source_file": "v13_EA09_phase_b1_b3.json",
+          "source_line": 353,
+          "source_text": "취약점 대응 | Critical/High 취약점 → 즉시 패치, Medium → 1주 내",
+          "value": "{\"Critical_High\": \"즉시 패치\", \"Medium\": \"1주 내\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_181",
+      "key": "agent_anomaly_judgment",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1971,
+          "source_text": "이상 판정",
+          "value": "베이스라인 대비 2 표준편차 이상"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_182",
+      "key": "agent_anomaly_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1968,
+          "source_text": "- 에이전트 행동을 실시간으로 감시하여 이상 행동을 조기에 탐지·제한:",
+          "value": "2 std dev"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_183",
+      "key": "benchmark_dpd",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1902,
+          "source_text": "| Bias 지표 DPD | 인구통계 편향 차이 | ≤ 0.1 | 분기 1회 |",
+          "value": "<=0.1, 분기 1회"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_184",
+      "key": "benchmark_policy",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1903,
+          "source_text": "정책 일관성",
+          "value": ">=99%, 일 1회"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_185",
+      "key": "benchmark_tpr_rollback",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1912,
+          "source_text": "- 자동 알림: TPR 하락 5%p 이상 시 OWNER 긴급 알림 + 이전 모델/필터로 자동 롤백 제안",
+          "value": "TPR 하락 5%p 이상 시 자동 롤백 제안"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_186",
+      "key": "bias_dpd",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1558,
+          "source_text": "DPD",
+          "value": "<=0.1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_187",
+      "key": "bias_eod",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1559,
+          "source_text": "EOD",
+          "value": "<=0.1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_188",
+      "key": "cost_formula",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 4186,
+          "source_text": "비용 = (LLM 호출 x 단가) + 도구/API 사용량",
+          "value": "비용 = (LLM 호출 × 단가) + 도구/API 사용량"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_189",
+      "key": "cost_gauge",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1960,
+          "source_text": "비용 게이지",
+          "value": "70%녹→85%황→95%적"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_190",
+      "key": "domain_score_formula",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 329,
+          "source_text": "DomainScore = w_rel × Relevance + w_conf × Confidence + w_risk × (1 - RiskLevel) + w_cost × (1 - CostRatio)",
+          "value": "DomainScore = w_rel × Relevance + w_conf × Confidence + w_risk × (1-RiskLevel) + w_cost × (1-CostRatio)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_191",
+      "key": "domain_score_threshold_activate",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 340,
+          "source_text": "DomainScore ≥ 0.75: 해당 도메인 모듈 즉시 활성화",
+          "value": "0.75"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_192",
+      "key": "domain_score_threshold_hold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 342,
+          "source_text": "DomainScore < 0.50: 활성화 보류, 사용자에게 도메인 명시 요청",
+          "value": "0.50"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_193",
+      "key": "domain_score_threshold_reevaluate",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 341,
+          "source_text": "0.50 ≤ DomainScore < 0.75: ORANGE CORE 재판단 후 활성화 여부 결정",
+          "value": "0.50-0.75"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_194",
+      "key": "evidence_minimum_sources",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 617,
+          "source_text": "Evidence 없는 답변 차단 규칙: evidence_sources < 1이면 답변 발행 불가",
+          "value": "1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_195",
+      "key": "formula.response_length",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 1292,
+          "source_text": "최종_길이 = 복잡도_기본값 × (1 + 감정_조정) × 사용자_선호_가중치",
+          "value": "최종_길이 = 복잡도_기본값 × (1 + 감정_조정) × 사용자_선호_가중치"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_196",
+      "key": "gate_hallucination_block",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1825,
+          "source_text": "#### 15.9.4 환각 임계값 및 대응",
+          "value": "30% Contradiction 비율 (OWNER 승인)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_197",
+      "key": "gate_hallucination_warning",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1825,
+          "source_text": "#### 15.9.4 환각 임계값 및 대응",
+          "value": "15% Contradiction 비율 (OWNER 승인)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_198",
+      "key": "gpu_breakeven",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1247,
+          "source_text": "- V3 GPU 자체 호스팅 vs API 호출 손익분기점: 월 ~$500 이상 API 사용 시 자체 호스팅 고려",
+          "value": "~$500/month API"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_199",
+      "key": "grafana_alert_rule",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2071,
+          "source_text": "알림 룰",
+          "value": "에러율 >1% → Slack/이메일 알림"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_200",
+      "key": "hallucination_ranges",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1814,
+          "source_text": "| 과장 환각 (Exaggeration) | 정도/범위 과장 | LOW | 경고 표시 |",
+          "value": "0-5% normal, 5-15% caution, 15-30% suspect, 30%+ severe"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_201",
+      "key": "harm_score_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1390,
+          "source_text": "Harm Score",
+          "value": ">=0.7"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_202",
+      "key": "input_max_length",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2502,
+          "source_text": "입력 길이",
+          "value": "<=32K"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_203",
+      "key": "kpi_v1_image",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": ">=85%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_204",
+      "key": "kpi_v1_latency",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": "<=5초"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_205",
+      "key": "kpi_v1_satisfaction",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": ">=70%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_206",
+      "key": "kpi_v1_stt",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": "<=10%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_207",
+      "key": "kpi_v1_tts",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": ">=3.5"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_208",
+      "key": "kpi_v2_voice",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": "<=1초"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_209",
+      "key": "kpi_v3_realtime",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": "<=500ms"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_210",
+      "key": "kpi_v3_satisfaction",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1262,
+          "source_text": "**J-098. 성공 지표 (KPI)** — V1: 이미지 이해 ≥85%, STT WER ≤10%, TTS MOS ≥3.5, 생성 만족도 ≥70%, 응답 지연 ≤5초 | V2: 이",
+          "value": ">=90%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_211",
+      "key": "p6_trust_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2233,
+          "source_text": "- 신뢰도 ≥ 0.9 에이전트: P1 → P0 자동 전환 (검증 기간 후)",
+          "value": ">=0.9 P1→P0, <0.5 P0→P1"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_212",
+      "key": "p6_var_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2219,
+          "source_text": "VaR 임계값",
+          "value": "일일 VaR > 포트폴리오 5% → 자동 경고"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_213",
+      "key": "policy_consistency_target",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1903,
+          "source_text": "정책 일관성",
+          "value": ">=99%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_214",
+      "key": "priority.policy_gate_expanded",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 2902,
+          "source_text": "Policy Gate(최우선): block > require_approval > mask > allow",
+          "value": "block > require_approval > mask > allow"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_215",
+      "key": "priority.policy_gate_order",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "",
+          "source_file": "v13_EA04_d20_01_02.json",
+          "source_line": 597,
+          "source_text": "정책 충돌: policy_gate가 우선(deny > restrict > allow)",
+          "value": "deny > restrict > allow"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_216",
+      "key": "prompt_injection_detection_v1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2371,
+          "source_text": "#### S7E-031 | PII 탐지 및 마스킹",
+          "value": "80%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_217",
+      "key": "prompt_injection_detection_v2",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2371,
+          "source_text": "#### S7E-031 | PII 탐지 및 마스킹",
+          "value": "95%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_218",
+      "key": "prompt_injection_detection_v3",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2371,
+          "source_text": "#### S7E-031 | PII 탐지 및 마스킹",
+          "value": "99%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_219",
+      "key": "qod_formula",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 230,
+          "source_text": "QoD = w1 × Accuracy + w2 × Relevance + w3 × Completeness + w4 × Safety + w5 × Efficiency",
+          "value": "QoD = w1 × Accuracy + w2 × Relevance + w3 × Completeness + w4 × Safety + w5 × Efficiency"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_220",
+      "key": "qod_threshold_normal",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 246,
+          "source_text": "QoD ≥ 0.85: 정상 출력",
+          "value": "0.85"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_221",
+      "key": "qod_thresholds",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1961,
+          "source_text": "| S7C-083 | QoD 신뢰도 바 | 색상 바(녹≥0.7/황0.5-0.7/적<0.5). 최근 응답 평균 QoD 트렌드 | V1 |",
+          "value": ">=80%초록, >=60%노랑, <60%빨강"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_222",
+      "key": "qod_widget",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2651,
+          "source_text": "- S7C-041 대시보드 위젯 버전, 최근 응답 평균 QoD 트렌드",
+          "value": ">=0.7녹, 0.5-0.7황, <0.5적"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_223",
+      "key": "rag_v1_target_confidence",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 1563,
+          "source_text": "RAG 검색 정확도 V1 목표치 달성 (신뢰도 ≥ 60, 재검색률 < 20%)",
+          "value": "60"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_224",
+      "key": "rear_AC-D4-006",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "",
+          "source_file": "v13_EA08_d21_schemas.json",
+          "source_line": 363,
+          "source_text": "- **AC-D4-006**: 모든 OTHER BRAINS/Tool 실행은 ToolRegistry 경유로만 수행되며, 직접 HTTP/Playwright/SDK 호출은 금지된다. (",
+          "value": "- **AC-D4-006**: 모든 OTHER BRAINS/Tool 실행은 ToolRegistry 경유로만 수행되며, 직접 HTTP/Playwright/SDK 호출은 금지된다. ("
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_225",
+      "key": "security_grade",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1596,
+          "source_text": "보안 등급",
+          "value": "0~100 (A:90+, B:70+, C:50+, D:<50)"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_226",
+      "key": "selfcheck_loop_end",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 3773,
+          "source_text": "Self-check ≥ 80",
+          "value": "80"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_227",
+      "key": "selfcheck_loop_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 3757,
+          "source_text": "품질 부족(Self-check < 70):",
+          "value": "70"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_228",
+      "key": "tool_model_qod_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "",
+          "source_file": "v13_EA02_base_plan.json",
+          "source_line": 3630,
+          "source_text": "QoD/신뢰도 < 60 인 경우 (LLM 단독 판단 불충분)",
+          "value": "60"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_229",
+      "key": "ui_cost_100",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2369,
+          "source_text": "비용 100%",
+          "value": "ui.gate.cost.ceiling_100 LOCK"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_230",
+      "key": "ui_cost_80",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 2368,
+          "source_text": "비용 80%",
+          "value": "ui.gate.cost.warning_80 LOCK"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_231",
+      "key": "vbs11_target",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "",
+          "source_file": "v13_EA07_d20_07_08.json",
+          "source_line": 1204,
+          "source_text": "**J-074. 멀티모달 성능 벤치마크 (VBS-11)**",
+          "value": "각>=70, 평균>=75"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_232",
+      "key": "개발자도구 성공 KPI",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1016,
+          "source_text": "- 코드 생성 정확도: ≥ 85%",
+          "value": "{\"코드_생성_정확도\": \"≥85%\", \"자동완성_수락률\": \"≥30%\", \"디버깅_해결률\": \"≥70%\", \"온보딩_시간\": \"≤10분\", \"NPS\": \"≥50\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_233",
+      "key": "릴리즈 QA 체크리스트 Unit Test 커버리지 임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 835,
+          "source_text": "  □ Unit Test Coverage ≥80%",
+          "value": "80%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_234",
+      "key": "멀티모달 V1 KPI 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1677,
+          "source_text": "- TTS 자연스러움 MOS: ≥ 3.5/5",
+          "value": "{\"이미지_이해_정확도\": \"≥85%\", \"STT_한국어_WER\": \"≤10%\", \"TTS_MOS\": \"≥3.5/5\", \"이미지_생성_만족도\": \"≥70%\", \"응답_지연\": \"≤5초\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_235",
+      "key": "메모리 회상 품질 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 660,
+          "source_text": "  - 목표: 회상 정확도 90%, 망각 정확도 100%",
+          "value": "{\"회상_정확도\": \"90%\", \"망각_정확도\": \"100%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_236",
+      "key": "모델 라우팅 효율 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 645,
+          "source_text": "  - 목표: 선택 정확도 80%, 비용 효율 1.2x 이하",
+          "value": "{\"선택_정확도\": \"80%\", \"비용_효율\": \"1.2x 이하\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_237",
+      "key": "벤치마크 목표 수치",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 25,
+          "source_text": "| **합계** | **88** | **CRITICAL 11 / HIGH 47 / MED 30** |",
+          "value": "{\"Faithfulness\": \"≥0.9\", \"BFCL\": \"≥88\", \"TruthfulQA_MC1\": \"≥55\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_238",
+      "key": "보강_V1비용",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1407,
+          "source_text": "비용: ≤ ₩10,000/월",
+          "value": "<=10000원/월"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_239",
+      "key": "보강_V2비용",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1422,
+          "source_text": "비용: ≤ ₩40,000/월",
+          "value": "<=40000원/월"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_240",
+      "key": "보강_V3비용",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "",
+          "source_file": "v13_EA12_step7_spec.json",
+          "source_line": 1434,
+          "source_text": "비용: ≤ ₩200,000/월",
+          "value": "<=200000원/월"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_241",
+      "key": "보안 점수 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 24,
+          "source_text": "| **합계** | **92** | **CRITICAL 27 / HIGH 41 / MED 24** |",
+          "value": "{\"V1\": 60, \"V2\": 85, \"V3\": 95}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_242",
+      "key": "보안 점수 버전별 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1154,
+          "source_text": "  → 보안 점수 목표: 60/100",
+          "value": "{\"V1\": \"60/100\", \"V2\": \"85/100\", \"V3\": \"95/100\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_243",
+      "key": "시맨틱 중복 감지 임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 285,
+          "source_text": "임베딩 유사도: cosine > 0.85 → 중복 후보",
+          "value": "0.85"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_244",
+      "key": "에이전트 성공 KPI",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1406,
+          "source_text": "- MCP 도구 호출 성공률: ≥ 95%",
+          "value": "{\"MCP_도구_호출_성공률\": \"≥95%\", \"A2A_프로토콜_호환\": \"≥90%\", \"에이전트_라우팅_정확도\": \"≥85%\", \"MoA_품질_향상\": \"≥15%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_245",
+      "key": "응답 시간 SLO 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 1375,
+          "source_text": "| 간단한 채팅 | < 1s | < 3s |",
+          "value": "{\"간단한_채팅\": \"P50<1s P95<3s\", \"검색_답변\": \"P50<3s P95<8s\", \"코드_생성\": \"P50<5s P95<15s\", \"문서_분석\": \"P50<10s P95<30s\", \"Agent_작업\": \"P50<30s P95<120s\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_246",
+      "key": "인시던트 에스컬레이션 임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 915,
+          "source_text": "- 에스컬레이션: 30분 미응답 → 재알림 → 60분 미응답 → 자동 안전모드",
+          "value": "{\"재알림\": \"30분 미응답\", \"자동_안전모드\": \"60분 미응답\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_247",
+      "key": "투자 백테스트 성과 임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 944,
+          "source_text": "- 승률 (Win Rate, >51% 목표)",
+          "value": "{\"Sharpe_Ratio\": \">1.0\", \"Win_Rate\": \">51%\"}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_248",
+      "key": "품질 KPI 버전별 목표",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 856,
+          "source_text": "  | 작업 완수율 | 80% | 90% |",
+          "value": "{\"작업_완수율\": {\"V1\": \"80%\", \"V2\": \"90%\"}, \"사용자_만족도\": {\"V1\": \"4.0/5\", \"V2\": \"4.3/5\"}, \"환각률\": {\"V1\": \"<8%\", \"V2\": \"<3%\"}, \"Injection_방어율\": {\"V1\": \"95%\", \"V2\": \"99%\"}, \"비용_효율_CER\": {\"V1\": \"2.0x\", \"V2\": \"2.5x\"}, \"한국어_자연스러움\": {\"V1\": \"85%\", \"V2\": \"92%\"}}"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-7_249",
+      "key": "회귀 테스트 품질 하락 임계값",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "",
+          "source_file": "v13_EA13_step7_guides.json",
+          "source_line": 761,
+          "source_text": "  임계값: 이전 대비 3% 이상 하락 시 알림",
+          "value": "3%"
+        }
+      ],
+      "analysis": "",
+      "recommendation": ""
+    }
+  ]
+}

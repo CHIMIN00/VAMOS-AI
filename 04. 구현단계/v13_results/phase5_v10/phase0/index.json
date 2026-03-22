@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "phase": "Phase 5 (v10 전수 재실행)",
+    "sub_phase": "Phase 0-B",
+    "version": "v13.4.0-ENHANCED",
+    "timestamp": "2026-03-22T14:00:00+09:00",
+    "session": 28,
+    "total_sot_files": 68,
+    "total_sot_lines": 89377,
+    "total_agents": 15,
+    "sot_base_path": "D:\\VAMOS\\docs\\sot\\"
+  },
+  "agent_assignments": {
+    "C01": {
+      "agent_id": "C-01",
+      "group": 1,
+      "session": 29,
+      "label": "PLAN 정본",
+      "files": [
+        {"file": "PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md", "abbrev": "P30", "lines": 7047}
+      ],
+      "total_lines": 7047,
+      "v10_predecessor": "v10_src_C01a.json",
+      "v10_feature_count": 91,
+      "focus": "V0~V3 로드맵, 비용 정책, 버전별 Phase 배정, 68개 GO/NO-GO"
+    },
+    "C02": {
+      "agent_id": "C-02",
+      "group": 1,
+      "session": 29,
+      "label": "규칙 + PLAN 이전",
+      "files": [
+        {"file": "PLAN-2.0_VAMOS_PLAN_2.0_.md", "abbrev": "P20", "lines": 4350},
+        {"file": "BASE-1.3_VAMOS_RULE_1.3_BASE.md", "abbrev": "BASE", "lines": 634}
+      ],
+      "total_lines": 4984,
+      "v10_predecessor": "v10_src_C01b.json (partial)",
+      "v10_feature_count": 63,
+      "focus": "절대규칙 14조, PLAN-2.0 SUPERSEDED 중 구조적 정의만 추출"
+    },
+    "C03": {
+      "agent_id": "C-03",
+      "group": 1,
+      "session": 29,
+      "label": "DESIGN Overview + Orange Core",
+      "files": [
+        {"file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md", "abbrev": "D201", "lines": 1857},
+        {"file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md", "abbrev": "D202", "lines": 4474}
+      ],
+      "total_lines": 6331,
+      "v10_predecessor": "v10_src_C02_overview_orange.json",
+      "v10_feature_count": 152,
+      "focus": "아키텍처 허브, LOCK 레지스트리, I-1~I-25 상세설계, 5-Phase 파이프라인"
+    },
+    "C04": {
+      "agent_id": "C-04",
+      "group": 1,
+      "session": 29,
+      "label": "Blue Nodes + Infra Core",
+      "files": [
+        {"file": "D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md", "abbrev": "D203", "lines": 1943},
+        {"file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md", "abbrev": "D204", "lines": 1591}
+      ],
+      "total_lines": 3534,
+      "v10_predecessor": "v10_src_C03_blue_infra_wf.json (partial)",
+      "v10_feature_count": 469,
+      "focus": "6개 BLUE NODE, DevOps/Research/Productivity, Docker/K8s 인프라, HAL"
+    },
+    "C05": {
+      "agent_id": "C-05",
+      "group": 1,
+      "session": 29,
+      "label": "Agent WF + Storage + Safety",
+      "files": [
+        {"file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md", "abbrev": "D205", "lines": 1982},
+        {"file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md", "abbrev": "D206", "lines": 2428},
+        {"file": "D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md", "abbrev": "D207", "lines": 2655}
+      ],
+      "total_lines": 7065,
+      "v10_predecessor": "v10_src_C03_blue_infra_wf.json (partial) + v10_src_C04.json",
+      "v10_feature_count": 438,
+      "focus": "LangGraph 워크플로우, L0~L3 메모리, 4계층 Guardrails, CostGate, ApprovalGate"
+    },
+    "C06": {
+      "agent_id": "C-06",
+      "group": 2,
+      "session": 30,
+      "label": "UI/UX + Tech Stack + Audit",
+      "files": [
+        {"file": "D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md", "abbrev": "D208", "lines": 2696},
+        {"file": "D2.1-A1_A1_TECH_STACK.md", "abbrev": "DA1", "lines": 401},
+        {"file": "D2.1-Q1_Q1_AUDIT_REPORT.md", "abbrev": "DQ1", "lines": 1172}
+      ],
+      "total_lines": 4269,
+      "v10_predecessor": "v10_src_C05.json + v10_src_C06.json (partial)",
+      "v10_feature_count": 113,
+      "focus": "3단 패널, Builder View, PWA, 기술 스택 정의, 감사 보고서"
+    },
+    "C07": {
+      "agent_id": "C-07",
+      "group": 2,
+      "session": 30,
+      "label": "스키마 D1~D8",
+      "files": [
+        {"file": "D2.1-D1_D1_SCHEMA_GLOSSARY.md", "abbrev": "DD1", "lines": 363},
+        {"file": "D2.1-D2_D2_SCHEMA_ORANGE_CORE.md", "abbrev": "DD2", "lines": 547},
+        {"file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md", "abbrev": "DD3", "lines": 759},
+        {"file": "D2.1-D4_D4_SCHEMA_INFRA_CORE.md", "abbrev": "DD4", "lines": 518},
+        {"file": "D2.1-D5_D5_SCHEMA_AGENT_WORKFLOW.md", "abbrev": "DD5", "lines": 665},
+        {"file": "D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md", "abbrev": "DD6", "lines": 394},
+        {"file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md", "abbrev": "DD7", "lines": 594},
+        {"file": "D2.1-D8_D8_SCHEMA_UI_UX.md", "abbrev": "DD8", "lines": 201}
+      ],
+      "total_lines": 4041,
+      "v10_predecessor": "v10_src_C06.json (partial)",
+      "v10_feature_count": 113,
+      "focus": "25개 Pydantic 모델, Glossary, 도메인별 스키마 필드 정의"
+    },
+    "C08": {
+      "agent_id": "C-08",
+      "group": 2,
+      "session": 30,
+      "label": "구현가이드 B1~B4",
+      "files": [
+        {"file": "PHASE_B1_API_CONTRACT.md", "abbrev": "PB1", "lines": 2218},
+        {"file": "PHASE_B2_PROJECT_STRUCTURE.md", "abbrev": "PB2", "lines": 886},
+        {"file": "PHASE_B3_DEPENDENCIES.md", "abbrev": "PB3", "lines": 367},
+        {"file": "PHASE_B4_CONFIG_SPEC.md", "abbrev": "PB4", "lines": 1242}
+      ],
+      "total_lines": 4713,
+      "v10_predecessor": "v10_src_C07.json (partial)",
+      "v10_feature_count": 143,
+      "focus": "88개 API 엔드포인트, 모노레포 구조, 의존성 매트릭스, config.v1.toml"
+    },
+    "C09": {
+      "agent_id": "C-09",
+      "group": 2,
+      "session": 30,
+      "label": "구현가이드 B5~B7",
+      "files": [
+        {"file": "PHASE_B5_TEST_STRATEGY.md", "abbrev": "PB5", "lines": 945},
+        {"file": "PHASE_B6_CICD_PIPELINE.md", "abbrev": "PB6", "lines": 1757},
+        {"file": "PHASE_B7_MIGRATION_STRATEGY.md", "abbrev": "PB7", "lines": 2336}
+      ],
+      "total_lines": 5038,
+      "v10_predecessor": "v10_src_C07.json (partial)",
+      "v10_feature_count": 143,
+      "focus": "테스트 전략(80% 커버리지), CI/CD 파이프라인, DB/라이브러리 마이그레이션"
+    },
+    "C10": {
+      "agent_id": "C-10",
+      "group": 2,
+      "session": 30,
+      "label": "통합참조 + Readiness",
+      "files": [
+        {"file": "VAMOS_MASTER_SPECIFICATION.md", "abbrev": "MSTR", "lines": 1902},
+        {"file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md", "abbrev": "IRGD", "lines": 1256},
+        {"file": "VAMOS_IMPLEMENTATION_READINESS_REVIEW.md", "abbrev": "IRRV", "lines": 765},
+        {"file": "VAMOS_V0_READINESS_FINAL_REVIEW.md", "abbrev": "V0RD", "lines": 743},
+        {"file": "CLAUDE.md", "abbrev": "CLAUDE", "lines": 701}
+      ],
+      "total_lines": 5367,
+      "v10_predecessor": "v10_src_C01b.json (partial) + v10_src_C10_beginner_claude.json (partial)",
+      "v10_feature_count": 84,
+      "focus": "전체 통합 참조, 45개 이슈, 62개 GO/NO-GO, V0 준비 현황"
+    },
+    "C11": {
+      "agent_id": "C-11",
+      "group": 3,
+      "session": 31,
+      "label": "STEP7 작업가이드 B~I",
+      "files": [
+        {"file": "STEP7-B_대화프로세스_작업가이드.md", "abbrev": "S7B", "lines": 1188},
+        {"file": "STEP7-C_UI_UX_전수비교_작업가이드.md", "abbrev": "S7C", "lines": 235},
+        {"file": "STEP7-D_메모리_저장소_아키텍처_작업가이드.md", "abbrev": "S7D", "lines": 294},
+        {"file": "STEP7-E_보안_안전_거버넌스_작업가이드.md", "abbrev": "S7E", "lines": 1210},
+        {"file": "STEP7-F_인프라_배포_MLOps_작업가이드.md", "abbrev": "S7F", "lines": 1450},
+        {"file": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md", "abbrev": "S7G", "lines": 891},
+        {"file": "STEP7-H_비즈니스모델_시장전략_작업가이드.md", "abbrev": "S7H", "lines": 1053},
+        {"file": "STEP7-I_AI_Investing_보강_작업가이드.md", "abbrev": "S7I", "lines": 1349}
+      ],
+      "total_lines": 7670,
+      "v10_predecessor": "v10_src_C09a.json (partial)",
+      "v10_feature_count": 997,
+      "focus": "대화프로세스, UI/UX 전수비교, 메모리 아키텍처, 보안, 인프라, 벤치마크, 비즈니스, AI Investing 보강"
+    },
+    "C12": {
+      "agent_id": "C-12",
+      "group": 3,
+      "session": 31,
+      "label": "STEP7 작업가이드 J~P + 총괄",
+      "files": [
+        {"file": "STEP7-J_멀티모달_생성처리_작업가이드.md", "abbrev": "S7J", "lines": 1698},
+        {"file": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md", "abbrev": "S7K", "lines": 1416},
+        {"file": "STEP7-L_개발자도구_API_SDK_작업가이드.md", "abbrev": "S7L", "lines": 1026},
+        {"file": "STEP7-M_PKM_지식관리_작업가이드.md", "abbrev": "S7M", "lines": 883},
+        {"file": "STEP7-N_워크플로우자동화_RPA_작업가이드.md", "abbrev": "S7N", "lines": 667},
+        {"file": "STEP7-O_교육_학습_자기개발_작업가이드.md", "abbrev": "S7O", "lines": 543},
+        {"file": "STEP7-P_건강_웰니스_감성AI_작업가이드.md", "abbrev": "S7P", "lines": 668},
+        {"file": "STEP7_작업가이드.md", "abbrev": "S7WG", "lines": 940}
+      ],
+      "total_lines": 7841,
+      "v10_predecessor": "v10_src_C09a.json (partial) + v10_src_C09b.json (partial)",
+      "v10_feature_count": 561,
+      "focus": "멀티모달, 에이전트 프로토콜, 개발자도구, PKM, 워크플로우, 교육, 건강, 작업가이드 총괄"
+    },
+    "C13": {
+      "agent_id": "C-13",
+      "group": 3,
+      "session": 31,
+      "label": "STEP7 상세명세서 5종",
+      "files": [
+        {"file": "VAMOS_STEP7_A-E_상세명세서.md", "abbrev": "S7AE", "lines": 1000},
+        {"file": "VAMOS_STEP7_F-I_상세명세서.md", "abbrev": "S7FI", "lines": 2876},
+        {"file": "VAMOS_STEP7_J-M_상세명세서.md", "abbrev": "S7JM", "lines": 1824},
+        {"file": "VAMOS_STEP7_N-P_보강_상세명세서.md", "abbrev": "S7NP", "lines": 1809},
+        {"file": "VAMOS_STEP7_보강_통합명세서.md", "abbrev": "S7BG", "lines": 1523}
+      ],
+      "total_lines": 9032,
+      "v10_predecessor": "v10_src_C09b.json (partial)",
+      "v10_feature_count": 561,
+      "focus": "AI기술보강 3,101건 상세명세, 도메인별 보강 항목, TITLE_ONLY 판정"
+    },
+    "C14": {
+      "agent_id": "C-14",
+      "group": 3,
+      "session": 31,
+      "label": "STEP7 우선순위 + 통합인덱스",
+      "files": [
+        {"file": "STEP7_R1_V1_CRITICAL.md", "abbrev": "S7R1", "lines": 892},
+        {"file": "STEP7_R2_V1_HIGH.md", "abbrev": "S7R2", "lines": 662},
+        {"file": "STEP7_R3_V1_MEDIUM_LOW.md", "abbrev": "S7R3", "lines": 178},
+        {"file": "STEP7_R4_V2_CRITICAL_HIGH.md", "abbrev": "S7R4", "lines": 170},
+        {"file": "STEP7_R5_V2_MEDIUM_LOW.md", "abbrev": "S7R5", "lines": 140},
+        {"file": "STEP7_R6_V3_ALL.md", "abbrev": "S7R6", "lines": 154},
+        {"file": "STEP7_A-I_보강_추가항목_통합.md", "abbrev": "S7AI", "lines": 666},
+        {"file": "STEP7_PHASE7_최종검증보고서.md", "abbrev": "S7P7", "lines": 242},
+        {"file": "STEP7_STEP6통합_마스터인덱스.md", "abbrev": "S7S6", "lines": 828}
+      ],
+      "total_lines": 3932,
+      "v10_predecessor": "v10_src_C09b.json (partial)",
+      "v10_feature_count": 561,
+      "focus": "V1 CRITICAL/HIGH/MEDIUM, V2 CRITICAL/HIGH, V3 ALL 우선순위, 보강 통합, 마스터인덱스"
+    },
+    "C15": {
+      "agent_id": "C-15",
+      "group": 3,
+      "session": 31,
+      "label": "도메인 SPEC + Beginner",
+      "files": [
+        {"file": "VAMOS_AI_INVESTING_SPEC.md", "abbrev": "AINV", "lines": 1379},
+        {"file": "VAMOS_CLOUD_LIBRARY_SPEC.md", "abbrev": "CLIB", "lines": 1439},
+        {"file": "VAMOS_AGENT_TEAMS_SPEC.md", "abbrev": "TEAM", "lines": 2204},
+        {"file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md", "abbrev": "SDAR", "lines": 1647},
+        {"file": "VAMOS_BEGINNER_GUIDE.md", "abbrev": "BGNR", "lines": 1844}
+      ],
+      "total_lines": 8513,
+      "v10_predecessor": "v10_src_C08.json + v10_src_C10_beginner_claude.json (partial)",
+      "v10_feature_count": 534,
+      "focus": "AI Investing 51% Gate, Cloud Library, Agent Teams, SDAR 5-Layer, 초보자 가이드"
+    }
+  },
+  "group_summary": {
+    "group_1": {
+      "session": 29,
+      "agents": ["C01", "C02", "C03", "C04", "C05"],
+      "total_files": 10,
+      "total_lines": 28961,
+      "focus": "PLAN + 규칙 + DESIGN 2.0 Core (01~07)"
+    },
+    "group_2": {
+      "session": 30,
+      "agents": ["C06", "C07", "C08", "C09", "C10"],
+      "total_files": 23,
+      "total_lines": 23428,
+      "focus": "UI/UX + 스키마 + 구현가이드 + 통합참조"
+    },
+    "group_3": {
+      "session": 31,
+      "agents": ["C11", "C12", "C13", "C14", "C15"],
+      "total_files": 35,
+      "total_lines": 36988,
+      "focus": "STEP7 전수 + 도메인 SPEC"
+    }
+  },
+  "document_hierarchy": {
+    "level_1": "RULE 1.3 (절대규칙) — BASE-1.3",
+    "level_2": "PLAN 3.0 (상위원칙)",
+    "level_3": "DESIGN 2.0 LOCK 값",
+    "level_4": "DESIGN 본문 (D2.0-01~08)",
+    "level_5": "스키마/TECH_STACK (D2.1-D1~D8, A1)",
+    "conflict_rule": "상위 번호가 하위를 override",
+    "change_rule": "삭제 금지 (DEPRECATE만), 없는 내용 창작 금지"
+  },
+  "integrity": {
+    "total_files_assigned": 68,
+    "total_lines_assigned": 89377,
+    "file_count_verification": "68 SOT .md files in D:\\VAMOS\\docs\\sot\\ = 68 assigned across 15 agents ✓",
+    "line_count_verification": "28961 + 23428 + 36988 = 89377 ✓"
+  }
+}

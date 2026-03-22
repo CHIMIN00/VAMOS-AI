@@ -1,0 +1,859 @@
+{
+  "meta": {
+    "source": "v11_adversarial_report.md",
+    "part2_version": "v24.0.0",
+    "total_lines": 4395,
+    "total_fix_groups": 42,
+    "generated_at": "2026-03-12",
+    "verification": "BP-13 이중검증 적용 (grep + 섹션맵 기반)"
+  },
+  "section_boundaries": {
+    "§1": {"start": 22, "end": 97, "title": "전체 구현 로드맵 개요"},
+    "§1.1": {"start": 37, "end": 45, "title": "버전별 활성 모듈 수"},
+    "§1.3": {"start": 52, "end": 97, "title": "AI 구현 공통 규칙"},
+    "§2": {"start": 98, "end": 1448, "title": "V0 구현"},
+    "§3": {"start": 1449, "end": 1881, "title": "V1 구현"},
+    "§4": {"start": 1882, "end": 2521, "title": "V2 구현"},
+    "§5": {"start": 2522, "end": 3195, "title": "V3 구현"},
+    "§6": {"start": 3196, "end": 4138, "title": "시스템별 상세 구현 가이드"},
+    "§6.3": {"start": 3332, "end": 3400, "title": "테스트"},
+    "§6.5": {"start": 3401, "end": 3500, "title": "보안"},
+    "§6.9": {"start": 3700, "end": 3820, "title": "에러/폴백"},
+    "§6.10": {"start": 3821, "end": 3934, "title": "Cloud Library"},
+    "§6.11": {"start": 3935, "end": 4050, "title": "파이프라인 상태"},
+    "§6.12": {"start": 4112, "end": 4122, "title": "운영 결정 항목"},
+    "§6.13": {"start": 4123, "end": 4138, "title": "전체 코딩 작업량 요약"},
+    "§7": {"start": 4139, "end": 4361, "title": "최종 검토사항"},
+    "§7.1": {"start": 4148, "end": 4170, "title": "V0 GO/NO-GO"},
+    "§7.2": {"start": 4171, "end": 4204, "title": "V1 GO/NO-GO"},
+    "§7.3": {"start": 4205, "end": 4230, "title": "V2 GO/NO-GO"},
+    "§7.4": {"start": 4231, "end": 4249, "title": "V3 GO/NO-GO"},
+    "§7.5": {"start": 4250, "end": 4323, "title": "크로스컷 검토"},
+    "§7.5.5": {"start": 4297, "end": 4323, "title": "SOURCE_CONFLICT 인덱스"},
+    "§7.6": {"start": 4324, "end": 4361, "title": "산출물 파일 인덱스"},
+    "변경이력": {"start": 4362, "end": 4395, "title": "변경 이력"}
+  },
+  "fix_groups": [
+    {
+      "id": "FG-B01",
+      "severity": "BLOCKER",
+      "type": "FIX",
+      "title": "비용 알람 체계 통일 (70/85/95 vs 80/100)",
+      "issues": ["A1#1", "A11#4"],
+      "primary_locations": [
+        {"line": 209, "section": "§2 STEP-1 config", "content": "warn_threshold = 80"},
+        {"line": 384, "section": "§2 STEP-1 config (duplicate)", "content": "warn_threshold = 80"},
+        {"line": 1529, "section": "§3 V1 Phase 2", "content": "70% 경고 / 85% 심화 경고 / 95% 차단"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.8", "reason": "비용 관련 설정 참조"},
+        {"section": "§7.1", "line": 4167, "reason": "V0 비용 엔진 체크리스트"},
+        {"section": "§7.2", "line": 4183, "reason": "V1 비용 상한 통일 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["warn_threshold", "70%", "85%", "95%", "80%", "100%", "비용.*경보", "비용.*알람"]
+    },
+    {
+      "id": "FG-B02",
+      "severity": "BLOCKER",
+      "type": "FIX",
+      "title": "V2→V3 전환조건 Loki+Grafana 시간 모순",
+      "issues": ["A6#17"],
+      "primary_locations": [
+        {"line": 2564, "section": "§5 V3 진입조건", "content": "Loki+Grafana 배포 완료"},
+        {"line": 4228, "section": "§7.3 V2→V3 전환", "content": "Loki+Grafana 배포"}
+      ],
+      "ripple_targets": [
+        {"section": "§5 V3-Phase 1", "line": 2639, "reason": "Loki+Grafana 구축 섹션"},
+        {"section": "§7.4", "reason": "V3 체크리스트 영향"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["Loki", "Grafana", "V2.*V3.*전환", "전환.*조건"]
+    },
+    {
+      "id": "FG-B03",
+      "severity": "BLOCKER",
+      "type": "FIX",
+      "title": "SelfCheckGate 실행 위치 명확화 (plan vs verify)",
+      "issues": ["A12#2"],
+      "primary_locations": [
+        {"line": 973, "section": "§2 STEP-4", "content": "SelfCheckGate 파이프라인 위치: verify 노드"},
+        {"line": 975, "section": "§2 STEP-4", "content": "Gate 실행 순서: Policy→Approval→Cost→Evidence→SelfCheck"},
+        {"line": 1011, "section": "§2 STEP-4 코드", "content": "verify_node — SelfCheckGate 위치"},
+        {"line": 1492, "section": "§3 V1", "content": "5-Gate 순서 LOCK"},
+        {"line": 1538, "section": "§3 V1 체크리스트", "content": "5-Gate 전체 동작 순서"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.11", "reason": "파이프라인 상태 전이 영향"},
+        {"section": "§7.1", "line": 1864, "reason": "V0 5-Gate 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["SelfCheck", "Self-Check", "verify.*node", "5-Gate.*순서", "Gate.*실행.*순서"]
+    },
+    {
+      "id": "FG-B04",
+      "severity": "BLOCKER",
+      "type": "FIX",
+      "title": "S3 타임아웃(120s) vs 승인 타임아웃(600s) 충돌",
+      "issues": ["A12#4"],
+      "primary_locations": [
+        {"line": 1512, "section": "§3 V1", "content": "S3=120s"},
+        {"line": 220, "section": "§2 config", "content": "timeout_s = 600"},
+        {"line": 395, "section": "§2 config (dup)", "content": "timeout_s = 600"},
+        {"line": 1546, "section": "§3 V1 체크리스트", "content": "S3=120s 타임아웃"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.11", "reason": "파이프라인 타임아웃 정의"},
+        {"section": "§7.1", "reason": "V0 타임아웃 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["S3.*120", "timeout.*600", "approval.*timeout", "타임아웃"]
+    },
+    {
+      "id": "FG-B05",
+      "severity": "BLOCKER",
+      "type": "ADD",
+      "title": "FailureCode↔Fallback 매핑 테이블 작성",
+      "issues": ["A12#17"],
+      "primary_locations": [
+        {"line": 4081, "section": "§6.9 FailureCodeRegistry", "content": "36 항목"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.9", "reason": "FallbackRegistry 23건과 매핑"},
+        {"section": "§7.5.1", "reason": "문서 정합성 체크"},
+        {"section": "§6.13", "reason": "작업량 반영"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["FailureCode", "Fallback", "FC-", "FB_"]
+    },
+    {
+      "id": "FG-B06",
+      "severity": "BLOCKER",
+      "type": "RESTRUCTURE",
+      "title": "V2-Phase 2 프롬프트 v10 추가분 반영 (10/116→확장)",
+      "issues": ["A8#1"],
+      "primary_locations": [
+        {"section": "§4 Phase 2 AI 프롬프트", "reason": "커버리지 10/116 극히 미달"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "작업량 변동"},
+        {"section": "§7.3", "reason": "V2 체크리스트 영향"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["V2.*Phase 2", "프롬프트.*커버"]
+    },
+    {
+      "id": "FG-B07",
+      "severity": "BLOCKER",
+      "type": "FIX",
+      "title": "v10 추가 후 타임라인 재설계 (V1-PH2/3, V2-PH2)",
+      "issues": ["A11#6", "A11#7", "A11#8"],
+      "primary_locations": [
+        {"section": "§3 Phase 2", "reason": "V1-Phase 2: 59개/2주 과부하"},
+        {"section": "§3 Phase 3", "reason": "V1-Phase 3: 59개/2주 과부하"},
+        {"section": "§4 Phase 2", "reason": "V2-Phase 2: 105개/3주 과부하"}
+      ],
+      "ripple_targets": [
+        {"section": "§1", "reason": "전체 로드맵 타임라인 (V1 8-12주)"},
+        {"section": "§6.13", "line": 4125, "reason": "작업량 합계 영향"},
+        {"section": "§7.2", "reason": "V1 체크리스트 영향"},
+        {"section": "§7.3", "reason": "V2 체크리스트 영향"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 5,
+      "keywords": ["Phase 2", "Phase 3", "2주", "3주", "타임라인"]
+    },
+    {
+      "id": "FG-B08",
+      "severity": "BLOCKER",
+      "type": "FIX+ADD",
+      "title": "§6.3 테스트 수 갱신 + V2-PH2 테스트 보강",
+      "issues": ["A13#17", "A13#18"],
+      "primary_locations": [
+        {"line": 3332, "section": "§6.3", "content": "테스트 (~84개 항목)"},
+        {"line": 4129, "section": "§6.13", "content": "테스트 ~84"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "line": 4135, "reason": "합계 변동"},
+        {"section": "§7.2", "reason": "V1 테스트 체크리스트"},
+        {"section": "§7.3", "reason": "V2 테스트 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["테스트.*84", "§6.3", "테스트.*항목"]
+    },
+    {
+      "id": "FG-B09",
+      "severity": "BLOCKER",
+      "type": "ADD",
+      "title": "운영 섹션 신설 (모니터링/백업/인시던트)",
+      "issues": ["A14#25", "A14#26"],
+      "primary_locations": [
+        {"line": 4112, "section": "§6.12", "content": "운영 구현 중 결정 항목 (2건)"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "운영 작업량 추가"},
+        {"section": "§7.1", "reason": "V0 모니터링 체크 추가"},
+        {"section": "§7.2", "reason": "V1 모니터링 체크 추가"},
+        {"section": "§7.5.1", "reason": "문서 정합성"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 5,
+      "keywords": ["운영", "모니터링", "백업", "인시던트", "§6.12"]
+    },
+    {
+      "id": "FG-H01",
+      "severity": "HIGH",
+      "type": "FIX",
+      "title": "FIX-09 Gate 명칭 전파 + B-시리즈 매핑 수정",
+      "issues": ["A2#1-8", "A2#12", "A2#15-16", "A5#6-9", "A12#10-11"],
+      "primary_locations": [
+        {"line": 3854, "section": "§6.10 G1", "content": "Content Quality (FIX-09 적용됨)"},
+        {"line": 3855, "section": "§6.10 G2", "content": "Consistency (FIX-09 적용됨)"},
+        {"line": 3875, "section": "§6.10 LOCK#11", "content": "Trust Score (미전파)"},
+        {"line": 3876, "section": "§6.10 LOCK#12", "content": "Relevance Score (미전파)"},
+        {"line": 3927, "section": "§6.10 Fast Gate CL-G1", "content": "Trust (미전파)"},
+        {"line": 3928, "section": "§6.10 Fast Gate CL-G2", "content": "Relevance (미전파)"},
+        {"line": 1586, "section": "§3 B-Series 매핑", "content": "B-1 Episodic↔Skill Library 충돌"},
+        {"line": 1587, "section": "§3 B-Series 매핑", "content": "B-2 Procedural↔Prompt Cache 충돌"},
+        {"line": 1588, "section": "§3 B-Series 매핑", "content": "B-3 Semantic↔Memory Decay"},
+        {"line": 1589, "section": "§3 B-Series 매핑", "content": "B-4 Working↔DSPy 충돌"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.5.5", "line": 4317, "reason": "SC-13/SC-14 FIX-09 기록 업데이트"},
+        {"section": "§5 V3 B-Series", "line": 2709, "reason": "B-Series 모듈 상세"},
+        {"section": "§5 V3-PH2", "line": 2844, "reason": "B-1~B-6 구현 파일"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["Trust Score", "Relevance", "Content Quality", "Consistency", "B-1.*Episodic", "B-2.*Procedural", "B-3.*Semantic", "B-4.*Working", "Skill Library", "DSPy", "CL-G1", "CL-G2"]
+    },
+    {
+      "id": "FG-H02",
+      "severity": "HIGH",
+      "type": "ADD+RESTRUCTURE",
+      "title": "§3 V1 하위구조 보강 (실행가이드/프롬프트/규칙/참조SOT/완료검증)",
+      "issues": ["A4#3", "A4#9", "A4#10", "A4#11", "A4#12", "A4#13"],
+      "primary_locations": [
+        {"section": "§3 전체", "start": 1449, "end": 1881, "reason": "V1 구현 섹션 전체 보강"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "V1 작업량 변동 가능"},
+        {"section": "§7.2", "reason": "V1 체크리스트 대응"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["V1.*구현", "§3", "실행.*가이드", "AI.*프롬프트", "완료.*검증"]
+    },
+    {
+      "id": "FG-H03",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "V1→V2/V2→V3 전환조건 TC 측정 메커니즘 정의",
+      "issues": ["A6#13", "A6#14", "A6#15", "A6#16", "A6#18"],
+      "primary_locations": [
+        {"section": "§7.3", "line": 4205, "reason": "V2 전환조건"},
+        {"section": "§7.4", "line": 4231, "reason": "V3 전환조건"},
+        {"line": 2564, "section": "§5", "reason": "V2→V3 전환조건 본문"}
+      ],
+      "ripple_targets": [
+        {"section": "§3 Phase 마무리", "reason": "V1→V2 전환 기술"},
+        {"section": "§4 Phase 마무리", "reason": "V2→V3 전환 기술"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["전환.*조건", "TC", "memory.*error", "RAG.*accuracy", "2-tier", "QoD"]
+    },
+    {
+      "id": "FG-H04",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "프롬프트 규칙 전파 (R1~R11 + v10 + v24)",
+      "issues": ["A8#2", "A8#3", "A8#4", "A8#8", "A8#9", "A8#10", "A8#11", "A8#13", "A8#14", "A8#15", "A8#16", "A8#17", "A8#18"],
+      "primary_locations": [
+        {"section": "§2 STEP-1~6 프롬프트 (6개)", "reason": "V0 프롬프트 규칙 섹션"},
+        {"section": "§4 Phase 1~3 프롬프트 (3개)", "reason": "V2 프롬프트 규칙 섹션"},
+        {"section": "§5 Phase 1~3 프롬프트 (3개)", "reason": "V3 프롬프트 규칙 섹션"},
+        {"section": "§1.3", "line": 52, "reason": "공통 규칙 정본"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "작업량 미세 변동"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["Python.*3.11", "Pydantic.*v2", "no-create", "no-delete", "schema_registry", "공통.*규칙"]
+    },
+    {
+      "id": "FG-H05",
+      "severity": "HIGH",
+      "type": "FIX",
+      "title": "config 값 불일치 수정 (autonomy_level, max_turns, strict)",
+      "issues": ["A1#2", "A1#4", "A10#11"],
+      "primary_locations": [
+        {"line": 164, "section": "§2 config L1", "content": "autonomy_level = L1"},
+        {"line": 339, "section": "§2 config L1 (dup)", "content": "autonomy_level = L1"},
+        {"line": 1490, "section": "§3 V1", "content": "L2_COPILOT"},
+        {"line": 2214, "section": "§4 V2", "content": "max_turns(50)"},
+        {"line": 2293, "section": "§4 V2 config", "content": "max_turns_per_session = 100"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.1", "reason": "V0 config 체크리스트"},
+        {"section": "§7.2", "reason": "V1 config 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["autonomy_level", "L2_COPILOT", "max_turns", "strict"]
+    },
+    {
+      "id": "FG-H06",
+      "severity": "HIGH",
+      "type": "FIX",
+      "title": "코드블록 deprecated API/컴파일 오류 (LangGraph, Rust)",
+      "issues": ["A10#5", "A10#8"],
+      "primary_locations": [
+        {"section": "§2 STEP-4 Python 코드", "reason": "set_entry_point→START/END 패턴"},
+        {"section": "§2 STEP-3 Rust 코드", "reason": "HashMap::get() Option 처리"}
+      ],
+      "ripple_targets": [
+        {"section": "§4 V2 코드", "reason": "동일 패턴 존재 시 연쇄"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["set_entry_point", "set_finish_point", "START", "END", "HashMap", "map_err", "ok_or"]
+    },
+    {
+      "id": "FG-H07",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "시스템설계 갭 (UI매핑/Gate관계/NEVER_AUTO/인시던트/백업/롤백/알림)",
+      "issues": ["A12#1", "A12#9", "A12#15", "A12#18", "A14#27", "A14#28", "A14#29", "A14#30"],
+      "primary_locations": [
+        {"section": "§6.11", "reason": "파이프라인 S4~S6 UI 매핑"},
+        {"section": "§6.5", "reason": "RT-BNP Fast Gate 관계"},
+        {"section": "§6.9", "reason": "NEVER_AUTO 탐지, V2/V3 FailureCode"},
+        {"section": "§6.12", "reason": "운영 항목 대폭 확장"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "작업량 추가"},
+        {"section": "§7.1~§7.4", "reason": "체크리스트 항목 추가"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["UI.*상태", "Fast Gate", "NEVER_AUTO", "인시던트", "백업", "RPO", "RTO", "롤백", "알림"]
+    },
+    {
+      "id": "FG-H08",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "보안 모델 갭 보강 (HMAC/STRIDE/OWASP LLM)",
+      "issues": ["A13#1", "A13#2", "A13#3", "A13#4", "A13#5", "A13#6", "A13#7"],
+      "primary_locations": [
+        {"section": "§6.5", "reason": "보안 항목 추가"},
+        {"section": "§6.5.1", "reason": "AI 보안 체크리스트 보강"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.5.2", "line": 4266, "reason": "보안 검토 체크리스트"},
+        {"section": "§6.3", "reason": "보안 테스트 연동"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["HMAC", "STRIDE", "OWASP", "LLM.*injection", "Prompt.*Injection"]
+    },
+    {
+      "id": "FG-H09",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "STEP-2 25개 모델 필드 정의 보충",
+      "issues": ["A7#1"],
+      "primary_locations": [
+        {"section": "§2 STEP-2", "start": 483, "end": 710, "reason": "스키마 정의 프롬프트"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["25개.*모델", "스키마.*정의", "STEP-2"]
+    },
+    {
+      "id": "FG-H10",
+      "severity": "HIGH",
+      "type": "FIX",
+      "title": "V3/V2 비용 모순 해소 (K8s $1,000+, GPU 미반영)",
+      "issues": ["A11#1", "A11#3"],
+      "primary_locations": [
+        {"line": 2526, "section": "§5 V3", "content": "₩266,000/월 (LOCK)"},
+        {"line": 1886, "section": "§4 V2", "content": "₩93,000/월 (LOCK)"},
+        {"line": 2603, "section": "§5 V3 인프라", "content": "RunPod Serverless GPU"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "비용 관련 수치"},
+        {"section": "§7.3", "reason": "V2 비용 체크리스트"},
+        {"section": "§7.4", "reason": "V3 비용 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["₩266,000", "₩93,000", "K8s", "GPU.*비용", "LlamaGuard.*GPU"]
+    },
+    {
+      "id": "FG-H11",
+      "severity": "HIGH",
+      "type": "CLARIFY",
+      "title": "config.v1.toml 이중 게시 정본 라벨 명시",
+      "issues": ["A14#6"],
+      "primary_locations": [
+        {"line": 162, "section": "§2 STEP-1", "content": "config.v1.toml (L162~240)"},
+        {"line": 339, "section": "§2 STEP-1", "content": "config.v1.toml (L339~383)"}
+      ],
+      "ripple_targets": [
+        {"section": "§1.3", "reason": "config 참조 정리"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["config\\.v1\\.toml", "LOCK"]
+    },
+    {
+      "id": "FG-H12",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "Glossary + Reading Guide 추가",
+      "issues": ["A14#4", "A14#5"],
+      "primary_locations": [
+        {"section": "§1 (또는 문서 말미)", "reason": "~4,400줄 문서에 진입 가이드 완전 부재"}
+      ],
+      "ripple_targets": [
+        {"section": "목차", "line": 10, "reason": "목차 항목 추가"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["Glossary", "Reading Guide", "용어집"]
+    },
+    {
+      "id": "FG-H13",
+      "severity": "HIGH",
+      "type": "ADD",
+      "title": "테스트 커버리지 보강 (VAL/SDAR/HMAC/LlamaGuard 등)",
+      "issues": ["A13#19", "A13#20", "A13#21", "A13#22", "A13#23", "A13#24", "A13#25", "A13#26"],
+      "primary_locations": [
+        {"section": "§6.3", "line": 3332, "reason": "테스트 섹션 대폭 확장"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "line": 4129, "reason": "테스트 수 합계 갱신"},
+        {"section": "§7.3", "reason": "V2 테스트 체크리스트"},
+        {"section": "§7.4", "reason": "V3 테스트 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 4,
+      "keywords": ["VAL-003", "VAL-005", "SDAR.*테스트", "HMAC.*테스트", "LlamaGuard.*테스트"]
+    },
+    {
+      "id": "FG-M01",
+      "severity": "MEDIUM",
+      "type": "FIX",
+      "title": "§7 GO/NO-GO 총수 63→64 (V3=11→12)",
+      "issues": ["A1#5", "A6#1"],
+      "primary_locations": [
+        {"line": 4142, "section": "§7", "content": "총 63건: V0=16, V1=22, V2=14, V3=11"},
+        {"line": 4231, "section": "§7.4", "content": "12항목"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["63건", "V3=11", "GO/NO-GO.*총"]
+    },
+    {
+      "id": "FG-M02",
+      "severity": "MEDIUM",
+      "type": "FIX",
+      "title": "용어 혼용 수정 (I-3/I-5/I-10, SC 총수, SDAR 명칭)",
+      "issues": ["A2#9", "A2#10", "A2#11", "A2#17", "A2#18"],
+      "primary_locations": [
+        {"section": "§2~§6 전체", "reason": "I-3/I-5/I-10 명칭 변형 통일"},
+        {"section": "§7.5.5", "reason": "SC 총수 14→15 수정"},
+        {"section": "§6 SDAR 언급", "reason": "SDAR 정식명 이중 확장 해소"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.5.5", "reason": "SC 인덱스 업데이트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["I-3", "I-5", "I-10", "SDAR", "Self-Directed", "SOURCE_CONFLICT.*14"]
+    },
+    {
+      "id": "FG-M03",
+      "severity": "MEDIUM",
+      "type": "CLARIFY",
+      "title": "수치/참조 모호성 해소 (dimension, EventType, SC-09)",
+      "issues": ["A1#3", "A1#6", "A5#1"],
+      "primary_locations": [
+        {"line": 1491, "section": "§3 V1", "content": "dimension=256 (matryoshka)"},
+        {"line": 179, "section": "§2 config", "content": "dimension = 1024 (LOCK)"},
+        {"section": "§7.5.5", "reason": "SC-09 §5=5개 참조 모호"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["dimension", "matryoshka", "EventType.*123", "SC-09"]
+    },
+    {
+      "id": "FG-M04",
+      "severity": "MEDIUM",
+      "type": "FIX",
+      "title": "코드블록 import 누락 수정 (StateGraph, VamosState, structlog, BaseModel)",
+      "issues": ["A10#3", "A10#4", "A10#6", "A10#7"],
+      "primary_locations": [
+        {"section": "§2 STEP-4 코드", "reason": "StateGraph import, VamosState 타입"},
+        {"section": "§2 STEP-5 코드", "reason": "import logging 누락"},
+        {"section": "§2 코드", "reason": "BaseModel/ConfigDict import"}
+      ],
+      "ripple_targets": [],
+      "ripple_count": 0,
+      "keywords": ["StateGraph", "VamosState", "import logging", "BaseModel", "ConfigDict"]
+    },
+    {
+      "id": "FG-M05",
+      "severity": "MEDIUM",
+      "type": "ADD+FIX",
+      "title": "§7 체크리스트 보완 (역방향매핑, LOCK 검증, v10 반영)",
+      "issues": ["A6#2", "A6#3", "A6#4", "A6#5", "A6#7", "A6#8", "A6#12"],
+      "primary_locations": [
+        {"section": "§7.1~§7.4", "reason": "체크리스트 항목 추가/수정"},
+        {"section": "§7.6", "reason": "산출물 인덱스 파일수 수정"}
+      ],
+      "ripple_targets": [
+        {"section": "§7", "line": 4142, "reason": "총수 재계산"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["GO/NO-GO", "체크리스트", "LOCK.*검증", "산출물.*인덱스"]
+    },
+    {
+      "id": "FG-M06",
+      "severity": "MEDIUM",
+      "type": "ADD+CLARIFY",
+      "title": "프롬프트 자기완결성 보강 (§6.5.1 삽입, 전제조건, 매핑)",
+      "issues": ["A7#5", "A7#7", "A7#8", "A8#7", "A8#9"],
+      "primary_locations": [
+        {"section": "§2 STEP-4 프롬프트", "reason": "§6.5.1 내용 인라인"},
+        {"section": "§4 Phase 1 프롬프트", "reason": "V2 전제조건 명시"},
+        {"section": "§5 Phase 1 프롬프트", "reason": "V3 인프라 판단 기준"},
+        {"section": "§5 Phase 3 프롬프트", "reason": "기능↔모듈 매핑 명확화"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["자기완결", "전제.*조건", "§6.5.1"]
+    },
+    {
+      "id": "FG-M07",
+      "severity": "MEDIUM",
+      "type": "CLARIFY",
+      "title": "관계/시점/범위 명확화 (StateGraph↔LangGraph, Redis, DCL↔RT-BNP, Fallback)",
+      "issues": ["A7#6", "A9#7", "A11#2", "A11#10", "A12#14"],
+      "primary_locations": [
+        {"section": "§2 STEP-4", "reason": "StateGraph/LangGraph 관계"},
+        {"section": "§4~§5", "reason": "Redis 배포/사용 시점"},
+        {"section": "§5 비용", "reason": "DCL/RT-BNP 비용 포함관계"},
+        {"section": "§5 V3 GPU", "reason": "GPU $144/월 근거"},
+        {"section": "§6.9", "reason": "Fallback 최종 단계"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["StateGraph", "LangGraph", "Redis", "DCL", "RT-BNP", "Fallback.*최종"]
+    },
+    {
+      "id": "FG-M08",
+      "severity": "MEDIUM",
+      "type": "ADD",
+      "title": "체크리스트/매핑/검증코드 보완",
+      "issues": ["A9#1", "A9#2", "A9#5", "A10#10"],
+      "primary_locations": [
+        {"section": "§2 STEP-2", "reason": "schema_registry 완료 체크리스트"},
+        {"section": "§2 STEP-3", "reason": "IPC method-to-module 매핑"},
+        {"section": "§2→§3 전환", "reason": "V0→V1 체인 검증 코드"},
+        {"section": "§2 STEP-6", "reason": "pytest-asyncio asyncio_mode"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.1", "reason": "V0 체크리스트 영향"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["schema_registry", "method.*module", "체인.*검증", "asyncio_mode"]
+    },
+    {
+      "id": "FG-M09",
+      "severity": "MEDIUM+HIGH",
+      "type": "FIX",
+      "title": "참조 오류/역의존 수정 (§6.2.2, STEP-3 [ipc], STEP-4→5, SDAR 중복)",
+      "issues": ["A4#1", "A5#5", "A7#2", "A9#4", "A9#8"],
+      "primary_locations": [
+        {"section": "§1.3", "line": 94, "reason": "schema_registry.toml 전방참조"},
+        {"section": "§6.2", "reason": "§6.2.2 참조 오류"},
+        {"section": "§2 STEP-3", "reason": "[ipc] config 참조 미존재"},
+        {"section": "§2 STEP-4", "line": 1040, "reason": "config_loader.py 역의존"},
+        {"section": "§4 Phase 2-3", "reason": "SDAR AR-L3 중복 기술"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.1", "reason": "V0 STEP 체인 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["schema_registry", "§6.2.2", "\\[ipc\\]", "config_loader", "SDAR.*AR-L3"]
+    },
+    {
+      "id": "FG-M10",
+      "severity": "MEDIUM",
+      "type": "RESTRUCTURE",
+      "title": "V3 모듈 분배/Method 분리/config 구조 개선",
+      "issues": ["A7#3", "A7#4", "A7#9", "A10#12"],
+      "primary_locations": [
+        {"section": "§5 Phase 2", "reason": "39모듈 불균등 → 재분배"},
+        {"section": "§5 Phase 3", "reason": "과적재 해소"},
+        {"section": "§5 Phase 2 프롬프트", "reason": "구현/설계/테스트 Method 혼재"},
+        {"section": "§2 config", "reason": "s02_to_s08.enabled 분리"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "V3 작업량 재배분"},
+        {"section": "§7.4", "reason": "V3 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["V3.*Phase 2", "V3.*Phase 3", "39.*모듈", "Method.*혼재", "s02_to_s08"]
+    },
+    {
+      "id": "FG-M11",
+      "severity": "MEDIUM",
+      "type": "ADD",
+      "title": "시스템설계 MEDIUM (SDAR매핑/UI복구/Gate규칙/임계값/FailureCode모듈)",
+      "issues": ["A12#3", "A12#5", "A12#7", "A12#12", "A12#16"],
+      "primary_locations": [
+        {"section": "§6.11", "reason": "SDAR→Pipeline 매핑, UI 복구 경로"},
+        {"section": "§6.5", "reason": "Gate 순차/조건부, V2 COND 임계값"},
+        {"section": "§6.9", "reason": "FailureCode 발생 모듈 매핑"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.3", "reason": "V2 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["SDAR.*Pipeline", "UI.*복구", "Gate.*조건", "임계값", "FailureCode.*모듈"]
+    },
+    {
+      "id": "FG-M12",
+      "severity": "MEDIUM",
+      "type": "ADD",
+      "title": "보안 MEDIUM (CAT-E/NEVER_AUTO/AI체크리스트/STRIDE 보완)",
+      "issues": ["A13#8", "A13#9", "A13#10", "A13#11", "A13#12"],
+      "primary_locations": [
+        {"section": "§6.9", "reason": "CAT-E 미열거/NEVER_AUTO 탐지"},
+        {"section": "§6.5.1", "reason": "AI 체크리스트 보강"},
+        {"section": "§6.5", "reason": "STRIDE 추가 커버"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.5.2", "reason": "보안 검토 항목"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["CAT-E", "NEVER_AUTO", "AI.*체크리스트", "STRIDE"]
+    },
+    {
+      "id": "FG-M13",
+      "severity": "MEDIUM→HIGH",
+      "type": "RESTRUCTURE",
+      "title": "v10 테이블 가독성 개선 (서브그룹 헤더, 정보밀도)",
+      "issues": ["A14#1", "A14#2", "A14#3"],
+      "primary_locations": [
+        {"section": "§3~§5 테이블", "reason": "v10 대량 추가 후 가독성 파괴"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "항목 수 변동 가능"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["테이블.*가독성", "서브그룹", "정보밀도"]
+    },
+    {
+      "id": "FG-M14",
+      "severity": "MEDIUM",
+      "type": "CLARIFY+ADD",
+      "title": "§1.3참조/§6관계/용어정의/v10영향분석/§7프로세스",
+      "issues": ["A14#8", "A14#9", "A14#10", "A14#11", "A14#12", "A14#13", "A14#14", "A14#15", "A14#16"],
+      "primary_locations": [
+        {"section": "§1.3", "reason": "참조 연결 보강"},
+        {"section": "§6.5.1", "reason": "관계 명확화"},
+        {"section": "§3", "reason": "§3 개요 보강"},
+        {"section": "§1~§2", "reason": "용어 정의 지연 해소"},
+        {"section": "§7", "reason": "프로세스 보강"},
+        {"section": "§7.5.5", "reason": "FIX-09 유지보수 명확화"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["참조.*연결", "상호참조", "용어.*정의"]
+    },
+    {
+      "id": "FG-M15",
+      "severity": "MEDIUM",
+      "type": "ADD",
+      "title": "에러/폴백 관계도 + 상태머신 다이어그램 + 버전 비교표",
+      "issues": ["A14#18", "A14#19", "A14#20"],
+      "primary_locations": [
+        {"section": "§6.9", "reason": "에러/폴백 관계도 신설"},
+        {"section": "§6.11", "reason": "상태머신 다이어그램 신설"},
+        {"section": "§1", "reason": "버전 비교표 신설"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["관계도", "다이어그램", "비교표"]
+    },
+    {
+      "id": "FG-M16",
+      "severity": "MEDIUM",
+      "type": "ADD",
+      "title": "V1 Phase 간 병렬/순차 규칙 정의",
+      "issues": ["A11#9"],
+      "primary_locations": [
+        {"section": "§3 V1", "reason": "Phase 6 병렬 실행 규칙"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.2", "reason": "V1 체크리스트 영향"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["Phase 6", "병렬.*실행", "순차"]
+    },
+    {
+      "id": "FG-M17",
+      "severity": "MEDIUM",
+      "type": "ADD+RESTRUCTURE",
+      "title": "v10 정보밀도 보강 + 통신사 신뢰도 출처",
+      "issues": ["A4#14", "A5#11"],
+      "primary_locations": [
+        {"section": "§3~§5 v10 추가 테이블", "reason": "정보밀도 저하 보강"},
+        {"section": "§6.10", "reason": "통신사 신뢰도 0.85 출처 추가"}
+      ],
+      "ripple_targets": [
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 1,
+      "keywords": ["정보밀도", "통신사", "신뢰도.*0.85"]
+    },
+    {
+      "id": "FG-L01",
+      "severity": "HIGH→LOW",
+      "type": "FIX",
+      "title": "변경이력 v17.0.0 순서 오류 수정",
+      "issues": ["A3#1"],
+      "primary_locations": [
+        {"line": 4395, "section": "변경이력", "reason": "v17.0.0이 v24.0.0 뒤에 위치"}
+      ],
+      "ripple_targets": [],
+      "ripple_count": 0,
+      "keywords": ["v17\\.0\\.0"]
+    },
+    {
+      "id": "FG-L02",
+      "severity": "LOW",
+      "type": "ADD+FIX",
+      "title": "변경이력 주석 보완 + v10 편집 잔류물 수정",
+      "issues": ["A3#2", "A4#5", "A4#6"],
+      "primary_locations": [
+        {"section": "변경이력", "reason": "v20.4→v22.0 스킵 면책 주석"},
+        {"line": 1571, "section": "§3 V1", "reason": "서술 잘림"},
+        {"line": 1803, "section": "§3 V1", "reason": "항목 설명 불완전"}
+      ],
+      "ripple_targets": [],
+      "ripple_count": 0,
+      "keywords": ["v20\\.4", "v22\\.0", "서술.*잘림"]
+    },
+    {
+      "id": "FG-L03",
+      "severity": "LOW",
+      "type": "ADD",
+      "title": "코드블록 추가 (V3-PH2/PH3, STEP-6 테스트)",
+      "issues": ["A7#10", "A7#11", "A9#6"],
+      "primary_locations": [
+        {"section": "§5 Phase 2", "reason": "V3-PH2 코드블록 전무"},
+        {"section": "§5 Phase 3", "reason": "V3-PH3 코드블록 전무"},
+        {"section": "§2 STEP-6", "reason": "로깅 필드 매핑 테스트 코드"}
+      ],
+      "ripple_targets": [],
+      "ripple_count": 0,
+      "keywords": ["V3.*코드블록", "STEP-6.*테스트"]
+    },
+    {
+      "id": "FG-L04",
+      "severity": "MEDIUM→LOW",
+      "type": "ADD",
+      "title": "운영 MEDIUM/LOW (DR/헬스체크/로그보존/소스장애/페일오버 등)",
+      "issues": ["A14#31", "A14#32", "A14#33", "A14#34", "A14#35", "A14#36", "A14#37", "A14#38"],
+      "primary_locations": [
+        {"section": "§6.12 확장", "reason": "운영 항목 다수 추가"}
+      ],
+      "ripple_targets": [
+        {"section": "§6.13", "reason": "운영 작업량 추가"},
+        {"section": "§7.1~§7.4", "reason": "버전별 운영 체크리스트"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 3,
+      "keywords": ["DR", "재해복구", "헬스체크", "로그.*보존", "페일오버", "비용.*초과"]
+    },
+    {
+      "id": "FG-L05",
+      "severity": "LOW",
+      "type": "RESTRUCTURE",
+      "title": "행번호 기반 참조 → 앵커 참조 전환",
+      "issues": ["A14#23"],
+      "primary_locations": [
+        {"section": "전체", "reason": "행번호 참조 편집 시 깨짐"}
+      ],
+      "ripple_targets": [],
+      "ripple_count": 0,
+      "keywords": ["행번호", "L[0-9]+"]
+    },
+    {
+      "id": "FG-L06",
+      "severity": "MEDIUM→LOW",
+      "type": "CLARIFY+FIX",
+      "title": "LOCK-AT 적용범위/턴제한관계/Stage Gate 수량",
+      "issues": ["A14#7", "A1#7", "A1#8"],
+      "primary_locations": [
+        {"section": "§6.7", "reason": "LOCK-AT 17건 버전 적용 범위"},
+        {"line": 2214, "section": "§4 V2", "reason": "턴 제한과 세션 max_turns 관계"},
+        {"section": "§7.3", "reason": "Stage Gate V2 헤더 35 vs 36"}
+      ],
+      "ripple_targets": [
+        {"section": "§7.3", "reason": "V2 체크리스트 수정"},
+        {"section": "변경이력", "reason": "수정 기록 추가"}
+      ],
+      "ripple_count": 2,
+      "keywords": ["LOCK-AT", "턴.*제한", "Stage Gate.*35", "Stage Gate.*36"]
+    }
+  ],
+  "ripple_summary": {
+    "high_ripple_zones": [
+      {"section": "§6.13 (작업량 합계)", "affected_by_fg": ["FG-B06", "FG-B07", "FG-B08", "FG-B09", "FG-H02", "FG-H07", "FG-H13", "FG-M05", "FG-M10", "FG-M13", "FG-L04"]},
+      {"section": "§7 (체크리스트)", "affected_by_fg": ["FG-B01", "FG-B02", "FG-B04", "FG-B07", "FG-B08", "FG-B09", "FG-H02", "FG-H03", "FG-H05", "FG-H07", "FG-H13", "FG-M01", "FG-M05", "FG-M08", "FG-M09", "FG-M10", "FG-M16", "FG-L04", "FG-L06"]},
+      {"section": "변경이력", "affected_by_fg": "ALL (42 FG)"},
+      {"section": "§6.10 (Cloud Library)", "affected_by_fg": ["FG-H01"]},
+      {"section": "§2 config (이중 게시)", "affected_by_fg": ["FG-B01", "FG-B04", "FG-H05", "FG-H11"]}
+    ],
+    "zero_ripple_fg": ["FG-M04", "FG-L01", "FG-L02", "FG-L03", "FG-L05"],
+    "total_ripple_edges": 95,
+    "max_ripple_fg": "FG-B07 (5 ripple targets)",
+    "note": "§6.13과 §7은 가장 많은 FG에 의해 영향받는 고위험 섹션. 수정 완료 후 반드시 재검증 필요."
+  }
+}

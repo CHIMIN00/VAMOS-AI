@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "phase": "0-E",
+    "conversation": 17,
+    "task": "V8 산출물 1:1 재검증",
+    "generated_date": "2026-03-09",
+    "principle": "V8/V9 산출물은 참고용. v10_merged_features.json 독립 추출 결과와 1:1 대조",
+    "input_files": {
+      "v10_merged": "v10_results/phase0-d/v10_merged_features.json (3943 features)",
+      "v8_IMP_E": "v8_results/phase0/IMP-E.json",
+      "v8_IMP_C": "v8_results/phase0/IMP-C.json",
+      "v8_IMP_B": "v8_results/phase0/IMP-B.json",
+      "v8_IMP_D": "v8_results/phase0/IMP-D.json",
+      "v8_agent7": "v8_results/phase1/대화07_agent07.md",
+      "v10_C5": "v10_results/phase0-c/v10_src_C05.json"
+    }
+  },
+  "revalidation_results": [
+    {
+      "target": "1. IMP-E 모듈 활성 매트릭스",
+      "v8_file": "IMP-E.json",
+      "v8_verdict": "PASS",
+      "v8_claim": "V0=5, V1=32, V2=42, V3=81 행합/열합 PASS",
+      "v10_questions": {
+        "Q1": {
+          "question": "81개 모듈 각각이 v10_merged_features.json에서 기능 항목으로 추출되었는가?",
+          "answer": "부분적 YES",
+          "detail": "v10_merged_features의 FT-MOD 카테고리에 244개 기능이 추출됨. IMP-E의 81개는 '고유 모듈 수'이고, FT-MOD 244개는 '모듈 관련 기능 항목 수'로 단위가 다름. V3-inclusive FT-MOD가 93개로 IMP-E V3=81과 근사하나, V3-only FT-MOD는 41개임. 모듈 수와 기능 항목 수는 1:N 관계이므로 직접 비교는 부적절. 그러나 IMP-E가 선언한 81개 모듈이 merged_features에서 최소 1개 이상의 기능으로 커버되는지는 module_id 필드가 비어있어(0개) 직접 매핑 불가.",
+          "gap": "module_id 필드가 모든 FT-MOD에서 비어있어 모듈↔기능 직접 매핑 불가"
+        },
+        "Q2": {
+          "question": "V3 전용 39개 모듈(81-42)은 PART2 V3-Phase 1/2/3 중 어디에 배정되어야 하는가?",
+          "answer": "미확인",
+          "detail": "V3-only FT-MOD는 41개 추출됨 (IMP-E 산술 39개와 2개 차이). 이 41개 항목의 version_scope가 'V3'으로 설정되어 있으나, phase_assignment 필드 자체가 v10_merged_features.json에 존재하지 않음 (0개 feature에 해당 필드 있음). V3 Phase 배정은 아직 수행되지 않은 상태.",
+          "gap": "V3 전용 모듈의 Phase 1/2/3 배정 미수행"
+        },
+        "Q3": {
+          "question": "IMP-E는 '모듈 수 매칭'이지 'Phase 배정 확인'은 아닌데 — Phase 배정이 실제로 되어 있는가?",
+          "answer": "미확인 → GAP_FOUND",
+          "detail": "phase_assignment 필드가 v10_merged_features.json에 존재하지 않음. IMP-E는 모듈 수의 산술 검증만 수행했고, 각 모듈이 PART2의 어느 Phase에 배정되는지는 검증하지 않았음. V10에서도 아직 Phase 배정이 수행되지 않은 상태."
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-E1: module_id 미매핑 — FT-MOD 244개 기능에 module_id가 비어있어 IMP-E 81개 모듈과 1:1 대응 불가",
+        "GAP-E2: Phase 배정 미수행 — 전체 3943개 기능에 phase_assignment 필드 부재. V3 전용 41개 모듈 포함 모든 기능의 PART2 Phase 배정이 아직 미수행",
+        "GAP-E3: V3-only 모듈 수 불일치 — IMP-E 산술(81-42=39) vs v10 추출(41개). 2개 차이 존재"
+      ]
+    },
+    {
+      "target": "2. IMP-C API 엔드포인트",
+      "v8_file": "IMP-C.json",
+      "v8_verdict": "FAIL",
+      "v8_claim": "IPC expected=72, JSON-RPC expected=13. matched IPC=5, matched RPC=0",
+      "v10_questions": {
+        "Q1": {
+          "question": "88개 API가 v10_merged_features에서 FT-API 카테고리로 추출되었는가?",
+          "answer": "초과 추출",
+          "detail": "v10_merged_features에서 FT-API는 135개로, IMP-C가 검증한 IPC 72개 + RPC 11개 = 83개보다 훨씬 많음. IMP-C 자체도 FAIL이었고 (IPC matched=5, part2_only=8, src_only=67), V10 독립 추출은 135개 API를 발견함. V8의 '88개 매칭 완료' 주장 자체가 IMP-C.json verdict=FAIL과 모순됨.",
+          "gap": "V8 '88개 매칭 완료' 주장은 IMP-C.json의 실제 verdict=FAIL과 모순. V10은 135개 FT-API 추출"
+        },
+        "Q2": {
+          "question": "각 API의 PART2 Phase 배정이 되어 있는가?",
+          "answer": "미확인",
+          "detail": "phase_assignment 필드 부재. 135개 FT-API 중 version_scope별 분포: V1=101, V2=24, V1,V2=5, V1,V2,V3=1, V2,V3=1, V3=3. 버전 범위는 지정되어 있으나 구체적 Phase(Phase 1/2/3 등) 배정은 미수행."
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-C1: V8 주장 모순 — V8이 '88개 매칭 완료'라 했으나 IMP-C.json 자체가 verdict=FAIL (IPC matched=5/72, RPC matched=0/11). V8의 상위 보고가 IMP-C 실제 결과와 불일치",
+        "GAP-C2: API 수 차이 — IMP-C 총 83개(IPC 72 + RPC 11) vs v10 FT-API 135개. 52개 추가 API가 v10에서 발견됨",
+        "GAP-C3: Phase 배정 미수행 — 135개 API에 phase_assignment 없음",
+        "GAP-C4: IPC 정합성 — IMP-C에서 src_only 67개, part2_only 8개로 PART2와 SRC 간 대규모 불일치 미해결"
+      ]
+    },
+    {
+      "target": "3. IMP-B 스키마 필드 수",
+      "v8_file": "IMP-B.json",
+      "v8_verdict": "PASS",
+      "v8_claim": "25개 스키마, 필드 수 검증 PASS, src_schemas_found=0",
+      "v10_questions": {
+        "Q1": {
+          "question": "25개 스키마의 '코드 생성' 구현이 PART2 Phase에 배정되어 있는가?",
+          "answer": "미확인",
+          "detail": "v10_merged_features에서 FT-SCHEMA는 214개 기능 항목 추출. IMP-B의 25개는 '고유 스키마 수'이고 214개는 '스키마 관련 기능 항목 수'(필드별/기능별 분해). IMP-B는 필드 '수'만 검증했지 각 스키마의 구현 Phase 배정은 확인하지 않음. FT-SCHEMA 버전 분포: V0=50, V0,V1=15, V1=123, V2=13, V3=1 등. phase_assignment 필드 부재."
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-B1: Phase 배정 미수행 — 25개 스키마의 구현 Phase 미배정. phase_assignment 필드 없음",
+        "GAP-B2: src_schemas_found=0 — IMP-B가 SRC에서 스키마를 하나도 찾지 못함. 코드베이스에 아직 스키마가 구현되지 않았거나 SRC 경로 오류",
+        "GAP-B3: LOCK 스키마 관리 — DecisionSchema(FREEZE), ResponseEnvelope(LOCK), WorkflowStage(LOCK), WorkflowOutput(LOCK) 4개 스키마가 LOCK인데, 이들의 구현 우선순위/Phase가 미정"
+      ]
+    },
+    {
+      "target": "4. IMP-D Config 키",
+      "v8_file": "IMP-D.json",
+      "v8_verdict": "FAIL",
+      "v8_claim": "PART2 17섹션, SRC 18섹션, B4 canonical 13섹션. 15개 value mismatch. verdict=FAIL",
+      "v10_questions": {
+        "Q1": {
+          "question": "Config 13섹션의 '구현' 작업이 PART2 Phase에 배정되어 있는가?",
+          "answer": "미확인",
+          "detail": "v10_merged_features에서 FT-CFG는 291개 기능 항목 추출. IMP-D의 13(B4 canonical) vs 17(PART2) vs 18(SRC) 섹션 불일치가 이미 발견됨. 또한 15개 value mismatch 존재 (default_execution_mode, matryoshka_dim, LLM 모델명, RBAC default_role 등). 이 불일치 해소 작업 자체가 Phase에 배정되어 있지 않음. FT-CFG 버전 분포: V0=37, V0,V1=15, V1=156, V2=32, V3=15 등."
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-D1: Phase 배정 미수행 — 291개 FT-CFG에 phase_assignment 없음",
+        "GAP-D2: 섹션 불일치 미해결 — B4 canonical 13섹션 vs PART2 17섹션 vs SRC 18섹션. guardrails/rate_limit이 PART2에 누락, approval/self_check 등 6개가 PART2에만 존재",
+        "GAP-D3: Value mismatch 15건 미해결 — core.default_execution_mode(mini vs supervised), embedding.matryoshka_dim(256 vs 512), llm.main_model(ollama vs gpt-4o-mini) 등 구현 시 어느 값을 사용할지 미결정",
+        "GAP-D4: IMP-D 자체가 verdict=FAIL — V8 시점에서 이미 실패였으나 해결 여부 미확인"
+      ]
+    },
+    {
+      "target": "5. V8 Agent 7 (UI/UX) 결과",
+      "v8_file": "v8_results/phase1/대화07_agent07.md",
+      "v8_verdict": "Phase 2 차단 사유 없음 (BLOCKER 0건), HIGH 5건, MEDIUM 8건 = 총 13건",
+      "v10_questions": {
+        "Q1": {
+          "question": "Agent 7이 D2.0-08을 읽었을 때 '모바일/PWA/위젯/AR' 기능을 발견했는가?",
+          "answer": "YES — 부분적 발견",
+          "detail": "Agent 7이 발견한 항목: (1) B#13: V2 PWA SOURCE_CONFLICT (D2.0-08이 S7C-054에서 PWA 명시하나 PART2 미반영), (2) MISSING B#1: V3 Reserved Slots(D8-V3-SLOT-01~04 중 '반응형/모바일' 포함), (3) MATCH B#11: 멀티모달 UI V2/V3 진화(V2 음성+이미지, V3 실시간협업+AR 확장). 위젯은 명시적으로 언급하지 않음."
+        },
+        "Q2": {
+          "question": "발견했다면 PART2 매핑을 확인했는가?",
+          "answer": "부분적 확인",
+          "detail": "Agent 7은 SOURCE_CONFLICT로 PART2에 PWA 미반영을 지적 (SC#4, M-6). V3 AR 확장은 MATCH B#11에서 '일치'로 판정. 그러나 위젯(S7C-058), 모바일 네이티브(IDEA-M05), AR 공간 이해(J-009) 등의 개별 PART2 Phase 배정까지는 확인하지 않음."
+        },
+        "Q3": {
+          "question": "Phase 0-C C-5의 추출 결과와 비교하여 차이가 있는가?",
+          "answer": "차이 있음",
+          "detail": "C-5가 D2.0-08에서 추출한 모바일/PWA/위젯/AR 관련 기능은 14건 (D208-028 AR, D208-036 크로스디바이스, D208-051 반응형/모바일, D208-058 PWA, D208-062 위젯, D208-070 기술스택 매트릭스, D208-081 모바일 네이티브 등). Agent 7은 이 중 PWA(SC#4)와 V3 AR(B#11)만 명시적으로 다룸. C-5가 발견한 위젯(S7C-058), 크로스디바이스 동기화(J-071), 모바일 네이티브 앱(IDEA-M05), 반응형 대응(S7C-007) 등은 Agent 7 보고서에서 개별 검증되지 않음.",
+          "c5_vs_agent7_diff": {
+            "c5_found_but_agent7_missed": [
+              "D208-062: S7C-058 위젯 (데스크톱/모바일) [V2/MED]",
+              "D208-051: S7C-007 반응형/모바일 대응 [V2/HIGH]",
+              "D208-036: 크로스 디바이스 멀티모달 동기화 (J-071)",
+              "D208-081: IDEA-M05 모바일 네이티브 앱 (V3 React Native)",
+              "D208-028: AR 공간 이해 및 ARKit/ARCore 연동 (J-009, V3) — Agent 7은 B#11에서 'AR 확장'으로 묶어 처리했으나 개별 검증 미수행",
+              "D208-068: VAMOS 고유 UI 위젯 16개 (S7C-081~096)"
+            ],
+            "both_found": [
+              "D208-058/SC#4: PWA (V2)",
+              "D208-003/MISSING B#1: V3 Reserved Slots",
+              "D208-070/B#11: V2/V3 UI 진화 경로"
+            ]
+          }
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-A7-1: Agent 7 커버리지 부족 — C-5가 D2.0-08에서 추출한 모바일/PWA/위젯/AR 14건 중 Agent 7은 3건만 명시적 검증. 위젯, 반응형, 크로스디바이스, 모바일 네이티브 등 미검증",
+        "GAP-A7-2: Agent 7 HIGH 5건 미해결 — i18n 일본어 누락, Hooks/Stores 이름 불일치, 페이지 목록 불일치, Failure/Fallback 목록 미기재가 V10에서도 여전히 미해결",
+        "GAP-A7-3: D2.1-D8 파일 부재 — Agent 7이 지적한 D2.1-D8 파일 미존재 문제가 여전히 미해결. C-5는 D2.1-D8을 201줄 읽었다고 보고하므로 경로 문제일 수 있음"
+      ]
+    }
+  ],
+  "summary": {
+    "total_targets": 5,
+    "confirmed": 0,
+    "gap_found": 5,
+    "total_gaps": 17,
+    "critical_cross_cutting_gaps": [
+      {
+        "id": "CCG-1",
+        "title": "phase_assignment 필드 전역 부재",
+        "detail": "3943개 전체 기능에 phase_assignment 필드가 없음. IMP-E/B/C/D 모두가 '수 매칭'만 했지 Phase 배정을 검증하지 않았고, V10 merged_features에도 Phase 배정이 아직 미수행",
+        "affected_targets": ["IMP-E", "IMP-C", "IMP-B", "IMP-D"],
+        "severity": "HIGH",
+        "recommendation": "Phase 0 후속 단계 또는 Phase 1 시작 전에 전체 기능의 Phase 배정 수행 필요"
+      },
+      {
+        "id": "CCG-2",
+        "title": "V8 상위 보고와 실제 verdict 불일치",
+        "detail": "IMP-C는 verdict=FAIL이었으나 V8이 '88개 매칭 완료'로 상위 보고. IMP-D도 verdict=FAIL(17건 에러)이었으나 '13섹션 검증 완료'로 축약 보고됨. V8 결과를 그대로 신뢰하면 안 됨",
+        "affected_targets": ["IMP-C", "IMP-D"],
+        "severity": "HIGH",
+        "recommendation": "V8 산출물 참조 시 반드시 원본 JSON의 verdict와 errors를 직접 확인할 것"
+      },
+      {
+        "id": "CCG-3",
+        "title": "module_id 매핑 부재",
+        "detail": "FT-MOD 244개 기능 전부 module_id가 빈 문자열. 모듈↔기능 추적 불가",
+        "affected_targets": ["IMP-E"],
+        "severity": "MEDIUM",
+        "recommendation": "Phase 1에서 모듈-기능 매핑 테이블 생성 필요"
+      }
+    ]
+  }
+}

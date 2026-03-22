@@ -1,0 +1,26 @@
+{
+  "fix_id": "FIX-002",
+  "fg": "FG-B02",
+  "tier": 1,
+  "order": 2,
+  "severity": "BLOCKER",
+  "decision": "A — V2→V3 전환조건에서 Loki+Grafana 삭제",
+  "description": "Loki+Grafana는 V3-Phase 1에서 구축하므로 V2→V3 전환 시점에 존재 불가. 전환조건에서 제거.",
+  "changes": [
+    {
+      "line": 2566,
+      "section": "§5 V3 Phase 1 사용자 작업 #7",
+      "before": "V3 비용 리뷰 + 승인, Loki+Grafana 배포 완료",
+      "after": "V3 비용 리뷰 + 승인"
+    },
+    {
+      "line": 4230,
+      "section": "§7.3 V2→V3 전환 조건",
+      "before": "Self-evo 체계 검증 / V3 비용 재검토 + 승인 / Loki+Grafana 배포",
+      "after": "Self-evo 체계 검증 / V3 비용 재검토 + 승인"
+    }
+  ],
+  "ripple_expected": ["§5 V3-Phase 1 (Loki 구축 유지)", "§7.4 (V3 체크리스트)", "변경이력"],
+  "ripple_action": "§5 V3-Phase 1 구축 섹션(L2641)과 체크리스트(L2691)는 유지. V3 체크리스트에 Loki 구축 완료 항목으로 유지됨.",
+  "applied_at": "2026-03-12"
+}

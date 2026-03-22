@@ -1,0 +1,239 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA10_phase_b4_b7.json",
+    "total_items_checked": 144,
+    "pass_count": 112,
+    "fail_count": 32,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-4",
+      "item_id": "EA-10_102",
+      "severity": "INFO",
+      "message": "source_text 키워드가 ±3줄이 아닌 ±10줄에서 발견 (행 번호 오차 가능)",
+      "expected": "line 44 ±3",
+      "actual": "found in ±10"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-10_123",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 1210 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 1210",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-10_184",
+      "severity": "INFO",
+      "message": "source_text 키워드가 ±3줄이 아닌 ±10줄에서 발견 (행 번호 오차 가능)",
+      "expected": "line 1430 ±3",
+      "actual": "found in ±10"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-10_185",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 106 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 106",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-10_186",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 107 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 107",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 5~5"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 56~56"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 58~60"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 66~67"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 77~79"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 82~85"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 87~89"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 94~95"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 103~104"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 107~107"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 110~110"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 115~116"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 118~122"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 126~126"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 136~139"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 141~143"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 145~145"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 147~147"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 149~149"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 157~159"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 165~167"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 171~172"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-10",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 188~189"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-10_193",
+      "severity": "WARNING",
+      "message": "비표준 키 'C8_AC_D2_001_TEST_REF'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C8_AC_D2_001_TEST_REF"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-10_194",
+      "severity": "WARNING",
+      "message": "비표준 키 'C8_AC_D6_010_TEST_REF'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C8_AC_D6_010_TEST_REF"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:PHASE_B4_CONFIG_SPEC.md",
+      "severity": "WARNING",
+      "message": "파일 'PHASE_B4_CONFIG_SPEC.md'(1242줄)의 후반부 추출 비율이 낮음: 9/67건 (13%)",
+      "expected": ">= 20%",
+      "actual": "13%"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:PHASE_B6_CICD_PIPELINE.md",
+      "severity": "WARNING",
+      "message": "파일 'PHASE_B6_CICD_PIPELINE.md'(1757줄)의 후반부 추출 비율이 낮음: 3/28건 (11%)",
+      "expected": ">= 20%",
+      "actual": "11%"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 7,
+    "INFO": 25
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

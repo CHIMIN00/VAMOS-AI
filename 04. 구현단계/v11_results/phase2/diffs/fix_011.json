@@ -1,0 +1,27 @@
+{
+  "fix_id": "FIX-011",
+  "fg": "FG-H05",
+  "tier": 2,
+  "order": 11,
+  "severity": "HIGH",
+  "description": "config 값 통일: (1) autonomy_level V0=L1→V1=L2_COPILOT 진행관계 명확화, (2) max_turns V0=50→V2 I-7=100 정합, (3) strict=true↔CI 주석 모순 해소",
+  "changes": [
+    {
+      "line": 1498,
+      "section": "§3 V1 LOCK 값",
+      "action": "V0→V1 autonomy_level 진행 관계 주석 추가"
+    },
+    {
+      "line": 2226,
+      "section": "§4 V2 AI 프롬프트 I-7",
+      "action": "max_turns(50)→max_turns 값을 I-7 config(100)으로 통일"
+    },
+    {
+      "line": 1301,
+      "section": "§3 V1 CI yaml",
+      "action": "strict 미적용 주석을 pyproject.toml strict=true와 일치시킴"
+    }
+  ],
+  "ripple_expected": ["변경이력"],
+  "applied_at": "2026-03-12"
+}

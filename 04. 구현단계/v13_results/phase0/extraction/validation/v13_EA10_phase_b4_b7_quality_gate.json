@@ -1,0 +1,31 @@
+{
+  "agent": "EA-10",
+  "layer_b_result": {
+    "sv1_semantic_accuracy": {
+      "checked": 20,
+      "issues": [],
+      "pass": true,
+      "details": "20건 랜덤 샘플링 전수 검증. EA-10_001(3계층), EA-10_006(PORT=8000), EA-10_011(pipeline 5단계), EA-10_016(temperature=0.3), EA-10_031(daily_limit V1=1300/V2=3100/V3=8900), EA-10_039(P0 threshold=70 LOCK), EA-10_045(MCP transport=streamable_http LOCK), EA-10_053(similarity=0.95 LOCK), EA-10_068(Unit 80%+), EA-10_072(AC 50개), EA-10_073(테스트 79건), EA-10_084(E2E 8시나리오), EA-10_088(GitHub Actions), EA-10_093(schema 37개), EA-10_119(마이그레이션 원칙 6개), EA-10_127(SQLite batch=1000), EA-10_136(오케스트레이터 10단계), EA-10_139(아카이브 90일), EA-10_147(V1 penalty=0.9), EA-10_179(sensitive_types). 전부 SOT 원본과 정확히 일치."
+    },
+    "sv2_extraction_completeness": {
+      "missing_items": [
+        "B4 memory_ttl_L2='indefinite' 개별 항목 미추출 (L0/L1만 개별 추출, L2/L3은 V1 프리셋 내 암묵적 포함)",
+        "B4 memory_ttl_L3='policy_based' 개별 항목 미추출 (동일 사유)"
+      ],
+      "pass": true,
+      "details": "192건 추출로 B4~B7 4개 SOT 문서(총 6,280줄)의 핵심 정보를 매우 높은 밀도로 포괄. Config 키(C2=26건): config.toml 17섹션, 검증규칙 10개, 런타임 변경가능 키 7개, RBAC 4역할 등 완전 추출. 테스트 커버리지(C7=19건): 단위/통합/E2E 커버리지 목표, 모듈별 최소 커버리지, self-check 임계값, 비용 임계값 등 포괄. 파이프라인 단계(C2): CI/CD 6단계, core pipeline 5단계, migration flow 5단계, orchestrator 10단계 모두 추출. 마이그레이션 단계(C2): V1->V2 범위(5전환), V2->V3 범위(3전환), 오케스트레이터 10단계, 사전검증 7항목, 재임베딩 4Phase 모두 추출. 누락 2건은 동일 섹션 내 TTL 값으로 영향도 낮음."
+    },
+    "sv3_key_appropriateness": {
+      "warnings": [
+        "EA-10_009 키 'TIMEOUT_DEFAULT'가 C1_ 접두사 없이 사용 (대부분의 C1 항목은 C1_ 접두사 사용). 일관성 위해 'C1_CORE_MAX_DECISION_TIMEOUT'가 적절.",
+        "EA-10_031/032 키 'COST_CEILING_DAILY/MONTHLY'가 C1_ 접두사 없이 사용. EA-10_175/176의 'C1_COST_DAILY_LIMIT_DEFAULT'와 의미 중복.",
+        "EA-10_038(C2_GUARDRAILS_SENSITIVE_TYPES, list)과 EA-10_179(C2_GUARDRAILS_SENSITIVE_TYPES, string)가 동일 키명으로 다른 인코딩. 하나로 통합 권장.",
+        "EA-10_010/042~045 키 'LOCK_*' 접두사 사용(C7 카테고리)은 의미적으로 적절하나 다른 C7 항목과 접두사 불일치."
+      ],
+      "pass": true,
+      "details": "전반적 키 명명 품질 양호. C1~C8 카테고리 분류 적절. 경고 4건은 접두사 일관성/중복에 관한 사소한 개선점으로, 데이터 활용에 실질적 장애 없음."
+    }
+  },
+  "verdict": "GOLD",
+  "summary": "EA-10 192건 추출 결과는 B4(Config Spec), B5(Test Strategy), B6(CI/CD Pipeline), B7(Migration Strategy) 4개 SOT 문서의 핵심 정보를 의미적으로 정확하게 포괄함. SV-1 20건 전수 일치, SV-2 누락 2건(memory_ttl_L2/L3 개별항목)은 영향도 낮음, SV-3 키 명명 경고 4건은 사소한 일관성 개선 사항."
+}

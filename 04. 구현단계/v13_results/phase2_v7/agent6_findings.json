@@ -1,0 +1,156 @@
+{
+  "agent": "Agent 6",
+  "scope": "PART2 §6.5~6.6 Memory/RAG verification (Phase 2 Storage+Memory+RAG)",
+  "session": "session_14",
+  "timestamp": "2026-03-21T14:40:00+09:00",
+  "step_a": {
+    "direction": "PART2 -> SOT",
+    "facts_checked": 20,
+    "matches": 17,
+    "mismatches": [
+      {
+        "id": "A6-M1",
+        "fact": "PART2 §Phase2 RAG Pipeline: Chunk size 300~500tok",
+        "part2_ref": "PART2 L1364",
+        "sot_ref": "D2.0-06 §1.1",
+        "match": true,
+        "detail": "D2.0-06 §1.1 Stage 2 Chunk: '문서를 검색 단위(청크)로 분할 (크기/오버랩 설정 포함)'. The SOT does not explicitly specify 300~500tok. PART2 adds this specific range. Checking CLAUDE.md §7.4: 'Chunk(300~500tok)'. So this comes from CLAUDE.md which is an authoritative derived source. Considered match."
+      },
+      {
+        "id": "A6-M2",
+        "fact": "PART2 Hybrid Search Dense weight alpha=0.7, Sparse=0.3",
+        "part2_ref": "PART2 L1373-1374",
+        "sot_ref": "D2.0-06",
+        "match": false,
+        "detail": "PART2 claims these values come from 'D2.0-06 L768 정본'. Searched D2.0-06 for alpha/dense/sparse weight parameters but could not find explicit 0.7/0.3 values in the sections read. These may be in a section not read or may be a PART2 addition. Flagged as unverifiable from available SOT text."
+      },
+      {
+        "id": "A6-M3",
+        "fact": "PART2 DCL QoD threshold: >= 0.5 for RAG insertion",
+        "part2_ref": "PART2 L3134",
+        "sot_ref": "D2.0-06 §2.5.2",
+        "match": false,
+        "detail": "D2.0-06 §2.5.2 states 'QoD < 0.4: L2/L3 저장 금지'. PART2 §6.10.2 uses QoD >= 0.5 threshold for DCL RAG insertion. The thresholds are different: SOT uses 0.4 as floor for L2/L3, PART2 uses 0.5 for DCL data. These are different contexts (general memory vs DCL), so may be intentionally different, but the relationship should be clarified."
+      }
+    ],
+    "match_details": [
+      {"fact": "L0 Session Memory: TTL=session_end (max 30 days)", "part2_ref": "PART2 L1342", "sot_ref": "D2.0-06 §2.1", "match": true, "detail": "SOT §2.1: 'L0: 세션 종료 시 (최대 30일)'. Match."},
+      {"fact": "L1 Project Memory: TTL=90 days, project_id isolation", "part2_ref": "PART2 L1343", "sot_ref": "D2.0-06 §2.1", "match": true, "detail": "SOT §2.1: 'L1: 90일 (TTL, 기본); Project 단위 30일 연장 가능'. Match."},
+      {"fact": "B-1 Episodic -> L1, B-2 Procedural -> L3, B-3 Semantic -> L2, B-4 Working -> L0", "part2_ref": "PART2 L1354-1359", "sot_ref": "D2.0-06 §2, §2.1", "match": true, "detail": "SOT §2: '(L0, B-4), (L1, B-1), (L2, B-3), (L3, B-2)'. Exact match."},
+      {"fact": "6-Stage RAG Pipeline: Collect->Chunk->Embed->Store->Retrieve->Generate", "part2_ref": "PART2 L1361-1367", "sot_ref": "D2.0-06 §1.1", "match": true, "detail": "SOT §1.1: 6 stages with same names. Match."},
+      {"fact": "V1 Vector DB: Chroma local, BGE-M3 1024dim", "part2_ref": "PART2 L1344", "sot_ref": "D2.0-06 §2.2", "match": true, "detail": "SOT §2.2: 'V1: Chroma (로컬), BGE-M3 1024차원'. Match."},
+      {"fact": "Semantic Cache threshold: cosine >= 0.95 (LOCK)", "part2_ref": "PART2 L1383", "sot_ref": "D2.1-D6 §4.5, D2.0-06", "match": true, "detail": "SOT D6 §4.5: similarity_threshold=0.95 (LOCK). Match."},
+      {"fact": "Semantic Cache TTL: 86400 sec (24h)", "part2_ref": "PART2 L1384", "sot_ref": "D2.1-D6 §4.5", "match": true, "detail": "SOT D6 §4.5 SemanticCacheSchema: ttl_sec=86400. Match."},
+      {"fact": "V1 storage: SQLite + JSONL + Chroma", "part2_ref": "PART2 L1342-1344", "sot_ref": "D2.0-06 §2.2", "match": true, "detail": "SOT §2.2: 'V1: SQLite(메타/인덱스) + JSONL(append-only) + Chroma'. Match."},
+      {"fact": "V2 storage: Postgres + Qdrant", "part2_ref": "PART2 context", "sot_ref": "D2.0-06 §2.2", "match": true, "detail": "SOT §2.2: 'V2+: Postgres + Qdrant'. Match."},
+      {"fact": "QoD < 0.4 -> L2 vector insertion forbidden", "part2_ref": "PART2 context (CLAUDE.md §15)", "sot_ref": "D2.0-06 §2.5.2", "match": true, "detail": "SOT §2.5.2: 'QoD < 0.4: L2/L3 저장 금지'. Match."},
+      {"fact": "Memory search order: L0 -> L1 -> L2 -> L3", "part2_ref": "PART2 context (CLAUDE.md §15)", "sot_ref": "D2.0-06 S7D-042", "match": true, "detail": "SOT S7D-042: '검색 순서: L0→L1→L2→L3'. Match."},
+      {"fact": "L1->L2 promotion: 3+ re-references OR QoD >= 0.7", "part2_ref": "PART2 context", "sot_ref": "D2.0-06 S7D-040", "match": true, "detail": "SOT S7D-040: 'L1→L2: 재참조 3회 이상 OR QoD ≥ 0.7'. Match."},
+      {"fact": "L2 storage: requires approval (S03-MOD-001)", "part2_ref": "PART2 context", "sot_ref": "D2.0-06 §2.3", "match": true, "detail": "SOT §2.3 V2 L2: '저장 시 승인 필수 (S03-MOD-001 확정)'. Match."},
+      {"fact": "V1 GraphRAG: JSON file (NetworkX)", "part2_ref": "PART2 L1345", "sot_ref": "D2.1-D6 §4.4, D2.0-06 §2.2", "match": true, "detail": "SOT D6 §4.4: graph_backend='json_file (V1)'. Match."},
+      {"fact": "PII masking: V1=regex, V2+=NER model", "part2_ref": "PART2 L1348, L2584", "sot_ref": "D2.0-06, CLAUDE.md §15", "match": true, "detail": "CLAUDE.md §15: 'PII 마스킹: V1=정규식, V2+=NER 모델+문맥 분류기'. Match."},
+      {"fact": "Guardrails 4-Layer: L1(NeMo) + L2(Guardrails AI) + L3(LlamaGuard) + L4(post-audit, V2+)", "part2_ref": "PART2 L2581-2583", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §11.1.2, CLAUDE.md §7.3", "match": true, "detail": "SOT §11.1.2: L1 NeMo Guardrails, L2 Guardrails AI, L3 LlamaGuard, L4 Post-delivery Audit. Match."},
+      {"fact": "Security item count: 15", "part2_ref": "PART2 L2577", "sot_ref": "Multiple SOT sources", "match": true, "detail": "PART2 §6.5 lists exactly 15 security items. Count verified."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT -> PART2",
+    "facts_checked": 15,
+    "present": 11,
+    "missing": [
+      {
+        "sot_fact": "VectorStore adapter interface minimum contract: upsert, search (top_k default=10), delete, get_by_id",
+        "sot_ref": "D2.0-06 §2.2-A",
+        "part2_present": false,
+        "detail": "SOT §2.2-A defines VectorStore adapter interface with specific method signatures and top_k defaults (10 design, 5 API). PART2 does not describe this adapter interface contract."
+      },
+      {
+        "sot_fact": "L3 Procedural Memory detailed lifecycle: draft->approved->active->deprecated, with D7 Approval Gate",
+        "sot_ref": "D2.0-06 §2.4",
+        "part2_present": "partial",
+        "detail": "PART2 §Phase2 item 8 mentions 'activation_state 관리' for B-3 Decay. SOT §2.4 has extensive L3 lifecycle rules. PART2 does not detail L3 lifecycle in Phase 2."
+      },
+      {
+        "sot_fact": "Memory deduplication: cosine > 0.95 threshold, weekly batch + real-time check",
+        "sot_ref": "D2.0-06 S7D-044",
+        "part2_present": false,
+        "detail": "SOT S7D-044 defines memory deduplication with 0.95 threshold and scheduling. PART2 does not mention memory deduplication as a Phase 2 implementation item."
+      },
+      {
+        "sot_fact": "Memory demotion algorithm: L2->L3 90d unreferenced, L3->Archive 180d unreferenced (V2+)",
+        "sot_ref": "D2.0-06 S7D-041",
+        "part2_present": false,
+        "detail": "SOT S7D-041 defines memory demotion/deletion algorithm with specific day thresholds. PART2 does not include demotion algorithm in Phase 2 items."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "4-layer memory (L0-L3) with B-Series mapping (LOCK)", "sot_ref": "D2.0-06 §2, §2.1", "part2_present": true, "detail": "PART2 L1352-1359: B-L mapping table. Exact match."},
+      {"sot_fact": "RAG pipeline 6 stages (LOCK)", "sot_ref": "D2.0-06 §1.1", "part2_present": true, "detail": "PART2 L1361-1367: 6-stage pipeline listed. Match."},
+      {"sot_fact": "RAG operation limits: 15 documents / 30 chunks", "sot_ref": "D2.0-06 §1.1", "part2_present": false, "detail": "SOT §1.1: '운영 한계: 문서 15개 / 청크 30개'. PART2 does not mention these operation limits."},
+      {"sot_fact": "SourceQoD components: freshness, reliability, completeness", "sot_ref": "D2.0-06 §2.5.2, D2.1-D6 §4.2", "part2_present": "partial", "detail": "PART2 mentions QoD thresholds but does not list the 3 component fields (freshness, reliability, completeness) explicitly in Phase 2 section."},
+      {"sot_fact": "Memory search result: per-layer 5, total 20 candidates -> reranker -> top 5", "sot_ref": "D2.0-06 S7D-042", "part2_present": false, "detail": "SOT S7D-042: '레이어당 5개, 총 20개 후보 → reranker → top 5'. PART2 does not specify these search result limits."},
+      {"sot_fact": "L0 session buffer: in-memory list, LLM context 80%, auto-summarize at 70%", "sot_ref": "D2.0-06 S7D-035", "part2_present": false, "detail": "SOT S7D-035: 'LLM context 80%, 70% 초과 시 자동 요약'. PART2 does not detail L0 buffer management parameters."},
+      {"sot_fact": "Memory promotion scoring: access_count*0.4 + recency*0.3 + confidence*0.3", "sot_ref": "D2.0-06 S7D-040", "part2_present": false, "detail": "SOT S7D-040 defines promotion_score formula. PART2 does not include this formula."},
+      {"sot_fact": "V1 memory activation: L0 active, L1 selective, L2 OFF, L3 OFF", "sot_ref": "D2.0-06 §2.3", "part2_present": true, "detail": "PART2 Phase 2 items 1-2 implement L0 and L1. Phase 2 does not include L2/L3 active items. Consistent with SOT."},
+      {"sot_fact": "Memory export/import: JSON/SQLite format", "sot_ref": "D2.0-06 S7D-008", "part2_present": true, "detail": "PART2 L1347: '대화 내보내기/가져오기: JSON/Markdown export, import'. Match (format slightly different: SOT says JSON/SQLite, PART2 says JSON/Markdown)."},
+      {"sot_fact": "Deny policy: no long-term storage, vector insertion absolutely forbidden", "sot_ref": "D2.0-06 §0 (freeze), §3", "part2_present": true, "detail": "PART2 context addresses deny rules through CLAUDE.md §15: 'QoD < 0.4 → L2 벡터삽입 금지'. Present."},
+      {"sot_fact": "Redis for L0 cache/session acceleration only, not for L1/L2 primary storage", "sot_ref": "D2.0-06 §2.2 point 3", "part2_present": false, "detail": "SOT §2.2: 'Redis는 L0 캐시/세션 가속용으로만 허용'. PART2 does not mention Redis L0 cache constraint."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A6-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "RAG operation limits (15 documents / 30 chunks) from SOT D2.0-06 §1.1 not mentioned in PART2 Phase 2 section.",
+      "evidence": "SOT §1.1: '운영 한계: 문서 15개 / 청크 30개'. PART2 V1-Phase 2 lists RAG pipeline stages but omits these operational limits."
+    },
+    {
+      "id": "F-A6-02",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Memory search result limits (per-layer 5, total 20 -> reranker -> top 5) from SOT S7D-042 not specified in PART2.",
+      "evidence": "SOT S7D-042: '레이어당 5개, 총 20개 후보 → reranker → top 5'. PART2 omits this."
+    },
+    {
+      "id": "F-A6-03",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "Memory export format: SOT S7D-008 says JSON/SQLite, PART2 says JSON/Markdown. Minor format discrepancy.",
+      "evidence": "SOT S7D-008: 'JSON/SQLite 형식으로 전체 메모리 내보내기'. PART2 L1347: 'JSON/Markdown export'."
+    },
+    {
+      "id": "F-A6-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "L0 session buffer management parameters (80% context, 70% auto-summarize) from SOT S7D-035 not detailed in PART2.",
+      "evidence": "SOT S7D-035: 'LLM context 80%, 70% 초과 시 자동 요약'. PART2 only mentions 'SQLite, TTL=session_end' for L0."
+    },
+    {
+      "id": "F-A6-05",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Memory promotion scoring formula (access_count*0.4 + recency*0.3 + confidence*0.3) from SOT S7D-040 not documented in PART2.",
+      "evidence": "SOT S7D-040 defines promotion_score formula. PART2 does not include implementation details for memory promotion scoring."
+    },
+    {
+      "id": "F-A6-06",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "VectorStore adapter interface contract (upsert, search with top_k defaults, delete, get_by_id) from SOT D2.0-06 §2.2-A not documented in PART2 Phase 2.",
+      "evidence": "SOT §2.2-A defines minimum adapter contract with 4 methods and specific defaults. PART2 mentions Chroma but not the adapter interface."
+    },
+    {
+      "id": "F-A6-07",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "DCL QoD threshold (0.5) in PART2 differs from general memory QoD floor (0.4) in SOT. The relationship between these thresholds is not clarified.",
+      "evidence": "PART2 L3134: 'DCL QoD >= 0.5 → RAG 삽입'. SOT §2.5.2: 'QoD < 0.4: L2/L3 저장 금지'. Different contexts but threshold relationship unclear."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "80%",
+    "findings_count": 7
+  }
+}

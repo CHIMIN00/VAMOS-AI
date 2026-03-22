@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "source": "VAMOS_구현가이드_PART2_구현단계.md",
+    "version": "v25.0.0",
+    "total_lines": 5252,
+    "generated_at": "2026-03-13",
+    "task_id": "0-E",
+    "rebuild_reason": "v25.0.0 line number recalibration (+857 lines from v24.0.0)"
+  },
+  "prompts": [
+    {
+      "id": "V0_STEP1",
+      "section": "§2",
+      "title": "STEP 1: 프로젝트 스캐폴딩 (Day 1-2)",
+      "start_line": 342,
+      "end_line": 551,
+      "line_count": 210,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [345, 348]},
+        "규칙": {"present": true, "line_range": [540, 545]},
+        "참조SOT": {"present": true, "line_range": [547, 551], "documents": ["PHASE_B2_PROJECT_STRUCTURE.md", "PHASE_B3_DEPENDENCIES.md", "PHASE_B4_CONFIG_SPEC.md"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "toml", "lines": [422, 501], "desc": "config.v1.toml V1 확장판 17섹션"},
+          {"lang": "plain", "lines": [515, 522], "desc": "schemas/seed/ 디렉토리 구조"},
+          {"lang": "json", "lines": [525, 536], "desc": "seed JSON 파일 형식 예시"}
+        ]},
+        "완료검증": {"present": true, "line_range": [553, 563], "item_count": 8}
+      }
+    },
+    {
+      "id": "V0_STEP2",
+      "section": "§2",
+      "title": "STEP 2: 스키마 정의 (Day 2-3)",
+      "start_line": 649,
+      "end_line": 809,
+      "line_count": 161,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [652, 653]},
+        "규칙": {"present": true, "line_range": [763, 770]},
+        "참조SOT": {"present": true, "line_range": [798, 808], "documents": ["D2.1-D1~D2.1-D8", "D2.1-D2 §4.1", "D2.1-D2 §6", "D2.0-02 §7", "CLAUDE.md §12", "schemas/seed/*.json"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "python", "lines": [660, 674], "desc": "전제조건 확인 스크립트 (seed 파일 검증)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [811, 819], "item_count": 5}
+      }
+    },
+    {
+      "id": "V0_STEP3",
+      "section": "§2",
+      "title": "STEP 3: IPC 통신 레이어 (Day 3-5)",
+      "start_line": 881,
+      "end_line": 975,
+      "line_count": 95,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [884, 888]},
+        "규칙": {"present": true, "line_range": [962, 969]},
+        "참조SOT": {"present": true, "line_range": [971, 975], "documents": ["PHASE_B1_API_CONTRACT.md", "D2.0-04 §5", "D2.0-01 §2"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "python", "lines": [895, 910], "desc": "13개 RPC 메서드 스텁 목록"},
+          {"lang": "rust", "lines": [937, 959], "desc": "#[tauri::command] 구현 패턴 2가지 (Python RPC + Rust 직접처리)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [977, 989], "item_count": 8}
+      }
+    },
+    {
+      "id": "V0_STEP4",
+      "section": "§2",
+      "title": "STEP 4: ORANGE CORE 최소 파이프라인 (Day 5-8)",
+      "start_line": 1067,
+      "end_line": 1181,
+      "line_count": 115,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [1070, 1072]},
+        "규칙": {"present": true, "line_range": [1164, 1173]},
+        "참조SOT": {"present": true, "line_range": [1175, 1181], "documents": ["D2.0-02 §7.1~7.5", "D2.0-02 §8", "D2.0-02 §2.2", "D2.0-05 §4~7", "D2.0-07 §1~6"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "python", "lines": [1124, 1150], "desc": "LangGraph StateGraph 5-Phase 파이프라인 (VamosState + 5노드)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [1183, 1200], "item_count": 13}
+      }
+    },
+    {
+      "id": "V0_STEP5",
+      "section": "§2",
+      "title": "STEP 5: 기본 저장소 + 로깅 (Day 8-9)",
+      "start_line": 1229,
+      "end_line": 1353,
+      "line_count": 125,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [1232, 1233]},
+        "규칙": {"present": true, "line_range": [1340, 1346]},
+        "참조SOT": {"present": true, "line_range": [1348, 1353], "documents": ["D2.0-06 §2.1", "D2.0-04 §9", "PHASE_B4_CONFIG_SPEC.md", "CLAUDE.md §15"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "sql", "lines": [1246, 1262], "desc": "memory_records 테이블 DDL + 3 인덱스"},
+          {"lang": "python", "lines": [1287, 1299], "desc": "structlog 초기화 (JSONRenderer, TimeStamper)"},
+          {"lang": "python", "lines": [1310, 1329], "desc": "VamosConfig Pydantic 모델 (13 서브모델 매핑)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [1355, 1370], "item_count": 10}
+      }
+    },
+    {
+      "id": "V0_STEP6",
+      "section": "§2",
+      "title": "STEP 6: CI 스켈레톤 + 테스트 (Day 9-10)",
+      "start_line": 1400,
+      "end_line": 1549,
+      "line_count": 150,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [1403, 1404]},
+        "규칙": {"present": true, "line_range": [1537, 1544]},
+        "참조SOT": {"present": true, "line_range": [1546, 1549], "documents": ["PHASE_B5_TEST_STRATEGY.md", "PHASE_B6_CICD_PIPELINE.md"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "yaml", "lines": [1409, 1429], "desc": "quality-python.yml (ruff lint + mypy)"},
+          {"lang": "yaml", "lines": [1432, 1450], "desc": "test-python.yml (pytest + coverage)"},
+          {"lang": "python", "lines": [1461, 1471], "desc": "FREEZE/LOCK 필드 수 테스트 예시"},
+          {"lang": "toml", "lines": [1513, 1520], "desc": "dev dependencies (pytest>=8.3, ruff>=0.8, mypy>=1.0)"},
+          {"lang": "toml", "lines": [1524, 1535], "desc": "ruff (line_length=100, 13룰셋) + mypy strict 설정"}
+        ]},
+        "완료검증": {"present": true, "line_range": [1551, 1581], "item_count": 10, "plus_v0_checklist": 13}
+      }
+    },
+    {
+      "id": "V2_PHASE1",
+      "section": "§4",
+      "title": "V2-Phase 1: 인프라 마이그레이션 (Week 1-3)",
+      "start_line": 2163,
+      "end_line": 2243,
+      "line_count": 81,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [2166, 2168]},
+        "규칙": {"present": true, "line_range": [2229, 2236]},
+        "참조SOT": {"present": true, "line_range": [2238, 2243], "documents": ["PHASE_B7_MIGRATION_STRATEGY.md", "PHASE_B6_DEPLOYMENT_INFRA.md", "PHASE_B4_CONFIG_SPEC.md §3", "PHASE_B3_DEPENDENCIES.md"]},
+        "코드블록": {"present": false, "blocks": []},
+        "완료검증": {"present": true, "line_range": [2245, 2260], "item_count": 10}
+      }
+    },
+    {
+      "id": "V2_PHASE2",
+      "section": "§4",
+      "title": "V2-Phase 2: COND 모듈 활성화 (Week 4-9)",
+      "start_line": 2417,
+      "end_line": 2659,
+      "line_count": 243,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [2420, 2424]},
+        "규칙": {"present": true, "line_range": [2576, 2583]},
+        "참조SOT": {"present": true, "line_range": [2653, 2659], "documents": ["D2.0-01 §5.6", "D2.0-02 §7", "D2.0-03", "VAMOS_SDAR_DESIGN_SPECIFICATION", "VAMOS_CLOUD_LIBRARY_SPEC"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "toml", "lines": [2586, 2651], "desc": "config.v2.toml COND 모듈 키 (원본 10개 + 7 카테고리 그룹)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [2661, 2679], "item_count": 15}
+      }
+    },
+    {
+      "id": "V2_PHASE3",
+      "section": "§4",
+      "title": "V2-Phase 3: Agent Teams V2 + 보안 강화 (Week 10-13)",
+      "start_line": 2740,
+      "end_line": 2830,
+      "line_count": 91,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [2743, 2745]},
+        "규칙": {"present": true, "line_range": [2815, 2822]},
+        "참조SOT": {"present": true, "line_range": [2824, 2830], "documents": ["VAMOS_AGENT_TEAMS_SPEC", "VAMOS_CLOUD_LIBRARY_SPEC §7", "D2.0-07", "VAMOS_SDAR_DESIGN_SPECIFICATION", "PHASE_B1_API_CONTRACT.md"]},
+        "코드블록": {"present": false, "blocks": []},
+        "완료검증": {"present": true, "line_range": [2832, 2848], "item_count": 12}
+      }
+    },
+    {
+      "id": "V3_PHASE1",
+      "section": "§5",
+      "title": "V3-Phase 1: 인프라 스케일업 (Week 1-4)",
+      "start_line": 2914,
+      "end_line": 3023,
+      "line_count": 110,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [2917, 2919]},
+        "규칙": {"present": true, "line_range": [3009, 3016]},
+        "참조SOT": {"present": true, "line_range": [3018, 3023], "documents": ["PHASE_B6_DEPLOYMENT_INFRA.md", "PHASE_B3_DEPENDENCIES.md", "PHASE_B4_CONFIG_SPEC.md §3", "D2.0-07"]},
+        "코드블록": {"present": false, "blocks": []},
+        "완료검증": {"present": true, "line_range": [3025, 3039], "item_count": 10}
+      }
+    },
+    {
+      "id": "V3_PHASE2",
+      "section": "§5",
+      "title": "V3-Phase 2: EXP 모듈 전체 활성화 (Week 5-10)",
+      "start_line": 3105,
+      "end_line": 3343,
+      "line_count": 239,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [3108, 3111]},
+        "규칙": {"present": true, "line_range": [3328, 3336]},
+        "참조SOT": {"present": true, "line_range": [3338, 3343], "documents": ["D2.0-01 §5.6~§5.15", "D2.0-02 §7", "D2.0-03", "VAMOS_CLOUD_LIBRARY_SPEC §7"]},
+        "코드블록": {"present": true, "blocks": [
+          {"lang": "toml", "lines": [3260, 3307], "desc": "config.v3.toml EXP 모듈 키 (Self-evo/Knowledge/Multimodal/External/Learning/EVX/RT-BNP)"},
+          {"lang": "python", "lines": [3311, 3326], "desc": "EXP 모듈 공통 패턴 (BaseModule 상속, category=EXP)"}
+        ]},
+        "완료검증": {"present": true, "line_range": [3345, 3370], "item_count": 13}
+      }
+    },
+    {
+      "id": "V3_PHASE3",
+      "section": "§5",
+      "title": "V3-Phase 3: 고급 기능 + 최종 통합 (Week 11-16)",
+      "start_line": 3427,
+      "end_line": 3538,
+      "line_count": 112,
+      "sub_elements": {
+        "작업목표": {"present": true, "line_range": [3430, 3433]},
+        "규칙": {"present": true, "line_range": [3521, 3529]},
+        "참조SOT": {"present": true, "line_range": [3531, 3538], "documents": ["VAMOS_AGENT_TEAMS_SPEC §8", "VAMOS_SDAR_DESIGN_SPECIFICATION", "VAMOS_CLOUD_LIBRARY_SPEC", "D2.0-01 §5.8", "D2.0-05", "D2.0-07"]},
+        "코드블록": {"present": false, "blocks": []},
+        "완료검증": {"present": true, "line_range": [3540, 3558], "item_count": 13, "final_gate": "VAMOS Enterprise 완성"}
+      }
+    }
+  ],
+  "v1_section3_analysis": {
+    "has_full_ai_prompt": false,
+    "has_summary_prompts": true,
+    "summary_prompt_count": 6,
+    "summary_prompts": [
+      {"phase": "V1-Phase-1", "title": "ORANGE CORE 완성", "location_line": 1701, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["D2.0-02 §7", "D2.0-07 §1~6", "D2.0-02 §2.2", "D2.1-D2"], "lock_values": "5-Gate 순서, 9-State 전이, I-6 임계값, I-19 타임아웃 10분, autonomy V1=L2_COPILOT"},
+      {"phase": "V1-Phase-2", "title": "Storage + Memory + RAG", "location_line": 1701, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["D2.0-06", "D2.1-A1", "D2.1-D6", "config.v1.toml §3.14~3.15"], "lock_values": "B↔L 매핑, Semantic Cache cosine≥0.95, 6-Stage RAG 순서"},
+      {"phase": "V1-Phase-3", "title": "Workflow + Agent", "location_line": 1805, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["D2.0-05", "D2.0-04", "D2.0-03", "D2.0-07", "VAMOS_AGENT_TEAMS_SPEC"], "lock_values": "LangGraph START/END, Circuit Breaker recovery=60s, Agent max 2 Sub"},
+      {"phase": "V1-Phase-4", "title": "UI/UX", "location_line": 1916, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["D2.0-08", "PHASE_B2_PROJECT_STRUCTURE.md", "§6.1"], "lock_values": "ORANGE/BLUE 테마, 다크모드 기본, WCAG 2.1 AA"},
+      {"phase": "V1-Phase-5", "title": "Integration + Test", "location_line": 1973, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["PHASE_B5_TEST_STRATEGY.md", "PHASE_B6_CICD.md", "§6.3", "§6.4"], "lock_values": "커버리지 80%+ (Python/Rust/React), E2E core 100%"},
+      {"phase": "V1-Phase-6", "title": "AI Investing MVP + MCP", "location_line": 2026, "format": "AI 프롬프트 요약 blockquote", "참조SOT": ["D2.0-01 §5.9", "§6.8", "§6.6", "VAMOS_CLOUD_LIBRARY_SPEC"], "lock_values": "MCP Streamable HTTP, ₩40,000/월 LOCK 최종 확인"}
+    ],
+    "description": "V1 (§3, lines 1585-2087) contains 6 Phases with detailed implementation item tables, LOCK/FREEZE constraints, and stage gate verifications, but uses condensed AI prompt summaries (blockquote format) instead of full ````text prompt blocks."
+  },
+  "io_chains": [
+    {"from": "V0_STEP1", "to": "V0_STEP2", "output": "monorepo + config.v1.toml + schemas/seed/ 5개", "gate": "STEP-1 체크리스트 8항목"},
+    {"from": "V0_STEP2", "to": "V0_STEP3", "output": "25개 Pydantic 모델 + 5개 레지스트리 + generate_types.py", "gate": "STEP-2 체크리스트 5항목 (필드 수 검증 포함)"},
+    {"from": "V0_STEP3", "to": "V0_STEP4", "output": "JSON-RPC 서버 13메서드 + Rust bridge + Tauri IPC 5커맨드", "gate": "STEP-3 체크리스트 8항목"},
+    {"from": "V0_STEP4", "to": "V0_STEP5", "output": "I-1/I-2/I-5 + stubs + LangGraph 5-Phase", "gate": "STEP-4 체크리스트 13항목"},
+    {"from": "V0_STEP5", "to": "V0_STEP6", "output": "L0 Memory + JSONL 로깅 + Config 로더", "gate": "STEP-5 체크리스트 10항목"},
+    {"from": "V0_STEP6", "to": "V1(summary)", "output": "CI 워크플로우 + 테스트 7종", "gate": "V0 완료 체크리스트 13항목"},
+    {"from": "V1(summary)", "to": "V2_PHASE1", "output": "V1 전체 완료 (CORE 32개 모듈)", "gate": "V1→V2 전환 조건 6항 (QoD≥0.85, RAG≥60%, 메모리 오류<1%, P0 100%, 비용 30일, 사용자 승인)"},
+    {"from": "V2_PHASE1", "to": "V2_PHASE2", "output": "4 DB 마이그레이션 + Docker Compose + config.v2.toml", "gate": "10-Step Orchestration + 사후검증 7항목"},
+    {"from": "V2_PHASE2", "to": "V2_PHASE3", "output": "116개 COND 모듈 + BaseModule 체계", "gate": "Phase 2 체크리스트 15항목"},
+    {"from": "V2_PHASE3", "to": "V3_PHASE1", "output": "Agent Teams V2 + 보안 + GDPR", "gate": "V2→V3 전환 조건 (QoD≥0.90, 2-tier LLM, Self-evo, V3 비용 승인)"},
+    {"from": "V3_PHASE1", "to": "V3_PHASE2", "output": "K8s + vLLM + 관리형 DB + Observability", "gate": "Phase 1 체크리스트 10항목"},
+    {"from": "V3_PHASE2", "to": "V3_PHASE3", "output": "39개 EXP 모듈 + PARL Swarm", "gate": "Phase 2 체크리스트 13항목"},
+    {"from": "V3_PHASE3", "to": "COMPLETE", "output": "81개 모듈 + 38개 벤치마크", "gate": "Phase 3 체크리스트 13항목 + V3 완료 = Enterprise"}
+  ],
+  "r1_r11_common_rules": {
+    "location": "§1.3 (lines 119-178)",
+    "rule_count": 11,
+    "registry": [
+      {"id": "R1", "rule": "Python >= 3.11 필수", "scope": "모든 Python 코드", "violation": "빌드 실패"},
+      {"id": "R2", "rule": "Pydantic v2 전용, ConfigDict 사용, class Config 금지", "scope": "모든 스키마/모델", "violation": "CI lint 실패"},
+      {"id": "R3", "rule": "no-create: 기존 파일 수정 우선", "scope": "모든 코드 생성", "violation": "AI 재지시"},
+      {"id": "R4", "rule": "no-delete: 삭제 금지, [DEPRECATE] 처리만", "scope": "모든 코드 수정", "violation": "§1.3.1 #4"},
+      {"id": "R5", "rule": "LOCK/FREEZE 값 런타임 변경 금지", "scope": "config, 상수", "violation": "§1.3.1 #2"},
+      {"id": "R6", "rule": "SOT 문서에 없는 내용 창작 금지", "scope": "모든 AI 생성물", "violation": "§1.3.1 #3"},
+      {"id": "R7", "rule": "CORE→COND 단방향, 역방향 금지", "scope": "import 구조", "violation": "VAL-003"},
+      {"id": "R8", "rule": "trace_id 서버 생성 전용 (UUID v4)", "scope": "보안", "violation": "§6.5.1 #3"},
+      {"id": "R9", "rule": "에러 내부 정보 노출 금지", "scope": "에러 핸들링", "violation": "§6.5.1 #7"},
+      {"id": "R10", "rule": "비용 ABSOLUTE LOCK (V1:₩40K, V2:₩93K, V3:₩266K)", "scope": "Cost Gate", "violation": "실행 차단"},
+      {"id": "R11", "rule": "schema_registry.toml 단일 참조점", "scope": "스키마 참조", "violation": "중복 정의 방지"}
+    ],
+    "per_prompt_diff": {
+      "V0_STEP1": ["설정 키 B4 정본 사용", "Pydantic v2 class Config 금지"],
+      "V0_STEP2": ["extra='forbid' 전 모델", "FREEZE/LOCK 필드 수 고정", "레지스트리 네이밍 (oc.*/UPPER_SNAKE/FB_)"],
+      "V0_STEP3": ["stdin/stdout only", "stderr 로그 분리(M-5)", "ready 메시지", "보안 §6.5.1"],
+      "V0_STEP4": ["async def 필수", "raw dict 금지", "FailureReport→I-20", "보안 체크리스트 7항목", "LangGraph 범위 제한(에반#01)"],
+      "V0_STEP5": ["aiosqlite async", "config LOCK frozen", "파일 경로 하드코딩 금지", "3단계 로딩(M-6)"],
+      "V0_STEP6": ["Ollama skipif 마커", "CI Ollama 없이 동작", "Ollama 대안 3가지(M-10)"],
+      "V2_PHASE1": ["마이그레이션 6원칙(LOCK)", "10-Step Orchestration", "rollback 필수", "V2 ₩93K/월"],
+      "V2_PHASE2": ["BaseModule(ABC)+enabled", "Module Catalog §5.5 LOCK", "COND 기본 OFF(§5.14.4)"],
+      "V2_PHASE3": ["LOCK-AT-012 HMAC", "LOCK-AT-014 max 10", "L4 V3 연기", "MessageBus 하위호환", "협업 6패턴"],
+      "V3_PHASE1": ["K8s resource limits 필수", "GPU taint/toleration", "Blue-Green 1시간 유지", "V3 ₩266K/월"],
+      "V3_PHASE2": ["EXP category", "EVX 별도 네임스페이스", "S-Series 순차 활성화", "GPU 스케줄링"],
+      "V3_PHASE3": ["코드 서명+샌드박스", "SDAR AR-L4 사전 승인+롤백", "Self-evo Governance 최상위 금지", "A2A DEFER-AT-005"]
+    }
+  },
+  "prompt_chain_graph": {
+    "V0_sequential": "STEP-1 → STEP-2 → STEP-3 → STEP-4 → STEP-5 → STEP-6",
+    "V0_to_V1": "V0-STEP-6 → V1 (V0 완료 체크리스트 13항목)",
+    "V1_mixed": "Phase-1 → Phase-2 → Phase-3 → [Phase-4 ∥ Phase-5 ∥ Phase-6]",
+    "V1_to_V2": "V1 완료 → V2-Phase-1 (전환 조건 6항)",
+    "V2_sequential": "Phase-1 → Phase-2 → Phase-3",
+    "V2_to_V3": "V2 완료 → V3-Phase-1 (전환 조건: QoD≥0.90, 2-tier, Self-evo, 비용 승인)",
+    "V3_sequential": "Phase-1 → Phase-2 → Phase-3 → Enterprise 완성"
+  },
+  "summary": {
+    "total_full_prompts": 12,
+    "total_summary_prompts": 6,
+    "expected_full_prompts": 12,
+    "match": true,
+    "distribution": {"V0_STEP_1to6": 6, "V1_Phase_1to6_summary": 6, "V2_Phase_1to3": 3, "V3_Phase_1to3": 3},
+    "prompts_with_code_blocks": ["V0_STEP1", "V0_STEP2", "V0_STEP3", "V0_STEP4", "V0_STEP5", "V0_STEP6", "V2_PHASE2", "V3_PHASE2"],
+    "prompts_without_code_blocks": ["V2_PHASE1", "V2_PHASE3", "V3_PHASE1", "V3_PHASE3"],
+    "total_prompt_lines": 1632,
+    "longest_prompt": {"id": "V2_PHASE2", "lines": 243},
+    "shortest_prompt": {"id": "V2_PHASE1", "lines": 81}
+  }
+}

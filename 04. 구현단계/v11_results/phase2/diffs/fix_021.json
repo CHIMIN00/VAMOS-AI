@@ -1,0 +1,24 @@
+{
+  "fix_id": "FIX-021",
+  "fg": "FG-H07",
+  "tier": 3,
+  "order": 21,
+  "severity": "HIGH",
+  "description": "시스템설계 갭 보강: S4~S6 UI 매핑, Fast Gate/5-Gate 관계, NEVER_AUTO 탐지, V2/V3 FailureCode",
+  "changes": [
+    {
+      "section": "§6.11",
+      "action": "Pipeline S4~S6 UI 상태 전이 매핑 테이블 삽입"
+    },
+    {
+      "section": "§6.10.1 Fast Gate",
+      "action": "Fast Gate ↔ 5-Gate 관계 명시 노트 추가"
+    },
+    {
+      "section": "§6.9",
+      "action": "NEVER_AUTO 자동 탐지 메커니즘 + V2/V3 FailureCode 확장 테이블 삽입"
+    }
+  ],
+  "ripple_expected": ["§6.13 작업량", "§7 체크리스트", "변경이력"],
+  "applied_at": "2026-03-13"
+}

@@ -1,0 +1,29 @@
+{
+  "phase": "Phase 4 (v9 전수 재실행)",
+  "session": 27,
+  "version": "v13.3.0-ENHANCED",
+  "timestamp": "2026-03-23T01:00:00+09:00",
+  "rules": {
+    "RULE-1": {"description": "section.key 정규화 전체 경로 사용", "applied_in": ["A", "B", "D"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-2": {"description": "V0/V1/V2/V3 범위 한정자 먼저 확인", "applied_in": ["A", "B", "C/E", "D", "E-DEEP", "F"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-3": {"description": "changelog 제외, 인라인 주석 별도", "applied_in": ["C/E", "E-DEEP"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-4": {"description": "용어 일관성 (한국어 형태소)", "applied_in": [], "violations": 0, "status": "NOT_APPLICABLE", "notes": "프롬프트 작성 단계에서 암묵적 적용, 런타임 검증 대상 아님"},
+    "RULE-5": {"description": "요약 vs 상세 구조적 차이 허용", "applied_in": ["C/E"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-6": {"description": "V 범위 간 정확한 매핑", "applied_in": ["F"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-7": {"description": "비선형 의존성 별도 분류, 병렬 허용", "applied_in": ["A", "D"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-8": {"description": "~ 근사치 ±20% 허용, LOCK/FREEZE 정확 매칭", "applied_in": ["C/E", "E-DEEP"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-9": {"description": "HTML 주석 SC-01~12 의도적 기록, 허용목록 자동 PASS", "applied_in": ["B", "D"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-10": {"description": "버전 범위에 실제 릴리스 존재", "applied_in": ["F"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-11": {"description": "§6(13하위) + §7(6하위) 포함 필수", "applied_in": ["B", "C/E", "D", "F"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-12": {"description": "§2-5 수치 ↔ §6 상세 교차 검증", "applied_in": ["C/E", "E-DEEP"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-13": {"description": "§6 헤더 ↔ §6.13 매트릭스 교차 검증", "applied_in": ["C/E", "E-DEEP"], "violations": 0, "status": "COMPLIANT"},
+    "RULE-14": {"description": "v9 범위 = 문서 정합성, 코드 수준 제외", "applied_in": ["A", "C/E", "D", "F"], "violations": 0, "status": "COMPLIANT"}
+  },
+  "summary": {
+    "total_rules": 14,
+    "compliant": 13,
+    "violations": 0,
+    "not_applicable": 1,
+    "verdict": "PASS — 위반 건수 0"
+  }
+}

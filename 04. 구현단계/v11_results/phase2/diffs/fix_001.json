@@ -1,0 +1,28 @@
+{
+  "fix_id": "FIX-001",
+  "fg": "FG-B01",
+  "tier": 1,
+  "order": 1,
+  "severity": "BLOCKER",
+  "decision": "B — 3단계 (70/85/95%)",
+  "description": "비용 알람 체계를 config에서 3단계로 변경하여 본문(L1529)과 통일",
+  "changes": [
+    {
+      "file": "VAMOS_구현가이드_PART2_구현단계.md",
+      "line": 209,
+      "section": "§2 STEP-1 config (첫 번째 게시)",
+      "before": "warn_threshold = 80              # % (B4 정본: warn_threshold, _pct 접미사 없음)\nblock_threshold = 100            # %",
+      "after": "warn_threshold = 70              # % 1단계 경고 (P30-058: 70/85/95 3단계)\nescalate_threshold = 85          # % 2단계 심화 경고\nblock_threshold = 95             # % 3단계 차단"
+    },
+    {
+      "file": "VAMOS_구현가이드_PART2_구현단계.md",
+      "line": 384,
+      "section": "§2 STEP-1 config (두 번째 게시)",
+      "before": "warn_threshold = 80              # % (B4 정본: warn_threshold, _pct 접미사 없음)\nblock_threshold = 100            # %",
+      "after": "warn_threshold = 70              # % 1단계 경고 (P30-058: 70/85/95 3단계)\nescalate_threshold = 85          # % 2단계 심화 경고\nblock_threshold = 95             # % 3단계 차단"
+    }
+  ],
+  "ripple_expected": ["§6.8 (비용 설정 참조)", "§7.1 L4167 (비용 엔진)", "§7.2 L4183 (비용 상한)", "변경이력"],
+  "ripple_action": "L1529 본문은 이미 70/85/95로 정합. §7.1/§7.2 비용 체크리스트는 금액 기준(₩40,000)이므로 직접 수정 불요. 변경이력은 전체 수정 완료 후 일괄 추가.",
+  "applied_at": "2026-03-12"
+}

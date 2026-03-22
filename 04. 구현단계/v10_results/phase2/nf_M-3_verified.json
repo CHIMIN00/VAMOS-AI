@@ -1,0 +1,1130 @@
+[
+  {
+    "feature_id": "AINV-056",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "SHAP/LIME Explainability 모듈. PART2에서 Shap-E(3D 모델, L2822)만 발견되며 XAI와 무관. PART2+STEP7에서 XAI/Explainability 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D202-059",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "배치 처리(S7B-030) 구현 스펙. PART2에서 배치는 마이그레이션(1000건 단위), 이메일(50건), GPU(batch_size=4) 등 개별 언급만 있으며, 범용 배치 처리 시스템 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D203-111",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "시간 여행 디버깅(Time-Travel Debugging). PART2+STEP7에서 해당 구현 스펙 없음. Checkpoint/Replay(LOCK-AT-007) 존재하나 디버깅 전용 기능과는 다름."
+  },
+  {
+    "feature_id": "D204-119",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1890,
+    "evidence_text": "## 7. 배포 스크립트 → scripts/deploy/deploy_v2.sh + rollback_v2.sh ... rollback_v2.sh: 이전 프로젝트로 즉시 전환, 데이터 롤백은 마이그레이션별 downgrade 함수 호출",
+    "reason": "V2 Phase 1 배포 스크립트에 rollback_v2.sh 포함, SDAR AR-L3에 rollback_to_snapshot 액션 포함(L2013). 복구 절차는 마이그레이션+SDAR 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "D204-162",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "모델 A/B 테스팅 고급(1000건/7일, 자동 승격/롤백). PART2에서 A/B 비교 메트릭 수집(L2848) V3 범위로만 언급. V2 구현 가이드에 A/B 테스팅 상세 스펙 없음."
+  },
+  {
+    "feature_id": "D206-038",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "작업 패턴 프로파일. PART2+STEP7에서 사용자 작업 패턴 프로파일링 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-115",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "개인 멀티미디어 라이브러리. PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-117",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "MemGPT/Letta 패턴 통합. PART2+STEP7에서 MemGPT/Letta 키워드 미발견. 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-125",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "Cognee 통합(AI KG 자동 구축). PART2+STEP7에서 Cognee 키워드 미발견. Neo4j KG 마이그레이션은 있으나 AI 자동 구축 전용 모듈 스펙 없음."
+  },
+  {
+    "feature_id": "D206-179",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "지식 신선도 관리. PART2+STEP7에서 지식 신선도(freshness) 전용 관리 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-180",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "지식 충돌 자동 감지. PART2 FailureCodeRegistry에 MC_ERR_CONFLICT(L3792) 존재하나 자동 감지 모듈 구현 스펙은 없음."
+  },
+  {
+    "feature_id": "D206-209",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "M-020 지식 임포트/익스포트 확장(Notion/Obsidian). PART2+STEP7에서 Notion/Obsidian 연동 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-222",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "M-004 스크린 캡처 지식화(Microsoft Recall 로컬 버전). PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-226",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "M-016 시간 기반 지식 관리(타임라인뷰+주월간리뷰). PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D206-232",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "M-043 예측적 지식 서핑. PART2+STEP7에서 해당 구현 스펙 없음. V3 Self-evo(L2492) 메타학습과는 다른 기능."
+  },
+  {
+    "feature_id": "D207-040",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "OAuth2 + MFA(TOTP/WebAuthn). PART2에서 OAuth 2.0은 E-13/E-14 외부 API 인증(L1964, L2025)으로만 언급. 사용자 인증용 MFA 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D207-065",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 3110,
+    "evidence_text": "| PII Regex 마스킹 | 주민번호/전화번호/이메일/카드번호 | V1 |",
+    "reason": "§6.5 보안에 PII Regex 마스킹(V1, L3110) 포함, GDPR 기능(V2, L3120)에서 데이터 삭제/제한 처리. k-익명성/DP 수준의 고급 익명화는 명시 없으나 PII 마스킹+GDPR 상위 보안 모듈에 부분 커버."
+  },
+  {
+    "feature_id": "D207-086",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 3437,
+    "evidence_text": "| DETECTING | 이상 감지 중 | 이상 감지 시 → DIAGNOSING, 정상 시 → IDLE |",
+    "reason": "SDAR §6.9 5-Layer Pipeline Layer 1 DETECTION(30초 간격)이 이상 감지를 수행하며, S-1 Self-check Engine(L1720)이 QoD 기반 이상 감지 시 I-25(SDAR) 트리거. 이상 탐지는 SDAR 상위 모듈에 포함."
+  },
+  {
+    "feature_id": "D207-114",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "개인 감정 패턴 학습(예측적 지원). PART2+STEP7에서 감정 패턴 학습 전용 구현 스펙 없음. V3 Self-evo 메타학습(L2492)과는 범위 다름."
+  },
+  {
+    "feature_id": "D207-127",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 2195,
+    "evidence_text": "## 5. LlamaGuard L3 통합 → backend/vamos_core/security/guardrails.py ... L1: NeMo Guardrails, L2: GuardrailsAI, L3: LlamaGuard (LLM 기반 안전 분류)",
+    "reason": "4-Layer Guardrails(L1:NeMo+L2:GuardrailsAI+L3:LlamaGuard)가 탈옥 차단 기능을 포함. V2 Phase 3에서 3-Layer 활성. 탈옥 차단은 Guardrails 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "D207-129",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "편향 감사 엔진(확증/최신/생존/섹터). PART2+STEP7에서 편향(bias) 감사 전용 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-341",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1499,
+    "evidence_text": "| 5 | **Semantic Cache** | cosine >= 0.95 LOCK, 응답 캐싱 | D2.1-D6 |",
+    "reason": "PART2에 Semantic Cache(L1499, cosine>=0.95 LOCK) 명시. Redis 7+(L1884) 캐시 인프라 포함. 캐싱 전략은 Semantic Cache + Redis 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "S7AE-344",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "B-026 국제화. PART2에서 국제화(i18n) 구현 스펙 없음. STEP7-H에서 V3 국제화 전략(S7H-063) 언급만 있음."
+  },
+  {
+    "feature_id": "S7AE-345",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "B-030 접근성. PART2+STEP7에서 접근성(a11y) 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-346",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "B-032 버전 관리. PART2에서 Schema Version Pinning(L1786) 있으나 범용 버전 관리 시스템 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-361",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "분산 트레이싱. PART2+STEP7에서 분산 트레이싱 구현 스펙 없음. trace_id(LOCK-AT-007)는 있으나 전용 시스템 미명시."
+  },
+  {
+    "feature_id": "S7AE-369",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "백프레셔. PART2+STEP7에서 백프레셔 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-384",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "CQRS 패턴. PART2+STEP7에서 CQRS 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-386",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "사가 패턴. PART2+STEP7에서 사가 패턴 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7AE-388",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "읽기 복제본. PART2+STEP7에서 읽기 복제본 구현 스펙 없음. V2는 단일 PostgreSQL."
+  },
+  {
+    "feature_id": "S7AE-395",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1890,
+    "evidence_text": "rollback_v2.sh: 이전 프로젝트로 즉시 전환, 데이터 롤백은 마이그레이션별 downgrade 함수 호출",
+    "reason": "V2 Phase 1 rollback_v2.sh(L1890-1897), 10-Step Orchestration 롤백(L1782), SDAR 롤백 메커니즘(L3475). 재해 복구 절차는 배포+SDAR 상위 모듈에 부분 커버."
+  },
+  {
+    "feature_id": "S7AE-561",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-024 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-024 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-562",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-025 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-025 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-563",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-026 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-026 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-564",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-027 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-027 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-565",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-028 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-028 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-566",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-029 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-029 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-567",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-030 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-030 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-571",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-034 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-034 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-572",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-035 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-035 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-573",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-036 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-036 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-574",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-037 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-037 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-575",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-038 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-038 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-576",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-039 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-039 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-577",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-040 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-040 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-580",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-043 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-043 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-581",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-044 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-044 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-582",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-045 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-045 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-583",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-046 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-046 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-584",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-047 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-047 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-585",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-048 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-048 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-586",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-049 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-049 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-587",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-050 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-050 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-591",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-054 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-054 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-592",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-055 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-055 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-593",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-056 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-056 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-594",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-057 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-057 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-595",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-058 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-058 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-596",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-059 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-059 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-597",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-060 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-060 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-606",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-069 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-069 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-607",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-070 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-070 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-608",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-071 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-071 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-609",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-072 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-072 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-612",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-075 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-075 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-613",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-076 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-076 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-618",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-081 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-081 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-619",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-082 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-082 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-620",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-083 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-083 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-621",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-084 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-084 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-623",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-086 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-086 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-624",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-087 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-087 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-625",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-088 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-088 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-626",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-089 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-089 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-627",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-090 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-090 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-628",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-091 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-091 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-629",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-092 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-092 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7FI-024",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "작업 큐 서버. PART2+STEP7에서 전용 작업 큐 서버(Celery/RabbitMQ 등) 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-026",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "검색 엔진 서버. PART2에서 Qdrant(벡터 검색, L1774) 있으나 전문 검색 엔진(Elasticsearch 등) 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-027",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1884,
+    "evidence_text": "- redis: Redis 7+ (포트 6379, 볼륨: redis_data)",
+    "reason": "V2 Phase 1 Docker Compose에 Redis 7+ 서비스 포함(L1884). Redis가 캐시 서버 역할을 수행. V2 인프라 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "S7FI-028",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1849,
+    "evidence_text": "## 2. JSONL → PostgreSQL 마이그레이션 → scripts/migration/jsonl_to_pg.py - 로그 테이블 DDL: log_events (LogEventSchema 7필드 기반), audit_trail",
+    "reason": "V2 Phase 1에서 JSONL→PostgreSQL 로그 마이그레이션(L1849), 월별 파티셔닝. PostgreSQL이 로그 서버 역할. 로그 수집기 연결(L1810)도 확인됨."
+  },
+  {
+    "feature_id": "S7FI-030",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "알림 서버. PART2+STEP7에서 전용 알림 서버 구현 스펙 없음. SDAR notification(L3472) 있으나 전용 서버 미명시."
+  },
+  {
+    "feature_id": "S7FI-070",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-G",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "실험 추적은 벤치마크/평가(STEP7-G Part 9 자동 평가 파이프라인) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-072",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "피처 스토어. PART2+STEP7에서 ML 피처 스토어 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-080",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "CDN 구성. PART2+STEP7에서 CDN 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-083",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "방화벽 규칙. PART2+STEP7에서 방화벽 규칙 전용 구현 스펙 없음. Docker 네트워크(L1886) bridge 모드만 명시."
+  },
+  {
+    "feature_id": "S7FI-087",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "다중 리전 복제. PART2+STEP7에서 다중 리전 구현 스펙 없음. V2는 단일 VPS."
+  },
+  {
+    "feature_id": "S7FI-310",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "동적 자산 배분은 AI Investing P2 도메인 세부 기능. PART2 구현 가이드에서 P2 Trading은 LOCK-AT-008 기본 OFF로만 명시. 세부 투자 알고리즘은 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-327",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "슬리피지 모델링은 AI Investing P2 도메인 세부 기능. PART2 구현 가이드 범위 외 (Trading 도메인 전문 알고리즘)."
+  },
+  {
+    "feature_id": "S7FI-360",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "크로스보더 규제는 비즈니스/법규 전략(STEP7-H Part 9 리스크 분석) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7JM-014",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "스타일 트랜스퍼. PART2+STEP7에서 스타일 트랜스퍼 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-016",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "로고/아이콘 생성. PART2+STEP7에서 로고/아이콘 생성 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-023",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "화자 분리(Speaker Diarization). PART2+STEP7에서 화자 분리 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-047",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "양식/폼 자동 생성. PART2+STEP7에서 양식/폼 생성 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-062",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "크로스모달 검색. PART2+STEP7에서 크로스모달 검색 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-123",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "CrewAI 역할 패턴 참조. PART2에서 CrewAI 미언급. Agent Teams는 자체 프레임워크(LOCK-AT-001, L3198)."
+  },
+  {
+    "feature_id": "S7JM-181",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "코드 변환(언어 간). PART2+STEP7에서 코드 변환 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7JM-273",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "예측적 지식 서핑. PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-059",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "시험 준비 도우미. PART2+STEP7에서 시험 준비 전용 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-072",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "교육 컨텐츠 생성. PART2+STEP7에서 교육 컨텐츠 전용 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-073",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "교육 평가 도구. PART2+STEP7에서 교육 평가 전용 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-086",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "운동/피트니스 트래커. PART2+STEP7에서 피트니스 트래커 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-087",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "식단/영양 관리. PART2+STEP7에서 식단/영양 관리 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-098",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "사회적 관계 관리. PART2+STEP7에서 사회적 관계 관리 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-104",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "개인화 건강 인사이트. PART2+STEP7에서 건강 인사이트 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-106",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "감정 기반 음악 추천. PART2+STEP7에서 음악 추천 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-128",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "Qwen 3 한중일 특화. PART2+STEP7에서 Qwen 3 전용 통합 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-190",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "FinGPT 활용. PART2+STEP7에서 FinGPT 전용 통합 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-198",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "Ambient Intelligence(앰비언트 인텔리전스). PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "CLIB-057",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "S5 피드백 학습 모듈. PART2+STEP7에서 Cloud Library S5 피드백 학습 전용 구현 스펙 없음."
+  },
+  {
+    "feature_id": "CLIB-077",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "C3 규칙 제안(패턴→규칙 제안→인간 승인). PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D203-110",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "앰비언트 인텔리전스(Ambient Intelligence). PART2+STEP7에서 해당 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D204-118",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1809,
+    "evidence_text": "- [ ] 백업 스케줄 활성화: 자동 백업 cron 확인",
+    "reason": "V2 Phase 1 사후검증에 백업 스케줄 활성화(자동 백업 cron)(L1809) 포함. 세부 보존 정책(7일+4주+3월)은 명시 없으나 자동 백업 인프라는 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "D206-208",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "M-014 Zettelkasten 방법론 심화. PART2+STEP7에서 Zettelkasten 키워드 미발견. 구현 스펙 없음."
+  },
+  {
+    "feature_id": "DD7-019",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "백테스팅 5년 규칙은 AI Investing P2 도메인 전문 규칙. PART2 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "PB7-013",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1793,
+    "evidence_text": "| 2 | 전체 백업 (BackupConfigSchema) | 백업 무결성 체크섬 |",
+    "reason": "V2 Phase 1 10-Step Migration에 BackupConfigSchema 연동 자동 백업(L1784, L1793, L1846) 포함. 백업/복원은 마이그레이션 오케스트레이션 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "S7AE-343",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 1784,
+    "evidence_text": "4. Backup First — 마이그레이션 전 BackupConfigSchema 연동 자동 백업 필수",
+    "reason": "V2 마이그레이션 원칙 4번 'Backup First'(L1784)와 사후검증 백업 스케줄(L1809), 운영 결정 백업 주기(L3818). 백업 전략은 마이그레이션+운영 상위 모듈에 커버됨."
+  },
+  {
+    "feature_id": "S7AE-600",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-063 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-063 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-601",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-064 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-064 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-602",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-065 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-065 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-603",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-066 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-066 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-604",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-067 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-067 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7AE-605",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "E-068 운영. PART2 §4(V2 Phase 1~3), §6.5~§6.11에서 E-068 운영 스펙 미발견."
+  },
+  {
+    "feature_id": "S7FI-173",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-G",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "평가 버저닝은 벤치마크/평가(STEP7-G Part 9 자동 평가 파이프라인) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-176",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-G",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "크라우드소싱 평가는 벤치마크/평가(STEP7-G Part 10 인간 평가 프로세스) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-177",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-G",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "평가자 간 일치도는 벤치마크/평가(STEP7-G Part 10 인간 평가 프로세스) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-191",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "가격 벤치마킹은 비즈니스 전략(STEP7-H) 영역. PART2 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-205",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "매출 예측 모델은 비즈니스 전략(STEP7-H Part 10 재무 모델링) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-207",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "이탈률 예측은 비즈니스 전략(STEP7-H Part 8 성장 전략) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-208",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "업셀/크로스셀은 비즈니스 전략(STEP7-H Part 3 수익 모델) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-243",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "바이럴 전략은 비즈니스 전략(STEP7-H Part 7 GTM 전략) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-244",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "레퍼럴 프로그램은 비즈니스 전략(STEP7-H Part 8 성장 전략) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-260",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "현금 흐름 예측은 비즈니스 전략(STEP7-H Part 10 재무 모델링) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7FI-261",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "손익분기점 분석은 비즈니스 전략(STEP7-H Part 10 재무 모델링) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7JM-057",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "인포그래픽 자동 생성. PART2+STEP7에서 인포그래픽 생성 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-016",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "ETL 도구. PART2에서 JSONL→PostgreSQL 마이그레이션(L1848) 있으나 범용 ETL 도구 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-027",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "Zapier/Make 호환 패턴. PART2+STEP7에서 Zapier/Make 연동 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-033",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "JIRA/Linear 통합. PART2+STEP7에서 JIRA/Linear 연동 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-179",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-G",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PolyBench는 벤치마크/평가(STEP7-G) 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "S7NP-186",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "STEP7-H",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "오픈소스 듀얼 라이선스는 비즈니스/라이선스 전략 영역. PART2 구현 범위 외."
+  },
+  {
+    "feature_id": "TEAM-021",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "PART2",
+    "evidence_line": 3184,
+    "evidence_text": "| Trading Agent | Trading (P2) | Opus |",
+    "reason": "V2 추가 에이전트 6종에 Trading Agent(L2184, L3184) 명시. Agent Teams V2 상위 모듈에 커버됨."
+  }
+]

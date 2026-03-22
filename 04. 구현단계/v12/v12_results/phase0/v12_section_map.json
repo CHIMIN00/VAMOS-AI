@@ -1,0 +1,1630 @@
+{
+  "metadata": {
+    "task": "0-I-A",
+    "source": "VAMOS_구현가이드_PART2_구현단계.md",
+    "created": "2026-03-15",
+    "total_sections": 269,
+    "by_level": {
+      "h1": 9,
+      "h2": 43,
+      "h3": 153,
+      "h4": 64
+    }
+  },
+  "sections": [
+    {
+      "section_id": "auto-h1-1",
+      "line": 1,
+      "level": 1,
+      "title": "VAMOS AI 구현 가이드 — PART 2: 구현단계 진입"
+    },
+    {
+      "section_id": "auto-h1-2",
+      "line": 10,
+      "level": 1,
+      "title": "목차"
+    },
+    {
+      "section_id": "auto-h2-2_1",
+      "line": 24,
+      "level": 2,
+      "title": "Reading Guide"
+    },
+    {
+      "section_id": "auto-h2-2_2",
+      "line": 41,
+      "level": 2,
+      "title": "Glossary"
+    },
+    {
+      "section_id": "§1",
+      "line": 73,
+      "level": 1,
+      "title": "1. 전체 구현 로드맵 개요"
+    },
+    {
+      "section_id": "§1.1",
+      "line": 88,
+      "level": 2,
+      "title": "1.1 버전별 활성 모듈 수"
+    },
+    {
+      "section_id": "auto-h3-2_2_1",
+      "line": 97,
+      "level": 3,
+      "title": "버전별 핵심 차이 비교표"
+    },
+    {
+      "section_id": "§1.2",
+      "line": 113,
+      "level": 2,
+      "title": "1.2 의존성 체인 (필수 순서)"
+    },
+    {
+      "section_id": "§1.3",
+      "line": 119,
+      "level": 2,
+      "title": "1.3 AI 구현 공통 규칙"
+    },
+    {
+      "section_id": "auto-h3-2_2_2",
+      "line": 124,
+      "level": 3,
+      "title": "R1~R11 공통 규칙 레지스트리"
+    },
+    {
+      "section_id": "§1.3.1",
+      "line": 140,
+      "level": 3,
+      "title": "1.3.1 판단 실패 시 규칙 (SDD 명세 계층)"
+    },
+    {
+      "section_id": "§1.3.2",
+      "line": 152,
+      "level": 3,
+      "title": "1.3.2 Claude Code 세션 운영 규칙"
+    },
+    {
+      "section_id": "§1.3.3",
+      "line": 166,
+      "level": 3,
+      "title": "1.3.3 컨텍스트 다이어트 원칙 (AI 주의력 관리)"
+    },
+    {
+      "section_id": "§2",
+      "line": 182,
+      "level": 1,
+      "title": "2. V0 구현"
+    },
+    {
+      "section_id": "§2.STEP1",
+      "line": 193,
+      "level": 2,
+      "title": "V0-STEP-1: 프로젝트 스캐폴딩 (Day 1-2)"
+    },
+    {
+      "section_id": "auto-h3-2_2_3",
+      "line": 195,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_4",
+      "line": 327,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_5",
+      "line": 332,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_5_1",
+      "line": 334,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_5_2",
+      "line": 340,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP1",
+      "line": 553,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-1 → STEP-2 전환 조건)"
+    },
+    {
+      "section_id": "§2.STEP2",
+      "line": 570,
+      "level": 2,
+      "title": "V0-STEP-2: 스키마 정의 (Day 2-3)"
+    },
+    {
+      "section_id": "auto-h3-2_2_6",
+      "line": 572,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_7",
+      "line": 636,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_8",
+      "line": 640,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_8_1",
+      "line": 642,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_8_2",
+      "line": 647,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP2",
+      "line": 811,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-2 → STEP-3 전환 조건)"
+    },
+    {
+      "section_id": "§2.STEP3",
+      "line": 829,
+      "level": 2,
+      "title": "V0-STEP-3: IPC 통신 레이어 (Day 3-5)"
+    },
+    {
+      "section_id": "auto-h3-2_2_9",
+      "line": 831,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_10",
+      "line": 868,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_11",
+      "line": 872,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_11_1",
+      "line": 874,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_11_2",
+      "line": 879,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP3",
+      "line": 977,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-3 → STEP-4 전환 조건)"
+    },
+    {
+      "section_id": "§2.STEP4",
+      "line": 994,
+      "level": 2,
+      "title": "V0-STEP-4: ORANGE CORE 최소 파이프라인 (Day 5-8)"
+    },
+    {
+      "section_id": "auto-h3-2_2_12",
+      "line": 996,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_13",
+      "line": 1051,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_14",
+      "line": 1057,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_14_1",
+      "line": 1059,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_14_2",
+      "line": 1065,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP4",
+      "line": 1183,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-4 → STEP-5 전환 조건)"
+    },
+    {
+      "section_id": "§2.STEP5",
+      "line": 1205,
+      "level": 2,
+      "title": "V0-STEP-5: 기본 저장소 + 로깅 (Day 8-9)"
+    },
+    {
+      "section_id": "auto-h3-2_2_15",
+      "line": 1207,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_16",
+      "line": 1216,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_17",
+      "line": 1220,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_17_1",
+      "line": 1222,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_17_2",
+      "line": 1227,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP5",
+      "line": 1355,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-5 → STEP-6 전환 조건)"
+    },
+    {
+      "section_id": "§2.STEP6",
+      "line": 1374,
+      "level": 2,
+      "title": "V0-STEP-6: CI 스켈레톤 + 테스트 (Day 9-10)"
+    },
+    {
+      "section_id": "auto-h3-2_2_18",
+      "line": 1376,
+      "level": 3,
+      "title": "작업 내용"
+    },
+    {
+      "section_id": "auto-h3-2_2_19",
+      "line": 1386,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_20",
+      "line": 1390,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_20_1",
+      "line": 1392,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_20_2",
+      "line": 1398,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§2.STEP6",
+      "line": 1551,
+      "level": 3,
+      "title": "단계 완료 검증 (V0-STEP-6 → V1 진입 전환 조건)"
+    },
+    {
+      "section_id": "auto-h3-2_2_21",
+      "line": 1568,
+      "level": 3,
+      "title": "V0 완료 체크리스트"
+    },
+    {
+      "section_id": "§3",
+      "line": 1585,
+      "level": 1,
+      "title": "3. V1 구현"
+    },
+    {
+      "section_id": "§3.P1",
+      "line": 1600,
+      "level": 2,
+      "title": "V1-Phase 1: ORANGE CORE 완성 (Week 1-4)"
+    },
+    {
+      "section_id": "auto-h3-2_2_22",
+      "line": 1602,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_22_1",
+      "line": 1614,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_23",
+      "line": 1779,
+      "level": 3,
+      "title": "Week 1-2: 핵심 모듈 구현"
+    },
+    {
+      "section_id": "auto-h3-2_2_24",
+      "line": 1790,
+      "level": 3,
+      "title": "Week 3-4: 보조 모듈 구현"
+    },
+    {
+      "section_id": "§2.2",
+      "line": 1820,
+      "level": 3,
+      "title": "ORANGE CORE 상태 머신 (D2.0-02 §2.2 정본, 9-State LOCK)"
+    },
+    {
+      "section_id": "auto-h3-2_2_25",
+      "line": 1838,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_26",
+      "line": 1844,
+      "level": 3,
+      "title": "I-5/I-8/I-9 하위 구현 체크리스트"
+    },
+    {
+      "section_id": "§3.P1",
+      "line": 1856,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 1 → Phase 2 전환 조건)"
+    },
+    {
+      "section_id": "§3.P2",
+      "line": 1875,
+      "level": 2,
+      "title": "V1-Phase 2: Storage + Memory + RAG (Week 5-8)"
+    },
+    {
+      "section_id": "auto-h3-2_2_27",
+      "line": 1883,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_27_1",
+      "line": 1894,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_28",
+      "line": 1979,
+      "level": 3,
+      "title": "구현 항목"
+    },
+    {
+      "section_id": "§2.1",
+      "line": 2006,
+      "level": 4,
+      "title": "B↔L 매핑 테이블 (D2.0-06 §2.1 + CLAUDE.md §15, LOCK — 비직관적 매핑 주의)"
+    },
+    {
+      "section_id": "§1.1",
+      "line": 2017,
+      "level": 4,
+      "title": "6-Stage RAG Pipeline (D2.0-06 §1.1 LOCK)"
+    },
+    {
+      "section_id": "auto-h4-2_2_28_1",
+      "line": 2025,
+      "level": 4,
+      "title": "Hybrid Search 파라미터 (D2.0-06 S7D-012/S7D-018 정본)"
+    },
+    {
+      "section_id": "auto-h4-2_2_28_2",
+      "line": 2035,
+      "level": 4,
+      "title": "Semantic Cache 파라미터 (M-25: LOCK 값 명시)"
+    },
+    {
+      "section_id": "§4.7.2",
+      "line": 2043,
+      "level": 4,
+      "title": "Semantic Cache 무효화 정책 (D2.0-06 §4.7.2 정본)"
+    },
+    {
+      "section_id": "§3.P2",
+      "line": 2049,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 2 → Phase 3 전환 조건)"
+    },
+    {
+      "section_id": "§3.P3",
+      "line": 2070,
+      "level": 2,
+      "title": "V1-Phase 3: Workflow + Agent (Week 9-12)"
+    },
+    {
+      "section_id": "auto-h3-2_2_29",
+      "line": 2072,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_29_1",
+      "line": 2084,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_30",
+      "line": 2172,
+      "level": 3,
+      "title": "구현 항목"
+    },
+    {
+      "section_id": "§3.P3",
+      "line": 2249,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 3 → Phase 4 전환 조건)"
+    },
+    {
+      "section_id": "§3.P4",
+      "line": 2269,
+      "level": 2,
+      "title": "V1-Phase 4: UI/UX (Week 13-14)"
+    },
+    {
+      "section_id": "auto-h3-2_2_31",
+      "line": 2271,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_31_1",
+      "line": 2281,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_32",
+      "line": 2363,
+      "level": 3,
+      "title": "구현 항목"
+    },
+    {
+      "section_id": "§3.P4",
+      "line": 2387,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 4 → Phase 5 전환 조건)"
+    },
+    {
+      "section_id": "§3.P5",
+      "line": 2408,
+      "level": 2,
+      "title": "V1-Phase 5: Integration + Test (Week 15-16)"
+    },
+    {
+      "section_id": "auto-h3-2_2_33",
+      "line": 2410,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_33_1",
+      "line": 2421,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_34",
+      "line": 2496,
+      "level": 3,
+      "title": "구현 항목"
+    },
+    {
+      "section_id": "§3.P5",
+      "line": 2516,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 5 → Phase 6 전환 조건)"
+    },
+    {
+      "section_id": "§3.P6",
+      "line": 2536,
+      "level": 2,
+      "title": "V1-Phase 6: AI Investing MVP + MCP (Week 13-16, Phase 4-5와 병렬)"
+    },
+    {
+      "section_id": "auto-h3-2_2_35",
+      "line": 2538,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_35_1",
+      "line": 2549,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "auto-h3-2_2_36",
+      "line": 2624,
+      "level": 3,
+      "title": "구현 항목"
+    },
+    {
+      "section_id": "§3.P6",
+      "line": 2640,
+      "level": 3,
+      "title": "단계 완료 검증 (V1-Phase 6 → V2 진입 전환 조건)"
+    },
+    {
+      "section_id": "auto-h3-2_2_37",
+      "line": 2657,
+      "level": 3,
+      "title": "V1 완료 체크리스트"
+    },
+    {
+      "section_id": "§4",
+      "line": 2677,
+      "level": 1,
+      "title": "4. V2 구현"
+    },
+    {
+      "section_id": "§4.P1",
+      "line": 2686,
+      "level": 2,
+      "title": "V2-Phase 1: 인프라 마이그레이션 (Week 1-3)"
+    },
+    {
+      "section_id": "§1.2",
+      "line": 2698,
+      "level": 3,
+      "title": "마이그레이션 원칙 (LOCK, PHASE_B7 §1.2)"
+    },
+    {
+      "section_id": "§6",
+      "line": 2706,
+      "level": 3,
+      "title": "10-Step Migration Orchestration (PHASE_B7 §6 정본)"
+    },
+    {
+      "section_id": "§6.4",
+      "line": 2721,
+      "level": 3,
+      "title": "사후검증 체크리스트 — 7항목 (PHASE_B7 §6.4 기반 도출)"
+    },
+    {
+      "section_id": "auto-h3-2_2_38",
+      "line": 2731,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_39",
+      "line": 2737,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_39_1",
+      "line": 2739,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_39_2",
+      "line": 2749,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§4.P1",
+      "line": 2833,
+      "level": 3,
+      "title": "단계 완료 검증 (V2-Phase 1 → Phase 2 전환 조건)"
+    },
+    {
+      "section_id": "§4.P2",
+      "line": 2852,
+      "level": 2,
+      "title": "V2-Phase 2: COND 모듈 활성화 (Week 4-9)"
+    },
+    {
+      "section_id": "auto-h3-2_2_40",
+      "line": 2985,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_41",
+      "line": 2992,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_41_1",
+      "line": 2994,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_41_2",
+      "line": 3003,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§4.P2",
+      "line": 3249,
+      "level": 3,
+      "title": "단계 완료 검증 (V2-Phase 2 → Phase 3 전환 조건)"
+    },
+    {
+      "section_id": "§4.P3",
+      "line": 3279,
+      "level": 2,
+      "title": "V2-Phase 3: Agent Teams V2 + 보안 (Week 10-13)"
+    },
+    {
+      "section_id": "auto-h3-2_2_42",
+      "line": 3308,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_43",
+      "line": 3314,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_43_1",
+      "line": 3316,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_43_2",
+      "line": 3326,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§4.P3",
+      "line": 3427,
+      "level": 3,
+      "title": "단계 완료 검증 (V2-Phase 3 → V3 진입 전환 조건)"
+    },
+    {
+      "section_id": "auto-h3-2_2_44",
+      "line": 3446,
+      "level": 3,
+      "title": "V2 완료 체크리스트"
+    },
+    {
+      "section_id": "§5",
+      "line": 3462,
+      "level": 1,
+      "title": "5. V3 구현"
+    },
+    {
+      "section_id": "§5.P1",
+      "line": 3471,
+      "level": 2,
+      "title": "V3-Phase 1: 인프라 스케일업 (Week 1-4)"
+    },
+    {
+      "section_id": "auto-h3-2_2_45",
+      "line": 3486,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_46",
+      "line": 3492,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_46_1",
+      "line": 3494,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_46_2",
+      "line": 3507,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§5.P1",
+      "line": 3620,
+      "level": 3,
+      "title": "단계 완료 검증 (V3-Phase 1 → Phase 2 전환 조건)"
+    },
+    {
+      "section_id": "§5.P2",
+      "line": 3637,
+      "level": 2,
+      "title": "V3-Phase 2: EXP 모듈 전체 활성화 (Week 5-10)"
+    },
+    {
+      "section_id": "auto-h3-2_2_47",
+      "line": 3676,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_48",
+      "line": 3685,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_48_1",
+      "line": 3687,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_48_2",
+      "line": 3698,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§5.P2",
+      "line": 3949,
+      "level": 3,
+      "title": "단계 완료 검증 (V3-Phase 2 → Phase 3 전환 조건)"
+    },
+    {
+      "section_id": "§5.P3",
+      "line": 3970,
+      "level": 2,
+      "title": "V3-Phase 3: 고급 기능 + 최종 통합 (Week 11-16)"
+    },
+    {
+      "section_id": "auto-h3-2_2_49",
+      "line": 4009,
+      "level": 3,
+      "title": "산출물 참조"
+    },
+    {
+      "section_id": "auto-h3-2_2_50",
+      "line": 4016,
+      "level": 3,
+      "title": "실행 가이드"
+    },
+    {
+      "section_id": "auto-h4-2_2_50_1",
+      "line": 4018,
+      "level": 4,
+      "title": "사용자 직접 작업"
+    },
+    {
+      "section_id": "auto-h4-2_2_50_2",
+      "line": 4029,
+      "level": 4,
+      "title": "AI 프롬프트"
+    },
+    {
+      "section_id": "§5.P3",
+      "line": 4144,
+      "level": 3,
+      "title": "단계 완료 검증 (V3-Phase 3 → 최종 완료 조건)"
+    },
+    {
+      "section_id": "auto-h3-2_2_51",
+      "line": 4164,
+      "level": 3,
+      "title": "V3 완료 체크리스트"
+    },
+    {
+      "section_id": "§6",
+      "line": 4175,
+      "level": 1,
+      "title": "6. 시스템별 상세 구현 가이드"
+    },
+    {
+      "section_id": "§6.1",
+      "line": 4181,
+      "level": 2,
+      "title": "6.1 UI/UX 상세 (~85개 항목)"
+    },
+    {
+      "section_id": "§6.1.1",
+      "line": 4183,
+      "level": 3,
+      "title": "6.1.1 핵심 레이아웃 (V1)"
+    },
+    {
+      "section_id": "§6.1.2",
+      "line": 4192,
+      "level": 3,
+      "title": "6.1.2 React 컴포넌트 (~44개, V1)"
+    },
+    {
+      "section_id": "§6.1.3",
+      "line": 4208,
+      "level": 3,
+      "title": "6.1.3 Custom Hooks + Stores"
+    },
+    {
+      "section_id": "§6.1.4",
+      "line": 4217,
+      "level": 3,
+      "title": "6.1.4 구현 중 결정 항목 (4건)"
+    },
+    {
+      "section_id": "§6.1.5",
+      "line": 4228,
+      "level": 3,
+      "title": "6.1.5 멀티모달 UI (V1~V3)"
+    },
+    {
+      "section_id": "§4",
+      "line": 4242,
+      "level": 3,
+      "title": "6.1.6 UI State Machine — 9-state (D2.0-08 §4 정본)"
+    },
+    {
+      "section_id": "§7",
+      "line": 4264,
+      "level": 3,
+      "title": "6.1.7 Failure/Fallback UI 규칙 (D2.0-08 §7 정본)"
+    },
+    {
+      "section_id": "§8",
+      "line": 4275,
+      "level": 3,
+      "title": "6.1.8 UI 접근 제어 규칙 (D2.0-08 §8 정본)"
+    },
+    {
+      "section_id": "§6.2",
+      "line": 4286,
+      "level": 2,
+      "title": "6.2 Rust/Tauri 인프라 (~108개 항목)"
+    },
+    {
+      "section_id": "§6.2.1",
+      "line": 4288,
+      "level": 3,
+      "title": "6.2.1 Tauri IPC 커맨드 핸들러 (72개)"
+    },
+    {
+      "section_id": "§6.2.2",
+      "line": 4298,
+      "level": 3,
+      "title": "6.2.2 Python-Rust JSON-RPC 메서드 (13개)"
+    },
+    {
+      "section_id": "§6.2.3",
+      "line": 4310,
+      "level": 3,
+      "title": "6.2.3 Rust 핵심 모듈"
+    },
+    {
+      "section_id": "§6.3",
+      "line": 4321,
+      "level": 2,
+      "title": "6.3 테스트 (~128개 항목)"
+    },
+    {
+      "section_id": "auto-h3-2_2_52",
+      "line": 4323,
+      "level": 3,
+      "title": "V0-V1 기본 테스트 (~85)"
+    },
+    {
+      "section_id": "auto-h3-2_2_53",
+      "line": 4333,
+      "level": 3,
+      "title": "V2 COND 모듈 테스트 (~30, v10 추가분 반영)"
+    },
+    {
+      "section_id": "auto-h3-2_2_54",
+      "line": 4345,
+      "level": 3,
+      "title": "V3 EXP 모듈 테스트 (~13)"
+    },
+    {
+      "section_id": "§6.2",
+      "line": 4354,
+      "level": 3,
+      "title": "VAL-001~VAL-010 검증 규칙 (PHASE_B4 §6.2 정본)"
+    },
+    {
+      "section_id": "§7.3",
+      "line": 4369,
+      "level": 3,
+      "title": "AC 매핑 (50 AC → 79 테스트, PHASE_B5 §7.3 정본)"
+    },
+    {
+      "section_id": "auto-h3-2_2_55",
+      "line": 4374,
+      "level": 3,
+      "title": "상세 테스트 케이스 명세 (V2+ 보강)"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_1",
+      "line": 4378,
+      "level": 4,
+      "title": "T-VAL: VAL-003/005 모듈 무결성 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_2",
+      "line": 4389,
+      "level": 4,
+      "title": "T-SDAR: SDAR 자가진단/수리 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_3",
+      "line": 4400,
+      "level": 4,
+      "title": "T-HMAC: HMAC 보안 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_4",
+      "line": 4411,
+      "level": 4,
+      "title": "T-GUARD: LlamaGuard 안전성 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_5",
+      "line": 4421,
+      "level": 4,
+      "title": "T-GDPR: GDPR/개인정보 보호 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_6",
+      "line": 4431,
+      "level": 4,
+      "title": "T-AC: AC 매핑 완전성 테스트"
+    },
+    {
+      "section_id": "auto-h4-2_2_55_7",
+      "line": 4440,
+      "level": 4,
+      "title": "T-ARCH: 아키텍처 규칙 테스트"
+    },
+    {
+      "section_id": "§6.4",
+      "line": 4453,
+      "level": 2,
+      "title": "6.4 CI/CD (~14개 항목)"
+    },
+    {
+      "section_id": "§6.5",
+      "line": 4476,
+      "level": 2,
+      "title": "6.5 보안 (15개 항목)"
+    },
+    {
+      "section_id": "§6.5.1",
+      "line": 4496,
+      "level": 3,
+      "title": "6.5.1 AI 코드 생성 보안 체크리스트"
+    },
+    {
+      "section_id": "§6.5.2",
+      "line": 4513,
+      "level": 3,
+      "title": "6.5.2 HMAC 타이밍 공격 방어"
+    },
+    {
+      "section_id": "§6.5.3",
+      "line": 4543,
+      "level": 3,
+      "title": "6.5.3 STRIDE 위협 모델 매핑"
+    },
+    {
+      "section_id": "§6.5.4",
+      "line": 4556,
+      "level": 3,
+      "title": "6.5.4 OWASP LLM Top 10 (2025) 매핑"
+    },
+    {
+      "section_id": "§6.6",
+      "line": 4577,
+      "level": 2,
+      "title": "6.6 MCP 서버/클라이언트 (~7개)"
+    },
+    {
+      "section_id": "auto-h3-2_2_56",
+      "line": 4589,
+      "level": 3,
+      "title": "MCP 외부 서버 카탈로그 (M-22: V1=7개, V2+=3개, V3=1개, 합계 11개)"
+    },
+    {
+      "section_id": "§6.7",
+      "line": 4609,
+      "level": 2,
+      "title": "6.7 Agent Teams 상세 구현"
+    },
+    {
+      "section_id": "auto-h3-2_2_57",
+      "line": 4611,
+      "level": 3,
+      "title": "V1 구현 (기본)"
+    },
+    {
+      "section_id": "auto-h3-2_2_58",
+      "line": 4622,
+      "level": 3,
+      "title": "에이전트 타입 (V1 활성)"
+    },
+    {
+      "section_id": "auto-h3-2_2_59",
+      "line": 4630,
+      "level": 3,
+      "title": "V2 추가 에이전트"
+    },
+    {
+      "section_id": "§9",
+      "line": 4644,
+      "level": 3,
+      "title": "LOCK-AT 아키텍처 제약 (17건, AGENT_TEAMS_SPEC §9 LOCK)"
+    },
+    {
+      "section_id": "auto-h3-2_2_60",
+      "line": 4675,
+      "level": 3,
+      "title": "V3 추가: PARL Agent Swarm 상세"
+    },
+    {
+      "section_id": "auto-h3-2_2_61",
+      "line": 4705,
+      "level": 3,
+      "title": "V3 추가: Agent Specialization Protocol 상세"
+    },
+    {
+      "section_id": "§6.8",
+      "line": 4739,
+      "level": 2,
+      "title": "6.8 AI Investing 상세 구현"
+    },
+    {
+      "section_id": "auto-h3-2_2_62",
+      "line": 4741,
+      "level": 3,
+      "title": "핵심 아키텍처"
+    },
+    {
+      "section_id": "§51",
+      "line": 4747,
+      "level": 3,
+      "title": "51% Gate 파라미터 (LOCK)"
+    },
+    {
+      "section_id": "auto-h3-2_2_63",
+      "line": 4757,
+      "level": 3,
+      "title": "Circuit Breaker (LOCK)"
+    },
+    {
+      "section_id": "§14",
+      "line": 4767,
+      "level": 3,
+      "title": "AI Investing 기술스택 LOCK (AI_INVESTING_SPEC §14 참조)"
+    },
+    {
+      "section_id": "§6.8.1",
+      "line": 4791,
+      "level": 3,
+      "title": "6.8.1 Real-Time News → AI Investing 연동"
+    },
+    {
+      "section_id": "auto-h4-2_2_63_1",
+      "line": 4796,
+      "level": 4,
+      "title": "데이터 흐름"
+    },
+    {
+      "section_id": "auto-h4-2_2_63_2",
+      "line": 4809,
+      "level": 4,
+      "title": "VAMOS_EVENT 확장 (breaking_news 타입)"
+    },
+    {
+      "section_id": "auto-h4-2_2_63_3",
+      "line": 4833,
+      "level": 4,
+      "title": "Circuit Breaker 연동 (속보 트리거 추가)"
+    },
+    {
+      "section_id": "auto-h4-2_2_63_4",
+      "line": 4841,
+      "level": 4,
+      "title": "Event-Based 전략 트리거"
+    },
+    {
+      "section_id": "auto-h4-2_2_63_5",
+      "line": 4850,
+      "level": 4,
+      "title": "P2 승인 흐름"
+    },
+    {
+      "section_id": "§6.9",
+      "line": 4861,
+      "level": 2,
+      "title": "6.9 SDAR 상세 구현"
+    },
+    {
+      "section_id": "§5",
+      "line": 4872,
+      "level": 3,
+      "title": "5-Layer Pipeline"
+    },
+    {
+      "section_id": "§7",
+      "line": 4882,
+      "level": 3,
+      "title": "SDAR State Machine — 7상태 (SDAR_SPEC §7 정본)"
+    },
+    {
+      "section_id": "§6.1",
+      "line": 4900,
+      "level": 3,
+      "title": "5-Gate 통합 (SDAR_SPEC §6.1 정본)"
+    },
+    {
+      "section_id": "auto-h3-2_2_64",
+      "line": 4912,
+      "level": 3,
+      "title": "수리 액션 카탈로그"
+    },
+    {
+      "section_id": "§9.3",
+      "line": 4934,
+      "level": 3,
+      "title": "Self-evo 원칙 준수 (LOCK, SDAR_SPEC §9.3)"
+    },
+    {
+      "section_id": "§9.4",
+      "line": 4941,
+      "level": 3,
+      "title": "Emergency Kill Switch (SDAR_SPEC §9.4)"
+    },
+    {
+      "section_id": "§9.5",
+      "line": 4952,
+      "level": 3,
+      "title": "보안 오류(CATEGORY E) 특별 규칙 (LOCK, SDAR_SPEC §9.5)"
+    },
+    {
+      "section_id": "§9.6",
+      "line": 4960,
+      "level": 3,
+      "title": "P2 도메인 수리 제한 (LOCK, SDAR_SPEC §9.6)"
+    },
+    {
+      "section_id": "§9.7",
+      "line": 4966,
+      "level": 3,
+      "title": "비용 영향 제한 (LOCK, SDAR_SPEC §9.7)"
+    },
+    {
+      "section_id": "§6.10",
+      "line": 4974,
+      "level": 2,
+      "title": "6.10 Cloud Library 상세 구현"
+    },
+    {
+      "section_id": "§10",
+      "line": 4976,
+      "level": 3,
+      "title": "10-Layer 아키텍처"
+    },
+    {
+      "section_id": "auto-h3-2_2_65",
+      "line": 4983,
+      "level": 3,
+      "title": "평가 점수 (LOCK)"
+    },
+    {
+      "section_id": "auto-h3-2_2_66",
+      "line": 4992,
+      "level": 3,
+      "title": "소스 신뢰도 가중치 (LOCK)"
+    },
+    {
+      "section_id": "§8",
+      "line": 5004,
+      "level": 3,
+      "title": "G0-G4 5-Gate System (CLOUD_LIBRARY_SPEC §8)"
+    },
+    {
+      "section_id": "§16",
+      "line": 5016,
+      "level": 3,
+      "title": "Cloud Library LOCK 결정 (M-29: CLOUD_LIBRARY_SPEC §16 정합성 검증 완료)"
+    },
+    {
+      "section_id": "§6.10.1",
+      "line": 5036,
+      "level": 3,
+      "title": "6.10.1 Real-Time Breaking News Pipeline (RT-BNP)"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_1",
+      "line": 5041,
+      "level": 4,
+      "title": "아키텍처 개요"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_2",
+      "line": 5050,
+      "level": 4,
+      "title": "뉴스 소스 Tier 분류"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_3",
+      "line": 5059,
+      "level": 4,
+      "title": "Breaking Event 분류 체계"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_4",
+      "line": 5068,
+      "level": 4,
+      "title": "Breaking Detector 엔진"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_5",
+      "line": 5077,
+      "level": 4,
+      "title": "Fast Gate (속보 전용 간소화 검증)"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_6",
+      "line": 5096,
+      "level": 4,
+      "title": "소스 신뢰도 가중치 (RT-BNP 전용, 기존 LOCK 확장)"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_7",
+      "line": 5110,
+      "level": 4,
+      "title": "버전별 RT-BNP 구현 범위"
+    },
+    {
+      "section_id": "§16",
+      "line": 5118,
+      "level": 4,
+      "title": "LOCK 추가 결정 (RT-BNP, CLOUD_LIBRARY_SPEC §16 확장)"
+    },
+    {
+      "section_id": "§6.10.2",
+      "line": 5128,
+      "level": 3,
+      "title": "6.10.2 Domain Context Layer (DCL) — 선택적 배경 인식"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_8",
+      "line": 5134,
+      "level": 4,
+      "title": "설계 원칙 — 왜 \"전체 배경\"이 아닌 \"선택적 배경\"인가"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_9",
+      "line": 5143,
+      "level": 4,
+      "title": "VAMOS AI 정보 환경 6계층 (DCL 포함)"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_10",
+      "line": 5159,
+      "level": 4,
+      "title": "3개 도메인 컨텍스트 채널"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_11",
+      "line": 5167,
+      "level": 4,
+      "title": "DCL → I-2 RAG 연동 흐름"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_12",
+      "line": 5188,
+      "level": 4,
+      "title": "DCL 품질 관리 (기존 Gate 활용)"
+    },
+    {
+      "section_id": "auto-h4-2_2_66_13",
+      "line": 5199,
+      "level": 4,
+      "title": "버전별 DCL 구현 범위"
+    },
+    {
+      "section_id": "auto-h3-2_2_67",
+      "line": 5207,
+      "level": 3,
+      "title": "에러/폴백 흐름도 (Pipeline ↔ SDAR 통합)"
+    },
+    {
+      "section_id": "§6.11",
+      "line": 5237,
+      "level": 2,
+      "title": "6.11 이벤트/로깅 시스템"
+    },
+    {
+      "section_id": "auto-h3-2_2_68",
+      "line": 5239,
+      "level": 3,
+      "title": "Pipeline S0~S8 ↔ UI 상태 매핑"
+    },
+    {
+      "section_id": "auto-h3-2_2_69",
+      "line": 5259,
+      "level": 3,
+      "title": "EventTypeRegistry (D2.1-D2 SOT 123항목 + PART2 추가 cl.rt.* 11항목 = 총 134항목)"
+    },
+    {
+      "section_id": "auto-h4-2_2_69_1",
+      "line": 5275,
+      "level": 4,
+      "title": "RT-BNP 이벤트 (cl.rt.* namespace, 11개)"
+    },
+    {
+      "section_id": "auto-h3-2_2_70",
+      "line": 5291,
+      "level": 3,
+      "title": "FailureCodeRegistry (36 항목, D2.1-D2 SOT)"
+    },
+    {
+      "section_id": "auto-h3-2_2_71",
+      "line": 5306,
+      "level": 3,
+      "title": "FallbackRegistry (23 항목, D2.1-D2 SOT)"
+    },
+    {
+      "section_id": "§6.9",
+      "line": 5320,
+      "level": 3,
+      "title": "FailureCode → Fallback 매핑 (36:23 1:N, §6.9 정본)"
+    },
+    {
+      "section_id": "auto-h3-2_2_72",
+      "line": 5376,
+      "level": 3,
+      "title": "NEVER_AUTO 에러 자동 탐지 메커니즘"
+    },
+    {
+      "section_id": "auto-h3-2_2_73",
+      "line": 5401,
+      "level": 3,
+      "title": "V2/V3 추가 모듈 FailureCode 확장"
+    },
+    {
+      "section_id": "§6.12",
+      "line": 5425,
+      "level": 2,
+      "title": "6.12 운영 (버전별 전략)"
+    },
+    {
+      "section_id": "§6.12.1",
+      "line": 5427,
+      "level": 3,
+      "title": "6.12.1 모니터링 전략"
+    },
+    {
+      "section_id": "§6.12.2",
+      "line": 5436,
+      "level": 3,
+      "title": "6.12.2 백업 및 복구 (RPO/RTO)"
+    },
+    {
+      "section_id": "§6.12.3",
+      "line": 5444,
+      "level": 3,
+      "title": "6.12.3 인시던트 대응 프로세스"
+    },
+    {
+      "section_id": "§6.12.4",
+      "line": 5457,
+      "level": 3,
+      "title": "6.12.4 알림 체계"
+    },
+    {
+      "section_id": "§6.12.5",
+      "line": 5466,
+      "level": 3,
+      "title": "6.12.5 롤백 프로세스"
+    },
+    {
+      "section_id": "§6.12.6",
+      "line": 5474,
+      "level": 3,
+      "title": "6.12.6 헬스체크"
+    },
+    {
+      "section_id": "§6.12.7",
+      "line": 5482,
+      "level": 3,
+      "title": "6.12.7 로그 보존 정책"
+    },
+    {
+      "section_id": "§6.12.8",
+      "line": 5490,
+      "level": 3,
+      "title": "6.12.8 비용 초과 대응"
+    },
+    {
+      "section_id": "§6.12.9",
+      "line": 5500,
+      "level": 3,
+      "title": "6.12.9 SDAR 수동 폴백"
+    },
+    {
+      "section_id": "§6.12.10",
+      "line": 5511,
+      "level": 3,
+      "title": "6.12.10 RT-BNP 소스 장애 대응"
+    },
+    {
+      "section_id": "§6.12.11",
+      "line": 5519,
+      "level": 3,
+      "title": "6.12.11 Cloud Library 페일오버"
+    },
+    {
+      "section_id": "§6.12.6",
+      "line": 5529,
+      "level": 3,
+      "title": "6.12.6 구현 중 결정 항목"
+    },
+    {
+      "section_id": "§6.13",
+      "line": 5542,
+      "level": 2,
+      "title": "6.13 전체 코딩 작업량 요약"
+    },
+    {
+      "section_id": "§7",
+      "line": 5558,
+      "level": 1,
+      "title": "7. 최종 검토사항"
+    },
+    {
+      "section_id": "§10",
+      "line": 5567,
+      "level": 2,
+      "title": "7.1 V0 GO/NO-GO 체크리스트 (16항목, CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "§10",
+      "line": 5590,
+      "level": 2,
+      "title": "7.2 V1 GO/NO-GO 체크리스트 (22항목, V0 완료 전제, CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "§10",
+      "line": 5617,
+      "level": 3,
+      "title": "V1→V2 전환 조건 (CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "auto-h4-2_2_73_1",
+      "line": 5624,
+      "level": 4,
+      "title": "V1→V2 TC 측정 메커니즘"
+    },
+    {
+      "section_id": "§10",
+      "line": 5635,
+      "level": 2,
+      "title": "7.3 V2 GO/NO-GO 체크리스트 (14항목, V1 완료 전제, CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "§10",
+      "line": 5654,
+      "level": 3,
+      "title": "V2→V3 전환 조건 (CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "auto-h4-2_2_73_2",
+      "line": 5661,
+      "level": 4,
+      "title": "V2→V3 TC 측정 메커니즘"
+    },
+    {
+      "section_id": "§10",
+      "line": 5672,
+      "level": 2,
+      "title": "7.4 V3 GO/NO-GO 체크리스트 (12항목, V2 완료 전제, CLAUDE.md §10 동기화)"
+    },
+    {
+      "section_id": "§7.5",
+      "line": 5691,
+      "level": 2,
+      "title": "7.5 크로스컷 검토 항목"
+    },
+    {
+      "section_id": "§7.5.1",
+      "line": 5693,
+      "level": 3,
+      "title": "7.5.1 문서 정합성"
+    },
+    {
+      "section_id": "§7.5.2",
+      "line": 5707,
+      "level": 3,
+      "title": "7.5.2 보안 검토"
+    },
+    {
+      "section_id": "§7.5.3",
+      "line": 5717,
+      "level": 3,
+      "title": "7.5.3 성능 검토"
+    },
+    {
+      "section_id": "§7.5.4",
+      "line": 5727,
+      "level": 3,
+      "title": "7.5.4 정본 우선순위 준수"
+    },
+    {
+      "section_id": "§7.5.5",
+      "line": 5738,
+      "level": 3,
+      "title": "7.5.5 LOCK 값 검증 체크리스트"
+    },
+    {
+      "section_id": "§7.5.6",
+      "line": 5755,
+      "level": 3,
+      "title": "7.5.6 SOURCE_CONFLICT 전수 인덱스 (M-23)"
+    },
+    {
+      "section_id": "§7.6",
+      "line": 5783,
+      "level": 2,
+      "title": "7.6 최종 산출물 파일 인덱스"
+    },
+    {
+      "section_id": "auto-h2-2_3",
+      "line": 5821,
+      "level": 2,
+      "title": "변경 이력"
+    }
+  ]
+}

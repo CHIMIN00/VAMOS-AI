@@ -1,0 +1,130 @@
+{
+  "phase": "Phase 0-Validate",
+  "session": 24,
+  "timestamp": "2026-03-22T23:00:00+09:00",
+  "prompts": {
+    "A": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-2 (gt2_artifact_chain.json)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-1", "RULE-2", "RULE-3", "RULE-7", "RULE-9", "RULE-11", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/symbolic-verify",
+      "check_items_count": 6,
+      "check_items": ["A-1", "A-2", "A-3", "A-4", "A-5", "A-6"],
+      "phase4_v9_path": true
+    },
+    "B": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-1 (gt1_file_path_registry.json in prompt, actual file: gt1_filepath.json)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-1", "RULE-2", "RULE-5", "RULE-6", "RULE-9", "RULE-11", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/sot-search",
+      "check_items_count": 5,
+      "check_items": ["B-1", "B-2", "B-3", "B-4", "B-5"],
+      "phase4_v9_path": true,
+      "note": "GT filename in prompt is 'gt1_file_path_registry.json' but physical file is 'gt1_filepath.json'. GT-ID (GT-1) matches correctly in file metadata."
+    },
+    "C": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-5 (v9_implementability_checklist.json in prompt, actual file: gt5_feasibility.json)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-2", "RULE-4", "RULE-5", "RULE-8", "RULE-9", "RULE-11", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/cross-match",
+      "check_items_count": 6,
+      "check_items": ["C-1", "C-2", "C-3", "C-4", "C-5", "C-6"],
+      "phase4_v9_path": true,
+      "note": "GT filename in prompt is 'v9_implementability_checklist.json' but physical file is 'gt5_feasibility.json'. GT-ID (GT-5) matches correctly."
+    },
+    "D": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-2 (gt2_artifact_chain.json, primary)", "GT-4 (referenced via /exa-verify skill for cross-check)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-1", "RULE-2", "RULE-7", "RULE-9", "RULE-11", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/exa-verify, /fact-audit",
+      "check_items_count": 4,
+      "check_items": ["D-1", "D-2", "D-3", "D-4"],
+      "phase4_v9_path": true
+    },
+    "E": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-3 (gt3_quantity_index.json in prompt, actual file: gt3_quantity.json)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-2", "RULE-3", "RULE-5", "RULE-8", "RULE-11", "RULE-12", "RULE-13", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/fact-audit, /symbolic-verify",
+      "check_items_count": 9,
+      "check_items": ["E-1", "E-2", "E-3", "E-4", "E-5", "E-6", "E-7", "E-8", "E-9"],
+      "phase4_v9_path": true,
+      "note": "GT filename in prompt is 'gt3_quantity_index.json' but physical file is 'gt3_quantity.json'. GT-ID (GT-3) matches correctly."
+    },
+    "F": {
+      "file_exists": true,
+      "gt_reference_correct": true,
+      "gt_referenced": ["GT-4 (v9_dependency_registry.json in prompt, actual file: gt4_external.json)", "GT-5 (referenced via /giskard-scan skill)"],
+      "rules_intact": true,
+      "rules_found": ["RULE-2", "RULE-6", "RULE-10", "RULE-11", "RULE-14"],
+      "skill_added": true,
+      "skill_name": "/giskard-scan, /prompt-test",
+      "check_items_count": 7,
+      "check_items": ["F-1", "F-2", "F-3", "F-4", "F-5", "F-6", "F-7"],
+      "phase4_v9_path": true,
+      "note": "GT filename in prompt is 'v9_dependency_registry.json' but physical file is 'gt4_external.json'. GT-ID (GT-4) matches correctly."
+    }
+  },
+  "gt_files": {
+    "gt1_filepath.json": {
+      "file_exists": true,
+      "valid_json": true,
+      "entry_count": 111,
+      "gt_id": "GT-1",
+      "description": "File Path Ground Truth Registry"
+    },
+    "gt2_artifact_chain.json": {
+      "file_exists": true,
+      "valid_json": true,
+      "entry_count": 18,
+      "gt_id": "GT-2",
+      "description": "Artifact Chain Registry (18 stages)"
+    },
+    "gt3_quantity.json": {
+      "file_exists": true,
+      "valid_json": true,
+      "entry_count": 248,
+      "gt_id": "GT-3",
+      "description": "Quantity Index (248 entries: 89 EXACT_LOCK + 112 EXACT_COUNT + 41 APPROX + 6 DERIVED)"
+    },
+    "gt4_external.json": {
+      "file_exists": true,
+      "valid_json": true,
+      "entry_count": 118,
+      "gt_id": "GT-4",
+      "description": "External Dependency Registry (118 deps: npm 29 + cargo 17 + python 50 + section_6_8 14 + infra 8)"
+    },
+    "gt5_feasibility.json": {
+      "file_exists": true,
+      "valid_json": true,
+      "entry_count": 102,
+      "gt_id": "GT-5",
+      "description": "Implementability Checklist (12 AI prompts + 77 V1 rows + 13 section6 sections)"
+    }
+  },
+  "overall": "PASS",
+  "notes": [
+    "All 6 prompts exist and are correctly configured with GT references, RULE citations, v13 enhanced skill references, and expected check items.",
+    "All 5 GT files exist, parse as valid JSON, and contain expected data structures.",
+    "MINOR: GT filenames in prompts use original v9 naming convention (e.g., gt1_file_path_registry.json, v9_implementability_checklist.json, gt3_quantity_index.json, v9_dependency_registry.json) while physical files use shortened phase4 naming (gt1_filepath.json, gt5_feasibility.json, gt3_quantity.json, gt4_external.json). This is a cosmetic discrepancy only — GT-ID matching in metadata is correct and the actual file paths in the prompts point to phase4_v9/gt/ directory correctly.",
+    "Prompt A additionally references GT-4 as supplementary (via skill /exa-verify cross-reference), which is acceptable for dependency order verification.",
+    "Prompt D references GT-4 indirectly through /exa-verify skill for external fact cross-checking, primary GT is GT-2 as expected.",
+    "Prompt F references GT-5 indirectly through /giskard-scan skill, primary GT is GT-4 as expected.",
+    "RULE coverage across prompts: RULE-1(A,B,D), RULE-2(all), RULE-3(A,E), RULE-4(C), RULE-5(B,C,E), RULE-6(B,F), RULE-7(A,D), RULE-8(C,E), RULE-9(A,B,C,D), RULE-10(F), RULE-11(all), RULE-12(E), RULE-13(E), RULE-14(all)."
+  ]
+}

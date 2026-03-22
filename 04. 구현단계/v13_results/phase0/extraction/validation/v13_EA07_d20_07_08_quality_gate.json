@@ -1,0 +1,154 @@
+{
+  "quality_gate": {
+    "agent": "EA-07",
+    "source_files": [
+      "D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+      "D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md"
+    ],
+    "extraction_file": "v13_EA07_d20_07_08.json",
+    "validation_date": "2026-03-16",
+    "layer": "B (AI Semantic Validation)",
+    "total_items": 581,
+    "item_distribution": {
+      "D07_safety_cost_approval": 418,
+      "D08_ui_ux": 163
+    },
+    "category_distribution": {
+      "C1_numeric_params": 75,
+      "C2_counts": 91,
+      "C3_classification_hierarchy": 12,
+      "C4_definitions_lists": 232,
+      "C5_flow_process": 16,
+      "C6_version_roadmap": 82,
+      "C7_thresholds_limits": 66,
+      "C8_schema_refs": 7
+    }
+  },
+  "sv1_semantic_accuracy": {
+    "pass": true,
+    "sampled": 32,
+    "sample_plan": {
+      "D07_front": 8,
+      "D07_back": 7,
+      "D08_front": 9,
+      "D08_back": 8
+    },
+    "verified_items": {
+      "D07_samples": [
+        { "id": "EA07-001", "key": "non_goals", "cat": "C4", "result": "PASS", "note": "7 non-goal items match SOT §1 exactly" },
+        { "id": "EA07-005", "key": "guardrail_layers=3", "cat": "C1", "result": "PASS", "note": "3-layer (Content/Ethics/Security) confirmed SOT §1.1" },
+        { "id": "EA07-007", "key": "risk_levels", "cat": "C3", "result": "PASS", "note": "P0-Critical/P1-High/P2-Medium/P3-Low matches SOT §2" },
+        { "id": "EA07-009", "key": "approval_stages=2", "cat": "C1", "result": "PASS", "note": "2-stage (SelfCheck+PeerReview) confirmed SOT §3" },
+        { "id": "EA07-015", "key": "autonomy_levels", "cat": "C3", "result": "PASS", "note": "L0-L3 LOCK values match SOT §3.2.1" },
+        { "id": "EA07-025", "key": "rbac_roles=4", "cat": "C1", "result": "PASS", "note": "4 roles (Owner/Admin/Member/Viewer) LOCK match SOT §3.6" },
+        { "id": "EA07-035", "key": "cost_limit_v1_monthly=30", "cat": "C7", "result": "PASS", "note": "$30/mo V1 limit confirmed SOT §4.1 table" },
+        { "id": "EA07-037", "key": "cost_limit_v3_monthly=200", "cat": "C7", "result": "PASS", "note": "$200/mo V3 limit confirmed SOT §4.1 table" },
+        { "id": "EA07-040", "key": "downshift_warning_pct=80", "cat": "C7", "result": "PASS", "note": "80% warning threshold LOCK confirmed SOT §4.2" },
+        { "id": "EA07-041", "key": "downshift_hard_pct=100", "cat": "C7", "result": "PASS", "note": "100% hard-stop LOCK confirmed SOT §4.2" },
+        { "id": "EA07-049", "key": "s7e_mini_accuracy_target=90pct", "cat": "C7", "result": "WARN", "note": "source_line 371 points to S7E-018 section but value 'Mini 90%+' is from §4.1 cost table area; value itself is correct" },
+        { "id": "EA07-050", "key": "s7e_cost_ratio", "cat": "C7", "result": "WARN", "note": "source_line 941 points to NER masking section but value 'Mini 60-70% / Main 30-40%' is from §4.1; value correct, line attribution off" },
+        { "id": "EA07-060", "key": "selfcheck_gate_thresholds", "cat": "C7", "result": "PASS", "note": "P0>=70, P1>=75, P2>=80 match SOT §5.2.1 SelfCheckGate table" },
+        { "id": "EA07-100", "key": "5_gate_system", "cat": "C5", "result": "PASS", "note": "5-Gate (Prompt/Content/Ethics/Security/Output) matches SOT §1.1" },
+        { "id": "EA07-151", "key": "community_skill_stages=4", "cat": "C1", "result": "WARN", "note": "source_line 1245 points to RunPod GPU table but content refers to community skill verification (lines 260-266); value correct, line wrong" }
+      ],
+      "D08_samples": [
+        { "id": "EA07-419", "key": "view_types", "cat": "C4", "result": "PASS", "note": "Builder View + Hologram View + CLI confirmed SOT §2" },
+        { "id": "EA07-420", "key": "panel_count=3", "cat": "C1", "result": "PASS", "note": "3-panel layout (Explorer/Canvas/Inspector) match SOT §3" },
+        { "id": "EA07-425", "key": "ui_state_machine_states=9", "cat": "C1", "result": "PASS", "note": "9-state UI state machine confirmed SOT §4" },
+        { "id": "EA07-430", "key": "hologram_states=6", "cat": "C1", "result": "PASS", "note": "6-state Hologram state machine confirmed SOT §4" },
+        { "id": "EA07-435", "key": "event_namespaces=7", "cat": "C2", "result": "PASS", "note": "7 event namespaces confirmed SOT §5" },
+        { "id": "EA07-440", "key": "confirmed_events_count=47", "cat": "C2", "result": "PASS", "note": "47+ confirmed events match SOT §5 registry" },
+        { "id": "EA07-450", "key": "failure_codes=14", "cat": "C2", "result": "PASS", "note": "14 FailureCodes confirmed SOT §7" },
+        { "id": "EA07-455", "key": "fallback_ui_count=9", "cat": "C2", "result": "PASS", "note": "9 Fallback UI patterns confirmed SOT §7" },
+        { "id": "EA07-460", "key": "design_principles=5", "cat": "C1", "result": "PASS", "note": "5 design principles confirmed SOT §0" },
+        { "id": "EA07-470", "key": "total_components=44", "cat": "C2", "result": "PASS", "note": "44 total components (37 V1 mandatory) match SOT §10" },
+        { "id": "EA07-475", "key": "v1_mandatory_components=37", "cat": "C2", "result": "PASS", "note": "37 V1 mandatory components confirmed SOT §10/§11" },
+        { "id": "EA07-480", "key": "option_a_freeze", "cat": "C4", "result": "PASS", "note": "Option A FREEZE decision confirmed SOT §9" },
+        { "id": "EA07-490", "key": "multimodal_j_items=98", "cat": "C2", "result": "PASS", "note": "98 J-items in multimodal flow confirmed SOT §6" },
+        { "id": "EA07-500", "key": "i18n_support", "cat": "C4", "result": "PASS", "note": "i18n support confirmed SOT §0 document meta" },
+        { "id": "EA07-520", "key": "asl_mapping", "cat": "C3", "result": "PASS", "note": "ASL level mapping confirmed against SOT" },
+        { "id": "EA07-540", "key": "stride_threat_model", "cat": "C4", "result": "PASS", "note": "STRIDE threat modeling reference confirmed SOT" },
+        { "id": "EA07-560", "key": "constitutional_ai_ref", "cat": "C4", "result": "PASS", "note": "Constitutional AI reference confirmed SOT" }
+      ]
+    },
+    "issues": [
+      {
+        "severity": "minor",
+        "item_id": "EA07-049",
+        "description": "source_line 371 misattributed; actual content at different location in D07. Extracted value is semantically correct."
+      },
+      {
+        "severity": "minor",
+        "item_id": "EA07-050",
+        "description": "source_line 941 misattributed; actual content at different location in D07. Extracted value is semantically correct."
+      },
+      {
+        "severity": "minor",
+        "item_id": "EA07-151",
+        "description": "source_line 1245 points to RunPod GPU table but key is community_skill_stages=4 which is from lines 260-266. Value correct, line attribution wrong."
+      }
+    ],
+    "accuracy_rate": "90.6% (29/32 fully correct, 3 minor source_line attribution errors with correct values)"
+  },
+  "sv2_extraction_completeness": {
+    "pass": true,
+    "checks": {
+      "guardrails_c3": {
+        "status": "COVERED",
+        "detail": "3-layer guardrails (Content/Ethics/Security), risk classification (P0-P3), ASL mapping all extracted"
+      },
+      "cost_limits_c7": {
+        "status": "COVERED",
+        "detail": "V1=$30/mo, V2=$70/mo, V3=$200/mo, downshift 80%/100% LOCK, SelfCheckGate thresholds all extracted"
+      },
+      "lock_values_c7": {
+        "status": "COVERED",
+        "detail": "Non-goals LOCK, autonomy L0-L3 LOCK, RBAC 4-roles LOCK, downshift thresholds LOCK all present"
+      },
+      "approval_flow_c5": {
+        "status": "COVERED",
+        "detail": "2-stage approval (SelfCheck+PeerReview), 5-Gate system, S/E module rules extracted"
+      },
+      "ui_components_c1_c2": {
+        "status": "COVERED",
+        "detail": "44 total components, 37 V1 mandatory, 3-panel layout, 9-state + 6-state machines, 47+ events, 14 FailureCodes, 9 Fallbacks extracted"
+      },
+      "schema_refs_c8": {
+        "status": "COVERED",
+        "detail": "7 schema references extracted covering D07 §6 references (safety_config, cost_policy, approval_workflow, rbac_permission, audit_log)"
+      }
+    },
+    "backhalf_coverage": {
+      "D07": "55.5% (232/418 items from second half of document)",
+      "D08": "27.0% (44/163 items from second half of document)",
+      "assessment": "D07 backhalf well-covered; D08 lower but acceptable since D08 §10-§11 component registry is tabular with many small entries aggregated into counts"
+    },
+    "missing_critical": "NONE"
+  },
+  "sv3_key_appropriateness": {
+    "pass": true,
+    "checks": {
+      "standard_key_violations": 0,
+      "detail": "No instances found where standard extraction keys (e.g., version, status, lock) were incorrectly placed in free-form key slots. Category assignments (C1-C8) are consistent with key types."
+    },
+    "category_consistency": {
+      "C1_numeric": "All numeric parameter items contain actual numeric values or counts",
+      "C2_counts": "All count items represent enumerable quantities",
+      "C3_classification": "All classification items contain hierarchical or categorical structures",
+      "C4_definitions": "All definition items contain descriptive text, lists, or enumerations",
+      "C5_flow": "All flow items describe sequential processes or approval workflows",
+      "C6_version": "All version items relate to V1/V2/V3 roadmap or feature phases",
+      "C7_thresholds": "All threshold items contain numeric limits, percentages, or boundaries",
+      "C8_schema": "All schema items reference external JSON schemas or data structures"
+    }
+  },
+  "verdict": {
+    "result": "GOLD",
+    "criteria_met": [
+      "SV-1 pass: 90.6% semantic accuracy (29/32 fully correct, 3 minor source_line issues only)",
+      "SV-2 pass: All critical domains covered (Guardrails, Cost, LOCK, Approval, UI Components, Schema)",
+      "SV-3 pass: Zero standard key violations, category assignments consistent"
+    ],
+    "summary": "EA-07 extraction of D2.0-07 (Safety/Cost/Approval) and D2.0-08 (UI/UX) passes Layer B semantic validation with GOLD verdict. 581 items across 8 categories show strong alignment with SOT documents. Three minor source_line attribution errors detected (EA07-049, EA07-050, EA07-151) where extracted values are semantically correct but line numbers point to wrong sections. No critical omissions, no category misclassifications, no standard key violations found. Backhalf coverage adequate for both documents."
+  }
+}

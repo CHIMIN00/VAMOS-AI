@@ -1,0 +1,22 @@
+{
+  "script": "0-H",
+  "name": "Header Count vs Actual Rows",
+  "errors": [
+    {
+      "header_line": 2812,
+      "header_value": 72,
+      "actual_rows": 5,
+      "difference": -67,
+      "context": "### 6.2.1 Tauri IPC 커맨드 핸들러 (72개) <!-- SOURCE_CONFLICT: PHASE_B1 §5.1=47개 vs CLAUDE.md/B1 changelog="
+    },
+    {
+      "header_line": 2934,
+      "header_value": 7,
+      "actual_rows": 11,
+      "difference": 4,
+      "context": "### MCP 외부 서버 카탈로그 (M-22: V1=7개, V2+=3개, V3=1개, 합계 11개)"
+    }
+  ],
+  "total_errors": 2,
+  "verdict": "FAIL"
+}

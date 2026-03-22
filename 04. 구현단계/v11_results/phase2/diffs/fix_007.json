@@ -1,0 +1,10 @@
+{
+  "fix_id": "FIX-007",
+  "fg": "FG-B05",
+  "tier": 1,
+  "order": 7,
+  "severity": "BLOCKER",
+  "description": "FailureCode 36건↔Fallback 23건 1:N 매핑 테이블 신설 (§6.9 내, FallbackRegistry 다음)",
+  "insert_after": "L4141 (FallbackRegistry 코드블록 닫는 ``` 다음)",
+  "applied_at": "2026-03-12"
+}

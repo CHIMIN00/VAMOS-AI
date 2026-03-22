@@ -1,0 +1,5272 @@
+[
+  {
+    "feature_id": "D202-020",
+    "feature_name": "ResponseEnvelope 스키마 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 388,
+    "v0_match_count": 22,
+    "other_match_count": 1,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      388,
+      451,
+      461,
+      494,
+      538
+    ],
+    "other_sections": [
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-001",
+    "feature_name": "4계층 아키텍처 구현 (Front Mini LLM → ORANGE CORE → BLUE NODES → OTHER BRAINS → Main LLM",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 86,
+    "v0_match_count": 68,
+    "other_match_count": 151,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      82,
+      86,
+      87,
+      88,
+      113
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-002",
+    "feature_name": "통신 계층 구현 (React UI ↔ Tauri IPC ↔ Rust Backend ↔ JSON-RPC stdin/stdout ↔ Python A",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-3",
+    "part2_line": 652,
+    "v0_match_count": 278,
+    "other_match_count": 153,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      71,
+      77,
+      81,
+      84,
+      85
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-003",
+    "feature_name": "5-Phase 표준 파이프라인 구현 (Perception/Intake → Reasoning/Plan → Action/Execute → Refle",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 152,
+    "v0_match_count": 178,
+    "other_match_count": 278,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      74,
+      81,
+      86
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-004",
+    "feature_name": "5-Gate 시스템 구현 (PolicyGate, CostGate, ApprovalGate, EvidenceGate, SelfCheckGate)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 910,
+    "v0_match_count": 62,
+    "other_match_count": 73,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      92,
+      245,
+      824,
+      825,
+      826
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-005",
+    "feature_name": "상태 머신 S0~S8 구현 (S0_RECEIVED→S1→S2→S3_DECISION_LOCKED→S4→S5→S6_SELF_CHECKED→S7→S8",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "MATCHED",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 942,
+    "v0_match_count": 2,
+    "other_match_count": 9,
+    "v0_sections": [
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      942
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-006",
+    "feature_name": "I-1 Intent Detector 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 816,
+    "v0_match_count": 48,
+    "other_match_count": 66,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-1",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      389,
+      431,
+      447,
+      517,
+      534
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-007",
+    "feature_name": "I-2 Context Builder (RAG/지식 검색) 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 821,
+    "v0_match_count": 21,
+    "other_match_count": 73,
+    "v0_sections": [
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      821,
+      843,
+      852,
+      862,
+      865
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-008",
+    "feature_name": "I-3 Memory System (4계층: L0~L3) 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 152,
+    "v0_match_count": 31,
+    "other_match_count": 60,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      152,
+      157,
+      158,
+      159,
+      160
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-010",
+    "feature_name": "I-5 Condition & Decision Engine (LOCK) 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 122,
+    "v0_match_count": 145,
+    "other_match_count": 233,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      101,
+      120,
+      122,
+      123,
+      130
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-013",
+    "feature_name": "I-8 Policy Engine (LOCK) 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 160,
+    "v0_match_count": 116,
+    "other_match_count": 225,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      101,
+      120,
+      122,
+      123,
+      130
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-015",
+    "feature_name": "I-10 Tool Registry/Router 모듈 구현",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 462,
+    "v0_match_count": 35,
+    "other_match_count": 36,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      206,
+      462,
+      464,
+      477,
+      478
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-016",
+    "feature_name": "I-11~I-17 CORE 모듈 7개 구현 (Output Composer, Workflow Builder, Multimodal Renderer,",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 88,
+    "v0_match_count": 125,
+    "other_match_count": 244,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      86,
+      87,
+      88,
+      107,
+      113
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-018",
+    "feature_name": "E-1~E-6 V1 외부 모듈 6개 구현 (Coding Helper, Web Search, Document Parser, Code Executo",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 398,
+    "v0_match_count": 19,
+    "other_match_count": 101,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      98,
+      159,
+      251,
+      334,
+      391
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-021",
+    "feature_name": "A-1~A-7 아키텍처 확장 모듈 7개 구현 (MultiBrain, Preset, Meta AI, Debate, Lazy Gen, Federat",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "PRE_GAP",
+    "judgment": "MATCHED",
+    "part2_phase": "V0-STEP-5",
+    "part2_line": 1057,
+    "v0_match_count": 1,
+    "other_match_count": 46,
+    "v0_sections": [
+      "V0-STEP-5"
+    ],
+    "v0_lines": [
+      1057
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-026",
+    "feature_name": "핵심 엔진 LOCK 설정 구현 (Decision Lock, Gate 우회불가, Self-check 임계값, Soft loop 1회, L2 승인필",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 173,
+    "v0_match_count": 289,
+    "other_match_count": 555,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      101,
+      120,
+      122,
+      123
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-027",
+    "feature_name": "비용/안전 LOCK 구현 (V1 ₩40K / V2 ₩93K / V3 ₩266K, Downshift, RBAC 4역할, Autonomy L1, G",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 832,
+    "v0_match_count": 121,
+    "other_match_count": 244,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      101,
+      117,
+      120,
+      122
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-031",
+    "feature_name": "V0 진입 전 필수 구현 16항목 (통신 확정, IMPL 계층, 비용 상한, 디렉토리, config, 스키마 v3.0.0, PLAN-2.0 표기",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 159,
+    "v0_match_count": 215,
+    "other_match_count": 357,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      100,
+      101,
+      117,
+      120
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-038",
+    "feature_name": "Decision 스키마 구현 (18필드, FREEZE: decision_id, trace_id, timestamp, intent_frame_re",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 400,
+    "v0_match_count": 96,
+    "other_match_count": 70,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      122,
+      131,
+      150,
+      190,
+      297
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-039",
+    "feature_name": "IntentFrame 스키마 구현 (intent_id, trace_id, user_goal, task_type, domain_hint, cons",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 389,
+    "v0_match_count": 29,
+    "other_match_count": 8,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      190,
+      365,
+      389,
+      447,
+      450
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§5-V3"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-040",
+    "feature_name": "ResponseEnvelope 스키마 구현 (LOCK: answer{summary, details, next_actions[]}, evidenc",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 388,
+    "v0_match_count": 136,
+    "other_match_count": 201,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      101,
+      120,
+      122,
+      123,
+      130
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-044",
+    "feature_name": "Monorepo 프로젝트 구조 스캐폴딩 (src/, src-tauri/, backend/vamos_core/, shared/types/, con",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 68,
+    "v0_match_count": 204,
+    "other_match_count": 174,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      75,
+      77,
+      84
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-045",
+    "feature_name": "Python contracts.py SOT → TypeScript Zod / Rust serde 타입 자동 생성",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 112,
+    "other_match_count": 47,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      71,
+      77,
+      80,
+      81,
+      85
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-052",
+    "feature_name": "config.v1.toml LOCK 값 13개 구현 (single_decision_lock, embedding model/dim, vector_",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 180,
+    "v0_match_count": 310,
+    "other_match_count": 342,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      80,
+      83,
+      97,
+      100,
+      101
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-053",
+    "feature_name": "45개 미해소 이슈 해결 구현 (HIGH 10건, MEDIUM 21건, LOW 9건, INFO 5건)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 188,
+    "v0_match_count": 3,
+    "other_match_count": 33,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      188,
+      363,
+      1100
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-100",
+    "feature_name": "config.toml 설정 포맷 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 104,
+    "other_match_count": 92,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      97,
+      100,
+      101,
+      117
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-126",
+    "feature_name": "설정 우선순위 구현 (ENV > config.toml > default)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 121,
+    "v0_match_count": 117,
+    "other_match_count": 95,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      97,
+      100,
+      101,
+      117
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-127",
+    "feature_name": "JSON Structured 로깅 구현 (평문 금지, trace_id 필수)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 452,
+    "v0_match_count": 100,
+    "other_match_count": 38,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      95,
+      104,
+      146,
+      147
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-128",
+    "feature_name": "네이밍 컨벤션 적용 (event:lower.dot / failure:UPPER_SNAKE / fallback:FB_ / state:S#_ / m",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 128,
+    "v0_match_count": 75,
+    "other_match_count": 106,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      128,
+      156,
+      303,
+      331,
+      391
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-132",
+    "feature_name": "Tauri 2.0 + React 18 UI 프레임워크 구현",
+    "version_scope": "V0,V1,V2",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 71,
+    "v0_match_count": 42,
+    "other_match_count": 24,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      71,
+      77,
+      84,
+      95,
+      114
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-138",
+    "feature_name": "IMPLEMENTATION 계층 = PHASE_B 명시 (V0-002)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 68,
+    "v0_match_count": 83,
+    "other_match_count": 75,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-139",
+    "feature_name": "Python 백엔드 통신 계층 확정 (V0-004)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 81,
+    "v0_match_count": 62,
+    "other_match_count": 21,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      95,
+      113,
+      206
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-143",
+    "feature_name": "Python 백엔드 진입점 정의 (V1-015)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 81,
+    "v0_match_count": 62,
+    "other_match_count": 21,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      95,
+      113,
+      206
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-147",
+    "feature_name": "V0 비용 상한 = V1 동일 적용 ₩40,000/월 (V0-001)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "CLAUDE-148",
+    "feature_name": "디렉토리 구조 PHASE_B2 정본 적용 (V0-003)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 68,
+    "v0_match_count": 83,
+    "other_match_count": 74,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-150",
+    "feature_name": "datetime.utcnow() → datetime.now(timezone.utc) 전수 교체 (V1-005)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "PARTIAL",
+    "part2_phase": "§7",
+    "part2_line": 3761,
+    "v0_match_count": 0,
+    "other_match_count": 2,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-161",
+    "feature_name": "스키마 버전 v3.0.0 통일 승격 (CC-001)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "CLAUDE-170",
+    "feature_name": "BASE-1.3 전 24개 규칙 코드 매핑",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 159,
+    "v0_match_count": 10,
+    "other_match_count": 52,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      159,
+      160,
+      334,
+      335,
+      529
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-171",
+    "feature_name": "스캐폴딩 + 의존성 설치 (pip/npm/cargo)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 83,
+    "v0_match_count": 6,
+    "other_match_count": 10,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      83,
+      114,
+      236,
+      277,
+      428
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-172",
+    "feature_name": "24개 스키마 코드 생성 (Pydantic v2/Zod/serde)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 31,
+    "other_match_count": 9,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      80,
+      93,
+      114,
+      233,
+      246
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-173",
+    "feature_name": "I-1~I-5 + I-19 스켈레톤 생성",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 816,
+    "v0_match_count": 32,
+    "other_match_count": 73,
+    "v0_sections": [
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      816,
+      824,
+      839,
+      851,
+      852
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-174",
+    "feature_name": "L0 세션 메모리 최소 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "PARTIAL",
+    "part2_phase": "§7",
+    "part2_line": 3749,
+    "v0_match_count": 0,
+    "other_match_count": 1,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-175",
+    "feature_name": "비용 엔진 ₩40,000/월 하드코딩",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "PARTIAL",
+    "part2_phase": "§7",
+    "part2_line": 3750,
+    "v0_match_count": 0,
+    "other_match_count": 1,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-176",
+    "feature_name": "Guardrails L1+L2 초기 설정",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 92,
+    "v0_match_count": 7,
+    "other_match_count": 27,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      92,
+      117,
+      245,
+      469,
+      556
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-177",
+    "feature_name": "Ollama + Chroma + SQLite 초기화",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 103,
+    "v0_match_count": 36,
+    "other_match_count": 38,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-4",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      103,
+      126,
+      127,
+      139,
+      142
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-205",
+    "feature_name": "Decision 스키마 구현 (18필드, FREEZE)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 387,
+    "v0_match_count": 60,
+    "other_match_count": 36,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      122,
+      297,
+      387,
+      397,
+      400
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-206",
+    "feature_name": "IntentFrame 스키마 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 389,
+    "v0_match_count": 18,
+    "other_match_count": 2,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      389,
+      447,
+      534,
+      607,
+      608
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-208",
+    "feature_name": "상태 머신 S0~S8 구현 (8단계 전이 + 타임아웃)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "CLAUDE-217",
+    "feature_name": "Monorepo 디렉토리 스캐폴딩 (vamos/ 루트)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 70,
+    "v0_match_count": 67,
+    "other_match_count": 161,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      70,
+      86,
+      141,
+      142
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-219",
+    "feature_name": "React 프론트엔드 구조 (components/pages/hooks/stores/types)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 71,
+    "v0_match_count": 31,
+    "other_match_count": 30,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      71,
+      72,
+      73,
+      74,
+      75
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-220",
+    "feature_name": "Rust Tauri 백엔드 구조 (commands/bridge/models)",
+    "version_scope": "V0,V1,V2",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 81,
+    "v0_match_count": 73,
+    "other_match_count": 44,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      77,
+      79,
+      80,
+      81,
+      84
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-221",
+    "feature_name": "Python AI/ML 백엔드 구조 (orange_core/blue_nodes/infra/agent/storage/safety/schemas/m",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 87,
+    "v0_match_count": 118,
+    "other_match_count": 162,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      87,
+      88,
+      89
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-222",
+    "feature_name": "shared/types JSON Schema Golden Source 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 98,
+    "v0_match_count": 171,
+    "other_match_count": 89,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      71,
+      75,
+      84,
+      93,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-223",
+    "feature_name": "config 디렉토리 구성 (default.toml + llm/embedding/storage/safety/mcp)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 144,
+    "other_match_count": 129,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      91,
+      92,
+      97,
+      100
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-224",
+    "feature_name": "data 디렉토리 구성 (sqlite/chroma/logs/graph/backups)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 145,
+    "v0_match_count": 94,
+    "other_match_count": 85,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      103,
+      104,
+      139,
+      142,
+      145
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-225",
+    "feature_name": "타입 동기화: Python contracts.py SOT → TypeScript Zod / Rust serde 생성",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 112,
+    "other_match_count": 47,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      71,
+      77,
+      80,
+      81,
+      85
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-251",
+    "feature_name": "Python PEP 8 + 타입 힌트 필수 + Pydantic v2 + async/await 적용",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 94,
+    "other_match_count": 37,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      93,
+      95,
+      113
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-252",
+    "feature_name": "TypeScript strict mode + Zod 검증 + React 18 + zustand 적용",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 115,
+    "v0_match_count": 61,
+    "other_match_count": 40,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      71,
+      80,
+      115,
+      121,
+      126
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-253",
+    "feature_name": "Rust stable + serde derive + thiserror/anyhow 적용",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 80,
+    "v0_match_count": 34,
+    "other_match_count": 27,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      77,
+      80,
+      114,
+      206,
+      230
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-259",
+    "feature_name": "config.v1.toml core.single_decision_lock=true 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 151,
+    "other_match_count": 175,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      86,
+      87,
+      97,
+      100
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-260",
+    "feature_name": "config.v1.toml embedding.model=bge-m3 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 150,
+    "other_match_count": 110,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      80,
+      83,
+      97,
+      100,
+      101
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-261",
+    "feature_name": "config.v1.toml embedding.dimension=1024 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 118,
+    "other_match_count": 101,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      97,
+      100,
+      101,
+      117
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-262",
+    "feature_name": "config.v1.toml vector_db.backend=chroma 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 152,
+    "other_match_count": 150,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      85,
+      97,
+      100,
+      101
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-263",
+    "feature_name": "config.v1.toml graph_db.backend=json_file 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 146,
+    "v0_match_count": 147,
+    "other_match_count": 135,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      85,
+      97,
+      100,
+      101
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLAUDE-267",
+    "feature_name": "config.v1.toml cost.block_threshold=100 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 124,
+    "other_match_count": 127,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      97,
+      100,
+      101,
+      117
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-001",
+    "feature_name": "BASE RULE 1.3 준수 검증 로직 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 159,
+    "v0_match_count": 8,
+    "other_match_count": 28,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      159,
+      160,
+      334,
+      335,
+      529
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-002",
+    "feature_name": "VAMOS 5-Stage ↔ Agent 4단계 매핑 테이블 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 70,
+    "v0_match_count": 78,
+    "other_match_count": 286,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      70,
+      86,
+      90,
+      123,
+      141
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-008",
+    "feature_name": "QoD 산출 공식 구현 (5-factor weighted scoring)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-011",
+    "feature_name": "메모리 저장 형식 JSON+SQLite 하이브리드 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 84,
+    "v0_match_count": 101,
+    "other_match_count": 43,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      95,
+      103,
+      104,
+      146
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-013",
+    "feature_name": "7단계 데이터 파이프라인 구현 (입력→분석→검색→라우팅→실행→Self-check→출력)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 169,
+    "v0_match_count": 26,
+    "other_match_count": 80,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      169,
+      344,
+      455,
+      469,
+      542
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-030",
+    "feature_name": "모듈 의존성 매트릭스 구현 (14+ 모듈 쌍)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-032",
+    "feature_name": "V0 기초 골격 6대 영역 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-038",
+    "feature_name": "P0/P1/P2 도메인 분류 SOT 테이블 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-041",
+    "feature_name": "파일 단위 저장 스펙 구현 (7 공통 항목)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-042",
+    "feature_name": "3중 메타데이터 구조 구현 (Tag+Theme+Vector)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 138,
+    "v0_match_count": 3,
+    "other_match_count": 15,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      138,
+      313,
+      1120
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-045",
+    "feature_name": "storage_policy.json 정책 테이블 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 84,
+    "v0_match_count": 87,
+    "other_match_count": 29,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      95,
+      104,
+      146,
+      147
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-047",
+    "feature_name": "사용자 동의 로그 시스템 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-051",
+    "feature_name": "5단계 Agent Pipeline 표준 구현 (Perception→Reasoning→Action→Memory→Reflection)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 152,
+    "v0_match_count": 55,
+    "other_match_count": 178,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      90,
+      123,
+      152,
+      157,
+      158
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-054",
+    "feature_name": "승인 판단 트리 구현 (4단계 위험등급 분기)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-062",
+    "feature_name": "단일결정 원칙 + 5대 축 조건 모듈 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-063",
+    "feature_name": "운영 한계(Limits) 시스템 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "PARTIAL",
+    "part2_phase": "§5-V3",
+    "part2_line": 2327,
+    "v0_match_count": 0,
+    "other_match_count": 2,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "§5-V3"
+    ]
+  },
+  {
+    "feature_id": "P30-064",
+    "feature_name": "버전/변경 관리 시스템 구현 (Change Management)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "PARTIAL",
+    "part2_phase": "§4-V2",
+    "part2_line": 1799,
+    "v0_match_count": 0,
+    "other_match_count": 5,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-068",
+    "feature_name": "14개 목표 A/B/C/D 그룹 매핑 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "P30-070",
+    "feature_name": "Phase Transition 5대 조건 검증 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 68,
+    "v0_match_count": 89,
+    "other_match_count": 168,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "P30-091",
+    "feature_name": "V0 스켈레톤 I-모듈 활성화 (I-1~I-5 + I-19)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 839,
+    "v0_match_count": 32,
+    "other_match_count": 73,
+    "v0_sections": [
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      816,
+      824,
+      839,
+      851,
+      852
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "BASE-001",
+    "feature_name": ".vamosrules JSON/YAML 구조화 파일 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-6",
+    "part2_line": 1209,
+    "v0_match_count": 89,
+    "other_match_count": 41,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      95,
+      104,
+      146,
+      147
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "BASE-011",
+    "feature_name": "V1/V2/V3 비용 상한 ABSOLUTE LOCK 적용 (V1:₩40K/V2:₩93K/V3:₩266K)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 101,
+    "v0_match_count": 91,
+    "other_match_count": 164,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      101,
+      120,
+      122,
+      123,
+      130
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "MSTR-019",
+    "feature_name": "EventTypeRegistry 53개 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 477,
+    "v0_match_count": 5,
+    "other_match_count": 4,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      477,
+      488,
+      567,
+      624,
+      1376
+    ],
+    "other_sections": [
+      "§7",
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "MSTR-020",
+    "feature_name": "FailureCodeRegistry 20개 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 478,
+    "v0_match_count": 7,
+    "other_match_count": 2,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      478,
+      488,
+      568,
+      624,
+      844
+    ],
+    "other_sections": [
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "MSTR-021",
+    "feature_name": "FallbackRegistry 13개 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 479,
+    "v0_match_count": 6,
+    "other_match_count": 5,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      479,
+      488,
+      569,
+      624,
+      968
+    ],
+    "other_sections": [
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "IRGD-001",
+    "feature_name": "V0 차단 이슈 해소 (통신계층 Python 확정/IMPLEMENTATION 계층/V0 비용 상한/디렉토리/config 포맷)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 130,
+    "other_match_count": 81,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      95,
+      100,
+      101
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-002",
+    "feature_name": "BASE-1.3 24개 규칙 코드 임베딩 (24개 카테고리 → 구현 위치 매핑)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 159,
+    "v0_match_count": 10,
+    "other_match_count": 51,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      159,
+      160,
+      334,
+      335,
+      529
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-003",
+    "feature_name": "3언어 환경 구축 (Python 3.11+/Node.js 18+/Rust 1.70+ + 의존성 전체 설치)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 88,
+    "v0_match_count": 118,
+    "other_match_count": 71,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      77,
+      81,
+      85,
+      88,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-004",
+    "feature_name": "PHASE_B2 Monorepo 디렉토리 스캐폴딩 생성",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 68,
+    "v0_match_count": 88,
+    "other_match_count": 75,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-005",
+    "feature_name": "config.v1.toml 22개 LOCK 값 적용",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 101,
+    "v0_match_count": 195,
+    "other_match_count": 253,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      83,
+      97,
+      100,
+      101,
+      117
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-006",
+    "feature_name": "D2.1 스키마 → 3언어 코드 생성 (24개 Pydantic v2 + Zod + serde)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 31,
+    "other_match_count": 9,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      80,
+      93,
+      114,
+      233,
+      246
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-007",
+    "feature_name": "V0 구현 대상 모듈 (I-1~I-5+I-19 스켈레톤 + 비용엔진 + 로깅 + Guardrails L1+L2)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 816,
+    "v0_match_count": 39,
+    "other_match_count": 100,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      117,
+      245,
+      469,
+      556
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "IRGD-009",
+    "feature_name": "V1 Storage 스택 구축 (SQLite+Chroma+JSONL+Graph+Cache+Backup)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 103,
+    "v0_match_count": 106,
+    "other_match_count": 108,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      91,
+      103,
+      104,
+      139,
+      142
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "IRGD-015",
+    "feature_name": "D2.1 스키마 v3.0.0 일괄 통일 승격",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "IRRV-001",
+    "feature_name": "Storage event_type/failure_code 중앙 레지스트리 등록 (storage.* 5개 + failure 1개 + fallbac",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 128,
+    "v0_match_count": 64,
+    "other_match_count": 66,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      91,
+      128,
+      152,
+      244,
+      303
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "IRRV-002",
+    "feature_name": "D2.1 스키마 v3.0.0 일괄 승격 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D201-001",
+    "feature_name": "3-Layer 아키텍처 구현 (ORANGE CORE ↔ BLUE NODE ↔ INFRA-CORE)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 89,
+    "v0_match_count": 87,
+    "other_match_count": 179,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      86,
+      87,
+      88,
+      89,
+      113
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D201-002",
+    "feature_name": "5-Phase 표준 파이프라인 정의 (Perception→Reasoning→Action→Memory→Reflection)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 152,
+    "v0_match_count": 132,
+    "other_match_count": 228,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D201-003",
+    "feature_name": "V0 Minimal Core 구현 (stub 모듈 + 기본 파이프라인)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 86,
+    "v0_match_count": 47,
+    "other_match_count": 79,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      86,
+      87,
+      113,
+      119,
+      239
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D201-008",
+    "feature_name": "이벤트/실패/폴백 ID 네이밍 규칙 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D201-009",
+    "feature_name": "I-Series 모듈 레지스트리 구현 (I-1~I-25 등록/관리)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 816,
+    "v0_match_count": 24,
+    "other_match_count": 89,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      87,
+      88,
+      89,
+      91,
+      240
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D201-013",
+    "feature_name": "V0 구현 체크리스트 항목 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D202-001",
+    "feature_name": "ErrorHandlingStandard 구현 (Result<T, VamosError> 패턴)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-3",
+    "part2_line": 762,
+    "v0_match_count": 7,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      762,
+      774,
+      779,
+      917,
+      918
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§4-V2",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "D202-002",
+    "feature_name": "Front Mini LLM 구현 (입력 1차 해석 + 안전필터 + 도메인힌트)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 121,
+    "v0_match_count": 9,
+    "other_match_count": 15,
+    "v0_sections": [
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      121,
+      126,
+      128,
+      296,
+      301
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "D202-003",
+    "feature_name": "Decision 스키마 FREEZE 구현 (DEC-001)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 122,
+    "v0_match_count": 60,
+    "other_match_count": 36,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      122,
+      297,
+      387,
+      397,
+      400
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-007",
+    "feature_name": "5-Phase 표준 파이프라인 엔진 구현 (Perception→Reasoning→Action→Memory→Reflection)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 152,
+    "v0_match_count": 132,
+    "other_match_count": 228,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      68,
+      71,
+      81,
+      86,
+      95
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-008",
+    "feature_name": "9-State Machine 구현 (S0_RECEIVED → S8_DONE)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 942,
+    "v0_match_count": 15,
+    "other_match_count": 30,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      760,
+      763,
+      772,
+      775,
+      847
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-015",
+    "feature_name": "Decision Kernel 구현 (단일 판단 원칙)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 122,
+    "v0_match_count": 38,
+    "other_match_count": 23,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      122,
+      297,
+      387,
+      397,
+      431
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-016",
+    "feature_name": "Decision 객체 Pydantic 모델 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 122,
+    "v0_match_count": 60,
+    "other_match_count": 30,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      122,
+      246,
+      266,
+      297
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-022",
+    "feature_name": "LogEvent 레지스트리 구현 (구조화 로깅)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 450,
+    "v0_match_count": 7,
+    "other_match_count": 4,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      450,
+      537,
+      893,
+      973,
+      1015
+    ],
+    "other_sections": [
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-023",
+    "feature_name": "FailureCode 레지스트리 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 391,
+    "v0_match_count": 10,
+    "other_match_count": 6,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      391,
+      478,
+      488,
+      568,
+      589
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "D202-024",
+    "feature_name": "Fallback Strategy 레지스트리 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 128,
+    "v0_match_count": 19,
+    "other_match_count": 20,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      128,
+      303,
+      391,
+      479,
+      488
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-027",
+    "feature_name": "IntentFrame Pydantic 모델 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 40,
+    "other_match_count": 9,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      389,
+      412
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "D202-033",
+    "feature_name": "EvidencePack Pydantic 모델 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 33,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      390,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-081",
+    "feature_name": "5-Gate 시스템 구현 (G0~G4)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 92,
+    "v0_match_count": 37,
+    "other_match_count": 66,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      92,
+      245,
+      824,
+      825,
+      826
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-082",
+    "feature_name": "G0 Input Validation Gate 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-3",
+    "part2_line": 761,
+    "v0_match_count": 45,
+    "other_match_count": 79,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      245,
+      640,
+      761,
+      764
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D202-083",
+    "feature_name": "G1 PolicyGate 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-4",
+    "part2_line": 825,
+    "v0_match_count": 6,
+    "other_match_count": 2,
+    "v0_sections": [
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      825,
+      906,
+      994,
+      1286,
+      1287
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "D202-102",
+    "feature_name": "DI Kernel (의존성 주입 컨테이너) 구현",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D202-113",
+    "feature_name": "I-Module 공통 인터페이스 구현 (init/process/health_check/shutdown)",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 450,
+    "v0_match_count": 14,
+    "other_match_count": 42,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-3",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      113,
+      114,
+      115,
+      159,
+      261
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D204-053",
+    "feature_name": "설정 우선순위 규칙 (ENV > config.yaml/.env > 코드 기본값) LOCK",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 161,
+    "other_match_count": 232,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      100,
+      101,
+      117,
+      120,
+      122
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D204-179",
+    "feature_name": "비용 관리 인프라 (가중치 테이블, 60/80/95% 경고)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D204-180",
+    "feature_name": "시크릿 관리 (V0=.env~V3=Vault, 로그 마스킹, 90일 로테이션)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D204-181",
+    "feature_name": "배포/환경 분리 (Blue-Green, dev→staging→prod, Alembic)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 88,
+    "v0_match_count": 9,
+    "other_match_count": 44,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      88,
+      117,
+      241,
+      1073,
+      1079
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "D204-182",
+    "feature_name": "라우팅 인프라 상세 (4축 결정트리, 동적 풀, A/B 자동승격)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "D204-183",
+    "feature_name": "로그 저장 인프라 (SQLite+해시 체인 변조방지, 90일/2년/영구)",
+    "version_scope": "V0,V1,V2,V3",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 103,
+    "v0_match_count": 14,
+    "other_match_count": 14,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      103,
+      153,
+      154,
+      271,
+      328
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "D207-188",
+    "feature_name": "V1 로컬 스택 조합 (Ollama+Chroma+SQLite+JSONL, 월비용≈0)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 103,
+    "v0_match_count": 50,
+    "other_match_count": 45,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-4",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      103,
+      104,
+      126,
+      127,
+      139
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "D207-191",
+    "feature_name": "Safety/Cost 레지스트리 네이밍 규칙 (event_type:lower.dot/failure_code:UPPER_SNAKE/fallback",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 92,
+    "v0_match_count": 33,
+    "other_match_count": 48,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      162,
+      245,
+      337,
+      450
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "DA1-007",
+    "feature_name": "Tauri 2.0 + React UI 프레임워크 구현 (V1 데스크톱, V2+ PWA 병행)",
+    "version_scope": "V0,V1,V2",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 77,
+    "v0_match_count": 42,
+    "other_match_count": 24,
+    "v0_sections": [
+      "V0-STEP-3",
+      "V0-STEP-6",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      71,
+      77,
+      84,
+      95,
+      114
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "DD1-001",
+    "feature_name": "Schema Meta Template v3.0.0 구현 (필수 _meta 블록 생성 코드)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 57,
+    "other_match_count": 33,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      378,
+      386,
+      387
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD1-002",
+    "feature_name": "Glossary 단일 소유 규칙 검증 모듈 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "DD1-003",
+    "feature_name": "REF/SEC-ID/앵커 파서 구현 (kebab-case slug 검증)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "DD1-004",
+    "feature_name": "Registry 소유권 매핑 구현 (6개 레지스트리: EventType/FailureCode/Fallback/Tool/Node/VerifyCha",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 128,
+    "v0_match_count": 102,
+    "other_match_count": 78,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      88,
+      115,
+      117,
+      128,
+      206
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD1-005",
+    "feature_name": "Schema 소유권 매핑 구현 (37+ 스키마 → D2~D7 매핑)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 56,
+    "other_match_count": 20,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      378,
+      386,
+      387
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD2-001",
+    "feature_name": "DecisionSchema Pydantic v2 모델 코드 생성 (17 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 52,
+    "other_match_count": 8,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      387,
+      397
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD2-002",
+    "feature_name": "LogEventSchema Pydantic v2 모델 코드 생성 (7 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 450,
+    "v0_match_count": 42,
+    "other_match_count": 11,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "§7",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD2-003",
+    "feature_name": "EventTypeRegistry 구현 (123 values, lower.dot 네이밍)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 477,
+    "v0_match_count": 5,
+    "other_match_count": 6,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      477,
+      488,
+      567,
+      624,
+      1376
+    ],
+    "other_sections": [
+      "§5-V3",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "DD2-004",
+    "feature_name": "FailureCodeRegistry 구현 (36 values, UPPER_SNAKE 네이밍)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 478,
+    "v0_match_count": 12,
+    "other_match_count": 4,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      478,
+      479,
+      488,
+      568,
+      569
+    ],
+    "other_sections": [
+      "§5-V3",
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "DD2-005",
+    "feature_name": "FallbackRegistry 구현 (23 values, FB_UPPER_SNAKE 네이밍)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 479,
+    "v0_match_count": 9,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      479,
+      488,
+      569,
+      589,
+      624
+    ],
+    "other_sections": [
+      "§5-V3",
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "DD2-006",
+    "feature_name": "Failure→Fallback 매핑 테이블 구현 (22행 매핑 로직)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 391,
+    "v0_match_count": 36,
+    "other_match_count": 25,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      128,
+      303,
+      391,
+      468,
+      478
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "DD2-007",
+    "feature_name": "contracts.py event_type Literal 타입 제한 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 14,
+    "other_match_count": 5,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      450,
+      526,
+      579,
+      634
+    ],
+    "other_sections": [
+      "OTHER",
+      "§4-V2",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "DD2-008",
+    "feature_name": "contracts.py IntentType Literal에 'other' 추가 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 10,
+    "other_match_count": 0,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": []
+  },
+  {
+    "feature_id": "DD3-001",
+    "feature_name": "NodeCapabilityProfileSchema Pydantic v2 모델 코드 생성",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 22,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD3-002",
+    "feature_name": "NodeRequestEnvelopeSchema Pydantic v2 모델 코드 생성 (12 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD3-003",
+    "feature_name": "NodeResponseEnvelopeSchema Pydantic v2 모델 코드 생성 (6 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-001",
+    "feature_name": "ToolRegistryEntrySchema Pydantic v2 모델 코드 생성 (8 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-002",
+    "feature_name": "BrainAdapterResponseSchema Pydantic v2 모델 코드 생성 (7 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-003",
+    "feature_name": "InfraInvokeResultSchema Pydantic v2 모델 코드 생성 (6 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-007",
+    "feature_name": "ToolRegistry 구현 (JSON, seed 예시 포함, G2 후 정본 확정)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 464,
+    "v0_match_count": 118,
+    "other_match_count": 30,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      95,
+      104,
+      146,
+      147
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-008",
+    "feature_name": "contracts.py OutputProfile enum 구현 (RAW_ONLY 제거)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 11,
+    "other_match_count": 8,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      573,
+      579,
+      634
+    ],
+    "other_sections": [
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-009",
+    "feature_name": "contracts.py TaskPriority/SchedulePriority enum 분리 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 11,
+    "other_match_count": 8,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      573,
+      579,
+      634
+    ],
+    "other_sections": [
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-010",
+    "feature_name": "contracts.py sentiment_score 범위 제약 구현 (-1.0 ~ 1.0)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 10,
+    "other_match_count": 1,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "DD4-012",
+    "feature_name": "contracts.py sequence_id metadata→values 이동 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-5",
+    "part2_line": 1057,
+    "v0_match_count": 11,
+    "other_match_count": 3,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§5-V3"
+    ]
+  },
+  {
+    "feature_id": "DD4-013",
+    "feature_name": "contracts.py ConnectorResponse Pydantic 모델 신규 추가",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 32,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD4-015",
+    "feature_name": "contracts.py datetime.utcnow() → datetime.now(timezone.utc) 전면 교체",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 10,
+    "other_match_count": 2,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD4-016",
+    "feature_name": "contracts.py 레거시 미사용 validator 정리 삭제",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 11,
+    "other_match_count": 0,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": []
+  },
+  {
+    "feature_id": "DD4-017",
+    "feature_name": "contracts.py datetime ISO8601 + timezone.utc 표기 통일",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 10,
+    "other_match_count": 1,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD5-001",
+    "feature_name": "WorkflowOutputEnvelopeSchema Pydantic v2 모델 코드 생성 (3단 출력 LOCK)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 113,
+    "other_match_count": 168,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      101,
+      120,
+      122,
+      123
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD5-002",
+    "feature_name": "FailureReportSchema Pydantic v2 모델 코드 생성 (4필드 체크리스트)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 22,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD5-003",
+    "feature_name": "VerifyChainEntrySchema Pydantic v2 모델 코드 생성 (EVX-1~6)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 22,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD5-004",
+    "feature_name": "WorkflowStageSchema Pydantic v2 모델 코드 생성 (5단계 Pipeline)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 30,
+    "other_match_count": 23,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      123,
+      246,
+      266,
+      298
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD5-007",
+    "feature_name": "GatePipelineMappingSchema Pydantic v2 모델 코드 생성 (단계별 필수 Gate 배치)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 59,
+    "other_match_count": 73,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      92,
+      93,
+      245,
+      246,
+      266
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD5-009",
+    "feature_name": "ResponseEnvelopeSchema Pydantic v2 모델 코드 생성 (최종 응답 래퍼)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 22,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD6-001",
+    "feature_name": "MemoryRecordSchema Pydantic v2 모델 코드 생성 (L0~L3, B-1~B-4, 18 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD6-002",
+    "feature_name": "SourceQoDSchema Pydantic v2 모델 코드 생성 (QoD 점수 0.0~1.0)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 24,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD7-001",
+    "feature_name": "PolicyCheckSchema Pydantic v2 모델 코드 생성 (7 fields)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 35,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD7-002",
+    "feature_name": "ApprovalSchema Pydantic v2 모델 코드 생성 (11 fields, 2단계 승인)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 39,
+    "other_match_count": 8,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      402,
+      412
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "DD7-003",
+    "feature_name": "CostBudgetSchema Pydantic v2 모델 코드 생성 (V1/V2/V3 비용 상한 LOCK)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 113,
+    "other_match_count": 168,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      101,
+      120,
+      122,
+      123
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DD7-004",
+    "feature_name": "DownshiftSchema Pydantic v2 모델 코드 생성 (80% 경고 / 100% 차단 LOCK)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 458,
+    "v0_match_count": 115,
+    "other_match_count": 168,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      101,
+      120,
+      122,
+      123
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "DQ1-001",
+    "feature_name": "D1~D8 전체 스키마 버전 v3.0.0 통일 승격 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "CROSS-002",
+    "feature_name": "42+ Pydantic v2 BaseModel 코드 일괄 생성 (25개 이상 스키마 + 확장)",
+    "version_scope": "V0,V1",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 26,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "PB2-011",
+    "feature_name": "Rust Tauri 디렉토리 구조 생성 (Cargo.toml, commands/, bridge/, state/, models/, utils/)",
+    "version_scope": "V0,V1,V2",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 81,
+    "v0_match_count": 128,
+    "other_match_count": 106,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      77,
+      79,
+      80,
+      81,
+      83
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "PB5-003",
+    "feature_name": "Python pytest 모듈 단위 테스트 구현 (orange_core 6 + blue_nodes 6 + safety 7 + storage 5 ",
+    "version_scope": "V0,V1",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 87,
+    "v0_match_count": 109,
+    "other_match_count": 162,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      81,
+      85,
+      87,
+      88,
+      90
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "PB7-008",
+    "feature_name": "config.v1->v2 설정 파일 변환 구현",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 100,
+    "v0_match_count": 68,
+    "other_match_count": 59,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      100,
+      101,
+      117,
+      201,
+      209
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-065",
+    "feature_name": "contracts.py 12건 JSON Schema 정렬 (D-1~D-12)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 153,
+    "other_match_count": 51,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      93,
+      95,
+      104,
+      146
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-066",
+    "feature_name": "Docker Compose 전체 스택 구성 (docker-compose.yml: TimescaleDB+ChromaDB+Airflow+Kafka+",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "MATCHED",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 270,
+    "v0_match_count": 2,
+    "other_match_count": 136,
+    "v0_sections": [
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      270,
+      427
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-067",
+    "feature_name": "API 키 확보 및 .env 파일 작성",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  },
+  {
+    "feature_id": "AINV-068",
+    "feature_name": "PoC 5건 실행 검증 (OHLCV 수집/DQ 검증/RSI_BB 백테스트/Grafana 대시보드/51% Gate)",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 92,
+    "v0_match_count": 37,
+    "other_match_count": 81,
+    "v0_sections": [
+      "V0-STEP-6",
+      "V0-STEP-4",
+      "V0-STEP-1"
+    ],
+    "v0_lines": [
+      92,
+      245,
+      824,
+      825,
+      826
+    ],
+    "other_sections": [
+      "§3-V1",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-097",
+    "feature_name": "contracts.py D-1: OutputProfile RAW_ONLY 리터럴 삭제",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 10,
+    "other_match_count": 2,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§3-V1"
+    ]
+  },
+  {
+    "feature_id": "AINV-098",
+    "feature_name": "contracts.py D-2: ConnectorRequest.priority TIER-0/TIER-1 제거 → Literal[P0,P1]",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 11,
+    "other_match_count": 10,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§7"
+    ]
+  },
+  {
+    "feature_id": "AINV-099",
+    "feature_name": "contracts.py D-3: VAMOS_EVENT.event_type Literal[6종] 적용",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 14,
+    "other_match_count": 14,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      450,
+      526,
+      579,
+      634
+    ],
+    "other_sections": [
+      "§5-V3",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-100",
+    "feature_name": "contracts.py D-4: sentiment_score/impact_level Field(ge,le) 범위 제약 추가",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 29,
+    "other_match_count": 4,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      401,
+      402,
+      403,
+      443,
+      526
+    ],
+    "other_sections": [
+      "§5-V3",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "AINV-101",
+    "feature_name": "contracts.py D-5: EventContent 서브모델 생성 (content 필드 구조화)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-5",
+    "part2_line": 1055,
+    "v0_match_count": 11,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      526,
+      579,
+      634,
+      641
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-102",
+    "feature_name": "contracts.py D-6: KB_EMBEDDING_RECORD vector_dim/embedded_at_utc Optional 필드 추가",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 15,
+    "other_match_count": 6,
+    "v0_sections": [
+      "V0-STEP-5",
+      "V0-STEP-2",
+      "V0-STEP-4",
+      "V0-STEP-6"
+    ],
+    "v0_lines": [
+      443,
+      449,
+      526,
+      536,
+      579
+    ],
+    "other_sections": [
+      "§5-V3",
+      "OTHER"
+    ]
+  },
+  {
+    "feature_id": "AINV-103",
+    "feature_name": "contracts.py D-7: ConnectorRequest trace_id/symbols/granularity Optional 필드 추가",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 25,
+    "other_match_count": 5,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      190,
+      365,
+      443,
+      449,
+      450
+    ],
+    "other_sections": [
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "AINV-104",
+    "feature_name": "contracts.py D-8: OHLCV_PLUS sequence_id JSON Schema 최상위 이동",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 153,
+    "other_match_count": 49,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-3",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      84,
+      93,
+      95,
+      104,
+      146
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-105",
+    "feature_name": "contracts.py D-10: Intent Literal에 'other' 추가 (4개)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 39,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      389,
+      431,
+      443,
+      447,
+      517
+    ],
+    "other_sections": [
+      "§3-V1",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "AINV-106",
+    "feature_name": "contracts.py D-11: OHLCV_Values 조건부 required Optional + model_validator 리팩터링",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-2",
+    "part2_line": 443,
+    "v0_match_count": 25,
+    "other_match_count": 4,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      190,
+      365,
+      403,
+      443,
+      449
+    ],
+    "other_sections": [
+      "OTHER",
+      "§6"
+    ]
+  },
+  {
+    "feature_id": "AINV-107",
+    "feature_name": "contracts.py D-12: ConnectorResponse Pydantic 모델 신규 생성",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "SPREAD",
+    "part2_phase": "V0-STEP-1",
+    "part2_line": 93,
+    "v0_match_count": 32,
+    "other_match_count": 7,
+    "v0_sections": [
+      "V0-STEP-1",
+      "V0-STEP-2",
+      "V0-STEP-6",
+      "V0-STEP-5",
+      "V0-STEP-4"
+    ],
+    "v0_lines": [
+      93,
+      246,
+      266,
+      412,
+      427
+    ],
+    "other_sections": [
+      "OTHER",
+      "§7",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLIB-042",
+    "feature_name": "Cloud Library 파일 시스템 디렉토리 구조 구현",
+    "version_scope": "V0",
+    "prev_status": "UNKNOWN",
+    "judgment": "PARTIAL",
+    "part2_phase": "OTHER",
+    "part2_line": 33,
+    "v0_match_count": 0,
+    "other_match_count": 119,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": [
+      "§7",
+      "OTHER",
+      "§4-V2"
+    ]
+  },
+  {
+    "feature_id": "CLIB-123",
+    "feature_name": "YouTube 수집기 (yt-dlp 메타데이터 + 자막)",
+    "version_scope": "V0",
+    "prev_status": "PRE_GAP",
+    "judgment": "MISSING",
+    "part2_phase": null,
+    "part2_line": null,
+    "v0_match_count": 0,
+    "other_match_count": 0,
+    "v0_sections": [],
+    "v0_lines": [],
+    "other_sections": []
+  }
+]

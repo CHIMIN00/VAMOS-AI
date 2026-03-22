@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "generated_at": "2026-03-13",
+    "task_id": "0-F",
+    "current_part2_version": "v25.0.0",
+    "current_part2_lines": 5252,
+    "previous_version": "v24.0.0",
+    "previous_lines": 4395,
+    "description": "v8~v10 재사용 가능 산출물 인덱스. v11 Phase 0 참조용. v25.0.0 기준 갱신."
+  },
+
+  "v8_reuse": {
+    "target_version": "v11.0.0",
+    "target_lines": 1821,
+    "version_match": false,
+    "total_files": 17,
+    "phase0_files": [
+      {"file": "0-A.json", "task": "0-A", "name": "Table Structure", "verdict": "PASS", "errors": 0, "tag": "참고만, 재검증 필수"},
+      {"file": "0-B.json", "task": "0-B", "name": "Arithmetic Sum Verification", "verdict": "PASS", "errors": 0, "tag": "참고만, 재검증 필수"},
+      {"file": "0-C.json", "task": "0-C", "name": "Heading Hierarchy", "verdict": "FAIL", "errors": 3, "tag": "참고만, 재검증 필수"},
+      {"file": "0-D.json", "task": "0-D", "name": "LOCK/FREEZE/ABSOLUTE Extraction", "verdict": "PASS", "errors": 0, "entries": 133, "tag": "참고만, 재검증 필수"},
+      {"file": "0-E.json", "task": "0-E", "name": "Keyword Number Inconsistency", "verdict": "FAIL", "errors": 3, "tag": "참고만, 재검증 필수"},
+      {"file": "0-F.json", "task": "0-F", "name": "ID Uniqueness + Reference Validation", "verdict": "PASS", "errors": 0, "entries": 89, "tag": "참고만, 재검증 필수"},
+      {"file": "0-G.json", "task": "0-G", "name": "HTML Comment Integrity", "verdict": "PASS", "errors": 0, "tag": "참고만, 재검증 필수"},
+      {"file": "0-H.json", "task": "0-H", "name": "Header Count vs Actual Rows", "verdict": "FAIL", "errors": 2, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-A.json", "task": "IMP-A", "name": "Module Dependency Graph", "verdict": "FAIL", "errors": 1, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-B.json", "task": "IMP-B", "name": "Schema Field Count", "verdict": "FAIL", "errors": 1, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-C.json", "task": "IMP-C", "name": "API Endpoint Validation", "verdict": "FAIL", "errors": 3, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-D.json", "task": "IMP-D", "name": "Config Key Validation", "verdict": "FAIL", "errors": 6, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-E.json", "task": "IMP-E", "name": "Module Activation Matrix", "verdict": "PASS", "errors": 0, "tag": "참고만, 재검증 필수"},
+      {"file": "IMP-F.json", "task": "IMP-F", "name": "Tech Stack Conflict", "verdict": "PASS", "errors": 0, "tag": "참고만, 재검증 필수"}
+    ],
+    "additional_files": [
+      {"file": "phase0_baseline.md", "description": "Phase 0 종합 보고서"},
+      {"file": "phase0_part1.py", "description": "Part I 검증 스크립트 (0-A~0-H)"},
+      {"file": "phase0_part2.py", "description": "Part II 검증 스크립트 (IMP-A~IMP-F)"}
+    ],
+    "summary": "v8은 PART2 v11.0.0 (1,821행) 기준. 14개 Phase 0 결과 (PASS 6/FAIL 8). v25.0.0 (5,252행)과 188% 차이. 스크립트 로직만 재사용, 기준 데이터 전면 교체 필요."
+  },
+
+  "v9_reuse": {
+    "target_version": "v20.4.0",
+    "target_lines": 3807,
+    "version_match": false,
+    "total_files": 38,
+    "ground_truths": {
+      "GT-1_paths": {
+        "file": "phase0/gt1_file_path_registry.json",
+        "entries": 111,
+        "structural_discrepancies": 3,
+        "summary": "111개 파일 경로 레지스트리. v25에서 COND 7카테고리 디렉토리 + PARL + specialization 경로 추가 예상"
+      },
+      "GT-2_artifact_chain": {
+        "file": "phase0/gt2_artifact_chain.json",
+        "stages": 18,
+        "summary": "18개 Stage I/O 체인. v25 line 참조 전면 갱신 + V1 Phase 요약 프롬프트 반영 필요"
+      },
+      "GT-3_quantities": {
+        "file": "phase0/gt3_quantity_index.json",
+        "entries": 248,
+        "summary": "248개 수량 항목. v25에서 COND 116개 모듈 수량, PARL 100 에이전트, Agent Specialization 등 수십 건 추가 예상"
+      }
+    },
+    "additional_artifacts": {
+      "phase-1": {"files_count": 9, "summary": "SOT 매핑/Gate 매핑/크로스섹션 인덱스 등 준비 산출물"},
+      "phase0-val": {"files_count": 6, "summary": "Phase 0 검증 보고서"},
+      "phase1": {"files_count": 12, "summary": "웨이브 1~3 검증 결과"},
+      "phase2": {"files_count": 2, "summary": "최종 보고서 + 연쇄 영향 맵"}
+    },
+    "summary": "v9는 PART2 v20.4.0 (3,807행) 기준. GT-1~GT-3 레지스트리 구조 재사용 가능. v20.4.0→v25.0.0 간 1,445행 차이(+38%)로 line 참조 및 수량 전면 갱신 필요."
+  },
+
+  "v10_reuse": {
+    "target_version": "v23.0.0",
+    "target_lines": 4293,
+    "version_match": false,
+    "total_files": 90,
+    "feature_registries": [
+      {"file": "D2.0-03_features.json", "source": "D2.0-03", "features": 122},
+      {"file": "D2.0-04_features.json", "source": "D2.0-04", "features": 183},
+      {"file": "D2.0-05_features.json", "source": "D2.0-05", "features": 164}
+    ],
+    "feature_registry_final": {
+      "file": "phase0-f/v10_feature_registry_final.json",
+      "total_features": 3940,
+      "extractable_true": 3390,
+      "extractable_false": 550,
+      "summary": "43개 SRC 전수 추출 3,940건. v25 delta zone 대응 추가 등록 필요"
+    },
+    "revalidation_reports": {
+      "v8_revalidation": {"file": "phase0-e/v10_v8_revalidation.json", "targets": 5, "gaps": 17},
+      "v9_revalidation": {"file": "phase0-e/v10_v9_revalidation.json", "targets": 4, "gaps": 10}
+    },
+    "summary": "v10은 PART2 v23.0.0 (4,293행) 기준. 3,940건 Feature Registry. v23→v25 (+959행, +22.3%)로 delta zone 상당. v24 delta(+102행) + v25 delta(+857행) 합산 재검증 필요."
+  },
+
+  "v25_delta": {
+    "line_count_change": {
+      "v23_to_v24": {"from": 4293, "to": 4395, "diff": 102, "percentage": "+2.4%"},
+      "v24_to_v25": {"from": 4395, "to": 5252, "diff": 857, "percentage": "+19.5%"},
+      "v23_to_v25_total": {"from": 4293, "to": 5252, "diff": 959, "percentage": "+22.3%"}
+    },
+    "v24_changelog": "v24.0.0: 메이커 에반 7개 개선안 — §1.3 공통 규칙 신설, §6.5.1 보안 체크리스트, schema_registry.toml, LangGraph 범위 제한, Hetzner+RunPod 대안. 추가 전용 (+102행).",
+    "v25_changelog": "v25.0.0: 12차 v11 적대적 검증 179건 수정 반영. v10 Phase 2 누락 항목 반영. V2-Phase 2 COND 106개 확장 (7카테고리). V3-Phase 2 PARL Agent Swarm + Agent Specialization. V1-Phase 3 v23 확장 59개 항목. +857행.",
+    "v25_major_delta_zones": [
+      {
+        "zone": "V1-Phase 3 v23 확장",
+        "approx_lines": "1816-1884",
+        "description": "v10 Phase 2 추가 59개 구현 항목 (교육/웰빙/금융/미디어/지식도구). HIGH 40+, MEDIUM 10+, LOW 3",
+        "impact": "V1 Phase 3 구현 항목 대폭 증가. Feature Registry 추가 등록 필요"
+      },
+      {
+        "zone": "V2-Phase 2 COND 106개 확장",
+        "approx_lines": "2497-2574",
+        "description": "v10 확장 COND 모듈 106개, 7개 카테고리 (CAT-A~G) 배치 구현 체계, config.v2.toml 키 목록",
+        "impact": "V2 범위 대폭 확장. 116개 COND 모듈 전수 인벤토리 필요"
+      },
+      {
+        "zone": "V3-Phase 2 PARL Agent Swarm",
+        "approx_lines": "3219-3256",
+        "description": "PARL 패턴: swarm_executor, reward_scheduler, decision_aggregator, pool_autoscaler. 최대 100 병렬.",
+        "impact": "V3 Agent 아키텍처 신규. Feature Registry 대규모 추가"
+      },
+      {
+        "zone": "V3-Phase 3 Agent Specialization",
+        "approx_lines": "3507-3519",
+        "description": "에이전트 자동 fork/특화/retire 프로토콜. fork_manager, performance_tracker.",
+        "impact": "V3 Agent 라이프사이클 신규 모듈"
+      },
+      {
+        "zone": "V1-Phase 2 v23 확장",
+        "approx_lines": "1724-1729",
+        "description": "진화 제어 정책, 한국어 불용어, 3종 TemplateSet, 알림 규칙 등 MEDIUM 4건",
+        "impact": "V1 Phase 2 구현 항목 추가"
+      },
+      {
+        "zone": "V1-Phase 4/5/6 v23 확장",
+        "approx_lines": "1945-2051",
+        "description": "UI 확장(마인드맵, 온보딩, 키보드), 인프라(FileOwnership, 그레이스풀 셧다운, 커넥션 풀링), 투자(교육/심리/감정 방지)",
+        "impact": "V1 후반 Phase 구현 항목 추가"
+      },
+      {
+        "zone": "V3-Phase 2 그룹별 의존성 + config 키",
+        "approx_lines": "3238-3327",
+        "description": "15개 그룹 의존성 패키지 테이블 (FIX-21) + config.v3.toml EXP 모듈 키 + EXP 공통 패턴 코드",
+        "impact": "V3 EXP 모듈 구현 명세 확장"
+      }
+    ],
+    "reverification_guidance": "v25는 v24 대비 +857행(+19.5%)으로 상당한 확장. v10 Feature Registry 3,940건 중 v23→v25 신규 기능(COND 106개, PARL, Agent Specialization, v23 확장 59건) 약 200~300건 추가 등록 필요. line 참조는 v24 기준에서 추가 offset 이동. GT-1~GT-3 전면 갱신 권장."
+  },
+
+  "summary": {
+    "total_reusable_artifacts": {
+      "v8": {"files": 17, "phase0_results": 14, "scripts": 2, "report": 1},
+      "v9": {"files": 38, "ground_truths": 3, "phase-1": 9, "phase0-val": 6, "phase1": 12, "phase2": 2, "other": 6},
+      "v10": {"files": 90, "feature_registries": 4, "revalidation": 2, "mapping": 30, "scripts": 20, "reports": 10, "other": 24}
+    },
+    "version_matched": 0,
+    "needs_reverification": "전수",
+    "version_gap_analysis": {
+      "v8_gap": "v11.0.0 → v25.0.0 (14 major, 1,821→5,252행, +188%)",
+      "v9_gap": "v20.4.0 → v25.0.0 (5 major, 3,807→5,252행, +38%)",
+      "v10_gap": "v23.0.0 → v25.0.0 (2 major, 4,293→5,252행, +22.3%)"
+    },
+    "reuse_priority": {
+      "high": "v10 Feature Registry (3,940건) — v25 delta +22.3%이나 대부분 추가 항목. 기존 3,940건 유지 + delta ~200-300건 추가 등록으로 재사용.",
+      "medium": "v9 GT-1~GT-3 레지스트리 — 구조 재사용 가능. line 참조 + 수량 데이터 전면 갱신 필요 (+38%).",
+      "low": "v8 Phase 0 스크립트 — 검증 로직만 재사용. 기준 데이터 전면 교체 (+188%)."
+    }
+  }
+}

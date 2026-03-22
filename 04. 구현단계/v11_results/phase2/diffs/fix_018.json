@@ -1,0 +1,17 @@
+{
+  "fix_id": "FIX-018",
+  "fg": "FG-H08",
+  "tier": 3,
+  "order": 18,
+  "severity": "HIGH",
+  "description": "보안 모델 보강: HMAC 타이밍 공격 방어, STRIDE 위협 매핑, OWASP LLM Top 10 매핑 추가",
+  "changes": [
+    {
+      "line": 3668,
+      "section": "§6.5.1 뒤",
+      "action": "§6.5.2 HMAC 보안, §6.5.3 STRIDE 매핑, §6.5.4 OWASP LLM Top 10 매핑 추가"
+    }
+  ],
+  "ripple_expected": ["§6.13 보안 항목 수", "변경이력"],
+  "applied_at": "2026-03-13"
+}

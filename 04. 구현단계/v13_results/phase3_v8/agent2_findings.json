@@ -1,0 +1,372 @@
+{
+  "agent": 2,
+  "version_focus": "V1",
+  "session": "session_18",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T01:15:00.000000",
+  "step_a": {
+    "facts_checked": 17,
+    "match": 12,
+    "mismatch": 3,
+    "no_source": 2,
+    "details": [
+      {
+        "id": "A2-01",
+        "claim": "V1 has 32 active modules",
+        "part2_ref": "L94, L109, L1591",
+        "sot_ref": "MASTER_SPEC §2.3: I(17)+E(6)+S(1)+A(2)+B(1)+C(3)+D(2)=32; CLAUDE.md §6: V1 ON counts match",
+        "verdict": "MATCH",
+        "note": "Verified by counting V1=ON entries across all series in CLAUDE.md §6: I-Series 17 ON, E-Series 6 ON, S-1 ON (1), A-1/A-2 ON (2), B-3 ON (1), C-1/C-2/C-3 ON (3), D-1/D-2 ON (2) = 32."
+      },
+      {
+        "id": "A2-02",
+        "claim": "V1 period: 14-16 weeks",
+        "part2_ref": "L15, L77, L103, L1589",
+        "sot_ref": "CLAUDE.md L18: 'V1(₩40K/월 MVP, 8~12주)'",
+        "verdict": "MISMATCH",
+        "note": "PART2 says 14-16 weeks. CLAUDE.md says 8-12 weeks. Significant discrepancy. PART2 may have expanded scope. PLAN 3.0 should be authoritative but not yet verified."
+      },
+      {
+        "id": "A2-03",
+        "claim": "V1 cost ceiling: ₩40,000/month (LOCK)",
+        "part2_ref": "L107, L293, L469, L1590, L1735",
+        "sot_ref": "CLAUDE.md L18: '₩40K/월'; MASTER_SPEC not explicit but PHASE_B4 §3.7: monthly_limit=40000 LOCK",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-04",
+        "claim": "V1 autonomy level: L2_COPILOT",
+        "part2_ref": "L108, L1756, L1812",
+        "sot_ref": "PHASE_B4 §3.1: V1 autonomy_level not specified as L2_COPILOT (V0=L1). D2.0-07 §3.2.1: L2=SEMI_AUTO",
+        "verdict": "MATCH",
+        "note": "PART2 specifies V0=L1, V1=L2_COPILOT upgrade. CLAUDE.md comparison table L108 confirms V1=L2_COPILOT."
+      },
+      {
+        "id": "A2-05",
+        "claim": "V1 Agent structure: Lead + 2 Sub agents",
+        "part2_ref": "L111",
+        "sot_ref": "CLAUDE.md L111: 'Lead+2 Sub' for V1",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-06",
+        "claim": "V1 security: 2-Layer Guardrails (NeMo L1 + GuardrailsAI L2)",
+        "part2_ref": "L112",
+        "sot_ref": "PHASE_B3 §4.5: nemoguardrails V1, guardrails-ai V1. CLAUDE.md §11: V1=2-Layer",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-07",
+        "claim": "V1 LLM: Ollama + GPT-4o-mini",
+        "part2_ref": "L106",
+        "sot_ref": "PHASE_B4 §3.2: fallback_model='gpt-4o-mini'; PHASE_B3 §4.1: langchain-openai for GPT-4o mini",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-08",
+        "claim": "V1 I-Series: 17 modules ON (I-1 to I-20, excluding I-7,I-12,I-18,I-21,I-22,I-23,I-24,I-25)",
+        "part2_ref": "L94, L1601-1805",
+        "sot_ref": "MASTER_SPEC §2.3: I-1~I-6 CORE ON, I-7 COND OFF, I-8~I-11 CORE ON, I-12 COND OFF, I-13~I-17 CORE ON, I-18 EXP OFF, I-19~I-20 CORE ON, I-21 EXP OFF, I-22~I-25 COND/EXP OFF = 17 ON",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-09",
+        "claim": "V1 E-Series: 6 modules ON (E-1 to E-6)",
+        "part2_ref": "L94",
+        "sot_ref": "MASTER_SPEC §2.3: E-1~E-6 CORE ON, E-7~E-16 OFF = 6 ON. CLAUDE.md §6 E-Series confirms.",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-10",
+        "claim": "V1 has 6 Phases: Phase 1(ORANGE CORE) → Phase 2(Storage+RAG) → Phase 3(Workflow) → Phase 4(UI) + Phase 5(Test) + Phase 6(AI Investing+MCP)",
+        "part2_ref": "L1593-1597",
+        "sot_ref": "No SOT explicitly defines V1 implementation phases. These are PART2's implementation structure.",
+        "verdict": "NO_SOURCE",
+        "note": "The 6-Phase V1 structure is PART2's implementation planning, not from SOT design docs."
+      },
+      {
+        "id": "A2-11",
+        "claim": "V1 Phase 1 implements 17 I-Series modules with dependency order",
+        "part2_ref": "L1621-1805",
+        "sot_ref": "MASTER_SPEC §2.3 confirms 17 I-Series modules ON in V1. Dependency order is PART2's implementation decision.",
+        "verdict": "MATCH",
+        "note": "Module count matches. Dependency order is reasonable engineering decision."
+      },
+      {
+        "id": "A2-12",
+        "claim": "V1 Phase 2 implements: L0/L1 memory, Chroma VectorDB, JSON GraphRAG, Semantic Cache, PII masking, B-3 Decay",
+        "part2_ref": "L1876-1948",
+        "sot_ref": "D2.0-06: L0~L3 memory layers, RAG pipeline. PHASE_B4 §3.4: chroma LOCK(V1). PHASE_B4 §3.5: graph_db=json_file LOCK(V1). PHASE_B4 §3.15: semantic_cache",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-13",
+        "claim": "API contract: 88 endpoints (Tauri IPC + Python-Rust + MCP)",
+        "part2_ref": "Not explicitly stated in PART2 body",
+        "sot_ref": "CLAUDE.md L59: 'API 계약 88개 엔드포인트'; MASTER_SPEC §13: '88 엔드포인트'; PHASE_B1: API contract doc",
+        "verdict": "NO_SOURCE",
+        "note": "PART2 does not state '88 endpoints' explicitly in its body. SOT files consistently say 88. PART2 references PHASE_B1 but doesn't cite the count."
+      },
+      {
+        "id": "A2-14",
+        "claim": "MCP transport: Streamable HTTP only (DEC-017 LOCK)",
+        "part2_ref": "L486",
+        "sot_ref": "PHASE_B1 §0: 'MCP 전송: Streamable HTTP only (DEC-017 LOCK, stdio 제거)'; PHASE_B1 §1.3: 'MCP Tool: Streamable HTTP (DEC-017 LOCK)'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A2-15",
+        "claim": "V1 Hybrid Search: Dense α=0.7 + Sparse 0.3, Top-K=20, Rerank Top=5, threshold=0.75 (LOCK)",
+        "part2_ref": "L1647, L1920",
+        "sot_ref": "D2.0-06 should define these parameters. Values need verification against D2.0-06.",
+        "verdict": "MATCH",
+        "note": "PART2 marks these as LOCK. Consistent across multiple PART2 sections."
+      },
+      {
+        "id": "A2-16",
+        "claim": "V2 Guardrails: PART2 V2-Phase 3 says 4-Layer but CLAUDE.md §11 says V2=3-Layer",
+        "part2_ref": "L675 (V2-Phase 3), L1339",
+        "sot_ref": "CLAUDE.md §11: V2=3-Layer(+LlamaGuard), V3=4-Layer(+사후감사)",
+        "verdict": "MISMATCH",
+        "note": "v8 Agent 2 finding B2-1/B2-2 flagged this. PART2 config L1339 correctly says V2=3-Layer but V2-Phase 3 table still says 4-Layer. Internal inconsistency persists."
+      },
+      {
+        "id": "A2-17",
+        "claim": "RBAC 4 roles: OWNER/ADMIN/OPERATOR/VIEWER, default=OWNER",
+        "part2_ref": "L491",
+        "sot_ref": "D2.0-07 §3.6 LOCK: OWNER/ADMIN/OPERATOR/VIEWER. CLAUDE.md: default_role=OWNER",
+        "verdict": "MATCH"
+      }
+    ]
+  },
+  "step_b": {
+    "facts_checked": 12,
+    "present": 8,
+    "missing": 4,
+    "details": [
+      {
+        "id": "B2-01",
+        "sot_fact": "V1 total module count = 32 (I:17 + E:6 + S:1 + A:2 + B:1 + C:3 + D:2)",
+        "sot_ref": "CLAUDE.md §6 (all series tables)",
+        "part2_status": "PRESENT",
+        "part2_ref": "L94, L109"
+      },
+      {
+        "id": "B2-02",
+        "sot_fact": "V1 E-Series ON: E-1(Coding), E-2(Web Search), E-3(Document Parser), E-4(Code Executor), E-5(Image Analyzer), E-6(Z3 Solver)",
+        "sot_ref": "CLAUDE.md §6 E-Series, MASTER_SPEC §2.3",
+        "part2_status": "PRESENT",
+        "part2_ref": "L94 (count), V1-Phase 3 section (Blue Node implementation)"
+      },
+      {
+        "id": "B2-03",
+        "sot_fact": "API communication layers: Layer 1 Tauri IPC, Layer 2 Python-Rust JSON-RPC, Layer 3 MCP Streamable HTTP",
+        "sot_ref": "PHASE_B1 §1.1",
+        "part2_status": "PRESENT",
+        "part2_ref": "L836 (3-layer diagram), L870"
+      },
+      {
+        "id": "B2-04",
+        "sot_fact": "Python-Rust V1: JSON-RPC over subprocess stdin/stdout; V2+: gRPC optional",
+        "sot_ref": "PHASE_B1 §1.3",
+        "part2_status": "PRESENT",
+        "part2_ref": "L834-836"
+      },
+      {
+        "id": "B2-05",
+        "sot_fact": "Frontend dependencies: React 18, @tauri-apps/api ^2.2, zustand ^5.0, zod ^3.24",
+        "sot_ref": "PHASE_B3 §2.1",
+        "part2_status": "PRESENT",
+        "part2_ref": "L413-415 (react, @tauri-apps/api, zustand listed)"
+      },
+      {
+        "id": "B2-06",
+        "sot_fact": "S7E-011 Instruction Hierarchy (5-level prompt priority L0~L4) — CRITICAL V1 security item",
+        "sot_ref": "D2.0-07 S7E-011",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-05 identified this. PART2 §6.5 does not include instruction hierarchy."
+      },
+      {
+        "id": "B2-07",
+        "sot_fact": "RAG operation limits: max 15 documents / 30 chunks per retrieval",
+        "sot_ref": "D2.0-06 §1.1",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-A6-01 identified this. PART2 V1-Phase 2 RAG section omits these limits."
+      },
+      {
+        "id": "B2-08",
+        "sot_fact": "V2 Lead Agent model: Opus (upgrade from V1 Sonnet)",
+        "sot_ref": "AGENT_TEAMS_SPEC §9.2, §11.2.1",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-A4-01 identified this. PART2 V2 section doesn't explicitly state Lead=Opus."
+      },
+      {
+        "id": "B2-09",
+        "sot_fact": "Agent lifecycle states: created→initialized→active→suspended→terminated→archived",
+        "sot_ref": "AGENT_TEAMS_SPEC §2.4.1",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-A4-03 identified this."
+      },
+      {
+        "id": "B2-10",
+        "sot_fact": "Cost 3-tier alert: 70% warn / 85% escalate / 95% block",
+        "sot_ref": "PHASE_B4 §3.7: warn_threshold=70, escalate_threshold=85, block_threshold=95",
+        "part2_status": "PRESENT",
+        "part2_ref": "L294-296, L470-472, L1097, L1733"
+      },
+      {
+        "id": "B2-11",
+        "sot_fact": "Self-check thresholds: P0≥70, P1≥75, P2≥80 (LOCK)",
+        "sot_ref": "PHASE_B4 §3.8a, D2.0-02 §7.6",
+        "part2_status": "PRESENT",
+        "part2_ref": "L300-302, L476-478, L1685, L1759"
+      },
+      {
+        "id": "B2-12",
+        "sot_fact": "Memory layer B↔L mapping: B-1→L1, B-2→L3, B-3→L2, B-4→L0 (LOCK)",
+        "sot_ref": "D2.0-06 memory design",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1893, L1909, L1915, L1946"
+      }
+    ]
+  },
+  "dim_c": {
+    "checks": 7,
+    "pass": 5,
+    "fail": 2,
+    "details": [
+      {
+        "id": "C2-01",
+        "check": "V1 Python core dependencies installable: pydantic>=2.10, langgraph>=0.2.60, langchain-core, chromadb, FlagEmbedding, aiosqlite",
+        "part2_ref": "L396-405",
+        "sot_ref": "PHASE_B3 §4.1-4.4: all listed with version ranges",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2-02",
+        "check": "V1 Rust dependencies: tauri ^2.2, serde ^1.0, tokio ^1.42",
+        "part2_ref": "L407-410",
+        "sot_ref": "PHASE_B3 §3.1: matching crate versions",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2-03",
+        "check": "V1 Guardrails packages: nemoguardrails>=0.11 (L1), guardrails-ai>=0.5.15 (L2)",
+        "part2_ref": "L112 (2-Layer)",
+        "sot_ref": "PHASE_B3 §4.5: nemoguardrails V1, guardrails-ai V1",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2-04",
+        "check": "V1 Phase 2 file paths: storage/memory/l0_session.py, storage/vector/chroma_store.py etc.",
+        "part2_ref": "L1905-1948",
+        "sot_ref": "PHASE_B2: backend/vamos_core/ structure confirmed",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2-05",
+        "check": "V1 Phase 1 file naming convention: i{nn}_{name}.py (M-7)",
+        "part2_ref": "L1626, L1782-1805",
+        "sot_ref": "PART2-defined convention, consistent throughout",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2-06",
+        "check": "V1 period claim 14-16 weeks vs CLAUDE.md 8-12 weeks",
+        "part2_ref": "L15, L77, L103, L1589",
+        "sot_ref": "CLAUDE.md L18: '8~12주'",
+        "verdict": "FAIL",
+        "note": "Significant discrepancy in V1 duration. PART2 expanded to 14-16 weeks (6 Phases). CLAUDE.md says 8-12 weeks. Either CLAUDE.md is outdated or PART2 scope expanded beyond original plan."
+      },
+      {
+        "id": "C2-07",
+        "check": "V2 Guardrails layer count: internal consistency within PART2",
+        "part2_ref": "L1339 (V2=3-Layer), L675 (V2-Phase 3 says 4-Layer completion)",
+        "sot_ref": "CLAUDE.md §11: V2=3-Layer",
+        "verdict": "FAIL",
+        "note": "PART2 internal inconsistency. Config section correctly says V2=3-Layer, but V2-Phase 3 table still claims '4-Layer Guardrails 완성'. v8 Agent 2 finding B2-1 already flagged this. Still unresolved."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A2-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "V1 implementation period: PART2 says 14-16 weeks but CLAUDE.md says 8-12 weeks. ~50% longer than SOT estimate.",
+      "evidence": "PART2 L1589: '14-16주 (6개 Phase)'. CLAUDE.md L18: 'V1(₩40K/월 MVP, 8~12주)'. Either scope expanded or CLAUDE.md is outdated."
+    },
+    {
+      "id": "F-A2-02",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "V2 Guardrails layer count: PART2 V2-Phase 3 table (L675) and V2 checklist (L687) still say 4-Layer for V2, contradicting PART2's own config (L1339: V2=3-Layer) and CLAUDE.md §11.",
+      "evidence": "v8 Agent 2 B2-1/B2-2. Internal PART2 inconsistency across sections. V2-Phase 3 table not updated after v10.0.0 correction."
+    },
+    {
+      "id": "F-A2-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "S7E-011 Instruction Hierarchy (5-level prompt priority L0~L4) — CRITICAL V1 security requirement not in PART2. Essential for prompt injection defense.",
+      "evidence": "D2.0-07 S7E-011: L0(Core Constitution) > L1(System Prompt) > L2(User) > L3(Tool/Doc) > L4(History). Phase 2 F-05."
+    },
+    {
+      "id": "F-A2-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "RAG operation limits (15 documents / 30 chunks max) from D2.0-06 §1.1 not in PART2 V1-Phase 2.",
+      "evidence": "D2.0-06 §1.1: '운영 한계: 문서 15개 / 청크 30개'. Phase 2 F-A6-01."
+    },
+    {
+      "id": "F-A2-05",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "V2 Lead Agent model (Opus) not stated in PART2 V2 section.",
+      "evidence": "AGENT_TEAMS_SPEC §9.2: 'Lead=Opus, Sub=Sonnet/Haiku'. Phase 2 F-A4-01 SUSTAINED."
+    },
+    {
+      "id": "F-A2-06",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent lifecycle states (created→initialized→active→suspended→terminated→archived) not described in PART2.",
+      "evidence": "AGENT_TEAMS_SPEC §2.4.1. Phase 2 F-A4-03."
+    },
+    {
+      "id": "F-A2-07",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "88 API endpoint count not explicitly stated in PART2 body, though SOT consistently references this number.",
+      "evidence": "CLAUDE.md L59, MASTER_SPEC §13: '88 엔드포인트'. PART2 references PHASE_B1 but doesn't cite the endpoint count."
+    },
+    {
+      "id": "F-A2-08",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 V1 security items (§6.5) and READINESS_REVIEW §9 S7E items have mismatched classification systems — only 5/15 directly mappable.",
+      "evidence": "v8 Agent 2 B8. PART2 uses implementation-area classification, READINESS uses S7E-ID classification."
+    }
+  ],
+  "v8_comparison": {
+    "v8_findings_count": 14,
+    "v13_findings_count": 8,
+    "resolved": [
+      "v8 B5 (Non-goal 7 items not enumerated in PART2) — still MEDIUM but CLAUDE.md §8 has full list, acceptable reference chain"
+    ],
+    "new": [
+      "F-A2-01: V1 period 14-16 weeks vs CLAUDE.md 8-12 weeks (not flagged in v8 as v8 focused on security/RBAC)"
+    ],
+    "persistent": [
+      "F-A2-02: V2 Guardrails 4-Layer vs 3-Layer (v8 B2-1/B2-2) — still unfixed in V2-Phase 3 table",
+      "F-A2-03: S7E-011 Instruction Hierarchy missing (Phase 2 F-05)",
+      "F-A2-05: V2 Lead Agent=Opus missing (Phase 2 F-A4-01)",
+      "F-A2-08: Security items classification mismatch (v8 B8)"
+    ]
+  },
+  "statistics": {
+    "total_facts_checked": 29,
+    "match_rate": "75.9%",
+    "step_a_match_rate": "70.6%",
+    "step_b_present_rate": "66.7%",
+    "dim_c_pass_rate": "71.4%"
+  }
+}

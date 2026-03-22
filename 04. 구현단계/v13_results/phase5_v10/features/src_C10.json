@@ -1,0 +1,1153 @@
+{
+  "agent": "C-10",
+  "source_files": [
+    {
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "abbrev": "MSTR",
+      "lines": 1902,
+      "path": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md"
+    },
+    {
+      "file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+      "abbrev": "IRGD",
+      "lines": 1256,
+      "path": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md"
+    },
+    {
+      "file": "VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+      "abbrev": "IRRV",
+      "lines": 765,
+      "path": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md"
+    },
+    {
+      "file": "VAMOS_V0_READINESS_FINAL_REVIEW.md",
+      "abbrev": "V0RD",
+      "lines": 743,
+      "path": "D:\\VAMOS\\docs\\sot\\VAMOS_V0_READINESS_FINAL_REVIEW.md"
+    },
+    {
+      "file": "CLAUDE.md",
+      "abbrev": "CLAUDE",
+      "lines": 701,
+      "path": "D:\\VAMOS\\docs\\sot\\CLAUDE.md"
+    }
+  ],
+  "features": [
+    {
+      "id": "MSTR-001",
+      "title": "IntentFrame 스키마 구현 (I-1 파서 출력)",
+      "description": "사용자 입력을 intent_id, trace_id, user_goal, task_type, domain_hint, constraints, risk_flags, ambiguity, required_artifacts 등으로 구조화하는 IntentFrame Pydantic 모델 구현",
+      "source": "MSTR §4.2",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.0-02에서 상세 정의, 여기서는 통합 참조"
+    },
+    {
+      "id": "MSTR-002",
+      "title": "EvidencePack 스키마 구현 (I-2 출력)",
+      "description": "evidence_pack_id, items(source_type/source_ref/excerpt/qod_score), coverage(sufficient/gaps), citations_ready 등 EvidencePack 모델 구현",
+      "source": "MSTR §4.3",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-003",
+      "title": "Decision 스키마 16필드 FREEZE 구현",
+      "description": "decision_id, policy_gate, approval_status(4값), cost_gate, routing, memory_plan, conclusion(ACCEPT/REJECT/HOLD/ESCALATE), locked=True 등 Decision 모델 구현",
+      "source": "MSTR §4.4",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-004",
+      "title": "상태 머신 S0~S8 구현",
+      "description": "S0_RECEIVED→S1_INTENT_PARSED→S2_EVIDENCE_READY→S3_DECISION_LOCKED→S4_EXECUTING→S5_OUTPUT_READY→S6_SELF_CHECKED→S7_MEMORY_COMMITTED→S8_DONE 상태 전이 및 타임아웃(S1=5s, S2=30s, S3=120s, S4=10s, S5=15s) 구현",
+      "source": "MSTR §4.5",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "core",
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-005",
+      "title": "5 Gate 시스템 구현 (PolicyGate/CostGate/ApprovalGate/EvidenceGate/SelfCheckGate)",
+      "description": "각 Gate의 위치, 결과값, 실패 시 동작 구현. PolicyGate(block/require_approval/mask/allow), CostGate(normal/downshift/split/stop), ApprovalGate(approved/denied), EvidenceGate(sufficient/insufficient), SelfCheckGate(PASS/WARN/FAIL)",
+      "source": "MSTR §4.6",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "core",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-006",
+      "title": "Self-check 임계값 구현 (P0:70, P1:75, P2:80)",
+      "description": "P0/P1/P2 위험등급별 self_check_score 임계값 검증 로직 구현 (LOCK)",
+      "source": "MSTR §4.6",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-007",
+      "title": "ResponseEnvelope 3단 출력 구현",
+      "description": "answer(summary/details/next_actions), evidence(coverage/items/qod), self_check(score/verdict/reasons/retry_allowed), decision_ref, audit 포함하는 최상위 출력 규격 구현",
+      "source": "MSTR §4.7",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "schema",
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-008",
+      "title": "성능 벤치마크 모니터링 구현",
+      "description": "단순 응답 ≤2초, 복합 응답 ≤10초, Self-check ≤1초, 동시 5요청 처리, tiktoken ≤50ms/1만토큰 벤치마크 측정 구현",
+      "source": "MSTR §4.8",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-009",
+      "title": "P0/P1/P2 도메인 분류 구현",
+      "description": "P0(Dev/Research/Productivity 기본활성), P1(Content/Quant 승인후활성), P2(Trading 세션별승인+자동OFF) 도메인 분류 및 승인 채널(A/B) 구현",
+      "source": "MSTR §5.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "core",
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-010",
+      "title": "NodeCapabilityProfile 구현",
+      "description": "node_id, required_tools, optional_tools, risk_class(low/med/high), cost_class(v0~v3), gates_required 필드를 가진 Blue Node 프로필 구현",
+      "source": "MSTR §5.3",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "schema",
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-011",
+      "title": "MCP Bridge Layer 구현 (DEC-017)",
+      "description": "Streamable HTTP 전송, TLS 필수, 도구 호출 30초 타임아웃, 스트리밍 120초, 재시도 최대 2회, auth_injection=07_gate 설정의 MCP 브릿지 구현",
+      "source": "MSTR §5.5",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-012",
+      "title": "MCP 서버 카탈로그 구현 (11개 서버)",
+      "description": "tavily, serpapi, e2b, pyodide, unstructured, pymupdf, clip, whisper, playwright, postgres, websocket 등 11개 MCP 서버 어댑터 구현",
+      "source": "MSTR §5.5",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-013",
+      "title": "MCP 보안 위협 방어 구현",
+      "description": "입력검증(ToolRegistry 스키마), 프롬프트 인젝션 방어(응답 지시문 필터링), 자격증명 격리(07 Gate 런타임 주입), 최소 권한, 감사로그 구현",
+      "source": "MSTR §5.5",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-014",
+      "title": "MCP 세션 관리 구현",
+      "description": "동시 세션 상한 max_concurrent_mcp=10, 세션 풀 TTL=300초, 미사용 세션 60초 idle 시 자동 종료",
+      "source": "MSTR §5.5",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-015",
+      "title": "TemplateSet 3종 구현 (TS_CORE/TS_WEB_RESEARCH/TS_CODE)",
+      "description": "일반 대화/요약, 웹 리서치/근거수집/인용, 코딩/디버깅/리팩토링 3가지 템플릿 세트 구현 (LOCK)",
+      "source": "MSTR §5.6",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-016",
+      "title": "노드 상한 관리 구현 (active_node_cap/candidate_node_cap)",
+      "description": "세션당 활성/후보 NODE 상한, 상한 도달 시 신규 후보 생성 금지/기존 NODE 재사용 로직 구현",
+      "source": "MSTR §5.7",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-017",
+      "title": "Brain Adapter Layer ConnectorResponse 구현",
+      "description": "output_text, evidence_summary, cost_used_estimate, warnings, tool_calls, trace_id, qod_hint 필드, extra='forbid' 설정의 ConnectorResponse 모델 구현",
+      "source": "MSTR §6.1",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "schema",
+      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-018",
+      "title": "ToolRegistry 스키마 구현 (MOD-006)",
+      "description": "tool_id, category(8종: browser.render/api.http/code.exec/llm.text/llm.vision/data.vector/storage.obj/logging), adapter_id, risk_class, cost_class, required_gates, outputs, enabled 필드 구현",
+      "source": "MSTR §6.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "schema",
+      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-019",
+      "title": "동적 모델 라우팅 구현 (5단계)",
+      "description": "입력분류→후보선택→비용/품질 최적화→게이트통과→폴백 5단계 라우팅 + Fallback Chain(gpt-4o→claude-sonnet→local-ollama→error) + Multi-Brain Failover(연속 3회 타임아웃 시 전환) 구현",
+      "source": "MSTR §6.3",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-020",
+      "title": "Prompt Cache Manager 구현",
+      "description": "Anthropic ephemeral cache(90%할인), OpenAI 1024+토큰 prefix 캐싱(50%할인), 응답 캐시 L0(인메모리 10분)→L1(Redis 1시간)→miss, Semantic Cache TTL(실시간5분/분석24시간/지식7일) 구현",
+      "source": "MSTR §6.4",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-021",
+      "title": "Rate Limit 구현",
+      "description": "일일 100K 토큰, API 분당 60회, Burst 10초 내 10회 초과 시 1분 쿨다운, 외부API 10회/분, 고비용모델 3회/분, 병렬실행상한 3(LOCK), 429 응답 시 지수백오프 구현",
+      "source": "MSTR §6.5",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-022",
+      "title": "Backup/Recovery 시스템 구현",
+      "description": "자동 백업 일 1회 02:00, 대상(SQLite+Chroma+KG+config), 보존(7일+4주+3월), 복원 CLI(vamos restore --date), 장애 복구 시나리오 5건 구현",
+      "source": "MSTR §6.6",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-023",
+      "title": "10계층 보안 아키텍처 구현",
+      "description": "UI/UX→Workflow→Decision→Memory→RAG→Brain Routing→Brain Adapter→Tool Execution→Infra→Config/Security 10계층, 상위→하위 호출만 허용(역방향 금지, 이벤트 기반 통지만)",
+      "source": "MSTR §6.8",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-024",
+      "title": "설정 우선순위 구현 (ENV > config.toml > default)",
+      "description": "환경변수 > 설정파일 > 코드 기본값 우선순위 설정 로더 구현 (LOCK)",
+      "source": "MSTR §6.9",
+      "priority": "HIGH",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-025",
+      "title": "JSON Structured 로깅 표준 구현",
+      "description": "필수 필드(timestamp ISO8601 UTC, level, module, event snake_case, trace_id, payload), 평문 금지, 민감정보 payload 포함 금지 로깅 구현 (LOCK)",
+      "source": "MSTR §6.10",
+      "priority": "HIGH",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-026",
+      "title": "5단계 Pipeline 구현 (Intake/Plan/Execute/Verify/Deliver)",
+      "description": "각 단계의 Gate 매핑(G0~G4), TEE Think-Execute-Evaluate 루프(P0=3회/P1=5회/P2=10회), Soft/Hard loop 규칙 구현 (LOCK)",
+      "source": "MSTR §7.1~7.8",
+      "priority": "CRITICAL",
+      "version": "V1",
+      "category": "workflow",
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-027",
+      "title": "LangGraph StateGraph 통합 구현",
+      "description": "Intake→Plan→[Gate Check]→Execute→Verify→Deliver 그래프, 외부 Workflow Engine 어댑터 규칙(Gate 선행, Checkpoint/Replay/Fork, 멀티에이전트 제약) 구현 (LOCK)",
+      "source": "MSTR §7.2",
+      "priority": "CRITICAL",
+      "version": "V1",
+      "category": "workflow",
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-028",
+      "title": "EVX-1~EVX-6 검증 체인 구현",
+      "description": "Code-as-Policy, Adversarial Verifier, Uncertainty Signal, Thought Buffer, Generate-Verify-Learn, Z3 Routing/Constraint Gate 6개 검증 체인 구현 (LOCK)",
+      "source": "MSTR §7.3",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "workflow",
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-029",
+      "title": "Circuit Breaker 구현 (CLOSED/OPEN/HALF-OPEN)",
+      "description": "연속 3회 실패→OPEN 자동 차단, 60초 후 HALF-OPEN 시도, P2 이상 자동복구 없이 승인 후만 HALF-OPEN 구현 (LOCK)",
+      "source": "MSTR §7.4",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "workflow",
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-030",
+      "title": "3단 출력 구현 (user_response/evidence_summary/log_report)",
+      "description": "최종 결과, 근거/요약(출처,QoD), 로그(trace_id,승인이벤트) 3단 구조 출력 구현 (LOCK)",
+      "source": "MSTR §7.6",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "workflow",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-031",
+      "title": "HITL (Human-In-The-Loop) 구현",
+      "description": "P2 승인, 불확실성(QoD<0.5), 모호 의도, 비용 초과 예상(80%+), 결과 검증 5가지 개입 시점 + 타임아웃(기본 30분, P2 무제한) 구현",
+      "source": "MSTR §7.9",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "workflow",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-032",
+      "title": "도구 승인 Allowlist 구현 (DEC-003)",
+      "description": "읽기전용/조회/로그→자동승인, 외부API/파일쓰기/코드실행/P2→명시적 확인 필요, 미등록 도구→기본 확인 필요 구현 (LOCK)",
+      "source": "MSTR §7.11",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-033",
+      "title": "대화 턴 상한 구현 (P0=5/P1=10/P2=20)",
+      "description": "P0/P1/P2별 대화 턴 상한 적용 로직 구현 (LOCK)",
+      "source": "MSTR §7.12",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-034",
+      "title": "4-Layer Guardrails 구현",
+      "description": "L1 NeMo(Intake 입력필터링), L2 Guardrails AI(Plan 정책검사), L3 LlamaGuard(Execute 출력안전성), L4 사후감사(Deliver 이후 NLI/편향) + 장애 시 복구(deny 기본값) 구현",
+      "source": "MSTR §7.13, §9.1",
+      "priority": "CRITICAL",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-035",
+      "title": "워크플로우 패턴 카탈로그 12건 구현",
+      "description": "Sequential, Parallel Fan-out, Map-Reduce, Router, Retry-with-Backoff, Saga, Pipeline, Observer, Mediator, Chain of Responsibility, State Machine, Event Sourcing 12개 패턴 구현",
+      "source": "MSTR §7.14",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "workflow",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-036",
+      "title": "4계층 메모리 구현 (L0/L1/L2/L3)",
+      "description": "L0 Session(7일), L1 Project(90일), L2 Long-term(무기한), L3 Procedural(무기한) 메모리 계층 + B-Series 매핑 구현",
+      "source": "MSTR §8.1~8.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "storage",
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-037",
+      "title": "B-2 Procedural Memory 파이프라인 구현",
+      "description": "playbook/workflow/template/routine 형태, Candidate(draft)→PolicyCheck(D7)→Approval→저장(write)→활성(active) 파이프라인, 위험/오류 시 즉시 비활성화 구현",
+      "source": "MSTR §8.2",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-038",
+      "title": "VectorStore 어댑터 인터페이스 구현 (LOCK)",
+      "description": "upsert/search/delete/get_by_id 4개 메서드, 설정 변경만으로 교체 가능, 비즈니스 로직 수정 금지 인터페이스 구현",
+      "source": "MSTR §8.3",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "storage",
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-039",
+      "title": "Semantic Cache 구현 (MOD-017)",
+      "description": "cosine_similarity ≥ 0.95 히트, V1=인메모리(LRU)/V2+=Redis, TTL 기본 24시간(변동 6시간), 소스 변경/QoD≤0.4 무효화, 수동 flush 구현",
+      "source": "MSTR §8.6",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-040",
+      "title": "RAG 6단계 파이프라인 구현 (LOCK)",
+      "description": "수집→쪼개기(300~500tok, overlap 50~100)→벡터화(BGE-M3)→저장→검색(BM25+Vector+Rerank)→생성, 운영한계(문서15개/프로젝트, 청크30개/문서), 재시도 max 3회 구현",
+      "source": "MSTR §8.7",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "storage",
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-041",
+      "title": "QoD 점수 체계 구현 (DEC-010/DEC-014)",
+      "description": "0.0~1.0 스케일, 가중치 공식(relevance 0.30+accuracy 0.25+freshness 0.25+completeness 0.20), 출처별 가중치(공식문서0.85/내부KB0.70/커뮤니티0.50/미분류0.30), 임계값(QoD<0.4→L2삽입금지, QoD<0.7→출력보류) 구현",
+      "source": "MSTR §8.8",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "storage",
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만. PLAN-3.0 5요소 공식이 정본(V1-006 참조)"
+    },
+    {
+      "id": "MSTR-042",
+      "title": "저장 정책 (Allow/Restrict/Deny) 구현",
+      "description": "Allow(요약/결과만), Restrict(마스킹 후 저장+TTL), Deny(모든 장기저장 불가/벡터삽입 절대금지), PII 마스킹(V1=정규식, V2+=NER) 구현",
+      "source": "MSTR §8.9",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-043",
+      "title": "RBAC 4역할 구현 (OWNER/ADMIN/OPERATOR/VIEWER)",
+      "description": "OWNER(L3,P2,₩266K), ADMIN(L2,P2,₩93K), OPERATOR(L1,₩40K), VIEWER(L0,₩0) 역할별 권한, 최대 자율 수준, P2 접근, 비용 한도 구현 (LOCK)",
+      "source": "MSTR §9.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-044",
+      "title": "Autonomy Level L0~L3 구현",
+      "description": "L0(FULL_MANUAL), L1(SUPERVISED 기본값), L2(SEMI_AUTO), L3(FULL_AUTO) + L3에서도 절대 불가 항목(Non-goal/RBAC자기상승/CostBudget자체변경/안전필터우회) 구현 (LOCK)",
+      "source": "MSTR §9.3",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-045",
+      "title": "PolicyCheck 구현",
+      "description": "결과(deny/restrict/allow), 호출위치(외부API직전/P2활성화직전/저장직전/비용체크), 검사항목(Non-goal/약관/P2재확인/민감정보/비용상한) 구현",
+      "source": "MSTR §9.4",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-046",
+      "title": "Approval 2단계 구현",
+      "description": "1단계 계획승인('무엇을 할지'+OPERATOR+), 2단계 실행승인('지금 실행할지'+ADMIN/OWNER), 승인 타임아웃 10분 미응답→자동거부 구현",
+      "source": "MSTR §9.5",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-047",
+      "title": "CostBudget 비용 상한 구현 (LOCK)",
+      "description": "V1(일₩1,300/월₩40,000/Mini90%+), V2(일₩3,100/월₩93,000/Mini60-70%+Main30-40%), V3(일₩8,900/월₩266,000/Main중심) 비용 상한 구현",
+      "source": "MSTR §9.6",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-048",
+      "title": "Downshift 구현 (80% warn/100% block)",
+      "description": "80% 도달→Mini 우선 강제(Main/Flagship 승인시만), 100% 도달→자동차단, 예산 알림 4단계(50%정보→80%경고노란→95%긴급Mini-only→100%차단빨간) 구현 (LOCK)",
+      "source": "MSTR §9.7",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "safety",
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-049",
+      "title": "7개 불변 구역 구현 (LOCK)",
+      "description": "safety_rules, cost_ceiling, approval_flow, non_goals, audit_format, data_retention, user_consent 7개 불변 구역 코드 레벨 보호 구현",
+      "source": "MSTR §9.9",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-050",
+      "title": "UI 상태 머신 구현 (UIS1~UIS6)",
+      "description": "UIS1_IDLE→UIS2_PROCESSING→UIS3_LOCKED→UIS4_RUNNING→UIS5_AWAIT_APPROVAL→UIS6_PRESENTING 상태 전이, 이벤트 기반(폴링 금지), 지연 최대 500ms 구현",
+      "source": "MSTR §10.4",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "ui",
+      "notes": "D2.0-08에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-051",
+      "title": "에러 메시지 매핑 구현 (입력/판단/실행 단계별)",
+      "description": "입력 단계(FM_ERR_FMT/SIZE/PII/ZERO), 판단 단계(OC_ERR_NONGOAL/P2_LOCK/COST/NO_ROUTE), 실행 단계(TL_ERR_TIMEOUT/403/PARSE, MC_ERR_LOW_QOD/CONFLICT) 에러 메시지 매핑 구현",
+      "source": "MSTR §10.5",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "ui",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-052",
+      "title": "Self-evo 롤백 메커니즘 구현",
+      "description": "자동 스냅샷, 이상 감지(QoD<0.70 3회/안전위반1회/사용자 명령), 부분 롤백(diff 역산), 전체 롤백, 재적용 잠금(동일 제안 14일 금지) 구현",
+      "source": "MSTR §11.5",
+      "priority": "MEDIUM",
+      "version": "V3",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "MSTR-053",
+      "title": "EventTypeRegistry 구현 (53+개)",
+      "description": "oc.*, wf.*, ui.*, mem.* 네임스페이스 53개+ 이벤트 타입 레지스트리 구현",
+      "source": "MSTR §12.2",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-054",
+      "title": "FailureCodeRegistry 구현 (20개)",
+      "description": "OC_I1~I5, POLICY_DENY, GT_ERR_COST_LIMIT, TOOL_TIMEOUT 등 20개 실패 코드 레지스트리 구현",
+      "source": "MSTR §12.3",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-055",
+      "title": "FallbackRegistry 구현 (13개) + Failure→Fallback 매핑 (20쌍)",
+      "description": "FB_ASK_CLARIFICATION~FB_RESTRICT_GENERAL_INFO 13개 폴백 + 20쌍 failure→fallback 매핑 구현",
+      "source": "MSTR §12.4~12.5",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-056",
+      "title": "LogEventSchema 구현 (7필드)",
+      "description": "event_type, producer, when, payload, severity, sinks, links 7필드 로그 이벤트 스키마 구현",
+      "source": "MSTR §12.6",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-057",
+      "title": "Tauri IPC Commands 72개 구현",
+      "description": "vamos:{category}:{action} 형태 72개 커맨드 — Core(15), Agent(15), Storage(18), Safety(19), UI(5) 구현",
+      "source": "MSTR §13.1",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "api",
+      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-058",
+      "title": "Python-Rust JSON-RPC 13개 메서드 구현",
+      "description": "langgraph.workflow.run, langgraph.stage.execute 등 13개 JSON-RPC 메서드 구현",
+      "source": "MSTR §13.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "api",
+      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-059",
+      "title": "AINV 투자 분석 시스템 통합",
+      "description": "83개 데이터소스, 96개 전략, 51% Gate(Win Rate≥51%/Sharpe≥1.0/Decay<30%), 5-Agent 구조, 법적 준수(Wash Sale/PDT/Uptick Rule) 투자 분석 시스템 구현",
+      "source": "MSTR §18",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "domain",
+      "notes": "VAMOS_AI_INVESTING_SPEC에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-060",
+      "title": "SDAR 5-Layer 파이프라인 구현 (I-25)",
+      "description": "Detection→Diagnosis→Prescription→Repair→Verification 5계층, AR-Level(AR-L0~AR-L4, 기본 AR-L2), NEVER_AUTO 10개 항목, 수리 액션 카탈로그(LOW5+MEDIUM5+HIGH4) 구현",
+      "source": "MSTR §19",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "core",
+      "notes": "VAMOS_SDAR_DESIGN_SPECIFICATION에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-061",
+      "title": "Agent Teams 위임 시스템 구현",
+      "description": "Lead Agent + Sub-Agents 위임 구조, 5가지 협업 패턴(Sequential/Parallel/Debate/Supervisor/Handoff), 최대 위임 깊이 3단계, HMAC 검증 구현",
+      "source": "MSTR §20",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "workflow",
+      "notes": "VAMOS_AGENT_TEAMS_SPEC에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "MSTR-062",
+      "title": "Monorepo 프로젝트 구조 스캐폴딩",
+      "description": "src/(React), src-tauri/(Rust), backend/vamos_core/(Python), shared/types/, config/, tests/ 모노레포 구조 + 타입 동기화(Python SOT→TS/Rust) 스캐폴딩 구현 (LOCK)",
+      "source": "MSTR §14",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "infra",
+      "notes": "PHASE_B2에서 상세 정의, 여기서는 참조만"
+    },
+    {
+      "id": "IRGD-001",
+      "title": "통신 계층 확정 — Python 백엔드 (V0-004)",
+      "description": "React UI ↔ Tauri IPC ↔ Rust Backend ↔ JSON-RPC stdin/stdout ↔ Python AI/ML 3-Layer 통신 구조 구현, STEP7 Node.js sidecar는 대안으로 격하",
+      "source": "IRGD §2.1.1",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-002",
+      "title": "BASE-1.3 24개 규칙 코드 매핑 구현",
+      "description": "Identity/Philosophy/Architecture/Non-goal(7개)/API ToS/P2승인/편향방지/정의/비용상한/Self-evo/메모리4계층/RAG순서/승인2단계/로깅/위계 총 24개 규칙의 코드 레벨 반영",
+      "source": "IRGD §2.2",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-003",
+      "title": "D2.1 스키마 → 3개 언어 코드 생성 (24개 스키마)",
+      "description": "DecisionSchema, LogEventSchema, EventTypeRegistry, PolicyCheckSchema, CostBudgetSchema 등 24개 스키마를 Python Pydantic v2, TypeScript Zod, Rust serde로 코드 생성",
+      "source": "IRGD §2.6",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-004",
+      "title": "config.v1.toml LOCK 값 배치 (22개)",
+      "description": "single_decision_lock=true, embedding.model=bge-m3, cost.monthly_limit=40000, semantic_cache.similarity_threshold=0.95, mcp.transport=streamable_http 등 22개 LOCK 설정값 배치",
+      "source": "IRGD §2.5",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-005",
+      "title": "V0 구현 대상 모듈 스켈레톤 (I-1~I-5 + I-19)",
+      "description": "I-1 Intent Detector(기본 의도파악), I-2 Context Builder(기본 RAG), I-3 Memory System(L0만), I-5 Decision Engine(단일결정+기본Gate), I-19 Approval Manager(HITL) 스켈레톤 구현",
+      "source": "IRGD §2.7",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-006",
+      "title": "approval_status enum 4값 통일 (V1-004)",
+      "description": "D7 SOT 기준 approved/denied/pending/expired 4개 enum 통일 구현",
+      "source": "IRGD §3.3.1",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "schema",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-007",
+      "title": "QoD 5요소 공식 통일 구현 (V1-006)",
+      "description": "PLAN-3.0 5요소 정본: Accuracy 0.30 + Relevance 0.25 + Completeness 0.20 + Safety 0.15 + Efficiency 0.10 통일 구현",
+      "source": "IRGD §3.3.2",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-008",
+      "title": "14개 보안 CRITICAL 항목 구현 (S7E)",
+      "description": "STRIDE 위협 모델링, OWASP Top 10, 지시 계층구조, PII 감지/마스킹, SQLCipher 암호화, 데이터 주권, Jailbreak 방어, Tool 호출 검증, 카나리 토큰 감지 등 14개 보안 항목",
+      "source": "IRGD §3.5",
+      "priority": "CRITICAL",
+      "version": "V1",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-009",
+      "title": "테스트 인프라 구축 (커버리지 80%+)",
+      "description": "스키마 100%, Core 80%+, Safety/Cost 100%, Memory/Storage 80%+, Workflow 80%+, 핵심경로 통합 100%, AC 검증 100% 테스트 인프라",
+      "source": "IRGD §3.6",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-010",
+      "title": "CI/CD 8-Stage 파이프라인 구축",
+      "description": "Dependencies→Linting→TypeCheck→UnitTests→IntegrationTests→SecurityScans→BuildArtifacts→CoverageReports 8단계 GitHub Actions CI/CD 구현",
+      "source": "IRGD §3.7",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-011",
+      "title": "Pydantic→Zod 자동 변환기 구현 (CC-007)",
+      "description": "Python Pydantic v2 → TypeScript Zod 스키마 자동 동기화 변환 스크립트 구현",
+      "source": "IRGD §6.6",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-012",
+      "title": "SQLite→PostgreSQL 마이그레이션 (V2-004)",
+      "description": "V1 SQLite에서 V2 PostgreSQL 16으로 데이터 마이그레이션 스크립트(Alembic), 행 수 일치/타입 변환/UUID 생성 검증",
+      "source": "IRGD §4.2.1",
+      "priority": "HIGH",
+      "version": "V2",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-013",
+      "title": "Chroma→Qdrant 벡터 마이그레이션 (V2-005)",
+      "description": "4-Phase 마이그레이션(Qdrant생성→재임베딩→검증→V1삭제), needs_reembedding=True 플래그, 하이브리드 검색 모드 구현",
+      "source": "IRGD §4.2.2",
+      "priority": "HIGH",
+      "version": "V2",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-014",
+      "title": "NetworkX→Neo4j 그래프 마이그레이션 (V2-006)",
+      "description": "JSON 그래프→Cypher 쿼리 매핑, Entity 유일성 제약, Relationship type 매핑, Property 검증",
+      "source": "IRGD §4.2.3",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "storage",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-015",
+      "title": "HMAC-SHA256 키 관리 프로토콜 구현 (CC-012)",
+      "description": "Agent Teams MessageBus HMAC-SHA256 서명, 키 생성/교환/갱신/검증 실패 처리 프로토콜 구현",
+      "source": "IRGD §6.7",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "safety",
+      "notes": ""
+    },
+    {
+      "id": "IRGD-016",
+      "title": "EventTypeRegistry agent.*/sdar.* 통합 등록 (CC-006)",
+      "description": "D2 EventTypeRegistry에 Agent Teams 16개 이벤트 + SDAR 이벤트 통합 등록",
+      "source": "IRGD §6.5",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "schema",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-001",
+      "title": "BLOCKER 해결 — I-모듈 번호 매핑표 추가 (BLK-1)",
+      "description": "PLAN 3.0 §2.3에 DESIGN 2.0 정본 I-모듈 번호(I-1~I-25) 매핑표 경고 추가, DESIGN 2.0이 정본임을 명시",
+      "source": "IRRV §2.1 BLK-1",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "doc_fix",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-002",
+      "title": "BLOCKER 해결 — P0 도메인 리스트 확정 (BLK-2)",
+      "description": "P0=Dev/System, Research, Productivity 3개 도메인 확정, NodeRegistry에 domain_name 값 설정",
+      "source": "IRRV §2.1 BLK-2",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-003",
+      "title": "BLOCKER 해결 — Storage 이벤트/실패 코드 등록 (BLK-3)",
+      "description": "D2.1-D2 EventTypeRegistry에 storage.* 5개 event_type + PII_LONGTERM_DENIED failure_code + FB_DENY_STORAGE fallback_id 등록",
+      "source": "IRRV §2.1 BLK-3",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "schema",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-004",
+      "title": "BLOCKER 해결 — 다운시프트 임계값 정본 통일 (BLK-4)",
+      "description": "D2.0-07 §4를 정본으로 선언: warn_threshold=80 LOCK, block_threshold=100 LOCK, §9에 일관성 주석 추가",
+      "source": "IRRV §2.1 BLK-4",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "doc_fix",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-005",
+      "title": "BLOCKER 해결 — 스키마 버전 v3.0.0 일괄 승격 (BLK-8)",
+      "description": "D2.1-D1~D8 전체 8개 스키마 문서 v3.0.0 통일 승격 + 내부 REF 크로스레퍼런스 업데이트",
+      "source": "IRRV §2.1 BLK-8",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "doc_fix",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-006",
+      "title": "V1 구현 순서 5-Phase 실행",
+      "description": "Phase1(ORANGE CORE 4주)→Phase2(Storage+Memory+Safety 4주)→Phase3(Blue Nodes+External Tools 4주)→Phase4(UI/UX+Workflow 4주)→Phase5(Integration+Test 4주) 순차 실행",
+      "source": "IRRV §5.2",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "workflow",
+      "notes": ""
+    },
+    {
+      "id": "IRRV-007",
+      "title": "V0 스캐폴딩 11단계 실행",
+      "description": "V0-S1(Monorepo)→S2(Tauri+React)→S3(Rust IPC)→S4(Python backend)→S5(config.toml)→S6(Pydantic코드생성)→S7(Zod코드생성)→S8(SQLite Alembic)→S9(Chroma)→S10(LogEvent JSONL)→S11(CLI기본)",
+      "source": "IRRV §5.1",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-001",
+      "title": "BLOCKER 해결 — PLAN vs DESIGN I-모듈 불일치 교정",
+      "description": "PLAN 3.0의 구 번호(I-7=안전, I-8=비용 등)를 DESIGN 2.0 정본 번호(I-7=Project/Session Manager, I-8=Policy Engine 등)로 교정, I-22~I-25 총 4개 PLAN 미수록 모듈 참조 추가",
+      "source": "V0RD PART 1 BLOCKER 1",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "doc_fix",
+      "notes": "IRRV-001과 동일 이슈, 여기서 상세 근거 제공"
+    },
+    {
+      "id": "V0RD-002",
+      "title": "P0/P1/P2 도메인 분류 PLAN 3.0 공식 추가",
+      "description": "PLAN 3.0에 P0(Dev/Research/Productivity), P1(Content/Quant 1회승인), P2(Trading 세션별승인) 공식 분류 추가로 교착상태 해소",
+      "source": "V0RD PART 1 BLOCKER 2",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "doc_fix",
+      "notes": "IRRV-002와 동일 이슈, 여기서 상세 근거 제공"
+    },
+    {
+      "id": "V0RD-003",
+      "title": "V1 HIGH 이슈 12건 해소 구현",
+      "description": "V1-001(I-Series 25개 정본), V1-016(I-21~I-25 정의), V1-002(E-15겸용), V1-003(S-5겸용), V1-008(38개DEFER 분류), V1-015(진입점), OC-2(QoD임계값), OC-5(한국어LLM), BN-12(이벤트네이밍), IF-21(강등규칙), CC-006(EventType), CC-007(스키마동기화) 12건 해소",
+      "source": "V0RD PART 3 §3.1",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-004",
+      "title": "V2 이슈 12건 해소 구현",
+      "description": "V2-003(Agent Teams FREEZE), V2-008(STEP7 TITLE_ONLY 상세화), V2-001(10-Layer 명칭), V2-002(SDAR활성화), V2-004~006(3대 마이그레이션), CC-004(Gate접두사), CC-012(HMAC), DEFER-AT-001(MessageBus), DEFER-AT-002(GroupChat), SF-54(GDPR) 12건 해소",
+      "source": "V0RD PART 3 §3.2",
+      "priority": "MEDIUM",
+      "version": "V2",
+      "category": "core",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-005",
+      "title": "UI/UX 코딩 — 핵심 레이아웃 4종 구현",
+      "description": "3-Column Fluid Layout, Builder View(Cockpit), Hologram View(타임라인+스트리밍+Glass HUD), CLI Interface(vamos run/approve/status/cost/memory) 4종 구현",
+      "source": "V0RD PART 4 §4.1.A",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "ui",
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+    },
+    {
+      "id": "V0RD-006",
+      "title": "UI/UX 코딩 — React 페이지 5개 구현",
+      "description": "Dashboard, Chat(Hologram View), Workflow(Builder View), Memory(L0~L3 탐색기), Settings 5개 React 페이지 구현",
+      "source": "V0RD PART 4 §4.1.B",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "ui",
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+    },
+    {
+      "id": "V0RD-007",
+      "title": "UI/UX 코딩 — React 컴포넌트 39개 구현",
+      "description": "Decision(3), Chat(6), Approval(3), Cost(5), Evidence(4), Memory(4), Node/Flow(4), Guardrails(3), Input(4), Navigation(3), 기타(5) 총 39개 컴포넌트",
+      "source": "V0RD PART 4 §4.1.C",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "ui",
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+    },
+    {
+      "id": "V0RD-008",
+      "title": "Custom Hooks 8개 + Zustand Stores 7개 구현",
+      "description": "Hooks: useTauriIPC/useDecision/useWorkflow/useStreaming/useCost/useApproval/useIPC/useConfig, Stores: appStore/decisionStore/costStore/agentStore/configStore/memoryStore/workflowStore",
+      "source": "V0RD PART 4 §4.1.D",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "ui",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-009",
+      "title": "i18n 국제화 구현",
+      "description": "react-i18next 설정, locales/ko-KR/ + locales/en-US/ 번역 파일, 하드코딩 텍스트 전면 금지",
+      "source": "V0RD PART 4 §4.1.E",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "ui",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-010",
+      "title": "72개 Tauri IPC 커맨드 핸들러 Rust 구현",
+      "description": "Core(15), Agent(15), Storage(18), Safety(19), UI(5) 5개 카테고리 72개 Rust 핸들러 구현",
+      "source": "V0RD PART 4 §4.2.A",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "api",
+      "notes": "MSTR-057과 동일, 여기서는 Rust 관점"
+    },
+    {
+      "id": "V0RD-011",
+      "title": "python_manager.rs 구현 (Python 프로세스 관리)",
+      "description": "Python 프로세스 스폰/헬스체크/재시작/stdin/stdout 파이프 관리 Rust 모듈 구현",
+      "source": "V0RD PART 4 §4.2.C",
+      "priority": "CRITICAL",
+      "version": "V0",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-012",
+      "title": "테스트 코딩 ~97개 구현",
+      "description": "Python Unit(~40), Rust Unit(~8), React Unit(~15), Integration(~13), E2E Playwright(~8), 커버리지 Python80%+/Rust60%+/React70%+ 테스트",
+      "source": "V0RD PART 4 §4.3",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-013",
+      "title": "CI/CD GitHub Actions 워크플로우 14개 구현",
+      "description": "quality-python/rust/react/schema, test-python/rust/react, coverage-report, build-tauri, release, security, build-docker(V2), deploy-v2(V2), deploy-v3(V3) 워크플로우",
+      "source": "V0RD PART 4 §4.4",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-014",
+      "title": "LangGraph StateGraph 5-Phase 파이프라인 코딩",
+      "description": "Intake→Plan→Execute→Verify→Deliver StateGraph 정의, Gate 통합 노드, Soft/Hard Loop 제어, Circuit Breaker 상태 관리 LangGraph 구현",
+      "source": "V0RD PART 4 §4.8",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "workflow",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-015",
+      "title": "이벤트/로깅 시스템 구현",
+      "description": "EventTypeRegistry(53+), FailureCodeRegistry(20), FallbackRegistry(13), Event Bus/Pub-Sub, JSON 구조화 로거(Python/Rust/TS 3언어) 구현",
+      "source": "V0RD PART 4 §4.9",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-016",
+      "title": "MCP 서버/클라이언트 코딩 7개",
+      "description": "MCP Bridge Layer, MCP Server, MCP Client, Pyodide/PyMuPDF/CLIP/Playwright MCP 래퍼 7개 구현",
+      "source": "V0RD PART 4 §4.7",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-017",
+      "title": "Multi-Brain Adapter 구현 (A-1)",
+      "description": "Ollama/GPT-4o/Claude/vLLM 통합 인터페이스, Failover(GPT-4o→Claude→Ollama 3-타임아웃 전환), 비용기반 라우터(V1=Mini90%+) 구현",
+      "source": "V0RD PART 4 §4.10",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "infra",
+      "notes": ""
+    },
+    {
+      "id": "V0RD-018",
+      "title": "멀티모달 UI 구현 (V1 핵심 7종)",
+      "description": "이미지 입력(CLIP), OCR(Tesseract+PyMuPDF), STT(Whisper 로컬), TTS(Edge TTS), 차트생성(Mermaid+Plotly), 문서생성(Markdown→PDF), 비디오분석(yt-dlp+Whisper) V1 핵심 멀티모달",
+      "source": "V0RD PART 4 §4.1.G",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "ui",
+      "notes": ""
+    },
+    {
+      "id": "CLAUDE-001",
+      "title": "B-Series 6개 모듈 구현 (Memory/Skill/Self-evo 자산)",
+      "description": "B-1(Skill Library), B-2(Procedural Memory), B-3(Memory Decay, V1 ON), B-4(Auto Curriculum Generator), B-5(RL-like Self Trainer), B-6(DSPy Prompt Optimizer) 6개 모듈",
+      "source": "CLAUDE §6 B-Series",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "core",
+      "notes": "MSTR에서 B-Series는 기억유형(B-1~B-4)으로 정의되나 CLAUDE에서는 별도 모듈 시리즈로 확장 정의"
+    },
+    {
+      "id": "CLAUDE-002",
+      "title": "C-Series 7개 Verifier/Reasoning 모듈 구현",
+      "description": "C-1(Logic Verifier V1 ON), C-2(Math Verifier V1 ON), C-3(Code Verifier V1 ON), C-4(Domain Simulator), C-5(Bayesian Belief Engine), C-6(RL Advisor), C-7(GNN Score Model) 7개 모듈",
+      "source": "CLAUDE §6 C-Series",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "core",
+      "notes": "C-1~C-3은 V1 ON, C-4~C-7은 V3"
+    },
+    {
+      "id": "CLAUDE-003",
+      "title": "D-Series 6개 Brain/Planner/RAG 모듈 구현",
+      "description": "D-1(Think Engine V1 ON), D-2(Multimodal Engine V1 ON), D-3(Long Horizon Planner), D-4(Personality/Tone Engine), D-5(General Brain Parallel), D-6(GraphRAG/Hybrid RAG) 6개 모듈",
+      "source": "CLAUDE §6 D-Series",
+      "priority": "HIGH",
+      "version": "V1",
+      "category": "core",
+      "notes": "D-1~D-2는 V1 ON, D-3~D-6은 V3"
+    },
+    {
+      "id": "CLAUDE-004",
+      "title": "WCAG 2.1 AA 접근성 구현",
+      "description": "키보드 전용 네비게이션, 고대비 모드, 스크린 리더 호환(V3), 폰트 크기 조절, 애니메이션 감소 모드(prefers-reduced-motion) 구현",
+      "source": "MSTR §10.7",
+      "priority": "LOW",
+      "version": "V3",
+      "category": "ui",
+      "notes": ""
+    },
+    {
+      "id": "CLAUDE-005",
+      "title": "AINV 투자 특화 안전 규칙 구현",
+      "description": "VaR>5% 자동경고+P2승인, 매매추천 100% 면책삽입, 금융 환각 자동탐지(PE/PBR검증), 레드팀 공격패턴DB 100+건, FOMO/패닉감지→15분 쿨다운 구현",
+      "source": "MSTR §9.8, §18.9",
+      "priority": "MEDIUM",
+      "version": "V1",
+      "category": "safety",
+      "notes": ""
+    }
+  ],
+  "statistics": {
+    "total_features": 105,
+    "by_source": {
+      "MSTR": 62,
+      "IRGD": 16,
+      "IRRV": 7,
+      "V0RD": 18,
+      "CLAUDE": 5
+    },
+    "by_priority": {
+      "CRITICAL": 28,
+      "HIGH": 42,
+      "MEDIUM": 30,
+      "LOW": 1
+    },
+    "by_version": {
+      "V0": 22,
+      "V1": 58,
+      "V2": 11,
+      "V3": 3
+    },
+    "by_category": {
+      "schema": 16,
+      "core": 16,
+      "safety": 14,
+      "infra": 19,
+      "workflow": 9,
+      "ui": 8,
+      "storage": 8,
+      "api": 3,
+      "doc_fix": 5,
+      "domain": 1
+    },
+    "duplicate_notes": "Multiple features tagged with 'D2.0-XX에서 상세 정의, 여기서는 참조만' to indicate they are detailed in D2.0 documents handled by C03-C05 agents. MSTR serves as the consolidated reference point.",
+    "extraction_coverage": "All 5 files read 100%. MSTR(1902 lines), IRGD(1256 lines), IRRV(765 lines), V0RD(743 lines), CLAUDE(701 lines = moved/index file)"
+  }
+}

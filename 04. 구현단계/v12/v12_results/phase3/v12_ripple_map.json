@@ -1,0 +1,72 @@
+{
+  "version": "v26.0.0",
+  "source_version": "v25.2.0",
+  "date": "2026-03-15",
+  "total_modifications": 279,
+  "line_delta": "+281 (5858 → 6139)",
+  "steps": [
+    {
+      "step": "S1",
+      "type": "구조 수정",
+      "count": 5,
+      "sections_affected": ["§6.12", "§4.P3", "§5.P2", "§7"],
+      "ripple": "없음 — 번호/참조 구조 정리만"
+    },
+    {
+      "step": "S2",
+      "type": "BLOCKER 삽입",
+      "count": 9,
+      "sections_affected": ["§3.P2", "§3.P4", "§4.P1", "§4.P2", "§4.P3"],
+      "ripple": "§6.10, §6.2, §6.7, §6.5, §6.1 보강 필요 → S6에서 처리"
+    },
+    {
+      "step": "S3",
+      "type": "HIGH 삽입",
+      "count": 78,
+      "sections_affected": ["§3.P2", "§4.P2", "§4.P3"],
+      "ripple": "§6 다수 섹션 참조 생성 → S5/S6에서 처리"
+    },
+    {
+      "step": "S4",
+      "type": "MEDIUM/LOW 삽입",
+      "count": 103,
+      "sections_affected": ["§4.P2", "§4.P3", "§5.P2", "§5.P3"],
+      "ripple": "§6 참조 패턴 동일"
+    },
+    {
+      "step": "S5",
+      "type": "참조 구체화",
+      "count": 42,
+      "sections_affected": ["§3.P2", "§3.P3", "§3.P4", "§3.P5", "§3.P6", "§6.1"],
+      "ripple": "없음 — 텍스트 교체만"
+    },
+    {
+      "step": "S6",
+      "type": "§6 내용 추가",
+      "count": 22,
+      "sections_affected": ["§6.1", "§6.7", "§6.8", "§6.10"],
+      "ripple": "S5 참조 구체화의 목적지 섹션 보강"
+    },
+    {
+      "step": "S7",
+      "type": "수치 갱신",
+      "count": 8,
+      "sections_affected": ["§1.1", "§6.3", "§6.13", "§7.3", "§7.4"],
+      "ripple": "없음 — 집계 수치만 갱신"
+    },
+    {
+      "step": "S8",
+      "type": "v10 마커 확인",
+      "count": 12,
+      "sections_affected": [],
+      "ripple": "수정 없음 — 검증만"
+    }
+  ],
+  "cross_references": {
+    "S2_triggers_S6": "BLOCKER 삽입 9건 중 §6 보강 필요 항목 → S6에서 22건으로 처리",
+    "S3S4_triggers_S5": "HIGH/MEDIUM 삽입 181건의 §6 참조 → S5에서 42건 구체화",
+    "S7_depends_on_S2S3S4": "수치 갱신은 삽입 완료 후 최종 카운트 반영"
+  },
+  "lock_values_verified": true,
+  "backup_sha256": "fc98b33250183f50869166188ddd24586dee2d4b724936374566bac9bc76a008"
+}

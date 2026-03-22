@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "task": "[-1C] 의도적 추가/SOURCE_CONFLICT 허용 목록",
+    "created": "2026-03-07",
+    "source": "VAMOS_구현가이드_PART2_구현단계.md (v20.4.0, 3807줄)",
+    "total_html_comments": 37
+  },
+
+  "path_additions": [
+    {
+      "path": "rpc/",
+      "line": 95,
+      "tag": "NOTE (XREF-V0-12)",
+      "reason": "PHASE_B2 정본에 rpc/ 미명시. Tauri↔Python 통신에 기능적 필요로 추가"
+    },
+    {
+      "path": "data/",
+      "line": 103,
+      "tag": "NOTE (XREF-V0-10)",
+      "reason": "CLAUDE.md 기준 추가. PHASE_B2 정본에는 명시적 data/ 미포함, 실무 필요로 추가"
+    },
+    {
+      "path": "logs/",
+      "line": 104,
+      "tag": "NOTE",
+      "reason": "CLAUDE.md 기준 추가. PHASE_B2 정본에는 명시적 logs/ 미포함, 실무 필요로 추가"
+    }
+  ],
+
+  "source_conflicts": [
+    {
+      "id": "SC-01",
+      "location": "§2 V0 활성 모듈",
+      "line": 59,
+      "conflict": "§2.8=6개(I-1~I-5+I-19) vs §2.7=5개(I-4 미포함)",
+      "resolution": "5개 채택",
+      "rationale": "§2.7 상세 테이블이 더 구체적"
+    },
+    {
+      "id": "SC-02",
+      "location": "§config L2 TTL",
+      "line": 159,
+      "conflict": "B4=\"indefinite\" vs BASE-1.3=\"영구\"",
+      "resolution": "\"indefinite\"",
+      "rationale": "동일 의미, B4 리터럴 채택"
+    },
+    {
+      "id": "SC-03",
+      "location": "§config semantic_cache TTL",
+      "lines": [194, 369],
+      "conflict": "B4=\"3600\" vs D2.0-06=\"86400\"",
+      "resolution": "86400",
+      "rationale": "DESIGN 2.0 > PHASE_B 원칙"
+    },
+    {
+      "id": "SC-04",
+      "location": "§STEP-5 메모리 계층",
+      "line": 1021,
+      "conflict": "D2.0-06=4계층(L0~L3) vs S7D=5계층(+L4)",
+      "resolution": "4계층 LOCK",
+      "rationale": "L4 Archive는 V2+ 확장 옵션"
+    },
+    {
+      "id": "SC-05",
+      "location": "V1-Phase 2 B-3",
+      "line": 1466,
+      "conflict": "D2.0-01 §5.10 B-3=\"Memory Decay\" vs §8.4 B-3=\"Deep Reflection\"",
+      "resolution": "§5.10 LOCK (Memory Decay)",
+      "rationale": "§8.4는 DEPRECATE 레거시"
+    },
+    {
+      "id": "SC-06",
+      "location": "§6.3.1 Circuit Breaker",
+      "line": 1540,
+      "conflict": "D2.1-D5/D7=300s vs D2.0-05 §4.4=60s",
+      "resolution": "60s LOCK",
+      "rationale": "DESIGN 2.0 LOCK > Schema"
+    },
+    {
+      "id": "SC-07",
+      "location": "§UI Hooks/Stores 출처",
+      "lines": [1590, 1591],
+      "conflict": "기존=\"D2.0-08\" vs 실제=CLAUDE.md §14/PHASE_B2",
+      "resolution": "CLAUDE.md §14",
+      "rationale": "출처 정정"
+    },
+    {
+      "id": "SC-08",
+      "location": "§6.9 I-25 명칭",
+      "line": 1892,
+      "conflict": "D2.0-01=\"Self-Directed Agent Runtime\" vs SDAR_SPEC=\"Self-Diagnosis and Auto-Repair\"",
+      "resolution": "SDAR_SPEC",
+      "rationale": "전문 LOCK 채택"
+    },
+    {
+      "id": "SC-09",
+      "location": "§6.7 협업 패턴",
+      "line": 2042,
+      "conflict": "§5=5개 vs §7.1 enum=6개(HYBRID 포함)",
+      "resolution": "6개",
+      "rationale": "§7.1 enum(코드 생성 기준)"
+    },
+    {
+      "id": "SC-10",
+      "location": "§6.2.1 IPC 핸들러 수",
+      "line": 2812,
+      "conflict": "PHASE_B1 §5.1=47개 vs CLAUDE.md/B1 changelog=72개",
+      "resolution": "72개",
+      "rationale": "CLAUDE.md 정본 채택. B1 §5.1 내부 자기모순(상세=47, changelog=72)"
+    },
+    {
+      "id": "SC-11",
+      "location": "§approval_status enum",
+      "line": 3599,
+      "conflict": "CLAUDE.md=4개(+pending+expired) vs D2.1-D7 DN-014=2개(approved/denied)",
+      "resolution": "2개",
+      "rationale": "D2.1-D7 SOT 채택. 4값은 ApprovalSchema.status 용도"
+    },
+    {
+      "id": "SC-12",
+      "location": "§L0 TTL",
+      "line": 1013,
+      "conflict": "기존 30일 vs CLAUDE.md §15=\"7일(최대30일)\"",
+      "resolution": "7일(최대30일)",
+      "rationale": "RESOLVED: CLAUDE.md §15 기준. D2.0-06도 수정 완료"
+    }
+  ],
+
+  "source_conflict_additional_lines": {
+    "description": "SC 테이블(§7.5.5)에 등재된 12건 외, PART2 본문의 SOURCE_CONFLICT HTML 주석이 2개 라인 추가 존재 (SC-07, SC-03 중복 라인)",
+    "SC-03_duplicate": { "line": 369, "note": "V0-STEP-5에서 동일 SC-03 반복" },
+    "SC-07_second": { "line": 1591, "note": "Zustand Stores — SC-07과 동일 건" }
+  },
+
+  "xref_notes": [
+    {
+      "id": "XREF-V0-10",
+      "line": 103,
+      "subject": "data/ 디렉토리",
+      "description": "CLAUDE.md 기준 추가. PHASE_B2 정본에 미포함"
+    },
+    {
+      "id": "XREF-V0-12",
+      "line": 95,
+      "subject": "rpc/ 디렉토리",
+      "description": "PHASE_B2 정본에 미명시. Tauri↔Python 통신에 기능적 필요로 추가"
+    },
+    {
+      "id": "XREF-V0-18",
+      "line": 1121,
+      "subject": "Config 13 vs 17 섹션",
+      "description": "V0는 B4 17섹션 중 13섹션만 활성. [blue_nodes],[ui],[rate_limit],[guardrails]는 V1+ 추가"
+    },
+    {
+      "id": "XREF-V0-19",
+      "line": 2879,
+      "subject": "CI/CD 워크플로우 구조",
+      "description": "PHASE_B6 정본은 ci.yml 단일 통합. PART2는 역할별 분리 표기"
+    },
+    {
+      "id": "XREF-V0-22",
+      "line": 443,
+      "subject": "Pydantic 모델 25개 vs 33개",
+      "description": "V0 서브셋 25개. PHASE_B2 정본은 33개. V1에서 확장"
+    },
+    {
+      "id": "XREF-S6-05",
+      "line": 3152,
+      "subject": "SDAR State Machine 7상태",
+      "description": "SDAR_SPEC §7은 S0~S6(6+1). ESCALATED는 전이 종료 상태. 편의상 7상태 표기"
+    },
+    {
+      "id": "XREF-S6-06",
+      "line": 3049,
+      "subject": "AI Investing 인프라 테이블",
+      "description": "AI_INVESTING_SPEC §14 원본 14항목을 PART2에서 카테고리별 재구성. 항목 순서 상이"
+    }
+  ],
+
+  "freeze_snapshots": [
+    {
+      "line": 596,
+      "schema": "D2.1-D2:DecisionSchema:v3.0.0:18fields:2026-03-03"
+    },
+    {
+      "line": 602,
+      "schema": "CLAUDE.md:ResponseEnvelope:v1.0:5fields:2026-03-03"
+    },
+    {
+      "line": 607,
+      "schema": "D2.0-02:IntentFrame:v1.0:10fields:2026-03-03"
+    },
+    {
+      "line": 611,
+      "schema": "D2.0-02:EvidencePack:v1.0:6fields:2026-03-03"
+    }
+  ],
+
+  "resolved": [
+    {
+      "line": 1013,
+      "subject": "L0 TTL",
+      "resolution": "CLAUDE.md §15=\"7일(최대30일)\" 기준. SC-12와 동일"
+    },
+    {
+      "line": 1632,
+      "subject": "Coverage 달성 기준",
+      "resolution": "PHASE_B6 v1.0.2 PH-11 기준. Rust 60%→80%, React 70%→80% 통일"
+    }
+  ],
+
+  "phase2a_fixes": [
+    { "id": "FIX-05", "line": 3054, "subject": "vectorbt 조건부 ADOPT 정정" },
+    { "id": "FIX-07", "lines": [1579, 1580, 1581], "subject": "UI 레이아웃 정본 §2.1/§3 정정" },
+    { "id": "FIX-08", "line": 1589, "subject": "컴포넌트 레지스트리 정본 §10.4 정정" },
+    { "id": "FIX-09", "line": 1594, "subject": "CLI policy 명령 추가" },
+    { "id": "FIX-10", "line": 2797, "subject": "FailureCodes 정본 D2.0-08 §7 병기" },
+    { "id": "FIX-11", "line": 3701, "subject": "BLUE_NODES=3 / TOOLS=5 별도 메트릭 정정" }
+  ],
+
+  "other_notes": [
+    {
+      "line": 104,
+      "tag": "NOTE",
+      "subject": "logs/ 디렉토리 추가 (XREF 번호 없음)"
+    },
+    {
+      "line": 269,
+      "tag": "PHASE_B3",
+      "subject": "langchain-community: Ollama 래퍼 ChatOllama 필수"
+    },
+    {
+      "line": 271,
+      "tag": "PHASE_B3",
+      "subject": "aiosqlite: async SQLite 접근 필수"
+    },
+    {
+      "line": 275,
+      "tag": "L-3",
+      "subject": "FlagEmbedding (bge-m3) BAAI 공식 라이브러리 채택"
+    },
+    {
+      "line": 2851,
+      "tag": "NOTE",
+      "subject": "React Unit 테스트 ~15 = 필수 9(B5) + 확장 6"
+    }
+  ],
+
+  "summary": {
+    "source_conflicts_total": 12,
+    "source_conflicts_all_resolved": true,
+    "xref_notes_total": 7,
+    "freeze_snapshots_total": 4,
+    "resolved_total": 2,
+    "phase2a_fixes_total": 6,
+    "path_additions_total": 3,
+    "other_notes_total": 5
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "phase": "0-E",
+    "conversation": 18,
+    "task": "V9 산출물 1:1 재검증",
+    "generated_date": "2026-03-09",
+    "principle": "V9 산출물을 v10_merged_features.json(3943개)과 1:1 대조. V9는 PART2 내부 정합성 검증, V10은 기능 항목 완전성 검증",
+    "input_files": {
+      "v10_merged": "v10_results/phase0-d/v10_merged_features.json (3943 features)",
+      "v9_sot_mapping": "v9_results/phase-1/v9_sot_mapping.json",
+      "v9_gt1_registry": "v9_results/phase0/gt1_file_path_registry.json",
+      "v9_phase1_report": "v9_results/phase1/phase1_final_report.md"
+    }
+  },
+  "revalidation_results": [
+    {
+      "target": "1. V9 SOT 매핑 (v9_sot_mapping.json)",
+      "v9_file": "v9_results/phase-1/v9_sot_mapping.json",
+      "v9_claim": "43개 SOT 파일 전수 매핑, part2_references 488건, files_missing_on_disk=0",
+      "v10_questions": {
+        "Q1": {
+          "question": "43개 파일 전수 매핑이 맞는가? (Phase 0-C에서 읽은 파일과 1:1 대조)",
+          "answer": "YES — 전수 일치",
+          "detail": "V9 _meta.total_sot_files_per_7_6=43, files_found_on_canonical=43, files_missing_on_disk=0. V10 Phase 0-C에서도 동일한 43개 SOT 파일을 읽어 12개 v10_src_C*.json을 생성함. 그룹 분류(A_design=20, B_phase_b=7, C_spec=5, D_step7=5, E_beginner=1, F_claude_md=1, G_guides_reviews=4)도 합산 43 확인.",
+          "gap": null
+        },
+        "Q2": {
+          "question": "part2_references 수(488건)와 v10의 기능 항목 수 간 상관 확인",
+          "answer": "상관 있으나 직접 비교 불가 + 수치 불일치 발견",
+          "detail": "V9 _meta.total_part2_references=488이나, 실제 unique 라인 수=490(2건 차이), raw sum=526(중복 참조 포함). 488건은 'PART2의 어느 줄이 어떤 SOT 파일을 참조하는가'이고, V10의 3943개는 'SOT에서 추출한 구현 기능 항목 수'이므로 단위가 다름. PART2 참조 488줄이 3943개 기능을 모두 커버하는지는 V9가 검증하지 않음.",
+          "gap": "GAP-SOT-Q2: _meta 488 vs 실제 unique 490 (2건 차이). 또한 488건은 PART2→SOT 방향 참조이고, V10의 3943개 기능이 PART2에서 모두 언급되는지(SOT→PART2 역방향)는 미검증"
+        },
+        "Q3": {
+          "question": "references가 0건인 SRC 파일이 있는가? → 있으면 PART2에 해당 파일 내용이 미반영",
+          "answer": "8개 파일에 part2_references 키 자체가 부재",
+          "detail": "다음 8개 SOT 파일에 part2_references 배열이 존재하지 않음: (1) VAMOS_STEP7_AE, (2) VAMOS_STEP7_FI, (3) VAMOS_STEP7_JM, (4) VAMOS_STEP7_NP, (5) VAMOS_STEP7_SUPPLEMENT — 이상 STEP7 시리즈 5개, (6) BEGINNER_GUIDE, (7) PART1_GUIDE, (8) PART2_GUIDE. STEP7 시리즈 5개에서만 V10이 1544개 기능을 추출함 (STEP7_A-E=629, STEP7_F-I=366, STEP7_J-M=283, STEP7_N-P=203, STEP7_보강=63). 이 파일들이 PART2에서 직접 참조되지 않으므로, STEP7에서 추출된 1544개 기능 중 PART2에 미반영된 항목이 존재할 수 있음.",
+          "gap": "GAP-SOT-Q3: STEP7 5개 파일(1544개 기능 항목의 원천)이 PART2에서 직접 참조되지 않음. BEGINNER_GUIDE(30개 기능), PART1_GUIDE, PART2_GUIDE도 미참조. 총 8개 미참조 파일에서 추출된 기능이 PART2 구현 가이드에 반영되어 있는지 별도 확인 필요"
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-SOT-1: part2_references 수 불일치 — _meta=488, 실제 unique=490, raw sum=526",
+        "GAP-SOT-2: 8개 SOT 파일 PART2 미참조 — STEP7 5개(1544 기능), BEGINNER(30 기능), PART1_GUIDE, PART2_GUIDE",
+        "GAP-SOT-3: SOT→PART2 역방향 검증 미수행 — V9는 PART2→SOT 방향만 검증. 3943개 기능 중 PART2에 명시적으로 배정되지 않은 항목 식별 필요"
+      ]
+    },
+    {
+      "target": "2. V9 GT-1 파일 경로 레지스트리 (gt1_file_path_registry.json)",
+      "v9_file": "v9_results/phase0/gt1_file_path_registry.json",
+      "v9_claim": "PART2+PHASE_B2의 파일 경로 정합성 검증. 구조적 불일치 3건(SD-01~SD-03) 발견",
+      "v10_questions": {
+        "Q1": {
+          "question": "V9 '파일 경로 정합성'과 V10 '기능 항목 존재 여부'는 다른 관점. 차이 확인",
+          "answer": "확인 — 완전히 다른 관점",
+          "detail": "V9 GT-1은 'PART2에 적힌 파일 경로가 PHASE_B2 프로젝트 구조와 일치하는가'를 검증함. 예: src/App.tsx가 PHASE_B2 §3.1에 존재하는가. V10은 '구현해야 할 기능 항목이 빠짐없이 추출되었는가'를 검증함. GT-1의 파일 경로 매칭은 V10의 기능 목록 완전성과 직교하는 관점임.",
+          "gap": null
+        },
+        "Q2": {
+          "question": "GT-1이 발견한 구조적 불일치 3건(SD-01~SD-03)이 V10 기능 추출에 영향을 미치는가",
+          "answer": "간접 영향 있음",
+          "detail": "SD-01(단일 파일 vs 서브디렉토리 구조): i1_intent, i2_evidence 등 5개 모듈의 물리적 구조가 불명확하면 해당 모듈의 기능 항목을 구현 파일에 매핑할 때 혼란 발생. SD-02(i1_ vs i01_ 명명 불일치): 기능 추출에는 무영향이나 구현 시 파일명 결정에 영향. SD-03(V2/V3 modules/ 디렉토리 미정의): V2+ 전용 모듈 23개(I-07~I-25, A-4 등)의 물리적 위치가 PHASE_B2에 미정의. 이들 모듈의 기능이 V10에서 추출되었으나 구현 위치가 불명확.",
+          "gap": "GAP-GT1-1: SD-01/SD-03의 구조적 모호성이 V10 Phase 1(Phase 배정) 시 모듈→파일 매핑에 장애. 선행 해결 권고"
+        }
+      },
+      "revalidation_verdict": "CONFIRMED_WITH_NOTE",
+      "gaps": [
+        "GAP-GT1-1: 파일 경로 정합성(V9)과 기능 완전성(V10) 직교 확인. 단, SD-01/SD-03 미해결이 V10 Phase 배정에 간접 영향"
+      ]
+    },
+    {
+      "target": "3. V9 Phase 1 최종 보고 (phase1_final_report.md)",
+      "v9_file": "v9_results/phase1/phase1_final_report.md",
+      "v9_claim": "6개 관점(A~F), 877 checks, BLOCKER 0건, REAL_ERROR 26건(고유 22건), HIGH 9건",
+      "v10_questions": {
+        "Q1": {
+          "question": "877 checks에서 'Feature Coverage' 관련 체크가 있었는가?",
+          "answer": "NO → GAP_FOUND",
+          "detail": "V9의 6개 관점: v9-A(의존성 순서 156건), v9-B(파일 경로 80건), v9-C(구현 가능성 166건), v9-D(누적 산출물 119건), v9-E(수량 일관성 248건), v9-F(외부 의존성 108건). 이 중 '전체 기능 목록이 완전한가' 또는 '요구사항 대비 기능 커버리지가 충분한가'를 검증하는 관점은 없음. V9 scope_definition에 '완전성'이 언급되나 이는 'PART2 내부 완전성(누락 항목, 미참조 산출물)'이지 '외부 요구사항 대비 기능 커버리지'가 아님. 'Feature Coverage', '기능 커버리지', '기능 목록 완전성' 등의 키워드로 전수 검색 결과 0건.",
+          "gap": "GAP-PH1-1: Feature Coverage 관점 전면 부재. V9는 PART2 내부 정합성만 검증. '구현해야 할 기능이 빠짐없이 나열되어 있는가'는 V10이 최초로 시도하는 검증"
+        },
+        "Q2": {
+          "question": "V9 REAL_ERROR 26건 중 V10 기능 추출에 영향을 미치는 항목이 있는가",
+          "answer": "YES — 일부 영향",
+          "detail": "RE-A-001(LogEventSchema 필드명 혼재): V10 FT-SCHEMA에서 LogEventSchema 관련 기능 추출 시 어느 필드명이 정확한지 혼란. 실제 v20.2.0에서 수정됨(D2.1-D2 §4.2 기준). RE-A-002(GDPR '삭제' 누락): FT-SEC에서 GDPR 관련 기능이 불완전할 수 있음. C-V1-002(LOCK 제약 체계적 부재): LOCK 태그 25개를 v10이 감지했으나, V1 테이블 형식에서의 LOCK 미기재로 인해 일부 LOCK 항목이 누락되었을 수 있음. C-V3-001(V3-Phase2 39개 모듈 상세 명세 부족): V3 기능 추출 332건의 정확도에 영향.",
+          "gap": "GAP-PH1-2: V9 REAL_ERROR 중 4건(RE-A-001, RE-A-002, C-V1-002, C-V3-001)이 V10 기능 추출 정확도에 영향. v20.2.0~v20.4.0에서 일부 수정되었으나 C-V1-002, C-V3-001은 미해결"
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-PH1-1: Feature Coverage 관점 전면 부재 — V9 877 checks 중 기능 커버리지 검증 0건. V10이 최초 시도",
+        "GAP-PH1-2: V9 REAL_ERROR 4건이 V10 기능 추출 정확도에 잠재 영향 (LogEventSchema, GDPR, LOCK 미기재, V3 명세 부족)",
+        "GAP-PH1-3: V9 검증 범위 한계 — PART2 내부 정합성(숫자/경로/의존성/수량/산출물/외부의존성) 6가지만 검증. 외부 완전성, Phase 배정 타당성, 기능 우선순위 등은 V9 범위 밖"
+      ]
+    },
+    {
+      "target": "4. PART2 버전 확인 (v18→v21 Changelog)",
+      "versions": {
+        "v8_target": "v18.0.0",
+        "v9_target": "v20.4.0 → v21.0.0",
+        "v10_target": "v21.0.0"
+      },
+      "v10_questions": {
+        "Q1": {
+          "question": "v18→v21 사이 changelog에서 추가/삭제된 구현 항목 식별",
+          "answer": "주요 추가 항목 식별 완료. v21.0.0 changelog 항목은 미존재",
+          "detail": "PART2 changelog은 v20.4.0이 최신. v21.0.0 항목 없음. v18→v20.4 사이 주요 변경: (1) v18.0.0: V2/V3 실행 가이드 전면 추가 (6 AI 프롬프트 + 6 사용자 가이드 + 6 산출물 참조). V8(v18)은 이 가이드가 추가되는 버전이었으므로, V2/V3 관련 기능은 V8 IMP-* 검증 시 일부 누락되었을 가능성. (2) v19.0.0: ORANGE CORE S0~S8 9-State 상태기계 추가, VamosState pipeline_state 필드 추가, MultiBrain Adapter Failover 체인 추가 등 11건 수정. (3) v20.0.0: Stage Gate ~190개 검증 항목 신규 추가 (18개 Stage). (4) v20.1.0~v20.4.0: Stage Gate SOT 정합성 세부 수정 15건.",
+          "changelog_summary": {
+            "v18_added": "V2/V3 실행 가이드 (6 Phases × AI프롬프트+사용자가이드+산출물참조)",
+            "v19_fixes": "상태기계 인라인, VamosState 필드, Failover 체인, SOURCE_CONFLICT 기록 등 11건",
+            "v19_1_fixes": "RT-BNP 칼럼 수정 1건, Phase 0 재실행 REAL_ERROR 0건 확인",
+            "v20_added": "Stage Gate 18개(~190 검증 항목) 전면 추가",
+            "v20_1_to_v20_4_fixes": "Stage Gate SOT 정합성 수정 15건 (alpha값, SDAR 액션명, 페이지 누락, Gate 순서 등)",
+            "v21_status": "changelog에 v21.0.0 항목 미존재. V9가 v20.4→v21 업그레이드를 수행했다면 changelog 기재 누락"
+          },
+          "gap": "GAP-VER-1: v21.0.0 changelog 미존재. V9가 수행한 v20.4→v21 변경 내역이 문서화되지 않음"
+        },
+        "Q2": {
+          "question": "v18→v21 사이 추가/삭제로 인해 V8 검증 결과가 무효화되는 항목은?",
+          "answer": "V8 IMP-E/B/C/D 일부 무효화",
+          "detail": "v18 이후 추가된 구현 항목: (1) 9-State 상태기계 (v19) — IMP-E 모듈 수에 영향 없으나 상태 전이 검증 항목 추가. (2) Stage Gate 190개 (v20) — V8 IMP-* 시점에 Stage Gate 자체가 존재하지 않았으므로 V8은 Gate 검증 불가. (3) V2/V3 실행 가이드 (v18 자체에서 추가) — V8이 v18.0.0을 대상으로 했으므로 추가 직후 검증했을 수 있으나, V8 IMP-C(API)가 verdict=FAIL인 점 감안하면 V2/V3 API가 당시 불완전했을 가능성.",
+          "gap": "GAP-VER-2: V8은 Stage Gate 미존재 시점(v18) 검증이므로 Stage Gate 관련 V10 기능(FT-TEST 등)은 V8 결과와 대조 불가"
+        }
+      },
+      "revalidation_verdict": "GAP_FOUND",
+      "gaps": [
+        "GAP-VER-1: v21.0.0 changelog 미존재 — V9의 v20.4→v21 변경 내역 문서화 누락",
+        "GAP-VER-2: V8(v18) 이후 Stage Gate 190개 + 상태기계 + 15건 수정이 추가됨. V8 검증 결과는 현재 PART2와 직접 비교 불가",
+        "GAP-VER-3: V8 IMP-C/D verdict=FAIL이 v19~v20 수정으로 해소되었는지 미확인"
+      ]
+    }
+  ],
+  "summary": {
+    "total_targets": 4,
+    "confirmed": 0,
+    "confirmed_with_note": 1,
+    "gap_found": 3,
+    "total_gaps": 10,
+    "critical_cross_cutting_gaps": [
+      {
+        "id": "V9-CCG-1",
+        "title": "Feature Coverage 검증 전면 부재",
+        "detail": "V9의 877 checks 중 '기능 목록 완전성'을 검증하는 항목이 0건. V9는 PART2 내부 정합성(경로/수량/의존성/산출물/구현가능성/외부의존성)만 검증함. '모든 요구사항이 기능으로 변환되어 PART2에 배정되었는가'는 V10이 최초로 시도하는 검증 관점",
+        "severity": "HIGH",
+        "affected_targets": ["V9 Phase 1 전체"],
+        "recommendation": "V10 Phase 1에서 3943개 기능 vs PART2 Phase 배정 매핑을 수행하여 Feature Coverage 달성률 산출 필요"
+      },
+      {
+        "id": "V9-CCG-2",
+        "title": "SOT→PART2 역방향 검증 미수행",
+        "detail": "V9 SOT 매핑은 PART2→SOT 방향(488건 참조)만 검증. SOT→PART2 역방향, 즉 '43개 SOT에서 추출 가능한 기능이 PART2에 모두 반영되었는가'는 미검증. 특히 STEP7 5개 파일(1544개 기능의 원천)이 PART2에서 직접 참조되지 않음",
+        "severity": "HIGH",
+        "affected_targets": ["V9 SOT Mapping"],
+        "recommendation": "V10 Phase 1에서 STEP7 유래 1544개 기능 중 PART2에 명시적 구현 지침이 있는 비율 산출"
+      },
+      {
+        "id": "V9-CCG-3",
+        "title": "V9 REAL_ERROR 미해결 항목의 V10 영향",
+        "detail": "V9 REAL_ERROR 26건 중 C-V1-002(LOCK 미기재)와 C-V3-001(V3 명세 부족)이 V10 기능 추출 정확도에 영향. V10이 추출한 LOCK 태그 25개가 실제보다 적을 수 있고, V3 332개 기능의 상세도가 불균일할 수 있음",
+        "severity": "MEDIUM",
+        "affected_targets": ["V9 Phase 1 Report", "V10 merged_features"],
+        "recommendation": "Phase 1에서 LOCK 항목 전수 재확인 및 V3 기능 상세도 보강 검토"
+      },
+      {
+        "id": "V9-CCG-4",
+        "title": "PART2 v21.0.0 changelog 미존재",
+        "detail": "V9가 v20.4.0→v21.0.0으로 업그레이드했다고 명시되어 있으나, PART2 changelog에 v21.0.0 항목이 없음. v20.4.0이 최신. V9의 Phase 2 수정 내용이 changelog에 기재되지 않았거나, 실제로는 v20.4.0 그대로일 수 있음",
+        "severity": "MEDIUM",
+        "affected_targets": ["PART2 버전"],
+        "recommendation": "PART2 실제 버전 확인 및 v21.0.0 changelog 보강 또는 버전 표기 정정"
+      }
+    ],
+    "v8_vs_v9_comparison": {
+      "v8_revalidation_gaps": 17,
+      "v9_revalidation_gaps": 10,
+      "shared_theme": "V8과 V9 모두 'Phase 배정'과 'Feature Coverage' 관점이 부재. V8은 수량/구조 매칭, V9는 내부 정합성에 집중. V10이 기능 완전성이라는 새로운 관점을 추가함",
+      "combined_total_gaps": 27
+    }
+  }
+}

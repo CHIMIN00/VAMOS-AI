@@ -1,0 +1,375 @@
+{
+  "agent": 1,
+  "version_focus": "V0",
+  "session": "session_18",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T01:15:00.000000",
+  "step_a": {
+    "facts_checked": 18,
+    "match": 14,
+    "mismatch": 2,
+    "no_source": 2,
+    "details": [
+      {
+        "id": "A1-01",
+        "claim": "V0 has 5 active modules: I-1, I-2, I-3, I-5, I-19",
+        "part2_ref": "L188 (§2 header)",
+        "sot_ref": "MASTER_SPEC §2.3 I-Series table: I-1~I-3 CORE ON, I-5 CORE ON, I-19 CORE ON; I-4 CORE ON but PART2 excludes from V0 per READINESS_GUIDE §2.7",
+        "verdict": "MATCH",
+        "note": "PART2 explicitly notes I-4 excluded from V0; SOT I-Series table shows I-4 as V1 ON (not V0-specific). PART2 V0 scoping is consistent with READINESS_GUIDE."
+      },
+      {
+        "id": "A1-02",
+        "claim": "V0 period: 1-2 weeks",
+        "part2_ref": "L77, L103",
+        "sot_ref": "CLAUDE.md L18: 'V0(구조기반, 1~2주)'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-03",
+        "claim": "V0 cost: ₩0 (local) / test ~₩5,000",
+        "part2_ref": "L107, L187",
+        "sot_ref": "CLAUDE.md L18: not explicitly zero but 'V0(구조기반)'; PART2 L107: '₩0 (로컬)'",
+        "verdict": "MATCH",
+        "note": "SOT does not specify V0 cost explicitly but no contradiction. PART2 L187 says 'test ~₩5,000'."
+      },
+      {
+        "id": "A1-04",
+        "claim": "V0 infrastructure: local (Tauri)",
+        "part2_ref": "L104",
+        "sot_ref": "CLAUDE.md L16: 'Tauri 2.0 + React 18'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-05",
+        "claim": "V0 DB: SQLite + Chroma",
+        "part2_ref": "L105",
+        "sot_ref": "MASTER_SPEC §15 Tech Stack: V1=SQLite+Chroma; PHASE_B4 §3.4: backend='chroma' LOCK(V1), §3.6: backend='sqlite'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-06",
+        "claim": "V0 LLM: Ollama single (llama3.2:3b mini, llama3.1:8b main)",
+        "part2_ref": "L106, L255-257",
+        "sot_ref": "PHASE_B4 §3.2: mini_model='ollama/llama3.2:3b', main_model='ollama/llama3.1:8b'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-07",
+        "claim": "V0 autonomy level: L1 (manual/assisted)",
+        "part2_ref": "L108, L249",
+        "sot_ref": "PHASE_B4 §3.1: autonomy_level='L1' LOCK; CLAUDE.md table: V0=L1",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-08",
+        "claim": "V0 SDAR: OFF",
+        "part2_ref": "L110",
+        "sot_ref": "MASTER_SPEC §2.3: I-25 SDAR COND, V1=OFF. CLAUDE.md §6: I-25 COND, OFF in V1 (thus OFF in V0)",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-09",
+        "claim": "I-8/I-9/I-20 are V0 stubs, full implementation in V1 Phase 1",
+        "part2_ref": "L189",
+        "sot_ref": "MASTER_SPEC §2.3: I-8 CORE(LOCK) V1=ON, I-9 CORE(LOCK) V1=ON, I-20 CORE V1=ON. Stub in V0 is PART2's implementation decision, consistent with V0 being scaffold only",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-10",
+        "claim": "config.v1.toml has 13 sections for V0 (17 for V1+)",
+        "part2_ref": "L246, L1332",
+        "sot_ref": "PHASE_B4 §3: defines 17 sections total. PART2 V0 excludes [blue_nodes],[ui],[rate_limit],[guardrails]",
+        "verdict": "MATCH",
+        "note": "PHASE_B4 defines 17 sections. V0 subset of 13 is PART2's implementation scoping choice, consistent."
+      },
+      {
+        "id": "A1-11",
+        "claim": "V0 embedding model: bge-m3, dimension 1024 (storage), matryoshka 256 (search)",
+        "part2_ref": "L263-265",
+        "sot_ref": "PHASE_B4 §3.3: model='bge-m3' LOCK(V1), dimension=1024 LOCK; PHASE_B3 §4.2: FlagEmbedding BGE-M3 1024dim",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-12",
+        "claim": "V0 has 25 Pydantic v2 schemas in contracts.py",
+        "part2_ref": "L575-603",
+        "sot_ref": "No single SOT specifies exactly 25 for V0. D2.1-D1~D8 define more schemas collectively. PART2 selects 25 as V0 subset.",
+        "verdict": "NO_SOURCE",
+        "note": "The number 25 is PART2's V0 scoping decision. SOT schemas total more. Not contradicted but not explicitly specified as V0=25 in any SOT."
+      },
+      {
+        "id": "A1-13",
+        "claim": "DecisionSchema: 18 fields (FREEZE), 14 required + 4 optional",
+        "part2_ref": "L581, L768-769",
+        "sot_ref": "MASTER_SPEC §4.4: 'Decision 스키마 (16필드, FREEZE)' — 16 not 18",
+        "verdict": "MISMATCH",
+        "note": "PART2 L581 says 18 (D2.1-D2 §4.1). MASTER_SPEC says 16. Phase 2 finding F-01 already flagged this. D2.1-D2 is higher authority for schema details, but inconsistency between MASTER_SPEC and D2.1-D2 persists."
+      },
+      {
+        "id": "A1-14",
+        "claim": "ResponseEnvelope: 5 fields (LOCK), source CLAUDE.md §12",
+        "part2_ref": "L583",
+        "sot_ref": "CLAUDE.md §12: ResponseEnvelope 5 fields confirmed. D2.1-D5 §4.9 also defines ResponseEnvelopeSchema owner=D5.",
+        "verdict": "MATCH",
+        "note": "Field count matches. Source attribution has dual ownership (CLAUDE.md vs D5) per Phase 2 finding F-A5-05, but 5-field count is correct."
+      },
+      {
+        "id": "A1-15",
+        "claim": "EventTypeRegistry: 123 entries, FailureCodeRegistry: 36, FallbackRegistry: 23",
+        "part2_ref": "L609-611",
+        "sot_ref": "D2.1-D2 SOT: needs verification of exact counts. MASTER_SPEC §12 mentions EventType registry.",
+        "verdict": "NO_SOURCE",
+        "note": "Exact counts (123/36/23) need D2.1-D2 full read to confirm. PART2 references D2.1-D2 as source. Count accuracy cannot be fully verified without reading D2.1-D2 registry sections."
+      },
+      {
+        "id": "A1-16",
+        "claim": "LangGraph StateGraph with 5 nodes: intake, plan, execute, verify, deliver",
+        "part2_ref": "L1036-1047",
+        "sot_ref": "CLAUDE.md §5: 5-Phase Pipeline (LOCK) — Perception/Intake, Reasoning/Plan, Action/Execute, Reflection/Verify, Memory/Store. D2.0-05 §7: standard 5-stage pipeline",
+        "verdict": "MATCH",
+        "note": "PART2 maps 5-Phase to LangGraph nodes correctly. deliver node = CLAUDE.md Deliver stage."
+      },
+      {
+        "id": "A1-17",
+        "claim": "V0 JSON-RPC communication: stdin/stdout between Rust and Python",
+        "part2_ref": "L834-836",
+        "sot_ref": "PHASE_B1 §1.3: 'Python-Rust: JSON-RPC over subprocess stdin/stdout (V1)', PHASE_B1 §0: 'JSON-RPC over subprocess (Python-Rust)'",
+        "verdict": "MATCH"
+      },
+      {
+        "id": "A1-18",
+        "claim": "LogEventSchema: 7 fields (trace_id, timestamp, level, module, event_type, message, data)",
+        "part2_ref": "L582 comment, L1270",
+        "sot_ref": "D2.1-D2 §4.2: event_type, producer, when, payload, severity, sinks, links — different field names",
+        "verdict": "MISMATCH",
+        "note": "Count is same (7) but field names differ significantly. Phase 2 finding F-A5-01 confirmed this. PART2 L1270 provides structlog mapping table resolving this, but initial claim in L582 comment uses non-SOT names."
+      }
+    ]
+  },
+  "step_b": {
+    "facts_checked": 12,
+    "present": 9,
+    "missing": 3,
+    "details": [
+      {
+        "id": "B1-01",
+        "sot_fact": "5-Phase Pipeline is LOCK (Perception/Intake → Reasoning/Plan → Action/Execute → Reflection/Verify → Memory/Store)",
+        "sot_ref": "CLAUDE.md §5 L70-78",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1036-1047 (StateGraph), L1739-1751 (9-State)"
+      },
+      {
+        "id": "B1-02",
+        "sot_fact": "5-Gate system: PolicyGate, CostGate, ApprovalGate, EvidenceGate, SelfCheckGate — bypass impossible (LOCK)",
+        "sot_ref": "CLAUDE.md §5 L83-88",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1093-1106 (V0-STEP-4), L1657 (V1 Phase 1)"
+      },
+      {
+        "id": "B1-03",
+        "sot_fact": "Document priority: RULE 1.3 > PLAN 3.0 > DESIGN 2.0 LOCK > DESIGN body > Schema/TECH_STACK",
+        "sot_ref": "CLAUDE.md §3 L40-42, D2.0-01 §0.3",
+        "part2_status": "PRESENT",
+        "part2_ref": "L7"
+      },
+      {
+        "id": "B1-04",
+        "sot_fact": "V0 I-1 state machine: I1_S0_RAW → I1_S1_PARSING → I1_S2_AMBIGUOUS(V1+) → I1_S3_READY → I1_S4_EMITTED",
+        "sot_ref": "D2.0-02 §7.5 (I-1 state), MASTER_SPEC §4.1",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1001 (V0 skips S2), L1080 (I1_S0→S1→S3→S4)"
+      },
+      {
+        "id": "B1-05",
+        "sot_fact": "ORANGE CORE is judgment/control only, not execution engine",
+        "sot_ref": "D2.0-02 §1.1: 'CORE는 판단/제어, Brain은 실행'",
+        "part2_status": "PRESENT",
+        "part2_ref": "Glossary L46-47, V0-STEP-4 prompt"
+      },
+      {
+        "id": "B1-06",
+        "sot_fact": "Runnable protocol: all modules must implement run(input)->output, get_metadata(), health_check()",
+        "sot_ref": "D2.0-02 §1.2-A",
+        "part2_status": "MISSING",
+        "note": "PART2 does not mention Runnable protocol explicitly. V0 modules use ad-hoc function signatures."
+      },
+      {
+        "id": "B1-07",
+        "sot_fact": "VamosError standard: Result<T, VamosError> with failure_code, message, fallback_id, trace_id",
+        "sot_ref": "D2.0-02 §0.3",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-03 already flagged this. PART2 mentions FailureReport but not VamosError structure."
+      },
+      {
+        "id": "B1-08",
+        "sot_fact": "Performance benchmarks: simple response ≤2s, complex ≤10s, self-check ≤1s",
+        "sot_ref": "MASTER_SPEC §4.8",
+        "part2_status": "MISSING",
+        "note": "Phase 2 finding F-04 already flagged this. No performance targets in PART2."
+      },
+      {
+        "id": "B1-09",
+        "sot_fact": "DEC-001: VAMOS uses own lightweight framework, external agent frameworks (LangChain, CrewAI) import forbidden. LangGraph allowed for orchestration only (DEC-002)",
+        "sot_ref": "D2.0-02 §0.6-A",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1174 (LangGraph scope limit), L397-398 (langchain-community for Ollama wrapper)"
+      },
+      {
+        "id": "B1-10",
+        "sot_fact": "9-State machine: S0_RECEIVED → S1_INTENT_PARSED → S2_EVIDENCE_READY → S3_DECISION_LOCKED → S4_EXECUTING → S5_OUTPUT_READY → S6_SELF_CHECKED → S7_MEMORY_COMMITTED → S8_DONE",
+        "sot_ref": "MASTER_SPEC §2.4, CLAUDE.md §5",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1739-1751"
+      },
+      {
+        "id": "B1-11",
+        "sot_fact": "S3a_APPROVE_WAIT sub-state for P2 approval (600s timeout)",
+        "sot_ref": "MASTER_SPEC §2.4, CLAUDE.md Glossary L53",
+        "part2_status": "PRESENT",
+        "part2_ref": "L1661, L1746, L1836"
+      },
+      {
+        "id": "B1-12",
+        "sot_fact": "Docker sandboxing for AI-generated code execution",
+        "sot_ref": "D2.0-02 §1.3-A: all AI code execution in Docker sandbox",
+        "part2_status": "PRESENT",
+        "part2_ref": "V2 scope (not V0), but principle acknowledged"
+      }
+    ]
+  },
+  "dim_c": {
+    "checks": 7,
+    "pass": 5,
+    "fail": 2,
+    "details": [
+      {
+        "id": "C1-01",
+        "check": "Python >=3.11 requirement",
+        "part2_ref": "L129 (R1), L336",
+        "sot_ref": "PHASE_B3 §4.0: requires-python='>=3.11'",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C1-02",
+        "check": "Pydantic v2 with ConfigDict (not class Config)",
+        "part2_ref": "L130 (R2), L544, L681",
+        "sot_ref": "PHASE_B3 §4.1: pydantic>=2.10,<3.0",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C1-03",
+        "check": "Poetry as Python dependency manager",
+        "part2_ref": "L242, L396",
+        "sot_ref": "PHASE_B3 §1.2: 'Poetry (또는 pip + pip-tools)'",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C1-04",
+        "check": "LangGraph dependency version",
+        "part2_ref": "L397 (langgraph listed)",
+        "sot_ref": "PHASE_B3 §4.1: langgraph>=0.2.60,<1.0",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C1-05",
+        "check": "FlagEmbedding for BGE-M3 embedding",
+        "part2_ref": "L405 (FlagEmbedding listed)",
+        "sot_ref": "PHASE_B3 §4.2: FlagEmbedding>=1.3.0,<2.0",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C1-06",
+        "check": "VamosState TypedDict fields defined for LangGraph StateGraph",
+        "part2_ref": "L1128-1136 (VamosState fields listed in comments)",
+        "sot_ref": "No SOT defines VamosState explicitly",
+        "verdict": "FAIL",
+        "note": "v8 Agent 1 flagged this as BLOCKER (C-16). PART2 now provides VamosState field list in STEP-4 comments (L1128-1136), partially resolving v8's C-16. However, it's still in comments, not a formal Pydantic model definition."
+      },
+      {
+        "id": "C1-07",
+        "check": "config.v1.toml semantic_cache.ttl_sec value: PART2 says 86400 citing D2.0-06, PHASE_B4 says 3600",
+        "part2_ref": "L324, L500",
+        "sot_ref": "PHASE_B4: ttl_sec=3600; D2.0-06 §4.7.2: 24h=86400",
+        "verdict": "FAIL",
+        "note": "SOURCE_CONFLICT acknowledged in PART2 (L324 comment). PART2 adopts D2.0-06 value (86400) per DESIGN 2.0 > PHASE_B priority rule. The conflict itself is a real issue between SOT documents."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A1-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "DecisionSchema field count: PART2 says 18 fields (D2.1-D2 §4.1), MASTER_SPEC says 16 fields. Inconsistency between SOT documents persists.",
+      "evidence": "PART2 L581: '18 (FREEZE)' vs MASTER_SPEC §4.4: '16필드, FREEZE'. Phase 2 F-01 previously identified."
+    },
+    {
+      "id": "F-A1-02",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "LogEventSchema field names in PART2 comment (L582) differ from D2.1-D2 §4.2 SOT field names. PART2 provides mapping table in L1270-1281 but initial reference is misleading.",
+      "evidence": "PART2 L582: 'trace_id,timestamp,level,module,event_type,message,data'. D2.1-D2: 'event_type,producer,when,payload,severity,sinks,links'. Phase 2 F-A5-01 confirmed SUSTAINED."
+    },
+    {
+      "id": "F-A1-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Runnable protocol (run/get_metadata/health_check interface) from D2.0-02 §1.2-A not mentioned in PART2 V0 implementation steps.",
+      "evidence": "D2.0-02 §1.2-A defines Runnable protocol as mandatory for all modules. PART2 V0 STEP-4 modules use ad-hoc function signatures without Runnable interface."
+    },
+    {
+      "id": "F-A1-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "VamosError standard error handling structure not explicitly defined in PART2. Phase 2 F-03 already identified.",
+      "evidence": "D2.0-02 §0.3: VamosError with failure_code, message, fallback_id, trace_id. PART2 uses FailureReport but not VamosError."
+    },
+    {
+      "id": "F-A1-05",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Performance benchmarks (simple ≤2s, complex ≤10s, self-check ≤1s) from MASTER_SPEC §4.8 absent from PART2. Phase 2 F-04 already identified.",
+      "evidence": "MASTER_SPEC §4.8 defines 5 performance targets not in PART2."
+    },
+    {
+      "id": "F-A1-06",
+      "severity": "LOW",
+      "type": "impl_issue",
+      "description": "VamosState defined only in comments (STEP-4 L1128-1136), not as formal Pydantic/TypedDict model. Partially resolves v8 BLOCKER C-16 but formal definition still needed.",
+      "evidence": "PART2 L1128-1136: VamosState fields listed in Python comments. No formal model class definition."
+    },
+    {
+      "id": "F-A1-07",
+      "severity": "LOW",
+      "type": "impl_issue",
+      "description": "SOURCE_CONFLICT: semantic_cache.ttl_sec = 86400 (D2.0-06) vs 3600 (PHASE_B4). PART2 correctly applies DESIGN > PHASE priority rule but conflict between SOT docs is unresolved.",
+      "evidence": "PART2 L324/L500: ttl_sec=86400 with SOURCE_CONFLICT comment."
+    }
+  ],
+  "v8_comparison": {
+    "v8_findings_count": 27,
+    "v13_findings_count": 7,
+    "resolved": [
+      "v8 C-16 (VamosState fields) — partially resolved: PART2 now provides field list in STEP-4 comments (L1128-1136)",
+      "v8 B-07 (UI 9-State name mismatch) — out of V0 scope, UI is V1-Phase 4",
+      "v8 C-11 (5-Phase to 9-State mapping) — not V0-critical, V1 scope"
+    ],
+    "new": [
+      "F-A1-03: Runnable protocol missing from V0 implementation guidance"
+    ],
+    "persistent": [
+      "F-A1-01: DecisionSchema 18 vs 16 field count (v8 era: already existed as MASTER_SPEC inconsistency)",
+      "F-A1-02: LogEventSchema field name mismatch (Phase 2 F-A5-01)",
+      "F-A1-04: VamosError missing (Phase 2 F-03)",
+      "F-A1-05: Performance benchmarks missing (Phase 2 F-04)"
+    ]
+  },
+  "statistics": {
+    "total_facts_checked": 30,
+    "match_rate": "76.7%",
+    "step_a_match_rate": "77.8%",
+    "step_b_present_rate": "75.0%",
+    "dim_c_pass_rate": "71.4%"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA09_phase_b1_b3.json",
+    "total_items_checked": 134,
+    "pass_count": 106,
+    "fail_count": 28,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-4",
+      "item_id": "EA-09_035",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 2046 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 2046",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-09_128",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 1977 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 1977",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_031",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_032",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_033",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_034",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_035",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_036",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_037",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_038",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_039",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_040",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_041",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_042",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_043",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_044",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_045",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_046",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_047",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_048",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_085",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_088",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_096",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_129",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_130",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-09_134",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-09_004~EA-09_010",
+      "severity": "WARNING",
+      "message": "동일 키 'API_ENDPOINT_COUNT'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:B2",
+      "severity": "WARNING",
+      "message": "파일 'B2'(886줄)의 후반부 추출 비율이 낮음: 4/30건 (13%)",
+      "expected": ">= 20%",
+      "actual": "13%"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 28,
+    "INFO": 0
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

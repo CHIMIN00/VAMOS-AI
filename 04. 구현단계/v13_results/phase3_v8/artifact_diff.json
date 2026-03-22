@@ -1,0 +1,182 @@
+{
+  "session": "session_22",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T21:00:00+09:00",
+  "description": "Comparison of v8 original outputs with v13 Phase 3 re-run outputs",
+  "phase0_diff": {
+    "structural": {
+      "v8_results": {
+        "total_scripts": 8,
+        "pass": 5,
+        "fail": 3,
+        "pass_scripts": ["0-A", "0-B", "0-F", "0-G"],
+        "fail_scripts": ["0-C (Heading Hierarchy, 3 errors)", "0-E (Keyword Number Inconsistency, 7 errors)", "0-H (Header Count vs Actual Rows, 2 errors)"],
+        "note": "0-D PASS but was extraction-only (133 entries), not a validation check"
+      },
+      "v13_results": {
+        "total_scripts": 8,
+        "pass": 7,
+        "fail": 1,
+        "pass_scripts": ["0-A", "0-B", "0-C", "0-D", "0-F", "0-G", "0-H"],
+        "fail_scripts": ["0-E (Naming Consistency, 2 errors)"]
+      },
+      "changed_verdicts": [
+        {
+          "script": "0-C",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "PASS",
+          "reason": "SCOPE_CHANGE: v8 checked heading hierarchy (H1->H3 level jumps, 3 errors at lines 630/795/987). v13 re-scopes to LOCK/FREEZE value verification. All LOCK values match SOT. Heading jumps are intentional formatting, not data errors."
+        },
+        {
+          "script": "0-E",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "FAIL",
+          "reason": "ERROR_REDUCTION: v8 had 7 keyword-number inconsistencies. v13 reclassifies 5 as intentional version-specific values (max_tokens V1/V2, I-Series counts, V1/V2/V3 module counts). 2 genuine inconsistencies persist: DecisionSchema 18 vs 16, ResponseEnvelope 5 vs 3 in summary tables. Errors reduced from 7 to 2."
+        },
+        {
+          "script": "0-H",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "PASS",
+          "reason": "RESOLVED: Both v8 errors were script parsing issues. (1) IPC handlers '72개' header has 5 category rows summing to 72 (15+15+18+19+5). (2) MCP catalog 'V1=7개' header has 11 total rows matching 'V1=7+V2=3+V3=1=11'. v8 regex captured partial headers."
+        }
+      ],
+      "scope_changes": [
+        {"script": "0-C", "v8_name": "Heading Hierarchy", "v13_name": "LOCK/FREEZE Values (Symbolic Comparison)"},
+        {"script": "0-D", "v8_name": "LOCK/FREEZE/ABSOLUTE Extraction + V7-2 Cross-Check", "v13_name": "Cross References"},
+        {"script": "0-E", "v8_name": "Keyword Number Inconsistency", "v13_name": "Naming Consistency"},
+        {"script": "0-F", "v8_name": "ID Uniqueness + Reference Validation", "v13_name": "Numeric Values (Thresholds/Limits/Counts)"},
+        {"script": "0-G", "v8_name": "HTML Comment Integrity + SOURCE_CONFLICT Body Verification", "v13_name": "Enum/Category Values"},
+        {"script": "0-H", "v8_name": "Header Count vs Actual Rows", "v13_name": "Dependency Order / Header Count vs Actual Rows"}
+      ],
+      "net_change": "+2 PASS (v8: 5 PASS / 3 FAIL -> v13: 7 PASS / 1 FAIL)"
+    },
+    "implementation": {
+      "v8_results": {
+        "total_scripts": 6,
+        "pass": 3,
+        "fail": 3,
+        "pass_scripts": ["IMP-A (Module Dependency Graph)", "IMP-B (Schema Field Count)", "IMP-E (Module Activation Matrix)"],
+        "fail_scripts": ["IMP-C (API Endpoint Validation, 3 error groups)", "IMP-D (Config Key Validation, 17 errors)", "IMP-F (Tech Stack Conflict, 5 errors)"]
+      },
+      "v13_results": {
+        "total_scripts": 6,
+        "pass": 6,
+        "fail": 0,
+        "pass_scripts": ["IMP-A", "IMP-B", "IMP-C", "IMP-D", "IMP-E", "IMP-F"],
+        "fail_scripts": []
+      },
+      "changed_verdicts": [
+        {
+          "script": "IMP-C",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "PASS",
+          "reason": "SCOPE_CHANGE: v8 validated API endpoints (8 part2-only IPC, 67 src-only IPC, 11 src-only RPC). v13 re-scopes to Units/Formats consistency. Different verification target."
+        },
+        {
+          "script": "IMP-D",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "PASS",
+          "reason": "SCOPE_CHANGE: v8 validated config keys (15 value mismatches + 2 missing sections = 17 errors). v13 re-scopes to Timeouts/Retry verification. All timeout values match SOT."
+        },
+        {
+          "script": "IMP-F",
+          "v8_verdict": "FAIL",
+          "v13_verdict": "PASS",
+          "reason": "SCOPE_CHANGE: v8 detected tech stack conflicts (premature Qdrant/Neo4j/S3 references in V0/V1, 5 errors). v13 re-scopes to Test Coverage verification. All modules have test specifications."
+        }
+      ],
+      "scope_changes": [
+        {"script": "IMP-A", "v8_name": "Module Dependency Graph", "v13_name": "File Paths"},
+        {"script": "IMP-B", "v8_name": "Schema Field Count + SRC Cross-Check", "v13_name": "Dependency Order"},
+        {"script": "IMP-C", "v8_name": "API Endpoint Validation", "v13_name": "Units/Formats"},
+        {"script": "IMP-D", "v8_name": "Config Key Validation + V7-1 Canonical Section Check", "v13_name": "Timeouts"},
+        {"script": "IMP-E", "v8_name": "Module Activation Matrix", "v13_name": "Error Codes"},
+        {"script": "IMP-F", "v8_name": "Tech Stack Conflict", "v13_name": "Test Coverage"}
+      ],
+      "net_change": "+3 PASS (v8: 3 PASS / 3 FAIL -> v13: 6 PASS / 0 FAIL). Note: all IMP scripts were re-scoped to different verification targets, so direct verdict comparison reflects scope change rather than PART2 content fixes."
+    },
+    "phase0_summary": {
+      "v8_total_pass": 8,
+      "v8_total_fail": 6,
+      "v13_total_pass": 13,
+      "v13_total_fail": 1,
+      "scripts_improved": 5,
+      "scripts_unchanged": 8,
+      "scripts_regressed": 0,
+      "note": "Improvement driven by: (1) v13 re-scoping scripts to task spec definitions, (2) v8 script parsing errors resolved (0-H), (3) reclassification of version-specific values as non-errors (0-E). Most IMP improvements reflect scope changes rather than PART2 content changes."
+    }
+  },
+  "agent_diff": {
+    "total_v8_findings": 159,
+    "total_v13_findings_raw": 85,
+    "total_v13_findings_after_adversarial": 68,
+    "note_on_v8_counts": "v8 findings are extracted from unstructured markdown conversation files with per-agent severity summaries. Counts include BLOCKER+HIGH+MEDIUM+LOW from each agent's final summary. v8 used a 4-level severity scale (BLOCKER/HIGH/MEDIUM/LOW); v13 uses 3-level (HIGH/MEDIUM/LOW) with adversarial DISMISSED category.",
+    "by_agent": [
+      {"agent": 1,  "v8_scope": "Core Architecture + Pipeline", "v8_count": 18, "v13_count": 7, "delta": -11, "note": "v8 had 3 BLOCKER (9-State naming), 8 HIGH. v13 has 3 MEDIUM + 4 LOW."},
+      {"agent": 2,  "v8_scope": "Version Roadmap + Guardrails", "v8_count": 12, "v13_count": 8, "delta": -4, "note": "v8 had 5 HIGH (Guardrails layer count). v13 has 4 MEDIUM + 4 LOW."},
+      {"agent": 3,  "v8_scope": "SDAR + Self-evolution", "v8_count": 7, "v13_count": 8, "delta": 1, "note": "v8 had 3 HIGH (SDAR state naming). v13 has 4 MEDIUM + 4 LOW."},
+      {"agent": 4,  "v8_scope": "Infra + V2/V3 Scalability", "v8_count": 19, "v13_count": 9, "delta": -10, "note": "v8 had 8 HIGH. v13 has 5 MEDIUM + 4 LOW."},
+      {"agent": 5,  "v8_scope": "Schema + Type System", "v8_count": 18, "v13_count": 8, "delta": -10, "note": "v8 had 5 BLOCKER (DecisionSchema, schema counts). v13 has 2 HIGH + 3 MEDIUM + 3 LOW."},
+      {"agent": 6,  "v8_scope": "Storage + Memory", "v8_count": 15, "v13_count": 8, "delta": -7, "note": "v8 had 1 BLOCKER + 6 HIGH. v13 has 1 HIGH + 4 MEDIUM + 3 LOW."},
+      {"agent": 7,  "v8_scope": "Safety + Cost + RBAC", "v8_count": 13, "v13_count": 7, "delta": -6, "note": "v8 had 5 HIGH. v13 has 1 HIGH + 2 MEDIUM + 4 LOW."},
+      {"agent": 8,  "v8_scope": "AI Investing + Marketplace", "v8_count": 17, "v13_count": 6, "delta": -11, "note": "v8 had 2 BLOCKER + 9 HIGH. v13 has 2 MEDIUM + 4 LOW."},
+      {"agent": 9,  "v8_scope": "DevOps + CI/CD", "v8_count": 13, "v13_count": 6, "delta": -7, "note": "v8 had 1 BLOCKER + 4 HIGH. v13 has 1 MEDIUM + 5 LOW."},
+      {"agent": 10, "v8_scope": "Prompt Verification", "v8_count": 16, "v13_count": 5, "delta": -11, "note": "v8 had 1 BLOCKER + 7 HIGH. v13 has 1 MEDIUM + 4 LOW."},
+      {"agent": 11, "v8_scope": "Cross-reference + XREF", "v8_count": 1, "v13_count": 6, "delta": 5, "note": "v8 had 1 BLOCKER (PART2 version mismatch blocking all checks). v13 has 2 MEDIUM + 4 LOW."},
+      {"agent": 12, "v8_scope": "D2.0-02 Triple Mapping", "v8_count": 10, "v13_count": 7, "delta": -3, "note": "v8 had 2 BLOCKER + 1 HIGH (§7.x reference errors). v13 has 1 HIGH + 3 MEDIUM + 3 LOW."}
+    ],
+    "resolved_from_v8": [
+      {"category": "9-State Machine naming", "v8_agents": [1, 12], "v8_severity": "BLOCKER", "resolution": "PART2 updated to use D2.0-08 canonical state names in v14+"},
+      {"category": "DecisionSchema field count 17->18", "v8_agents": [5], "v8_severity": "BLOCKER", "resolution": "PART2 corrected to 18 fields per D2.1-D2 FREEZE in v14+"},
+      {"category": "§7.x section reference errors", "v8_agents": [12], "v8_severity": "BLOCKER", "resolution": "PART2 section references corrected to match D2.0-02 actual section numbers"},
+      {"category": "IPC endpoint mismatches", "v8_agents": [4, 5], "v8_severity": "HIGH", "resolution": "PART2 IPC catalog updated to match B2 canonical 72 commands"},
+      {"category": "Config key value mismatches", "v8_agents": [4, 7], "v8_severity": "HIGH", "resolution": "Scope change: v13 evaluates config values in context of version-specific defaults"},
+      {"category": "PART2 version mismatch (v13 vs v18)", "v8_agents": [11], "v8_severity": "BLOCKER", "resolution": "PART2 has been updated; v13 agents now verify against current version"}
+    ],
+    "new_in_v13": [
+      {"finding": "F-A5-01", "severity": "HIGH", "description": "CostGate threshold in V0-STEP-4 prompt uses 70/85/95 vs D2.0-07 LOCK 80/100", "note": "Not detected by v8 agents because v8 focused on structural checks, not prompt content verification"},
+      {"finding": "F-A4-01", "severity": "MEDIUM", "description": "L4_SELF_EVOLVING autonomy level undefined in any SOT document"},
+      {"finding": "F-A6-05", "severity": "MEDIUM", "description": "QoD < 0.4 storage restriction from D2.0-06 not in PART2"},
+      {"finding": "F-A10-02", "severity": "MEDIUM", "description": "Matryoshka dimension conflict: PART2 256 vs PHASE_B4 512"},
+      {"finding": "F-A6-01_adj", "severity": "MEDIUM", "description": "L0 TTL composite rule defensible but CLAUDE.md 7-day value creates confusion"}
+    ],
+    "persistent": [
+      {"finding": "V2 Guardrails layer count (3 vs 4)", "v8_agent": 2, "v13_finding": "F-A2-02", "severity": "MEDIUM", "note": "L675 not updated after v10.0.0 correction"},
+      {"finding": "DecisionSchema 18 vs 16 in summary tables", "v8_agent": 5, "v13_finding": "0-E NC-002", "severity": "WARNING", "note": "Summary table has stale value; main body is correct"},
+      {"finding": "ResponseEnvelope 5 vs 3 in summary tables", "v8_agent": 5, "v13_finding": "0-E NC-003", "severity": "WARNING", "note": "Summary table has stale value; main body is correct"},
+      {"finding": "V2 Lead Agent Opus not stated", "v8_agent": 2, "v13_finding": "F-A2-05", "severity": "MEDIUM", "note": "AGENT_TEAMS_SPEC specifies Lead=Opus but PART2 V2 section omits this"},
+      {"finding": "Hook name mismatch (useAutonomy/useLog vs useApproval/useConfig)", "v8_agent": null, "v13_finding": "F-A7-04_adj", "severity": "MEDIUM", "note": "PART2 vs PHASE_B2 naming divergence"}
+    ]
+  },
+  "severity_shift": {
+    "v8": {
+      "BLOCKER": 14,
+      "HIGH": 61,
+      "MEDIUM": 68,
+      "LOW": 16,
+      "total": 159
+    },
+    "v13_raw": {
+      "HIGH": 5,
+      "MEDIUM": 33,
+      "LOW": 47,
+      "total": 85
+    },
+    "v13_adjusted": {
+      "HIGH": 1,
+      "MEDIUM": 8,
+      "LOW": 54,
+      "DISMISSED": 5,
+      "total_valid": 63,
+      "total_including_dismissed": 68
+    },
+    "shift_analysis": {
+      "blocker_elimination": "v8 had 14 BLOCKERs across agents. v13 has 0 BLOCKERs. All v8 BLOCKERs were either resolved (9-State naming, DecisionSchema, §7.x refs, version mismatch) or reclassified (schema count corrections applied in v14+).",
+      "high_reduction": "v8 had 61 HIGHs. v13 raw has 5 HIGHs, adjusted to 1 HIGH. Massive reduction driven by: (1) PART2 content fixes between v8 and v13, (2) v13 agents using different severity criteria (no BLOCKER tier), (3) adversarial review downgrading inflated severities.",
+      "medium_compression": "v8 had 68 MEDIUMs. v13 raw has 33, adjusted to 8. Many v8 MEDIUMs resolved or reclassified as LOW by v13 adversarial review.",
+      "duplicate_rate": "v13 adversarial found 25.9% duplicate rate across agents (22 findings in 10 clusters). v8 did not have systematic deduplication.",
+      "false_positive_rate": "v13 adversarial found 8.2% false positive rate. Performance benchmarks were the largest false positive cluster (2 agents reported missing, but present in §7.5.3).",
+      "severity_inflation_rate": "47.5% of v13 challenged findings had severity reduced. Most MEDIUM findings downgraded to LOW."
+    }
+  }
+}

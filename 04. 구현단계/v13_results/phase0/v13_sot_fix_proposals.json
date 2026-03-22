@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "version": "v13-enhanced",
+    "session": 7,
+    "created": "2026-03-21",
+    "pipeline": "v13 Enhanced Pipeline (52-skill)",
+    "total_proposals": 14,
+    "by_type": { "FIX_VALUE": 2, "ADD_CLARIFICATION": 8, "ADD_CROSS_REFERENCE": 3, "NO_FIX": 1 },
+    "by_severity": { "CRITICAL": 2, "MAJOR": 4, "MINOR": 8 },
+    "authority_priority": "1:BASE-1.3 > 2:PLAN-3.0 > 3:MASTER_SPEC > 4:D2.0-LOCK > 5:D2.1 > 6:PHASE_B > 7:CLAUDE.md > 8:기타",
+    "principle": "D-2 전건 수정 — CRITICAL/MAJOR/MINOR 전부 포함"
+  },
+  "proposals": [
+    {
+      "proposal_id": "FIX-E001",
+      "inconsistency_id": "INC-E001",
+      "type": "FIX_VALUE",
+      "severity": "CRITICAL",
+      "target_file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+      "target_line": 359,
+      "current_text": "| `max_retries` | `integer` | `3` | `3` | `3` | MCP 요청 최대 재시도 횟수 (exponential backoff 1s→2s→4s) | D3 MCPBridgeLayerSchema |",
+      "proposed_text": "| `max_retries` | `integer` | `2` | `2` | `3` | MCP 요청 최대 재시도 횟수 (exponential backoff 1s→2s, V3는 +4s) — D2.0-03/MASTER_SPEC 정본 | D3 MCPBridgeLayerSchema |",
+      "authority": "D2.0-03 L421 (LOCK, 4순위) + MASTER_SPEC L578 (3순위)",
+      "authority_rule": "D2.0-03(4순위)과 MASTER_SPEC(3순위) 모두 max_retries=2. B4(6순위)는 하위 정본이므로 상위 값에 맞춤. V3는 안정성 강화를 위해 3 유지 가능.",
+      "ripple_effects": [
+        { "file": "PHASE_B4_CONFIG_SPEC.md", "line": 638, "description": "TOML 예시 max_retries = 3 → max_retries = 2로 변경" },
+        { "file": "PHASE_B4_CONFIG_SPEC.md", "line": 754, "description": "V2 설정 예시도 max_retries = 2로 변경" },
+        { "file": "PHASE_B4_CONFIG_SPEC.md", "line": 1117, "description": "Pydantic default=3 → default=2로 변경" }
+      ]
+    },
+    {
+      "proposal_id": "FIX-E002",
+      "inconsistency_id": "INC-E002",
+      "type": "ADD_CLARIFICATION",
+      "severity": "CRITICAL",
+      "target_file": "D:\\VAMOS\\docs\\sot\\D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+      "target_line": 1088,
+      "current_text": "- Token Rate Limit: V1 일일 100K 토큰 (약 3,000원)",
+      "proposed_text": "- Token Rate Limit: V1 일일 100K 토큰 (약 ₩3,000 상당, 실제는 비용 상한 ₩1,300/일(BASE-1.3 §4 LOCK)에 의해 ~43K에서 차단됨. 100K는 API 처리량 보호용 상한)",
+      "authority": "BASE-1.3 L198 (1순위, ABSOLUTE LOCK)",
+      "authority_rule": "비용 상한 ₩1,300/일이 BASE-1.3(1순위)에서 ABSOLUTE LOCK으로 정의. 토큰 한도는 비용과 별개의 rate limit으로 기능하나, 사용자에게 실제 가용량이 ~43K임을 명시해야 오해 방지.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E003",
+      "inconsistency_id": "INC-E003",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MAJOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+      "target_line": 248,
+      "current_text": "- QoD < 0.70: 출력 보류, 사용자에게 재질의 요청",
+      "proposed_text": "- QoD < 0.70: 출력 보류, 사용자에게 재질의 요청\n- QoD < 0.40: L2 벡터 메모리 삽입 금지 (장기 기억 오염 방지, CLAUDE.md §Memory 정의 → D2.0-06 §Storage 적용)",
+      "authority": "CLAUDE.md L605 (7순위, 최초 정의) — PLAN-3.0에 정본 승격",
+      "authority_rule": "L2 벡터삽입 금지는 메모리 계층 정책으로 QoD 3단계 체계(0.85/0.70/0.40)를 완성. PLAN-3.0이 상위 정본이므로 여기에 추가하여 정본 지위 부여.",
+      "ripple_effects": [
+        { "file": "D2.0-06_STORAGE_MEMORY.md", "line": "§Vector 섹션", "description": "L2 벡터삽입 금지 조건(QoD < 0.40) 교차 참조 추가 권장" }
+      ]
+    },
+    {
+      "proposal_id": "FIX-E004",
+      "inconsistency_id": "INC-E004",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MAJOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 170,
+      "current_text": "### I-Series (I-1~I-25) 내부 기능",
+      "proposed_text": "### I-Series (I-1~I-25) 내부 기능\n\n> **확장 시리즈 참조**: I/E/S/A 외에 B-Series(Memory/Skill/Self-evo), C-Series(Verifier/Reasoning), D-Series(Brain/Planner/RAG), EVX-Series(검증체인) 총 25개 추가 모듈이 CLAUDE.md §6에 정의. 전체 합산 81개(I25+E16+S8+A7+B6+C7+D6+EVX6).",
+      "authority": "CLAUDE.md §6 (7순위) — MASTER_SPEC에 교차 참조 추가",
+      "authority_rule": "MASTER_SPEC은 I/E/S/A(56개)만 정의. B/C/D/EVX(25개)는 확장 구현 시리즈로 CLAUDE.md에 정의. 전체 모듈 수(81개) 파악을 위해 교차 참조 필수.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E005",
+      "inconsistency_id": "INC-E005",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MAJOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\CLAUDE.md",
+      "target_line": 423,
+      "current_text": "[ ] CI/CD 설정 완료 (GitHub Actions 8-stage)",
+      "proposed_text": "[ ] CI/CD 설정 완료 (GitHub Actions 8-stage: lint→test→build→security-scan→deploy-staging→e2e→deploy-prod→monitor, B3 구현가이드 참조)",
+      "authority": "CLAUDE.md 자체 — 8-stage 구성 명시화",
+      "authority_rule": "8-stage 정의가 CLAUDE.md 체크리스트에만 숫자로 존재하고 각 stage 명칭이 없음. 구현가이드(B3)에 상세 정의가 있다면 참조 명시, 없다면 인라인 정의 필요.",
+      "ripple_effects": [
+        { "file": "PHASE_B3_CICD.md", "description": "B3에 8-stage 정의가 없다면 추가 필요 (Phase 1에서 확인)" }
+      ]
+    },
+    {
+      "proposal_id": "FIX-E006",
+      "inconsistency_id": "INC-E006",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MAJOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+      "target_line": 619,
+      "current_text": "    max_retries: int = 1              # 액션 자체의 최대 재시도 횟수",
+      "proposed_text": "    max_retries: int = 1              # 액션 자체의 최대 재시도 횟수 (MCP 레벨 max_retries=2(D2.0-03)와 별개 — 여기는 SDAR 액션 단위 재시도)",
+      "authority": "SDAR 자체 — 계층 구분 명시화",
+      "authority_rule": "SDAR의 max_retries=1은 액션 레벨, D2.0-03의 max_retries=2는 MCP 프로토콜 레벨. 두 값은 서로 다른 계층에서 독립적으로 작동하므로 명시 필요.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E007",
+      "inconsistency_id": "INC-E007",
+      "type": "ADD_CROSS_REFERENCE",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 1450,
+      "current_text": "## V0 — 최소 구현 (\"돌아가는 코어\")",
+      "proposed_text": "## V0 — 최소 구현 (\"돌아가는 코어\") — cf. PLAN-3.0 §3.1: \"Foundation Stage, 전체 골격 준비 단계\"",
+      "authority": "교차 참조 추가 (수정 아닌 보완)",
+      "authority_rule": "MASTER_SPEC과 PLAN-3.0이 V0를 다른 관점으로 기술. 교차 참조로 양쪽 관점을 연결.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E008a",
+      "inconsistency_id": "INC-E008",
+      "type": "ADD_CROSS_REFERENCE",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 1458,
+      "current_text": "## V1 — 초기 제품화 (\"운영 가능한 설계\")",
+      "proposed_text": "## V1 — 초기 제품화 (\"운영 가능한 설계\") — cf. PLAN-3.0 §1: ORANGE CORE 안정화, RAG·메모리·라우팅 기반 구축",
+      "authority": "교차 참조 추가",
+      "authority_rule": "V1 정의의 기능 관점(PLAN-3.0)과 제품 관점(MASTER_SPEC) 연결.",
+      "ripple_effects": [
+        { "file": "VAMOS_MASTER_SPECIFICATION.md", "line": "1467,1474", "description": "V2, V3에도 동일 패턴으로 PLAN-3.0 교차 참조 추가" }
+      ]
+    },
+    {
+      "proposal_id": "FIX-E008b",
+      "inconsistency_id": "INC-E008",
+      "type": "ADD_CROSS_REFERENCE",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 1467,
+      "current_text": "## V2 — 확장/팀용 서버",
+      "proposed_text": "## V2 — 확장/팀용 서버 — cf. PLAN-3.0 §1: BLUE NODE 확장, 도메인별 전문화, 멀티모달 기반 강화",
+      "authority": "교차 참조 추가",
+      "authority_rule": "V2 양쪽 관점 연결.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E008c",
+      "inconsistency_id": "INC-E008",
+      "type": "ADD_CROSS_REFERENCE",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 1474,
+      "current_text": "## V3 — 엔터프라이즈/고도화",
+      "proposed_text": "## V3 — 엔터프라이즈/고도화 — cf. PLAN-3.0 §1: Self-evo 고도화, 외부 연동 확장, 고급 분석 엔진",
+      "authority": "교차 참조 추가",
+      "authority_rule": "V3 양쪽 관점 연결.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E009",
+      "inconsistency_id": "INC-E009",
+      "type": "NO_FIX",
+      "severity": "MINOR",
+      "target_file": "N/A",
+      "target_line": null,
+      "current_text": "N/A",
+      "proposed_text": "N/A",
+      "authority": "N/A",
+      "authority_rule": "EXP 모듈 수는 DELTA-020(I-Series 확장) 이후 자동 변동. Phase 1 검증 시 MASTER_SPEC 모듈 테이블에서 status=EXP 재집계로 확인. 현시점 수정 대상 없음.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E010",
+      "inconsistency_id": "INC-E010",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+      "target_line": 170,
+      "current_text": "(FIX-E004와 통합 — 동일 위치에 B/C/D/EVX 참조와 함께 모듈 수 명시)",
+      "proposed_text": "(FIX-E004에 포함)",
+      "authority": "N/A",
+      "authority_rule": "Pydantic 모델 수는 D2.1 스키마 전수 집계로 Phase 1에서 확인. FIX-E004의 확장 시리즈 참조 추가에 포함.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E011",
+      "inconsistency_id": "INC-E011",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MINOR",
+      "target_file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+      "target_line": 1323,
+      "current_text": "3.1 V0: 기초 구조 (Foundation Stage – 전체 골격 준비 단계)",
+      "proposed_text": "3.1 V0: 기초 구조 (Foundation Stage – 전체 골격 준비 단계) — cf. MASTER_SPEC §16: \"최소 구현, 돌아가는 코어\"",
+      "authority": "교차 참조 추가 (양방향: FIX-E007과 대칭)",
+      "authority_rule": "PLAN-3.0 → MASTER_SPEC 방향 교차 참조로 V0 정의 양방향 연결 완성.",
+      "ripple_effects": []
+    },
+    {
+      "proposal_id": "FIX-E012",
+      "inconsistency_id": "INC-E012",
+      "type": "ADD_CLARIFICATION",
+      "severity": "MINOR",
+      "target_file": "N/A",
+      "target_line": null,
+      "current_text": "EA 추출 아티팩트 — SOT 수정 불필요",
+      "proposed_text": "N/A",
+      "authority": "N/A",
+      "authority_rule": "CM-5_001의 RANGE_VALUE 혼합은 EA 추출 키 설계 이슈. SOT 자체에 문제 없으므로 수정 불필요. EA 추출 프로세스 개선은 Phase 1 사전 작업에서 처리.",
+      "ripple_effects": []
+    }
+  ]
+}

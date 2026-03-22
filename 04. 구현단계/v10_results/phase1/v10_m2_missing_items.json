@@ -1,0 +1,4442 @@
+{
+  "meta": {
+    "agent": "M-2",
+    "scope": "V1 features MISSING from PART2",
+    "total_missing": 549
+  },
+  "by_severity": {
+    "BLOCKER": {
+      "count": 0,
+      "by_category": {}
+    },
+    "HIGH": {
+      "count": 237,
+      "by_category": {
+        "FT-FUNC": [
+          {
+            "feature_id": "CLAUDE-089",
+            "feature_name": "EVX-1 Code-as-Policy 검증 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 EVX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-090",
+            "feature_name": "EVX-2 Adversarial 검증 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 EVX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-091",
+            "feature_name": "EVX-3 Log-prob Confidence 검증 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 EVX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-092",
+            "feature_name": "EVX-4 Thought Buffer 검증 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 EVX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-093",
+            "feature_name": "EVX-5 Gen-Verify-Learn 검증 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 EVX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-108",
+            "feature_name": "대화 턴 상한 구현 (P0=5, P1=10, P2=20)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.2 핵심 엔진 LOCK",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-009",
+            "feature_name": "DomainScore 종합 점수화 공식 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4.4 DomainScore 공식",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-029",
+            "feature_name": "비용 기반 뇌 선택 정책 구현 (V1/V2/V3 모드별)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§INFRA-CORE-8 비용 기반 뇌 선택 정책",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-058",
+            "feature_name": "비용 3단계 경보 체계 구현 (70%/85%/95%)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§9.3.2 3단계 경보 체계",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-061",
+            "feature_name": "고비용 모델 사용 제약 구현 (기본차단+조건부허용)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§9.5 고비용 모델 제약",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-072",
+            "feature_name": "IDEA 40건 로드맵 항목 추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§20.1 IDEA 항목 40건",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "BASE-005",
+            "feature_name": "2단계 승인 구조 (계획 승인 + 실행 승인)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§9.2 2단계 승인 구조",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-031",
+            "feature_name": "응답 길이 자동 조절 구현 (S7B-032)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.1 S7B-032 Response Length",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-039",
+            "feature_name": "대화 히스토리 검색 구현 (S7B-025)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.21 S7B-025 History Search",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-040",
+            "feature_name": "대화 자동 요약 구현 (S7B-026)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.21 S7B-026 Auto-summary",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-041",
+            "feature_name": "감정 히스토리 추적 구현 (S7B-020)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.21 S7B-020 Emotion History",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-062",
+            "feature_name": "멀티 대화 관리 구현 (S7B-027)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.63 S7B-027 Multi-conversation",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-094",
+            "feature_name": "ToolRegistry 통합 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11.1 ToolRegistry Unification",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-120",
+            "feature_name": "PromptCacheManager 구현 (캐시 적중률 추적)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "STEP7 S7B-028 Prompt Caching",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-131",
+            "feature_name": "STEP7 횡단/보강 추정 항목 (R3~R6, ~57건)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§11.14 STEP7 횡단/보강 추정",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D203-008",
+            "feature_name": "Mixture of Agents (MoA) 다중 LLM 합의 구현",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§1.4 K-025",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D203-065",
+            "feature_name": "캘린더/일정 연동 구현 (Google Calendar/Outlook, 일정 인텔리전스)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4.4 K-036",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D203-082",
+            "feature_name": "Provider 자동 선택 규칙 구현 (risk_class/cost_class 기준)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§6.3.3 Provider 합성 규칙",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-042",
+            "feature_name": "OTHER BRAINS→07 Gate 연결 규칙 (ToolRegistry 경유, Gate 결과 기록)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§4.1.1 04→07 Gate 연결 규칙",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-066",
+            "feature_name": "병렬 태스크 상한 3 (초과 큐잉+알림)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§6 멀티브레인/병렬",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-077",
+            "feature_name": "알림 중복 방지 debounce (5분 내 동일 지표 억제)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§8.4 알림 debounce",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-102",
+            "feature_name": "예산 하드캡 (일/주/월/건별+80/90/100% 알림)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.1 S7F-064",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-025",
+            "feature_name": "중앙 프롬프트 라이브러리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S7.5.1 프롬프트 라이브러리 (ADD-061)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-045",
+            "feature_name": ".vamosrules 대화 패턴 분석 자동 제안",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "대화 패턴 기반 .vamosrules 자동 제안",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-057",
+            "feature_name": "오케스트레이션 패턴 (Centralized/Hierarchical/Market-based/Stigmergic)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "S12.11.3 오케스트레이션 패턴",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-064",
+            "feature_name": "작업 완료 자동 검증 리포트 생성",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "작업 완료 자동 검증 리포트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-028",
+            "feature_name": "기억해줘/잊어줘 명시 명령 처리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 STEP7 S7D-002",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-037",
+            "feature_name": "커뮤니케이션 스타일 학습",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 STEP7 S7-F-022",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-039",
+            "feature_name": "작업 중단 복원 (task_checkpoint)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 STEP7 S7-F-026",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-065",
+            "feature_name": "한-영 혼용 문서 처리 (language 메타, 교차 언어 검색)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§4.3.3 한-영 혼용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-066",
+            "feature_name": "Contextual Retrieval 벤치마크 적용 (67% 향상)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4.3 Contextual Retrieval",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-088",
+            "feature_name": "Contextual Retrieval (청킹+문맥)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7-P-004",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-099",
+            "feature_name": "동적 청킹 전략 (문서유형별)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7D-056",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-100",
+            "feature_name": "Contextual Retrieval 구현 (프리픽스 자동 삽입)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7D-057",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-107",
+            "feature_name": "동적 청크 크기 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7-P-009",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-116",
+            "feature_name": "대화 히스토리 검색",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 R2 S7B-025",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-119",
+            "feature_name": "RadixAttention KV 캐시 패턴",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 D-ADD-03",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-142",
+            "feature_name": "벡터 DB 백업/복원",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§6 S7D-016",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-143",
+            "feature_name": "압축 전략 (ZSTD, 양자화)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§6 S7D-077",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-178",
+            "feature_name": "파일 업로드 즉시 분석",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "아이디어 P6-KNW-03",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-187",
+            "feature_name": "M-001 자동 지식 캡처",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-001",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-191",
+            "feature_name": "M-011 노트 연결 자동 발견",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-011",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-192",
+            "feature_name": "M-013 지식 요약/통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-013",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-193",
+            "feature_name": "M-015 일일/주간 지식 리뷰",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-015",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-194",
+            "feature_name": "M-017 웹 클리핑 + 북마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-017",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-198",
+            "feature_name": "M-027 연구 노트 관리 (논문/인용)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-027",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-199",
+            "feature_name": "M-029 코드 스니펫 라이브러리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-029",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-200",
+            "feature_name": "M-031 아이디어 캡처 (성숙도 추적)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-031",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-201",
+            "feature_name": "M-033 학습 경로 연동",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-033",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-204",
+            "feature_name": "M-039 다국어 노트 (한/영 혼합)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-039",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-217",
+            "feature_name": "M-045 지식 기반 의사결정 지원 (SWOT)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-045",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-218",
+            "feature_name": "M-046 지식 기반 글쓰기 지원",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-046",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-220",
+            "feature_name": "M-044 지식 기반 개인 어시스턴트 (V3 심화)",
+            "version_scope": "V1,V3",
+            "module_id": "",
+            "source_section": "§11 PKM M-044",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-031",
+            "feature_name": "2단계 승인 구조 (계획+실행) 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§3.1 승인 필수",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-051",
+            "feature_name": "비용 절감 전략 3가지 (캐싱/경량모델/불필요호출제거)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§4.2.1 비용 절감",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-052",
+            "feature_name": "월 예산 초과 처리 (차단→알림→예산상향승인)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§4.3 월 예산 초과",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-056",
+            "feature_name": "SelfCheckGate 구현 (P0≥70/P1≥75/P2≥80)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§5.2.1 SelfCheckGate",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-090",
+            "feature_name": "긴급 연락 체계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§15.7 S7E-073",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-091",
+            "feature_name": "안전 모드 (최소 기능 동작)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§15.7 S7E-074",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-112",
+            "feature_name": "감정 지능 개발 도구",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§15.16 P-009",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-113",
+            "feature_name": "AI 성격 진화 (적응 범위 제한)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§15.16 P-032",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-132",
+            "feature_name": "비용 경고 자동 조치 (80%force_mini/100%차단)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§17.6 P7-CST",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-144",
+            "feature_name": "감정 적응형 응답",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 P-002",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-146",
+            "feature_name": "Constitutional AI 핵심 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 S7-F-003",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-155",
+            "feature_name": "Hallucination 방지 (사실검증+불확실성명시)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-044",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-157",
+            "feature_name": "투명성 보고서 (월간 자동 생성)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-047",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-175",
+            "feature_name": "스트레스 관리 (호흡/그라운딩/명상)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 P-004",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-178",
+            "feature_name": "CBT 셀프케어 (사고기록+인지왜곡)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 P-020",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-179",
+            "feature_name": "번아웃 예방 (과도업무감지→중단)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 P-023",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-196",
+            "feature_name": "사용 통계 수집 (익명화 패턴, 로컬 전용)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-064",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-023",
+            "feature_name": "백테스팅 엔진 (backtest_engine.py) 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6. 백테스팅 엔진 및 51% Gate",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLIB-023",
+            "feature_name": "사이트 평가 알고리즘 구현 (evaluate_site 함수)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "5.1 사이트 평가 알고리즘",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-012",
+            "feature_name": "AgentMatcher 구현 (작업-에이전트 매칭 알고리즘)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "3.1.2 에이전트 매칭 스코어링",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-014",
+            "feature_name": "TaskDecomposer 구현 (복합 작업→하위 작업 분해)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "3.2.2 분해 알고리즘",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-035",
+            "feature_name": "TeamCostManager 구현 (에이전트별 비용 추적 + 할당)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6.6.1 비용 할당 전략",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-074",
+            "feature_name": "V1 @vamos.agent 데코레이터(내부 Agent SDK 베이스)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "9.1 V1 로드맵",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-041",
+            "feature_name": "RA_005 adjust_rate_limit 수리 액션 구현 (하향만 자동)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "5.1 LOW Risk 수리 액션",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-055",
+            "feature_name": "SDAR-CostGate 통합 구현 (수리로 인한 추가 비용 발생 여부 확인)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6.1 5 Gates와의 통합",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-057",
+            "feature_name": "SDAR-EvidenceGate 통합 구현 (진단 근거 충분성 확인)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6.1 5 Gates와의 통합",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-317",
+            "feature_name": "B-001 핵심 기술 전략 수립",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B CRITICAL",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-321",
+            "feature_name": "B-006 개발 로드맵",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B CRITICAL",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-372",
+            "feature_name": "세션 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-549",
+            "feature_name": "알림 규칙 엔진",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-553",
+            "feature_name": "인시던트 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-065",
+            "feature_name": "비용 알림",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-265",
+            "feature_name": "AI 투자 추천 엔진",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-268",
+            "feature_name": "투자 유니버스 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-270",
+            "feature_name": "투자 성과 추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-283",
+            "feature_name": "소셜 미디어 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-285",
+            "feature_name": "웹 트래픽 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-286",
+            "feature_name": "앱 다운로드 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-304",
+            "feature_name": "블랙-리터만 모델",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-306",
+            "feature_name": "팩터 투자",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-307",
+            "feature_name": "리밸런싱 엔진",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-314",
+            "feature_name": "상관관계 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-363",
+            "feature_name": "기술 GAP 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-366",
+            "feature_name": "GAP 해소 로드맵",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-367",
+            "feature_name": "GAP 우선순위화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-004",
+            "feature_name": "스크린 캡처 + 화면 이해",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part1 비전-언어 모델 통합",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-008",
+            "feature_name": "비전 기반 코드 이해",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part1 비전-언어 모델 통합",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-028",
+            "feature_name": "음성 대화 모드",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part3 음성/오디오",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-029",
+            "feature_name": "오디오 파일 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part3 음성/오디오",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-030",
+            "feature_name": "음성 품질 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part3 음성/오디오",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-042",
+            "feature_name": "스프레드시트 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part5 문서 처리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-043",
+            "feature_name": "프레젠테이션 분석/생성",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part5 문서 처리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-046",
+            "feature_name": "문서 비교 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part5 문서 처리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-048",
+            "feature_name": "다국어 문서 처리",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part5 문서 처리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-103",
+            "feature_name": "MCP 프롬프트 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part1 MCP 생태계",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-158",
+            "feature_name": "OpenAI 대비 VAMOS 차별화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 거버넌스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-175",
+            "feature_name": "코드 자동완성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-176",
+            "feature_name": "코드 리뷰 AI",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-177",
+            "feature_name": "코드 설명 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-179",
+            "feature_name": "버그 탐지/수정",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-182",
+            "feature_name": "문서/주석 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-185",
+            "feature_name": "디버깅 어시스턴트",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-189",
+            "feature_name": "성능 프로파일링",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-190",
+            "feature_name": "코드 검색 시맨틱",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§L-Part1 코딩 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-201",
+            "feature_name": "데이터베이스 관리 도구",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part4 개발 인프라 도구",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-204",
+            "feature_name": "성능 프로파일링 (L)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part4 개발 인프라 도구",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-224",
+            "feature_name": "오프라인 모드",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part6 개발자 경험 DX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-232",
+            "feature_name": "웹 클리핑 + AI 요약",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-234",
+            "feature_name": "스크린 캡처 지식화",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-235",
+            "feature_name": "대화 히스토리 지식화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-237",
+            "feature_name": "코드 지식 추출",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-239",
+            "feature_name": "음성 메모 → 지식",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-241",
+            "feature_name": "자동 태깅 + 분류",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-242",
+            "feature_name": "지식그래프 자동 구축",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-243",
+            "feature_name": "폴더/노트북 구조",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-244",
+            "feature_name": "Zettelkasten 방법론 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-245",
+            "feature_name": "시맨틱 중복 감지",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-246",
+            "feature_name": "시간 기반 지식 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-247",
+            "feature_name": "지식 성숙도 추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-251",
+            "feature_name": "시맨틱 지식 검색",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-253",
+            "feature_name": "지식 기반 RAG 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-255",
+            "feature_name": "지식 요약 및 종합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-256",
+            "feature_name": "지식 연결 탐색",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-257",
+            "feature_name": "스마트 리마인더",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-259",
+            "feature_name": "지식 버전 관리",
+            "version_scope": "V1,V3",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-260",
+            "feature_name": "지식 통계/분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part3 지식 검색+활용",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-267",
+            "feature_name": "개인 위키",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part4 지식그래프 심화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-274",
+            "feature_name": "지식 기반 개인 어시스턴트",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part5 차별화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-275",
+            "feature_name": "지식 기반 의사결정 지원",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part5 차별화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-276",
+            "feature_name": "지식 기반 글쓰기 지원",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part5 차별화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-004",
+            "feature_name": "루프/반복 처리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-008",
+            "feature_name": "스케줄러 (Cron)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-017",
+            "feature_name": "폼 자동 입력",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-022",
+            "feature_name": "Human-in-the-Loop",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-028",
+            "feature_name": "Slack/Discord 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-029",
+            "feature_name": "Google Workspace 통합",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-031",
+            "feature_name": "Notion/Obsidian 통합",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-032",
+            "feature_name": "GitHub/GitLab 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§N 워크플로우/RPA",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-045",
+            "feature_name": "개인화 학습 경로",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-046",
+            "feature_name": "AI 튜터 대화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-047",
+            "feature_name": "플래시카드 자동 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-048",
+            "feature_name": "간격 반복 (Spaced Repetition)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-049",
+            "feature_name": "퀴즈 자동 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-050",
+            "feature_name": "학습 진도 추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-052",
+            "feature_name": "소크라테스식 대화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-053",
+            "feature_name": "코딩 실습 환경",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-060",
+            "feature_name": "논문 읽기 도우미",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-061",
+            "feature_name": "독서 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-062",
+            "feature_name": "학습 목표 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-063",
+            "feature_name": "마이크로러닝",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-064",
+            "feature_name": "학습 동기 부여",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-067",
+            "feature_name": "강의 요약 자동 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-068",
+            "feature_name": "필기 AI 보조",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-071",
+            "feature_name": "교육 차별화 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-079",
+            "feature_name": "교육 다국어 지원",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-082",
+            "feature_name": "감정 대응 대화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-083",
+            "feature_name": "스트레스 관리 도우미",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-085",
+            "feature_name": "수면 개선 도우미",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-088",
+            "feature_name": "습관 추적기",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-089",
+            "feature_name": "일기 작성 도우미",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-090",
+            "feature_name": "감정 일지 분석",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-093",
+            "feature_name": "긍정 심리 코칭",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-094",
+            "feature_name": "목표 설정/추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-095",
+            "feature_name": "시간 관리 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-096",
+            "feature_name": "집중 모드 (포모도로)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-099",
+            "feature_name": "감성 AI 대화 스타일",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-105",
+            "feature_name": "웰니스 알림",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-109",
+            "feature_name": "번아웃 예방",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-112",
+            "feature_name": "웰니스 차별화 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-119",
+            "feature_name": "웰니스 다국어 지원",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-132",
+            "feature_name": "함수 호출 병렬 실행",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강A 코어/LLM",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-139",
+            "feature_name": "한국어 프롬프트 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강A 코어/LLM",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-142",
+            "feature_name": "대화 분기 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강B 대화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-143",
+            "feature_name": "대화 요약 압축",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강B 대화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-145",
+            "feature_name": "대화 검색",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강B 대화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-203",
+            "feature_name": "지식-투자-코딩 통합 원스톱",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§독자 혁신 아이디어",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-003",
+            "feature_name": "Confidence-based 응답 전략",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§1.2 Part F 혁신기술",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-025",
+            "feature_name": "비용 최적화 엔진 (CostOptimizer)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 카테고리F",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-028",
+            "feature_name": "할루시네이션 탐지 (HallucinationDetector)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3 카테고리G",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "BGNR-007",
+            "feature_name": "대용량 파일 전처리 요약 패턴 (<10K 직접전달 / 10K~200K 전처리요약모델 / >200K 분할+개별요약→통합)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.2 대용량 파일 처리 패턴",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "BGNR-010",
+            "feature_name": "결과 3단 출력 구조 (user_response + evidence_summary + log_report)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.2 S5_OUTPUT_READY 3단 구조",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-SEC": [
+          {
+            "feature_id": "D202-085",
+            "feature_name": "G3 EvidenceGate 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 G3 EvidenceGate",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-087",
+            "feature_name": "G4 SelfCheckGate 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 G4 SelfCheckGate",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-007",
+            "feature_name": "STRIDE 기반 위협 모델링 (6대 공격표면)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2.2A S7E-001",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-008",
+            "feature_name": "AI 특화 공격 트리 작성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2.2A S7E-002",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-020",
+            "feature_name": "커뮤니티 스킬 보안 검증 체계 (4단계)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§2.3 커뮤니티 스킬",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-027",
+            "feature_name": "Jailbreak 방어 (패턴 DB + CAI)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§2.4 S7E-017",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-039",
+            "feature_name": "로컬 인증 (PIN/생체인증/세션타임아웃)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.7 S7E-021",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-142",
+            "feature_name": "Delegation Attack 방어 (3단계 깊이 제한)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 S7E-080",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-151",
+            "feature_name": "Delegation Attack 방어 강화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 S7-N-002",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-152",
+            "feature_name": "최소 권한 원칙 세분화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 S7-N-003",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-156",
+            "feature_name": "Bias 감지/완화 (자가테스트+경고)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-045",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-160",
+            "feature_name": "인시던트 분류 (P1~P4 4단계+절차)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-069",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-164",
+            "feature_name": "Privacy-by-Design (설계단계 내장)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-086",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-169",
+            "feature_name": "프라이버시 우선 모드",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7-F-029",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-170",
+            "feature_name": "민감도 자동 분류 (4단계)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7-F-055",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-034",
+            "feature_name": "DelegationSecurityGuard 구현 (위임 공격 방어)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6.5.2 Delegation Attack 방어 (S7E-080, LOCK)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-091",
+            "feature_name": "FileOwnership 모델 구현 (writable/readonly/forbidden 경로 제한)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "4.2 Coding Agent",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-051",
+            "feature_name": "NEVER_AUTO 10개 수리 액션 하드코딩 차단 구현 (RA_NEVER_01~RA_NEVER_10)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "5.1 NEVER_AUTO 수리 액션",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-083",
+            "feature_name": "NEVER_AUTO_TARGETS frozenset 하드코딩 및 validate_repair_target 함수 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "9.1 RULE 1.3 준수",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-370",
+            "feature_name": "레이트 리미팅",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-374",
+            "feature_name": "권한 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-375",
+            "feature_name": "OAuth 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-376",
+            "feature_name": "JWT 토큰 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-570",
+            "feature_name": "시크릿 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-588",
+            "feature_name": "보안 스캐닝",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-6",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-049",
+            "feature_name": "보안 스캔",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-082",
+            "feature_name": "SSL/TLS 인증서",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-355",
+            "feature_name": "금융 규제 준수 엔진",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-356",
+            "feature_name": "투자 자문 규제",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-357",
+            "feature_name": "개인정보 보호",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-359",
+            "feature_name": "규제 리포팅",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-365",
+            "feature_name": "규제 GAP 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-105",
+            "feature_name": "MCP 보안 레이어",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part1 MCP 생태계",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-163",
+            "feature_name": "입력 검증 (Injection 방지)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강E 보안",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-164",
+            "feature_name": "감사 로깅 보안",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강E 보안",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-204",
+            "feature_name": "로컬 우선 프라이버시",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§독자 혁신 아이디어",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-API": [
+          {
+            "feature_id": "D204-143",
+            "feature_name": "SDK 코드 생성 (OpenAPI→다국어 자동)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.10 L-030",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-378",
+            "feature_name": "OpenAPI 스펙",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          }
+        ]
+      }
+    },
+    "MEDIUM": {
+      "count": 160,
+      "by_category": {
+        "FT-CFG": [
+          {
+            "feature_id": "CLAUDE-238",
+            "feature_name": "NodeRegistry 구현 (domain_name 기반)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§16 레지스트리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-239",
+            "feature_name": "VerifyChainRegistry 구현 (EVX-1~EVX-6)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§16 레지스트리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-049",
+            "feature_name": "유형별 가변 청크 크기 구현 (DEC-004)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§5.4.1.6 RAG 청크 크기 확정",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "MSTR-007",
+            "feature_name": "3종 TemplateSet 구현 (TS_CORE/TS_WEB_RESEARCH/TS_CODE)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§5.6 3종 TemplateSet",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D203-032",
+            "feature_name": "노드 폭발 방지 상한(active_node_cap/candidate_node_cap) 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§3.2.1(B) 상한(Cap)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-105",
+            "feature_name": "응답 시간 SLO (채팅 P50<1s, 검색<3s, 코드<5s)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.1 S7F-094",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-142",
+            "feature_name": "에러 코드 체계 (VAMOS-XXXX 표준)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.10 L-028",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-008",
+            "feature_name": "(Lx, By) 매핑 규칙 구현",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§2 메모리 계층",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-064",
+            "feature_name": "한국어 불용어 처리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4.3.2 불용어",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-091",
+            "feature_name": "벡터 차원 선택 전략 (256 vs 1024)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7D-014",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-098",
+            "feature_name": "캐시 크기 제한 (V1:500MB, LRU)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7D-053",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-165",
+            "feature_name": "V1 저장소 비용 = 0원 확인",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10 S7D-075",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-237",
+            "feature_name": "M-049~054 PKM 참고자료+로드맵 (V1즉시/V2 3개월/V3 6개월+ 구현계획)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§11 R6 M-049~054",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-032",
+            "feature_name": "자율 운영 수준 4단계 (L0 FULL_MANUAL~L3 FULL_AUTO)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§3.2.1 자율 운영 수준",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-049",
+            "feature_name": "비용 상한 구현 (V1:40K/V2:93K/V3:266K KRW 월)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§4.1 비용 상한",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-136",
+            "feature_name": "금융 규제 검토 (면책 자동 삽입)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R1 S7E-053",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-195",
+            "feature_name": "이용약관/개인정보 법적 문서 표시 + 동의 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 S7E-057",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-199",
+            "feature_name": "웰니스 참고 서비스 정리 (Calm/Headspace/Woebot 등)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§15.16 P-035",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "DA1-010",
+            "feature_name": "COMBO-V1-LOCAL 스택 조합 구성 (월 ₩40,000 상한)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§A1-7 Stack Combos COMBO-V1-LOCAL",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "DD5-010",
+            "feature_name": "VerifyChainRegistry 구현 (EVX-1~6, JSON 형식, DN-006 해소)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§5.1 VerifyChainRegistry (SOT, JSON)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "DQ1-007",
+            "feature_name": "위험 예측 16건 대응 구현 (구현5 + 정책5 + 장기유지6)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§Q1-5 Risk Appendix (16건)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB2-006",
+            "feature_name": "루트 설정 파일 생성 (package.json, tsconfig.json 등)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 루트 디렉토리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB4-003",
+            "feature_name": "[core] 섹션 ConfigModel 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.1 [core]",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB4-004",
+            "feature_name": "[llm] 섹션 ConfigModel 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.2 [llm]",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB4-006",
+            "feature_name": "[vector_db] + [graph_db] 섹션 ConfigModel 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.4~3.5 [vector_db]/[graph_db]",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB4-009",
+            "feature_name": "[mcp] 섹션 ConfigModel 구현 (streamable_http LOCK)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.9 [mcp]",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB6-013",
+            "feature_name": "GitHub Secrets 14개 등록 설정",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 Secrets",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-025",
+            "feature_name": "EngineConfig 설정 모델 (fee_rate, slippage_rate, risk_free_rate, frequency)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "6.2 엔진 설정",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-108",
+            "feature_name": "KB Chunking 설정 완성 (F: 플레이스홀더 해소)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "23.3 카테고리별 발견사항",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-141",
+            "feature_name": "alerts.yaml 알림 설정 파일",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "부록 A: 파일 구조",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLIB-058",
+            "feature_name": "진화 제어 정책 설정 (변경 유형별 자동/알림/승인 규칙)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "12.6 진화 제어 정책",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-360",
+            "feature_name": "컨피그 서버",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-009",
+            "feature_name": "모델 버전 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-056",
+            "feature_name": "알림 규칙",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-091",
+            "feature_name": "V1 구현 로드맵 (J)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part9 로드맵",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-165",
+            "feature_name": "V1 구현 로드맵 (K)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 로드맵",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-227",
+            "feature_name": "V1 구현 로드맵 (L)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part7 로드맵",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-282",
+            "feature_name": "V1 구현 로드맵 (M)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part6 로드맵",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-074",
+            "feature_name": "V1 교육 로드맵",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-115",
+            "feature_name": "V1 웰니스 로드맵",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-MOD": [
+          {
+            "feature_id": "IRGD-008",
+            "feature_name": "V1 활성 모듈 스코프 확정 (17I+1S+6E+2A+2B = 28 모듈)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§3.2 V1 활성 모듈 스코프",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-029",
+            "feature_name": "적응형 응답 톤 조절 구현 (S7B-003)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.1 S7B-003 Tone Adaptation",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-117",
+            "feature_name": "ToneAdapter 클래스 구현 (감정별 톤 자동 조절)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "STEP7 S7B-003 적응형 톤",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-001",
+            "feature_name": "AgentMode Enum 정의 (MANUAL/SEMI_AUTO/SUPERVISED_AUTO)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "S1.1 Agent Mode 열거형 정의 (ADD-009)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-014",
+            "feature_name": "ChromaAdapter 구현 (V1 로컬)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2.2-A VectorStore 어댑터",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-063",
+            "feature_name": "형태소 분석 기반 토큰화 (Mecab-ko V1/Kiwi V2)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§4.3 한국어 RAG",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-092",
+            "feature_name": "Cross-Encoder 재순위화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§4 STEP7 S7D-018",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-159",
+            "feature_name": "저장소 추상화 레이어 (StorageAdapter)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§10 S7D-080",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-176",
+            "feature_name": "공감 대화 엔진 (Carl Rogers)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 P-007",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-064",
+            "feature_name": "MACD/MA Crossover 전략 추가 구현 (strategies.py)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "17.3 극복 일정 요약",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-070",
+            "feature_name": "Mean-Variance Optimization 구현 (portfolio_optimizer.py)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "18.3 Phase 2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-010",
+            "feature_name": "AgentLifecycleManager 구현 (spawn_agent, terminate_agent)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "2.4.3 라이프사이클 코드",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-017",
+            "feature_name": "ResearchAgent 구현 (웹 검색, 문서 분석, 사실 확인)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "4.1 Research Agent",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-020",
+            "feature_name": "ContentAgent 구현 (문서 작성, 번역, 요약)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "4.4 Content Agent",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-022",
+            "feature_name": "SDARAgent 구현 (자가진단/자동복구)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "4.6 SDAR Agent",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-023",
+            "feature_name": "CriticAgent 구현 (검증, 적대적 검사, 사실 확인)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "2.2.1 Sub-Agent ↔ BLUE NODE 매핑 테이블",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-024",
+            "feature_name": "ProductivityAgent 구현 (일정관리, 리마인더, 노트)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "2.2.1 Sub-Agent ↔ BLUE NODE 매핑 테이블",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "TEAM-089",
+            "feature_name": "CostTracker 구현 (에이전트별 비용 추적기)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "2.1.3 Lead Agent 코드 구조",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-004",
+            "feature_name": "모델 로딩 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-006",
+            "feature_name": "모델 양자화 지원",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-121",
+            "feature_name": "LlamaIndex 통합",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§K-Part3 에이전트 프레임워크",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-INFRA": [
+          {
+            "feature_id": "D203-025",
+            "feature_name": "MCP 디버깅 도구 (Inspector/Playground/로그뷰어/성능프로파일러)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§2.3 K-009",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-030",
+            "feature_name": "Phi-4 Microsoft 14B 경량 모델 로컬 실행 옵션",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 R3",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-031",
+            "feature_name": "Yi-Lightning 01.AI 경량 모델 참조",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 R3",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-080",
+            "feature_name": "LLM 메트릭 수집 (토큰/비용/지연/캐시율/에러율)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 S7F-054",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-151",
+            "feature_name": "기여 가이드라인 (CONTRIBUTING.md+스타일+PR)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.10 L-050",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-154",
+            "feature_name": "R3~R6 추정 항목 (~102건 추정, 원본 확인 필요)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§10.11 R3~R6 추정",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "SDAR-093",
+            "feature_name": "V1 기본 로깅 (기존 LogEvent 확장)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "10.1 V1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-318",
+            "feature_name": "B-002 기술 스택 선정",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B CRITICAL",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-324",
+            "feature_name": "B-004 기술 평가",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-327",
+            "feature_name": "B-009 DB 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-329",
+            "feature_name": "B-011 보안 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-331",
+            "feature_name": "B-013 CI/CD 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-332",
+            "feature_name": "B-018 성능 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-334",
+            "feature_name": "B-023 배포 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-335",
+            "feature_name": "B-024 장애 복구",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-336",
+            "feature_name": "B-025 확장성 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-337",
+            "feature_name": "B-027 코드 품질",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-340",
+            "feature_name": "B-035 감사 로깅",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B HIGH",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-353",
+            "feature_name": "마이크로서비스 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-357",
+            "feature_name": "로드 밸런서",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-358",
+            "feature_name": "서킷 브레이커",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-359",
+            "feature_name": "서비스 디스커버리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-362",
+            "feature_name": "중앙 로깅",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-363",
+            "feature_name": "메트릭 수집",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-366",
+            "feature_name": "그레이스풀 셧다운",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-367",
+            "feature_name": "리트라이 정책",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-371",
+            "feature_name": "캐시 계층",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-389",
+            "feature_name": "커넥션 풀링",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-390",
+            "feature_name": "쿼리 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-482",
+            "feature_name": "D-027 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-483",
+            "feature_name": "D-028 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-484",
+            "feature_name": "D-029 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-485",
+            "feature_name": "D-030 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-486",
+            "feature_name": "D-031 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-487",
+            "feature_name": "D-032 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-488",
+            "feature_name": "D-033 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-489",
+            "feature_name": "D-034 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-4 캐싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-542",
+            "feature_name": "E-005 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-543",
+            "feature_name": "E-006 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-544",
+            "feature_name": "E-007 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-545",
+            "feature_name": "E-008 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-546",
+            "feature_name": "E-009 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-547",
+            "feature_name": "E-010 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-1",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-551",
+            "feature_name": "APM 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-554",
+            "feature_name": "E-017 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-555",
+            "feature_name": "E-018 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-556",
+            "feature_name": "E-019 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-557",
+            "feature_name": "E-020 운영",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-2",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-558",
+            "feature_name": "컨테이너 오케스트레이션",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-3",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-560",
+            "feature_name": "인그레스 컨트롤러",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-3",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-569",
+            "feature_name": "환경 프로비저닝",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-578",
+            "feature_name": "블루/그린 배포",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-5",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-615",
+            "feature_name": "백업 검증",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-9",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-005",
+            "feature_name": "모델 캐싱 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-051",
+            "feature_name": "환경별 배포",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-055",
+            "feature_name": "로그 수집 (ELK)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-058",
+            "feature_name": "에러 트래킹",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-093",
+            "feature_name": "캐시 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-094",
+            "feature_name": "DB 쿼리 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-208",
+            "feature_name": "개발 환경 관리",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part4 개발 인프라 도구",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-221",
+            "feature_name": "성능 최적화 DX",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part6 개발자 경험 DX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-138",
+            "feature_name": "LLM 폴백 전략 고도화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강A 코어/LLM",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-167",
+            "feature_name": "LiteLLM Proxy 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-169",
+            "feature_name": "Qdrant 벡터DB 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-172",
+            "feature_name": "GGUF Q4_K_M 양자화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-012",
+            "feature_name": "Apple Intelligence 3단계 처리 계층 참조",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§1.3 Apple 온디바이스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-026",
+            "feature_name": "로깅/트레이싱 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2 카테고리F",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-057",
+            "feature_name": "문서 자동 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 카테고리L",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-SCHEMA": [
+          {
+            "feature_id": "D203-070",
+            "feature_name": "CORE↔NODE 요청/응답 엔벨로프 구현 (필수+optional 확장 필드)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§5.2 입출력/상태/이벤트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-022",
+            "feature_name": "표준 3단 출력 (user_response/evidence_summary/log_report)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S7.2 표준 3단 출력 (정본)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "DD4-011",
+            "feature_name": "contracts.py KBEmbeddingRecord 필드 추가 구현 (vector_dim, embedded_at_utc)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8-A.5 KB_EMBEDDING_RECORD (S13-A-007)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "PB7-001",
+            "feature_name": "VersionedSchema 기본 클래스 및 SchemaVersion 모델 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2.1 스키마 버전 관리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "AINV-052",
+            "feature_name": "프로덕션 OHLCV str+Decimal 타입 의무화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "14.2 STEP 5 감사 결정",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-391",
+            "feature_name": "인덱스 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§C Parts1-4",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-456",
+            "feature_name": "D-001 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-457",
+            "feature_name": "D-002 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-458",
+            "feature_name": "D-003 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-459",
+            "feature_name": "D-004 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-460",
+            "feature_name": "D-005 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-461",
+            "feature_name": "D-006 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-462",
+            "feature_name": "D-007 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-463",
+            "feature_name": "D-008 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-1 DB스키마",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-464",
+            "feature_name": "D-009 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-465",
+            "feature_name": "D-010 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-466",
+            "feature_name": "D-011 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-468",
+            "feature_name": "D-013 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-469",
+            "feature_name": "D-014 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-470",
+            "feature_name": "D-015 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-471",
+            "feature_name": "D-016 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-472",
+            "feature_name": "D-017 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-2 데이터모델",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-474",
+            "feature_name": "D-019 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-475",
+            "feature_name": "D-020 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-476",
+            "feature_name": "D-021 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-477",
+            "feature_name": "D-022 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-478",
+            "feature_name": "D-023 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-479",
+            "feature_name": "D-024 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-480",
+            "feature_name": "D-025 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-481",
+            "feature_name": "D-026 데이터설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§D Part-3 인덱싱",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-261",
+            "feature_name": "자동 온톨로지 구축",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part4 지식그래프 심화",
+            "mapping_role": "PRIMARY"
+          }
+        ]
+      }
+    },
+    "LOW": {
+      "count": 152,
+      "by_category": {
+        "FT-UI": [
+          {
+            "feature_id": "S7JM-015",
+            "feature_name": "투자 차트 자동 생성",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§J-Part2 이미지 생성/편집",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-058",
+            "feature_name": "마인드맵 자동 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part6 멀티모달 생성",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-135",
+            "feature_name": "P2 재확인 모달 구현 (DEC-011)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.6 UI/UX LOCK",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "CLAUDE-136",
+            "feature_name": "비용 경고 색상 표시 구현 (80%=#FBBF24노란, 100%=#EF4444빨간, DEC-015)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.6 UI/UX LOCK",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "P30-088",
+            "feature_name": "요청 자동 원자화 + 진행률 표시 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§2.6.6 Interaction Rules",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-053",
+            "feature_name": "사고 과정 표시 구현 (S7B-007)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7.51 S7B-007 Thinking Display",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-081",
+            "feature_name": "비용 대시보드 (일/주/월+모델별+예산 진행바)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§8 S7F-063",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-130",
+            "feature_name": "학습 분석 대시보드 (학습시간/진행률/테스트/간격반복/강점/약점)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "S20.1 O-010 학습 분석 대시보드",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D208-052",
+            "feature_name": "S7C-008~012 대화 분기/공유/편집/멀티탭/ORANGE-BLUE 상태 표시",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§11-A.1 S7C-008~012",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D208-053",
+            "feature_name": "Canvas/Artifacts/편집 모드 (S7C-013~022, 10건)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§11-A.2 S7C-013~022",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D208-067",
+            "feature_name": "설정/커스터마이징/피드백 UI (S7C-071~080, 10건)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§11-A.8 S7C-071~080",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-622",
+            "feature_name": "비용 최적화 대시보드",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-10",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-061",
+            "feature_name": "비용 추적 대시보드",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-096",
+            "feature_name": "프론트엔드 최적화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-217",
+            "feature_name": "온보딩 마법사",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part6 개발자 경험 DX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-219",
+            "feature_name": "대화형 튜토리얼",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§L-Part6 개발자 경험 DX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-223",
+            "feature_name": "다국어 지원 DX",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part6 개발자 경험 DX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-051",
+            "feature_name": "학습 분석 대시보드",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-078",
+            "feature_name": "교육 접근성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-091",
+            "feature_name": "웰빙 대시보드",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-120",
+            "feature_name": "웰니스 접근성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-151",
+            "feature_name": "키보드 내비게이션",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강C UI/UX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-154",
+            "feature_name": "코드 하이라이팅",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강C UI/UX",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "BGNR-006",
+            "feature_name": "UI 상태 머신 6단계 (UIS1_IDLE → UIS2_PROCESSING → UIS3_LOCKED → UIS4_RUNNING → UIS5_AWAIT_APPROVAL → UIS6_PRESENTING)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§9.3 UI 상태 머신",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-DOMAIN": [
+          {
+            "feature_id": "P30-073",
+            "feature_name": "MOAT 4건 경쟁우위 구현 추적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§20.2 MOAT 핵심 경쟁우위 4건",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-126",
+            "feature_name": "언어 학습 지원 (AI 대화/발음 평가/문법/어휘/게이미피케이션)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "S20.1 O-006 언어 학습 지원",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-127",
+            "feature_name": "독서 어시스턴트 (챕터 핵심/Q&A/논문 분석)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.1 O-007 독서 어시스턴트",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-128",
+            "feature_name": "퀴즈/테스트 자동 생성 (객관식/주관식/코드/시나리오, 난이도 자동 조정)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.1 O-008 퀴즈/테스트 자동 생성",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-133",
+            "feature_name": "팟캐스트/오디오 학습 (전사 요약 카드, NotebookLM 스타일 오디오 생성)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "S20.2 O-013 팟캐스트/오디오 학습",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-134",
+            "feature_name": "책 요약 + 독서 관리 (트래킹/노트/인용구/책 간 연결)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.2 O-014 책 요약 + 독서 관리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-136",
+            "feature_name": "온라인 강의 통합 (Coursera/edX/Udemy 보조)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.2 O-016 온라인 강의 통합",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-139",
+            "feature_name": "목표 관리 (OKR/SMART)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.3 O-019 목표 관리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-140",
+            "feature_name": "시간 관리 (포모도로/시간 기록/효율 분석/일정 최적화)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.3 O-020 시간 관리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-142",
+            "feature_name": "커리어 개발 지원 (스킬 갭 분석/이력서/자기소개서)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.3 O-022 커리어 개발 지원",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-144",
+            "feature_name": "프레젠테이션 코칭 (슬라이드/스크립트/리허설/Q&A)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "S20.3 O-024 프레젠테이션 코칭",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-145",
+            "feature_name": "네트워킹/인맥 관리 (연락처/리마인더/인맥 KG)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S20.3 O-025 네트워킹/인맥 관리",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-161",
+            "feature_name": "크립토/DeFi 통합 (시장데이터/온체인/감성/포트폴리오/DeFi/NFT/규제/에어드랍)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "S21.9 S7I-075~082 크립토/DeFi",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D206-202",
+            "feature_name": "M-035 투자 리서치 노트",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11 PKM M-035",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D207-180",
+            "feature_name": "웰니스-투자 연동 (수면부족→결정연기)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "R2 P-028",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-185",
+            "feature_name": "경쟁사 가격 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-186",
+            "feature_name": "원가 구조 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-187",
+            "feature_name": "가격 민감도 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-188",
+            "feature_name": "구독 모델 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-189",
+            "feature_name": "프리미엄 기능 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-190",
+            "feature_name": "번들링 전략 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-195",
+            "feature_name": "핵심 가격 전략 수립",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-196",
+            "feature_name": "프리미엄 티어 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-197",
+            "feature_name": "무료 티어 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-198",
+            "feature_name": "엔터프라이즈 가격",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-199",
+            "feature_name": "할인 정책",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-203",
+            "feature_name": "수익 모델 설계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-211",
+            "feature_name": "페르소나 정의",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-214",
+            "feature_name": "페인 포인트 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-216",
+            "feature_name": "개인 투자자 프로파일",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-220",
+            "feature_name": "SAM 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-221",
+            "feature_name": "SOM 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-225",
+            "feature_name": "경쟁사 매핑",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-226",
+            "feature_name": "차별화 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-227",
+            "feature_name": "SWOT 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-228",
+            "feature_name": "경쟁 우위 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-229",
+            "feature_name": "포지셔닝 맵",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-233",
+            "feature_name": "출시 전략 수립",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-234",
+            "feature_name": "마케팅 채널 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-242",
+            "feature_name": "리텐션 전략",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-257",
+            "feature_name": "재무 모델 구축",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§H 비즈니스",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-293",
+            "feature_name": "한국 주식시장 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-294",
+            "feature_name": "한국 채권시장 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-295",
+            "feature_name": "한국 파생상품 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-296",
+            "feature_name": "한국 ETF 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-297",
+            "feature_name": "한국 IPO 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-298",
+            "feature_name": "한국 공시 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-299",
+            "feature_name": "한국 배당 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-337",
+            "feature_name": "암호화폐 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-340",
+            "feature_name": "NFT 시장 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§I 투자도메인",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-089",
+            "feature_name": "참고 기술/서비스 (J)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part9 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-090",
+            "feature_name": "참고 논문 (J)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part9 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-094",
+            "feature_name": "참고 오픈소스 (J)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part9 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-096",
+            "feature_name": "참고 데이터셋 (J)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§J-Part9 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-162",
+            "feature_name": "참고 논문 (K)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-163",
+            "feature_name": "참고 표준 (K)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-164",
+            "feature_name": "참고 도구 (K)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-168",
+            "feature_name": "참고 오픈소스 (K-070)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-169",
+            "feature_name": "참고 사례 (K-071)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-170",
+            "feature_name": "참고 표준문서 (K-072)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§K-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-210",
+            "feature_name": "투자+코딩 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part5 차별화",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-225",
+            "feature_name": "참고 도구/서비스 (L)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part7 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-226",
+            "feature_name": "참고 논문 (L)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§L-Part7 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-238",
+            "feature_name": "투자 지식 자동 축적",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part1 지식 캡처",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-279",
+            "feature_name": "참고 서적 (M)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-280",
+            "feature_name": "참고 논문 (M)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-281",
+            "feature_name": "참고 도구 (M)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§M-Part6 참고",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-056",
+            "feature_name": "언어 학습 특화",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-057",
+            "feature_name": "투자 교육 특화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-058",
+            "feature_name": "코딩 교육 특화",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§O 교육/학습/자기개발",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-108",
+            "feature_name": "투자 심리 분석",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-110",
+            "feature_name": "감정적 투자 방지",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§P 건강/웰니스/감성AI",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-189",
+            "feature_name": "OpenBB v4 통합",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강I 투자",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-036",
+            "feature_name": "백테스팅 고급",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§5 카테고리I",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-073",
+            "feature_name": "OpenBB v4 통합 (보강)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§10 추가항목",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-TEST": [
+          {
+            "feature_id": "D202-108",
+            "feature_name": "LM-Eval Harness 통합 구현",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§11.12.3 LM-Eval Harness 연동",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D202-115",
+            "feature_name": "3단계 테스트 전략 구현 (단위≥80%/통합≥90%/시나리오≥95%)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§12.4 테스트 전략 [P7-MOD]",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D203-083",
+            "feature_name": "MCP 도구 4단계 검증 절차 구현 (Inspector→trial→안전테스트→active)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§6.3.4 도구 검증 절차",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D204-117",
+            "feature_name": "프롬프트 테스트 (promptfoo YAML 회귀 테스트)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§10.3 S7F-070",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "D205-028",
+            "feature_name": "프롬프트 A/B 테스트",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "S7.5.4 A/B 테스트 (ADD-064)",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "DD8-005",
+            "feature_name": "D8 수용 기준 5개 (AC-D8-001~005) 구현 검증",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§7 Acceptance Criteria",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-322",
+            "feature_name": "B-028 품질 관리 체계",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§B CRITICAL",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-598",
+            "feature_name": "성능 테스트",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-7",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-599",
+            "feature_name": "부하 테스트",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-7",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7AE-617",
+            "feature_name": "RTO/RPO 검증",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§E Part-9",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-007",
+            "feature_name": "모델 벤치마킹 도구",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-091",
+            "feature_name": "성능 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§F 인프라",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-097",
+            "feature_name": "MMLU 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-098",
+            "feature_name": "HellaSwag 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-100",
+            "feature_name": "WinoGrande 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-101",
+            "feature_name": "GSM8K 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-102",
+            "feature_name": "TruthfulQA 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-107",
+            "feature_name": "KoBEST 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-108",
+            "feature_name": "KLUE 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-109",
+            "feature_name": "KorQuAD 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-110",
+            "feature_name": "Korean NLI 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-111",
+            "feature_name": "한국어 요약 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-112",
+            "feature_name": "한국어 생성 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-115",
+            "feature_name": "HumanEval 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-116",
+            "feature_name": "MBPP 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-117",
+            "feature_name": "CodeContests 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-118",
+            "feature_name": "SWE-bench 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-119",
+            "feature_name": "DS-1000 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-123",
+            "feature_name": "AgentBench 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-124",
+            "feature_name": "ToolBench 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-125",
+            "feature_name": "WebArena 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-126",
+            "feature_name": "API-Bank 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-132",
+            "feature_name": "RAG 재현율 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-133",
+            "feature_name": "RAG 지연시간 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-141",
+            "feature_name": "유해성 탐지 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-142",
+            "feature_name": "편향성 탐지 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-143",
+            "feature_name": "환각 탐지 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-144",
+            "feature_name": "프라이버시 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-145",
+            "feature_name": "로버스트니스 벤치마크",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-149",
+            "feature_name": "응답 품질 평가",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-151",
+            "feature_name": "태스크 완료율 평가",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-153",
+            "feature_name": "접근성 평가",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-158",
+            "feature_name": "한국 시장 이해도",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-160",
+            "feature_name": "포트폴리오 추천 품질",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-162",
+            "feature_name": "뉴스 분석 품질",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-168",
+            "feature_name": "평가 메트릭 수집",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7FI-170",
+            "feature_name": "평가 리포트 생성",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-175",
+            "feature_name": "SWE-Bench 최신 변형",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7NP-178",
+            "feature_name": "BFCL v3 (Berkeley Function Calling)",
+            "version_scope": "V1",
+            "module_id": "",
+            "source_section": "§보강G 벤치마크",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-029",
+            "feature_name": "SWE-Bench 대응",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§3 카테고리G",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7BG-071",
+            "feature_name": "BFCL v3 (Function Calling 벤치마크)",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§10 추가항목",
+            "mapping_role": "PRIMARY"
+          }
+        ],
+        "FT-MIG": [
+          {
+            "feature_id": "DA1-009",
+            "feature_name": "Graph DB 전환 구현 (V1: JSON 파일, V2+: Neo4j Community, V3: Aura)",
+            "version_scope": "V1,V2,V3",
+            "module_id": "",
+            "source_section": "§A1-6C Graph DB 비교",
+            "mapping_role": "PRIMARY"
+          },
+          {
+            "feature_id": "S7JM-250",
+            "feature_name": "지식 임포트/익스포트",
+            "version_scope": "V1,V2",
+            "module_id": "",
+            "source_section": "§M-Part2 지식 조직화",
+            "mapping_role": "PRIMARY"
+          }
+        ]
+      }
+    }
+  }
+}

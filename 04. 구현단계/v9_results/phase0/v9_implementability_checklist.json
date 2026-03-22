@@ -1,0 +1,492 @@
+{
+  "meta": {
+    "gt_id": "GT-5",
+    "title": "구현 가능성 체크리스트 (관점 C용)",
+    "source_document": "VAMOS_구현가이드_PART2_구현단계.md v20.4.0",
+    "created": "2026-03-07",
+    "criteria": {
+      "ai_prompt_criteria": {
+        "C-1": "파일 경로 — 생성/수정할 파일의 절대 경로",
+        "C-2": "입출력 스키마 — 함수/클래스의 입력과 출력 타입",
+        "C-3": "의존성 — import할 모듈/패키지 목록",
+        "C-4": "설정값 — config에서 읽어야 할 키와 기본값",
+        "C-5": "SOT 참조 — 구현 근거가 되는 SOT 문서와 섹션",
+        "C-6": "성공 기준 — 테스트/검증 방법 (Stage Gate 항목과 연결)",
+        "C-7": "LOCK 제약 — 해당 구현에 적용되는 LOCK/FREEZE 값"
+      },
+      "v1_table_criteria": {
+        "V1-1": "모듈 ID + 파일명 — 테이블에 파일명 칼럼 존재 여부",
+        "V1-2": "구현 내용 구체성 — 1줄 설명만으로 구현 가능한가",
+        "V1-3": "SOT 참조 — 산출물 참조 칼럼에 구체적 문서+섹션",
+        "V1-4": "LOCK 제약 명시 — 해당 모듈에 적용되는 LOCK 값이 테이블 내에 기술"
+      }
+    },
+    "verdict_scale": ["PASS", "PARTIAL", "FAIL"]
+  },
+
+  "structural_finding": {
+    "issue": "V0 AI 프롬프트 수 불일치",
+    "expected": "12개 (STEP당 2개)",
+    "actual": "6개 (STEP당 1개)",
+    "detail": "각 STEP의 '실행 가이드' 섹션에 '사용자 직접 작업'(수동 체크리스트)과 'AI 프롬프트'(1개 블록)가 있으나, '사용자 직접 작업'은 AI 프롬프트가 아닌 수동 작업 지시문. v9_pipeline_plan.md의 '12개' 카운트는 수정 필요.",
+    "severity": "INFO"
+  },
+
+  "v0_prompts": {
+    "prompt_count": 6,
+    "section": "§2 (V0 STEP 1~6)",
+    "items": [
+      {
+        "id": "V0-STEP-1",
+        "title": "프로젝트 스캐폴딩",
+        "lines": [213, 420],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "Full directory tree (lines 223-259): src/, src-tauri/, backend/vamos_core/, config/config.v1.toml, schemas/seed/*.json 5개"},
+          "C-2": {"verdict": "PARTIAL", "evidence": "함수/클래스 시그니처 없음. Seed file JSON 포맷만 제시 (lines 395-406). 스캐폴딩 단계 특성상 허용 가능"},
+          "C-3": {"verdict": "PASS", "evidence": "Python 10개, Rust 3개, Node 4개 패키지 명시 (lines 265-286)"},
+          "C-4": {"verdict": "PASS", "evidence": "config.v1.toml 전체 인라인 (13 섹션, LOCK 표기 포함, lines 293-371)"},
+          "C-5": {"verdict": "PASS", "evidence": "PHASE_B2, PHASE_B3, PHASE_B4 참조 (lines 416-419)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 8항목 (lines 424-435)"},
+          "C-7": {"verdict": "PASS", "evidence": "LOCK/FREEZE 변경 금지 명시 + config 내 # LOCK 주석 (lines 410-414)"}
+        },
+        "pass": 6, "partial": 1, "fail": 0
+      },
+      {
+        "id": "V0-STEP-2",
+        "title": "스키마 정의",
+        "lines": [499, 628],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "contracts.py, registries.py, generate_types.py, shared/types/ 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "25-model 테이블 (필드 수, FREEZE/LOCK 상태), 5 registry 정의, FREEZE 스냅샷"},
+          "C-3": {"verdict": "PASS", "evidence": "pydantic import 명시 (lines 529-530)"},
+          "C-4": {"verdict": "PARTIAL", "evidence": "runtime config 키/기본값 미명시. 스키마 정의 단계 특성상 config 직접 참조 적음"},
+          "C-5": {"verdict": "PASS", "evidence": "D2.1-D1~D8, D2.0-02 §7, CLAUDE.md §12 등 (lines 617-627)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 9항목 (lines 632-643)"},
+          "C-7": {"verdict": "PASS", "evidence": "DecisionSchema 18필드 FREEZE, ResponseEnvelope 5필드 LOCK 등 (lines 583-589)"}
+        },
+        "pass": 6, "partial": 1, "fail": 0
+      },
+      {
+        "id": "V0-STEP-3",
+        "title": "IPC 통신 레이어",
+        "lines": [700, 793],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "rpc/server.py, python_manager.rs, src-tauri/src/commands/ 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "13 RPC 메서드, 5 Tauri IPC 커맨드, Rust 함수 시그니처 제시"},
+          "C-3": {"verdict": "PASS", "evidence": "jsonrpcserver, serde_json, Tauri 2.0 매크로 명시"},
+          "C-4": {"verdict": "PARTIAL", "evidence": "timeout 30s, auto-restart 최대 3회 하드코딩. config.v1.toml 키 매핑 없음"},
+          "C-5": {"verdict": "PASS", "evidence": "PHASE_B1, D2.0-04 §5, D2.0-01 §2 참조 (lines 789-792)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 8항목 (lines 797-807)"},
+          "C-7": {"verdict": "PARTIAL", "evidence": "JSON-RPC 2.0, stdin/stdout only 등 아키텍처 제약 있으나 LOCK/FREEZE 태그 미부착"}
+        },
+        "pass": 5, "partial": 2, "fail": 0
+      },
+      {
+        "id": "V0-STEP-4",
+        "title": "ORANGE CORE 최소 파이프라인",
+        "lines": [880, 985],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "8개 파일 경로 명시 (i1~i20, pipeline.py)"},
+          "C-2": {"verdict": "PASS", "evidence": "IntentFrame, EvidencePack, DecisionSchema I/O + VamosState TypedDict 8필드 + StateGraph 5노드"},
+          "C-3": {"verdict": "PASS", "evidence": "LangGraph, contracts.py, ChatOllama, structlog, tiktoken (lines 972-976)"},
+          "C-4": {"verdict": "PASS", "evidence": "config mini_model, CostGate 80%/100%, daily/monthly_limit, approval.timeout_s=600"},
+          "C-5": {"verdict": "PASS", "evidence": "D2.0-02 §7.1-7.5, §8, §2.2, D2.0-05 §4-7, D2.0-07 §1-6 (lines 979-984)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 13항목 (lines 989-1003)"},
+          "C-7": {"verdict": "PASS", "evidence": "async mandatory, Pydantic mandatory, 9-State LOCK, Gate order LOCK"}
+        },
+        "pass": 7, "partial": 0, "fail": 0
+      },
+      {
+        "id": "V0-STEP-5",
+        "title": "기본 저장소 + 로깅",
+        "lines": [1033, 1141],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "memory_store.py, logger.py, config_loader.py 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "SQL DDL 10컬럼+3인덱스, VamosConfig 13 sub-config 클래스, CRUD 메서드"},
+          "C-3": {"verdict": "PASS", "evidence": "aiosqlite, structlog, tomllib, pydantic 명시"},
+          "C-4": {"verdict": "PASS", "evidence": "Memory TTL, 로그 패턴, 3-step 로딩 순서, config 섹션→PHASE_B4 매핑"},
+          "C-5": {"verdict": "PASS", "evidence": "D2.0-06 §2.1, D2.0-04 §9, PHASE_B4, CLAUDE.md §15 (lines 1136-1140)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 10항목 (lines 1145-1156)"},
+          "C-7": {"verdict": "PASS", "evidence": "JSON format LOCK, trace_id mandatory LOCK, config LOCK 값 런타임 동결"}
+        },
+        "pass": 7, "partial": 0, "fail": 0
+      },
+      {
+        "id": "V0-STEP-6",
+        "title": "CI 스켈레톤 + 테스트",
+        "lines": [1188, 1336],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "2 workflow yml + 7 test 파일 + pyproject.toml 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "테스트 함수 시그니처 + assertions, YAML workflow 정의 완전"},
+          "C-3": {"verdict": "PASS", "evidence": "pytest>=8.3.0, pytest-asyncio>=0.24.0, pytest-cov>=6.0.0, ruff>=0.8.0, mypy>=1.0"},
+          "C-4": {"verdict": "PASS", "evidence": "ruff target-version, line-length=100, 13 lint rules, mypy strict=true"},
+          "C-5": {"verdict": "PASS", "evidence": "PHASE_B5, PHASE_B6 참조 (lines 1333-1335)"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 10항목 + V0 완료 체크리스트 13항목"},
+          "C-7": {"verdict": "PARTIAL", "evidence": "FREEZE/LOCK 모델 테스트 assertion에서 참조하나, 프롬프트 자체에서 제약 재명시 없음 (이전 STEP 위임)"}
+        },
+        "pass": 6, "partial": 1, "fail": 0
+      }
+    ],
+    "summary": {
+      "total_checks": 42,
+      "pass": 37,
+      "partial": 5,
+      "fail": 0,
+      "pass_rate_pct": 88.1,
+      "partial_items": [
+        "V0-STEP-1 C-2: 스캐폴딩 단계라 함수/클래스 시그니처 미정의 (허용 가능)",
+        "V0-STEP-2 C-4: 스키마 정의 단계라 runtime config 불필요 (허용 가능)",
+        "V0-STEP-3 C-4: timeout/restart 값이 config 키에 매핑되지 않음",
+        "V0-STEP-3 C-7: 아키텍처 제약은 있으나 LOCK/FREEZE 태그 미부착",
+        "V0-STEP-6 C-7: 이전 STEP의 LOCK 정의에 위임 — 자체 재명시 없음"
+      ]
+    }
+  },
+
+  "v1_tables": {
+    "table_count": 7,
+    "section": "§3 (V1 Phase 1~6)",
+    "note": "V1에는 AI 프롬프트 블록이 없음 (테이블만 존재). 별도 체크리스트 V1-1~V1-4 적용.",
+    "supplementary_tables": {
+      "verification_checklists": 6,
+      "parameter_tables": 2,
+      "mapping_tables": 1,
+      "note": "검증 체크리스트(6개), 파라미터 테이블(2개), 매핑 테이블(1개)은 구현 항목 테이블이 아니므로 V1-1~V1-4 대상에서 제외"
+    },
+    "items": [
+      {
+        "id": "V1-Phase1-Wk1-2",
+        "title": "Phase 1 Week 1-2 핵심 모듈",
+        "lines": [1385, 1392],
+        "columns": 6,
+        "column_headers": ["순서", "모듈", "구현 내용", "의존성", "파일명 (M-7)", "산출물 참조"],
+        "rows": 6,
+        "modules": ["I-1", "I-2", "I-15", "I-5", "I-8", "I-19"],
+        "checks": {
+          "V1-1": {"verdict": "PASS", "evidence": "모듈 ID (I-1 등) + 파일명 (M-7) 칼럼 존재: i01_intent_detector.py 등"},
+          "V1-2": {"verdict": "PASS", "evidence": "구체적 설명: IntentFrame 생성/감정 탐지/사고 수준 분류, RAG 파이프라인/BGE-M3 임베딩 등"},
+          "V1-3": {"verdict": "PASS", "evidence": "산출물 참조 칼럼에 구체적 문서+섹션: D2.0-02 §7.1~7.10, D2.0-07 §3/§6 등"},
+          "V1-4": {"verdict": "FAIL", "evidence": "테이블 내 LOCK 값 미기술. LOCK 정보는 별도 state machine 섹션 (line 1426)에만 존재"}
+        },
+        "pass": 3, "partial": 0, "fail": 1
+      },
+      {
+        "id": "V1-Phase1-Wk3-4",
+        "title": "Phase 1 Week 3-4 보조 모듈",
+        "lines": [1396, 1408],
+        "columns": 5,
+        "column_headers": ["순서", "모듈", "구현 내용", "의존성", "파일명 (M-7)"],
+        "rows": 11,
+        "modules": ["I-4", "I-6", "I-10", "I-11", "I-3", "I-13", "I-14", "I-16", "I-17", "I-20", "I-9"],
+        "checks": {
+          "V1-1": {"verdict": "PASS", "evidence": "모듈 ID + 파일명 (M-7) 칼럼 존재: i04_multimodal_interpreter.py 등"},
+          "V1-2": {"verdict": "PARTIAL", "evidence": "일부 구체적 (Self-check P0>=70, P1>=75, P2>=80), 일부 모호 (Tool Registry/Router, Summarizer/메모리 증류, Failure/Fallback Manager — 단어만 나열)"},
+          "V1-3": {"verdict": "FAIL", "evidence": "산출물 참조 칼럼 자체가 없음. 일부 행에서 구현 내용 칼럼에 괄호로 참조 삽입 (D2.0-01 §5.6 등) 하나, I-10/I-3/I-14/I-20 등은 참조 전무"},
+          "V1-4": {"verdict": "FAIL", "evidence": "테이블 내 LOCK 값 미기술"}
+        },
+        "pass": 1, "partial": 1, "fail": 2
+      },
+      {
+        "id": "V1-Phase2",
+        "title": "Phase 2 구현 항목",
+        "lines": [1457, 1468],
+        "columns": 4,
+        "column_headers": ["#", "항목", "구현 내용", "산출물 참조"],
+        "rows": 9,
+        "checks": {
+          "V1-1": {"verdict": "FAIL", "evidence": "파일명 칼럼 없음. 항목은 기능명 (L0 Session Memory 등)으로만 식별"},
+          "V1-2": {"verdict": "PASS", "evidence": "구체적: SQLite/TTL=session_end/자동 정리, BGE-M3 1024dim/Matryoshka 256dim, cosine >= 0.95 LOCK"},
+          "V1-3": {"verdict": "PASS", "evidence": "산출물 참조 칼럼 존재: D2.0-06 §2.1, D2.1-A1, D2.0-06 §4.7 등 구체적 섹션"},
+          "V1-4": {"verdict": "PARTIAL", "evidence": "row 5에 cosine >= 0.95 LOCK 인라인 기술. 나머지 행은 LOCK 미명시"}
+        },
+        "pass": 2, "partial": 1, "fail": 1
+      },
+      {
+        "id": "V1-Phase3",
+        "title": "Phase 3 구현 항목",
+        "lines": [1535, 1551],
+        "columns": 4,
+        "column_headers": ["#", "항목", "구현 내용", "산출물 참조"],
+        "rows": 15,
+        "checks": {
+          "V1-1": {"verdict": "FAIL", "evidence": "파일명 칼럼 없음. 모듈 코드 (A-1, E-1~E-6 등) 볼드체로 표시되나 파일명 미기재"},
+          "V1-2": {"verdict": "PARTIAL", "evidence": "일부 구체적 (circuit breaker: failure_threshold=3, recovery_time_sec=60; Ollama+GPT-4o-mini 통합). 일부 모호 (프리셋 시스템, Z3 제약 조건 풀기, Logic/Math/Code Verifier — 구현 방법 불명확)"},
+          "V1-3": {"verdict": "PASS", "evidence": "모든 행에 산출물 참조 존재. 단, 일부는 문서 레벨만 (D2.0-04, D2.0-03 — 섹션 미명시)"},
+          "V1-4": {"verdict": "PARTIAL", "evidence": "Row 3 D2.0-05 §4.2 LOCK, Row 4 D2.0-05 §4.4 LOCK, Row 5 Failover LOCK. 대부분 행은 LOCK 미기술"}
+        },
+        "pass": 1, "partial": 2, "fail": 1
+      },
+      {
+        "id": "V1-Phase4",
+        "title": "Phase 4 구현 항목",
+        "lines": [1577, 1594],
+        "columns": 4,
+        "column_headers": ["#", "항목", "구현 내용", "산출물 참조"],
+        "rows": 16,
+        "checks": {
+          "V1-1": {"verdict": "FAIL", "evidence": "파일명 칼럼 없음. UI 기능명으로만 식별 (3-Column Fluid Layout, Builder View 등)"},
+          "V1-2": {"verdict": "PASS", "evidence": "구체적: 좌(250-300px)/중앙(flex)/우(350-400px), react-i18next ko-KR/en-US, vamos run/approve/status/cost/memory/policy CLI"},
+          "V1-3": {"verdict": "PASS", "evidence": "모든 행에 참조 존재: D2.0-08 §2.1/§3, §6, §10.4, CLAUDE.md §14 등 구체적 섹션"},
+          "V1-4": {"verdict": "FAIL", "evidence": "테이블 내 LOCK 값 미기술"}
+        },
+        "pass": 2, "partial": 0, "fail": 2
+      },
+      {
+        "id": "V1-Phase5",
+        "title": "Phase 5 구현 항목",
+        "lines": [1621, 1634],
+        "columns": 4,
+        "column_headers": ["#", "항목", "구현 내용", "산출물 참조"],
+        "rows": 12,
+        "checks": {
+          "V1-1": {"verdict": "FAIL", "evidence": "파일명 칼럼 없음. 테스트/CI 작업명으로만 식별"},
+          "V1-2": {"verdict": "PASS", "evidence": "구체적: 전체 S0→S8 흐름 검증, 5-Gate 모든 경로, Python/Rust/React 80%+ 커버리지"},
+          "V1-3": {"verdict": "PARTIAL", "evidence": "대부분 PHASE_B5, PHASE_B6 문서 레벨 참조만 (섹션 번호 미명시)"},
+          "V1-4": {"verdict": "FAIL", "evidence": "테이블 내 LOCK 값 미기술"}
+        },
+        "pass": 1, "partial": 1, "fail": 2
+      },
+      {
+        "id": "V1-Phase6",
+        "title": "Phase 6 구현 항목",
+        "lines": [1660, 1669],
+        "columns": 4,
+        "column_headers": ["#", "항목", "구현 내용", "산출물 참조"],
+        "rows": 8,
+        "checks": {
+          "V1-1": {"verdict": "FAIL", "evidence": "파일명 칼럼 없음. 기능명으로만 식별"},
+          "V1-2": {"verdict": "PARTIAL", "evidence": "일부 구체적 (시뮬레이션 트레이딩 51% Gate, Wash Sale/PDT/Uptick Rule). 일부 모호 (Streamable HTTP 클라이언트, VAMOS 자체 도구 노출 20+ V1 tools, ORANGE CORE Self-check 실행)"},
+          "V1-3": {"verdict": "PARTIAL", "evidence": "일부 구체적 (D2.0-03 §6, §6.4, §6.4.2, D2.0-01 §5.7). 일부 문서 레벨만 (VAMOS_AI_INVESTING_SPEC — 섹션 미명시)"},
+          "V1-4": {"verdict": "FAIL", "evidence": "테이블 내 LOCK 값 미기술"}
+        },
+        "pass": 0, "partial": 2, "fail": 2
+      }
+    ],
+    "summary": {
+      "total_checks": 28,
+      "pass": 10,
+      "partial": 7,
+      "fail": 11,
+      "pass_rate_pct": 35.7,
+      "systematic_failures": [
+        {
+          "criterion": "V1-1 (파일명)",
+          "pattern": "Phase 1만 PASS, Phase 2~6 전부 FAIL (예상대로)",
+          "count": "5/7 FAIL",
+          "severity": "MEDIUM",
+          "note": "§6/PHASE_B2에서 파일 경로 추론 가능하므로 BLOCKER는 아님"
+        },
+        {
+          "criterion": "V1-4 (LOCK 제약)",
+          "pattern": "7개 테이블 중 6개 FAIL, 1개 PARTIAL",
+          "count": "6/7 FAIL",
+          "severity": "HIGH",
+          "note": "LOCK 값이 별도 파라미터 테이블이나 state machine 섹션에 산재. 구현 항목 테이블에서 직접 참조 불가"
+        },
+        {
+          "criterion": "V1-3 (SOT 참조)",
+          "pattern": "Phase 1 Wk3-4 테이블에 산출물 참조 칼럼 자체 부재",
+          "count": "1 FAIL + 2 PARTIAL",
+          "severity": "HIGH"
+        }
+      ],
+      "v1_structural_issue": {
+        "description": "V1 전체에 AI 프롬프트 블록이 없음. V0/V2/V3는 상세한 AI 프롬프트를 제공하나, V1은 테이블만으로 구현 지시. V1이 가장 많은 모듈(32개 활성)을 구현하는 단계임에도 구현 가이드가 가장 빈약",
+        "severity": "HIGH",
+        "recommendation": "V1 Phase별 AI 프롬프트 추가 또는 각 모듈별 상세 구현 명세 보강 필요"
+      }
+    }
+  },
+
+  "v2v3_prompts": {
+    "prompt_count": 6,
+    "sections": "§4 (V2 Phase 1~3) + §5 (V3 Phase 1~3)",
+    "items": [
+      {
+        "id": "V2-Phase1",
+        "title": "Infrastructure Migration",
+        "lines": [1782, 1860],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "7개 마이그레이션 스크립트 + docker-compose.v2.yml + deploy/rollback 스크립트 경로"},
+          "C-2": {"verdict": "PASS", "evidence": "LogEventSchema 7필드, BackupConfigSchema, log_events DDL, Qdrant vector_size=256"},
+          "C-3": {"verdict": "PARTIAL", "evidence": "Alembic, PostgreSQL 15, Qdrant 1.7+, Neo4j 5.x, Redis 7+ 등 도구/서비스 레벨 명시. 명시적 import/패키지 목록은 PHASE_B3에 위임"},
+          "C-4": {"verdict": "PASS", "evidence": "config 키 명시: pg_host, pg_port, qdrant_host, deploy_mode, guardrail_level=L3, gdpr_enabled=true"},
+          "C-5": {"verdict": "PASS", "evidence": "PHASE_B7, PHASE_B6, PHASE_B4 §3, PHASE_B3 참조"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 10항목 + SHA-256 체크섬, Dual-Collection, FK 0, Docker healthcheck"},
+          "C-7": {"verdict": "PASS", "evidence": "Migration 원칙 6항목 LOCK, V2 비용 ₩93,000/월 LOCK, HNSW alpha=0.7 LOCK"}
+        },
+        "pass": 6, "partial": 1, "fail": 0
+      },
+      {
+        "id": "V2-Phase2",
+        "title": "COND Module Activation",
+        "lines": [1920, 2013],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "10개 모듈 파일 경로 명시 (i07~e16, backend/vamos_core/modules/)"},
+          "C-2": {"verdict": "PASS", "evidence": "BaseModule(ABC) 인터페이스, Module Catalog 표준 필드, AR-L3 5 actions, Pydantic v2 ConfigDict"},
+          "C-3": {"verdict": "PASS", "evidence": "모듈별 의존성: I-7→I-1/I-3, I-12→I-5/I-8, Google Calendar/Gmail API, LangGraph"},
+          "C-4": {"verdict": "PARTIAL", "evidence": "enabled=true/false, [dcl.geo], RSS polling 60s/5min 언급. 포괄적 config 키 기본값 목록 미비"},
+          "C-5": {"verdict": "PASS", "evidence": "D2.0-01 §5.6, D2.0-02 §7, D2.0-03, SDAR_SPEC, CLOUD_LIBRARY_SPEC §7 참조"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 13항목, Phase 3 진입 금지 게이트"},
+          "C-7": {"verdict": "PASS", "evidence": "Module Catalog LOCK (D2.0-01 §5.5), COND default OFF (§5.14.4), SDAR_SPEC LOCK"}
+        },
+        "pass": 6, "partial": 1, "fail": 0
+      },
+      {
+        "id": "V2-Phase3",
+        "title": "Agent Teams V2 + Security",
+        "lines": [2071, 2160],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "agent_teams/, security/, modules/ 하위 8+ 파일 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "MessageBus(ABC), CollaborationPattern(ABC), AgentPool, HMAC-SHA256, L3 threshold=0.8, GDPR 테이블"},
+          "C-3": {"verdict": "PASS", "evidence": "redis.asyncio max_connections=20, Kafka topics, LlamaGuard, NeMo Guardrails, GuardrailsAI"},
+          "C-4": {"verdict": "PASS", "evidence": "[security].hmac_secret_key, max_agents=10 LOCK, timestamp ±5min, REST 30s polling"},
+          "C-5": {"verdict": "PASS", "evidence": "AGENT_TEAMS_SPEC §7.1, CLOUD_LIBRARY_SPEC §7, D2.0-07, SDAR_SPEC, PHASE_B1"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 12항목 + V2 완료 체크리스트 12항목, QoD >= 0.90 전환 조건"},
+          "C-7": {"verdict": "PASS", "evidence": "LOCK-AT-012 HMAC, LOCK-AT-014 V2 max 10, V2 비용 ₩93,000/월 LOCK"}
+        },
+        "pass": 7, "partial": 0, "fail": 0
+      },
+      {
+        "id": "V3-Phase1",
+        "title": "Infrastructure Scale-up",
+        "lines": [2244, 2334],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "Helm chart 10개 template + monitoring/ + migration 스크립트 + config.v3.toml + deploy 스크립트"},
+          "C-2": {"verdict": "PASS", "evidence": "Helm Chart 구조, K8s 리소스 스펙, HPA 설정, vLLM 엔드포인트, values.yaml, Grafana 대시보드 5종"},
+          "C-3": {"verdict": "PASS", "evidence": "K8s, Helm, nginx-ingress, vLLM, Llama-3.1-8B, PostgreSQL RDS, Qdrant Cloud, Neo4j Aura, Loki, Grafana"},
+          "C-4": {"verdict": "PASS", "evidence": "config.v3.toml 전체 키 명시: deployment, llm, monitoring, scaling 섹션 + 리소스 limits"},
+          "C-5": {"verdict": "PASS", "evidence": "PHASE_B6, PHASE_B3, PHASE_B4 §3, D2.0-07 참조"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 10항목: Pod Running, vLLM, GPU, managed DB, Blue-Green, HPA, 비용 alert"},
+          "C-7": {"verdict": "PASS", "evidence": "V3 비용 ₩266,000/월 LOCK, GPU taint/toleration, Blue-Green 1hr retention"}
+        },
+        "pass": 7, "partial": 0, "fail": 0
+      },
+      {
+        "id": "V3-Phase2",
+        "title": "EXP Module Full Activation",
+        "lines": [2399, 2512],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "14개 그룹, 39+ 파일 경로 명시 (self_evo/, learning/, reasoning/, generation/, experimental/ 등)"},
+          "C-2": {"verdict": "PARTIAL", "evidence": "BaseSelfEvo(ABC)/BaseModule(ABC) 공통 인터페이스 있으나, 39개 모듈 대부분 기능 설명만 — 상세 I/O 타입 시그니처 미비"},
+          "C-3": {"verdict": "PARTIAL", "evidence": "일부 모듈 간 의존성 + 외부 도구 (Whisper, FFmpeg, Playwright, DSPy, FinBERT) 명시. 포괄적 패키지 목록 미비"},
+          "C-4": {"verdict": "PARTIAL", "evidence": "GPU 리소스 공유, K8s namespace vamos-experimental 언급. 39개 모듈의 config 키/기본값 미비"},
+          "C-5": {"verdict": "PASS", "evidence": "D2.0-01 §5.6~§5.15, D2.0-02 §7, D2.0-03, CLOUD_LIBRARY_SPEC §7 참조"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 12항목: 14개 그룹별 검증, 81 모듈 동시 안정성 error < 0.1%"},
+          "C-7": {"verdict": "PASS", "evidence": "Module Catalog LOCK, V3 비용 ₩266,000/월 LOCK"}
+        },
+        "pass": 4, "partial": 3, "fail": 0
+      },
+      {
+        "id": "V3-Phase3",
+        "title": "Advanced Features + Final Integration",
+        "lines": [2571, 2667],
+        "checks": {
+          "C-1": {"verdict": "PASS", "evidence": "marketplace/, mesh/, a2a/, multimodal/, benchmarks/ 하위 파일 경로 명시"},
+          "C-2": {"verdict": "PASS", "evidence": "AgentManifest, Governance rules, AR-L4 4 actions, A2A JSON-RPC 2.0, mTLS+JWT, SDAR ON 조건"},
+          "C-3": {"verdict": "PARTIAL", "evidence": "K8s Job/Pod, Redis Pub/Sub, Alembic, Meshy/Shap-E, FFmpeg 명시. 공식 import 목록 미비"},
+          "C-4": {"verdict": "PARTIAL", "evidence": "agent 리소스 (CPU 0.5, Memory 1Gi), max_agents=50+, repair_success_rate >= 95%. config.v3.toml 키 매핑 부족"},
+          "C-5": {"verdict": "PASS", "evidence": "AGENT_TEAMS_SPEC §8, SDAR_SPEC, CLOUD_LIBRARY_SPEC, D2.0-01 §5.8, D2.0-05, D2.0-07"},
+          "C-6": {"verdict": "PASS", "evidence": "Stage Gate 12항목 + V3 완료 체크리스트 7항목, 38 벤치마크, 24hr 안정성"},
+          "C-7": {"verdict": "PASS", "evidence": "LOCK-AT-014 50+ agents, SDAR AR-L4 사전 승인, Self-evo Governance LOCK/FREEZE 수정 절대 금지, V3 비용 LOCK"}
+        },
+        "pass": 5, "partial": 2, "fail": 0
+      }
+    ],
+    "summary": {
+      "total_checks": 42,
+      "pass": 35,
+      "partial": 7,
+      "fail": 0,
+      "pass_rate_pct": 83.3,
+      "partial_items": [
+        "V2-Phase1 C-3: 도구/서비스 레벨 명시, 명시적 import 목록은 PHASE_B3에 위임",
+        "V2-Phase2 C-4: 모듈 enable 플래그 있으나 포괄적 config 키 기본값 미비",
+        "V3-Phase2 C-2: 39개 모듈 중 대부분 기능 설명만, 상세 I/O 타입 시그니처 부족",
+        "V3-Phase2 C-3: 일부 외부 도구 명시, 포괄적 패키지 목록 부재",
+        "V3-Phase2 C-4: 39개 모듈의 개별 config 키/기본값 미비",
+        "V3-Phase3 C-3: 도구 명시되나 공식 import 목록 부재",
+        "V3-Phase3 C-4: 임계값 명시되나 config.v3.toml 키 매핑 부족"
+      ]
+    }
+  },
+
+  "overall_summary": {
+    "total_checks": 112,
+    "pass": 82,
+    "partial": 19,
+    "fail": 11,
+    "pass_rate_pct": 73.2,
+    "pass_plus_partial_rate_pct": 90.2,
+    "by_section": {
+      "V0": {"checks": 42, "pass": 37, "partial": 5, "fail": 0, "rate_pct": 88.1},
+      "V1": {"checks": 28, "pass": 10, "partial": 7, "fail": 11, "rate_pct": 35.7},
+      "V2V3": {"checks": 42, "pass": 35, "partial": 7, "fail": 0, "rate_pct": 83.3}
+    },
+    "top_findings": [
+      {
+        "rank": 1,
+        "severity": "HIGH",
+        "finding": "V1 Phase 2~6 파일명 전무",
+        "detail": "V1-1 기준 5/7 테이블 FAIL. Phase 2~6의 구현 항목에 파일 경로가 없어 개발자가 어느 파일을 생성/수정할지 추론 필요",
+        "affected": "V1-Phase2, V1-Phase3, V1-Phase4, V1-Phase5, V1-Phase6",
+        "recommendation": "§6/PHASE_B2 기반 파일 경로 역매핑 보조 인덱스 구축 (GT-1 V1 역매핑과 연계)"
+      },
+      {
+        "rank": 2,
+        "severity": "HIGH",
+        "finding": "V1 LOCK 제약 체계적 부재",
+        "detail": "V1-4 기준 6/7 테이블 FAIL. LOCK 값이 별도 파라미터 테이블/state machine 섹션에 산재하여 구현 항목에서 직접 참조 불가",
+        "affected": "V1 전체",
+        "recommendation": "각 구현 항목 행에 적용 LOCK 값 칼럼 추가 또는 별도 LOCK 매핑 테이블 제공"
+      },
+      {
+        "rank": 3,
+        "severity": "HIGH",
+        "finding": "V1 AI 프롬프트 부재",
+        "detail": "V0는 6개, V2/V3는 6개 AI 프롬프트를 제공하나 V1은 0개. V1이 32개 모듈(전체의 39%)을 구현하는 최대 단계임에도 구현 가이드가 테이블만으로 구성",
+        "affected": "V1 Phase 1~6 전체",
+        "recommendation": "V1 Phase별 AI 프롬프트 추가 또는 모듈별 상세 구현 명세 보강"
+      },
+      {
+        "rank": 4,
+        "severity": "MEDIUM",
+        "finding": "V1-Phase1 Wk3-4 산출물 참조 칼럼 부재",
+        "detail": "11개 모듈 중 다수가 SOT 참조 없이 구현 내용만 기재. Phase1 Wk1-2 테이블(6열)과 Wk3-4 테이블(5열) 간 칼럼 불일치",
+        "affected": "V1-Phase1-Wk3-4 (I-4, I-6, I-10, I-11, I-3, I-13, I-14, I-16, I-17, I-20, I-9)",
+        "recommendation": "5열 테이블에 산출물 참조 칼럼 추가"
+      },
+      {
+        "rank": 5,
+        "severity": "MEDIUM",
+        "finding": "V3-Phase2 구현 명세 부족 (39개 모듈)",
+        "detail": "C-2/C-3/C-4 모두 PARTIAL. 39개 EXP 모듈 중 대부분 기능 설명만 존재, 상세 I/O 스키마/의존성/config 키 미비",
+        "affected": "V3-Phase2",
+        "recommendation": "14개 모듈 그룹별 별도 상세 명세 문서 또는 프롬프트 분할"
+      },
+      {
+        "rank": 6,
+        "severity": "MEDIUM",
+        "finding": "V0 STEP-3 설정값/LOCK 미비",
+        "detail": "IPC timeout, auto-restart 값이 config 키에 매핑되지 않고 하드코딩. 아키텍처 제약에 LOCK 태그 미부착",
+        "affected": "V0-STEP-3",
+        "recommendation": "timeout_s, max_restart를 config.v1.toml 키로 매핑하고 LOCK 여부 명시"
+      },
+      {
+        "rank": 7,
+        "severity": "LOW",
+        "finding": "V0 프롬프트 수 불일치",
+        "detail": "계획서에서 12개로 기재했으나 실제 6개. '사용자 직접 작업'은 AI 프롬프트가 아닌 수동 체크리스트",
+        "affected": "v9_pipeline_plan.md 기술 오류",
+        "recommendation": "계획서 수정: 12개 → 6개"
+      },
+      {
+        "rank": 8,
+        "severity": "INFO",
+        "finding": "V2-Phase3, V3-Phase1 완벽 PASS",
+        "detail": "7개 기준 모두 PASS. 가장 높은 구현 가능성 수준",
+        "affected": "N/A (긍정적 발견)"
+      }
+    ]
+  }
+}

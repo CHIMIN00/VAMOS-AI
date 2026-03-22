@@ -1,0 +1,100 @@
+{
+  "step": "STEP 0",
+  "description": "JSON 키 정규화 검증",
+  "files_checked": [
+    {
+      "file": "Layer1",
+      "total_features": 270,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C01a.json",
+      "total_features": 91,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C01b.json",
+      "total_features": 63,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C02_overview_orange.json",
+      "total_features": 152,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C03_blue_infra_wf.json",
+      "total_features": 469,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C04.json",
+      "total_features": 438,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C05.json",
+      "total_features": 98,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C06.json",
+      "total_features": 113,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C07.json",
+      "total_features": 143,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C08.json",
+      "total_features": 534,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C09a.json",
+      "total_features": 997,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C09b.json",
+      "total_features": 561,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    },
+    {
+      "file": "v10_src_C10_beginner_claude.json",
+      "total_features": 84,
+      "key_issues": [],
+      "missing_required": [],
+      "fixes_applied": []
+    }
+  ],
+  "issues": [],
+  "auto_fixes": [],
+  "missing_fields": []
+}

@@ -1,0 +1,1947 @@
+[
+  {
+    "feature_id": "AINV-056",
+    "feature_name": "SHAP/LIME Explainability 모듈 (explainer.py)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "15. ML/AI 스택",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:SHAP",
+      "ABBR:SHAP"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-089",
+    "feature_name": "EVX-1 Code-as-Policy 검증 구현",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§6 EVX",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-1 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-090",
+    "feature_name": "EVX-2 Adversarial 검증 구현",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§6 EVX",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-2 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-091",
+    "feature_name": "EVX-3 Log-prob Confidence 검증 구현",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§6 EVX",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-3 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-092",
+    "feature_name": "EVX-4 Thought Buffer 검증 구현",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§6 EVX",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-4 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-093",
+    "feature_name": "EVX-5 Gen-Verify-Learn 검증 구현",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§6 EVX",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-5 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D202-073",
+    "feature_name": "I-18 Meta-learning 모듈 구현",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§7.87-7.89 I-18 Meta-learning",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:I-18 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D202-085",
+    "feature_name": "G3 EvidenceGate 구현",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§8 G3 EvidenceGate",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:EvidenceGate",
+      "ENG:EvidenceGate"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D202-087",
+    "feature_name": "G4 SelfCheckGate 구현",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§8 G4 SelfCheckGate",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:SelfCheckGate",
+      "ENG:SelfCheckGate"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D202-094",
+    "feature_name": "ToolRegistry 통합 구현",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§11.1 ToolRegistry Unification",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:ToolRegistry",
+      "ENG:ToolRegistry"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D203-008",
+    "feature_name": "Mixture of Agents (MoA) 다중 LLM 합의 구현",
+    "version_scope": "V1,V2",
+    "severity": "HIGH",
+    "source_section": "§1.4 K-025",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:LLM",
+      "ABBR:LLM",
+      "ENG:Agents"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D203-082",
+    "feature_name": "Provider 자동 선택 규칙 구현 (risk_class/cost_class 기준)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§6.3.3 Provider 합성 규칙",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Provider"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-021",
+    "feature_name": "Native Multimodal 활용 (GPT-4o/Gemini 2.0 네이티브)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§2 R2 J 멀티모달",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Multimodal",
+      "PENG:Gemini",
+      "ENG:GPT",
+      "ABBR:GPT",
+      "PENG:GPT-4o"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-026",
+    "feature_name": "PagedAttention/vLLM 고효율 추론 서빙",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§2 R2 보강",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:vLLM"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-042",
+    "feature_name": "OTHER BRAINS→07 Gate 연결 규칙 (ToolRegistry 경유, Gate 결과 기록)",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§4.1.1 04→07 Gate 연결 규칙",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:ToolRegistry",
+      "PENG:Gate",
+      "ABBR:ToolRegistry",
+      "ENG:Gate",
+      "PENG:ToolRegistry"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-143",
+    "feature_name": "SDK 코드 생성 (OpenAPI→다국어 자동)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§10.10 L-030",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:SDK",
+      "ENG:SDK"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D205-025",
+    "feature_name": "중앙 프롬프트 라이브러리",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "S7.5.1 프롬프트 라이브러리 (ADD-061)",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:라이브러리",
+      "KOR4:프롬프트"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D205-057",
+    "feature_name": "오케스트레이션 패턴 (Centralized/Hierarchical/Market-based/Stigmergic)",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "S12.11.3 오케스트레이션 패턴",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Market",
+      "ENG:based"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-066",
+    "feature_name": "Contextual Retrieval 벤치마크 적용 (67% 향상)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§4.3 Contextual Retrieval",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-087",
+    "feature_name": "Self-RAG 자기 평가 루프",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§4 STEP7 S7-P-003",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-115",
+    "feature_name": "개인 멀티미디어 라이브러리",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§4 R2 J-068",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:라이브러리"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-128",
+    "feature_name": "Self-RAG 루프 구현",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§4 S7D-060",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-199",
+    "feature_name": "M-029 코드 스니펫 라이브러리",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§11 PKM M-029",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:라이브러리"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-222",
+    "feature_name": "M-004 스크린 캡처 지식화 (Microsoft Recall 로컬 버전)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§11 R5 M-004",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "PENG:Recall",
+      "ENG:Recall"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-045",
+    "feature_name": "Zero-Trust Architecture",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§3.7 S7E-027",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Trust"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-056",
+    "feature_name": "SelfCheckGate 구현 (P0≥70/P1≥75/P2≥80)",
+    "version_scope": "V1,V2,V3",
+    "severity": "HIGH",
+    "source_section": "§5.2.1 SelfCheckGate",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:SelfCheckGate",
+      "ENG:SelfCheckGate"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-100",
+    "feature_name": "Human-in-the-Loop (고위험 결정 사람 확인)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§15.11 S7E-050",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Loop"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-169",
+    "feature_name": "프라이버시 우선 모드",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "R2 S7-F-029",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프라이버시"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-307",
+    "feature_name": "Self-RAG 구현",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§A Part-P",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-375",
+    "feature_name": "OAuth 통합",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§C Parts1-4",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:OAuth",
+      "ENG:OAuth"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-376",
+    "feature_name": "JWT 토큰 관리",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§C Parts1-4",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:JWT",
+      "ABBR:JWT"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7BG-003",
+    "feature_name": "Confidence-based 응답 전략",
+    "version_scope": "V1,V2",
+    "severity": "HIGH",
+    "source_section": "§1.2 Part F 혁신기술",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:based",
+      "ENG:Confidence"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7BG-014",
+    "feature_name": "Swarm 오케스트레이션 패턴",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§1.3 Multi-Agent",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Swarm"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7BG-024",
+    "feature_name": "자동 스케일링 (HPA+KEDA)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§2 카테고리F",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:HPA",
+      "ABBR:HPA",
+      "PENG:HPA"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-069",
+    "feature_name": "모델 레지스트리",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§F 인프라",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:레지스트리"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-081",
+    "feature_name": "DNS 관리",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "§F 인프라",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:DNS",
+      "ENG:DNS"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-082",
+    "feature_name": "SSL/TLS 인증서",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§F 인프라",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:SSL",
+      "ABBR:TLS",
+      "ENG:SSL",
+      "ENG:TLS"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-286",
+    "feature_name": "앱 다운로드 분석",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§I 투자도메인",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:다운로드"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-357",
+    "feature_name": "개인정보 보호",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§I 투자도메인",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:개인정보"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-103",
+    "feature_name": "MCP 프롬프트 관리",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§K-Part1 MCP 생태계",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:MCP",
+      "ABBR:MCP"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-105",
+    "feature_name": "MCP 보안 레이어",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§K-Part1 MCP 생태계",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:MCP",
+      "ABBR:MCP"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-158",
+    "feature_name": "OpenAI 대비 VAMOS 차별화",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§K-Part6 거버넌스",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:OpenAI",
+      "ENG:OpenAI"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-253",
+    "feature_name": "지식 기반 RAG 최적화",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§M-Part3 지식 검색+활용",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-257",
+    "feature_name": "스마트 리마인더",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§M-Part3 지식 검색+활용",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:리마인더"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-008",
+    "feature_name": "스케줄러 (Cron)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§N 워크플로우/RPA",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Cron",
+      "PENG:Cron"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-022",
+    "feature_name": "Human-in-the-Loop",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§N 워크플로우/RPA",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Loop"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-029",
+    "feature_name": "Google Workspace 통합",
+    "version_scope": "V1,V2",
+    "severity": "HIGH",
+    "source_section": "§N 워크플로우/RPA",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Google"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-032",
+    "feature_name": "GitHub/GitLab 통합",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§N 워크플로우/RPA",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:GitHub",
+      "ENG:GitHub"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-139",
+    "feature_name": "한국어 프롬프트 최적화",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§보강A 코어/LLM",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프롬프트"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-204",
+    "feature_name": "로컬 우선 프라이버시",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "§독자 혁신 아이디어",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프라이버시"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "SDAR-051",
+    "feature_name": "NEVER_AUTO 10개 수리 액션 하드코딩 차단 구현 (RA_NEVER_01~RA_NEVER_10)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "5.1 NEVER_AUTO 수리 액션",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:하드코딩"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "SDAR-055",
+    "feature_name": "SDAR-CostGate 통합 구현 (수리로 인한 추가 비용 발생 여부 확인)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "6.1 5 Gates와의 통합",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:CostGate",
+      "ENG:SDAR",
+      "ABBR:SDAR",
+      "ABBR:CostGate"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "SDAR-057",
+    "feature_name": "SDAR-EvidenceGate 통합 구현 (진단 근거 충분성 확인)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "6.1 5 Gates와의 통합",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:SDAR",
+      "ABBR:EvidenceGate",
+      "ABBR:SDAR",
+      "ENG:EvidenceGate"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "SDAR-083",
+    "feature_name": "NEVER_AUTO_TARGETS frozenset 하드코딩 및 validate_repair_target 함수 구현",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "9.1 RULE 1.3 준수",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:하드코딩"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "TEAM-012",
+    "feature_name": "AgentMatcher 구현 (작업-에이전트 매칭 알고리즘)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "3.1.2 에이전트 매칭 스코어링",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:에이전트"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "TEAM-074",
+    "feature_name": "V1 @vamos.agent 데코레이터(내부 Agent SDK 베이스)",
+    "version_scope": "V1",
+    "severity": "HIGH",
+    "source_section": "9.1 V1 로드맵",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "PENG:SDK",
+      "ABBR:SDK",
+      "ENG:SDK"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "TEAM-103",
+    "feature_name": "I-18 Meta-learning 연동 (팀 실행 패턴 학습 → 향후 자동 개선)",
+    "version_scope": "V2",
+    "severity": "HIGH",
+    "source_section": "6.4 I/E/S/A 시리즈 모듈과의 연계",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:I-18 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-025",
+    "feature_name": "EngineConfig 설정 모델 (fee_rate, slippage_rate, risk_free_rate, frequency)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "6.2 엔진 설정",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:frequency",
+      "PENG:frequency"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-052",
+    "feature_name": "프로덕션 OHLCV str+Decimal 타입 의무화",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "14.2 STEP 5 감사 결정",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프로덕션"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-070",
+    "feature_name": "Mean-Variance Optimization 구현 (portfolio_optimizer.py)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "18.3 Phase 2",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Optimization"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-080",
+    "feature_name": "실전 거래 소액 시작 모드 (Real Trading)",
+    "version_scope": "V3",
+    "severity": "MEDIUM",
+    "source_section": "",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Trading",
+      "PENG:Trading"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-136",
+    "feature_name": "Z-Session auto_decision_controller.py 전략 유지 자동 판단",
+    "version_scope": "V2",
+    "severity": "MEDIUM",
+    "source_section": "24.12 TradingView 대체 구조",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Session"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-141",
+    "feature_name": "alerts.yaml 알림 설정 파일",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "부록 A: 파일 구조",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:alerts"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "AINV-143",
+    "feature_name": "Z-Session 거래 로그 + 슬리피지 추적기",
+    "version_scope": "V2",
+    "severity": "MEDIUM",
+    "source_section": "24.11 리스크 및 고려사항",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Session"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-188",
+    "feature_name": "QoD ≥ 0.90 (60일) 달성 검증",
+    "version_scope": "V3",
+    "severity": "MEDIUM",
+    "source_section": "",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:QoD",
+      "ABBR:QoD"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-238",
+    "feature_name": "NodeRegistry 구현 (domain_name 기반)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§16 레지스트리",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:NodeRegistry",
+      "ABBR:NodeRegistry"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "CLAUDE-239",
+    "feature_name": "VerifyChainRegistry 구현 (EVX-1~EVX-6)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§16 레지스트리",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-1 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D203-025",
+    "feature_name": "MCP 디버깅 도구 (Inspector/Playground/로그뷰어/성능프로파일러)",
+    "version_scope": "V1,V2",
+    "severity": "MEDIUM",
+    "source_section": "§2.3 K-009",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:MCP",
+      "ABBR:MCP"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D203-070",
+    "feature_name": "CORE↔NODE 요청/응답 엔벨로프 구현 (필수+optional 확장 필드)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§5.2 입출력/상태/이벤트",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:optional",
+      "PENG:optional"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-080",
+    "feature_name": "LLM 메트릭 수집 (토큰/비용/지연/캐시율/에러율)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§8 S7F-054",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:LLM",
+      "ENG:LLM"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D204-105",
+    "feature_name": "응답 시간 SLO (채팅 P50<1s, 검색<3s, 코드<5s)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§10.1 S7F-094",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:P50"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D205-001",
+    "feature_name": "AgentMode Enum 정의 (MANUAL/SEMI_AUTO/SUPERVISED_AUTO)",
+    "version_scope": "V1,V2,V3",
+    "severity": "MEDIUM",
+    "source_section": "S1.1 Agent Mode 열거형 정의 (ADD-009)",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Enum"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-006",
+    "feature_name": "L2 Long-term Knowledge 구현 (전역 검색 기반)",
+    "version_scope": "V2",
+    "severity": "MEDIUM",
+    "source_section": "§2 메모리 계층",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:term",
+      "ENG:Knowledge",
+      "ENG:Long"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-022",
+    "feature_name": "L3 Procedural 폐기/롤백 메커니즘",
+    "version_scope": "V2,V3",
+    "severity": "MEDIUM",
+    "source_section": "§2.4.4 폐기/롤백",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Procedural"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D206-139",
+    "feature_name": "RAG 품질 자동 평가 (RAGAS, 주간)",
+    "version_scope": "V3",
+    "severity": "MEDIUM",
+    "source_section": "",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:RAG",
+      "ABBR:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-049",
+    "feature_name": "비용 상한 구현 (V1:40K/V2:93K/V3:266K KRW 월)",
+    "version_scope": "V1,V2,V3",
+    "severity": "MEDIUM",
+    "source_section": "§4.1 비용 상한",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:KRW",
+      "ENG:KRW",
+      "PENG:KRW"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "D207-195",
+    "feature_name": "이용약관/개인정보 법적 문서 표시 + 동의 관리",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "R2 S7E-057",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:개인정보"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "DD4-011",
+    "feature_name": "contracts.py KBEmbeddingRecord 필드 추가 구현 (vector_dim, embedded_at_utc)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§8-A.5 KB_EMBEDDING_RECORD (S13-A-007)",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:contracts"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "DD5-010",
+    "feature_name": "VerifyChainRegistry 구현 (EVX-1~6, JSON 형식, DN-006 해소)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§5.1 VerifyChainRegistry (SOT, JSON)",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "module_id_exact",
+    "evidence": [
+      "MID:EVX-1 in PART2"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "P30-049",
+    "feature_name": "유형별 가변 청크 크기 구현 (DEC-004)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§5.4.1.6 RAG 청크 크기 확정",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:DEC",
+      "ENG:DEC"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB2-006",
+    "feature_name": "루트 설정 파일 생성 (package.json, tsconfig.json 등)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§2 루트 디렉토리",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "PENG:package.json",
+      "ENG:package"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB4-003",
+    "feature_name": "[core] 섹션 ConfigModel 구현",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§3.1 [core]",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:ConfigModel",
+      "ABBR:ConfigModel"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB4-004",
+    "feature_name": "[llm] 섹션 ConfigModel 구현",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§3.2 [llm]",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:ConfigModel",
+      "ENG:llm",
+      "ABBR:ConfigModel"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB4-006",
+    "feature_name": "[vector_db] + [graph_db] 섹션 ConfigModel 구현",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§3.4~3.5 [vector_db]/[graph_db]",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:vector_db",
+      "ENG:graph_db",
+      "ENG:ConfigModel",
+      "ABBR:ConfigModel"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB4-009",
+    "feature_name": "[mcp] 섹션 ConfigModel 구현 (streamable_http LOCK)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§3.9 [mcp]",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:mcp",
+      "ENG:streamable_http",
+      "ENG:ConfigModel",
+      "ABBR:ConfigModel",
+      "PENG:streamable_http"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "PB6-013",
+    "feature_name": "GitHub Secrets 14개 등록 설정",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§8 Secrets",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:GitHub",
+      "ENG:GitHub",
+      "ENG:Secrets"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-359",
+    "feature_name": "서비스 디스커버리",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§C Parts1-4",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:디스커버리"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-558",
+    "feature_name": "컨테이너 오케스트레이션",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§E Part-3",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:컨테이너"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-569",
+    "feature_name": "환경 프로비저닝",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§E Part-4",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프로비저닝"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-172",
+    "feature_name": "평가 데이터셋 관리",
+    "version_scope": "V2",
+    "severity": "MEDIUM",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:데이터셋"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-138",
+    "feature_name": "LLM 폴백 전략 고도화",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§보강A 코어/LLM",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:LLM",
+      "ENG:LLM"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-169",
+    "feature_name": "Qdrant 벡터DB 최적화",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "§보강F 인프라",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:Qdrant"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-173",
+    "feature_name": "1-bit LLM (BitNet)",
+    "version_scope": "V3",
+    "severity": "MEDIUM",
+    "source_section": "",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:LLM",
+      "ABBR:LLM"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-180",
+    "feature_name": "MMLU-Pro",
+    "version_scope": "V2",
+    "severity": "MEDIUM",
+    "source_section": "§보강G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:MMLU",
+      "ENG:MMLU",
+      "ENG:Pro"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "TEAM-022",
+    "feature_name": "SDARAgent 구현 (자가진단/자동복구)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "4.6 SDAR Agent",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:자가진단"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "TEAM-024",
+    "feature_name": "ProductivityAgent 구현 (일정관리, 리마인더, 노트)",
+    "version_scope": "V1",
+    "severity": "MEDIUM",
+    "source_section": "2.2.1 Sub-Agent ↔ BLUE NODE 매핑 테이블",
+    "action": "PART2_ADD",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:리마인더"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7AE-622",
+    "feature_name": "비용 최적화 대시보드",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§E Part-10",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:대시보드"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7BG-027",
+    "feature_name": "응답 품질 자동 평가 (QoD)",
+    "version_scope": "V1,V2,V3",
+    "severity": "LOW",
+    "source_section": "",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ENG:QoD",
+      "ABBR:QoD",
+      "PENG:QoD"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7BG-071",
+    "feature_name": "BFCL v3 (Function Calling 벤치마크)",
+    "version_scope": "V1,V2",
+    "severity": "LOW",
+    "source_section": "§10 추가항목",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-061",
+    "feature_name": "비용 추적 대시보드",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§F 인프라",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:대시보드"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-091",
+    "feature_name": "성능 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§F 인프라",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-097",
+    "feature_name": "MMLU 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:MMLU",
+      "ENG:MMLU"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-098",
+    "feature_name": "HellaSwag 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-100",
+    "feature_name": "WinoGrande 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-101",
+    "feature_name": "GSM8K 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-102",
+    "feature_name": "TruthfulQA 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-107",
+    "feature_name": "KoBEST 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-108",
+    "feature_name": "KLUE 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-109",
+    "feature_name": "KorQuAD 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-110",
+    "feature_name": "Korean NLI 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-111",
+    "feature_name": "한국어 요약 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-112",
+    "feature_name": "한국어 생성 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-115",
+    "feature_name": "HumanEval 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:HumanEval",
+      "ENG:HumanEval"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-116",
+    "feature_name": "MBPP 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:MBPP",
+      "ENG:MBPP"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-117",
+    "feature_name": "CodeContests 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-118",
+    "feature_name": "SWE-bench 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-119",
+    "feature_name": "DS-1000 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-123",
+    "feature_name": "AgentBench 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-124",
+    "feature_name": "ToolBench 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-125",
+    "feature_name": "WebArena 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-126",
+    "feature_name": "API-Bank 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-132",
+    "feature_name": "RAG 재현율 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-133",
+    "feature_name": "RAG 지연시간 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "eng_keyword_s25",
+    "evidence": [
+      "ABBR:RAG",
+      "ENG:RAG"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-141",
+    "feature_name": "유해성 탐지 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-142",
+    "feature_name": "편향성 탐지 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-143",
+    "feature_name": "환각 탐지 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-144",
+    "feature_name": "프라이버시 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:프라이버시",
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-145",
+    "feature_name": "로버스트니스 벤치마크",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§G 벤치마크",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:벤치마크"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-211",
+    "feature_name": "페르소나 정의",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§H 비즈니스",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:페르소나"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7FI-295",
+    "feature_name": "한국 파생상품 분석",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§I 투자도메인",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:파생상품"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7JM-096",
+    "feature_name": "참고 데이터셋 (J)",
+    "version_scope": "V1",
+    "severity": "LOW",
+    "source_section": "§J-Part9 참고",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:데이터셋"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-051",
+    "feature_name": "학습 분석 대시보드",
+    "version_scope": "V1,V2",
+    "severity": "LOW",
+    "source_section": "§O 교육/학습/자기개발",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:대시보드"
+    ],
+    "confidence": "CERTAIN"
+  },
+  {
+    "feature_id": "S7NP-091",
+    "feature_name": "웰빙 대시보드",
+    "version_scope": "V1,V2",
+    "severity": "LOW",
+    "source_section": "§P 건강/웰니스/감성AI",
+    "action": "REVIEW",
+    "substatus": "SUB_FEATURE_OF_EXISTING",
+    "match_type": "kor4_keyword_s25",
+    "evidence": [
+      "KOR4:대시보드"
+    ],
+    "confidence": "CERTAIN"
+  }
+]

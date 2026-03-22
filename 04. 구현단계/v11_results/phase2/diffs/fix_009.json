@@ -1,0 +1,40 @@
+{
+  "fix_id": "FIX-009",
+  "fg": "FG-B06",
+  "tier": 1,
+  "order": 9,
+  "severity": "BLOCKER",
+  "description": "V2-Phase 2 AI 프롬프트가 원본 10개 COND 모듈만 커버 (10/116=8.6%). v10 추가 106개 모듈을 8개 카테고리로 그룹화하여 프롬프트/config/검증 확장",
+  "changes": [
+    {
+      "line": 2215,
+      "section": "AI 프롬프트 - 작업 목표",
+      "action": "10개→116개(10+106) 모듈 커버로 확장"
+    },
+    {
+      "line": 2290,
+      "section": "AI 프롬프트 - 규칙 이후",
+      "action": "v10 COND 확장 모듈 106개를 8개 카테고리 그룹으로 추가"
+    },
+    {
+      "line": 2298,
+      "section": "AI 프롬프트 - config 블록",
+      "action": "v10 카테고리별 config 그룹 추가"
+    },
+    {
+      "line": 2334,
+      "section": "완료 검증",
+      "action": "10개→116개 검증 항목 확장, v10 카테고리별 검증 추가"
+    },
+    {
+      "line": 2201,
+      "section": "사용자 직접 작업",
+      "action": "v10 모듈 대응 사용자 작업 추가"
+    }
+  ],
+  "ripple_expected": ["§6.13 (총 테스트 수)", "변경이력"],
+  "line_count_before": 4535,
+  "line_count_after": 4663,
+  "line_delta": 128,
+  "applied_at": "2026-03-12"
+}

@@ -1,0 +1,17 @@
+{
+  "fix_id": "FIX-016",
+  "fg": "FG-H09",
+  "tier": 3,
+  "order": 16,
+  "severity": "HIGH",
+  "description": "STEP-2 AI 프롬프트에 25개 Pydantic 모델 핵심 필드 참조 테이블 추가 (자기완결성 향상)",
+  "changes": [
+    {
+      "line": 625,
+      "section": "§2 STEP-2 AI 프롬프트",
+      "action": "필드 참조 테이블 삽입 (25개 모델 × 핵심 필드 목록)"
+    }
+  ],
+  "ripple_expected": ["변경이력"],
+  "applied_at": "2026-03-13"
+}

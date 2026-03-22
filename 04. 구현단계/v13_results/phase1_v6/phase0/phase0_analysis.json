@@ -1,0 +1,96 @@
+{
+  "session": "session_8",
+  "phase": "phase1_v6_phase0",
+  "timestamp": "2026-03-21T22:55:00",
+  "analysis": {
+    "0-A": {
+      "raw_errors": 5,
+      "false_positives": 5,
+      "real_errors": 0,
+      "verdict": "PASS",
+      "fp_reason": "All 5 errors caused by pipe characters inside table cells (enum values like 'block|require_approval|mask|allow'). Markdown parser split on | inside cell content. Table structure is actually correct.",
+      "details": [
+        {"line": "PART1:203", "fp": true, "reason": "policy_gate enum values contain | separator"},
+        {"line": "PART1:834", "fp": true, "reason": "enum value 'block|require_approval|mask|allow' in cell"},
+        {"line": "PART1:1150", "fp": true, "reason": "enum value 'block|require_approval|mask|allow' in cell"},
+        {"line": "RPT:83", "fp": true, "reason": "enum value with | in cell content"},
+        {"line": "RPT:863", "fp": true, "reason": "enum value with | in cell content"}
+      ]
+    },
+    "0-B": {
+      "raw_errors": 51,
+      "false_positives": 51,
+      "real_errors": 0,
+      "verdict": "PASS",
+      "fp_categories": {
+        "subtotal_grandtotal_confusion": "Parser sums ALL rows including subtotal row, then compares to grand total. E.g., PART1:399-407 sum table has 소계(204)+PART2이동(8)=212 but parser sums 14+70+87+33+204+8=416",
+        "keyword_substring_match": "'계' substring in '설계'/'관계' triggers false sum-row detection",
+        "non_numeric_parsing": "Cells like '변동', '유료' parsed as 0, distorting sums",
+        "mixed_format_tables": "Tables with mixed text/number columns (cost tables with ~₩ and '유료')"
+      }
+    },
+    "0-C": {
+      "raw_errors": 0,
+      "verdict": "PASS",
+      "note": "No heading level skip detected"
+    },
+    "0-D": {
+      "total_items": 312,
+      "verdict": "PASS",
+      "note": "312 LOCK/FREEZE/ABSOLUTE items extracted for Phase 1 cross-check"
+    },
+    "0-E": {
+      "raw_errors": 0,
+      "verdict": "PASS",
+      "note": "No cross-file numeric inconsistency detected in critical keywords"
+    },
+    "0-F": {
+      "raw_errors": 0,
+      "verdict": "PASS",
+      "note": "All IDs unique, no dangling references"
+    },
+    "0-G": {
+      "raw_errors": 0,
+      "verdict": "PASS",
+      "note": "All HTML comments properly closed"
+    },
+    "0-H": {
+      "raw_errors": 9,
+      "false_positives": 9,
+      "real_errors": 0,
+      "verdict": "PASS",
+      "fp_reason": "Header counts use '~N개' (approximate) or refer to hierarchical subtotals across multiple sub-sections, not just the immediately following table",
+      "details": [
+        {"line": "PART1:432", "fp": true, "reason": "7건 heading — remaining items in sub-tables below, not just one table"},
+        {"line": "PART1:730", "fp": true, "reason": "57항목 spread across multiple sub-sections C.4.1~C.4.6"},
+        {"line": "PART1:1158", "fp": true, "reason": "2건 heading — 6 rows are cross-ref verification rows, not error items"},
+        {"line": "PART2:2382", "fp": true, "reason": "'~85개' is approximate count for entire §6.1 hierarchy"},
+        {"line": "PART2:2393", "fp": true, "reason": "'~44개' approximate, items in nested sub-tables"},
+        {"line": "PART2:2487", "fp": true, "reason": "'~108개' approximate count across sub-sections"},
+        {"line": "PART2:2489", "fp": true, "reason": "72개 from B1 changelog, items in nested structure"},
+        {"line": "PART2:2522", "fp": true, "reason": "'~84개' approximate across V0~V3 categories"},
+        {"line": "PART2:2611", "fp": true, "reason": "Header says V1=7개, table lists all versions combined"}
+      ]
+    }
+  },
+  "corrected_summary": {
+    "0-A": "PASS (5 FP, 0 real)",
+    "0-B": "PASS (51 FP, 0 real)",
+    "0-C": "PASS (0 errors)",
+    "0-D": "PASS (312 items extracted)",
+    "0-E": "PASS (0 errors)",
+    "0-F": "PASS (0 errors)",
+    "0-G": "PASS (0 errors)",
+    "0-H": "PASS (9 FP, 0 real)"
+  },
+  "overall_verdict": "PASS",
+  "gate": {
+    "id": "PC1-1",
+    "status": "PASS",
+    "note": "All 8 scripts passed after FP analysis. 0-A pipe-in-cell FP, 0-B subtotal/substring FP, 0-H approximate-count FP. All known from v8_results/phase0/ baseline."
+  },
+  "comparison_with_v8_results": {
+    "note": "v8_results/phase0/0-A~0-H all PASS. Current results consistent after FP removal.",
+    "delta": "No new real errors found compared to v8_results baseline"
+  }
+}

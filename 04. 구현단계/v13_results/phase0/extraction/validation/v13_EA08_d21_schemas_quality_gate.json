@@ -1,0 +1,116 @@
+{
+  "agent": "EA-8",
+  "validation_date": "2026-03-17",
+  "validator": "Layer-B-final-revalidation",
+  "source_json": "v13_EA08_d21_schemas.json",
+  "total_items": 305,
+  "previous_reject_reason": "Round 1: 10 CRITICAL fabrication issues in A1 tech stack options, stack combos, D2 DecisionSchema fields, D2 EventTypeRegistry. Round 2: 4 CRITICAL hallucinations in EA08-0025~0028 (Neo4j AuraDB Free, Supabase, Langfuse, Railway).",
+  "previous_reject_fixes_applied": [
+    "Round 1: A1 tech stack option lists (EA08-0010~0017) re-extracted from SOT verbatim",
+    "Round 1: A1 stack combo V1/V2/V3 (EA08-0018~0020) re-extracted from SOT verbatim",
+    "Round 1: D2 DecisionSchema fields (EA08-0085) re-extracted from SOT verbatim",
+    "Round 1: D2 EventTypeRegistry namespaces and values (EA08-0092~0099) re-extracted from SOT verbatim",
+    "Round 1: C6 category expanded from 3 to 22 items",
+    "Round 2: EA08-0025 GraphDB V1 → '파일 기반 JSON 그래프 (간이 GraphRAG)' (SOT L198)",
+    "Round 2: EA08-0026 Storage V1 → 'SQLite + JSONL' (SOT L108)",
+    "Round 2: EA08-0027 Logging V1 → 'JSONL + SQLite' (SOT L127)",
+    "Round 2: EA08-0028 Deploy V1 → '로컬(Windows/WSL) + Docker' (SOT L146)"
+  ],
+  "layer_b_result": {
+    "sv1_semantic_accuracy": {
+      "checked": 35,
+      "scope": "All previously-rejected items (EA08-0010~0020, 0085, 0088, 0092~0099) + newly fixed items (EA08-0025~0028) + random 5 (EA08-0050, 0150, 0200, 0250, 0305)",
+      "round2_fix_verification": {
+        "EA08-0025_graphdb_v1": "PASS - value='파일 기반 JSON 그래프 (간이 GraphRAG)' matches SOT A1-6C L198 verbatim",
+        "EA08-0026_storage_v1": "PASS - value='SQLite + JSONL' matches SOT A1-4 L108 (normalized from 'SQLite(메타/인덱스) + JSONL(append-only)')",
+        "EA08-0027_logging_v1": "PASS - value='JSONL + SQLite' matches SOT A1-5 L127 verbatim",
+        "EA08-0028_deploy_v1": "PASS - value='로컬(Windows/WSL) + Docker' matches SOT A1-6 L146 (normalized: '(선택)' omitted, acceptable)"
+      },
+      "round1_fix_re_verification": {
+        "EA08-0010_LLM_options": "PASS - 6 items match SOT A1-2 P1-LLM-COMPARE exactly",
+        "EA08-0011_embedding_options": "PASS - 4 items match SOT A1-2A exactly",
+        "EA08-0012_vectordb_options": "PASS - 4 items match SOT A1-3 exactly",
+        "EA08-0013_storage_options": "PASS - 4 items match SOT A1-4 exactly",
+        "EA08-0014_logging_options": "PASS - 5 items match SOT A1-5 exactly",
+        "EA08-0015_deploy_options": "PASS - 5 items match SOT A1-6 exactly",
+        "EA08-0016_guardrails_options": "PASS - 3 items match SOT A1-6B exactly",
+        "EA08-0017_graphdb_options": "PASS - 3 items match SOT A1-6C exactly",
+        "EA08-0018_combo_V1": "PASS - All 10 fields match SOT COMBO-V1-LOCAL verbatim",
+        "EA08-0019_combo_V2": "PASS - All 10 fields match SOT COMBO-V2-SERVER verbatim",
+        "EA08-0020_combo_V3": "PASS - All 10 fields match SOT COMBO-V3-OPS verbatim",
+        "EA08-0085_DecisionSchema_fields": "PASS - 18 fields match SOT D2 section 4.1 exactly",
+        "EA08-0088_LogEventSchema_fields": "PASS - 7 fields match SOT D2 section 4.2 exactly",
+        "EA08-0092_EventType_categories": "PASS - 7 namespaces match SOT D2 section 5.1",
+        "EA08-0093_EventType_oc": "PASS - 35 values match SOT exactly",
+        "EA08-0094_EventType_wf": "PASS - 4 values match SOT exactly",
+        "EA08-0095_EventType_ui": "PASS - 71 values match SOT exactly",
+        "EA08-0096_EventType_mem": "PASS - 2 values match SOT exactly",
+        "EA08-0097_EventType_storage": "PASS - 5 values match SOT exactly",
+        "EA08-0098_EventType_agent": "PASS - 3 values match SOT exactly",
+        "EA08-0099_EventType_sdar": "PASS - 3 values match SOT exactly, total 123 matches SOT count"
+      },
+      "random_sample_verification": {
+        "EA08-0050_D1_AC_count": "PASS - value=6, SOT D1 has AC-D1-001 through AC-D1-006 (6 criteria)",
+        "EA08-0150_D4_PromptCacheManager_field_count": "PASS - value=8, SOT D4 PromptCacheManagerSchema has 8 fields (cache_id, prompt_hash, model_id, cached_response, hit_count, ttl_sec, cost_saved_estimate, created_at)",
+        "EA08-0200_D6_semantic_cache_threshold": "PASS - value=0.95, SOT D6 L186 says 'cosine >= 0.95'",
+        "EA08-0250_Q1_DN_004_status": "PASS (with LOW warning) - value='resolved', DN-004 is resolved per SOT Q1 L341. However key='Q1_DN_004_status' mismatches source_text which references 'Q1-DN-014' at L191. See SV3 warning.",
+        "EA08-0305_D2_LogEventSchema_version": "PASS - value='v3.0.0', SOT D2 L103 confirms schema_version='v3.0.0'"
+      },
+      "issues": [],
+      "pass": true,
+      "summary": "All 4 Round-2 fixes (EA08-0025~0028) verified against SOT A1 LOCK decisions. All 21 Round-1 fixes remain correct. All 5 random samples pass. Zero CRITICAL issues remaining."
+    },
+    "sv2_extraction_completeness": {
+      "category_distribution": {
+        "C1": 104,
+        "C2": 32,
+        "C3": 20,
+        "C4": 83,
+        "C5": 18,
+        "C6": 22,
+        "C7": 14,
+        "C8": 12
+      },
+      "completeness_checks": {
+        "D2_DecisionSchema_18_fields": "PASS - all 18 fields extracted",
+        "D2_LogEventSchema_7_fields": "PASS - all 7 fields extracted",
+        "D2_EventTypeRegistry_123_values": "PASS - all 123 values decomposed by namespace",
+        "D2_FailureCodeRegistry_36_values": "PASS - all 36 codes listed",
+        "D2_FallbackRegistry_23_values": "PASS - all 23 entries listed",
+        "D2_failure_fallback_mapping_22_rows": "PASS - count captured",
+        "A1_stack_combos_V1_V2_V3": "PASS - all 3 combos with 10 fields each",
+        "A1_tech_options_8_categories": "PASS - LLM/Embedding/VectorDB/Storage/Logging/Deploy/Guardrails/GraphDB",
+        "A1_tech_decisions_4_items": "PASS - EA08-0025~0028 now correctly reflect SOT LOCK decisions",
+        "C6_category_count": "PASS - 22 items covering document/schema/tech versions"
+      },
+      "remaining_gaps": [
+        "D1 Glossary term count (48 terms) not explicitly extracted as a C1 item — LOW, non-blocking"
+      ],
+      "pass": true,
+      "summary": "305 items across 8 categories. All registries fully decomposed. A1 tech decisions corrected. Minor gap: D1 glossary term count."
+    },
+    "sv3_key_appropriateness": {
+      "warnings": [
+        {
+          "severity": "LOW",
+          "detail": "EA08-0018~0020: value_type='string' but values are objects. Should be value_type='object'. Non-blocking."
+        },
+        {
+          "severity": "LOW",
+          "detail": "EA08-0087: source_text references DecisionSchema section (L56) but item is about LogEventSchema required count. source_line should reference section 4.2 (L97+). Non-blocking."
+        },
+        {
+          "severity": "LOW",
+          "detail": "EA08-0250: key='Q1_DN_004_status' and context='DN-004 resolution status' but source_text references 'Q1-DN-014' at L191. Key/source mismatch. Both DN-004 and DN-014 are resolved, so value is correct. Non-blocking."
+        }
+      ],
+      "pass": true,
+      "summary": "Key naming follows consistent pattern. 3 LOW warnings (value_type mismatch, source_line reference, key/source_text mismatch). No structural issues."
+    }
+  },
+  "critical_count": 0,
+  "high_count": 0,
+  "low_count": 3,
+  "verdict": "GOLD",
+  "summary": "GOLD: All 25 previously-rejected items (Round 1: EA08-0010~0020, 0085, 0088, 0092~0099; Round 2: EA08-0025~0028) verified PASS against SOT. 5 additional random samples (EA08-0050, 0150, 0200, 0250, 0305) all PASS. Zero CRITICAL/HIGH issues. 3 LOW warnings (value_type mismatch on combo items, source_line reference for EA08-0087, key/source_text mismatch for EA08-0250). 305 items across 8 categories with complete registry decomposition."
+}

@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "version": "v13-enhanced",
+    "session": 7,
+    "created": "2026-03-21",
+    "pipeline": "v13 Enhanced Pipeline (52-skill)",
+    "total_challenges": 10,
+    "results": {
+      "challenge_sustained": 3,
+      "challenge_partially_sustained": 5,
+      "challenge_rejected": 2
+    },
+    "error_rate": "7.1%",
+    "verdict": "PASS",
+    "methodology": "Devil's Advocate 적대적 감사 — 모든 FIX에 대해 사실 정확성, 권한 체인, 부작용, 신규 불일치 유발 여부 검증",
+    "summary": "14건 수정 중 1건 인용 오류(B3→B6, 즉시 정정), 나머지는 부분적 개선점은 있으나 수정 방향 자체는 유효. 오판율 ≈7.1% (1/14). PASS 판정."
+  },
+  "challenges": [
+    {
+      "challenge_id": "ADV-E001",
+      "target": "FIX-E001",
+      "challenge_type": "AUTHORITY_RELIABILITY",
+      "argument": "V3 엔터프라이즈 환경에서 max_retries=2로 축소하면 분산 시스템 복원력 저하. V3=3이 합리적인데 왜 2로 변경했는지 의사결정 로그 부재.",
+      "evidence": [
+        "V3는 K8s, 관측 스택, GPU Brain 등 복잡한 인프라",
+        "exponential backoff 1s→2s→4s에서 3회는 자연스러운 구성"
+      ],
+      "result": "REJECTED",
+      "reason": "FIX-E001 테이블에서 V3=3을 이미 유지함(V1=2, V2=2, V3=3). 적대적 심사관이 테이블 결과를 오독. TOML 예시는 V1/V2용이므로 2가 맞음. V3 TOML 예시는 별도 위치(B4 V3 설정 섹션)에서 3으로 설정되어야 하며, 현재 B4에 V3 전용 TOML 예시가 없으므로 추가 불필요.",
+      "action": "없음. V3=3 유지 확인."
+    },
+    {
+      "challenge_id": "ADV-E002",
+      "target": "FIX-E002",
+      "challenge_type": "MATH_AUTHORITY",
+      "argument": "₩1,300 일일 상한이 BASE-1.3에 있다는 주장의 순환 논증. 토큰→원 변환 비율(₩0.03/token) 근거 미제시. 구현 시 100K vs 43K 중 어떤 상수를 사용할지 혼란.",
+      "evidence": [
+        "BASE-1.3 L198: '일일 상한: 1,300원 ($1)' — 실제 확인됨 (grep 검증)",
+        "D2.0-04 L1088: '약 3,000원' → 100K/3000 = ₩0.03/token 근사"
+      ],
+      "result": "PARTIALLY_SUSTAINED",
+      "reason": "BASE-1.3 L198에서 ₩1,300 확인은 사실. 그러나 '약(~)' 표기에서 파생된 43K는 근사치이므로 구현 시 혼란 가능. 토큰 비용은 모델 선택(Mini/Main/Flagship)에 따라 달라지므로 '약' 표기 유지가 적절. 100K는 API throughput 보호용, ₩1,300은 비용 보호용으로 이중 리밋 구조를 명시한 것이 핵심.",
+      "action": "수정 유지. 구현 가이드(B1/B5)에서 이중 리밋(token rate + cost budget) 처리 로직 명시 권장(Phase 1 범위)."
+    },
+    {
+      "challenge_id": "ADV-E003",
+      "target": "FIX-E003",
+      "challenge_type": "AUTHORITY_CHAIN",
+      "argument": "CLAUDE.md(비정본/7순위)의 내용을 PLAN-3.0(2순위)으로 승격하는 것은 권한 역전. D2.0-06(STORAGE)이 적절한 정본 위치.",
+      "evidence": [
+        "CLAUDE.md 헤더: 루트 CLAUDE.md 참조 지시",
+        "QoD < 0.40 L2 벡터삽입 금지는 메모리 정책 → D2.0-06 범위"
+      ],
+      "result": "PARTIALLY_SUSTAINED",
+      "reason": "권한 승격 자체는 의도적 행위 — 하위 문서에서 발견된 안전 정책을 상위 정본으로 공식화하는 것. L2 벡터삽입 금지는 QoD 임계값 체계의 일부이므로 PLAN-3.0 QoD 섹션에 추가하는 것이 구조적으로 적합. 다만, 인용 경로를 'CLAUDE.md §Memory'에서 'D2.0-06 §Storage(향후 추가 시)'로 변경하는 것이 바람직.",
+      "action": "수정 유지. 인용 경로 개선은 D2.0-06에 해당 정책 추가 시 자동 해소(Phase 1~2 범위)."
+    },
+    {
+      "challenge_id": "ADV-E004",
+      "target": "FIX-E004",
+      "challenge_type": "AUTHORITY_COMPLETENESS",
+      "argument": "B/C/D/EVX 시리즈가 DESIGN LOCK 계층(D2.0-*)에 없고 비정본(CLAUDE.md)에만 있음. MASTER_SPEC이 비정본을 인용하면 권한 체인 파손.",
+      "evidence": [
+        "D2.0-02에 B/C/D/EVX 시리즈 미수록",
+        "CLAUDE.md는 '더 이상 정본 아님' 표시"
+      ],
+      "result": "PARTIALLY_SUSTAINED",
+      "reason": "B/C/D/EVX는 구현 확장 시리즈로 DESIGN 계층 정식화 이전 단계. CLAUDE.md §6이 유일한 정의 소스인 현실을 인정하고, 향후 D2.0-02 또는 별도 DESIGN 문서로 승격할 때 교차 참조를 갱신하는 것이 현실적 대안. 현재 교차 참조는 '없는 것보다 있는 것이 낫다' 원칙 적용.",
+      "action": "수정 유지. Phase 2(v7 재실행) 시 B/C/D/EVX DESIGN 문서 정식화 여부 확인 권장."
+    },
+    {
+      "challenge_id": "ADV-E005",
+      "target": "FIX-E005",
+      "challenge_type": "DEFINITION_GAP",
+      "argument": "PHASE_B6은 5개 CI 단계만 정의. FIX-E005의 8-stage(lint→test→build→security-scan→deploy-staging→e2e→deploy-prod→monitor)와 불일치. 또한 B3(Dependencies)가 아닌 B6(CI/CD)를 인용해야 함.",
+      "evidence": [
+        "PHASE_B6: Stage 1~5 (lint, test, security-scan, build, summary)",
+        "deploy/e2e/monitor는 별도 워크플로우 또는 V2+ 기능"
+      ],
+      "result": "SUSTAINED",
+      "reason": "B3→B6 인용 오류는 즉시 수정 완료. 8-stage vs B6 5-stage 불일치는 실재 — CLAUDE.md의 8-stage는 V1~V3 전체 목표이고 B6의 5-stage는 V1 CI 파이프라인. deploy-staging/e2e/deploy-prod/monitor는 V2+ 확장 단계. 인라인 정의 시 '(V1: lint→test→build→security-scan→summary, V2+: +deploy-staging→e2e→deploy-prod→monitor)' 형태가 정확.",
+      "action": "인용 오류 즉시 수정(B3→B6). 8-stage 구성은 V1(5) + V2+(3) 구분이 필요하나, 현재 체크리스트 항목으로서의 기능은 충분하므로 Phase 1에서 B6과 대조하여 정비."
+    },
+    {
+      "challenge_id": "ADV-E006",
+      "target": "FIX-E006",
+      "challenge_type": "COMPLETENESS",
+      "argument": "SDAR(1회) vs MCP(2회) 재시도의 상호작용 모델 미정의. 스택 시 최대 3회 시도인지, 독립 실행인지 불명확.",
+      "evidence": [
+        "SDAR ActionRecord.max_retries=1 (액션 단위)",
+        "MCP max_retries=2 (프로토콜 단위)",
+        "retry_with_backoff max 3회 (복구 전략)"
+      ],
+      "result": "PARTIALLY_SUSTAINED",
+      "reason": "계층 구분 명시는 올바른 첫 단계. 상호작용 모델(SDAR 1회 실패 → MCP 재시도 2회 → 총 최대 시도 수)은 구현 레벨 상세로 SDAR §4 또는 B4 §Implementation에서 정의할 사항. 현재 명시는 최소한의 혼란 방지 역할 수행.",
+      "action": "수정 유지. 상호작용 모델 상세는 Phase 1 구현 시 B4 implementation 섹션에서 정의."
+    },
+    {
+      "challenge_id": "ADV-E007",
+      "target": "FIX-E007~E008c",
+      "challenge_type": "REFERENCE_COMPLETENESS",
+      "argument": "교차 참조가 MASTER_SPEC→PLAN-3.0 단방향. PLAN-3.0→MASTER_SPEC 역방향(V1~V3)이 없어 '양방향'이 아님. 또한 PLAN-3.0 §1 참조가 너무 광범위(~1000줄).",
+      "evidence": [
+        "PLAN-3.0 L140-142: V1/V2/V3 한 줄 설명 — 교차 참조 삽입 공간 부족",
+        "FIX-E011은 V0만 PLAN-3.0→MASTER_SPEC 역방향 추가"
+      ],
+      "result": "PARTIALLY_SUSTAINED",
+      "reason": "V0는 양방향 완성(FIX-E007 + FIX-E011). V1~V3는 PLAN-3.0의 한 줄 설명(L140-142)에 교차 참조 삽입이 비현실적이므로 MASTER_SPEC→PLAN-3.0 단방향으로 충분. PLAN-3.0 §3 로드맵 상세 섹션이 있다면 거기에 역방향 추가 가능하나 현재 구조에서는 불필요.",
+      "action": "수정 유지. V0 양방향 확인. V1~V3 단방향 허용."
+    },
+    {
+      "challenge_id": "ADV-E008",
+      "target": "FIX-E003",
+      "challenge_type": "DUPLICATE_CHECK",
+      "argument": "FIX-E003이 '추가'라고 주장하나, 적대적 검사 시 이미 존재한다는 주장. 중복 삽입 가능성.",
+      "evidence": [
+        "PLAN-3.0 L248 이후에 새 줄 삽입됨 → L249에 QoD < 0.40 내용 확인"
+      ],
+      "result": "REJECTED",
+      "reason": "FIX-E003은 새 줄을 삽입한 것이 맞음. 적대적 검사관이 수정 후 파일을 읽고 '이미 있다'고 판단한 것은 수정이 적용된 후의 상태를 확인한 것. 수정 전 파일(백업: PLAN-3.0_backup_v13e.md)에는 QoD < 0.40 행이 없음. 중복 삽입 아님.",
+      "action": "없음. 수정 정당."
+    },
+    {
+      "challenge_id": "ADV-E009",
+      "target": "FIX-E004",
+      "challenge_type": "ENUMERATION_CHECK",
+      "argument": "B/C/D/EVX 합산 25개 정확성 검증.",
+      "evidence": [
+        "CLAUDE.md §6: B(6)+C(7)+D(6)+EVX(6) = 25 ✓"
+      ],
+      "result": "REJECTED",
+      "reason": "적대적 검사관 자체 검증에서 25개 일치 확인. 열거 오류 없음.",
+      "action": "없음."
+    },
+    {
+      "challenge_id": "ADV-E010",
+      "target": "전체",
+      "challenge_type": "SYSTEMIC",
+      "argument": "모든 수정이 CLAUDE.md(비정본)를 인용하는 구조적 문제. DESIGN 계층에 B/C/D/EVX, L2 벡터 정책 등의 정식 정의가 없음.",
+      "evidence": [
+        "CLAUDE.md 헤더: '더 이상 정본 아님'",
+        "D2.0-* 에 B/C/D/EVX 시리즈 부재",
+        "D2.0-06에 QoD < 0.40 L2 정책 부재"
+      ],
+      "result": "SUSTAINED",
+      "reason": "구조적으로 CLAUDE.md가 사실상 정본 역할을 하고 있으나 공식 지위가 없는 상태. 이는 v13 Phase 0의 범위를 넘어서는 문서 거버넌스 이슈. Phase 1~2에서 DESIGN 계층 보강 시 해소할 과제로 기록.",
+      "action": "Phase 1~2 과제로 이관: (1) B/C/D/EVX 시리즈 D2.0-02 또는 별도 DESIGN 문서 정식화, (2) QoD L2 정책 D2.0-06 추가."
+    }
+  ],
+  "post_fix_verification": {
+    "cross_examine_new_inconsistencies": {
+      "result": "PASS",
+      "detail": "수정이 기존 불일치를 새로 유발하지 않음 확인. B4 max_retries(2/2/3)는 D2.0-03(2), MASTER_SPEC(2)과 정합. PLAN-3.0 QoD 3단계(0.85/0.70/0.40)는 CLAUDE.md와 정합. MASTER_SPEC V0~V3 교차 참조는 PLAN-3.0 원문과 일치."
+    },
+    "golden_set_reverify": {
+      "result": "PASS",
+      "detail": "기존 정답 데이터(INC-001~003 해소 확인) 재검증: (1) INC-001 TOTAL_MODULE_COUNT — 범위 명시 유지(DELTA-001), 추가로 B/C/D/EVX 교차 참조(FIX-E004). (2) INC-002 MODULE_TIER_SYSTEM — FP 유지(직교 분류). (3) INC-003 QOD_THRESHOLD — PLAN-3.0에 0.40 추가로 3단계 완성(FIX-E003). 3건 모두 해소 상태 유지."
+    },
+    "integrity_hash_verified": true,
+    "citation_error_fixed": "ADV-E005: B3→B6 인용 오류 즉시 수정 완료"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "_meta": {
+    "id": "GT-4",
+    "title": "외부 의존성 레지스트리 (관점 F용) — v13 Phase4 재구축",
+    "timestamp": "2026-03-22T22:30:00+09:00",
+    "source": "v13_phase4_session23",
+    "base": "v9_dependency_registry",
+    "original_sources": [
+      "PHASE_B3_DEPENDENCIES.md",
+      "VAMOS_구현가이드_PART2_구현단계.md §6.8",
+      "CLAUDE.md §11 Tech Combo",
+      "VAMOS_AI_INVESTING_SPEC.md §14",
+      "VAMOS_AGENT_TEAMS_SPEC.md"
+    ]
+  },
+
+  "npm": {
+    "dependencies": [
+      { "name": "react", "version_spec": "^18.3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "react-dom", "version_spec": "^18.3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "react-router-dom", "version_spec": "^6.28.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@tauri-apps/api", "version_spec": "^2.2.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "@tauri-apps/plugin-shell", "version_spec": "^2.2.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "zustand", "version_spec": "^5.0.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@tanstack/react-query", "version_spec": "^5.62.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "recharts", "version_spec": "^2.14.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@xyflow/react", "version_spec": "^12.4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "date-fns", "version_spec": "^4.1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "clsx", "version_spec": "^2.1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "lucide-react", "version_spec": "^0.468.0", "v_scope": "V1_ALL", "license": "ISC", "phase_b3_listed": true },
+      { "name": "sonner", "version_spec": "^1.7.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "zod", "version_spec": "^3.24.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true }
+    ],
+    "devDependencies": [
+      { "name": "typescript", "version_spec": "^5.7.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "vite", "version_spec": "^6.0.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@vitejs/plugin-react", "version_spec": "^4.3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "vitest", "version_spec": "^2.1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@testing-library/react", "version_spec": "^16.1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@testing-library/jest-dom", "version_spec": "^6.6.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "jsdom", "version_spec": "^25.0.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@tauri-apps/cli", "version_spec": "^2.2.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "tailwindcss", "version_spec": "^3.4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "postcss", "version_spec": "^8.4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "autoprefixer", "version_spec": "^10.4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "eslint", "version_spec": "^9.16.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@typescript-eslint/parser", "version_spec": "^8.18.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "@typescript-eslint/eslint-plugin", "version_spec": "^8.18.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "prettier", "version_spec": "^3.4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true }
+    ]
+  },
+
+  "cargo": {
+    "dependencies": [
+      { "name": "tauri", "version_spec": "^2.2", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "tauri-plugin-shell", "version_spec": "^2.2", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "serde", "version_spec": "^1.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "serde_json", "version_spec": "^1.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "tokio", "version_spec": "^1.42", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "reqwest", "version_spec": "^0.12", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "chrono", "version_spec": "^0.4", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "uuid", "version_spec": "^1.11", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "thiserror", "version_spec": "^2.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "anyhow", "version_spec": "^1.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "tracing", "version_spec": "^0.1", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "tracing-subscriber", "version_spec": "^0.3", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "toml", "version_spec": "^0.8", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "dirs", "version_spec": "^5.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true }
+    ],
+    "build_dependencies": [
+      { "name": "tauri-build", "version_spec": "^2.2", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true }
+    ],
+    "dev_dependencies": [
+      { "name": "tokio-test", "version_spec": "^0.4", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "tempfile", "version_spec": "^3.14", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true }
+    ]
+  },
+
+  "python": {
+    "requires_python": ">=3.11",
+    "core": [
+      { "name": "pydantic", "version_spec": ">=2.10,<3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "pydantic-settings", "version_spec": ">=2.7,<3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "langgraph", "version_spec": ">=0.2.60,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "langchain-core", "version_spec": ">=0.3.25,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "langchain-openai", "version_spec": ">=0.2.14,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "langchain-community", "version_spec": ">=0.3.15,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "langchain-anthropic", "version_spec": ">=0.3.0,<1.0", "v_scope": "V2_PLUS", "license": "MIT", "phase_b3_listed": true }
+    ],
+    "embedding": [
+      { "name": "FlagEmbedding", "version_spec": ">=1.3.0,<2.0", "v_scope": "V1_ONLY", "license": "MIT", "phase_b3_listed": true },
+      { "name": "sentence-transformers", "version_spec": ">=3.3.0,<4.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "torch", "version_spec": ">=2.5.0,<3.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "openai", "version_spec": ">=1.58.0,<2.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true }
+    ],
+    "vector": [
+      { "name": "chromadb", "version_spec": ">=0.5.23,<1.0", "v_scope": "V1_ONLY", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "qdrant-client", "version_spec": ">=1.12.0,<2.0", "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": true }
+    ],
+    "storage": [
+      { "name": "aiosqlite", "version_spec": ">=0.20.0,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "sqlalchemy", "version_spec": ">=2.0.36,<3.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "alembic", "version_spec": ">=1.14.0,<2.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "asyncpg", "version_spec": ">=0.30.0,<1.0", "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": true }
+    ],
+    "guardrails": [
+      { "name": "nemoguardrails", "version_spec": ">=0.11.0,<1.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "guardrails-ai", "version_spec": ">=0.5.15,<1.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "transformers", "version_spec": ">=4.47.0,<5.0", "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": true }
+    ],
+    "mcp": [
+      { "name": "httpx", "version_spec": ">=0.28.0,<1.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "sse-starlette", "version_spec": ">=2.2.0,<3.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "starlette", "version_spec": ">=0.41.0,<1.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "uvicorn", "version_spec": ">=0.34.0,<1.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "jsonrpcserver", "version_spec": ">=5.0.0,<6.0", "v_scope": "V0_ALL", "license": "MIT", "phase_b3_listed": true }
+    ],
+    "graph": [
+      { "name": "networkx", "version_spec": ">=3.0,<4.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": false }
+    ],
+    "utils": [
+      { "name": "tiktoken", "version_spec": ">=0.8.0,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "python-dotenv", "version_spec": ">=1.0.0,<2.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "structlog", "version_spec": ">=24.4.0,<25.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "rich", "version_spec": ">=13.9.0,<14.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "orjson", "version_spec": ">=3.10.0,<4.0", "v_scope": "V1_ALL", "license": "MIT/Apache-2.0", "phase_b3_listed": true },
+      { "name": "tenacity", "version_spec": ">=9.0.0,<10.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "aiofiles", "version_spec": ">=24.1.0,<25.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true }
+    ],
+    "dev": [
+      { "name": "pytest", "version_spec": ">=8.3.0,<9.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "pytest-asyncio", "version_spec": ">=0.24.0,<1.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "pytest-cov", "version_spec": ">=6.0.0,<7.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "pytest-mock", "version_spec": ">=3.14.0,<4.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "ruff", "version_spec": ">=0.8.0,<1.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "mypy", "version_spec": ">=1.13.0,<2.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "pre-commit", "version_spec": ">=4.0.0,<5.0", "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": true },
+      { "name": "pip-audit", "version_spec": ">=2.7.0,<3.0", "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "ipython", "version_spec": ">=8.30.0,<9.0", "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": true }
+    ],
+    "v2_additions": [
+      { "name": "neo4j", "version_spec": ">=5.27,<6.0", "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "celery", "version_spec": ">=5.4,<6.0", "v_scope": "V2_PLUS", "license": "BSD-3-Clause", "phase_b3_listed": true },
+      { "name": "redis", "version_spec": ">=5.2,<6.0", "v_scope": "V2_PLUS", "license": "MIT", "phase_b3_listed": true }
+    ],
+    "v3_additions": [
+      { "name": "vllm", "version_spec": null, "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "prometheus-client", "version_spec": ">=0.21,<1.0", "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "opentelemetry-sdk", "version_spec": ">=1.29,<2.0", "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "opentelemetry-exporter-otlp", "version_spec": ">=1.29,<2.0", "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": true },
+      { "name": "kubernetes", "version_spec": ">=31.0,<32.0", "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": true }
+    ]
+  },
+
+  "section_6_8": {
+    "_source": "PART2 §6.8 AI Investing 기술스택",
+    "dependencies": [
+      { "name": "yfinance", "version_spec": null, "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "backtrader", "version_spec": null, "v_scope": "V1_ALL", "license": "GPL-3.0", "phase_b3_listed": false },
+      { "name": "vectorbt", "version_spec": null, "v_scope": "V1_CONDITIONAL", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "pandas", "version_spec": null, "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": false },
+      { "name": "numpy", "version_spec": null, "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": false },
+      { "name": "scipy", "version_spec": null, "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": false },
+      { "name": "plotly", "version_spec": null, "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": false },
+      { "name": "matplotlib", "version_spec": null, "v_scope": "V1_ALL", "license": "PSF", "phase_b3_listed": false },
+      { "name": "scikit-learn", "version_spec": null, "v_scope": "V1_ALL", "license": "BSD-3-Clause", "phase_b3_listed": false },
+      { "name": "xgboost", "version_spec": null, "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "TimescaleDB", "version_spec": ">=2.13", "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "kafka", "version_spec": null, "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "airflow", "version_spec": null, "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "s3/minio", "version_spec": null, "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false }
+    ]
+  },
+
+  "infra": {
+    "_source": "PHASE_B3 + CLAUDE.md + PART2",
+    "dependencies": [
+      { "name": "Ollama", "version_spec": null, "v_scope": "V1_ALL", "license": "MIT", "phase_b3_listed": false },
+      { "name": "Docker", "version_spec": null, "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "Docker Compose", "version_spec": null, "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "Kubernetes (K8s) / Helm", "version_spec": null, "v_scope": "V3_ONLY", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "GitHub Actions", "version_spec": null, "v_scope": "V1_ALL", "license": "Proprietary (GitHub)", "phase_b3_listed": false },
+      { "name": "Playwright", "version_spec": null, "v_scope": "V1_ALL", "license": "Apache-2.0", "phase_b3_listed": false },
+      { "name": "Grafana", "version_spec": null, "v_scope": "V2_PLUS", "license": "AGPL-3.0", "phase_b3_listed": false },
+      { "name": "Prometheus", "version_spec": null, "v_scope": "V2_PLUS", "license": "Apache-2.0", "phase_b3_listed": false }
+    ]
+  },
+
+  "validation_summary": {
+    "total_deps": 118,
+    "ecosystem_breakdown": {
+      "npm": { "dependencies": 14, "devDependencies": 15, "subtotal": 29 },
+      "cargo": { "dependencies": 14, "build_dependencies": 1, "dev_dependencies": 2, "subtotal": 17 },
+      "python": { "core": 7, "embedding": 4, "vector": 2, "storage": 4, "guardrails": 3, "mcp": 5, "graph": 1, "utils": 7, "dev": 9, "v2_additions": 3, "v3_additions": 5, "subtotal": 50 },
+      "section_6_8": { "ai_investing_libs": 10, "ai_investing_infra": 4, "subtotal": 14 },
+      "infra": { "subtotal": 8 },
+      "note": "section6_cloud_library (1 TBD entry) and section6_sdar (0) excluded from main count. Including cloud_library TBD → 117 total."
+    },
+    "cross_check": "npm(29) + cargo(17) + python(50) + section_6_8(14) + infra(8) = 118. Original v9 meta reported total_count=94 (npm+cargo+python base). With FIX-15 (jsonrpcserver) and FIX-16 (networkx), python rose to 50. Plus §6.8(14) and infra(8) = 118 grand total.",
+    "license_flags": [
+      { "package": "backtrader", "license": "GPL-3.0", "mitigation": "§6.8 AI Investing subprocess isolation" },
+      { "package": "Neo4j Community (server)", "license": "GPL-3.0", "mitigation": "Independent server execution, neo4j Python driver is Apache-2.0" },
+      { "package": "Grafana", "license": "AGPL-3.0", "mitigation": "Independent service, not embedded in VAMOS code" }
+    ],
+    "v_scope_breakdown": {
+      "V0_ALL": 1,
+      "V1_ALL": 94,
+      "V1_ONLY": 2,
+      "V1_CONDITIONAL": 1,
+      "V2_PLUS": 14,
+      "V3_ONLY": 6
+    },
+    "phase_b3_listed_true": 95,
+    "phase_b3_listed_false": 23
+  }
+}

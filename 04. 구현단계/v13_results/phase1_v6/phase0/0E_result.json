@@ -1,0 +1,27 @@
+{
+  "script": "0-E",
+  "name": "Keyword Numeric Inconsistency",
+  "errors": [],
+  "total_errors": 0,
+  "critical_value_check": [
+    {
+      "file": "PART1",
+      "V1_costs": [
+        "6",
+        "0,",
+        "40",
+        "40,000"
+      ]
+    },
+    {
+      "file": "PART2",
+      "V1_costs": [
+        "0",
+        "0,",
+        "40,000"
+      ]
+    }
+  ],
+  "keywords_checked": 41,
+  "verdict": "PASS"
+}

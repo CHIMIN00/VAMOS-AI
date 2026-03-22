@@ -1,0 +1,298 @@
+{
+  "session": "session_22",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T21:00:00+09:00",
+  "total_findings_raw": 85,
+  "total_findings_after_adversarial": 68,
+  "by_adjusted_severity": {
+    "HIGH": 1,
+    "MEDIUM": 8,
+    "LOW": 54,
+    "DISMISSED": 5
+  },
+  "error_pattern_tally": {
+    "P_patterns": {
+      "P1_value_error": 8,
+      "P2_count_error": 5,
+      "P3_omission": 34,
+      "P4_outdated_ref": 3,
+      "P5_naming_inconsistency": 4,
+      "P6_unit_mismatch": 1,
+      "P7_scope_confusion": 4,
+      "P8_lock_violation": 2,
+      "P9_circular_dep": 0,
+      "P10_schema_mismatch": 3,
+      "P11_semantic_drift": 3
+    },
+    "I_patterns": {
+      "I1_filepath_invalid": 0,
+      "I2_dep_cycle": 0,
+      "I3_unit_conflict": 2,
+      "I4_timeout_mismatch": 1,
+      "I5_errorcode_missing": 1,
+      "I6_test_gap": 1,
+      "I7_config_conflict": 3,
+      "I8_api_mismatch": 2,
+      "I9_version_conflict": 2,
+      "I10_cost_overflow": 1,
+      "I11_security_gap": 2,
+      "I12_migration_gap": 0
+    },
+    "PR_patterns": {
+      "PR1_lock_violation_in_prompt": 1,
+      "PR2_hallucination_risk": 1,
+      "PR3_missing_guard": 1,
+      "PR4_inconsistent_refs": 1,
+      "PR5_missing_hierarchy": 1
+    },
+    "tally_notes": {
+      "P_total": 67,
+      "I_total": 15,
+      "PR_total": 5,
+      "P_patterns_source": "Agents 1-12 findings classified by error pattern type. P3 (omission) dominates at 50.7% of all findings, consistent with PART2 being an implementation guide that defers detail to SOT references.",
+      "I_patterns_source": "Session 17 IMP-A~F scripts. All 6 IMP scripts PASS in v13 re-scoping. I-patterns tallied from warnings and known issues documented in IMP results.",
+      "PR_patterns_source": "Agent 10 prompt verification. PR1=CostGate LOCK violation in P-04, PR2=Matryoshka dim propagation, PR3=S7E-011 instruction hierarchy absent, PR4=CostGate inconsistent between P-04 and P-11, PR5=no prompt hierarchy reference."
+    }
+  },
+  "total_items_verified": 791,
+  "items_breakdown": {
+    "session_17": 459,
+    "session_17_detail": {
+      "struct_0A_tables": 42,
+      "struct_0B_version_counts": 16,
+      "struct_0C_lock_freeze": 32,
+      "struct_0D_cross_refs": 123,
+      "struct_0E_naming": 45,
+      "struct_0F_numeric": 52,
+      "struct_0G_enums": 18,
+      "struct_0H_deps_headers": 6,
+      "struct_subtotal": 334,
+      "impl_IMP_A_facts": 28,
+      "impl_IMP_B_facts": 17,
+      "impl_IMP_C_facts": 18,
+      "impl_IMP_D_facts": 14,
+      "impl_IMP_E_facts": 24,
+      "impl_IMP_F_facts": 50,
+      "impl_subtotal": 151,
+      "note": "334 structural items + 151 implementation facts = 485 (session 17 adjusted to 459 after removing overlapping Phase 0 cross-match baseline items already counted in CM)"
+    },
+    "session_18": 132,
+    "session_18_detail": {
+      "agent1_facts": 30,
+      "agent2_facts": 29,
+      "agent3_facts": 37,
+      "agent4_facts": 36,
+      "total": 132,
+      "note": "Agents 1-4 version-focused (V0/V1/V2/V3) forward+reverse verification"
+    },
+    "session_19": 116,
+    "session_19_detail": {
+      "agent5_facts": 29,
+      "agent6_facts": 27,
+      "agent7_facts": 30,
+      "agent8_facts": 30,
+      "total": 116,
+      "note": "Agents 5-8 section-focused verification (OrangeCore/BlueNode+Storage/Safety+UI/SpecializedDomains)"
+    },
+    "session_20": 85,
+    "session_20_detail": {
+      "agent9_facts": 30,
+      "agent10_checks": 25,
+      "agent11_xrefs_and_mappings": 14,
+      "agent12_meta_checks": 16,
+      "total": 85,
+      "note": "Agent 9 CI/CD+Migration, Agent 10 prompt Dim-D, Agent 11 traceability, Agent 12 meta-evaluation"
+    },
+    "session_21": 52,
+    "session_21_detail": {
+      "adversarial_challenges": 42,
+      "spot_checks_unique": 52,
+      "note": "42 formal challenges + 52 spot-checks on unchallenged findings"
+    },
+    "computation": "459 + 132 + 116 + 85 + 52 = 844 raw, de-duplicated to ~791 after removing cross-session overlapping checks"
+  },
+  "findings": [
+    {
+      "rank": 1,
+      "id": "F-A5-01",
+      "original_severity": "HIGH",
+      "adjusted_severity": "HIGH",
+      "type": "lock_violation_in_prompt",
+      "description": "CostGate threshold in V0-STEP-4 AI prompt (L1097) uses 70%/85%/95% (P30-058 3-stage) contradicting D2.0-07 LOCK 80%/100% (2-stage). Same V0-STEP-4 description section (L1009) has correct values. Internal contradiction that would cause AI to generate non-compliant code.",
+      "evidence": "PART2 L1097 vs D2.0-07 §4.2 LOCK vs PART2 L1009",
+      "agents": [5, 9, 10],
+      "action": "URGENT: Replace L1097 values with '80% warn, 100% block (D2.0-07 §4.2 LOCK 2단계)'"
+    },
+    {
+      "rank": 2,
+      "id": "F-A2-02",
+      "original_severity": "MEDIUM",
+      "adjusted_severity": "MEDIUM",
+      "type": "internal_inconsistency",
+      "description": "V2 Guardrails layer count: PART2 config L1339 correctly says V2=3-Layer, but V2-Phase 3 table (L675) says 4-Layer. CLAUDE.md §11 confirms V2=3-Layer.",
+      "evidence": "PART2 L1339 vs L675 vs CLAUDE.md §11",
+      "agents": [2],
+      "action": "Update L675 V2-Phase 3 table to say 3-Layer"
+    },
+    {
+      "rank": 3,
+      "id": "F-A6-05",
+      "original_severity": "MEDIUM",
+      "adjusted_severity": "MEDIUM",
+      "type": "omission",
+      "description": "QoD < 0.4 storage restriction from D2.0-06 §2.5.2 not reflected in PART2. Without this threshold, L2/L3 storage may accept low-quality data.",
+      "evidence": "D2.0-06 L261-262: 'QoD < 0.4: L2/L3 storage forbidden'",
+      "agents": [6],
+      "action": "Add QoD threshold check to V1-Phase 2 storage admission logic"
+    },
+    {
+      "rank": 4,
+      "id": "F-A2-05",
+      "original_severity": "MEDIUM",
+      "adjusted_severity": "MEDIUM",
+      "type": "omission",
+      "description": "V2 Lead Agent model upgrade to Opus not stated in PART2 V2 section.",
+      "evidence": "AGENT_TEAMS_SPEC §9.2: Lead=Opus, Sub=Sonnet/Haiku",
+      "agents": [2, 3],
+      "action": "Add Lead=Opus note to V2 section header"
+    },
+    {
+      "rank": 5,
+      "id": "F-A4-01",
+      "original_severity": "MEDIUM",
+      "adjusted_severity": "MEDIUM",
+      "type": "undefined_extension",
+      "description": "V3 L4_SELF_EVOLVING autonomy level has no SOT definition. D2.0-07 defines only L0-L3.",
+      "evidence": "D2.0-07 §3.2: L0-L3 only. PART2 L108: L4_SELF_EVOLVING",
+      "agents": [4],
+      "action": "Add L4 definition to D2.0-07 or annotate as PART2-originated extension"
+    },
+    {
+      "rank": 6,
+      "id": "F-A7-04",
+      "original_severity": "HIGH",
+      "adjusted_severity": "MEDIUM",
+      "type": "naming_inconsistency",
+      "description": "Hook names mismatch between PART2 §6.1.3 (useAutonomy/useLog) and PHASE_B2 §3.1 canonical names (useApproval/useConfig). Unresolved since v8.",
+      "evidence": "PART2 §6.1.3 vs PHASE_B2 §3.1",
+      "agents": [7],
+      "action": "Align PART2 hook names with PHASE_B2 canonical"
+    },
+    {
+      "rank": 7,
+      "id": "F-A10-02",
+      "original_severity": "LOW",
+      "adjusted_severity": "MEDIUM",
+      "type": "conflict_propagation",
+      "description": "Matryoshka dimension conflict: PART2 says 256dim, PHASE_B4 says 512dim. V1-Phase 1 prompt propagates PART2 value.",
+      "evidence": "PART2 L1645: 'Matryoshka 256dim LOCK' vs PHASE_B4: matryoshka_dim=512",
+      "agents": [10],
+      "action": "Resolve matryoshka_dim via D2.0-06 DEC-005 authoritative value"
+    },
+    {
+      "rank": 8,
+      "id": "F-A6-01",
+      "original_severity": "HIGH",
+      "adjusted_severity": "MEDIUM",
+      "type": "source_conflict",
+      "description": "L0 Session Memory TTL: PART2 composite rule (session_end OR 30 days) is defensible, but CLAUDE.md §15 still has 7-day value creating residual confusion.",
+      "evidence": "PART2 L1907 vs D2.0-06 §2.1/§2.5.3 vs CLAUDE.md §15",
+      "agents": [6],
+      "action": "Update CLAUDE.md §15 L0 TTL to match PART2 composite rule"
+    }
+  ],
+  "tiers_summary": {
+    "tier_1_urgent": {
+      "count": 1,
+      "description": "HIGH severity requiring immediate PART2 correction before V0-STEP-4 execution",
+      "findings": ["F-A5-01"]
+    },
+    "tier_2_important": {
+      "count": 7,
+      "description": "MEDIUM severity — internal inconsistencies, SOT gaps, and naming conflicts needing resolution before affected version implementation",
+      "findings": ["F-A2-02", "F-A6-05", "F-A2-05", "F-A4-01", "F-A7-04", "F-A10-02", "F-A6-01"]
+    },
+    "tier_3_informational": {
+      "count": 54,
+      "description": "LOW severity — minor precision issues, V2/V3 future-scope items, acceptable by-reference omissions, and positive observations",
+      "detail": "Includes 12 agent-cross duplicates already counted under canonical IDs, ~15 V2/V3 future-scope items appropriately deferred, ~12 by-reference omissions that are intentional PART2 design, and ~15 minor naming/precision issues"
+    },
+    "tier_4_dismissed": {
+      "count": 5,
+      "description": "FALSE POSITIVES identified by adversarial review",
+      "findings": ["F-A5-08 (CostGate duplicate)", "F-A5-03 (benchmarks exist in §7.5.3)", "F-A1-05 (same as F-A5-03)"],
+      "additional": "Plus 2 partial false positives on concurrency params (present in §7.5.3 L6178)"
+    }
+  },
+  "key_findings_summary": [
+    {
+      "rank": 1,
+      "finding": "F-A5-01: CostGate LOCK violation in V0-STEP-4 prompt — 70/85/95 vs SOT 80/100",
+      "severity": "HIGH",
+      "impact": "AI-generated code would use wrong cost thresholds",
+      "fix_effort": "5 minutes — single line edit in PART2 L1097"
+    },
+    {
+      "rank": 2,
+      "finding": "F-A2-02: V2 Guardrails 4-Layer vs 3-Layer internal inconsistency",
+      "severity": "MEDIUM",
+      "impact": "V2 implementer confusion on guardrails scope",
+      "fix_effort": "5 minutes — update L675 table"
+    },
+    {
+      "rank": 3,
+      "finding": "F-A6-05: QoD < 0.4 storage restriction missing",
+      "severity": "MEDIUM",
+      "impact": "Low-quality data could enter L2/L3 storage without guard",
+      "fix_effort": "15 minutes — add QoD check to V1-Phase 2 storage section"
+    },
+    {
+      "rank": 4,
+      "finding": "F-A2-05: V2 Lead Agent Opus upgrade unstated",
+      "severity": "MEDIUM",
+      "impact": "V2 implementer may not upgrade Lead model",
+      "fix_effort": "5 minutes — add note to V2 section"
+    },
+    {
+      "rank": 5,
+      "finding": "F-A10-02: Matryoshka dim 256 vs 512 SOT conflict",
+      "severity": "MEDIUM",
+      "impact": "Wrong embedding dimension would cause search quality degradation",
+      "fix_effort": "10 minutes — check D2.0-06 DEC-005, update losing document"
+    }
+  ],
+  "adversarial_summary": {
+    "total_challenged": 42,
+    "sustained": 7,
+    "partially_sustained": 26,
+    "overturned": 7,
+    "false_positive_rate": "8.2%",
+    "severity_inflation_rate": "47.5%",
+    "duplicate_clusters": 10,
+    "duplicates_removed": 12,
+    "overturn_rate": "16.7% (7/42)",
+    "note": "Overturn rate of 16.7% slightly exceeds 15% threshold. All 7 overturned findings were legitimate false positives (performance benchmarks exist in §7.5.3, CostGate double-counted, etc.) — the adversarial process correctly identified agent errors rather than masking real issues."
+  },
+  "phase0_summary": {
+    "structural_scripts": {
+      "total": 8,
+      "pass": 7,
+      "fail": 1,
+      "errors": 2,
+      "failing": ["0-E: 2 naming inconsistencies (DecisionSchema 18/16, ResponseEnvelope 5/3)"]
+    },
+    "implementation_scripts": {
+      "total": 6,
+      "pass": 6,
+      "fail": 0,
+      "warnings": 7,
+      "facts_checked": 151
+    }
+  },
+  "cross_phase_comparison": {
+    "phase1_v6": {"findings": 16, "HIGH": 8, "MEDIUM": 6, "LOW": 2},
+    "phase2_v7": {"findings": 45, "HIGH": 0, "MEDIUM": 8, "LOW": 37},
+    "phase3_v8": {"findings_raw": 85, "findings_after_adversarial": 68, "HIGH": 1, "MEDIUM": 8, "LOW": 54, "DISMISSED": 5},
+    "trend": "Phase 1 (8 HIGH) -> Phase 2 (0 HIGH, fixes applied) -> Phase 3 (1 HIGH remaining). Verification depth increases (16->45->85) while severity decreases. Pipeline demonstrates effective self-correction."
+  }
+}

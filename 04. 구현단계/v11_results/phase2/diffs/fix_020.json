@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-020",
+  "fg": "FG-H03",
+  "tier": 3,
+  "order": 20,
+  "severity": "HIGH",
+  "description": "V1→V2/V2→V3 전환조건에 TC 측정 메커니즘(측정 방법, 도구, 주기, 판정 기준) 정의 추가",
+  "changes": [
+    {
+      "line": 4693,
+      "section": "V1→V2 전환 조건 뒤",
+      "action": "TC 측정 메커니즘 테이블 삽입"
+    },
+    {
+      "line": 4719,
+      "section": "V2→V3 전환 조건 뒤",
+      "action": "TC 측정 메커니즘 테이블 삽입"
+    }
+  ],
+  "ripple_expected": ["§3 Phase 마무리", "§4 Phase 마무리", "변경이력"],
+  "applied_at": "2026-03-13"
+}

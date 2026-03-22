@@ -1,0 +1,88 @@
+{
+  "current_phase": "2-C",
+  "completed_phases": ["0", "1", "1.5", "2-A", "2-B", "2-C"],
+  "result": "ALL_PASS",
+  "completed_agents": [
+    "Agent 0-A (section_map)",
+    "Agent 0-B (numeric_registry)",
+    "Agent 0-C (reference_map)",
+    "Agent 0-D (terminology_dict)",
+    "Agent 0-E (codeblock_inventory)",
+    "Agent 0-F (prompt_inventory)",
+    "Agent 0-G (v6v10_reuse_index)",
+    "Agent 1 (GAP-06,08)",
+    "Agent 2 (GAP-07,10)",
+    "Agent 3 (GAP-05)",
+    "Agent 4 (GAP-01,02)",
+    "Agent 5 (GAP-03)",
+    "Agent 6 (GAP-04,09)",
+    "Agent 7 (GAP-11)",
+    "Agent 8 (GAP-12,14)",
+    "Agent 9 (GAP-13)",
+    "Agent 10 (GAP-15,16)",
+    "Agent 11 (GAP-17,18)",
+    "Agent 12 (GAP-19,20,21)",
+    "Agent 13 (GAP-22,25)",
+    "Agent 14 (GAP-23,24)",
+    "Agent 15 (Adversarial)"
+  ],
+  "pending": [],
+  "part2_version": "v25.0.0",
+  "part2_lines": 5252,
+  "original_version": "v24.0.0",
+  "original_lines": 4395,
+  "delta_lines": "+857",
+  "phase1_result": {
+    "total_checks": 853,
+    "ok": 588,
+    "issues": 223,
+    "na": 42,
+    "agents": 14,
+    "waves": 5
+  },
+  "phase15_result": {
+    "total_issues": 223,
+    "real_issue": 179,
+    "false_positive": 44,
+    "blocker_confirmed": 13,
+    "spot_check_total": 21,
+    "spot_check_errors": 0,
+    "spot_check_rate": "0%"
+  },
+  "phase2a_result": {
+    "total_fix_groups": 42,
+    "total_issues": 179,
+    "tiers": 7,
+    "canonical_decisions": {
+      "FG-B01": "B (3단계 70/85/95%)",
+      "FG-B02": "A (전환조건에서 Loki+Grafana 삭제)",
+      "FG-H05_autonomy": "B (L2_COPILOT)",
+      "FG-H05_max_turns": "A (max_turns=50)",
+      "FG-B04": "B (S3a_APPROVE 상태 분리)"
+    }
+  },
+  "phase2b_result": {
+    "started_at": "2026-03-12",
+    "completed_at": "2026-03-13",
+    "backup_sha256": "71a17e8a5e13d90819619528eb8a54c8eb9fae53456954089a5dbb7283fcd39e",
+    "fix_jsons_generated": 24,
+    "blocker_resolved": 13,
+    "high_resolved": 50,
+    "medium_resolved": 65,
+    "low_resolved": 51,
+    "lock_violations": 0,
+    "sections_deleted": 0
+  },
+  "phase2c_result": {
+    "conditions_total": 14,
+    "conditions_pass": 14,
+    "conditions_fail": 0,
+    "result": "ALL_PASS",
+    "completed_at": "2026-03-13"
+  },
+  "deliverables": {
+    "F-03": "v11_results/v11_checkpoint.md",
+    "3차-02": "v11_results/phase2/v11_phase2_final_report.md"
+  },
+  "last_updated": "2026-03-13"
+}

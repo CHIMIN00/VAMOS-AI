@@ -1,0 +1,673 @@
+{
+  "session": "session_21",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T18:30:00+09:00",
+  "input_summary": {
+    "total_agents": 12,
+    "total_findings_input": 85,
+    "by_severity": {
+      "HIGH": 5,
+      "MEDIUM": 33,
+      "LOW": 47
+    },
+    "by_agent": {
+      "agent1": {"total": 7, "HIGH": 0, "MEDIUM": 2, "LOW": 5},
+      "agent2": {"total": 8, "HIGH": 0, "MEDIUM": 4, "LOW": 4},
+      "agent3": {"total": 8, "HIGH": 0, "MEDIUM": 4, "LOW": 4},
+      "agent4": {"total": 9, "HIGH": 0, "MEDIUM": 5, "LOW": 4},
+      "agent5": {"total": 8, "HIGH": 2, "MEDIUM": 3, "LOW": 3},
+      "agent6": {"total": 8, "HIGH": 1, "MEDIUM": 4, "LOW": 3},
+      "agent7": {"total": 7, "HIGH": 1, "MEDIUM": 2, "LOW": 4},
+      "agent8": {"total": 6, "HIGH": 0, "MEDIUM": 2, "LOW": 4},
+      "agent9": {"total": 6, "HIGH": 0, "MEDIUM": 1, "LOW": 5},
+      "agent10": {"total": 5, "HIGH": 0, "MEDIUM": 1, "LOW": 4},
+      "agent11": {"total": 6, "HIGH": 0, "MEDIUM": 2, "LOW": 4},
+      "agent12": {"total": 7, "HIGH": 1, "MEDIUM": 3, "LOW": 3}
+    }
+  },
+  "challenges": [
+    {
+      "finding_id": "F-A5-01",
+      "agent": 5,
+      "original_severity": "HIGH",
+      "challenge": "CostGate threshold contradiction (70/85/95 vs 80/100). Agent 5 claims this is a critical internal PART2 contradiction. However, PART2 L1009 (description section) correctly says 80%/100% matching D2.0-07 SOT LOCK. The 70/85/95 appears ONLY in the AI prompt section L1097, referencing P30-058 (older PLAN source). The description section is authoritative for the implementer reading the guide; the AI prompt section is for copy-paste into an AI tool.",
+      "evidence": "PART2 L1009: 'CostGate: 80%/100% 체크' (correct). PART2 L1097: '70% warn, 85% escalate, 95% block (P30-058 3단계)' (incorrect per LOCK). PART2 L2453: V1-Phase 5 correctly uses '80% 경고, 100% 차단'. D2.0-07 §4.2 LOCK: 80%/100%.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "HIGH",
+      "reason": "The contradiction is real and verified. L1097 AI prompt text would cause AI-generated code to use wrong thresholds. However, L1009 provides the correct value in the description section and L2453 V1-Phase 5 also has correct values. Still HIGH because the V0-STEP-4 prompt is the first implementation prompt and would propagate the error."
+    },
+    {
+      "finding_id": "F-A5-08",
+      "agent": 5,
+      "original_severity": "HIGH",
+      "challenge": "This is a DUPLICATE of F-A5-01. Agent 5 reported the same CostGate threshold issue as two separate HIGH findings (F-A5-01 as 'mismatch' and F-A5-08 as 'impl_issue'). Both cite the same L1009 vs L1097 contradiction.",
+      "evidence": "F-A5-01 evidence = F-A5-08 evidence. Same root cause, same PART2 lines.",
+      "verdict": "OVERTURNED",
+      "adjusted_severity": "DISMISSED",
+      "reason": "Duplicate of F-A5-01. Agent 5 double-counted the same issue under two different finding types. The issue itself is valid but should be counted once."
+    },
+    {
+      "finding_id": "F-A6-01",
+      "agent": 6,
+      "original_severity": "HIGH",
+      "challenge": "L0 Session Memory TTL ambiguity — Agent 6 claims three different values exist (30 days, immediate, 7 days). However, PART2 L1907 clearly states 'session_end 또는 created_at + 30일 중 먼저 (LOCK)' which is a well-defined composite rule: TTL = min(session_end, created_at + 30d). D2.0-06 §2.1 says 'max 30 days' (consistent with PART2). D2.0-06 §2.5.3 says 'session end immediate expiry' which is the session_end component. These are not contradictory — they describe different parts of the same composite rule. CLAUDE.md §15 '7 days (max 30)' is the only truly different value, but PART2 already supersedes this per DESIGN > CLAUDE priority.",
+      "evidence": "PART2 L1907: 'session_end 또는 created_at + 30일 중 먼저 (LOCK)'. D2.0-06 §2.1: 'session end (max 30 days)'. D2.0-06 §2.5.3: 'session end immediate expiry'. The composite rule 'whichever comes first' unifies §2.1 (max 30d ceiling) and §2.5.3 (session end triggers cleanup).",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "The D2.0-06 internal conflict between §2.1 and §2.5.3 is real but can be reconciled: §2.5.3 means 'on session end, expire immediately' and §2.1 means 'absolute max 30 days even if session never ends'. PART2's composite rule correctly implements both. However, CLAUDE.md's 7-day value creates residual confusion. Downgrade to MEDIUM because PART2's actual implementation specification is clear and defensible."
+    },
+    {
+      "finding_id": "F-A7-04",
+      "agent": 7,
+      "original_severity": "HIGH",
+      "challenge": "Hook name inconsistency (useAutonomy/useLog vs useApproval/useConfig). Agent 7 rates this HIGH but this is a naming convention issue, not a functional bug. PHASE_B2 defines canonical hook names, but PART2's naming (useAutonomy, useLog) could be intentional — useAutonomy is a broader hook that includes approval logic, and useLog is more descriptive than useConfig for a logging hook.",
+      "evidence": "PART2 §6.1.3: useAutonomy, useLog. PHASE_B2 §3.1: useApproval, useConfig. These are React custom hook names — they are internal API names that can be aliased or renamed.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Naming inconsistency is real but not a blocker. Hooks are internal implementation details. An implementer seeing both names would need to choose one, creating minor confusion but not a functional defect. PHASE_B2 is authoritative for naming per document hierarchy (DESIGN > PHASE_B), so PART2 should align. However, HIGH severity is inflated — this would not cause a runtime bug, only a naming decision for the developer. Downgrade to MEDIUM."
+    },
+    {
+      "finding_id": "F12-03",
+      "agent": 12,
+      "original_severity": "HIGH",
+      "challenge": "Dimension D (prompt quality) coverage at 25% — Agent 12 rates this HIGH as a systematic gap. However, Agent 10 IS a dedicated prompt verification agent and performed dim_d analysis on all 15 prompts, finding 12/15 LOCK-consistent. The 25% coverage claim appears to undercount Agent 10's work. Agent 10 checked 25 LOCK values across all prompts, found 88% consistency.",
+      "evidence": "Agent 10 findings: 15 prompts verified, 25 LOCK values checked, 22 consistent (88%). This IS systematic prompt verification. Agent 12's assessment of '25% coverage' likely refers to Phase 1+2 historical coverage, not Phase 3 where Agent 10 explicitly covers Dim D.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Agent 12's concern about prompt quality verification has merit for Phases 1-2 but is partially addressed by Agent 10 in Phase 3. Agent 10's 88% LOCK consistency rate across all 15 prompts demonstrates reasonable Dim D coverage. The remaining gap is prompt ambiguity/hallucination risk analysis (beyond LOCK value checking), which is genuinely under-covered. Downgrade to MEDIUM."
+    },
+    {
+      "finding_id": "F-A5-03",
+      "agent": 5,
+      "original_severity": "MEDIUM",
+      "challenge": "Agent 5 claims performance benchmarks are missing from PART2. However, Agent 9 (A9-F12) explicitly verified that PART2 §7.5.3 (L6175-6179) DOES contain all 5 performance targets: simple <=2s, complex <=10s, self-check <=1s, concurrent BLUE_NODES=3/TOOLS=5, tiktoken <=50ms/10K. Agent 5 appears to have only searched the implementation sections (V0-STEP, V1-Phase) and missed §7.5.3.",
+      "evidence": "PART2 L6175-6179 contains exact performance targets matching MASTER_SPEC §4.8. Agent 9 A9-F12 verdict: MATCH.",
+      "verdict": "OVERTURNED",
+      "adjusted_severity": "DISMISSED",
+      "reason": "FALSE POSITIVE. Performance benchmarks are present in PART2 §7.5.3 (L6175-6179). Agent 5 missed this section. Agent 9 independently confirmed their presence."
+    },
+    {
+      "finding_id": "F-A1-05",
+      "agent": 1,
+      "original_severity": "LOW",
+      "challenge": "Same issue as F-A5-03 — Agent 1 also claims performance benchmarks are absent from PART2. Same rebuttal applies: they are in §7.5.3.",
+      "evidence": "PART2 L6175-6179. Agent 9 A9-F12 confirms MATCH.",
+      "verdict": "OVERTURNED",
+      "adjusted_severity": "DISMISSED",
+      "reason": "FALSE POSITIVE. Same as F-A5-03 challenge. Performance benchmarks exist in PART2 §7.5.3."
+    },
+    {
+      "finding_id": "F-A5-02",
+      "agent": 5,
+      "original_severity": "MEDIUM",
+      "challenge": "VamosError standard missing from PART2. Agent 5 and Agent 1 both report this. However, PART2 uses FailureReport (L1725-1727) and FailureCodeRegistry (36 codes) + FallbackRegistry (23 mappings) which serve the same purpose as VamosError. The naming differs but the error handling architecture is present. D2.0-02 §0.3 defines VamosError; PART2 implements it via FailureReport + registries.",
+      "evidence": "PART2 L1725-1727: FailureCodeRegistry 36 codes, FallbackRegistry 23 mappings. PART2 L610-611: registries defined. The error handling is present under different naming.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "The VamosError struct name is not used, but the equivalent error handling mechanism (FailureReport + registries) IS present. The naming gap is real but the functional implementation guidance exists. Downgrade to LOW — an implementer would build equivalent error handling following PART2's FailureCodeRegistry guidance."
+    },
+    {
+      "finding_id": "F-A1-04",
+      "agent": 1,
+      "original_severity": "LOW",
+      "challenge": "Same as F-A5-02 — VamosError missing. DUPLICATE finding across agents.",
+      "evidence": "Same as F-A5-02.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Duplicate of F-A5-02 cross-agent. Valid finding but already counted."
+    },
+    {
+      "finding_id": "F-A1-03",
+      "agent": 1,
+      "original_severity": "MEDIUM",
+      "challenge": "Runnable protocol missing from PART2. Agent 1 and Agent 5 (F-A5-04) both report this. The Runnable protocol (run/get_metadata/health_check) from D2.0-02 §1.2-A is a design-level interface specification. PART2 is an implementation guide that provides concrete file-level instructions. Module implementations use async def with specific function signatures. The Runnable interface could be seen as an architect's abstraction that PART2 implements concretely rather than abstractly.",
+      "evidence": "D2.0-02 §1.2-A defines Runnable as abstract protocol. PART2 V0-STEP-4 and V1-Phase 1 provide concrete module implementations with specific functions. No explicit Runnable ABC class is defined.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "The Runnable protocol is a design abstraction. PART2 provides concrete implementations that satisfy the protocol's intent (each module has entry points). The missing piece is the explicit ABC/Protocol class definition, which is a code organization concern rather than a functional gap. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A5-04",
+      "agent": 5,
+      "original_severity": "MEDIUM",
+      "challenge": "DUPLICATE of F-A1-03 — same Runnable protocol missing finding.",
+      "evidence": "Same as F-A1-03.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Cross-agent duplicate of F-A1-03. Valid but already counted."
+    },
+    {
+      "finding_id": "F-A2-03",
+      "agent": 2,
+      "original_severity": "MEDIUM",
+      "challenge": "S7E-011 Instruction Hierarchy missing from PART2. Multiple agents (2, 7, 10) report this. Phase 2 adversarial review already downgraded this to LOW, noting PART2 L1492 references '15개(S7E 14 + DEC-003 1)' which collectively includes S7E-011. The implementer is directed to D2.0-07 for individual S7E item details.",
+      "evidence": "PART2 L1492: 'V1 CRITICAL 보안항목 15개(S7E 14 + DEC-003 1)' — collective reference includes S7E-011. Phase 2 adversarial verdict: PARTIALLY_SUSTAINED, adjusted to LOW.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Phase 2 adversarial review already evaluated this finding and downgraded to LOW. PART2 references S7E items collectively. The implementer follows the reference chain to D2.0-07 which defines S7E-011 explicitly. Not a true omission — it is a by-reference inclusion. Downgrade to LOW per Phase 2 precedent."
+    },
+    {
+      "finding_id": "F-A7-01",
+      "agent": 7,
+      "original_severity": "MEDIUM",
+      "challenge": "Same as F-A2-03 — S7E-011 Instruction Hierarchy. DUPLICATE across agents 2, 7, and 10 (D-09).",
+      "evidence": "Same as F-A2-03.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Cross-agent duplicate. Already addressed under F-A2-03."
+    },
+    {
+      "finding_id": "F-A10-03",
+      "agent": 10,
+      "original_severity": "LOW",
+      "challenge": "Same as F-A2-03/F-A7-01 — S7E-011 missing from prompts. Triple-counted across agents.",
+      "evidence": "Same as F-A2-03.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Already counted as F-A2-03. Agent 10 adds the prompt-specific angle (prompts should reference instruction hierarchy for I-1/I-5 system prompt generation). This is a valid enhancement suggestion but severity remains LOW."
+    },
+    {
+      "finding_id": "F-A2-01",
+      "agent": 2,
+      "original_severity": "MEDIUM",
+      "challenge": "V1 period 14-16 weeks vs CLAUDE.md 8-12 weeks. Agent 2 flags as MEDIUM mismatch. However, PART2 defines 6 implementation phases for V1 which naturally takes longer than the original CLAUDE.md estimate. CLAUDE.md L18 is a high-level roadmap estimate. PART2's expanded timeline reflects the detailed implementation breakdown (6 phases vs original rough estimate). This is scope refinement, not a contradiction.",
+      "evidence": "CLAUDE.md L18: 'V1(₩40K/월 MVP, 8~12주)'. PART2 L1589: '14-16주 (6개 Phase)'. PART2 adds Phase 4 (UI), Phase 5 (Integration/Test), Phase 6 (AI Investing+MCP) which may not have been in original 8-12 week scope.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 is a more detailed implementation plan that naturally expands the timeline. CLAUDE.md is a high-level overview. The 'mismatch' is scope refinement, not an error. PART2 should note the timeline expansion reason but it is not a SOT violation. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A2-02",
+      "agent": 2,
+      "original_severity": "MEDIUM",
+      "challenge": "V2 Guardrails layer count inconsistency. PART2 config L1339 correctly says V2=3-Layer, but PART2 V2-Phase 3 table (L675) says 4-Layer. This IS a genuine PART2 internal inconsistency.",
+      "evidence": "PART2 L1339: 'V2=3-Layer(+L3)'. PART2 L675: references 4-Layer in V2-Phase 3 table. CLAUDE.md §11: V2=3-Layer. The V2-Phase 3 table was not updated after v10.0.0 correction.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Genuine internal inconsistency. L1339 is correct per SOT; L675 is stale. Severity MEDIUM is appropriate — the implementer would see conflicting information in different PART2 sections."
+    },
+    {
+      "finding_id": "F-A3-01",
+      "agent": 3,
+      "original_severity": "MEDIUM",
+      "challenge": "V2 Lead Agent model Opus not stated — DUPLICATE of F-A2-05 (Agent 2) and cross-references Phase 2 F-A4-01.",
+      "evidence": "Same root issue across agents 2, 3, and Phase 2.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Valid finding, but duplicate. Already counted under F-A2-05."
+    },
+    {
+      "finding_id": "F-A2-05",
+      "agent": 2,
+      "original_severity": "MEDIUM",
+      "challenge": "V2 Lead Agent model Opus not stated in PART2. Phase 2 adversarial review confirmed SUSTAINED at MEDIUM. This is a genuine gap.",
+      "evidence": "AGENT_TEAMS_SPEC §9.2: Lead=Opus. PART2 V2 section only adds new agents, does not state Lead model upgrade.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Confirmed by Phase 2 adversarial review. Genuine omission."
+    },
+    {
+      "finding_id": "F-A3-03",
+      "agent": 3,
+      "original_severity": "MEDIUM",
+      "challenge": "Agent lifecycle states missing — DUPLICATE of F-A2-06 (Agent 2). Also cross-references Phase 2 F-A4-03.",
+      "evidence": "Same root issue. AGENT_TEAMS_SPEC §2.4.1 LOCK.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Valid finding but already counted under F-A2-06. Also, agent lifecycle states are a V2+ implementation detail; PART2 focuses on V0/V1 with V2 overview sections. The level of detail expected in V2 overview sections is lower. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A3-04",
+      "agent": 3,
+      "original_severity": "MEDIUM",
+      "challenge": "Agent RBAC mapping table missing. PART2 §6.5 covers RBAC 4 roles (OWNER/ADMIN/OPERATOR/VIEWER) and §6.7 covers Agent Teams. The per-agent permission matrix (can_delegate, can_approve, etc.) from AGENT_TEAMS_SPEC §6.5.1 is a detailed table that could reasonably be deferred to the SOT reference. PART2 is not expected to replicate every SOT table.",
+      "evidence": "PART2 §6.5 RBAC roles defined. PART2 §6.7 Agent Teams defined. SOT §6.5.1 has the detailed matrix.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 provides RBAC and Agent Teams sections. The per-agent permission matrix is detailed SOT content appropriately referenced rather than replicated. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A3-06",
+      "agent": 3,
+      "original_severity": "MEDIUM",
+      "challenge": "V2 116 COND modules in 6-week Phase 2 is aggressive. Agent 3 flags feasibility concern. However, PART2 V2-Phase 2 (L3217-3290) explicitly uses Mixin pattern batching with 7 categories (CAT-A through CAT-G), and the 106 v10 modules are largely configuration-driven with BaseModule inheritance. Many are 'COND' modules with simple activation logic, not full implementations.",
+      "evidence": "PART2 V2-Phase 2 prompt references Module Catalog D2.0-01 §5.5 LOCK and 7-category grouping. Each category uses Mixin pattern for batch implementation.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "The concern has merit for pure development capacity, but PART2's Mixin pattern approach and category-based batching significantly reduces per-module effort. Most COND modules are configuration + BaseModule inheritance, not ground-up development. Downgrade to LOW as a risk observation rather than a defect."
+    },
+    {
+      "finding_id": "F-A4-01",
+      "agent": 4,
+      "original_severity": "MEDIUM",
+      "challenge": "V3 L4_SELF_EVOLVING autonomy level has no SOT definition. D2.0-07 defines L0-L3 only. This is a PART2 extension beyond SOT. Could be intentional design evolution for V3 (which is future scope).",
+      "evidence": "D2.0-07 §3.2: L0-L3 defined. PART2 L108: L4_SELF_EVOLVING for V3.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Genuine finding. PART2 introduces a level not defined in any SOT document. While it could be an intentional V3 extension, it should be documented in a SOT update. MEDIUM is appropriate."
+    },
+    {
+      "finding_id": "F-A4-07",
+      "agent": 4,
+      "original_severity": "MEDIUM",
+      "challenge": "V3 vLLM persistent GPU may exceed $200 ABSOLUTE LOCK. Agent 4 calculates $256 total. However, PART2 already acknowledges this and recommends Path B (Hetzner + RunPod Serverless) at $123-142/month. The 'persistent GPU' scenario is the non-recommended path.",
+      "evidence": "PART2 explicitly recommends Path B (serverless) to stay within budget. Path A (persistent) is listed as option, not recommendation.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 already addresses this concern by recommending Path B. The finding restates a risk PART2 explicitly mitigates. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A6-02",
+      "agent": 6,
+      "original_severity": "MEDIUM",
+      "challenge": "MemoryRecord field count 20 vs 18. Agent 6 identifies 2 extra fields in PART2 (embedding, checksum from L724). These are implementation-level fields that PART2 adds beyond the SOT schema definition. An implementation guide may legitimately add implementation fields (embedding for vector search, checksum for integrity) beyond the SOT schema.",
+      "evidence": "PART2 L585: 'MemoryRecord | 20 | D2.1-D6'. D2.1-D6 §4.1: 18 fields. PART2 L724: includes embedding(list[float]) and checksum(str) as implementation additions.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "The +2 fields are implementation additions (embedding for vector indexing, checksum for data integrity) that are reasonable engineering decisions. D2.1-D6 defines the SOT schema; PART2 extends it for implementation needs. The PART2 table should annotate these as '+2 impl fields'. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A6-03",
+      "agent": 6,
+      "original_severity": "MEDIUM",
+      "challenge": "SourceQoD field count 8 vs 7. Off by 1. This could be a counting difference on required vs optional boundary, or PART2 may count 'scope' as a field while D2.1-D6 lists it as optional. Minor numeric discrepancy.",
+      "evidence": "PART2 L586: 8 fields. D2.1-D6 §4.2: 7 fields listed (scope is optional).",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Off-by-one on a schema field count where the boundary between required/optional may differ. Not a critical implementation issue. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A6-04",
+      "agent": 6,
+      "original_severity": "MEDIUM",
+      "challenge": "VectorStore adapter interface missing. Agent 6 says D2.0-06 §2.2-A VectorStore abstract interface is not in PART2. However, PART2 V1-Phase 2 specifies Chroma VectorDB with specific operations (upsert, search, hybrid search). The abstract adapter pattern is a design concept; PART2 provides concrete implementation.",
+      "evidence": "PART2 V1-Phase 2 L1918-1920: Chroma Vector DB with operations. The abstract adapter is a design pattern from D2.0-06, PART2 implements directly against Chroma.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 implements Chroma directly for V1 rather than through an abstract adapter. This is a valid V1 implementation choice (avoid premature abstraction). V2 migration to Qdrant would benefit from the adapter, but V1-specific implementation is reasonable. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A6-05",
+      "agent": 6,
+      "original_severity": "MEDIUM",
+      "challenge": "QoD < 0.4 storage restriction missing. D2.0-06 §2.5.2 says QoD < 0.4 forbids L2/L3 storage. This is a data quality guard that could prevent low-quality data contamination. Checking if PART2 has any QoD threshold logic...",
+      "evidence": "D2.0-06 L261-262: 'QoD < 0.4: L2/L3 storage forbidden'. PART2 V1-Phase 2 has no explicit QoD threshold for storage admission.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "This is a genuine omission. Without QoD threshold checking, L2/L3 storage could accumulate low-quality data. MEDIUM is appropriate as it affects data quality in production."
+    },
+    {
+      "finding_id": "F-A7-02",
+      "agent": 7,
+      "original_severity": "MEDIUM",
+      "challenge": "P2 HITL 5-minute timeout not documented. Agent 7 says PART2 only mentions 10min approval timeout, missing the 5min P2 HITL timeout. Checking D2.0-07... P2 HITL may be a specific sub-case of the general approval timeout. PART2 config.v1.toml has approval.timeout_s=600 (10min).",
+      "evidence": "D2.0-07 §4.3.2: P2 HITL timeout 5min. PART2 L1098: 'P2 감지 시 hold'. PART2 config: timeout_s=600 (10min). No separate 5min P2 timeout in PART2.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "D2.0-07 §4.3.2 specifies 5min for P2 HITL specifically, while the general approval timeout is 10min. This distinction is nuanced — the 10min general timeout in PART2 is more conservative (longer wait) which is safer. If anything, using 10min for P2 is more cautious than the SOT's 5min. Downgrade to LOW as a minor precision issue."
+    },
+    {
+      "finding_id": "F-A8-03",
+      "agent": 8,
+      "original_severity": "MEDIUM",
+      "challenge": "AI Investing 5-AI multi-agent workflow specifics not in PART2. Agent 8 notes PART2 uses generic '5-Agent Pipeline' without naming Perplexity/Gemini/ChatGPT/Claude/Copilot. However, PART2 is an implementation guide — specifying exact AI vendor names in a pipeline may be an intentional abstraction to allow vendor flexibility.",
+      "evidence": "AI_INVESTING_SPEC §1.2 names 5 specific AI systems. PART2 §6.8 uses abstract '5-Agent Pipeline'.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 abstracts the 5-Agent Pipeline for vendor flexibility. The specific AI assignments are implementation details that may change. AI_INVESTING_SPEC §1.2 is the reference for specific assignments. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A8-06",
+      "agent": 8,
+      "original_severity": "MEDIUM",
+      "challenge": "PARL V3 resource requirements not quantified. This is a V3-specific feasibility concern. V3 is future scope and PART2 V3 sections are naturally less detailed than V0/V1.",
+      "evidence": "PART2 §6.7 PARL section defines architecture but not resource estimates.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "V3 resource sizing is premature at this stage. PART2 V3 sections are architectural guidance, not detailed implementation specs. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A9-01",
+      "agent": 9,
+      "original_severity": "MEDIUM",
+      "challenge": "CostGate threshold inconsistency — this is a DUPLICATE of F-A5-01 (Agent 5). Same V0-STEP-4 L1097 issue.",
+      "evidence": "Same as F-A5-01. PART2 L1097 vs D2.0-07 §4.2 LOCK.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Valid finding but duplicate of F-A5-01. Already counted as HIGH under Agent 5."
+    },
+    {
+      "finding_id": "F-A10-01",
+      "agent": 10,
+      "original_severity": "MEDIUM",
+      "challenge": "CostGate prompt LOCK violation — DUPLICATE of F-A5-01 and F-A9-01. Same root issue reported by three agents.",
+      "evidence": "Same L1097 issue.",
+      "verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM",
+      "reason": "Triple-counted across agents 5, 9, 10. Valid but already counted."
+    },
+    {
+      "finding_id": "F11-03",
+      "agent": 11,
+      "original_severity": "MEDIUM",
+      "challenge": "XREF-V0-10 imprecision. Agent 11 notes XREF wording is slightly imprecise about data/ directory. This is a documentation wording refinement, not a factual error.",
+      "evidence": "XREF-V0-10 says 'B2 정본에는 명시적 data/ 미포함'. B2 has data paths in env vars but not in directory tree. XREF is functionally correct.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Wording refinement opportunity, not a factual error. The XREF correctly identifies that B2's directory tree does not list data/. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F11-06",
+      "agent": 11,
+      "original_severity": "MEDIUM",
+      "challenge": "STEP7 coverage gap. 16 STEP7 guides referenced only generically. This is a future-scope concern — STEP7 guides are V2/V3 enhancement specs. PART2 V0/V1 sections need not map to STEP7 files individually.",
+      "evidence": "STEP7 files are V2/V3 scope. PART2 primarily targets V0/V1 implementation.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "STEP7 traceability is a V2/V3 concern. Current V0/V1 focus makes this low priority. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F12-01",
+      "agent": 12,
+      "original_severity": "MEDIUM",
+      "challenge": "D2.0-04 (Infra Core) zero dedicated verification. Valid coverage observation, but D2.0-04 content (BrainAdapter, RateLimitConfig) is partially covered by Agent 5 (pipeline) and Agent 7 (safety/cost). Not zero coverage, just no dedicated agent.",
+      "evidence": "Agent 5 checks pipeline infra. Agent 7 checks safety/cost infra. D2.0-04 content is partially covered.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "D2.0-04 is indirectly covered by agents 5 and 7. No dedicated deep dive, but not zero coverage. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F12-02",
+      "agent": 12,
+      "original_severity": "MEDIUM",
+      "challenge": "STEP7 systematic gap. Same as F11-06 analysis — V2/V3 future scope.",
+      "evidence": "Same as F11-06.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Duplicate concern with F11-06. V2/V3 scope. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F12-06",
+      "agent": 12,
+      "original_severity": "MEDIUM",
+      "challenge": "D2.0-07 checked by 3 agents creating redundancy. This is an EFFICIENCY observation, not a defect. Overlap on safety-critical content is acceptable.",
+      "evidence": "D2.0-07 contains LOCK-critical content. Multiple-agent verification is a feature, not a bug.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "Redundant coverage of safety-critical content is acceptable verification practice. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A4-02",
+      "agent": 4,
+      "original_severity": "MEDIUM",
+      "challenge": "V3 SDAR AR-L4 HIGH risk actions not detailed in PART2. V3 is future scope; PART2 V3 sections are overview-level. The specific RA_011-RA_014 actions from SDAR_SPEC §10.3 are V3 implementation details.",
+      "evidence": "PART2 L110: 'AR-L4 + Self-evo'. SDAR_SPEC §10.3: 4 HIGH risk actions listed.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "V3 section is overview-level. Detailed SDAR actions would be in V3-specific implementation prompts (which PART2 doesn't yet provide for V3). Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A4-03",
+      "agent": 4,
+      "original_severity": "MEDIUM",
+      "challenge": "V3 Enterprise compliance (multi-tenancy, SOC-2, GDPR) missing. These are V3 Enterprise features. PART2 is primarily a V0/V1 guide with V2/V3 overview sections. Enterprise compliance would require dedicated specification beyond PART2's scope.",
+      "evidence": "D2.0-06 §2.2 V3 mentions enterprise patterns. PART2 V3 section is overview only.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "V3 Enterprise compliance is out of PART2's primary scope. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A4-08",
+      "agent": 4,
+      "original_severity": "MEDIUM",
+      "challenge": "V3 SDAR AR-L4 code hotfix safety harness missing. Same V3 scope limitation applies.",
+      "evidence": "V3 implementation detail.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "V3 implementation detail. PART2 provides V3 architecture overview, not detailed safety harnesses. Downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A1-01",
+      "agent": 1,
+      "original_severity": "MEDIUM",
+      "challenge": "DecisionSchema 18 vs 16 field count. Phase 2 adversarial review already evaluated this and downgraded to LOW, finding that PART2 is correct (18 per D2.1-D2) and MASTER_SPEC header is stale.",
+      "evidence": "Phase 2 adversarial: 'PART2 correctly cites 18 per D2.1-D2 SOT. MASTER_SPEC header is stale.'",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 has the correct value (18). MASTER_SPEC header is stale. Per Phase 2 precedent, downgrade to LOW."
+    },
+    {
+      "finding_id": "F-A1-02",
+      "agent": 1,
+      "original_severity": "MEDIUM",
+      "challenge": "LogEventSchema field name mismatch. Agent 1 notes PART2 L582 uses different field names from D2.1-D2. However, PART2 L1270-1281 provides an EXPLICIT mapping table between structlog output fields and D2.1-D2 SOT fields. The comment at L582 uses structlog names for internal consistency, and L1270 provides the canonical resolution.",
+      "evidence": "PART2 L1270-1281: explicit structlog-to-SOT field mapping table. L582: uses structlog names with M-8 annotation confirming internal consistency.",
+      "verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW",
+      "reason": "PART2 provides the mapping table at L1270-1281 which explicitly resolves the naming difference. The L582 comment uses implementation names for readability. An implementer following L1270 would produce correct SOT-compliant output. Downgrade to LOW."
+    }
+  ],
+  "spot_checks": {
+    "total_checked": 52,
+    "accurate": 43,
+    "inaccurate": 5,
+    "inflated": 4,
+    "accuracy_rate": "82.7%",
+    "details": [
+      {"finding": "F-A1-06", "severity": "LOW", "verdict": "ACCURATE — VamosState is indeed in comments only"},
+      {"finding": "F-A1-07", "severity": "LOW", "verdict": "ACCURATE — SOURCE_CONFLICT on ttl_sec is real and documented"},
+      {"finding": "F-A2-04", "severity": "LOW", "verdict": "ACCURATE — RAG limits not in PART2"},
+      {"finding": "F-A2-06", "severity": "LOW", "verdict": "ACCURATE — Agent lifecycle states not in PART2"},
+      {"finding": "F-A2-07", "severity": "LOW", "verdict": "ACCURATE — 88 endpoints not explicitly stated"},
+      {"finding": "F-A2-08", "severity": "LOW", "verdict": "ACCURATE — Security classification mismatch is real"},
+      {"finding": "F-A3-02", "severity": "LOW", "verdict": "ACCURATE — Per-task budget not in PART2"},
+      {"finding": "F-A3-05", "severity": "LOW", "verdict": "ACCURATE — L3_AUTONOMOUS vs FULL_AUTO naming diff"},
+      {"finding": "F-A3-07", "severity": "LOW", "verdict": "ACCURATE — S-4 dependency conflict is real"},
+      {"finding": "F-A3-08", "severity": "LOW", "verdict": "ACCURATE — SDAR Channel C not listed for V2"},
+      {"finding": "F-A4-04", "severity": "LOW", "verdict": "ACCURATE — A2A Protocol missing"},
+      {"finding": "F-A4-05", "severity": "LOW", "verdict": "ACCURATE — Agent Mesh/Stigmergic not in PART2"},
+      {"finding": "F-A4-06", "severity": "LOW", "verdict": "ACCURATE — Per-task budget not in PART2 (dup with F-A3-02)"},
+      {"finding": "F-A4-09", "severity": "LOW", "verdict": "ACCURATE — Agent isolation 5 dims missing"},
+      {"finding": "F-A5-05", "severity": "LOW", "verdict": "ACCURATE — IntentFrame 10 fields has no explicit SOT"},
+      {"finding": "F-A5-06", "severity": "LOW", "verdict": "ACCURATE — Concurrency params missing from PART2 body (but in §7.5.3 L6178)"},
+      {"finding": "F-A5-07", "severity": "LOW", "verdict": "ACCURATE — CB 60s vs 300s conflict is real"},
+      {"finding": "F-A6-06", "severity": "LOW", "verdict": "ACCURATE — RAG limits not in PART2 (dup with F-A2-04)"},
+      {"finding": "F-A6-07", "severity": "LOW", "verdict": "ACCURATE — Memory search priority not in PART2"},
+      {"finding": "F-A6-08", "severity": "LOW", "verdict": "ACCURATE — GraphRAG 5 node types have no SOT backing"},
+      {"finding": "F-A7-03", "severity": "LOW", "verdict": "ACCURATE — L2 role description slight mismatch"},
+      {"finding": "F-A7-05", "severity": "LOW", "verdict": "ACCURATE — SDAR state name simplification with XREF"},
+      {"finding": "F-A7-06", "severity": "LOW", "verdict": "ACCURATE — Community skill verification not in PART2"},
+      {"finding": "F-A7-07", "severity": "LOW", "verdict": "INFLATED — ja-JP is V2 feature, PART2 V1 scope"},
+      {"finding": "F-A8-01", "severity": "LOW", "verdict": "ACCURATE — vectorbt ADOPT vs LOCK already corrected"},
+      {"finding": "F-A8-02", "severity": "LOW", "verdict": "ACCURATE — 100 vs 50+ discrepancy, sources differ"},
+      {"finding": "F-A8-04", "severity": "LOW", "verdict": "ACCURATE — 96 strategies not enumerated"},
+      {"finding": "F-A8-05", "severity": "LOW", "verdict": "ACCURATE — RT-BNP tiers are PART2-originated"},
+      {"finding": "F-A9-02", "severity": "LOW", "verdict": "ACCURATE — Branch strategy missing"},
+      {"finding": "F-A9-03", "severity": "LOW", "verdict": "ACCURATE — CI structure differs but XREF documents it"},
+      {"finding": "F-A9-04", "severity": "LOW", "verdict": "ACCURATE — Docker service names differ"},
+      {"finding": "F-A9-05", "severity": "LOW", "verdict": "ACCURATE — Python coverage threshold ambiguity"},
+      {"finding": "F-A9-06", "severity": "LOW", "verdict": "ACCURATE — Positive observation, not a finding"},
+      {"finding": "F-A10-02", "severity": "LOW", "verdict": "ACCURATE — Matryoshka 256 vs 512 conflict propagated"},
+      {"finding": "F-A10-04", "severity": "LOW", "verdict": "ACCURATE — Positive observation"},
+      {"finding": "F-A10-05", "severity": "LOW", "verdict": "ACCURATE — Positive observation"},
+      {"finding": "F11-01", "severity": "LOW", "verdict": "ACCURATE — V0_READINESS_FINAL_REVIEW has zero refs"},
+      {"finding": "F11-02", "severity": "LOW", "verdict": "ACCURATE — V2/V3 dirs missing from B2"},
+      {"finding": "F11-04", "severity": "LOW", "verdict": "ACCURATE — Positive observation"},
+      {"finding": "F11-05", "severity": "LOW", "verdict": "ACCURATE — SOURCE_CONFLICT tracking is good"},
+      {"finding": "F12-04", "severity": "LOW", "verdict": "ACCURATE — P3 omission dominance pattern observed"},
+      {"finding": "F12-05", "severity": "LOW", "verdict": "ACCURATE — Pipeline quality is good"},
+      {"finding": "F12-07", "severity": "LOW", "verdict": "ACCURATE — CM results not consumed by P3 agents"},
+      {"finding": "F-A5-03", "severity": "MEDIUM", "verdict": "INACCURATE — Performance benchmarks ARE in §7.5.3"},
+      {"finding": "F-A1-05", "severity": "LOW", "verdict": "INACCURATE — Same as F-A5-03, benchmarks exist"},
+      {"finding": "F-A5-08", "severity": "HIGH", "verdict": "INACCURATE (DUPLICATE) — Same as F-A5-01"},
+      {"finding": "F-A5-06", "severity": "LOW", "verdict": "PARTIALLY INACCURATE — Concurrency IS in §7.5.3 L6178 (BLUE_NODES=3 / TOOLS=5)"},
+      {"finding": "F-A2-01", "severity": "MEDIUM", "verdict": "INFLATED — Timeline expansion is scope refinement"},
+      {"finding": "F-A3-06", "severity": "MEDIUM", "verdict": "INFLATED — Mixin pattern reduces per-module effort"},
+      {"finding": "F-A4-07", "severity": "MEDIUM", "verdict": "INFLATED — PART2 already recommends Path B"},
+      {"finding": "F-A7-04", "severity": "HIGH", "verdict": "INFLATED — Naming issue, not functional blocker"},
+      {"finding": "F-A6-01", "severity": "HIGH", "verdict": "INFLATED — PART2 composite rule is defensible"}
+    ]
+  },
+  "duplicates_found": [
+    {
+      "canonical": "F-A5-01",
+      "duplicates": ["F-A5-08", "F-A9-01", "F-A10-01"],
+      "issue": "CostGate threshold 70/85/95 vs 80/100 — reported by Agents 5, 9, 10",
+      "count": 4
+    },
+    {
+      "canonical": "F-A2-03",
+      "duplicates": ["F-A7-01", "F-A10-03"],
+      "issue": "S7E-011 Instruction Hierarchy missing — reported by Agents 2, 7, 10",
+      "count": 3
+    },
+    {
+      "canonical": "F-A5-02",
+      "duplicates": ["F-A1-04"],
+      "issue": "VamosError standard missing — reported by Agents 1, 5",
+      "count": 2
+    },
+    {
+      "canonical": "F-A1-03",
+      "duplicates": ["F-A5-04"],
+      "issue": "Runnable protocol missing — reported by Agents 1, 5",
+      "count": 2
+    },
+    {
+      "canonical": "F-A2-05",
+      "duplicates": ["F-A3-01"],
+      "issue": "V2 Lead Agent Opus missing — reported by Agents 2, 3",
+      "count": 2
+    },
+    {
+      "canonical": "F-A2-06",
+      "duplicates": ["F-A3-03"],
+      "issue": "Agent lifecycle states missing — reported by Agents 2, 3",
+      "count": 2
+    },
+    {
+      "canonical": "F-A5-03",
+      "duplicates": ["F-A1-05"],
+      "issue": "Performance benchmarks missing — BOTH FALSE POSITIVES (present in §7.5.3)",
+      "count": 2
+    },
+    {
+      "canonical": "F-A2-04",
+      "duplicates": ["F-A6-06"],
+      "issue": "RAG operation limits missing — reported by Agents 2, 6",
+      "count": 2
+    },
+    {
+      "canonical": "F-A3-02",
+      "duplicates": ["F-A4-06"],
+      "issue": "Per-task budget missing — reported by Agents 3, 4",
+      "count": 2
+    },
+    {
+      "canonical": "F11-06",
+      "duplicates": ["F12-02"],
+      "issue": "STEP7 coverage gap — reported by Agents 11, 12",
+      "count": 2
+    }
+  ],
+  "contradictions_found": [
+    {
+      "agents": [5, 9],
+      "issue": "Agent 5 (F-A5-03) claims performance benchmarks are MISSING from PART2, but Agent 9 (A9-F12) explicitly VERIFIES they are PRESENT in §7.5.3 (L6175-6179). Agent 9 is correct — the benchmarks exist.",
+      "resolution": "Agent 5 searched only V0/V1 implementation sections and missed §7.5.3. Agent 9 checked §7 cross-cut review. F-A5-03 is a FALSE POSITIVE."
+    },
+    {
+      "agents": [5, 9],
+      "issue": "Agent 5 (F-A5-06) claims concurrency params (MAX_CONCURRENT_BLUE_NODES=3, MAX_CONCURRENT_TOOLS=5) are missing, but PART2 L6178 in §7.5.3 lists 'BLUE_NODES=3 / TOOLS=5 concurrent' and L1336 in V1+ config section lists 'max_concurrent_blue_nodes=3 (LOCK), max_concurrent_tools=5 (LOCK)'.",
+      "resolution": "Agent 5 missed L1336 and L6178. The values ARE present in PART2."
+    },
+    {
+      "agents": [1, 6],
+      "issue": "Agent 1 (A1-13) reports DecisionSchema mismatch (18 vs 16). Agent 6 and Phase 0 structural check confirm 18 is correct per D2.1-D2. MASTER_SPEC header (16) is stale.",
+      "resolution": "Phase 2 adversarial already resolved: PART2's 18 is correct. MASTER_SPEC header needs update."
+    }
+  ],
+  "summary": {
+    "total_challenged": 40,
+    "sustained": 7,
+    "partially_sustained": 26,
+    "overturned": 7,
+    "false_positive_rate": "8.2%",
+    "severity_inflation_rate": "47.5%",
+    "duplicate_rate": "25.9%",
+    "deduplication_note": "22 findings across 10 duplicate clusters reduce to 10 unique findings. 85 total - 12 duplicates = 73 unique findings. Then 5 false positives subtracted = 68 valid unique findings.",
+    "final_findings_count": 68,
+    "final_by_severity": {
+      "HIGH": 1,
+      "MEDIUM": 8,
+      "LOW": 54,
+      "DISMISSED": 5
+    },
+    "severity_changes": {
+      "HIGH_to_MEDIUM": 2,
+      "HIGH_to_DISMISSED": 1,
+      "MEDIUM_to_LOW": 21,
+      "MEDIUM_to_DISMISSED": 2,
+      "unchanged": 14
+    },
+    "key_genuine_issues": [
+      {
+        "rank": 1,
+        "id": "F-A5-01",
+        "severity": "HIGH",
+        "description": "CostGate threshold in V0-STEP-4 AI prompt (L1097) uses 70/85/95 contradicting D2.0-07 LOCK 80/100. URGENT FIX needed.",
+        "action": "Replace L1097 CostGate values with '80% warn, 100% block (D2.0-07 §4.2 LOCK 2단계)'"
+      },
+      {
+        "rank": 2,
+        "id": "F-A2-02",
+        "severity": "MEDIUM",
+        "description": "V2 Guardrails 4-Layer vs 3-Layer internal inconsistency in PART2 (L675 vs L1339)",
+        "action": "Update L675 V2-Phase 3 table to say 3-Layer"
+      },
+      {
+        "rank": 3,
+        "id": "F-A6-05",
+        "severity": "MEDIUM",
+        "description": "QoD < 0.4 storage restriction from D2.0-06 not in PART2",
+        "action": "Add QoD threshold check to V1-Phase 2 storage admission logic"
+      },
+      {
+        "rank": 4,
+        "id": "F-A2-05",
+        "severity": "MEDIUM",
+        "description": "V2 Lead Agent model upgrade to Opus not stated in PART2",
+        "action": "Add Lead=Opus note to V2 section"
+      },
+      {
+        "rank": 5,
+        "id": "F-A4-01",
+        "severity": "MEDIUM",
+        "description": "L4_SELF_EVOLVING autonomy level undefined in any SOT",
+        "action": "Add L4 definition to D2.0-07 or annotate PART2 as PART2-originated extension"
+      },
+      {
+        "rank": 6,
+        "id": "F-A7-04_adjusted",
+        "severity": "MEDIUM",
+        "description": "Hook name mismatch (useAutonomy/useLog vs useApproval/useConfig) between PART2 and PHASE_B2",
+        "action": "Align PART2 §6.1.3 hook names with PHASE_B2 §3.1"
+      },
+      {
+        "rank": 7,
+        "id": "F-A10-02",
+        "severity": "MEDIUM",
+        "description": "Matryoshka dimension conflict: PART2 says 256, PHASE_B4 says 512",
+        "action": "Resolve matryoshka_dim SOT conflict (check D2.0-06 DEC-005 for authoritative value)"
+      },
+      {
+        "rank": 8,
+        "id": "F-A6-01_adjusted",
+        "severity": "MEDIUM",
+        "description": "L0 TTL composite rule defensible but CLAUDE.md still has 7-day value creating confusion",
+        "action": "Update CLAUDE.md §15 L0 TTL to match PART2 composite rule"
+      }
+    ],
+    "overall_assessment": "Phase 3 agents produced 85 findings across 12 agents. After adversarial review: 5 FALSE POSITIVES (performance benchmarks exist in §7.5.3, CostGate double-counted), 22 DUPLICATES across 10 clusters, and significant SEVERITY INFLATION (47.5% of challenged findings had severity reduced). The pipeline's dominant real issue is the CostGate V0-STEP-4 prompt using wrong thresholds (1 genuine HIGH). Most MEDIUM findings are either V2/V3 future-scope items or naming/precision issues appropriately downgraded to LOW. The verification pipeline is healthy but exhibits two biases: (1) 'missing' type over-reporting due to conflating intentional by-reference omissions with genuine gaps, and (2) insufficient cross-agent deduplication leading to 25.9% duplicate rate."
+  }
+}

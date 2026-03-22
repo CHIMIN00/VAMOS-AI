@@ -1,0 +1,87 @@
+PARTIAL AUDIT RESULTS
+=====================
+Total PARTIAL samples: 15
+Audit Date: 2026-03-15
+Auditor: Phase 1.5 Judgment Audit
+
+=====================================================================
+UPGRADED TO MATCHED: 7/15
+=====================================================================
+
+# | feature_id | feature_name | original_section | s6_section | evidence | reason
+--+------------+--------------+-----------------+-----------+----------+-------
+1 | v12_C03_044 | Financial Data Integration | §6.8 L4774 | §6.8 L4774 | "데이터 소스 | yfinance + Alpha Vantage" + L4787 "리스크 엔진 | 자체 구현 (scipy.stats 기반)" + full AI Investing tech stack (14 items) + RT-BNP news→data pipeline + Event-Based strategy triggers | §6.8 provides comprehensive financial data integration details: data sources (yfinance+Alpha Vantage), analysis framework (pandas+numpy+scipy), ML pipeline (scikit-learn+XGBoost), sentiment analysis (FinBERT), and RT-BNP real-time news pipeline. This constitutes full implementation guidance for Financial Data Integration.
+
+2 | v12_C03_145 | 3-Tier Output Format | §6.11 L5312 | §6.11 L5237-5318 | "FB_OUTPUT_REFORMAT, FB_OUTPUT_MINIMAL" + Pipeline S0-S8 UI state mapping (L5239-5254) with S6 Deliver showing "AIBubble (streaming), ArtifactEmbed" + FallbackRegistry 23 items including FB_OUTPUT_REFORMAT/FB_OUTPUT_MINIMAL/FB_RETURN_RAW + FailureCode→Fallback mapping L5339 "OC_I4_OUTPUT_SPEC_VIOLATION | FB_OUTPUT_REFORMAT | FB_OUTPUT_MINIMAL" | §6.11 provides complete output formatting system: 3-tier output via FB_OUTPUT_REFORMAT (full format), FB_OUTPUT_MINIMAL (minimal), and FB_RETURN_RAW (raw). The FailureCode-to-Fallback mapping defines exactly when each output tier is used. The S6 Deliver state defines the UI presentation layer. This fully covers 3-Tier Output Format.
+
+3 | v12_C09b_442 | GraphRAG 통합 | §6.2 L4294 | §6.2 L4294 | "Storage (Memory/Vector/Cache/GraphRAG/QoD) | 18 | vamos:memory:save, vamos:vector:search" — GraphRAG is listed as a core IPC category with 18 commands in the Rust/Tauri infrastructure | §6.2 explicitly includes GraphRAG as a core Storage category in the 72 IPC command handlers. Combined with 18 storage-related commands, this provides sufficient implementation guidance (IPC integration, command structure). GraphRAG is architecturally positioned within the Tauri IPC layer as a first-class storage component.
+
+4 | v12_C06_066 | 리스크 시뮬레이션 엔진 스키마 (투자) | §6.8 L4739 | §6.8 L4787 | "리스크 엔진 | 자체 구현 (scipy.stats 기반)" + Circuit Breaker LOCK params (L4757-4765): daily loss -3%, VIX>40, position -10%, cash ratio 20%, single stock 10% + 51% Gate params: Win Rate>=51%, Sharpe>=1.0, Decay<30% | §6.8 provides full risk simulation implementation detail: scipy.stats-based engine, Circuit Breaker with 5 LOCK conditions, 51% Gate with 5 quantitative parameters. This constitutes complete implementation guidance for a risk simulation engine schema.
+
+5 | v12_C01a_187 | Financial Data MCP | §6.6 L4577 | §6.6 L4577-4606 | "MCP 서버/클라이언트 (~7개)" + external server catalog 11 items including: mcp.search.tavily, mcp.code.e2b, mcp.doc.pymupdf, mcp.db.postgres + MCP Bridge Layer "Streamable HTTP" + §6.8 AI Investing data sources (yfinance + Alpha Vantage) | §6.6 provides the complete MCP infrastructure for financial data: MCP Bridge Layer (Streamable HTTP), external catalog with 11 servers, and specific financial data integrations. Combined with §6.8's data source specifications, there is sufficient implementation guidance for Financial Data MCP. The MCP architecture (Bridge+Server+Client) is fully specified.
+
+6 | v12_C03_224 | Alternative Data Sources | §6.8 L4744 | §6.8 L4774-4789 + §6.10.1 L5036-5108 | "Data Sources (yfinance) → 5-Agent Pipeline → Strategy Execution → 51% Gate → Paper Trading" + tech stack items 1-14 covering yfinance, Alpha Vantage, FinBERT sentiment, RSS/API news sources + RT-BNP 4-tier news sources (T1-T4): Bloomberg, Reuters, Finnhub, NewsAPI, Twitter/X, Reddit | §6.8 + §6.10.1 together provide comprehensive alternative data sources: financial market data (yfinance, Alpha Vantage), real-time news (Reuters, Bloomberg, AP via RT-BNP), social media (Twitter/X, Reddit), sentiment analysis (FinBERT). The 4-tier news source classification with specific providers constitutes full implementation guidance for alternative data integration.
+
+7 | v12_C12_077 | 멀티모달 에이전트 프레임워크 통합 | §6.1 L4234 | §6.1 L4228-4237 | §6.1.5 멀티모달 UI table: V1 (CLIP, OCR, STT Whisper, TTS Edge TTS, Mermaid+Plotly, Markdown→PDF) / V2 (실시간 음성, 이미지 생성, Computer Use Agent, 멀티모달 RAG, PPT 자동, 멀티모달 워크플로우) / V3 (3D 생성, 비디오 스트리밍, 아바타, 음성 클로닝, AR, 수어) | §6.1.5 provides a complete multimodal UI roadmap across V1/V2/V3 with 18 specific capabilities. The version-by-version breakdown with specific technologies (CLIP, Whisper, Edge TTS, Plotly, etc.) constitutes sufficient implementation guidance for the multimodal agent framework integration. Each modality is tied to specific technologies and version targets.
+
+=====================================================================
+DOWNGRADED TO MISSING: 3/15
+=====================================================================
+
+# | feature_id | feature_name | severity | reason
+--+------------+--------------+----------+-------
+1 | v12_C11_151 | LLM 비용 최적화 시스템 | BLOCKER | §6.5 L4564 (cited location) discusses "Training Data Poisoning" (OWASP LLM03), not LLM cost optimization. §6.5 is a security section covering 15 security items, HMAC, STRIDE, OWASP LLM Top 10 — none address "Smart Routing 60% cost reduction" or "semantic caching" cost optimization. §6.12.8 has cost escalation thresholds (70%/85%/95%/100%) but these are monitoring alerts, not a cost optimization system. No dedicated LLM cost optimization system (Smart Routing, semantic caching, model downshift logic) exists in §6 or elsewhere.
+
+2 | v12_C13_034 | 사용자 피드백 수집 시스템 | BLOCKER | §6.5 L4562 (cited location) is about "Prompt Injection" (OWASP LLM01), not user feedback collection. §6.5 is entirely focused on security. §6.11 S6 Deliver state mentions "피드백 입력 가능" (L5252) but this is a single UI hint with no implementation detail for a feedback collection system (like/dislike, detailed feedback, storage, analytics). No §6 section provides implementation guidance for a user feedback collection system.
+
+3 | v12_C08_047 | DQ Validation 데이터 품질 검증 | HIGH | §3.P6 L2536 is referenced but the text is empty (""). §3.P6 (V1-Phase 6: AI Investing MVP + MCP) covers AI Investing pipeline, RSI_BB strategy, Circuit Breaker, MCP — but does not mention "DQ Validation" (timestamp ISO8601, decimal-safe, required field checks) explicitly. §6.8 AI Investing section also lacks specific DQ validation rules. No §6 section addresses data quality validation (DQ) with the specific technical criteria (ISO8601 timestamps, decimal-safe operations, required fields).
+
+=====================================================================
+KEPT AS PARTIAL: 5/15
+=====================================================================
+
+# | feature_id | feature_name | reason
+--+------------+--------------+-------
+1 | v12_C01b_058 | Performance Benchmark Runner | §2.STEP6 L1383 mentions basic tests (I-1 parsing test, I-5 Gate test, schema validation) but no dedicated "Performance Benchmark Runner" module or tool. §6.3 L4352 mentions "성능 테스트 ~2 | P99 레이턴시 <=3s, 동시 사용자 50명, GPU 활용률" under V3 EXP tests, providing benchmark targets but not a runner tool. There is no §6 section that describes a Performance Benchmark Runner as a reusable tool/module. Partial coverage: benchmark targets exist (§6.3 V3) but no runner implementation.
+
+2 | v12_C02_095 | Module D-1 Test Runner | §2.STEP6 L1383 mentions testing but not D-1. §3.P3 L2140-2141 mentions "D-1 Think Engine: 추론 엔진" (not Test Runner). The evidence source (D2.0-01 L731) identifies D-1 as "Test Runner" but PART2 describes D-1 as "Think Engine" (reasoning engine). This is a module naming mismatch. §6.3 has comprehensive test details (~128 items) but no module named "D-1 Test Runner." The D-1 module exists in PART2 but with a different name/function. Partial: module ID matches but name/function diverges.
+
+3 | v12_C02_124 | Performance Benchmark Targets | §2.STEP6 L1383 mentions basic tests only. §6.3 L4352 provides some benchmark targets: "P99 레이턴시 <=3s, 동시 사용자 50명, GPU 활용률" (V3 scope). However, the evidence source (D2.0-02 L512) references broader "Performance Benchmark 기준" which likely includes per-module latency, throughput, memory targets. §6.3 only has V3-level performance targets (~2 tests). Missing: V0/V1 specific benchmark targets, per-module benchmarks. Partial: some targets exist (V3 성능 테스트) but not comprehensive per-module benchmarks.
+
+4 | v12_C09b_097 | STEP7 크로스 레퍼런스 (Cross Reference) | Notes say "partial in §3.P3, also in §6.1". §3.P3 L2142 mentions D-2 Multimodal Engine. §6.1 covers UI/UX details. However, STEP7 Cross Reference (J-097) is specifically about cross-referencing STEP7 spec items across documents — a documentation/traceability feature, not a UI or pipeline feature. Neither §3.P3 nor §6.1 provides implementation guidance for a cross-reference system. The partial match is incidental (mentions of STEP7 items) rather than implementing a cross-reference system. Partial: STEP7 items are referenced across sections but no dedicated cross-reference implementation guide.
+
+5 | v12_C01a_189 | Security Certification Prep | §6.5 L4476 covers "보안 (15개 항목)" including NeMo Guardrails, RBAC, PII masking, HMAC, GDPR, Docker sandboxing, plus STRIDE threat model and OWASP LLM Top 10 mapping. These security implementations contribute to certification readiness. However, §6.5 lacks explicit SOC2/ISO27001 certification preparation guidance: no audit checklists, no compliance gap analysis, no certification timeline, no documentation requirements specific to SOC2 Type II or ISO27001 Annex A controls. Partial: security implementations exist (building blocks for certification) but no explicit certification preparation framework.
+
+=====================================================================
+SUMMARY
+=====================================================================
+- Upgraded to MATCHED: 7/15 (46.7%)
+- Downgraded to MISSING: 3/15 (20.0%)
+- Kept as PARTIAL: 5/15 (33.3%)
+
+=====================================================================
+IMPACT ON TOTALS (estimated)
+=====================================================================
+Before audit:
+  MATCHED: 415, MISSING: 189, PARTIAL: 1404
+
+After audit (extrapolated from 15-sample ratios to full 1404 PARTIAL):
+  - ~46.7% of PARTIALs upgrade to MATCHED: +655 → MATCHED ~1070
+  - ~20.0% of PARTIALs downgrade to MISSING: +281 → MISSING ~470
+  - ~33.3% remain PARTIAL: ~468
+
+Note: Extrapolation is approximate. The sample was drawn from PARTIALs
+with "§6 참조" notes, which may not be representative of all 1,404 PARTIALs.
+
+=====================================================================
+KEY OBSERVATIONS
+=====================================================================
+1. §6.8 (AI Investing) is highly detailed — features referencing it tend to be MATCHED
+2. §6.5 (Security) covers security mechanisms but NOT cost optimization or feedback systems
+   - Two items incorrectly cited §6.5 L4562-4564 which is OWASP LLM table, not relevant
+3. §6.11 (Event/Logging) provides comprehensive output formatting via FallbackRegistry
+4. §6.2 (Rust/Tauri) explicitly includes GraphRAG in IPC storage category
+5. §6.6 (MCP) + §6.8 together provide full financial data MCP coverage
+6. §6.1 (UI/UX) multimodal table is a complete V1/V2/V3 implementation roadmap
+7. Performance benchmarking remains weakly covered — only V3-level targets in §6.3
+8. DQ Validation is absent from both §3.P6 and §6.8 despite being AI Investing-related

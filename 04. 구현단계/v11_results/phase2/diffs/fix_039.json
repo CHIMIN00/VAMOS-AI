@@ -1,0 +1,28 @@
+{
+  "fix_id": "FIX-039",
+  "fg": "FG-M10",
+  "tier": 6,
+  "order": 39,
+  "severity": "MEDIUM",
+  "description": "V3 모듈 재분배: Phase 2 → Phase 3 12건 이동 (community/expansion/long-term), sub-group 헤더 추가, s02_to_s08 개별 키 분리",
+  "changes": [
+    {
+      "section": "§5 V3-Phase 2",
+      "action": "community/expansion/long-term 12건 → Phase 3 이동, sub-group 구분 헤더 삽입"
+    },
+    {
+      "section": "§5 V3-Phase 3",
+      "action": "Phase 2에서 이동된 12건 추가, sub-group 헤더 삽입"
+    },
+    {
+      "section": "config.v3.toml",
+      "action": "s02_to_s08.enabled 묶음 → s02~s08 개별 enabled 키 분리"
+    },
+    {
+      "section": "AI 프롬프트",
+      "action": "모듈 수 갱신 (Phase 2: 34→22, Phase 3: 14→26)"
+    }
+  ],
+  "ripple_expected": ["§6.13 작업량", "§7.4 Stage Gate"],
+  "applied_at": "2026-03-13"
+}

@@ -1,0 +1,2099 @@
+{
+  "summary": {
+    "v12_real_missing_total": 191,
+    "v10_consolidated_total": 1068,
+    "v10_true_missing_total": 200,
+    "both_missing": 2,
+    "v12_only_missing": 17,
+    "v12_new_missing": 172,
+    "v10_only_missing": 161,
+    "v10_resolved_in_v12": 37
+  },
+  "both_missing": [
+    {
+      "v12_id": "v12_C10_042",
+      "v12_name": "VaR 위험 경고 및 감정적 투자 방지",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7NP-110",
+      "v10_name": "감정적 투자 방지",
+      "v10_classification": "TRUE_MISSING",
+      "v10_severity": "LOW",
+      "match_score": 80
+    },
+    {
+      "v12_id": "v12_C11_236",
+      "v12_name": "커스텀 조건 알림 규칙 엔진",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7AE-549",
+      "v10_name": "알림 규칙 엔진",
+      "v10_classification": "TRUE_MISSING",
+      "v10_severity": "HIGH",
+      "match_score": 65
+    }
+  ],
+  "v12_only_missing": [
+    {
+      "v12_id": "v12_C03_045",
+      "v12_name": "IoT Smart Home Integration",
+      "v12_severity": "LOW",
+      "v10_id": "D203-067",
+      "v10_name": "IoT/스마트홈 연동 구현 (Home Assistant, Ambient Intelligence)",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 32.0
+    },
+    {
+      "v12_id": "v12_C08_015",
+      "v12_name": "TradingAnalysisAgent 구현",
+      "v12_severity": "MEDIUM",
+      "v10_id": "TEAM-021",
+      "v10_name": "TradingAnalysisAgent 구현 (투자 분석, AINV 연동)",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 85
+    },
+    {
+      "v12_id": "v12_C09b_128",
+      "v12_name": "VBS-12 에이전트 성능 벤치마크",
+      "v12_severity": "HIGH",
+      "v10_id": "S7FI-091",
+      "v10_name": "성능 벤치마크",
+      "v10_classification": "RECLASSIFIED",
+      "v10_severity": "LOW",
+      "match_score": 65
+    },
+    {
+      "v12_id": "v12_C09b_192",
+      "v12_name": "API 문서 자동 생성 (API Documentation Auto-Generation)",
+      "v12_severity": "HIGH",
+      "v10_id": "S7BG-057",
+      "v10_name": "문서 자동 생성",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 65
+    },
+    {
+      "v12_id": "v12_C09b_200",
+      "v12_name": "플러그인 개발 도구 (Plugin Development Kit)",
+      "v12_severity": "HIGH",
+      "v10_id": "S7JM-200",
+      "v10_name": "플러그인 개발 도구",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "HIGH",
+      "match_score": 80
+    },
+    {
+      "v12_id": "v12_C09b_424",
+      "v12_name": "Yi-Lightning (01.AI)",
+      "v12_severity": "LOW",
+      "v10_id": "D204-031",
+      "v10_name": "Yi-Lightning 01.AI 경량 모델 참조",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 85
+    },
+    {
+      "v12_id": "v12_C09b_460",
+      "v12_name": "MoA 평가 기준",
+      "v12_severity": "HIGH",
+      "v10_id": "S7NP-176",
+      "v10_name": "MoA 평가 기준",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_463",
+      "v12_name": "PolyBench",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7NP-179",
+      "v10_name": "PolyBench",
+      "v10_classification": "RECLASSIFIED",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_464",
+      "v12_name": "MMLU-Pro",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7NP-180",
+      "v10_name": "MMLU-Pro",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_470",
+      "v12_name": "오픈소스 듀얼 라이선스",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7NP-186",
+      "v10_name": "오픈소스 듀얼 라이선스",
+      "v10_classification": "RECLASSIFIED",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_476",
+      "v12_name": "크립토 온체인 분석",
+      "v12_severity": "LOW",
+      "v10_id": "S7NP-192",
+      "v10_name": "크립토 온체인 분석",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_479",
+      "v12_name": "Cross-Device Seamless State Sync",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7NP-195",
+      "v10_name": "Cross-Device Seamless State Sync",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_538",
+      "v12_name": "AutoGen 대화 패턴 참조",
+      "v12_severity": "HIGH",
+      "v10_id": "S7JM-124",
+      "v10_name": "AutoGen 대화 패턴 참조",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "HIGH",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C09b_547",
+      "v12_name": "IDE 플러그인 (VSCode)",
+      "v12_severity": "HIGH",
+      "v10_id": "S7BG-059",
+      "v10_name": "IDE 플러그인 (VSCode Extension)",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "LOW",
+      "match_score": 85
+    },
+    {
+      "v12_id": "v12_C12_029",
+      "v12_name": "오디오 감정 분석",
+      "v12_severity": "MEDIUM",
+      "v10_id": "S7JM-024",
+      "v10_name": "오디오 감정 분석",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "HIGH",
+      "match_score": 100
+    },
+    {
+      "v12_id": "v12_C12_123",
+      "v12_name": "IoT/스마트홈 연동",
+      "v12_severity": "LOW",
+      "v10_id": "D203-067",
+      "v10_name": "IoT/스마트홈 연동 구현 (Home Assistant, Ambient Intelligence)",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 85
+    },
+    {
+      "v12_id": "v12_C12_196",
+      "v12_name": "자동 온톨로지 구축",
+      "v12_severity": "HIGH",
+      "v10_id": "S7JM-261",
+      "v10_name": "자동 온톨로지 구축",
+      "v10_classification": "UPPER_MODULE",
+      "v10_severity": "MEDIUM",
+      "match_score": 100
+    }
+  ],
+  "v12_new_missing": [
+    {
+      "v12_id": "v12_C01a_072",
+      "v12_name": "E-10 Personalized Teaching Mode",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C01a_094",
+      "v12_name": "Dynamic Agent",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C01a_099",
+      "v12_name": "On-device Mode",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C01a_169",
+      "v12_name": "Next.js Web UI (IDEA-P6-UX)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C01a_176",
+      "v12_name": "Plugin/Extension SDK",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C01a_181",
+      "v12_name": "Disclaimer Auto-insertion",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C01a_183",
+      "v12_name": "Chrome Extension",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C01a_191",
+      "v12_name": "INT4 Quantization (QAT)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C01a_193",
+      "v12_name": "Backtesting Framework",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C02_080",
+      "v12_name": "Module A-6 Mobile App",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C02_152",
+      "v12_name": "Emotion History Tracking",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C02_186",
+      "v12_name": "Trigger/Action Automation",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_029",
+      "v12_name": "A2A Task Lifecycle",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_036",
+      "v12_name": "A2A Monitoring",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_037",
+      "v12_name": "A2A Test Framework",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_062",
+      "v12_name": "Agent Packaging",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_069",
+      "v12_name": "Predictive Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_072",
+      "v12_name": "Multi-Persona Agent",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_176",
+      "v12_name": "Desktop Automation Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_177",
+      "v12_name": "Mobile Automation Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_185",
+      "v12_name": "Data Sync Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_191",
+      "v12_name": "Meeting Automation",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_215",
+      "v12_name": "Career Development Agent",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_217",
+      "v12_name": "Presentation Coaching Agent",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C03_218",
+      "v12_name": "Networking Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_219",
+      "v12_name": "Mindfulness Agent",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C03_236",
+      "v12_name": "IDEA Long-term Planning",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C04_004",
+      "v12_name": "L2 장기 지식 저장소 구현",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C04_005",
+      "v12_name": "L3 절차 메모리 구현",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C05_005",
+      "v12_name": "모듈 매니저 탭",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C05_098",
+      "v12_name": "TIE 도구 관리 UI",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C05_099",
+      "v12_name": "IDE Extension UI",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C05_102",
+      "v12_name": "자율 소스 발견 UI",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C05_104",
+      "v12_name": "UI 상태머신 상세 (P7)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C06_024",
+      "v12_name": "CloudLibrary Gate 검증 결과 스키마",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_025",
+      "v12_name": "CloudLibrary 충돌 해결 스키마",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C06_026",
+      "v12_name": "CloudLibrary 버전 변경 스키마",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C06_042",
+      "v12_name": "AgentMarketplaceSchema 모델",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_067",
+      "v12_name": "재무 시계열 DB 스키마 (투자)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_073",
+      "v12_name": "멀티 전략 포트폴리오 모델",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_075",
+      "v12_name": "백테스팅 결과 스키마 (투자)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_076",
+      "v12_name": "포트폴리오 최적화 결과 스키마 (투자)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_077",
+      "v12_name": "투자 추천 사후 검증 스키마",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C06_086",
+      "v12_name": "다자산 상관관계 행렬 모델",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C08_045",
+      "v12_name": "Kelly Criterion 포지션 사이징",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C08_046",
+      "v12_name": "Risk Parity 가중치 계산",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C08_047",
+      "v12_name": "DQ Validation 데이터 품질 검증",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C08_060",
+      "v12_name": "S-5 자가 진화 5단계 시스템",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C08_074",
+      "v12_name": "RepairAction 수리 액션 스키마",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C08_096",
+      "v12_name": "스킬 벤더 인증 마크 시스템",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C08_097",
+      "v12_name": "Z-Session 암호화폐 트레이딩 통합",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C09a_005",
+      "v12_name": "Agent 위임(Delegation) 모드",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09a_007",
+      "v12_name": "Agent 작업 완료 알림 시스템",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09a_011",
+      "v12_name": "Agent 권한 체계",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09a_012",
+      "v12_name": "Agent 컨텍스트 자동 압축",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09a_015",
+      "v12_name": "MCP 서버 자동 발견",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09a_037",
+      "v12_name": "Self-RAG 자기 반성 RAG",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C09b_030",
+      "v12_name": "팟캐스트/오디오 콘텐츠 자동 생성 (Podcast Auto-generation)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_055",
+      "v12_name": "비디오/오디오 RAG (Video/Audio RAG)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_060",
+      "v12_name": "멀티모달 작업 플래너 (Multimodal Task Planner)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_062",
+      "v12_name": "멀티모달 합성 Composition",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_072",
+      "v12_name": "Dream Mode 멀티모달 (Background Generation)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_078",
+      "v12_name": "비디오 이해 모델 최신",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_080",
+      "v12_name": "오디오 LLM 통합",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_087",
+      "v12_name": "Multimodal A/B 테스트",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_110",
+      "v12_name": "A2A Task Lifecycle 관리",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_117",
+      "v12_name": "A2A 모니터링/관측 (Monitoring/Observability)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_122",
+      "v12_name": "Magentic-One 패턴",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_136",
+      "v12_name": "IoT/스마트홈 연동 (IoT/Smart Home Integration)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_191",
+      "v12_name": "GraphQL API (VAMOS GraphQL API)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_215",
+      "v12_name": "실시간 협업 코딩 (Real-time Collaborative Coding)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_268",
+      "v12_name": "그래프 기반 추천 (Graph-based Recommendation)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_301",
+      "v12_name": "데스크톱 자동화",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_302",
+      "v12_name": "모바일 자동화",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C09b_310",
+      "v12_name": "데이터 동기화",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_324",
+      "v12_name": "Dream Mode 자동 실행",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_360",
+      "v12_name": "멀티모달 학습 콘텐츠",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_395",
+      "v12_name": "Dream Mode 웰니스 분석",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_398",
+      "v12_name": "VBS-17: 웰니스 AI 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_411",
+      "v12_name": "Gemini 2.5 Pro 100만 토큰 활용",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_415",
+      "v12_name": "Responses API (OpenAI)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_421",
+      "v12_name": "Pixtral Large",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C09b_423",
+      "v12_name": "Grok (xAI)",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C09b_433",
+      "v12_name": "NotebookLM Audio Overviews UI",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_435",
+      "v12_name": "Artifacts UI",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_436",
+      "v12_name": "Canvas UI",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_440",
+      "v12_name": "RadixAttention 대화 캐싱",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_446",
+      "v12_name": "Deepfake/합성 데이터 리스크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_450",
+      "v12_name": "EU AI Act 2025 시행 대응",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_451",
+      "v12_name": "PagedAttention / vLLM 최신",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C09b_452",
+      "v12_name": "Speculative Decoding 최신",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_453",
+      "v12_name": "MLA (Multi-head Latent Attention)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_454",
+      "v12_name": "SGLang",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_461",
+      "v12_name": "ARC-AGI 벤치마크",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_467",
+      "v12_name": "MCP 생태계 수익 모델",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_472",
+      "v12_name": "LLM 기반 실적 콜 분석",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_475",
+      "v12_name": "SEC 13F 자동 분석",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_498",
+      "v12_name": "Grok 실시간 소셜 데이터 연동 패턴",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_505",
+      "v12_name": "Self-RAG (자기 반성 RAG)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_511",
+      "v12_name": "Kubernetes 배포 매니페스트",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_518",
+      "v12_name": "도메인별 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_527",
+      "v12_name": "이미지 편집 (인페인팅/아웃페인팅)",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C09b_551",
+      "v12_name": "추론 UX 패턴",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C09b_557",
+      "v12_name": "PagedAttention / vLLM 최적화",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C09b_558",
+      "v12_name": "Speculative Decoding",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C10_082",
+      "v12_name": "소스 간 충돌 해결 엔진",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C10_092",
+      "v12_name": "오버레이 패널 즉시 분석",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_013",
+      "v12_name": "MoA(Mixture of Agents) 패턴 구현",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_014",
+      "v12_name": "오디오 요약 생성 (NotebookLM 스타일)",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_021",
+      "v12_name": "추측적 디코딩(Speculative Decoding)",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_023",
+      "v12_name": "LiveBench 동적 벤치마크 통합",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_034",
+      "v12_name": "Cross-Device Seamless Sync",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_046",
+      "v12_name": "Gemini 스타일 멀티모달 대화 처리",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_051",
+      "v12_name": "대화 분기(Fork) 관리",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_065",
+      "v12_name": "3채널 감정 분석 아키텍처",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_066",
+      "v12_name": "한국 문화 맥락 감정 해석",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_083",
+      "v12_name": "음성 모드 대화 UI",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_151",
+      "v12_name": "LLM 비용 최적화 시스템",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C11_157",
+      "v12_name": "모델 드리프트 감지",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_174",
+      "v12_name": "VBS-8 에이전트 협업 벤치마크",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_178",
+      "v12_name": "인간 평가 프로세스",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_212",
+      "v12_name": "특허 분석 및 온체인 대안 데이터",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_233",
+      "v12_name": "마켓 레짐 자동 감지",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_237",
+      "v12_name": "주간/월간 정기 분석 리포트",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_242",
+      "v12_name": "DeFi 프로토콜 분석",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_243",
+      "v12_name": "토큰 이코노믹스 분석",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_244",
+      "v12_name": "크립토 규제 동향 모니터링",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_245",
+      "v12_name": "크립토 에어드랍/이벤트 추적",
+      "v12_severity": "LOW"
+    },
+    {
+      "v12_id": "v12_C11_252",
+      "v12_name": "멀티 Agent 투자 협업 분석",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C11_254",
+      "v12_name": "교육용 가상 투자 시뮬레이터",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_262",
+      "v12_name": "해외 투자 외환 규제 고려",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C11_263",
+      "v12_name": "투자 활동 감사 추적 로그",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_006",
+      "v12_name": "실시간 비디오/카메라 입력 처리",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_025",
+      "v12_name": "음악/사운드 생성",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_026",
+      "v12_name": "음성 복제 및 개인화",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_030",
+      "v12_name": "팟캐스트/오디오 콘텐츠 자동 생성",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_033",
+      "v12_name": "비디오 생성 모델 통합",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_036",
+      "v12_name": "스크린 레코딩 + AI 편집",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_041",
+      "v12_name": "비디오 안전성 필터",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_055",
+      "v12_name": "비디오/오디오 RAG",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_056",
+      "v12_name": "지식그래프 + 멀티모달 통합",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_060",
+      "v12_name": "멀티모달 작업 플래너",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_062",
+      "v12_name": "멀티모달 합성 (Composition)",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_063",
+      "v12_name": "멀티모달 대화 모드 전환",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_071",
+      "v12_name": "크로스 디바이스 멀티모달 동기화",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_072",
+      "v12_name": "Dream Mode 멀티모달 백그라운드 생성",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_078",
+      "v12_name": "최신 비디오 이해 모델 통합",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_082",
+      "v12_name": "합성 데이터 생성",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_096",
+      "v12_name": "MCP 마켓플레이스",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_098",
+      "v12_name": "MCP-Blue Node 브리지",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_101",
+      "v12_name": "A2A 에이전트 디스커버리",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_104",
+      "v12_name": "A2A 에러 처리 및 복구",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_105",
+      "v12_name": "A2A-MCP 브리지",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_109",
+      "v12_name": "Magentic-One 아키텍처 패턴",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_115",
+      "v12_name": "VBS-12 에이전트 협업 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_139",
+      "v12_name": "에이전트 패키징",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_142",
+      "v12_name": "예측형 에이전트",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_170",
+      "v12_name": "자율 코딩 에이전트",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C12_172",
+      "v12_name": "코드 품질 대시보드",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_173",
+      "v12_name": "VBS-13 코드 생성 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_180",
+      "v12_name": "이메일/메시지 지식 추출",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_197",
+      "v12_name": "그래프 추론",
+      "v12_severity": "MEDIUM"
+    },
+    {
+      "v12_id": "v12_C12_202",
+      "v12_name": "지식의 Dream Mode 처리",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_207",
+      "v12_name": "VBS-14 지식관리 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_245",
+      "v12_name": "VBS-16 교육학습 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C12_269",
+      "v12_name": "VBS-17 웰니스 AI 벤치마크",
+      "v12_severity": "HIGH"
+    },
+    {
+      "v12_id": "v12_C13_003",
+      "v12_name": "에이전트 공유 TaskBoard",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C13_008",
+      "v12_name": "추론 모드 통합 (Reasoning Budget)",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C13_013",
+      "v12_name": "Personal Constitution 시스템",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C13_025",
+      "v12_name": "EU AI Act 위험 분류 자동 평가",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C13_034",
+      "v12_name": "사용자 피드백 수집 시스템",
+      "v12_severity": "BLOCKER"
+    },
+    {
+      "v12_id": "v12_C13_088",
+      "v12_name": "V2 대화프로세스 고급 기능 (8건)",
+      "v12_severity": "HIGH"
+    }
+  ],
+  "v10_only_missing": [
+    {
+      "v10_id": "AINV-056",
+      "v10_name": "SHAP/LIME Explainability 모듈 (explainer.py)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D202-059",
+      "v10_name": "배치 처리 구현 (S7B-030)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D204-077",
+      "v10_name": "알림 중복 방지 debounce (5분 내 동일 지표 억제)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D204-162",
+      "v10_name": "모델 A/B 테스팅 고급 (1000건/7일, 자동 승격/롤백)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D205-025",
+      "v10_name": "중앙 프롬프트 라이브러리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-038",
+      "v10_name": "작업 패턴 프로파일",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-125",
+      "v10_name": "Cognee 통합 (AI KG 자동 구축)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-179",
+      "v10_name": "지식 신선도 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-180",
+      "v10_name": "지식 충돌 자동 감지",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-198",
+      "v10_name": "M-027 연구 노트 관리 (논문/인용)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-199",
+      "v10_name": "M-029 코드 스니펫 라이브러리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-200",
+      "v10_name": "M-031 아이디어 캡처 (성숙도 추적)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D206-209",
+      "v10_name": "M-020 지식 임포트/익스포트 확장 (Notion/Obsidian)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D207-040",
+      "v10_name": "OAuth2 + MFA (TOTP/WebAuthn)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D207-129",
+      "v10_name": "편향 감사 엔진 (확증/최신/생존/섹터)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D207-175",
+      "v10_name": "스트레스 관리 (호흡/그라운딩/명상)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D207-178",
+      "v10_name": "CBT 셀프케어 (사고기록+인지왜곡)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "D207-179",
+      "v10_name": "번아웃 예방 (과도업무감지→중단)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-344",
+      "v10_name": "B-026 국제화",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-345",
+      "v10_name": "B-030 접근성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-346",
+      "v10_name": "B-032 버전 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-361",
+      "v10_name": "분산 트레이싱",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-369",
+      "v10_name": "백프레셔",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-384",
+      "v10_name": "CQRS 패턴",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-386",
+      "v10_name": "사가 패턴",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-388",
+      "v10_name": "읽기 복제본",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-561",
+      "v10_name": "E-024 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-562",
+      "v10_name": "E-025 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-563",
+      "v10_name": "E-026 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-564",
+      "v10_name": "E-027 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-565",
+      "v10_name": "E-028 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-566",
+      "v10_name": "E-029 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-567",
+      "v10_name": "E-030 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-571",
+      "v10_name": "E-034 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-572",
+      "v10_name": "E-035 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-573",
+      "v10_name": "E-036 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-574",
+      "v10_name": "E-037 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-575",
+      "v10_name": "E-038 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-576",
+      "v10_name": "E-039 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-577",
+      "v10_name": "E-040 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-580",
+      "v10_name": "E-043 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-581",
+      "v10_name": "E-044 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-582",
+      "v10_name": "E-045 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-583",
+      "v10_name": "E-046 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-584",
+      "v10_name": "E-047 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-585",
+      "v10_name": "E-048 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-586",
+      "v10_name": "E-049 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-587",
+      "v10_name": "E-050 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-591",
+      "v10_name": "E-054 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-592",
+      "v10_name": "E-055 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-593",
+      "v10_name": "E-056 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-594",
+      "v10_name": "E-057 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-595",
+      "v10_name": "E-058 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-596",
+      "v10_name": "E-059 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-597",
+      "v10_name": "E-060 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-606",
+      "v10_name": "E-069 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-607",
+      "v10_name": "E-070 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-608",
+      "v10_name": "E-071 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-609",
+      "v10_name": "E-072 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-612",
+      "v10_name": "E-075 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-613",
+      "v10_name": "E-076 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-618",
+      "v10_name": "E-081 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-619",
+      "v10_name": "E-082 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-620",
+      "v10_name": "E-083 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-621",
+      "v10_name": "E-084 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-623",
+      "v10_name": "E-086 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-624",
+      "v10_name": "E-087 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-625",
+      "v10_name": "E-088 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-626",
+      "v10_name": "E-089 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-627",
+      "v10_name": "E-090 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-628",
+      "v10_name": "E-091 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7AE-629",
+      "v10_name": "E-092 운영",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-024",
+      "v10_name": "작업 큐 서버",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-026",
+      "v10_name": "검색 엔진 서버",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-030",
+      "v10_name": "알림 서버",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-072",
+      "v10_name": "피처 스토어",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-080",
+      "v10_name": "CDN 구성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-083",
+      "v10_name": "방화벽 규칙",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-087",
+      "v10_name": "다중 리전 복제",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-304",
+      "v10_name": "블랙-리터만 모델",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-306",
+      "v10_name": "팩터 투자",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7FI-307",
+      "v10_name": "리밸런싱 엔진",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-014",
+      "v10_name": "스타일 트랜스퍼",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-016",
+      "v10_name": "로고/아이콘 생성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-023",
+      "v10_name": "화자 분리 (Speaker Diarization)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-030",
+      "v10_name": "음성 품질 최적화",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-047",
+      "v10_name": "양식/폼 자동 생성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-062",
+      "v10_name": "크로스모달 검색",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-181",
+      "v10_name": "코드 변환 (언어 간)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-189",
+      "v10_name": "성능 프로파일링",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-257",
+      "v10_name": "스마트 리마인더",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7JM-259",
+      "v10_name": "지식 버전 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-045",
+      "v10_name": "개인화 학습 경로",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-047",
+      "v10_name": "플래시카드 자동 생성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-049",
+      "v10_name": "퀴즈 자동 생성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-050",
+      "v10_name": "학습 진도 추적",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-052",
+      "v10_name": "소크라테스식 대화",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-059",
+      "v10_name": "시험 준비 도우미",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-061",
+      "v10_name": "독서 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-062",
+      "v10_name": "학습 목표 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-063",
+      "v10_name": "마이크로러닝",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-064",
+      "v10_name": "학습 동기 부여",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-072",
+      "v10_name": "교육 컨텐츠 생성",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-073",
+      "v10_name": "교육 평가 도구",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-083",
+      "v10_name": "스트레스 관리 도우미",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-085",
+      "v10_name": "수면 개선 도우미",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-086",
+      "v10_name": "운동/피트니스 트래커",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-087",
+      "v10_name": "식단/영양 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-088",
+      "v10_name": "습관 추적기",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-089",
+      "v10_name": "일기 작성 도우미",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-090",
+      "v10_name": "감정 일지 분석",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-093",
+      "v10_name": "긍정 심리 코칭",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-094",
+      "v10_name": "목표 설정/추적",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-096",
+      "v10_name": "집중 모드 (포모도로)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-098",
+      "v10_name": "사회적 관계 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-104",
+      "v10_name": "개인화 건강 인사이트",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-105",
+      "v10_name": "웰니스 알림",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-106",
+      "v10_name": "감정 기반 음악 추천",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-128",
+      "v10_name": "Qwen 3 한중일 특화",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "S7NP-142",
+      "v10_name": "대화 분기 관리",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "TEAM-091",
+      "v10_name": "FileOwnership 모델 구현 (writable/readonly/forbidden 경로 제한)",
+      "v10_severity": "HIGH"
+    },
+    {
+      "v10_id": "AINV-076",
+      "v10_name": "LSTM 가격 예측 모듈 (lstm_predictor.py)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "AINV-080",
+      "v10_name": "실전 거래 소액 시작 모드 (Real Trading)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "CLIB-057",
+      "v10_name": "S5 피드백 학습 모듈 (성과 측정, 롤백, 패턴 강화)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "CLIB-058",
+      "v10_name": "진화 제어 정책 설정 (변경 유형별 자동/알림/승인 규칙)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "CLIB-077",
+      "v10_name": "C3 규칙 제안 (패턴→규칙 제안→인간 승인)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D204-160",
+      "v10_name": "Muon 옵티마이저 (MoE 학습 특화)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D205-138",
+      "v10_name": "학습 커뮤니티 (스터디 그룹/공유/토론/멘토-멘티)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D206-063",
+      "v10_name": "형태소 분석 기반 토큰화 (Mecab-ko V1/Kiwi V2)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D206-064",
+      "v10_name": "한국어 불용어 처리",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D206-208",
+      "v10_name": "M-014 Zettelkasten 방법론 심화",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D207-084",
+      "v10_name": "국가별 규제 적응",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "D207-116",
+      "v10_name": "웰니스 커뮤니티 (V3 익명 참여)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "MSTR-007",
+      "v10_name": "3종 TemplateSet 구현 (TS_CORE/TS_WEB_RESEARCH/TS_CODE)",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-366",
+      "v10_name": "그레이스풀 셧다운",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-389",
+      "v10_name": "커넥션 풀링",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-600",
+      "v10_name": "E-063 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-601",
+      "v10_name": "E-064 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-602",
+      "v10_name": "E-065 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-603",
+      "v10_name": "E-066 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-604",
+      "v10_name": "E-067 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7AE-605",
+      "v10_name": "E-068 운영",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-034",
+      "v10_name": "관리자 콘솔",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-056",
+      "v10_name": "알림 규칙",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-084",
+      "v10_name": "VPN 구성",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-180",
+      "v10_name": "장기 평가 추적",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-239",
+      "v10_name": "글로벌 확장 전략",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-247",
+      "v10_name": "확장 시장 진입",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-248",
+      "v10_name": "M&A 전략",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7FI-262",
+      "v10_name": "장기 재무 예측",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7NP-016",
+      "v10_name": "ETL 도구",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7NP-027",
+      "v10_name": "Zapier/Make 호환 패턴",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7NP-033",
+      "v10_name": "JIRA/Linear 통합",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7NP-034",
+      "v10_name": "CRM 통합",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7NP-055",
+      "v10_name": "동료 학습 매칭",
+      "v10_severity": "MEDIUM"
+    },
+    {
+      "v10_id": "S7JM-217",
+      "v10_name": "온보딩 마법사",
+      "v10_severity": "LOW"
+    },
+    {
+      "v10_id": "S7JM-219",
+      "v10_name": "대화형 튜토리얼",
+      "v10_severity": "LOW"
+    },
+    {
+      "v10_id": "S7NP-056",
+      "v10_name": "언어 학습 특화",
+      "v10_severity": "LOW"
+    },
+    {
+      "v10_id": "S7NP-091",
+      "v10_name": "웰빙 대시보드",
+      "v10_severity": "LOW"
+    },
+    {
+      "v10_id": "S7NP-108",
+      "v10_name": "투자 심리 분석",
+      "v10_severity": "LOW"
+    },
+    {
+      "v10_id": "S7NP-151",
+      "v10_name": "키보드 내비게이션",
+      "v10_severity": "LOW"
+    }
+  ],
+  "v10_resolved_in_v12": [
+    {
+      "v10_id": "D203-111",
+      "v10_name": "시간 여행 디버깅 (Time-Travel Debugging) 구현",
+      "v12_id": "v12_C11_039",
+      "v12_name": "Time-Travel Debugging 상태 복원"
+    },
+    {
+      "v10_id": "D206-039",
+      "v10_name": "작업 중단 복원 (task_checkpoint)",
+      "v12_id": "v12_C04_017",
+      "v12_name": "작업 중단 복원 기능"
+    },
+    {
+      "v10_id": "D206-115",
+      "v10_name": "개인 멀티미디어 라이브러리",
+      "v12_id": "v12_C12_068",
+      "v12_name": "개인 멀티미디어 라이브러리"
+    },
+    {
+      "v10_id": "D206-117",
+      "v10_name": "MemGPT/Letta 패턴 통합",
+      "v12_id": "v12_C09b_441",
+      "v12_name": "MemGPT/Letta 패턴"
+    },
+    {
+      "v10_id": "D206-217",
+      "v10_name": "M-045 지식 기반 의사결정 지원 (SWOT)",
+      "v12_id": "v12_C12_205",
+      "v12_name": "지식 기반 의사결정 지원"
+    },
+    {
+      "v10_id": "D206-218",
+      "v10_name": "M-046 지식 기반 글쓰기 지원",
+      "v12_id": "v12_C12_205",
+      "v12_name": "지식 기반 의사결정 지원"
+    },
+    {
+      "v10_id": "D206-220",
+      "v10_name": "M-044 지식 기반 개인 어시스턴트 (V3 심화)",
+      "v12_id": "v12_C12_204",
+      "v12_name": "지식 기반 개인 어시스턴트"
+    },
+    {
+      "v10_id": "D206-222",
+      "v10_name": "M-004 스크린 캡처 지식화 (Microsoft Recall 로컬 버전)",
+      "v12_id": "v12_C12_178",
+      "v12_name": "스크린 캡처 지식화"
+    },
+    {
+      "v10_id": "D206-226",
+      "v10_name": "M-016 시간 기반 지식 관리 (타임라인뷰+주월간리뷰)",
+      "v12_id": "v12_C09b_246",
+      "v12_name": "시간 기반 지식 관리 (Time-based Knowledge Management)"
+    },
+    {
+      "v10_id": "D206-232",
+      "v10_name": "M-043 예측적 지식 서핑 (행동예측→관련지식 미리 로드)",
+      "v12_id": "v12_C09b_273",
+      "v12_name": "예측적 지식 서핑 (Predictive Knowledge Surfing)"
+    },
+    {
+      "v10_id": "D207-114",
+      "v10_name": "개인 감정 패턴 학습 (예측적 지원)",
+      "v12_id": "v12_C09b_370",
+      "v12_name": "개인 감정 패턴 학습"
+    },
+    {
+      "v10_id": "S7FI-283",
+      "v10_name": "소셜 미디어 분석",
+      "v12_id": "v12_C11_208",
+      "v12_name": "소셜 미디어 투자 감성 분석"
+    },
+    {
+      "v10_id": "S7JM-123",
+      "v10_name": "CrewAI 역할 패턴 참조",
+      "v12_id": "v12_C09b_537",
+      "v12_name": "CrewAI 역할 기반 에이전트 참조"
+    },
+    {
+      "v10_id": "S7JM-201",
+      "v10_name": "데이터베이스 관리 도구",
+      "v12_id": "v12_C09b_201",
+      "v12_name": "데이터베이스 관리 도구 (Database Management Tool)"
+    },
+    {
+      "v10_id": "S7JM-243",
+      "v10_name": "폴더/노트북 구조",
+      "v12_id": "v12_C09b_243",
+      "v12_name": "폴더/노트북 구조 (Folder/Notebook Structure)"
+    },
+    {
+      "v10_id": "S7JM-244",
+      "v10_name": "Zettelkasten 방법론 구현",
+      "v12_id": "v12_C12_187",
+      "v12_name": "Zettelkasten 방법론 구현"
+    },
+    {
+      "v10_id": "S7JM-247",
+      "v10_name": "지식 성숙도 추적",
+      "v12_id": "v12_C12_190",
+      "v12_name": "지식 성숙도 추적"
+    },
+    {
+      "v10_id": "S7JM-267",
+      "v10_name": "개인 위키",
+      "v12_id": "v12_C12_201",
+      "v12_name": "개인 위키"
+    },
+    {
+      "v10_id": "S7JM-273",
+      "v10_name": "예측적 지식 서핑",
+      "v12_id": "v12_C09b_273",
+      "v12_name": "예측적 지식 서핑 (Predictive Knowledge Surfing)"
+    },
+    {
+      "v10_id": "S7JM-274",
+      "v10_name": "지식 기반 개인 어시스턴트",
+      "v12_id": "v12_C12_204",
+      "v12_name": "지식 기반 개인 어시스턴트"
+    },
+    {
+      "v10_id": "S7JM-275",
+      "v10_name": "지식 기반 의사결정 지원",
+      "v12_id": "v12_C12_205",
+      "v12_name": "지식 기반 의사결정 지원"
+    },
+    {
+      "v10_id": "S7JM-276",
+      "v10_name": "지식 기반 글쓰기 지원",
+      "v12_id": "v12_C12_205",
+      "v12_name": "지식 기반 의사결정 지원"
+    },
+    {
+      "v10_id": "S7NP-017",
+      "v10_name": "폼 자동 입력",
+      "v12_id": "v12_C09b_298",
+      "v12_name": "폼 자동 입력"
+    },
+    {
+      "v10_id": "S7NP-031",
+      "v10_name": "Notion/Obsidian 통합",
+      "v12_id": "v12_C09b_549",
+      "v12_name": "Obsidian 통합"
+    },
+    {
+      "v10_id": "S7NP-048",
+      "v10_name": "간격 반복 (Spaced Repetition)",
+      "v12_id": "v12_C09b_330",
+      "v12_name": "간격 반복 (Spaced Repetition) 시스템"
+    },
+    {
+      "v10_id": "S7NP-109",
+      "v10_name": "번아웃 예방",
+      "v12_id": "v12_C09b_387",
+      "v12_name": "번아웃 예방"
+    },
+    {
+      "v10_id": "S7NP-190",
+      "v10_name": "FinGPT 활용",
+      "v12_id": "v12_C09b_474",
+      "v12_name": "FinGPT 활용"
+    },
+    {
+      "v10_id": "S7NP-198",
+      "v10_name": "Ambient Intelligence (앰비언트 인텔리전스)",
+      "v12_id": "v12_C03_070",
+      "v12_name": "Ambient Intelligence"
+    },
+    {
+      "v10_id": "D203-110",
+      "v10_name": "앰비언트 인텔리전스 (Ambient Intelligence) 구현",
+      "v12_id": "v12_C03_070",
+      "v12_name": "Ambient Intelligence"
+    },
+    {
+      "v10_id": "D207-176",
+      "v10_name": "공감 대화 엔진 (Carl Rogers)",
+      "v12_id": "v12_C09b_371",
+      "v12_name": "공감 대화 엔진"
+    },
+    {
+      "v10_id": "S7JM-057",
+      "v10_name": "인포그래픽 자동 생성",
+      "v12_id": "v12_C12_047",
+      "v12_name": "인포그래픽 자동 생성"
+    },
+    {
+      "v10_id": "S7NP-065",
+      "v10_name": "학습 커뮤니티",
+      "v12_id": "v12_C09b_346",
+      "v12_name": "학습 커뮤니티"
+    },
+    {
+      "v10_id": "S7NP-121",
+      "v10_name": "웰니스 커뮤니티",
+      "v12_id": "v12_C09b_397",
+      "v12_name": "웰니스 커뮤니티"
+    },
+    {
+      "v10_id": "S7NP-185",
+      "v10_name": "B2B 컨설팅 모델",
+      "v12_id": "v12_C09b_469",
+      "v12_name": "B2B 컨설팅 모델"
+    },
+    {
+      "v10_id": "S7JM-058",
+      "v10_name": "마인드맵 자동 생성",
+      "v12_id": "v12_C09b_550",
+      "v12_name": "마인드맵 자동 생성"
+    },
+    {
+      "v10_id": "S7NP-051",
+      "v10_name": "학습 분석 대시보드",
+      "v12_id": "v12_C09b_338",
+      "v12_name": "학습 분석 대시보드"
+    },
+    {
+      "v10_id": "S7NP-057",
+      "v10_name": "투자 교육 특화",
+      "v12_id": "v12_C09b_333",
+      "v12_name": "투자 교육 특화"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "script": "0-C",
+  "name": "Heading Hierarchy",
+  "headings_found": 222,
+  "toc_anchors": 7,
+  "errors": [
+    {
+      "line": 630,
+      "previous_level": 1,
+      "current_level": 3,
+      "title": "단계 완료 검증 (V0-STEP-2 → STEP-3 전환 조건)",
+      "type": "level_jump"
+    },
+    {
+      "line": 795,
+      "previous_level": 1,
+      "current_level": 3,
+      "title": "단계 완료 검증 (V0-STEP-3 → STEP-4 전환 조건)",
+      "type": "level_jump"
+    },
+    {
+      "line": 987,
+      "previous_level": 1,
+      "current_level": 3,
+      "title": "단계 완료 검증 (V0-STEP-4 → STEP-5 전환 조건)",
+      "type": "level_jump"
+    }
+  ],
+  "total_errors": 3,
+  "verdict": "FAIL"
+}

@@ -1,0 +1,95 @@
+{
+  "checkpoint": "Phase 1 (v6 전수 재실행)",
+  "version": "v13.3.0-ENHANCED",
+  "timestamp": "2026-03-22T00:00:00",
+  "sessions": "8~11",
+
+  "gates": {
+    "PC1-1": {
+      "condition": "v6 8개 Phase 0 스크립트 전수 실행 완료 (0-A~0-H)",
+      "status": "PASS",
+      "evidence": "phase1_v6/phase0/phase0_summary.json — 8개 전수 실행, FP 분석 후 real error 0건"
+    },
+    "PC1-2": {
+      "condition": "v6 Agent 1~5 순방향(PART→원본) 전수 완료",
+      "status": "PASS",
+      "evidence": "agent1~5_findings.json — 5개 Agent STEP A 완료, facts_checked 합계 231건"
+    },
+    "PC1-3": {
+      "condition": "v6 Agent 1~5 역방향(원본→PART) 전수 완료",
+      "status": "PASS",
+      "evidence": "agent1~5_findings.json — 5개 Agent STEP B 완료, MISSING 12건 발견"
+    },
+    "PC1-4": {
+      "condition": "P1~P11 오류 패턴 탐지 결과 기록",
+      "status": "PASS",
+      "evidence": "phase1_findings.json error_pattern_tally — 9건 패턴 탐지 (P1:1, P2:2, P3:3, P5:2, P8:1)"
+    },
+    "PC1-5": {
+      "condition": "적대적 감사 완료 — 오판율 ≤15%",
+      "status": "PASS",
+      "evidence": "adversarial_review.json — 10건 반박 중 8 SUSTAINED, 2 PARTIALLY_SUSTAINED, 0 OVERTURNED. 오판율 0% (Agent 발견 전건 유효)"
+    },
+    "PC1-6": {
+      "condition": "/artifact-diff 이전 v6 산출물 대비 변경점 기록",
+      "status": "PASS",
+      "evidence": "artifact_diff.json — v8_results 대비 key_deltas 4건, new_in_v13 4건 기록"
+    },
+    "PC1-7": {
+      "condition": "발견사항 JSON 저장 완료 (수정은 Pass 2에서)",
+      "status": "PASS",
+      "evidence": "phase1_findings.json — 16건 고유 발견 (HIGH 8, MEDIUM 6, LOW 2) 저장 완료"
+    }
+  },
+
+  "overall": "PASS",
+  "note": "PC1-1~PC1-7 전항 PASS. Phase 2 (v7 전수 재실행, 세션 12~16) 진입 가능.",
+
+  "statistics": {
+    "total_facts_checked": 231,
+    "total_match": 183,
+    "total_findings_raw": 29,
+    "total_findings_deduplicated": 16,
+    "high_findings": 8,
+    "medium_findings": 6,
+    "low_findings": 2,
+    "adversarial_sustained": 8,
+    "adversarial_partial": 2,
+    "adversarial_overturned": 0,
+    "error_patterns_detected": 9,
+    "false_positive_rate": "0% (Agent 발견 전건 유효)"
+  },
+
+  "post_review_supplement": {
+    "_note": "세션 중단 후 재실행 → 완전성 검토 수행 (2026-03-22)",
+    "session_interruption_impact": "NONE — 5개 Agent 재실행 후 산출물 전수 정상 생성, statistics 교차검증 일치",
+    "supplemented_steps": [
+      "adversarial_review.json에 /minicheck NLI 검증 5건 추가 (Step 3)",
+      "adversarial_review.json에 /eval-ea EA 평가 결과 추가 (Step 4)",
+      "adversarial_review.json에 /golden-set reverify 8건 추가 (Step 5)"
+    ],
+    "agent3_adequacy": "facts_checked=18건 (10파일 대비 낮으나 LOCK 핵심값 위주 검증, match_details 10건에 SOT 섹션 번호 전수 명시. 발견 내용 실질적 — 보충 불필요)"
+  },
+
+  "phase2_entry_notes": [
+    "HIGH 8건은 Pass 2 통합 수정 대상 (ABD-3 원칙)",
+    "AI_INVESTING_SPEC 실거래 LOCK 충돌은 V0 진입 전 해소 필수",
+    "Cloud Library §16 인용 근거 재확인 필요 (ADV-09)",
+    "v13 Phase 0 이관 과제 3건(INC-E009/E012/E013) 중 E012(ResponseEnvelope) 재확인됨"
+  ],
+
+  "output_files": [
+    "phase1_v6/phase0/phase0_summary.json",
+    "phase1_v6/phase0/phase0_analysis.json",
+    "phase1_v6/phase0/0A~0H_result.json (8개)",
+    "phase1_v6/agent1_findings.json",
+    "phase1_v6/agent2_findings.json",
+    "phase1_v6/agent3_findings.json",
+    "phase1_v6/agent4_findings.json",
+    "phase1_v6/agent5_findings.json",
+    "phase1_v6/adversarial_review.json",
+    "phase1_v6/artifact_diff.json",
+    "phase1_v6/phase1_findings.json",
+    "phase1_v6/phase1_checkpoint.json"
+  ]
+}

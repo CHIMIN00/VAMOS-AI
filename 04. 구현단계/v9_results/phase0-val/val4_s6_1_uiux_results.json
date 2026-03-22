@@ -1,0 +1,100 @@
+{
+  "validation_id": "Val-4",
+  "target": "§6.1 UI/UX (line 2705-2807, 103줄)",
+  "perspectives_tested": ["v9-C", "v9-E"],
+  "timestamp": "2026-03-07T11:30:00Z",
+  "objective": "§6 횡단 영역에서 RULE-11 작동 확인 + §6.1 '~85' vs §6.13 '~135' 감지",
+
+  "results": {
+    "v9-C": {
+      "perspective": "구현 가능성",
+      "checks_performed": 8,
+      "findings": [
+        {
+          "id": "C-val4-001",
+          "check_item": "C-4",
+          "stage": "§6.1",
+          "line": "2716-2730",
+          "description": "~44개 React 컴포넌트: 그룹별 수와 핵심 컴포넌트명 명시되나, 개별 파일 경로 미명시",
+          "severity": "MEDIUM",
+          "classification": "STYLE_CONCERN",
+          "is_false_positive": false,
+          "justification": "§6은 횡단 참조 영역으로 AI 프롬프트가 아님. 파일 경로는 PHASE_B2 + V1-Phase 4 AI 프롬프트에서 제공 예상. MEDIUM으로 정확 분류. FP 아님"
+        },
+        {
+          "id": "C-val4-002",
+          "check_item": "C-4",
+          "stage": "§6.1",
+          "line": "2741-2750",
+          "description": "4건 '구현 중 결정 항목': 화면 레이아웃 수, 라우트 수, 다크모드 변수, 애니메이션 설정이 미확정. '구현하면서 확정' 표기",
+          "severity": "LOW",
+          "classification": "STYLE_CONCERN",
+          "is_false_positive": false,
+          "justification": "의도적 지연 결정(deferred decision) 패턴. 미확정을 명시적으로 기록하여 구현자에게 통보. 오류가 아닌 설계 결정. LOW 정확"
+        }
+      ],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "s6_evaluation": {
+          "s6_1_1_layout": "4개 레이아웃 정의: 3-Column, Builder, Hologram, CLI + 근거(D2.0-08 §2-3) → 구현 충분",
+          "s6_1_2_components": "~44개 React 컴포넌트 11그룹 열거(3+6+3+5+4+4+4+3+4+3+5=44). 핵심 컴포넌트명 구체적 → PASS",
+          "s6_1_3_hooks_stores": "8 hooks + 7 stores 명시. 이름과 용도 기술 → PASS",
+          "s6_1_5_multimodal": "V1/V2/V3 단계별 멀티모달 기능 매트릭스 → PASS",
+          "s6_1_6_state_machine": "UI 9-state 전체 정의: 상태 9개(UI_S0~UI_S8) + 전이 테이블 + D2.0-08 §4 참조 → PASS (충분)",
+          "s6_1_7_failure_ui": "에러코드별 화면 표시 + 폴백 행동 + D2.0-08 §7 참조 → PASS",
+          "s6_1_8_rbac": "4 역할별 접근 가능 화면 + 제한 사항 → PASS"
+        },
+        "rule_11_check": "§6.1이 검증 범위에 포함되어 정상 평가됨. RULE-11 작동 확인"
+      }
+    },
+
+    "v9-E": {
+      "perspective": "수량 일관성",
+      "checks_performed": 10,
+      "findings": [
+        {
+          "id": "E-val4-001",
+          "check_item": "E-6",
+          "stage": "§6.1",
+          "line": "2705",
+          "description": "§6.1 헤더 '~85개 항목' vs §6.13 매트릭스 UI/UX 행 합계 '~135' — 차이 존재",
+          "severity": "MEDIUM",
+          "classification": "STYLE_CONCERN",
+          "is_false_positive": false,
+          "justification": "RULE-13 적용. 차이 원인 규명: ~85 = V1 신규 UI 항목, ~135 = V0(~8)+V1(~85)+V2(~27)+V3(~15) 전체 누적. allowlist에 등록. 원인 규명 완료 → STYLE_CONCERN으로 정확 분류. FP 아님"
+        }
+      ],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "quantities_verified": [
+          {"item": "§6.1 header", "value": "~85", "precision": "APPROX", "locations": ["line 2705"], "result": "GT-3 등재 확인"},
+          {"item": "React components", "value": "~44", "precision": "APPROX", "locations": ["line 2716"], "actual_count": "3+6+3+5+4+4+4+3+4+3+5=44", "result": "PASS — 열거합 정확히 44"},
+          {"item": "Hooks count", "value": 8, "precision": "EXACT_COUNT", "locations": ["line 2735"], "actual_count": "8개 열거 (useTauriIPC~useLog)", "result": "PASS"},
+          {"item": "Stores count", "value": 7, "precision": "EXACT_COUNT", "locations": ["line 2737"], "actual_count": "7개 열거 (appStore~workflowStore)", "result": "PASS"},
+          {"item": "UI State Machine states", "value": 9, "precision": "EXACT_LOCK", "locations": ["line 2766 '9-state'", "line 2768-2771 (UI_S0~UI_S8=9)"], "result": "PASS — 열거 9개 = 표기"},
+          {"item": "구현중결정항목", "value": 4, "precision": "EXACT_COUNT", "locations": ["line 2741 '4건'", "line 2745-2750 (4행)"], "result": "PASS"},
+          {"item": "Failure UI rules", "value": 4, "precision": "EXACT_COUNT", "note": "테이블 표시 4건, 전체 14개 FailureCodes는 D2.0-08 §7 참조", "locations": ["line 2790-2796"], "result": "PASS"},
+          {"item": "RBAC roles", "value": 4, "precision": "EXACT_COUNT", "locations": ["line 2801-2806"], "result": "PASS"},
+          {"item": "Multimodal V1 items", "value": 6, "precision": "EXACT_COUNT", "locations": ["line 2754-2761"], "result": "PASS"}
+        ],
+        "s6_1_vs_s6_13": {
+          "detected": true,
+          "header_value": "~85",
+          "matrix_value": "~135",
+          "explanation": "~85 = V1 신규 UI 항목. ~135 = 전체 버전(V0~V3) 누적 UI 항목. 정의 범위 차이에 의한 합리적 차이. RULE-13 + allowlist 적용",
+          "result": "PASS (원인 규명 완료)"
+        }
+      }
+    }
+  },
+
+  "val4_verdict": {
+    "total_checks": 18,
+    "fp_count": 0,
+    "real_error_count": 0,
+    "style_concern_count": 3,
+    "result": "PASS — FP 0건. RULE-11 정상 작동(§6 포함 확인). §6.1 '~85' vs §6.13 '~135' 차이를 정확히 감지하고 원인 규명 완료. 9-state UI SM이 관점 C에서 올바르게 평가됨"
+  }
+}

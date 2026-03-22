@@ -1,0 +1,275 @@
+{
+  "agent": "Agent 5",
+  "scope": "D2.1 Schema document verification (D2.1-D1~D8 SOT vs PART2 schema references)",
+  "session": "session_14",
+  "timestamp": "2026-03-21T14:35:00+09:00",
+  "step_a": {
+    "direction": "PART2 -> SOT",
+    "facts_checked": 20,
+    "matches": 16,
+    "mismatches": [
+      {
+        "id": "A5-M1",
+        "fact": "PART2 states MemoryRecord has 20 fields",
+        "part2_ref": "PART2 L438, L525",
+        "sot_ref": "D2.1-D6 §4.1 MemoryRecordSchema",
+        "match": false,
+        "detail": "PART2 claims MemoryRecord has 20 fields. D2.1-D6 §4.1 MemoryRecordSchema lists: 7 required fields (record_id, project_id, scope, memory_type, content_summary, created_at, policy_decision) + 5 optional common fields (ttl, tags, source_refs, masked, activation_state, version) = 12 common + 7 L3/B-2 extension fields (procedure_id, target_scope, trigger_conditions, steps, required_tools, safety_notes, provenance) = 19 total. Count discrepancy: SOT has 19 fields, PART2 says 20."
+      },
+      {
+        "id": "A5-M2",
+        "fact": "PART2 states LogEventSchema has 7 fields",
+        "part2_ref": "PART2 L435, L522",
+        "sot_ref": "D2.1-D2 §4.2 LogEventSchema",
+        "match": true,
+        "detail": "D2.1-D2 §4.2 LogEventSchema lists: event_type, producer, when, payload, severity (5 required) + sinks, links (2 optional) = 7 total. However, PART2 L435 comment says '7 fields (trace_id, timestamp, level, module, event_type, message, data)' which are DIFFERENT field names. The SOT uses (event_type, producer, when, payload, severity, sinks, links). The field NAMES don't match, though count is same. This is a significant discrepancy in field naming."
+      },
+      {
+        "id": "A5-M3",
+        "fact": "PART2 states DecisionSchema has 18 fields (14 required + 4 optional, FREEZE)",
+        "part2_ref": "PART2 L434, L521",
+        "sot_ref": "D2.1-D2 §4.1 DecisionSchema",
+        "match": true,
+        "detail": "D2.1-D2 §4.1 lists: decision_id, trace_id, timestamp, intent_frame_ref, evidence_pack_ref, policy_gate, approval_required, approval_status, cost_gate, routing, memory_plan, output_spec, conclusion, locked (14 required) + optional_signals, verify, gates, s_module_hints (4 optional) = 18 total. Exact match."
+      },
+      {
+        "id": "A5-M4",
+        "fact": "PART2 states SourceQoD has 8 fields",
+        "part2_ref": "PART2 L439, L526",
+        "sot_ref": "D2.1-D6 §4.2 SourceQoDSchema",
+        "match": false,
+        "detail": "D2.1-D6 §4.2 SourceQoDSchema lists: source_id, project_id, scope (optional), qod_score, freshness, reliability, completeness, computed_at = 8 fields. Count matches if counting optional 'scope'. But 'scope' is optional (required=false), so required fields are 7. PART2 says 8 which counts all fields including optional. This matches if we count total fields."
+      }
+    ],
+    "match_details": [
+      {
+        "fact": "DecisionSchema: 18 fields (14R + 4O, FREEZE)",
+        "part2_ref": "PART2 L434",
+        "sot_ref": "D2.1-D2 §4.1",
+        "match": true,
+        "detail": "Exact field count match verified."
+      },
+      {
+        "fact": "EventTypeRegistry: 123 items",
+        "part2_ref": "PART2 L462",
+        "sot_ref": "D2.1-D2 §5.1",
+        "match": true,
+        "detail": "D2.1-D2 §5.1 count=123. Match."
+      },
+      {
+        "fact": "FailureCodeRegistry: 36 items",
+        "part2_ref": "PART2 L463, L3183",
+        "sot_ref": "D2.1-D2 §5.2",
+        "match": true,
+        "detail": "D2.1-D2 §5.2 count=36. Match."
+      },
+      {
+        "fact": "FallbackRegistry: 23 items",
+        "part2_ref": "PART2 L464, L3198",
+        "sot_ref": "D2.1-D2 §5.3",
+        "match": true,
+        "detail": "D2.1-D2 §5.3 count=23. Match."
+      },
+      {
+        "fact": "PolicyCheck: 7 fields",
+        "part2_ref": "PART2 L440",
+        "sot_ref": "D2.1-D7 §4.1",
+        "match": true,
+        "detail": "D2.1-D7 §4.1 PolicyCheckSchema has 7 fields. Match."
+      },
+      {
+        "fact": "NodeCapabilityProfile: 6 fields",
+        "part2_ref": "PART2 L444",
+        "sot_ref": "D2.1-D3 §5.1",
+        "match": true,
+        "detail": "Consistent with D3 schema."
+      },
+      {
+        "fact": "ToolRegistryEntry: 8 fields",
+        "part2_ref": "PART2 L449",
+        "sot_ref": "D2.1-D4 §4.1",
+        "match": true,
+        "detail": "D2.1-D4 §4.1 ToolRegistryEntrySchema lists 8 fields. Match."
+      },
+      {
+        "fact": "WorkflowOutput (WorkflowOutputEnvelopeSchema): 3 fields (LOCK)",
+        "part2_ref": "PART2 L452",
+        "sot_ref": "D2.1-D5 §4.1",
+        "match": true,
+        "detail": "D2.1-D5 §4.1: user_response, evidence_summary, log_report = 3 fields. Match."
+      },
+      {
+        "fact": "FailureReport: 4 fields",
+        "part2_ref": "PART2 L453",
+        "sot_ref": "D2.1-D5 §4.2",
+        "match": true,
+        "detail": "D2.1-D5 §4.2: failure_cause, evidence_gap, risk_detection, improvement_link = 4 fields. Match."
+      },
+      {
+        "fact": "VectorStoreAdapterSchema in D6",
+        "part2_ref": "PART2 L346 (Chroma reference)",
+        "sot_ref": "D2.1-D6 §4.3",
+        "match": true,
+        "detail": "D6 §4.3 defines VectorStoreAdapterSchema with backend enum: chroma|qdrant|pgvector. Match."
+      },
+      {
+        "fact": "GraphRAGConfigSchema in D6",
+        "part2_ref": "PART2 L1345 (JSON file GraphRAG)",
+        "sot_ref": "D2.1-D6 §4.4",
+        "match": true,
+        "detail": "D6 §4.4 graph_backend: 'json_file (V1) | neo4j (V2+)'. PART2 says 'JSON 파일 기반 GraphRAG, NetworkX'. Match."
+      },
+      {
+        "fact": "SemanticCacheSchema cosine >= 0.95 LOCK",
+        "part2_ref": "PART2 L1346, L1383",
+        "sot_ref": "D2.1-D6 §4.5",
+        "match": true,
+        "detail": "D6 §4.5 similarity_threshold=0.95 (LOCK). Match."
+      },
+      {
+        "fact": "D8 has no SOT schema (DN-005 decision)",
+        "part2_ref": "PART2 context",
+        "sot_ref": "D2.1-D8 §2",
+        "match": true,
+        "detail": "D8 §2: 'D8는 SOT 스키마가 없다 (DN-005 결정: 선택지 B)'. Match."
+      },
+      {
+        "fact": "All schemas version v3.0.0",
+        "part2_ref": "PART2 context",
+        "sot_ref": "D2.1-D1~D8",
+        "match": true,
+        "detail": "All D1-D8 schemas show version 3.0.0. Match with CC-001 resolution."
+      },
+      {
+        "fact": "Schema naming: lower.dot for events, UPPER_SNAKE for failures, FB_UPPER_SNAKE for fallbacks",
+        "part2_ref": "PART2 L462-464",
+        "sot_ref": "D2.1-D2 §5.1-5.3",
+        "match": true,
+        "detail": "D2 §5.1: lower.dot, §5.2: UPPER_SNAKE, §5.3: FB_UPPER_SNAKE. Match."
+      },
+      {
+        "fact": "D6 owns MemoryRecordSchema, SourceQoDSchema, VectorStoreAdapterSchema, GraphRAGConfigSchema, SemanticCacheSchema",
+        "part2_ref": "PART2 L438-439, L1345-1346",
+        "sot_ref": "D2.1-D6 §0",
+        "match": true,
+        "detail": "D6 §0 lists all 5 schemas. Match."
+      }
+    ]
+  },
+  "step_b": {
+    "direction": "SOT -> PART2",
+    "facts_checked": 10,
+    "present": 9,
+    "missing": [
+      {
+        "sot_fact": "D5 AgentMarketplaceSchema exists as SOT",
+        "sot_ref": "D2.1-D5 §4.5",
+        "detail": "PART2 does not reference AgentMarketplaceSchema. Only mentions DEFER-AT-003 marketplace criteria."
+      }
+    ],
+    "check_details": [
+      {
+        "sot_fact": "D1 Glossary defines 23 core terms",
+        "sot_ref": "D2.1-D1 §1.2",
+        "part2_present": true,
+        "detail": "PART2 uses these terms consistently (ORANGE CORE, BLUE NODE, Decision, Evidence, etc.). Glossary terms are embedded throughout."
+      },
+      {
+        "sot_fact": "D1 Schema Meta Template requires _meta block with schema_name, schema_version, owner_doc, sec_id_slug, ref, ref_locked",
+        "sot_ref": "D2.1-D1 §3.1",
+        "part2_present": "partial",
+        "detail": "PART2 does not describe the _meta template structure explicitly. It references D2.1-D1~D8 for schema definitions but doesn't detail the meta requirements."
+      },
+      {
+        "sot_fact": "D1 Registry ownership rules: event_type/failure_code/fallback_id owned by D2",
+        "sot_ref": "D2.1-D1 §4",
+        "part2_present": true,
+        "detail": "PART2 L462-464: all three registries attributed to 'D2.1-D2 SOT'. Match."
+      },
+      {
+        "sot_fact": "D2 DecisionSchema routing field includes selected_blue_node_id + execution_mode(mini|main|tool)",
+        "sot_ref": "D2.1-D2 §4.1",
+        "part2_present": "partial",
+        "detail": "PART2 CLAUDE.md §12 mentions routing{blue_node_id, execution_mode}. Uses 'blue_node_id' not 'selected_blue_node_id'. Minor naming discrepancy."
+      },
+      {
+        "sot_fact": "D2 DecisionSchema memory_plan target_layer enum: L0|L1|L2",
+        "sot_ref": "D2.1-D2 §4.1",
+        "part2_present": "partial",
+        "detail": "PART2 CLAUDE.md §12 mentions memory_plan{save_candidate, target_layer, requires_user_approval}. Does not explicitly list L0|L1|L2 enum. SOT D2 §4.1 specifies this enum."
+      },
+      {
+        "sot_fact": "D5 AgentMarketplaceSchema exists as SOT",
+        "sot_ref": "D2.1-D5 §4.5",
+        "part2_present": false,
+        "detail": "PART2 does not reference AgentMarketplaceSchema. Only mentions DEFER-AT-003 marketplace criteria."
+      },
+      {
+        "sot_fact": "D6 MemoryRecordSchema scope enum: L0|L1|L2|L3",
+        "sot_ref": "D2.1-D6 §4.1, AC-D6-002",
+        "part2_present": true,
+        "detail": "PART2 §Phase2 B-L mapping table uses L0-L3 consistently. Match."
+      },
+      {
+        "sot_fact": "D6 MemoryRecordSchema memory_type enum: B-1|B-2|B-3|B-4",
+        "sot_ref": "D2.1-D6 §4.1, AC-D6-003",
+        "part2_present": true,
+        "detail": "PART2 §Phase2 B-L mapping table uses B-1 to B-4 consistently. Match."
+      },
+      {
+        "sot_fact": "D6 MemoryRecordSchema policy_decision enum: allow|restrict|deny",
+        "sot_ref": "D2.1-D6 §4.1, AC-D6-004",
+        "part2_present": true,
+        "detail": "PART2 references D2.0-07 §6.4 PolicyCheck which aligns with allow|restrict|deny. Present."
+      },
+      {
+        "sot_fact": "D5 VerifyChainRegistry exists as Registry Slot",
+        "sot_ref": "D2.1-D5 §5.1",
+        "part2_present": "partial",
+        "detail": "PART2 CLAUDE.md §16 mentions VerifyChainRegistry: EVX-1~EVX-6, but PART2 schema table does not list it explicitly."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A5-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "PART2 LogEventSchema field names (trace_id, timestamp, level, module, event_type, message, data) do not match SOT D2.1-D2 §4.2 field names (event_type, producer, when, payload, severity, sinks, links). Count is same (7) but field naming is different.",
+      "evidence": "PART2 L435 comment: '7필드(trace_id,timestamp,level,module,event_type,message,data)'. D2.1-D2 §4.2: event_type, producer, when, payload, severity + sinks, links."
+    },
+    {
+      "id": "F-A5-02",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 claims MemoryRecord has 20 fields. D2.1-D6 §4.1 MemoryRecordSchema has 19 fields (7 required + 5 optional common + 7 L3/B-2 extension). Off by 1.",
+      "evidence": "D6 §4.1 field count: record_id, project_id, scope, memory_type, content_summary, created_at, policy_decision (7R) + ttl, tags, source_refs, masked, activation_state, version (6O) + procedure_id, target_scope, trigger_conditions, steps, required_tools, safety_notes, provenance (7 L3 ext) = 20 total. Actually 20 if 'version' counted separately. Re-verified: 7+6+7=20. Match after recount."
+    },
+    {
+      "id": "F-A5-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "PART2 V0 schema table (25 schemas) does not include D5 Phase-A additions: CircuitBreakerSchema, GatePipelineMappingSchema, HITLRequestSchema, ResponseEnvelopeSchema (as D5 owned).",
+      "evidence": "D2.1-D5 §0 lists 9 schemas total (including Phase A additions). PART2 only lists WorkflowStage(4), WorkflowOutput(3), FailureReport(4) from D5, plus ResponseEnvelope referencing CLAUDE.md not D5."
+    },
+    {
+      "id": "F-A5-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "PART2 V0 schema table does not include D3 CloudLibrary schemas (7 schemas) or D4 additional schemas (PromptCacheManager, RateLimitConfig, BackupConfig). These may be V2+ but exist in SOT.",
+      "evidence": "D3 §5.6-5.12: 7 CloudLibrary schemas. D4 §4.4-4.6: 3 additional schemas. All absent from PART2 25-schema table."
+    },
+    {
+      "id": "F-A5-05",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "PART2 references ResponseEnvelope SOT as CLAUDE.md §12, but D2.1-D5 §4.9 defines ResponseEnvelopeSchema as D5-owned SOT. The authoritative source attribution is incorrect.",
+      "evidence": "PART2 L436: 'ResponseEnvelope | 5 (LOCK) | CLAUDE.md §12'. D2.1-D5 §4.9: ResponseEnvelopeSchema with owner_doc=D5."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 30,
+    "match_rate": "77%",
+    "findings_count": 5
+  }
+}

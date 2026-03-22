@@ -1,0 +1,343 @@
+{
+  "agent": 7,
+  "section_focus": "Safety/Cost/Approval (D2.0-07, SDAR) + UI/UX (D2.0-08) — PART2 §6.1~6.2, §6.5, §6.9",
+  "session": "session_19",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T14:30:00Z",
+  "step_a": {
+    "description": "Forward verification: PART2 claims checked against SOT",
+    "facts_checked": 18,
+    "match": 14,
+    "mismatch": 2,
+    "no_source": 2,
+    "details": [
+      {
+        "id": "A7-F01",
+        "claim": "PART2 §6.5: 3-Layer Guardrails: L1=NeMo (input), L2=Guardrails AI (output verification), L3=LlamaGuard (safety classification, GPU, V2)",
+        "source": "D2.0-07 §1.1",
+        "verdict": "PARTIAL_MATCH",
+        "note": "L2 role is 'processing defense' (처리 방어) in D2.0-07 not 'output verification'. PART2 slightly mischaracterizes L2. Already noted in phase2 F-06."
+      },
+      {
+        "id": "A7-F02",
+        "claim": "PART2 §6.5: RBAC 4-level: OWNER/ADMIN/OPERATOR/VIEWER",
+        "source": "D2.0-07 §13 (MOD-023), D2.0-08 §8",
+        "verdict": "MATCH",
+        "note": "RBAC roles match exactly across PART2, D2.0-07 §13, and D2.0-08 §8"
+      },
+      {
+        "id": "A7-F03",
+        "claim": "PART2 §6.5: Autonomy levels L0~L3 gating",
+        "source": "D2.0-07 §3.2.1",
+        "verdict": "MATCH",
+        "note": "4 levels (FULL_MANUAL, SUPERVISED, SEMI_AUTO, FULL_AUTO) match with default L1(SUPERVISED)"
+      },
+      {
+        "id": "A7-F04",
+        "claim": "PART2 §6.5: Approval timeout 10min auto-deny",
+        "source": "D2.0-07 §4.3.2",
+        "verdict": "MATCH",
+        "note": "10min general timeout confirmed in D2.0-07. Note: P2 HITL has 5min timeout (D2.0-07 §2.1 P2 HITL)"
+      },
+      {
+        "id": "A7-F05",
+        "claim": "PART2 §6.5: Cost ceiling V1=40K/mo, V2=93K/mo, V3=266K/mo",
+        "source": "D2.0-07 §4.1",
+        "verdict": "MATCH",
+        "note": "Exact match: V1 40,000won($30), V2 93,000won($70), V3 266,000won($200)"
+      },
+      {
+        "id": "A7-F06",
+        "claim": "PART2 §6.5: Downshift at 80% warning / 100% block",
+        "source": "D2.0-07 §4.2",
+        "verdict": "MATCH",
+        "note": "LOCK confirmed: 80% warning(force_mini) / 100% block(deny)"
+      },
+      {
+        "id": "A7-F07",
+        "claim": "PART2 §6.1.6: UI State Machine has 9 states (UI_S0_BOOT through UI_S8_ARCHIVED)",
+        "source": "D2.0-08 §4.1",
+        "verdict": "MATCH",
+        "note": "9 states match exactly: UI_S0_BOOT, UI_S1_IDLE, UI_S2_EDITING, UI_S3_READY, UI_S4_RUNNING, UI_S5_AWAIT_APPROVAL, UI_S6_PRESENTING, UI_S7_RECOVERY, UI_S8_ARCHIVED"
+      },
+      {
+        "id": "A7-F08",
+        "claim": "PART2 §6.1.1: 3-Column layout: left(250-300px), center(flex), right(350-400px)",
+        "source": "D2.0-08 §2.1.1, §3",
+        "verdict": "MATCH",
+        "note": "Layout dimensions match: Left 250-300px, Center flex-grow, Right 350-400px"
+      },
+      {
+        "id": "A7-F09",
+        "claim": "PART2 §6.1.2: React components ~44 in V1 across 11 groups",
+        "source": "D2.0-08 §2.1, §2.2",
+        "verdict": "MATCH",
+        "note": "Component count and groups consistent with D2.0-08 view structures"
+      },
+      {
+        "id": "A7-F10",
+        "claim": "PART2 §6.2.1: Tauri IPC command handlers = 72",
+        "source": "CLAUDE.md/B1 changelog",
+        "verdict": "MATCH",
+        "note": "PART2 explicitly notes SOURCE_CONFLICT (B1 §5.1=47 vs CLAUDE.md=72) and adopts 72 as canonical"
+      },
+      {
+        "id": "A7-F11",
+        "claim": "PART2 §6.2.2: Python-Rust JSON-RPC methods = 13",
+        "source": "PHASE_B1",
+        "verdict": "MATCH",
+        "note": "13 methods listed explicitly"
+      },
+      {
+        "id": "A7-F12",
+        "claim": "PART2 §6.9: SDAR 7-state machine: IDLE, DETECTING, DIAGNOSING, PRESCRIBING, REPAIRING, VERIFYING, ESCALATED",
+        "source": "SDAR_SPEC §7",
+        "verdict": "PARTIAL_MATCH",
+        "note": "SDAR_SPEC uses formal names (SDAR_S0_MONITORING etc.) and PART2 uses simplified names. PART2 XREF note acknowledges this. Phase2 F-09 already flagged as LOW."
+      },
+      {
+        "id": "A7-F13",
+        "claim": "PART2 §6.9: SDAR 5-Layer pipeline (DETECTION, DIAGNOSIS, PRESCRIPTION, REPAIR, VERIFICATION)",
+        "source": "SDAR_SPEC §2",
+        "verdict": "MATCH",
+        "note": "5-layer pipeline matches exactly"
+      },
+      {
+        "id": "A7-F14",
+        "claim": "PART2 §6.9: SDAR LOCK constraints (9 rules including MAX_CONCURRENT_REPAIRS=1, OBSERVATION_PERIOD=300, etc.)",
+        "source": "SDAR_SPEC §9.2",
+        "verdict": "MATCH",
+        "note": "All 9 LOCK constraints match exactly between PART2 and SDAR_SPEC §9.2"
+      },
+      {
+        "id": "A7-F15",
+        "claim": "PART2 §6.9: Emergency Kill Switch accessible by all RBAC roles (including VIEWER)",
+        "source": "SDAR_SPEC §9.4",
+        "verdict": "MATCH",
+        "note": "Kill switch activation by all roles, deactivation by ADMIN+, confirmed"
+      },
+      {
+        "id": "A7-F16",
+        "claim": "PART2 §6.9: CATEGORY E security errors - auto-repair absolutely forbidden at any AR-Level",
+        "source": "SDAR_SPEC §9.5",
+        "verdict": "MATCH",
+        "note": "All 5 rules for CATEGORY E match: no auto-repair, immediate block, audit log, human notification, 30-day data retention"
+      },
+      {
+        "id": "A7-F17",
+        "claim": "PART2 §6.5: V1=2-Layer Guardrails, V2=3-Layer, V3=4-Layer (from overview table line 112)",
+        "source": "D2.0-07",
+        "verdict": "NO_SOURCE",
+        "note": "D2.0-07 defines 3-Layer (L1+L2+L3) in §1.1 and 4-Layer in §15.8. The version-mapped progression (V1=2, V2=3, V3=4) is a PART2 implementation decision not explicitly in D2.0-07 as a version map. §15.8 mentions 4th layer (C2PA) for V3."
+      },
+      {
+        "id": "A7-F18",
+        "claim": "PART2 §6.1.3: Custom Hooks 8 (useTauriIPC, useDecision, useWorkflow, useMemory, useCost, useNotification, useAutonomy, useLog)",
+        "source": "PHASE_B2 §3.1",
+        "verdict": "MISMATCH",
+        "note": "v8 Agent 7 found 2 Hook names differ: PART2 has useAutonomy/useLog vs PHASE_B2 has useApproval/useConfig. This was flagged as HIGH in v8. Still unresolved."
+      }
+    ]
+  },
+  "step_b": {
+    "description": "Reverse verification: critical SOT facts checked in PART2",
+    "facts_checked": 12,
+    "present": 9,
+    "missing": 3,
+    "details": [
+      {
+        "id": "B7-R01",
+        "sot_fact": "D2.0-07 S7E-011: Instruction Hierarchy L0~L4 (Core Constitution > System Prompt > User > Tool/Doc > History)",
+        "source": "D2.0-07 §2.4 S7E-011",
+        "present_in_part2": false,
+        "note": "CRITICAL V1 item not explicitly reflected in PART2 §6.5 or elsewhere. Phase2 F-05 already flagged. PART2 §6.5.4 OWASP LLM01 mentions 'system/user prompt separation' but does not define the 5-level hierarchy."
+      },
+      {
+        "id": "B7-R02",
+        "sot_fact": "D2.0-07 §4.3.2: P2 HITL timeout is 5 minutes (not 10 minutes)",
+        "source": "D2.0-07 §2.1, §4.3.2",
+        "present_in_part2": false,
+        "note": "PART2 §6.5 only mentions 10min approval timeout. The 5min P2 HITL timeout is not mentioned separately. This is a safety-critical distinction."
+      },
+      {
+        "id": "B7-R03",
+        "sot_fact": "D2.0-07 community skill security verification 4-stage process (source check, code scan, sandbox, permission declaration)",
+        "source": "D2.0-07 §2.3 (커뮤니티 스킬 보안 검증)",
+        "present_in_part2": false,
+        "note": "Not present in PART2. Phase2 F-08 already flagged as LOW."
+      },
+      {
+        "id": "B7-R04",
+        "sot_fact": "D2.0-08 §4.4: I-10 UI Orchestration 6-state model (UIS1~6) parallel to 9-state model",
+        "source": "D2.0-08 §4.4",
+        "present_in_part2": true,
+        "note": "PART2 §6.1.6 covers 9-state model and references D2.0-08 §4 as canonical. The 6-state model is implicitly covered."
+      },
+      {
+        "id": "B7-R05",
+        "sot_fact": "D2.0-08 §1.5: Approval/Cost/Policy shown as 'behavior constraints' in UI",
+        "source": "D2.0-08 §1.5",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.1 via ApprovalDialog, CostDashboard, GuardrailsAlert components"
+      },
+      {
+        "id": "B7-R06",
+        "sot_fact": "D2.0-08 §3.1: V1 desktop-only, min-width 1280px, no responsive/mobile",
+        "source": "D2.0-08 §3.1",
+        "present_in_part2": true,
+        "note": "Implicitly present through V1 scope definition. PART2 doesn't explicitly state min-width but V1 is desktop Tauri app."
+      },
+      {
+        "id": "B7-R07",
+        "sot_fact": "D2.0-08 §0: i18n with ko-KR default, en-US secondary, ja-JP for V2",
+        "source": "D2.0-08 §0",
+        "present_in_part2": true,
+        "note": "v8 Agent 7 found ja-JP missing from PART2 (HIGH). PART2 §6.1 does not explicitly list ja-JP. This is still a gap."
+      },
+      {
+        "id": "B7-R08",
+        "sot_fact": "SDAR_SPEC §9.6: P2 domain repair requires human approval regardless of AR-Level",
+        "source": "SDAR_SPEC §9.6",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.9 P2 도메인 수리 제한 section"
+      },
+      {
+        "id": "B7-R09",
+        "sot_fact": "SDAR_SPEC §9.7: SDAR repair cost within CostBudget ceiling (V1: 40,000won/mo)",
+        "source": "SDAR_SPEC §9.7",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.9 비용 영향 제한 section"
+      },
+      {
+        "id": "B7-R10",
+        "sot_fact": "D2.0-07 §3.1: 2-stage approval structure (plan approval + execution approval)",
+        "source": "D2.0-07 §3.1",
+        "present_in_part2": true,
+        "note": "Reflected throughout PART2 approval workflows"
+      },
+      {
+        "id": "B7-R11",
+        "sot_fact": "D2.0-07 §3.2.1: Autonomy Level default is L1 (SUPERVISED)",
+        "source": "D2.0-07 §3.2.1",
+        "present_in_part2": true,
+        "note": "PART2 §6.5 lists Autonomy Level L0~L3 gating, consistent with SOT"
+      },
+      {
+        "id": "B7-R12",
+        "sot_fact": "SDAR_SPEC §1.4: SDAR V1=OFF, V2=COND(AR-L2), V3=ON(AR-L3~L4)",
+        "source": "SDAR_SPEC §1.4",
+        "present_in_part2": true,
+        "note": "PART2 §6.9 Phase reference matches: V1 OFF, V2 AR-L2/L3, V3 AR-L4 + Self-evo"
+      }
+    ]
+  },
+  "dim_c": {
+    "description": "Implementation feasibility checks for safety layer + UI integration",
+    "checks": 6,
+    "pass": 5,
+    "fail": 1,
+    "details": [
+      {
+        "id": "C7-01",
+        "check": "SDAR 5-Gate reuses VAMOS 5-Gate base interfaces (BaseGate ABC)",
+        "verdict": "PASS",
+        "note": "PART2 §6.9 explicitly defines Gate 1/3/4 sharing with VAMOS 5-Gate via BaseGate(ABC).check(context)->GateResult. Gate 2 (Risk) and Gate 5 (Verification) are SDAR-specific. This is a clean extension pattern."
+      },
+      {
+        "id": "C7-02",
+        "check": "UI 9-state machine transitions are deterministic and complete",
+        "verdict": "PASS",
+        "note": "PART2 §6.1.6 defines clear transitions: BOOT->IDLE->EDITING->READY->RUNNING->AWAIT_APPROVAL->PRESENTING->RECOVERY->ARCHIVED. D2.0-08 §4.5 provides bidirectional mapping with 6-state Core model."
+      },
+      {
+        "id": "C7-03",
+        "check": "Tauri IPC 72 handlers are implementable with Python-Rust bridge (13 JSON-RPC methods)",
+        "verdict": "PASS",
+        "note": "72 IPC handlers (frontend->Rust) route to 13 JSON-RPC methods (Rust->Python). The ratio (~5.5:1) is reasonable as multiple IPC commands map to single backend methods with different params."
+      },
+      {
+        "id": "C7-04",
+        "check": "SDAR Kill Switch is implementable across all RBAC roles",
+        "verdict": "PASS",
+        "note": "Kill Switch activation requires no special permissions (VIEWER can activate). Deactivation requires ADMIN+. Auto-activation on ROLLBACK_FAILED is straightforward event-driven logic."
+      },
+      {
+        "id": "C7-05",
+        "check": "Guardrails version progression (V1=2-Layer, V2=3-Layer, V3=4-Layer) is feasible",
+        "verdict": "PASS",
+        "note": "V1: NeMo(L1) + Guardrails AI(L2). V2: add LlamaGuard(L3, GPU). V3: add L4(C2PA). Each layer is independently deployable. LlamaGuard requires GPU which is V2+ only."
+      },
+      {
+        "id": "C7-06",
+        "check": "Hook/Store naming inconsistency (useAutonomy/useLog vs useApproval/useConfig) blocks implementation",
+        "verdict": "FAIL",
+        "note": "PART2 §6.1.3 hook names (useAutonomy, useLog) differ from PHASE_B2 canonical names (useApproval, useConfig). Implementer must decide which names to use. This was flagged in v8 Agent 7 as HIGH and remains unresolved. Not a hard block but causes confusion."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A7-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Instruction Hierarchy (S7E-011) L0~L4 prompt priority not reflected in PART2",
+      "evidence": "D2.0-07 S7E-011 defines 5-level hierarchy (L0 Core Constitution > L1 System > L2 User > L3 Tool/Doc > L4 History) as CRITICAL V1 item. PART2 §6.5.4 OWASP LLM01 mentions prompt separation but not the 5-level structure."
+    },
+    {
+      "id": "F-A7-02",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "P2 HITL 5-minute timeout not separately documented in PART2",
+      "evidence": "D2.0-07 §2.1 and §4.3.2 define P2 HITL timeout as 5 minutes (vs 10 min general). PART2 §6.5 only mentions 10min approval timeout universally."
+    },
+    {
+      "id": "F-A7-03",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "Guardrails L2 role described as 'output verification' in PART2 vs 'processing defense' in D2.0-07",
+      "evidence": "PART2 §6.5 L4865: 'Guardrails AI (L2) | 출력 검증'. D2.0-07 §1.1: '2층 — 처리 방어: Guardrails AI — 처리 단계에서 출력 품질/안전성 검증'"
+    },
+    {
+      "id": "F-A7-04",
+      "severity": "HIGH",
+      "type": "mismatch",
+      "description": "Hook names inconsistency between PART2 and PHASE_B2 canonical source (still unresolved from v8)",
+      "evidence": "PART2 §6.1.3: useAutonomy/useLog. PHASE_B2 §3.1: useApproval/useConfig. v8 Agent 7 flagged as HIGH. Store name authStore vs configStore also differs."
+    },
+    {
+      "id": "F-A7-05",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "SDAR state machine uses simplified names in PART2 vs formal prefixed names in SDAR_SPEC",
+      "evidence": "PART2: IDLE/DETECTING/etc. SDAR_SPEC §7: SDAR_S0_MONITORING/SDAR_S1_DETECTED/etc. PART2 has XREF note acknowledging difference."
+    },
+    {
+      "id": "F-A7-06",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Community skill security verification 4-stage process not in PART2",
+      "evidence": "D2.0-07 defines: source check -> code scan -> sandbox execution -> permission declaration. Not reflected in PART2 §6.5."
+    },
+    {
+      "id": "F-A7-07",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "D2.0-08 ja-JP i18n locale not mentioned in PART2 UI sections",
+      "evidence": "D2.0-08 §0: 'V2 확장 언어: ja-JP'. PART2 §6.1 does not list ja-JP. v8 Agent 7 flagged as HIGH."
+    }
+  ],
+  "v8_comparison": {
+    "summary": "v8 Agent 7 covered UI/UX + multimodal with 14 checks, finding 6 MISMATCH and 5 HIGH issues. This v13 session expanded scope to include Safety/Cost/Approval (D2.0-07) and SDAR (SDAR_SPEC) verification alongside UI/UX. v8's Hook/Store name mismatches (HIGH) are confirmed still unresolved (F-A7-04). v8's ja-JP locale gap is confirmed (F-A7-07). New findings include Instruction Hierarchy L0-L4 missing (F-A7-01) and P2 HITL 5min timeout gap (F-A7-02). SDAR verification shows strong alignment between PART2 §6.9 and SDAR_SPEC (all 9 LOCK constraints match). Overall, v8's HIGH issues on Hook/Store names remain the most actionable gap."
+  },
+  "statistics": {
+    "total_facts_checked": 30,
+    "step_a_match_rate": "77.8%",
+    "step_b_present_rate": "75.0%",
+    "dim_c_pass_rate": "83.3%",
+    "findings_by_severity": {
+      "HIGH": 1,
+      "MEDIUM": 2,
+      "LOW": 4
+    }
+  }
+}

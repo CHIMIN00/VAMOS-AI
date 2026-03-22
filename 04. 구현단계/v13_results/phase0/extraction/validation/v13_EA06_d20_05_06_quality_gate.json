@@ -1,0 +1,286 @@
+{
+  "agent": "EA-06",
+  "version": "v13",
+  "validation_date": "2026-03-16",
+  "layer": "B",
+  "layer_a_prerequisite": "PASS (CRITICAL: 0)",
+  "source_files": [
+    "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+    "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md"
+  ],
+  "total_items": 251,
+  "layer_b_result": {
+    "sv1_semantic_accuracy": {
+      "description": "Random 20+ item sample: verify source_text context matches extracted key and context semantically",
+      "sample_size": 22,
+      "method": "10 items from front (EA-06_001~010), 10 items from back (EA-06_175~187), 2 additional spot checks",
+      "samples": [
+        {
+          "item_id": "EA-06_001",
+          "key": "C1_WORKFLOW_PARALLEL_DEFAULT_LIMIT",
+          "value": 3,
+          "source_text_snippet": "parallel_limit: 3 (기본값)",
+          "verdict": "PASS",
+          "note": "D2.0-05 5-stage pipeline parallel default limit. Semantically correct."
+        },
+        {
+          "item_id": "EA-06_002",
+          "key": "C1_WORKFLOW_PARALLEL_MAX_LIMIT",
+          "value": 10,
+          "source_text_snippet": "parallel_limit 최대: 10",
+          "verdict": "PASS",
+          "note": "Maximum parallel limit matches source context."
+        },
+        {
+          "item_id": "EA-06_003",
+          "key": "C1_WORKFLOW_TEE_P0_RETRY_MAX",
+          "value": 3,
+          "source_text_snippet": "TEE loop P0 retry: 3",
+          "verdict": "PASS",
+          "note": "TEE loop retry count for priority P0."
+        },
+        {
+          "item_id": "EA-06_004",
+          "key": "C1_WORKFLOW_TEE_P1_RETRY_MAX",
+          "value": 5,
+          "source_text_snippet": "TEE loop P1 retry: 5",
+          "verdict": "PASS",
+          "note": "TEE loop retry count for priority P1."
+        },
+        {
+          "item_id": "EA-06_005",
+          "key": "C1_WORKFLOW_TEE_P2_RETRY_MAX",
+          "value": 10,
+          "source_text_snippet": "TEE loop P2 retry: 10",
+          "verdict": "PASS",
+          "note": "TEE loop retry count for priority P2."
+        },
+        {
+          "item_id": "EA-06_006",
+          "key": "C1_CIRCUIT_BREAKER_FAIL_THRESHOLD",
+          "value": 3,
+          "source_text_snippet": "Circuit Breaker fail_threshold: 3",
+          "verdict": "PASS",
+          "note": "Circuit Breaker consecutive failure threshold."
+        },
+        {
+          "item_id": "EA-06_007",
+          "key": "C1_CIRCUIT_BREAKER_RESET_TIMEOUT_SEC",
+          "value": 60,
+          "source_text_snippet": "Circuit Breaker reset_timeout: 60s",
+          "verdict": "PASS",
+          "note": "Circuit Breaker reset timeout in seconds."
+        },
+        {
+          "item_id": "EA-06_008",
+          "key": "C1_CIRCUIT_BREAKER_HALF_OPEN_MAX",
+          "value": 1,
+          "source_text_snippet": "half_open_max_calls: 1",
+          "verdict": "PASS",
+          "note": "Half-open state max calls. Semantically correct."
+        },
+        {
+          "item_id": "EA-06_009",
+          "key": "C1_WORKFLOW_STAGE_TIMEOUT_SEC",
+          "value": 300,
+          "source_text_snippet": "stage timeout: 300s",
+          "verdict": "PASS",
+          "note": "Per-stage timeout in 5-stage pipeline."
+        },
+        {
+          "item_id": "EA-06_010",
+          "key": "C1_WORKFLOW_TOTAL_TIMEOUT_SEC",
+          "value": 1800,
+          "source_text_snippet": "total workflow timeout: 1800s",
+          "verdict": "PASS",
+          "note": "Total workflow timeout. Semantically correct."
+        },
+        {
+          "item_id": "EA-06_175",
+          "key": "C1_STORAGE_KNOWLEDGE_GRAPH_MAX_NODES",
+          "value": 10000,
+          "source_text_snippet": "KG max_nodes: 10000",
+          "verdict": "PASS",
+          "note": "Knowledge Graph maximum node count from D2.0-06."
+        },
+        {
+          "item_id": "EA-06_176",
+          "key": "C1_STORAGE_KNOWLEDGE_GRAPH_MAX_EDGES",
+          "value": 50000,
+          "source_text_snippet": "KG max_edges: 50000",
+          "verdict": "PASS",
+          "note": "Knowledge Graph maximum edge count."
+        },
+        {
+          "item_id": "EA-06_177",
+          "key": "C1_STORAGE_KNOWLEDGE_GRAPH_PRUNE_THRESHOLD",
+          "value": 0.3,
+          "source_text_snippet": "KG prune threshold: 0.3",
+          "verdict": "PASS",
+          "note": "KG pruning threshold. Semantic match confirmed."
+        },
+        {
+          "item_id": "EA-06_178",
+          "key": "C1_STORAGE_BACKUP_INTERVAL_HOURS",
+          "value": 24,
+          "source_text_snippet": "backup interval: 24h",
+          "verdict": "PASS",
+          "note": "Backup interval in hours from storage policy."
+        },
+        {
+          "item_id": "EA-06_179",
+          "key": "C1_STORAGE_BACKUP_RETENTION_DAYS",
+          "value": 30,
+          "source_text_snippet": "backup retention: 30d",
+          "verdict": "PASS",
+          "note": "Backup retention days."
+        },
+        {
+          "item_id": "EA-06_180",
+          "key": "C3_STORAGE_POLICY_LEVELS",
+          "value": ["Allow", "Restrict", "Deny"],
+          "source_text_snippet": "Storage Policy: Allow | Restrict | Deny",
+          "verdict": "PASS",
+          "note": "Three-level storage policy enum from D2.0-06."
+        },
+        {
+          "item_id": "EA-06_181",
+          "key": "C8_STORAGE_PKM_REF_WORKFLOW",
+          "value": "D2.0-05",
+          "source_text_snippet": "PKM knowledge flow references Agent Workflow",
+          "verdict": "PASS",
+          "note": "Cross-document reference from storage/memory to workflow."
+        },
+        {
+          "item_id": "EA-06_183",
+          "key": "C6_STORAGE_GRAPH_RAG_ROADMAP",
+          "value": "v3.0+",
+          "source_text_snippet": "Graph RAG integration planned for v3.0+",
+          "verdict": "PASS",
+          "note": "Roadmap item for Graph RAG. Semantic match confirmed."
+        },
+        {
+          "item_id": "EA-06_185",
+          "key": "C1_STORAGE_SEMANTIC_CACHE_TTL_SEC",
+          "value": 3600,
+          "source_text_snippet": "Semantic Cache TTL: 3600s",
+          "verdict": "PASS",
+          "note": "Semantic cache TTL value."
+        },
+        {
+          "item_id": "EA-06_186",
+          "key": "C1_STORAGE_SEMANTIC_CACHE_MAX_ENTRIES",
+          "value": 1000,
+          "source_text_snippet": "Semantic Cache max entries: 1000",
+          "verdict": "PASS",
+          "note": "Semantic cache maximum entry count."
+        },
+        {
+          "item_id": "EA-06_187",
+          "key": "C1_STORAGE_SEMANTIC_CACHE_SIMILARITY_THRESHOLD",
+          "value": 0.95,
+          "source_text_snippet": "Semantic Cache similarity threshold: 0.95",
+          "verdict": "PASS",
+          "note": "Cache similarity threshold. Semantic match confirmed."
+        },
+        {
+          "item_id": "EA-06_050",
+          "key": "C7_QOD_L2_STORAGE_MIN_THRESHOLD",
+          "value": 0.4,
+          "source_text_snippet": "QoD L2 storage minimum: 0.4 (LOCK)",
+          "verdict": "PASS",
+          "note": "Spot check: QoD threshold correctly categorized as C7 (LOCK threshold)."
+        }
+      ],
+      "critical_errors": 0,
+      "warnings": 0,
+      "result": "PASS"
+    },
+    "sv2_extraction_completeness": {
+      "description": "Full SOT document scan for missing C1-C8 values",
+      "sources_checked": [
+        {
+          "file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "total_lines": 1982,
+          "lines_scanned": 1982
+        },
+        {
+          "file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "total_lines": 2428,
+          "lines_scanned": 2428
+        }
+      ],
+      "missing_items": [
+        {
+          "severity": "WARNING",
+          "source": "D2.0-05",
+          "section": "Section 8 - Logging/Observability",
+          "description": "Specific event_type string values (e.g., wf.stage.enter, wf.stage.exit, wf.tee.retry) could be extracted as C3 enum items. Currently only the general logging structure is captured, not the individual event type strings.",
+          "category": "C3",
+          "impact": "LOW - these are implementation-level event names, not core design parameters"
+        },
+        {
+          "severity": "WARNING",
+          "source": "D2.0-05",
+          "section": "Section 8 - Error Handling",
+          "description": "Specific failure_code values (POLICY_DENY, GT_ERR_COST_LIMIT, TOOL_TIMEOUT, AGENT_CRASH) mentioned in error handling tables could be extracted as C3 enum. The general error handling thresholds are captured but not the individual code strings.",
+          "category": "C3",
+          "impact": "LOW - operational error codes, not design thresholds"
+        },
+        {
+          "severity": "WARNING",
+          "source": "D2.0-06",
+          "section": "Section - Korean RAG Optimization",
+          "description": "Korean-specific tokenizer configuration values (e.g., mecab dictionary path patterns, Okt fallback settings) are referenced in prose but not explicitly extracted. Core chunk_size and overlap values are captured.",
+          "category": "C4",
+          "impact": "LOW - implementation detail for Korean NLP, not core design parameter"
+        }
+      ],
+      "total_missing_critical": 0,
+      "total_missing_warning": 3,
+      "result": "PASS"
+    },
+    "sv3_key_appropriateness": {
+      "description": "Check for free-form key inconsistencies and category misclassification",
+      "checks_performed": [
+        "Verified C1 keys follow C1_<DOMAIN>_<CONCEPT>_<QUALIFIER> pattern",
+        "Verified C2 keys include count+list pair consistency",
+        "Verified C3 keys represent true enumerations/classifications",
+        "Verified C4 keys are system/tool/framework names",
+        "Verified C5 keys define scope boundaries",
+        "Verified C6 keys represent version roadmap items",
+        "Verified C7 keys are LOCK/FREEZE threshold designations",
+        "Verified C8 keys are cross-document references"
+      ],
+      "observations": [
+        {
+          "severity": "INFO",
+          "description": "Some QoD threshold items (e.g., EA-06_050 C7_QOD_L2_STORAGE_MIN_THRESHOLD) are categorized as C7 rather than C1. This is CORRECT because these thresholds carry LOCK designations in the SOT, making C7 the appropriate category per extraction rules.",
+          "action": "none"
+        },
+        {
+          "severity": "INFO",
+          "description": "Key naming is consistent across both source documents. Workflow items use C1_WORKFLOW_ prefix, storage items use C1_STORAGE_ prefix. No duplicate concepts found under different keys.",
+          "action": "none"
+        }
+      ],
+      "duplicate_concepts_found": 0,
+      "misclassifications_found": 0,
+      "free_form_key_issues": 0,
+      "result": "PASS"
+    }
+  },
+  "verdict": "GOLD",
+  "verdict_rationale": "SV-1: All 22 sampled items show correct semantic mapping between source_text and extracted key/value. SV-2: Only 3 minor WARNING-level gaps identified (event_type strings, failure_codes, Korean tokenizer details), all LOW impact and below the 5-item SILVER threshold. SV-3: No misclassifications, no duplicate concepts, consistent key naming. Zero CRITICAL issues across all checks.",
+  "summary": {
+    "sv1_pass": true,
+    "sv1_samples": 22,
+    "sv1_critical": 0,
+    "sv2_pass": true,
+    "sv2_missing_critical": 0,
+    "sv2_missing_warning": 3,
+    "sv3_pass": true,
+    "sv3_issues": 0,
+    "overall": "GOLD - Layer B semantic validation passed with no critical issues. 3 low-impact WARNING items noted for completeness but do not affect design parameter coverage."
+  }
+}

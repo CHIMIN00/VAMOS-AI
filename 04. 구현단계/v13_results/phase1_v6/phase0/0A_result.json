@@ -1,0 +1,43 @@
+{
+  "script": "0-A",
+  "name": "Table Structure",
+  "errors": [
+    {
+      "file": "PART1",
+      "line": 203,
+      "expected_cols": 6,
+      "actual_cols": 11,
+      "type": "data_row_mismatch"
+    },
+    {
+      "file": "PART1",
+      "line": 834,
+      "expected_cols": 4,
+      "actual_cols": 7,
+      "type": "data_row_mismatch"
+    },
+    {
+      "file": "PART1",
+      "line": 1150,
+      "expected_cols": 5,
+      "actual_cols": 8,
+      "type": "data_row_mismatch"
+    },
+    {
+      "file": "RPT",
+      "line": 83,
+      "expected_cols": 6,
+      "actual_cols": 9,
+      "type": "data_row_mismatch"
+    },
+    {
+      "file": "RPT",
+      "line": 863,
+      "expected_cols": 4,
+      "actual_cols": 7,
+      "type": "data_row_mismatch"
+    }
+  ],
+  "total_errors": 5,
+  "verdict": "FAIL"
+}

@@ -1,0 +1,1451 @@
+[
+  {
+    "feature_id": "S7AE-396",
+    "feature_name": "C-045 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목은 SOT 문서(STEP7)에 ID 자체가 존재하지 않음. S7C-045는 UI/UX 기능(음성 대화)이며 별개 항목. 설계 단계 산출물로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7AE-397",
+    "feature_name": "C-046 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-398",
+    "feature_name": "C-047 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-399",
+    "feature_name": "C-048 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-400",
+    "feature_name": "C-049 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-401",
+    "feature_name": "C-050 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-402",
+    "feature_name": "C-051 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-403",
+    "feature_name": "C-052 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-404",
+    "feature_name": "C-053 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-405",
+    "feature_name": "C-054 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-406",
+    "feature_name": "C-055 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-407",
+    "feature_name": "C-056 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-408",
+    "feature_name": "C-057 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-409",
+    "feature_name": "C-058 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-410",
+    "feature_name": "C-059 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-411",
+    "feature_name": "C-060 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-412",
+    "feature_name": "C-061 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-413",
+    "feature_name": "C-062 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-414",
+    "feature_name": "C-063 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-415",
+    "feature_name": "C-064 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-416",
+    "feature_name": "C-065 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-417",
+    "feature_name": "C-066 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-418",
+    "feature_name": "C-067 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-419",
+    "feature_name": "C-068 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-420",
+    "feature_name": "C-069 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-421",
+    "feature_name": "C-070 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-422",
+    "feature_name": "C-071 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-423",
+    "feature_name": "C-072 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-424",
+    "feature_name": "C-073 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-425",
+    "feature_name": "C-074 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-426",
+    "feature_name": "C-075 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-427",
+    "feature_name": "C-076 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-428",
+    "feature_name": "C-077 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-429",
+    "feature_name": "C-078 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-430",
+    "feature_name": "C-079 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-431",
+    "feature_name": "C-080 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-432",
+    "feature_name": "C-081 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-433",
+    "feature_name": "C-082 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-434",
+    "feature_name": "C-083 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-435",
+    "feature_name": "C-084 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-436",
+    "feature_name": "C-085 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-437",
+    "feature_name": "C-086 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-438",
+    "feature_name": "C-087 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-439",
+    "feature_name": "C-088 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-440",
+    "feature_name": "C-089 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-441",
+    "feature_name": "C-090 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-442",
+    "feature_name": "C-091 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-443",
+    "feature_name": "C-092 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-444",
+    "feature_name": "C-093 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-445",
+    "feature_name": "C-094 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-446",
+    "feature_name": "C-095 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-447",
+    "feature_name": "C-096 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-448",
+    "feature_name": "C-097 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-449",
+    "feature_name": "C-098 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-450",
+    "feature_name": "C-099 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-451",
+    "feature_name": "C-100 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-452",
+    "feature_name": "C-101 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-453",
+    "feature_name": "C-102 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-454",
+    "feature_name": "C-103 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-455",
+    "feature_name": "C-104 시스템설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 시스템설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-490",
+    "feature_name": "D-035 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-491",
+    "feature_name": "D-036 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-492",
+    "feature_name": "D-037 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-493",
+    "feature_name": "D-038 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-494",
+    "feature_name": "D-039 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-495",
+    "feature_name": "D-040 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-496",
+    "feature_name": "D-041 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-497",
+    "feature_name": "D-042 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-498",
+    "feature_name": "D-043 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-499",
+    "feature_name": "D-044 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-500",
+    "feature_name": "D-045 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. S7D-045는 별도 기능(메모리 사용 통계 대시보드)으로 이 설계 항목과 무관."
+  },
+  {
+    "feature_id": "S7AE-501",
+    "feature_name": "D-046 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-502",
+    "feature_name": "D-047 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-503",
+    "feature_name": "D-048 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-504",
+    "feature_name": "D-049 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-505",
+    "feature_name": "D-050 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-506",
+    "feature_name": "D-051 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-507",
+    "feature_name": "D-052 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-508",
+    "feature_name": "D-053 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-509",
+    "feature_name": "D-054 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-510",
+    "feature_name": "D-055 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-511",
+    "feature_name": "D-056 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-512",
+    "feature_name": "D-057 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-513",
+    "feature_name": "D-058 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-514",
+    "feature_name": "D-059 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-515",
+    "feature_name": "D-060 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-516",
+    "feature_name": "D-061 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-517",
+    "feature_name": "D-062 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-518",
+    "feature_name": "D-063 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-519",
+    "feature_name": "D-064 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-520",
+    "feature_name": "D-065 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-521",
+    "feature_name": "D-066 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-522",
+    "feature_name": "D-067 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-523",
+    "feature_name": "D-068 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-524",
+    "feature_name": "D-069 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-525",
+    "feature_name": "D-070 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-526",
+    "feature_name": "D-071 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-527",
+    "feature_name": "D-072 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-528",
+    "feature_name": "D-073 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-529",
+    "feature_name": "D-074 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-530",
+    "feature_name": "D-075 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. S7D-075는 별도 기능(V1 저장소 비용=0원)이며 이 설계 항목과 무관."
+  },
+  {
+    "feature_id": "S7AE-531",
+    "feature_name": "D-076 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-532",
+    "feature_name": "D-077 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-533",
+    "feature_name": "D-078 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-534",
+    "feature_name": "D-079 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-535",
+    "feature_name": "D-080 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-536",
+    "feature_name": "D-081 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-537",
+    "feature_name": "D-082 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "TITLE_ONLY 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. 설계 단계 산출물."
+  },
+  {
+    "feature_id": "S7AE-456",
+    "feature_name": "D-001 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. S7D-001은 별도 기능(자동 사실 추출)이며 이 설계 항목과 무관. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-457",
+    "feature_name": "D-002 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-458",
+    "feature_name": "D-003 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-459",
+    "feature_name": "D-004 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-460",
+    "feature_name": "D-005 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-461",
+    "feature_name": "D-006 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-462",
+    "feature_name": "D-007 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-463",
+    "feature_name": "D-008 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-464",
+    "feature_name": "D-009 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-465",
+    "feature_name": "D-010 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-466",
+    "feature_name": "D-011 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-468",
+    "feature_name": "D-013 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-469",
+    "feature_name": "D-014 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-470",
+    "feature_name": "D-015 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-471",
+    "feature_name": "D-016 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-472",
+    "feature_name": "D-017 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-474",
+    "feature_name": "D-019 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-475",
+    "feature_name": "D-020 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-476",
+    "feature_name": "D-021 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-477",
+    "feature_name": "D-022 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-478",
+    "feature_name": "D-023 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-479",
+    "feature_name": "D-024 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-480",
+    "feature_name": "D-025 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-481",
+    "feature_name": "D-026 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-482",
+    "feature_name": "D-027 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-483",
+    "feature_name": "D-028 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-484",
+    "feature_name": "D-029 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-485",
+    "feature_name": "D-030 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-486",
+    "feature_name": "D-031 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-487",
+    "feature_name": "D-032 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-488",
+    "feature_name": "D-033 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "S7AE-489",
+    "feature_name": "D-034 데이터설계",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "RECLASSIFY_NA 확인. S7AE 데이터설계 항목으로 SOT에 구현 스펙 없음. TITLE_ONLY 정당."
+  },
+  {
+    "feature_id": "BGNR-021",
+    "feature_name": "AINV 안전장치 4종 (VaR 5% 경고+P2승인, 면책문구 100%삽입, 금융환각탐지, FOMO/패닉 15분 쿨다운)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. LOW severity 항목으로 PART2/STEP7에 독립 구현 스펙 없음. 안전장치 세부사항은 상위 모듈에 이미 내포. SKIP 정당."
+  },
+  {
+    "feature_id": "D202-053",
+    "feature_name": "사고 과정 표시 구현 (S7B-007)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. PART2에 '사고 과정 표시' 독립 구현 스펙 없음. UI 도메인 기능으로 구현 가이드 범위 외. SKIP 정당."
+  },
+  {
+    "feature_id": "D204-083",
+    "feature_name": "응답 결과 최소 필드 (model_id/trace_id/policy_decision/cost_summary)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 응답 필드 구조는 스키마 정의에 내포됨. 독립 구현 단위가 아닌 세부 사양. SKIP 정당."
+  },
+  {
+    "feature_id": "D204-125",
+    "feature_name": "분산 트레이싱 통합 (OpenTelemetry, V2=Jaeger, V3=Tempo)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. PART2에 분산 트레이싱 독립 구현 스펙 없음. 인프라 도메인. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-126",
+    "feature_name": "언어 학습 지원 (AI 대화/발음 평가/문법/어휘/게이미피케이션)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. 구현 가이드 범위 외. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-127",
+    "feature_name": "독서 어시스턴트 (챕터 핵심/Q&A/논문 분석)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. 구현 가이드 범위 외. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-128",
+    "feature_name": "퀴즈/테스트 자동 생성 (객관식/주관식/코드/시나리오, 난이도 자동 조정)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. 구현 가이드 범위 외. SKIP 정당."
+  },
+{
+    "feature_id": "D205-130",
+    "feature_name": "학습 분석 대시보드 (학습시간/진행률/테스트/간격반복/강점/약점)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 UI 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-133",
+    "feature_name": "팟캐스트/오디오 학습 (전사 요약 카드, NotebookLM 스타일 오디오 생성)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-134",
+    "feature_name": "책 요약 + 독서 관리 (트래킹/노트/인용구/책 간 연결)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-136",
+    "feature_name": "온라인 강의 통합 (Coursera/edX/Udemy 보조)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 교육 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-139",
+    "feature_name": "목표 관리 (OKR/SMART)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 생산성 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-140",
+    "feature_name": "시간 관리 (포모도로/시간 기록/효율 분석/일정 최적화)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 생산성 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-142",
+    "feature_name": "커리어 개발 지원 (스킬 갭 분석/이력서/자기소개서)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 생산성 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-144",
+    "feature_name": "프레젠테이션 코칭 (슬라이드/스크립트/리허설/Q&A)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 생산성 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D205-145",
+    "feature_name": "네트워킹/인맥 관리 (연락처/리마인더/인맥 KG)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 생산성 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D206-024",
+    "feature_name": "SourceQoD 스코어 산출/기록 모듈 (0~1)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. PART2에 SourceQoD는 스키마 필드(L454,541)로만 참조됨. 독립 모듈 구현 스펙은 없음. 스키마에 내포된 기능. SKIP 정당."
+  },
+  {
+    "feature_id": "D206-202",
+    "feature_name": "M-035 투자 리서치 노트",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 투자 도메인 기능으로 PART2/STEP7에 독립 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "D207-180",
+    "feature_name": "웰니스-투자 연동 (수면부족→결정연기)",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 웰니스 도메인 기능으로 PART2/STEP7에 구현 스펙 없음. SKIP 정당."
+  },
+  {
+    "feature_id": "P30-073",
+    "feature_name": "MOAT 4건 경쟁우위 구현 추적",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. 비즈니스 전략 추적 항목으로 PART2/STEP7에 구현 스펙 없음. 도메인 기능. SKIP 정당."
+  },
+  {
+    "feature_id": "P30-088",
+    "feature_name": "요청 자동 원자화 + 진행률 표시 구현",
+    "classification": "RECLASSIFIED",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "action=SKIP. UI 기능으로 PART2/STEP7에 독립 구현 스펙 없음. SKIP 정당."
+  }
+]

@@ -1,0 +1,141 @@
+# promptfoo_config.yaml - VAMOS 추출 프롬프트 테스트 설정 (B-12)
+# Usage: npx promptfoo eval --config D:/VAMOS/.claude/hooks/promptfoo_config.yaml
+
+description: "VAMOS EA 추출 프롬프트 품질 테스트"
+
+# 프롬프트 변형 목록 (경로 수정 필요)
+prompts:
+  - id: "extraction_v1"
+    label: "v1 기본 추출 프롬프트"
+    raw: |
+      다음 SOT 문서에서 정량적 사실(수치, 카운트, 목록, 상태, 설정, 제약, 잠금, 참조)을 추출하세요.
+      카테고리: C1(수치), C2(카운트), C3(목록), C4(상태), C5(설정), C6(제약), C7(잠금), C8(참조)
+
+      SOT 문서:
+      {{sot_content}}
+
+      JSON 형식으로 추출 결과를 반환하세요.
+
+  - id: "extraction_v2"
+    label: "v2 강화 추출 프롬프트"
+    raw: |
+      당신은 정밀 데이터 추출 전문가입니다. 아래 SOT 문서에서 정량적 사실만 추출하세요.
+
+      ## 추출 규칙
+      1. 모든 숫자값(C1), "N개" 패턴(C2), 목록(C3), 상태값(C4), 설정값(C5), 제약조건(C6), LOCK/FREEZE(C7), 참조(C8)
+      2. 각 항목에 source_line, source_text를 반드시 포함
+      3. 문서 후반부도 빠짐없이 추출
+
+      SOT 문서:
+      {{sot_content}}
+
+      JSON 형식으로 추출 결과를 반환하세요.
+
+# 테스트 대상 모델
+providers:
+  - id: "echo"
+    label: "Echo (테스트용)"
+
+# 테스트 케이스
+tests:
+  - description: "LOCK 값 추출 정확도"
+    vars:
+      sot_content: "시스템 설정값은 NEVER_AUTO이며 변경 금지(LOCK)입니다. 전체 모듈 수는 81개입니다."
+    assert:
+      - type: contains
+        value: "NEVER_AUTO"
+      - type: contains
+        value: "81"
+
+  - description: "수치 카테고리 추출"
+    vars:
+      sot_content: "코어 모듈 32개, 조건부 모듈 28개, 확장 모듈 21개로 총 81개 모듈로 구성됩니다."
+    assert:
+      - type: contains
+        value: "32"
+      - type: contains
+        value: "28"
+      - type: contains
+        value: "21"
+
+  - description: "목록 추출 완전성"
+    vars:
+      sot_content: |
+        지원 프로토콜 목록:
+        - HTTP/1.1
+        - HTTP/2
+        - WebSocket
+        - gRPC
+    assert:
+      - type: contains
+        value: "HTTP"
+      - type: contains
+        value: "WebSocket"
+      - type: contains
+        value: "gRPC"
+
+  - description: "카운트-목록 교차 검증"
+    vars:
+      sot_content: "보안 레벨은 3단계로 구분됩니다: Level-1(기본), Level-2(강화), Level-3(최고)."
+    assert:
+      - type: contains
+        value: "3"
+      - type: javascript
+        value: "file://D:/VAMOS/.claude/hooks/promptfoo_assertions.js:assertCountMatchesList"
+
+  - description: "후반부 추출 (컨텍스트 한계 테스트)"
+    vars:
+      sot_content: |
+        [문서 시작]
+        초반 내용: 시스템 버전 2.5
+        [... 중간 생략 ...]
+        [문서 후반부]
+        최대 동시 접속자 수: 10000명
+        타임아웃 설정: 30초
+    assert:
+      - type: contains
+        value: "10000"
+      - type: contains
+        value: "30"
+
+  - description: "참조 패턴 추출"
+    vars:
+      sot_content: "상세 사양은 §4.2.1을 참조하세요. 관련 문서: D2.0-03_Architecture.md"
+    assert:
+      - type: contains
+        value: "§4.2.1"
+
+  - description: "한국어 복합 명사 추출"
+    vars:
+      sot_content: "안전관리모듈의 초기화시간은 최대 5초이며, 비상정지기능은 0.1초 이내 작동합니다."
+    assert:
+      - type: contains
+        value: "5"
+      - type: contains
+        value: "0.1"
+
+  - description: "상태값 추출"
+    vars:
+      sot_content: "현재 시스템 상태: ACTIVE. 이전 상태: MAINTENANCE → ACTIVE 전환 완료."
+    assert:
+      - type: contains
+        value: "ACTIVE"
+
+  - description: "제약조건 추출"
+    vars:
+      sot_content: "메모리 사용량은 최소 4GB, 최대 64GB 범위 내여야 합니다. CPU 코어 수 >= 8."
+    assert:
+      - type: contains
+        value: "4"
+      - type: contains
+        value: "64"
+
+  - description: "빈 문서 처리"
+    vars:
+      sot_content: ""
+    assert:
+      - type: javascript
+        value: "file://D:/VAMOS/.claude/hooks/promptfoo_assertions.js:assertEmptyHandled"
+
+# 출력 설정
+outputPath: "D:/VAMOS/04. 구현단계/v13_results/phase0/extraction/validation/promptfoo_results.json"

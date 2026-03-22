@@ -1,0 +1,24 @@
+{
+  "script": "0-F",
+  "name": "ID Uniqueness + Reference Validity",
+  "total_unique_ids": 168,
+  "duplicates": [],
+  "missing_refs": [],
+  "errors": [],
+  "total_errors": 0,
+  "id_summary": {
+    "BLOCKER": 51,
+    "VERSION_ID": 60,
+    "BLUE_NODE": 10,
+    "SAFETY": 13,
+    "AGENT_TEAM": 47,
+    "CROSS_MATCH": 19,
+    "LOCK_AT": 28,
+    "DECISION": 27,
+    "I_SERIES": 283,
+    "E_SERIES": 43,
+    "S_SERIES": 23,
+    "CC_ISSUE": 19
+  },
+  "verdict": "PASS"
+}

@@ -1,0 +1,249 @@
+{
+  "재검토일": "2026-03-10",
+  "전체_STEP7_ID": 107,
+  "Step1_S7": 107,
+  "Step2_S7": 0,
+  "재분류_후보": 24,
+  "후보_목록": [
+    {
+      "id": "S7AE-490",
+      "orig_id": "S7D-035",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-035 데이터설계 — L0 세션 버퍼",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-493",
+      "orig_id": "S7D-038",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-038 데이터설계 — L3 장기 메모리",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-495",
+      "orig_id": "S7D-040",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-040 데이터설계 — 승격 알고리즘",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-497",
+      "orig_id": "S7D-042",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-042 데이터설계 — 검색 우선순위",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-498",
+      "orig_id": "S7D-043",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-043 데이터설계 — 메모리 스키마 MemoryItem",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-501",
+      "orig_id": "S7D-046",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-046 데이터설계 — 사용자 확인 UX",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-502",
+      "orig_id": "S7D-047",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-047 데이터설계 — Prompt Cache",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-503",
+      "orig_id": "S7D-048",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-048 데이터설계 — Semantic Cache GPTCache",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-505",
+      "orig_id": "S7D-050",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-050 데이터설계 — 결과 캐시",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-506",
+      "orig_id": "S7D-051",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-051 데이터설계 — 무효화 정책",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-508",
+      "orig_id": "S7D-053",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-053 데이터설계 — 크기 제한 LRU",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-510",
+      "orig_id": "S7D-055",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-055 데이터설계 — 문서 수집 unstructured",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-511",
+      "orig_id": "S7D-056",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-056 데이터설계 — 동적 청킹",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-512",
+      "orig_id": "S7D-057",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-057 데이터설계 — Contextual Retrieval",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-513",
+      "orig_id": "S7D-058",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-058 데이터설계 — 임베딩+인덱싱 자동화",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-514",
+      "orig_id": "S7D-059",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-059 데이터설계 — 메타데이터 태깅",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-520",
+      "orig_id": "S7D-065",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-065 데이터설계 — 4등급 분류",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-521",
+      "orig_id": "S7D-066",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-066 데이터설계 — PII 감지+마스킹",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-524",
+      "orig_id": "S7D-069",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-069 데이터설계 — AES-256 암호화",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-527",
+      "orig_id": "S7D-072",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-072 데이터설계 — 백업 자동화",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-529",
+      "orig_id": "S7D-074",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-074 데이터설계 — 사용량 모니터링",
+      "severity": "HIGH | **Version**: V2",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-530",
+      "orig_id": "S7D-075",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-075 데이터설계 — V1 비용=0원",
+      "severity": "HIGH | **Version**: V3",
+      "reason": "R1(V1+CRITICAL)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": true,
+      "in_r2": false
+    },
+    {
+      "id": "S7AE-532",
+      "orig_id": "S7D-077",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-077 데이터설계 — ZSTD 압축",
+      "severity": "HIGH | **Version**: V3",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    },
+    {
+      "id": "S7AE-535",
+      "orig_id": "S7D-080",
+      "classification": "NOT_APPLICABLE",
+      "내용": "D-080 데이터설계 — 저장소 추상화 레이어",
+      "severity": "HIGH | **Version**: V3",
+      "reason": "R2(V1+HIGH)에 구현 상세 존재. NOT_APPLICABLE 부적절 → Step 2 이동 권고",
+      "in_r1": false,
+      "in_r2": true
+    }
+  ]
+}

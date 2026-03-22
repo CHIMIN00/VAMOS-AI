@@ -1,0 +1,186 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "description": "EA JSON 저장 전 결정론적 검증 (DV-1~DV-10) — CRITICAL 있으면 저장 차단",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash D:/VAMOS/.claude/hooks/block_invalid_ea.sh",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "CM JSON 저장 전 결정론적 검증 (CM-DV1~DV6) — CRITICAL 있으면 저장 차단",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash D:/VAMOS/.claude/hooks/block_invalid_cm.sh",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "description": "[약점F 대응] Bash로 EA/CM JSON을 우회 생성하는 것을 차단",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); CMD=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"command\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$CMD\" | grep -qE \"(>|>>|tee|cp|mv|echo).*(v13_EA|v13_CM).*\\.json\"; then echo \"[HOOK 차단] Bash로 EA/CM JSON 파일을 직접 생성/수정할 수 없습니다.\" >&2; echo \"반드시 Write tool을 사용하세요. Write tool은 DV 자동 검증을 적용합니다.\" >&2; exit 2; fi; exit 0'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "[약점F 대응] Edit으로 EA JSON 수정 시 DV 재검증 경고",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_EA.*\\.json$\"; then echo \"[HOOK 경고] EA JSON을 Edit으로 수정하면 DV 재검증이 필요합니다.\" >&2; echo \"수정 후 반드시 /quality-gate $FILE 를 실행하세요.\" >&2; fi; exit 0'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "Edit으로 CM JSON 수정 시 CM-DV 재검증 경고",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_CM.*\\.json$\"; then echo \"[HOOK 경고] CM JSON을 Edit으로 수정하면 CM-DV 재검증이 필요합니다.\" >&2; echo \"수정 후 반드시 /validate $FILE 를 실행하세요.\" >&2; fi; exit 0'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "SOT 파일 수정 전 경고 — integrity 영향 알림",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qiE \"docs[/\\\\\\\\]sot\"; then echo \"[HOOK 경고] SOT 원본 파일을 수정합니다: $(basename \"$FILE\")\" >&2; echo \"수정 후 /integrity $(basename \"$FILE\") 로 영향 범위를 확인하세요.\" >&2; fi; exit 0'",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "description": "EA JSON 저장 후 결정론적 검증 결과 요약 + 품질등급 + /quality-gate 권장",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_EA.*\\.json$\"; then echo \"[HOOK] EA 산출물 저장됨: $(basename \"$FILE\")\"; python D:/VAMOS/.claude/hooks/deterministic_validator.py \"$FILE\" 2>&1 | tail -5; echo \"\"; echo \"[HOOK] /quality-gate $FILE 로 전체 검증 파이프라인을 실행하세요.\"; fi'",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "CM JSON 저장 후 CM-DV 결정론적 검증 자동 실행",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_CM.*\\.json$\"; then echo \"[HOOK] CM 산출물 저장됨: $(basename \"$FILE\")\"; python D:/VAMOS/.claude/hooks/cm_validator.py \"$FILE\" 2>&1 | tail -5; echo \"\"; echo \"[HOOK] /validate $FILE 로 상세 검증을 실행하세요.\"; fi'",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "검증/감사/SOT체크 결과 저장 시 알림",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qE \"(_dv_result|_sv_result|_cm_dv_result|_audit|_sot_check|_quality_gate|cross_match|validation)\\.json$\"; then echo \"[HOOK] 검증 결과 저장됨: $(basename \"$FILE\")\"; fi'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "Delta 파일 저장 시 영향 범위 알림",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qiE \"(delta|sot_delta)\\.json$\"; then echo \"[HOOK] Delta 파일 저장됨: $(basename \"$FILE\")\"; echo \"[HOOK] /delta-apply status 로 적용 상태를 확인하세요.\"; echo \"[HOOK] /integrity all 로 SOT 무결성을 확인하세요.\"; fi'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "Phase 리포트 저장 시 알림",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qE \"phase[0-9]+_report\\.md$\"; then echo \"[HOOK] Phase 리포트 저장됨: $(basename \"$FILE\")\"; echo \"[HOOK] /report summary 로 전체 진행 상황을 확인하세요.\"; fi'",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "[약점F 대응] EA JSON Edit 후 DV 재검증 자동 실행",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_EA.*\\.json$\"; then echo \"[HOOK] EA JSON 수정됨 — DV 재검증 실행 중...\"; python D:/VAMOS/.claude/hooks/deterministic_validator.py \"$FILE\" 2>&1 | tail -3; fi'",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "CM JSON Edit 후 CM-DV 재검증 자동 실행",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -q \"v13_CM.*\\.json$\"; then echo \"[HOOK] CM JSON 수정됨 — CM-DV 재검증 실행 중...\"; python D:/VAMOS/.claude/hooks/cm_validator.py \"$FILE\" 2>&1 | tail -3; fi'",
+            "timeout": 30000
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "description": "SOT 파일 수정 후 영향 범위 알림 (integrity 연동)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash D:/VAMOS/.claude/hooks/sot_change_detector.sh",
+            "timeout": 10000
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "description": "SOT 파일 Write 후 영향 범위 알림 (integrity 연동)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash D:/VAMOS/.claude/hooks/sot_change_detector.sh",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "description": "세션 종료 전 미완료/미검증 항목 종합 알림",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'ISSUES=0; EA_DIR=\"D:/VAMOS/04. 구현단계/v13_results/phase0/extraction\"; VAL_DIR=\"$EA_DIR/validation\"; echo \"=== VAMOS 세션 종료 체크 ===\"; echo \"\"; if [ -f \"$EA_DIR/v13_EA_incomplete.json\" ]; then echo \"[경고] 미완료 EA 항목 존재: v13_EA_incomplete.json\"; ISSUES=$((ISSUES+1)); fi; if [ -d \"$VAL_DIR\" ]; then FAIL_COUNT=$(grep -rl \"\\\"result\\\": \\\"FAIL\\\"\" \"$VAL_DIR\" 2>/dev/null | wc -l); if [ \"$FAIL_COUNT\" -gt 0 ]; then echo \"[경고] DV FAIL 상태인 EA가 ${FAIL_COUNT}개 있습니다:\"; grep -rl \"\\\"result\\\": \\\"FAIL\\\"\" \"$VAL_DIR\" 2>/dev/null | xargs -I{} basename {} | sed \"s/_dv_result.json//\"; ISSUES=$((ISSUES+1)); fi; fi; CM_VAL_DIR=\"D:/VAMOS/04. 구현단계/v13_results/phase0/cross_match/validation\"; if [ -d \"$CM_VAL_DIR\" ]; then CM_FAIL=$(grep -rl \"\\\"result\\\": \\\"FAIL\\\"\" \"$CM_VAL_DIR\" 2>/dev/null | wc -l); if [ \"$CM_FAIL\" -gt 0 ]; then echo \"[경고] CM-DV FAIL 상태인 CM이 ${CM_FAIL}개 있습니다\"; ISSUES=$((ISSUES+1)); fi; fi; if [ $ISSUES -eq 0 ]; then echo \"모든 검증 항목이 정상입니다.\"; fi; echo \"\"'",
+            "timeout": 15000
+          }
+        ]
+      }
+    ]
+  }
+}

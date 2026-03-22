@@ -1,0 +1,388 @@
+{
+  "agent": 3,
+  "version_focus": "V2",
+  "session": "session_18",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T14:30:00Z",
+  "step_a": {
+    "description": "Forward verification: PART2 V2 claims -> SOT",
+    "facts_checked": 18,
+    "match": 13,
+    "mismatch": 3,
+    "no_source": 2,
+    "details": [
+      {
+        "id": "A3-FA-01",
+        "claim": "V2 module count = 42 (CORE+COND)",
+        "part2_ref": "PART2 L109 module table",
+        "sot_ref": "D2.0-01 module registry",
+        "verdict": "MATCH",
+        "note": "V2 = 22(I) + 10(E) + 1(A) + 3(B) + 1(C) + 3(D) + 2(EVX) + 0(S) = 42. Consistent."
+      },
+      {
+        "id": "A3-FA-02",
+        "claim": "V2 cost ceiling = 93,000 KRW/month ($70) LOCK",
+        "part2_ref": "PART2 L107, L2688, L2844",
+        "sot_ref": "D2.0-07 section 4.1: V2 = 93,000 KRW ($70)",
+        "verdict": "MATCH",
+        "note": "Exact match with SOT D2.0-07 cost table. AGENT_TEAMS_SPEC 11.2.1 also confirms 93,000/month."
+      },
+      {
+        "id": "A3-FA-03",
+        "claim": "V2 daily cost limit = 3,100 KRW ($2.3)",
+        "part2_ref": "PART2 cost table",
+        "sot_ref": "D2.0-07 section 4.1, AGENT_TEAMS_SPEC 11.2.1",
+        "verdict": "MATCH",
+        "note": "Consistent across all SOT sources."
+      },
+      {
+        "id": "A3-FA-04",
+        "claim": "V2 autonomy level = L3_AUTONOMOUS",
+        "part2_ref": "PART2 L108",
+        "sot_ref": "D2.0-07 section 3.2: L3 = FULL_AUTO",
+        "verdict": "MISMATCH",
+        "severity": "LOW",
+        "note": "PART2 uses 'L3_AUTONOMOUS', SOT D2.0-07 defines L3 as 'FULL_AUTO'. Naming convention difference. PART2 autonomy naming does not exactly match D2.0-07 enum names (L0=FULL_MANUAL, L1=SUPERVISED, L2=SEMI_AUTO, L3=FULL_AUTO)."
+      },
+      {
+        "id": "A3-FA-05",
+        "claim": "V2 DB = PostgreSQL + Qdrant + Neo4j",
+        "part2_ref": "PART2 L105 comparison table",
+        "sot_ref": "D2.0-06 section 2.2: V2+ = Postgres + Qdrant(primary)/Chroma(fallback)",
+        "verdict": "MATCH",
+        "note": "PART2 adds Neo4j for KG, consistent with V2 Phase 1 migration plan. D2.0-06 mentions Postgres+Qdrant for storage, Neo4j is added as implementation choice."
+      },
+      {
+        "id": "A3-FA-06",
+        "claim": "V2 LLM = Claude + Ollama (2-tier)",
+        "part2_ref": "PART2 L106",
+        "sot_ref": "D2.0-07 section 4.1: V2 Mini 60-70% / Main 30-40%",
+        "verdict": "MATCH",
+        "note": "2-tier is consistent with cost strategy. AGENT_TEAMS_SPEC 9.2 confirms Lead=Opus, Sub=Sonnet/Haiku."
+      },
+      {
+        "id": "A3-FA-07",
+        "claim": "V2 SDAR level = AR-L2~L3",
+        "part2_ref": "PART2 L110",
+        "sot_ref": "SDAR_SPEC section 1.4: V2=COND(AR-L2 base, AR-L3 conditional). Section 10.2 confirms AR-L3 for V2.",
+        "verdict": "MATCH",
+        "note": "SDAR_SPEC V2 scope includes AR-L3 MEDIUM risk repairs."
+      },
+      {
+        "id": "A3-FA-08",
+        "claim": "V2 adds +10 COND modules: I-7, I-12, I-22, I-23, I-25, A-4, E-13~E-16",
+        "part2_ref": "PART2 L2689",
+        "sot_ref": "D2.0-01 module registry, D2.0-02 I-Series",
+        "verdict": "MATCH",
+        "note": "Module IDs verified against SOT. I-7(ProjectSessionMgr), I-12(WorkflowBuilder), I-22(TaskMgr), I-23(DocStructuring), I-25(SDAR), A-4(DebateMode), E-13~E-16(Calendar/Email/Cloud/Storage)."
+      },
+      {
+        "id": "A3-FA-09",
+        "claim": "V2 infra = VPS + Docker Compose (Hetzner recommended)",
+        "part2_ref": "PART2 L104",
+        "sot_ref": "No direct SOT for Hetzner recommendation",
+        "verdict": "NO_SOURCE",
+        "note": "Hetzner recommendation is PART2-specific implementation guidance. No SOT document specifies VPS vendor. This is appropriate implementation-level detail."
+      },
+      {
+        "id": "A3-FA-10",
+        "claim": "V2 Lead Agent model = Opus",
+        "part2_ref": "Not explicitly stated in V2 section header; inferred from Agent Teams LOCK-AT tables",
+        "sot_ref": "AGENT_TEAMS_SPEC section 9.2: Lead=Opus, Sub=Sonnet/Haiku",
+        "verdict": "MISMATCH",
+        "severity": "MEDIUM",
+        "note": "PART2 section 4 (V2) does not explicitly state V2 Lead Agent model upgrade to Opus. This was identified in Phase 2 as F-A4-01 and remains unresolved."
+      },
+      {
+        "id": "A3-FA-11",
+        "claim": "V2 migration: SQLite->PostgreSQL, JSONL->PostgreSQL, Chroma->Qdrant, JSON->Neo4j",
+        "part2_ref": "PART2 L2697-2701",
+        "sot_ref": "PHASE_B7_MIGRATION_STRATEGY, D2.0-06 section 2.2",
+        "verdict": "MATCH",
+        "note": "Migration paths align with SOT storage roadmap."
+      },
+      {
+        "id": "A3-FA-12",
+        "claim": "V2 migration follows 10-Step Orchestration",
+        "part2_ref": "PART2 L2713-2726",
+        "sot_ref": "PHASE_B7 section 6",
+        "verdict": "MATCH",
+        "note": "10-step process matches PHASE_B7 specification."
+      },
+      {
+        "id": "A3-FA-13",
+        "claim": "V2 SDAR AR-L3 adds 5 MEDIUM risk repair actions (RA_006-RA_010)",
+        "part2_ref": "PART2 L3255-3260",
+        "sot_ref": "SDAR_SPEC section 10.2: RA_006-RA_010 confirmed",
+        "verdict": "MATCH",
+        "note": "5 MEDIUM actions match exactly: patch_prompt_template, update_config_parameter, rotate_api_key, rollback_to_snapshot, compress_logs."
+      },
+      {
+        "id": "A3-FA-14",
+        "claim": "V2 memory activation: L1 default ON, L2 restricted, L3 restricted",
+        "part2_ref": "Inferred from V2 Phase 2 module descriptions",
+        "sot_ref": "D2.0-06 section 2.3: V2 L1=active, L2=restricted(approval required), L3=restricted",
+        "verdict": "MATCH",
+        "note": "Consistent with D2.0-06 P1-SCOPE activation table."
+      },
+      {
+        "id": "A3-FA-15",
+        "claim": "V2 Vector DB adapter: QdrantAdapter (primary), PgvectorAdapter (fallback)",
+        "part2_ref": "PART2 L2793-2797 Chroma->Qdrant migration",
+        "sot_ref": "D2.0-06 section 2.2-A: V2 = QdrantAdapter(server), PgvectorAdapter(fallback)",
+        "verdict": "MATCH",
+        "note": "Adapter interface and implementation choices match SOT."
+      },
+      {
+        "id": "A3-FA-16",
+        "claim": "V2 per-task budget = 2,000 KRW",
+        "part2_ref": "Not found in PART2",
+        "sot_ref": "AGENT_TEAMS_SPEC section 11.2.1: V2 per-task budget = 2,000 KRW",
+        "verdict": "NO_SOURCE",
+        "note": "PART2 does not mention per-task budget. Only daily/monthly limits are stated."
+      },
+      {
+        "id": "A3-FA-17",
+        "claim": "V2 Agent Teams: max 10 agents, max 10 parallel",
+        "part2_ref": "Implied via LOCK-AT-014 (V2=10)",
+        "sot_ref": "AGENT_TEAMS_SPEC section 9.2: max_agents=10, max_parallel=10",
+        "verdict": "MATCH",
+        "note": "LOCK-AT-014 in PART2 states V2 parallel limit=10, consistent with SOT."
+      },
+      {
+        "id": "A3-FA-18",
+        "claim": "V2 implements MessageBus via Redis",
+        "part2_ref": "PART2 Agent Teams section 2.3.0: V2+ = RedisMessageBus",
+        "sot_ref": "AGENT_TEAMS_SPEC section 9.2: MessageBus = Redis",
+        "verdict": "MISMATCH",
+        "severity": "LOW",
+        "note": "Content matches but PART2 places this in the general Agent Teams section (section 6.7), not explicitly in V2 section (section 4). Minor organizational issue."
+      }
+    ]
+  },
+  "step_b": {
+    "description": "Reverse verification: SOT V2 critical facts -> PART2 presence",
+    "facts_checked": 12,
+    "present": 7,
+    "missing": 5,
+    "details": [
+      {
+        "id": "A3-FB-01",
+        "sot_fact": "V2 Lead Agent model = Opus (AGENT_TEAMS_SPEC 9.2, 11.2.1)",
+        "part2_status": "MISSING",
+        "severity": "MEDIUM",
+        "note": "V2 section in PART2 does not explicitly state Lead=Opus. Phase 2 finding F-A4-01 still unresolved."
+      },
+      {
+        "id": "A3-FB-02",
+        "sot_fact": "V2 per-task budget = 2,000 KRW (AGENT_TEAMS_SPEC 11.2.1)",
+        "part2_status": "MISSING",
+        "severity": "LOW",
+        "note": "Per-task budget not mentioned in PART2. Phase 2 finding F-A4-02 still unresolved."
+      },
+      {
+        "id": "A3-FB-03",
+        "sot_fact": "V2 collaboration patterns: Sequential, Parallel, Debate, Supervisor, Handoff (AGENT_TEAMS_SPEC 9.2)",
+        "part2_status": "PRESENT",
+        "note": "PART2 V2 Phase 2 references Debate Mode (A-4) and Agent Teams patterns."
+      },
+      {
+        "id": "A3-FB-04",
+        "sot_fact": "V2 SDAR: Anomaly Detection Channel C added (SDAR_SPEC 10.2)",
+        "part2_status": "MISSING",
+        "severity": "LOW",
+        "note": "PART2 V2 SDAR section mentions AR-L3 actions but does not explicitly list Channel C Anomaly Detection as V2 addition."
+      },
+      {
+        "id": "A3-FB-05",
+        "sot_fact": "V2 storage: L2 activation requires approval (S03-MOD-001, D2.0-06 2.3)",
+        "part2_status": "PRESENT",
+        "note": "Implied through memory/storage architecture sections."
+      },
+      {
+        "id": "A3-FB-06",
+        "sot_fact": "V2 Agent lifecycle: created->initialized->active->suspended->terminated->archived (AGENT_TEAMS_SPEC 2.4.1 LOCK)",
+        "part2_status": "MISSING",
+        "severity": "MEDIUM",
+        "note": "Agent lifecycle states not described in PART2 V2 section. Phase 2 finding F-A4-03 persistent."
+      },
+      {
+        "id": "A3-FB-07",
+        "sot_fact": "V2 daily cost limit = 3,100 KRW (D2.0-07 4.1)",
+        "part2_status": "PRESENT",
+        "note": "Shown in version comparison table."
+      },
+      {
+        "id": "A3-FB-08",
+        "sot_fact": "V2 downshift threshold: 80% warning (force_mini), 100% block (deny) (D2.0-07 4.3)",
+        "part2_status": "PRESENT",
+        "note": "Referenced via R10 rule and cost gate mechanisms."
+      },
+      {
+        "id": "A3-FB-09",
+        "sot_fact": "V2 Agent RBAC mapping table (AGENT_TEAMS_SPEC 6.5.1 LOCK)",
+        "part2_status": "MISSING",
+        "severity": "MEDIUM",
+        "note": "Phase 2 finding from v8 Agent 4 MISSING #2. Agent-specific RBAC permissions not detailed in PART2."
+      },
+      {
+        "id": "A3-FB-10",
+        "sot_fact": "V2 COND module activation conditions: QoD >= 0.85, RAG accuracy >= 60% (PART2 own requirement)",
+        "part2_status": "PRESENT",
+        "note": "Stated in V2-Phase 2 user guide section L3207."
+      },
+      {
+        "id": "A3-FB-11",
+        "sot_fact": "V2 embedding model: BGE-M3 Matryoshka 256dim (D2.0-06 DEC-005)",
+        "part2_status": "PRESENT",
+        "note": "Referenced in Chroma->Qdrant migration section L2795."
+      },
+      {
+        "id": "A3-FB-12",
+        "sot_fact": "V2 Debate Mode = COND (conditional ON) (AGENT_TEAMS_SPEC 9.2)",
+        "part2_status": "PRESENT",
+        "note": "A-4 Debate Mode listed as V2 COND module in PART2 L3264."
+      }
+    ]
+  },
+  "dim_c": {
+    "description": "Implementation feasibility checks for V2",
+    "checks": 7,
+    "pass": 5,
+    "fail": 2,
+    "details": [
+      {
+        "id": "A3-DC-01",
+        "check": "V2 SQLite->PostgreSQL migration within 3-week Phase 1",
+        "verdict": "PASS",
+        "note": "10-Step Orchestration is well-defined. Alembic-based migration with batch processing (1000 records) is standard practice. Rollback functions included."
+      },
+      {
+        "id": "A3-DC-02",
+        "check": "V2 cost ceiling 93,000 KRW ($70) covers infra + LLM + tools",
+        "verdict": "PASS",
+        "note": "Hetzner CX31 ~$8/month + LLM API costs within budget. Docker Compose eliminates managed service fees. Cost monitoring dashboard included."
+      },
+      {
+        "id": "A3-DC-03",
+        "check": "V2 116 COND modules (10 original + 106 v10) implementable in 6 weeks (Phase 2 Week 4-9)",
+        "verdict": "FAIL",
+        "severity": "MEDIUM",
+        "note": "116 modules in 6 weeks = ~19 modules/week. Even with batch implementation via Mixin patterns and 7-category grouping, this is aggressive. The 106 v10 modules rely on BaseModule + Mixin pattern, but each still needs testing. Risk of quality degradation under time pressure."
+      },
+      {
+        "id": "A3-DC-04",
+        "check": "V2 Chroma->Qdrant migration with 30-day Dual-Collection feasible",
+        "verdict": "PASS",
+        "note": "4-Phase approach (create collection, re-embed, dual-run, cutover) is sound. BGE-M3 re-embedding with FlagEmbedding is standard. HNSW parameters (ef_construct=128, m=16) are reasonable."
+      },
+      {
+        "id": "A3-DC-05",
+        "check": "V2 SDAR AR-L3 depends on S-4 Error Pattern Miner (SDAR_SPEC 10.2)",
+        "verdict": "FAIL",
+        "severity": "LOW",
+        "note": "SDAR_SPEC 10.2 lists S-4 integration as V2 requirement, but S-4 is classified as V3 EXP module (S-2~S-8 are V3 per PART2 V3-Phase 2 group 4). Dependency conflict: V2 SDAR AR-L3 needs S-4, but S-4 is V3. PART2 should clarify whether a V2-minimal S-4 stub is sufficient."
+      },
+      {
+        "id": "A3-DC-06",
+        "check": "V2 Neo4j Community deployment within Docker Compose",
+        "verdict": "PASS",
+        "note": "Neo4j Community 5.x has official Docker image. Bolt protocol (7687) + HTTP (7474) ports well-defined. Integration with existing VAMOS modules is feasible."
+      },
+      {
+        "id": "A3-DC-07",
+        "check": "V2 Redis MessageBus for Agent Teams communication",
+        "verdict": "PASS",
+        "note": "Redis 7+ in Docker Compose. Pub/Sub for multi-agent messaging is standard. HMAC signature validation adds minimal overhead."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A3-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "V2 Lead Agent model upgrade to Opus not explicitly stated in PART2 section 4",
+      "evidence": "AGENT_TEAMS_SPEC 9.2 and 11.2.1 clearly define V2 Lead=Opus. PART2 V2 section omits this. Previously identified as F-A4-01 in Phase 2."
+    },
+    {
+      "id": "F-A3-02",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "V2 per-task budget (2,000 KRW) from AGENT_TEAMS_SPEC 11.2.1 not reflected in PART2",
+      "evidence": "SOT defines V1=500/task, V2=2000/task, V3=5000/task. PART2 only mentions daily/monthly limits."
+    },
+    {
+      "id": "F-A3-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Agent lifecycle states (created->initialized->active->suspended->terminated->archived) from AGENT_TEAMS_SPEC 2.4.1 LOCK not described in PART2 V2 section",
+      "evidence": "SOT provides detailed lifecycle with LogEvent mappings. PART2 section 4 omits this entirely."
+    },
+    {
+      "id": "F-A3-04",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Agent RBAC mapping table from AGENT_TEAMS_SPEC 6.5.1 LOCK not included in PART2",
+      "evidence": "SOT defines can_delegate/can_approve/can_access_p2/tool_access per agent type. PART2 lacks per-agent permission matrix."
+    },
+    {
+      "id": "F-A3-05",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "V2 autonomy level naming: PART2 'L3_AUTONOMOUS' vs D2.0-07 'FULL_AUTO'",
+      "evidence": "PART2 L108 uses L3_AUTONOMOUS, SOT D2.0-07 3.2 defines L3 as FULL_AUTO."
+    },
+    {
+      "id": "F-A3-06",
+      "severity": "MEDIUM",
+      "type": "feasibility",
+      "description": "V2 116 COND modules in 6-week Phase 2 is aggressive schedule",
+      "evidence": "116 modules / 6 weeks = ~19/week. Even with Mixin pattern batching, this risks quality issues. v10 106 modules categorized into 7 groups (CAT-A through CAT-G), but individual testing overhead remains."
+    },
+    {
+      "id": "F-A3-07",
+      "severity": "LOW",
+      "type": "dependency_conflict",
+      "description": "V2 SDAR AR-L3 requires S-4 Error Pattern Miner, but S-4 is classified as V3 EXP module",
+      "evidence": "SDAR_SPEC 10.2 lists S-4 as V2 requirement. PART2 V3-Phase 2 group 4 places S-2~S-8 in V3. Dependency not resolved."
+    },
+    {
+      "id": "F-A3-08",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "V2 SDAR Anomaly Detection Channel C not explicitly listed as V2 addition in PART2",
+      "evidence": "SDAR_SPEC 10.2 V2 scope includes 'Layer 1: Anomaly Detection (Channel C) added'. PART2 I-25 V2 description focuses on AR-L3 actions only."
+    }
+  ],
+  "v8_comparison": {
+    "v8_findings_count": 12,
+    "v13_findings_count": 8,
+    "resolved": [
+      "B-1 to B-4 (Kill Switch, LOCK 9 items, Category E, P2 limits) - all confirmed MATCH in v8, remain valid",
+      "B-12 (AR-L0~L4 14 repair actions) - confirmed MATCH, action counts accurate"
+    ],
+    "new": [
+      "F-A3-06 (V2 116 modules in 6 weeks feasibility concern)",
+      "F-A3-07 (S-4 dependency conflict between V2 SDAR and V3 S-Series)"
+    ],
+    "persistent": [
+      "F-A3-01 (V2 Lead=Opus missing) - persistent from Phase 2 F-A4-01",
+      "F-A3-03 (Agent lifecycle missing) - persistent from Phase 2 F-A4-03",
+      "F-A3-04 (Agent RBAC missing) - persistent from v8 Agent 4 MISSING #2",
+      "F-A3-05 (Autonomy level naming) - new finding, related to general naming consistency"
+    ]
+  },
+  "statistics": {
+    "total_facts_checked": 37,
+    "step_a_match_rate": "72.2%",
+    "step_b_present_rate": "58.3%",
+    "dim_c_pass_rate": "71.4%",
+    "overall_accuracy": "67.6%",
+    "findings_by_severity": {
+      "HIGH": 0,
+      "MEDIUM": 4,
+      "LOW": 4
+    }
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "script": "0-B",
+  "name": "Arithmetic Sums",
+  "errors": [
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 1,
+      "expected_sum": 416,
+      "actual_sum": 212,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 2,
+      "expected_sum": 28,
+      "actual_sum": 14,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 3,
+      "expected_sum": 168,
+      "actual_sum": 84,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 535,
+      "line": 541,
+      "column": 2,
+      "expected_sum": 144190000,
+      "actual_sum": 266000,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 703,
+      "line": 709,
+      "column": 0,
+      "expected_sum": 10,
+      "actual_sum": 5,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 703,
+      "line": 709,
+      "column": 2,
+      "expected_sum": 9,
+      "actual_sum": 3,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 1291,
+      "line": 1297,
+      "column": 0,
+      "expected_sum": 10,
+      "actual_sum": 5,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1285,
+      "line": 1292,
+      "column": 0,
+      "expected_sum": 15,
+      "actual_sum": 6,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1285,
+      "line": 1292,
+      "column": 1,
+      "expected_sum": -31,
+      "actual_sum": -19,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1285,
+      "line": 1292,
+      "column": 2,
+      "expected_sum": -3,
+      "actual_sum": 102,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1285,
+      "line": 1292,
+      "column": 3,
+      "expected_sum": -8,
+      "actual_sum": -5,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1285,
+      "line": 1292,
+      "column": 4,
+      "expected_sum": 31,
+      "actual_sum": 19,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1296,
+      "line": 1308,
+      "column": 0,
+      "expected_sum": 115,
+      "actual_sum": 17,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1296,
+      "line": 1308,
+      "column": 1,
+      "expected_sum": -114,
+      "actual_sum": -9,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1296,
+      "line": 1308,
+      "column": 4,
+      "expected_sum": 114,
+      "actual_sum": 9,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1529,
+      "line": 1540,
+      "column": 0,
+      "expected_sum": 45,
+      "actual_sum": 10,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 1529,
+      "line": 1540,
+      "column": 2,
+      "expected_sum": 110,
+      "actual_sum": 24,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 2953,
+      "line": 2959,
+      "column": 0,
+      "expected_sum": 6,
+      "actual_sum": 4,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 2953,
+      "line": 2959,
+      "column": 2,
+      "expected_sum": 120300,
+      "actual_sum": 60100,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3052,
+      "line": 3056,
+      "column": 1,
+      "expected_sum": 30837,
+      "actual_sum": 14,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3052,
+      "line": 3056,
+      "column": 4,
+      "expected_sum": 500010000,
+      "actual_sum": 3000050000,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3130,
+      "line": 3137,
+      "column": 1,
+      "expected_sum": -295,
+      "actual_sum": 1025000315000,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3218,
+      "line": 3221,
+      "column": 4,
+      "expected_sum": 4,
+      "actual_sum": 1,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3303,
+      "line": 3318,
+      "column": 0,
+      "expected_sum": 91,
+      "actual_sum": 14,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART2",
+      "table_start": 3303,
+      "line": 3318,
+      "column": 2,
+      "expected_sum": 48,
+      "actual_sum": -3,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 17,
+      "line": 25,
+      "column": 1,
+      "expected_sum": 19,
+      "actual_sum": 92,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 17,
+      "line": 25,
+      "column": 2,
+      "expected_sum": 139,
+      "actual_sum": 82,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 17,
+      "line": 25,
+      "column": 3,
+      "expected_sum": 62,
+      "actual_sum": 87,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 93,
+      "line": 96,
+      "column": 3,
+      "expected_sum": 4,
+      "actual_sum": 24,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 93,
+      "line": 96,
+      "column": 4,
+      "expected_sum": 523,
+      "actual_sum": 23,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 157,
+      "line": 161,
+      "column": 0,
+      "expected_sum": 9,
+      "actual_sum": 6,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 157,
+      "line": 161,
+      "column": 1,
+      "expected_sum": 13,
+      "actual_sum": 7,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 157,
+      "line": 161,
+      "column": 2,
+      "expected_sum": 1055,
+      "actual_sum": -396237,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 157,
+      "line": 161,
+      "column": 3,
+      "expected_sum": 10,
+      "actual_sum": 8161142129143811,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 263,
+      "line": 271,
+      "column": 0,
+      "expected_sum": 21,
+      "actual_sum": 7,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 263,
+      "line": 271,
+      "column": 1,
+      "expected_sum": 24683,
+      "actual_sum": 27,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 263,
+      "line": 271,
+      "column": 2,
+      "expected_sum": 510,
+      "actual_sum": -23,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 287,
+      "line": 303,
+      "column": 0,
+      "expected_sum": 105,
+      "actual_sum": 15,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 287,
+      "line": 303,
+      "column": 1,
+      "expected_sum": 251,
+      "actual_sum": 26,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 422,
+      "line": 432,
+      "column": 2,
+      "expected_sum": 384,
+      "actual_sum": 19,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 422,
+      "line": 432,
+      "column": 3,
+      "expected_sum": 2,
+      "actual_sum": 120,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 495,
+      "line": 499,
+      "column": 3,
+      "expected_sum": 2824,
+      "actual_sum": 21,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 495,
+      "line": 499,
+      "column": 4,
+      "expected_sum": 10,
+      "actual_sum": 2,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 503,
+      "line": 509,
+      "column": 0,
+      "expected_sum": 724,
+      "actual_sum": 43,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 696,
+      "line": 702,
+      "column": 1,
+      "expected_sum": 1946,
+      "actual_sum": 27,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 751,
+      "line": 762,
+      "column": 0,
+      "expected_sum": 45,
+      "actual_sum": 10,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 751,
+      "line": 762,
+      "column": 3,
+      "expected_sum": 664,
+      "actual_sum": 1415434435,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 779,
+      "line": 786,
+      "column": 2,
+      "expected_sum": 353,
+      "actual_sum": 35378,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 824,
+      "line": 830,
+      "column": 0,
+      "expected_sum": 10,
+      "actual_sum": 5,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 824,
+      "line": 830,
+      "column": 2,
+      "expected_sum": 2146,
+      "actual_sum": 1658,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 824,
+      "line": 830,
+      "column": 3,
+      "expected_sum": 44,
+      "actual_sum": 22334,
+      "tolerance": "±1"
+    }
+  ],
+  "total_errors": 51,
+  "verdict": "FAIL"
+}

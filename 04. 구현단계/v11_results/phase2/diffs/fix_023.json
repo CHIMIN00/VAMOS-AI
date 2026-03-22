@@ -1,0 +1,16 @@
+{
+  "fix_id": "FIX-023",
+  "fg": "FG-H02",
+  "tier": 3,
+  "order": 23,
+  "severity": "HIGH",
+  "description": "§3 V1 Phases 2~6에 실행가이드/AI프롬프트/규칙/참조SOT 블록 추가 (§2 V0과 동등 상세도)",
+  "changes": [
+    {
+      "section": "§3 V1-Phase 2~6",
+      "action": "각 Phase 구현항목 테이블 앞에 실행가이드(AI프롬프트+규칙+참조SOT) 블록 삽입"
+    }
+  ],
+  "ripple_expected": ["§6.13 작업량 변동", "§7.2 V1 체크리스트", "변경이력"],
+  "applied_at": "2026-03-13"
+}

@@ -1,0 +1,710 @@
+{
+  "_meta": {
+    "task": "[-1E] GO/NO-GO 62항목 ↔ Stage Gate ~193항목 관계 + 병렬 패턴 정의",
+    "source_doc": "VAMOS_구현가이드_PART2_구현단계.md v20.4.0",
+    "input_sections": {
+      "go_nogo": "§7.1-§7.4 (62항목)",
+      "stage_gate": "§2-§5 내 '단계 완료 검증' 섹션 (193항목)"
+    },
+    "created": "2026-03-07",
+    "pipeline": "v9 Phase -1E"
+  },
+
+  "stage_gate_summary": {
+    "total_items": 193,
+    "by_version": {
+      "V0": {
+        "stages": 6,
+        "label": "STEP",
+        "items_per_stage": {
+          "STEP-1→2": 8,
+          "STEP-2→3": 9,
+          "STEP-3→4": 8,
+          "STEP-4→5": 13,
+          "STEP-5→6": 10,
+          "STEP-6→V1": 10
+        },
+        "total": 58
+      },
+      "V1": {
+        "stages": 6,
+        "label": "Phase",
+        "items_per_stage": {
+          "Phase-1→2": 10,
+          "Phase-2→3": 12,
+          "Phase-3→4": 11,
+          "Phase-4→5": 12,
+          "Phase-5→6": 11,
+          "Phase-6→V2": 10
+        },
+        "total": 66
+      },
+      "V2": {
+        "stages": 3,
+        "label": "Phase",
+        "items_per_stage": {
+          "Phase-1→2": 10,
+          "Phase-2→3": 13,
+          "Phase-3→V3": 12
+        },
+        "total": 35
+      },
+      "V3": {
+        "stages": 3,
+        "label": "Phase",
+        "items_per_stage": {
+          "Phase-1→2": 10,
+          "Phase-2→3": 12,
+          "Phase-3→Final": 12
+        },
+        "total": 34
+      }
+    },
+    "verification": "58 + 66 + 35 + 34 = 193"
+  },
+
+  "go_nogo_summary": {
+    "total_items": 62,
+    "by_version": {
+      "V0": 16,
+      "V1": 21,
+      "V2": 14,
+      "V3": 11
+    },
+    "verification": "16 + 21 + 14 + 11 = 62"
+  },
+
+  "mapping": {
+    "V0": {
+      "section": "§7.1",
+      "go_nogo_count": 16,
+      "stage_gate_count": 58,
+      "items": [
+        {
+          "go_nogo_id": "V0-GNG-01",
+          "description": "통신 계층: Python 백엔드 확정",
+          "ref": "V0-004",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-3→4 #1 Python JSON-RPC 서버 기동", "STEP-3→4 #2 13개 RPC 메서드 스텁"],
+          "note": "GO/NO-GO가 상위 결정, Stage Gate에서 세부 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-02",
+          "description": "IMPLEMENTATION 계층 = PHASE_B 명시",
+          "ref": "V0-002",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 — Stage Gate에 대응 항목 없음"
+        },
+        {
+          "go_nogo_id": "V0-GNG-03",
+          "description": "V0 비용 상한 = V1 동일 명시",
+          "ref": "V0-001",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-4→5 #5 CostGate 80%/100%"],
+          "note": "비용 정책 상위 결정, Stage Gate에서 구현 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-04",
+          "description": "디렉토리 구조: PHASE_B2 정본 명시 + monorepo 생성",
+          "ref": "V0-003",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["STEP-1→2 #1 monorepo 디렉토리 구조"],
+          "note": "Stage Gate STEP-1의 부분집합"
+        },
+        {
+          "go_nogo_id": "V0-GNG-05",
+          "description": "config 포맷: config.toml 통일",
+          "ref": "V0-005",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-1→2 #5 config.v1.toml 생성", "STEP-5→6 #8 config 로드", "STEP-5→6 #9 LOCK 값 정확성", "STEP-5→6 #10 3단계 로딩 순서"],
+          "note": "config 통일 결정이 여러 Stage Gate 항목으로 분화"
+        },
+        {
+          "go_nogo_id": "V0-GNG-06",
+          "description": "D2.1 스키마 v3.0.0 통일 승격",
+          "ref": "CC-001",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 (크로스컷 CC-001) — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V0-GNG-07",
+          "description": "PLAN-2.0 '(대체됨)' 표기",
+          "ref": "CC-010",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 — Stage Gate에 없음 (파이프라인 계획서 예시와 일치)"
+        },
+        {
+          "go_nogo_id": "V0-GNG-08",
+          "description": "BASE-1.3 전 24개 규칙 코드 매핑",
+          "ref": "RULE 1.3",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "규칙 매핑 문서 작업 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V0-GNG-09",
+          "description": "스캐폴딩 + 의존성 설치 (pip/npm/cargo)",
+          "ref": "PHASE_B2/B3",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-1→2 #1 monorepo 디렉토리 구조", "STEP-1→2 #2 Python 의존성 설치", "STEP-1→2 #3 Rust 의존성 설치", "STEP-1→2 #4 Node 의존성 설치"],
+          "note": "GO/NO-GO가 STEP-1 여러 항목을 요약"
+        },
+        {
+          "go_nogo_id": "V0-GNG-10",
+          "description": "config.v1.toml LOCK 값 배치",
+          "ref": "PHASE_B4",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["STEP-5→6 #9 LOCK 값 정확성"],
+          "note": "LOCK 값 배치는 Stage Gate 검증의 부분"
+        },
+        {
+          "go_nogo_id": "V0-GNG-11",
+          "description": "25개 스키마 코드 생성 (Pydantic v2/Zod/serde)",
+          "ref": "D2.1-D1~D8",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["STEP-2→3 #1 25개 Pydantic v2 모델", "STEP-2→3 #9 타입 생성 스크립트"],
+          "note": "Stage Gate STEP-2에서 상세 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-12",
+          "description": "I-1~I-3, I-5, I-19 스켈레톤 생성 (5개, I-4 제외)",
+          "ref": "READINESS §2.7",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-4→5 #1 IntentFrame 생성", "STEP-4→5 #2 I-1 상태 전이", "STEP-4→5 #3 I-2 Context Builder", "STEP-4→5 #10 I-19 Approval stub"],
+          "note": "5개 모듈 스켈레톤 → Stage Gate에서 개별 모듈 동작 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-13",
+          "description": "L0 세션 메모리 최소 구현",
+          "ref": "D2.0-06 §2.1",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-5→6 #1 SQLite 테이블 생성", "STEP-5→6 #2 MemoryRecord CRUD", "STEP-5→6 #3 세션별 조회", "STEP-5→6 #4 L0 TTL 적용"],
+          "note": "상위 요약, Stage Gate에서 4개 세부 항목으로 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-14",
+          "description": "비용 엔진 ₩40,000/월 하드코딩",
+          "ref": "ABSOLUTE LOCK",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["STEP-4→5 #5 CostGate 80%/100%"],
+          "note": "CostGate 검증의 부분 (하드코딩 값)"
+        },
+        {
+          "go_nogo_id": "V0-GNG-15",
+          "description": "Guardrails L1+L2 설정",
+          "ref": "PHASE_B4",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-4→5 #4 PolicyGate deny"],
+          "note": "L1+L2 설정이 PolicyGate 동작으로 검증"
+        },
+        {
+          "go_nogo_id": "V0-GNG-16",
+          "description": "Ollama + Chroma + SQLite 초기화",
+          "ref": "PHASE_B4",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["STEP-1→2 #8 Ollama 모델", "STEP-5→6 #1 SQLite 테이블 생성", "STEP-4→5 #12 Ollama LLM 호출"],
+          "note": "3개 스택 초기화를 요약, 여러 Stage에 걸쳐 검증"
+        }
+      ],
+      "type_counts": {
+        "SUBSET": 4,
+        "SUPERSET": 8,
+        "UNIQUE": 4
+      }
+    },
+
+    "V1": {
+      "section": "§7.2",
+      "go_nogo_count": 21,
+      "stage_gate_count": 66,
+      "items": [
+        {
+          "go_nogo_id": "V1-GNG-01",
+          "description": "I-Series 25개 모듈 정본 확정",
+          "ref": "V1-001, V1-016",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-1→2 #1 I-Series 17개 모듈 코드"],
+          "note": "25개 정본 확정 > Phase-1에서 17개 구현 검증"
+        },
+        {
+          "go_nogo_id": "V1-GNG-02",
+          "description": "E-15, S-5 명칭 겸용 처리",
+          "ref": "V1-002, V1-003",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "명칭 표준화 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-03",
+          "description": "38개 DEFER/TBD V1 차단 0건 확인",
+          "ref": "V1-008",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "사전 확인 작업 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-04",
+          "description": "datetime.utcnow() 전수 교체",
+          "ref": "V1-005",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "코드 표준화 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-05",
+          "description": "approval_status enum 통일 (D2.1-D7 SOT=2개)",
+          "ref": "V1-004",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #7 I-19 Approval 워크플로우"],
+          "note": "Approval 검증의 부분 (enum 통일)"
+        },
+        {
+          "go_nogo_id": "V1-GNG-06",
+          "description": "QoD 5요소 공식 통일",
+          "ref": "V1-006",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "공식 표준화 — Stage Gate에 직접 검증 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-07",
+          "description": "Front Mini LLM = I-1 내부 명시",
+          "ref": "V1-007",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #8 I-1 감정 탐지"],
+          "note": "I-1 구현 세부사항"
+        },
+        {
+          "go_nogo_id": "V1-GNG-08",
+          "description": "Guardrails 4-Layer 명시 (V1=L1+L2 활성, L3+L4=V2+)",
+          "ref": "V1-010",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-1→2 #2 5-Gate 전체 동작"],
+          "note": "Guardrails 정책이 Gate 검증에 반영"
+        },
+        {
+          "go_nogo_id": "V1-GNG-09",
+          "description": "비용 상한 ₩40,000 통일",
+          "ref": "V1-013",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-5→6 #4 Cost 시뮬레이션"],
+          "note": "비용 정책 결정 → 시뮬레이션으로 검증"
+        },
+        {
+          "go_nogo_id": "V1-GNG-10",
+          "description": "React 18.3 통일",
+          "ref": "V1-014",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-4→5 #5 ~44개 React 컴포넌트"],
+          "note": "React 버전은 컴포넌트 구현 전제"
+        },
+        {
+          "go_nogo_id": "V1-GNG-11",
+          "description": "LangChain Allowlist 명시",
+          "ref": "V1-009",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "보안 정책 문서 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-12",
+          "description": "V1 CRITICAL 보안항목 15개 구현 완료",
+          "ref": "READINESS_REVIEW §9, §6.5",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-5→6 #11 보안 감사"],
+          "note": "15개 보안항목 → 보안 감사 Gate에서 총괄 검증"
+        },
+        {
+          "go_nogo_id": "V1-GNG-13",
+          "description": "테스트 인프라 구축 (Python 80%+, Rust 80%+, React 80%+)",
+          "ref": "PHASE_B5",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-5→6 #6 Python 커버리지", "Phase-5→6 #7 Rust 커버리지", "Phase-5→6 #8 React 커버리지"],
+          "note": "커버리지 목표 → 3개 Stage Gate 항목으로 분화"
+        },
+        {
+          "go_nogo_id": "V1-GNG-14",
+          "description": "CI/CD 설정 완료 (GitHub Actions 8-stage)",
+          "ref": "PHASE_B6",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-5→6 #10 CI/CD 완성"],
+          "note": "CI/CD 완성 Gate의 부분"
+        },
+        {
+          "go_nogo_id": "V1-GNG-15",
+          "description": "스토리지 스택 구축 (SQLite+Chroma+JSONL+Graph)",
+          "ref": "D2.0-06",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-2→3 #1 L0 Session Memory", "Phase-2→3 #3 Chroma Vector DB", "Phase-2→3 #4 JSON GraphRAG"],
+          "note": "4개 스토리지 → 여러 Phase-2 항목으로 분화"
+        },
+        {
+          "go_nogo_id": "V1-GNG-16",
+          "description": "EventTypeRegistry 통합",
+          "ref": "CC-006",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "크로스컷 항목 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-17",
+          "description": "Python/TS 스키마 동기화 도구 (Pydantic→Zod)",
+          "ref": "CC-007",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "도구 구현 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-18",
+          "description": "BEGINNER_GUIDE 모듈 목록 갱신",
+          "ref": "CC-002",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-19",
+          "description": "B↔L 매핑표 추가",
+          "ref": "CC-009",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-2→3 #12 B↔L 매핑 정합성"],
+          "note": "매핑표가 Stage Gate에서 정합성 검증"
+        },
+        {
+          "go_nogo_id": "V1-GNG-20",
+          "description": "STEP7 항목 수 비고 추가",
+          "ref": "CC-011",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V1-GNG-21",
+          "description": "V0 GO 체크리스트 전수 통과",
+          "ref": "§7.1",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["V0 STEP-6→V1 전체 10항목"],
+          "note": "V0 전체 GO/NO-GO가 V0 최종 Stage Gate를 포괄"
+        }
+      ],
+      "type_counts": {
+        "SUBSET": 5,
+        "SUPERSET": 7,
+        "UNIQUE": 9
+      }
+    },
+
+    "V2": {
+      "section": "§7.3",
+      "go_nogo_count": 14,
+      "stage_gate_count": 35,
+      "items": [
+        {
+          "go_nogo_id": "V2-GNG-01",
+          "description": "V1→V2 전환 조건 6개 충족",
+          "ref": "CLAUDE.md §10",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["V1 Phase-6→V2 #10 V1→V2 전환 조건"],
+          "note": "6개 세부 조건 요약"
+        },
+        {
+          "go_nogo_id": "V2-GNG-02",
+          "description": "Agent Teams FREEZE 해석 확정",
+          "ref": "V2-003",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "정책 결정 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V2-GNG-03",
+          "description": "STEP7 V2 CRITICAL ~190건 상세 스펙 보강",
+          "ref": "V2-008",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 보강 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V2-GNG-04",
+          "description": "10-Layer/Gate 접두어 변경 (CL-Layer/CL-Gate)",
+          "ref": "V2-001, CC-004",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "명칭 표준화 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V2-GNG-05",
+          "description": "SQLite→PostgreSQL 마이그레이션",
+          "ref": "V2-004",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #1 SQLite → PostgreSQL"],
+          "note": "Stage Gate에서 직접 검증"
+        },
+        {
+          "go_nogo_id": "V2-GNG-06",
+          "description": "Chroma→Qdrant 재임베딩",
+          "ref": "V2-005",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #3 Chroma → Qdrant"],
+          "note": "Stage Gate에서 직접 검증"
+        },
+        {
+          "go_nogo_id": "V2-GNG-07",
+          "description": "NetworkX→Neo4j 변환",
+          "ref": "V2-006",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #4 JSON → Neo4j"],
+          "note": "Stage Gate에서 직접 검증"
+        },
+        {
+          "go_nogo_id": "V2-GNG-08",
+          "description": "SDAR V2 COND 활성화 조건 확정",
+          "ref": "V2-002",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-2→3 #3 COND 기본 OFF", "Phase-2→3 #6 I-25 SDAR AR-L2→AR-L3"],
+          "note": "SDAR 정책이 2개 Stage Gate 항목으로 분화"
+        },
+        {
+          "go_nogo_id": "V2-GNG-09",
+          "description": "MessageBus 구현 결정 (Redis vs In-Memory)",
+          "ref": "DEFER-AT-001",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→V3 #1 Redis MessageBus"],
+          "note": "결정 사항이 Stage Gate에서 구현 검증"
+        },
+        {
+          "go_nogo_id": "V2-GNG-10",
+          "description": "HMAC 프로토콜 상세 완성",
+          "ref": "CC-012",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→V3 #4 HMAC-SHA256 인증"],
+          "note": "Stage Gate에서 직접 검증"
+        },
+        {
+          "go_nogo_id": "V2-GNG-11",
+          "description": "STEP7 모듈 연동 구체화",
+          "ref": "CC-005",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 보강 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V2-GNG-12",
+          "description": "V2 인프라 10개 컴포넌트 구축 (Docker Compose)",
+          "ref": "PHASE_B6 §5",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["Phase-1→2 #6 Docker Compose 헬스체크", "Phase-1→2 #9 10-Step Orchestration"],
+          "note": "인프라 구축이 2개 Stage Gate로 분화"
+        },
+        {
+          "go_nogo_id": "V2-GNG-13",
+          "description": "V2 비용 모니터링 대시보드 (₩93,000 이내)",
+          "ref": "ABSOLUTE LOCK",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "비용 모니터링 UI — Stage Gate에 명시적 대응 없음"
+        },
+        {
+          "go_nogo_id": "V2-GNG-14",
+          "description": "QoD 가중치 이중 체계 구분 명시",
+          "ref": "CC-003",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 작업 — Stage Gate에 직접 대응 없음"
+        }
+      ],
+      "type_counts": {
+        "SUBSET": 5,
+        "SUPERSET": 3,
+        "UNIQUE": 6
+      }
+    },
+
+    "V3": {
+      "section": "§7.4",
+      "go_nogo_count": 11,
+      "stage_gate_count": 34,
+      "items": [
+        {
+          "go_nogo_id": "V3-GNG-01",
+          "description": "V2→V3 전환 조건 충족",
+          "ref": "CLAUDE.md §10",
+          "mapping_type": "SUPERSET",
+          "mapped_to": ["V2 Phase-3→V3 #12 V2→V3 전환 조건"],
+          "note": "6개 세부 조건 요약"
+        },
+        {
+          "go_nogo_id": "V3-GNG-02",
+          "description": "K8s 배포 명세 상세 완성",
+          "ref": "V3-001",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-1→2 #1 K8s 클러스터 배포"],
+          "note": "명세 완성 → Stage Gate에서 배포 검증"
+        },
+        {
+          "go_nogo_id": "V3-GNG-03",
+          "description": "S-8 Self-evo 거버넌스 상세화",
+          "ref": "V3-002",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #3 S-8 Self-evo Governance"],
+          "note": "상세화 → Stage Gate에서 구현 검증"
+        },
+        {
+          "go_nogo_id": "V3-GNG-04",
+          "description": "V3 비용 상한 재산정 + 승인",
+          "ref": "V3-003",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #11 비용 상한 준수"],
+          "note": "비용 승인 → Stage Gate에서 준수 검증"
+        },
+        {
+          "go_nogo_id": "V3-GNG-05",
+          "description": "GraphRAG 벤치마크 정의",
+          "ref": "V3-004",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #9 38개 벤치마크"],
+          "note": "벤치마크 정의가 38개 전체의 일부"
+        },
+        {
+          "go_nogo_id": "V3-GNG-06",
+          "description": "SDAR V3 ON 조건 충족",
+          "ref": "SDAR SPEC",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #4 SDAR AR-L4", "Phase-3→Final #5 SDAR ON 조건"],
+          "note": "SDAR 조건이 2개 Stage Gate 항목으로 분화"
+        },
+        {
+          "go_nogo_id": "V3-GNG-07",
+          "description": "STEP7 TITLE_ONLY ~317건 상세 보강",
+          "ref": "V2-008 확장",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "문서 보강 — Stage Gate에 직접 대응 없음"
+        },
+        {
+          "go_nogo_id": "V3-GNG-08",
+          "description": "에이전트 50+ 병렬 인프라 구축",
+          "ref": "LOCK-AT-014",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #2 50+ Agent Mesh"],
+          "note": "인프라 구축 → Stage Gate에서 메시 검증"
+        },
+        {
+          "go_nogo_id": "V3-GNG-09",
+          "description": "A2A 프로토콜 설계",
+          "ref": "DEFER-AT-005",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #7 A2A 프로토콜"],
+          "note": "설계 → Stage Gate에서 구현 검증"
+        },
+        {
+          "go_nogo_id": "V3-GNG-10",
+          "description": "Federated Agent 승인 체계",
+          "ref": "DEFER-AT-004",
+          "mapping_type": "UNIQUE",
+          "mapped_to": [],
+          "note": "승인 체계 — Stage Gate에 명시적 대응 없음"
+        },
+        {
+          "go_nogo_id": "V3-GNG-11",
+          "description": "Agent Marketplace 기준 확정",
+          "ref": "DEFER-AT-003",
+          "mapping_type": "SUBSET",
+          "mapped_to": ["Phase-3→Final #1 Agent Marketplace"],
+          "note": "기준 확정 → Stage Gate에서 마켓플레이스 구현 검증"
+        }
+      ],
+      "type_counts": {
+        "SUBSET": 8,
+        "SUPERSET": 1,
+        "UNIQUE": 2
+      }
+    }
+  },
+
+  "mapping_type_totals": {
+    "SUBSET": 22,
+    "SUPERSET": 19,
+    "UNIQUE": 21,
+    "total": 62,
+    "description": {
+      "SUBSET": "GO/NO-GO 항목이 Stage Gate의 부분집합 (Stage Gate가 더 상세)",
+      "SUPERSET": "GO/NO-GO 항목이 여러 Stage Gate 항목을 상위 요약",
+      "UNIQUE": "GO/NO-GO에만 존재 (문서 작업, 정책 결정, 명칭 표준화 등)"
+    }
+  },
+
+  "parallel_patterns": {
+    "description": "병렬 실행이 가능한 Stage 정의",
+    "patterns": [
+      {
+        "id": "PAR-V1-PH6",
+        "version": "V1",
+        "stage": "Phase 6",
+        "parallel_with": ["Phase 3", "Phase 4", "Phase 5"],
+        "validate_after": "Phase 5",
+        "rule": "작업은 Phase 3 시작 후 병행 가능, 검증/완료 선언은 Phase 5 완료 후",
+        "gt2_attribute": {
+          "parallel_with": ["Phase 3", "Phase 4", "Phase 5"],
+          "validate_after": "Phase 5"
+        },
+        "rationale": "V1-Phase 6 (AI Investing, MCP, Self-check)는 핵심 파이프라인(Phase 3-5)과 독립적인 도메인 모듈이므로 병렬 진행 가능"
+      },
+      {
+        "id": "PAR-V2-PH23",
+        "version": "V2",
+        "stage": "Phase 2",
+        "parallel_with": ["Phase 3"],
+        "validate_after": "Phase 2",
+        "rule": "COND 모듈 개발(Phase 2)과 Agent Teams/보안(Phase 3)의 일부 작업은 병행 가능",
+        "gt2_attribute": {
+          "parallel_with": ["Phase 3"],
+          "validate_after": "Phase 2"
+        },
+        "rationale": "V2-Phase 2 COND 모듈과 Phase 3 Agent Teams는 의존성이 낮아 부분 병렬 가능"
+      }
+    ]
+  },
+
+  "stage_gate_count_verification": {
+    "V0": {
+      "STEP-1→2": 8,
+      "STEP-2→3": 9,
+      "STEP-3→4": 8,
+      "STEP-4→5": 13,
+      "STEP-5→6": 10,
+      "STEP-6→V1": 10,
+      "total": 58,
+      "formula": "8 + 9 + 8 + 13 + 10 + 10 = 58"
+    },
+    "V1": {
+      "Phase-1→2": 10,
+      "Phase-2→3": 12,
+      "Phase-3→4": 11,
+      "Phase-4→5": 12,
+      "Phase-5→6": 11,
+      "Phase-6→V2": 10,
+      "total": 66,
+      "formula": "10 + 12 + 11 + 12 + 11 + 10 = 66"
+    },
+    "V2": {
+      "Phase-1→2": 10,
+      "Phase-2→3": 13,
+      "Phase-3→V3": 12,
+      "total": 35,
+      "formula": "10 + 13 + 12 = 35"
+    },
+    "V3": {
+      "Phase-1→2": 10,
+      "Phase-2→3": 12,
+      "Phase-3→Final": 12,
+      "total": 34,
+      "formula": "10 + 12 + 12 = 34"
+    },
+    "grand_total": 193,
+    "grand_formula": "58 + 66 + 35 + 34 = 193",
+    "note": "파이프라인 계획서의 ~190항목 추정치 대비 실제 193항목 (3항목 오차)"
+  }
+}

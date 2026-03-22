@@ -1,0 +1,339 @@
+{
+  "script": "IMP-D",
+  "name": "Config Key Validation + V7-1 Canonical Section Check",
+  "part2_section_count": 17,
+  "src_section_count": 18,
+  "expected_sections": 13,
+  "b4_canonical_sections": [
+    "core",
+    "cost",
+    "embedding",
+    "graph_db",
+    "guardrails",
+    "llm",
+    "logging",
+    "mcp",
+    "rate_limit",
+    "rbac",
+    "semantic_cache",
+    "storage",
+    "vector_db"
+  ],
+  "part2_sections": [
+    "approval",
+    "core",
+    "cost",
+    "embedding",
+    "graph_db",
+    "llm",
+    "logging",
+    "mcp",
+    "rbac",
+    "self_check",
+    "semantic_cache",
+    "storage",
+    "tool.mypy",
+    "tool.poetry.group.dev.dependencies",
+    "tool.ruff",
+    "tool.ruff.lint",
+    "vector_db"
+  ],
+  "src_sections": [
+    "core",
+    "cost",
+    "embedding",
+    "graph_db",
+    "guardrails",
+    "llm",
+    "logging",
+    "logging.sinks",
+    "mcp",
+    "mcp.bridges",
+    "rate_limit",
+    "rate_limit.targets",
+    "rbac",
+    "rbac.roles",
+    "semantic_cache",
+    "storage",
+    "storage.memory_ttl",
+    "vector_db"
+  ],
+  "part2_only_sections": [
+    "approval",
+    "self_check",
+    "tool.mypy",
+    "tool.poetry.group.dev.dependencies",
+    "tool.ruff",
+    "tool.ruff.lint"
+  ],
+  "src_only_sections": [
+    "guardrails",
+    "logging.sinks",
+    "mcp.bridges",
+    "rate_limit",
+    "rate_limit.targets",
+    "rbac.roles",
+    "storage.memory_ttl"
+  ],
+  "matched_sections": [
+    "core",
+    "cost",
+    "embedding",
+    "graph_db",
+    "llm",
+    "logging",
+    "mcp",
+    "rbac",
+    "semantic_cache",
+    "storage",
+    "vector_db"
+  ],
+  "section_name_issues": [
+    {
+      "type": "missing_from_part2",
+      "sections": [
+        "guardrails",
+        "rate_limit"
+      ],
+      "detail": "B4 canonical sections not found in PART2 config"
+    },
+    {
+      "type": "extra_in_part2",
+      "sections": [
+        "approval",
+        "self_check",
+        "tool.mypy",
+        "tool.poetry.group.dev.dependencies",
+        "tool.ruff",
+        "tool.ruff.lint"
+      ],
+      "detail": "PART2 config sections not in B4 canonical list"
+    }
+  ],
+  "value_mismatches": [
+    {
+      "section": "core",
+      "key": "default_execution_mode",
+      "part2_value": "\"mini\"",
+      "src_value": "\"supervised\""
+    },
+    {
+      "section": "core",
+      "key": "pipeline_stages",
+      "part2_value": "[\"intake\",\"plan\",\"execute\",\"verify\",\"deliver\"]",
+      "src_value": "[\"intake\", \"plan\", \"execute\", \"verify\", \"deliver\"]"
+    },
+    {
+      "section": "embedding",
+      "key": "matryoshka_dim",
+      "part2_value": "256",
+      "src_value": "512"
+    },
+    {
+      "section": "graph_db",
+      "key": "json_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/graph/graph.json\"",
+      "src_value": "\"~/.vamos/graph/\""
+    },
+    {
+      "section": "graph_db",
+      "key": "max_hops",
+      "part2_value": "2",
+      "src_value": "3"
+    },
+    {
+      "section": "llm",
+      "key": "fallback_model",
+      "part2_value": "\"gpt-4o-mini\"",
+      "src_value": "\"ollama/gemma-2b\""
+    },
+    {
+      "section": "llm",
+      "key": "mini_model",
+      "part2_value": "\"ollama/llama3.2:3b\"",
+      "src_value": "\"ollama/gemma-2b\""
+    },
+    {
+      "section": "llm",
+      "key": "main_model",
+      "part2_value": "\"ollama/llama3.1:8b\"",
+      "src_value": "\"gpt-4o-mini\""
+    },
+    {
+      "section": "llm",
+      "key": "max_tokens",
+      "part2_value": "2048",
+      "src_value": "4096"
+    },
+    {
+      "section": "rbac",
+      "key": "default_role",
+      "part2_value": "\"OWNER\"",
+      "src_value": "\"OPERATOR\""
+    },
+    {
+      "section": "semantic_cache",
+      "key": "max_entries",
+      "part2_value": "1000",
+      "src_value": "10000"
+    },
+    {
+      "section": "storage",
+      "key": "log_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/logs/events.jsonl\"",
+      "src_value": "\"~/.vamos/logs/\""
+    },
+    {
+      "section": "storage",
+      "key": "db_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/sqlite/vamos.db\"",
+      "src_value": "\"~/.vamos/vamos.db\""
+    },
+    {
+      "section": "vector_db",
+      "key": "persist_directory",
+      "part2_value": "\"${VAMOS_DATA_DIR}/chroma\"",
+      "src_value": "\"~/.vamos/chroma\""
+    },
+    {
+      "section": "vector_db",
+      "key": "collection_name",
+      "part2_value": "\"vamos_default\"",
+      "src_value": "\"vamos_memory\""
+    }
+  ],
+  "part2_total_keys": 110,
+  "src_total_keys": 78,
+  "errors": [
+    {
+      "type": "value_mismatch",
+      "section": "core",
+      "key": "default_execution_mode",
+      "part2_value": "\"mini\"",
+      "src_value": "\"supervised\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "core",
+      "key": "pipeline_stages",
+      "part2_value": "[\"intake\",\"plan\",\"execute\",\"verify\",\"deliver\"]",
+      "src_value": "[\"intake\", \"plan\", \"execute\", \"verify\", \"deliver\"]"
+    },
+    {
+      "type": "value_mismatch",
+      "section": "embedding",
+      "key": "matryoshka_dim",
+      "part2_value": "256",
+      "src_value": "512"
+    },
+    {
+      "type": "value_mismatch",
+      "section": "graph_db",
+      "key": "json_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/graph/graph.json\"",
+      "src_value": "\"~/.vamos/graph/\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "graph_db",
+      "key": "max_hops",
+      "part2_value": "2",
+      "src_value": "3"
+    },
+    {
+      "type": "value_mismatch",
+      "section": "llm",
+      "key": "fallback_model",
+      "part2_value": "\"gpt-4o-mini\"",
+      "src_value": "\"ollama/gemma-2b\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "llm",
+      "key": "mini_model",
+      "part2_value": "\"ollama/llama3.2:3b\"",
+      "src_value": "\"ollama/gemma-2b\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "llm",
+      "key": "main_model",
+      "part2_value": "\"ollama/llama3.1:8b\"",
+      "src_value": "\"gpt-4o-mini\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "llm",
+      "key": "max_tokens",
+      "part2_value": "2048",
+      "src_value": "4096"
+    },
+    {
+      "type": "value_mismatch",
+      "section": "rbac",
+      "key": "default_role",
+      "part2_value": "\"OWNER\"",
+      "src_value": "\"OPERATOR\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "semantic_cache",
+      "key": "max_entries",
+      "part2_value": "1000",
+      "src_value": "10000"
+    },
+    {
+      "type": "value_mismatch",
+      "section": "storage",
+      "key": "log_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/logs/events.jsonl\"",
+      "src_value": "\"~/.vamos/logs/\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "storage",
+      "key": "db_path",
+      "part2_value": "\"${VAMOS_DATA_DIR}/sqlite/vamos.db\"",
+      "src_value": "\"~/.vamos/vamos.db\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "vector_db",
+      "key": "persist_directory",
+      "part2_value": "\"${VAMOS_DATA_DIR}/chroma\"",
+      "src_value": "\"~/.vamos/chroma\""
+    },
+    {
+      "type": "value_mismatch",
+      "section": "vector_db",
+      "key": "collection_name",
+      "part2_value": "\"vamos_default\"",
+      "src_value": "\"vamos_memory\""
+    },
+    {
+      "type": "missing_from_part2",
+      "severity": "HIGH",
+      "sections": [
+        "guardrails",
+        "rate_limit"
+      ],
+      "detail": "B4 canonical sections not found in PART2 config"
+    },
+    {
+      "type": "extra_in_part2",
+      "severity": "HIGH",
+      "sections": [
+        "approval",
+        "self_check",
+        "tool.mypy",
+        "tool.poetry.group.dev.dependencies",
+        "tool.ruff",
+        "tool.ruff.lint"
+      ],
+      "detail": "PART2 config sections not in B4 canonical list"
+    }
+  ],
+  "total_errors": 17,
+  "verdict": "FAIL",
+  "note": "PART2 has 17 sections (B4 canonical: 13)"
+}

@@ -1,0 +1,983 @@
+{
+  "script": "0-D",
+  "name": "LOCK/FREEZE/ABSOLUTE Extraction + V7-2 Cross-Check",
+  "total_entries": 133,
+  "entries": [
+    {
+      "line": 6,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **정본 우선순위**: RULE 1.3 > PLAN 3.0 > DESIGN 2.0 LOCK > DESIGN 본문 > 스키마/TECH_STACK"
+    },
+    {
+      "line": 209,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "4. **AI 생성물 리뷰**: 디렉토리 구조, config.v1.toml LOCK 값, 의존성 버전 검토 후 첫 커밋"
+    },
+    {
+      "line": 295,
+      "keyword": "LOCK",
+      "key": "autonomy_level",
+      "value": "L1",
+      "raw_line": "autonomy_level = \"L1\"            # LOCK: L0(manual)/L1(assisted)/L2(auto)/L3(full)"
+    },
+    {
+      "line": 297,
+      "keyword": "LOCK",
+      "key": "single_decision_lock",
+      "value": "true",
+      "raw_line": "single_decision_lock = true      # LOCK: always true"
+    },
+    {
+      "line": 298,
+      "keyword": "LOCK",
+      "key": "pipeline_stages",
+      "value": "[",
+      "raw_line": "pipeline_stages = [\"intake\",\"plan\",\"execute\",\"verify\",\"deliver\"]  # LOCK"
+    },
+    {
+      "line": 305,
+      "keyword": "LOCK",
+      "key": "max_tokens",
+      "value": "2048",
+      "raw_line": "max_tokens = 2048                # LOCK (V1 기준 B4 §4.1)"
+    },
+    {
+      "line": 309,
+      "keyword": "LOCK",
+      "key": "model",
+      "value": "bge-m3",
+      "raw_line": "model = \"bge-m3\"                 # LOCK (V1)"
+    },
+    {
+      "line": 310,
+      "keyword": "LOCK",
+      "key": "dimension",
+      "value": "1024",
+      "raw_line": "dimension = 1024                 # LOCK"
+    },
+    {
+      "line": 314,
+      "keyword": "LOCK",
+      "key": "backend",
+      "value": "chroma",
+      "raw_line": "backend = \"chroma\"               # LOCK (V1), V2=qdrant"
+    },
+    {
+      "line": 321,
+      "keyword": "LOCK",
+      "key": "backend",
+      "value": "json_file",
+      "raw_line": "backend = \"json_file\"            # LOCK (V1), V2=neo4j"
+    },
+    {
+      "line": 339,
+      "keyword": "LOCK",
+      "key": "monthly_limit",
+      "value": "40000",
+      "raw_line": "monthly_limit = 40000            # LOCK: ₩40,000/월"
+    },
+    {
+      "line": 345,
+      "keyword": "LOCK",
+      "key": "threshold_p0",
+      "value": "70",
+      "raw_line": "threshold_p0 = 70                # LOCK"
+    },
+    {
+      "line": 346,
+      "keyword": "LOCK",
+      "key": "threshold_p1",
+      "value": "75",
+      "raw_line": "threshold_p1 = 75                # LOCK"
+    },
+    {
+      "line": 347,
+      "keyword": "LOCK",
+      "key": "threshold_p2",
+      "value": "80",
+      "raw_line": "threshold_p2 = 80                # LOCK"
+    },
+    {
+      "line": 348,
+      "keyword": "LOCK",
+      "key": "soft_loop_max",
+      "value": "1",
+      "raw_line": "soft_loop_max = 1                # LOCK: 자동 1회만"
+    },
+    {
+      "line": 351,
+      "keyword": "LOCK",
+      "key": "timeout_s",
+      "value": "600",
+      "raw_line": "timeout_s = 600                  # LOCK: 10분"
+    },
+    {
+      "line": 352,
+      "keyword": "LOCK",
+      "key": "p2_timeout_s",
+      "value": "300",
+      "raw_line": "p2_timeout_s = 300               # LOCK: 5분 (P2 승인)"
+    },
+    {
+      "line": 355,
+      "keyword": "LOCK",
+      "key": "transport",
+      "value": "streamable_http",
+      "raw_line": "transport = \"streamable_http\"    # LOCK"
+    },
+    {
+      "line": 364,
+      "keyword": "LOCK",
+      "key": "format",
+      "value": "json",
+      "raw_line": "format = \"json\"                  # LOCK: 평문 금지"
+    },
+    {
+      "line": 365,
+      "keyword": "LOCK",
+      "key": "trace_id_required",
+      "value": "true",
+      "raw_line": "trace_id_required = true         # LOCK"
+    },
+    {
+      "line": 368,
+      "keyword": "LOCK",
+      "key": "similarity_threshold",
+      "value": "0.95",
+      "raw_line": "similarity_threshold = 0.95      # LOCK"
+    },
+    {
+      "line": 387,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "├── decision_schema.json        # DecisionSchema 18필드 (14필수+4선택) — D2.1-D2 §4.1 FREEZE"
+    },
+    {
+      "line": 388,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "├── response_envelope.json      # ResponseEnvelope 5필드 — CLAUDE.md §12 LOCK"
+    },
+    {
+      "line": 400,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "\"freeze_status\": \"FREEZE\","
+    },
+    {
+      "line": 430,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | config.v1.toml 생성 | `config/config.v1.toml` 존재 + 13섹션 구조 + LOCK 값 정확성 (PHASE_B4 §3 대조) | ✅ |"
+    },
+    {
+      "line": 449,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 3 | DecisionSchema | 18 (FREEZE) | D2.1-D2 §4.1 — 14 required + 4 optional |"
+    },
+    {
+      "line": 451,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | ResponseEnvelope | 5 (LOCK) | CLAUDE.md §12 |"
+    },
+    {
+      "line": 466,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 20 | WorkflowStage | 4 (LOCK) | D2.1-D5 |"
+    },
+    {
+      "line": 467,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 21 | WorkflowOutput | 3 (LOCK) | D2.1-D5 |"
+    },
+    {
+      "line": 494,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "2. **FREEZE/LOCK 확인**: DecisionSchema 18필드(FREEZE), ResponseEnvelope 5필드(LOCK), WorkflowStage 4필드(LOCK), WorkflowOutput 3필드(LOCK)"
+    },
+    {
+      "line": 635,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 2 | DecisionSchema 18필드 (FREEZE) | `len(DecisionSchema.model_fields) == 18` (14 required + 4 optional) | ✅ |"
+    },
+    {
+      "line": 636,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 3 | ResponseEnvelope 5필드 (LOCK) | `len(ResponseEnvelope.model_fields) == 5` | ✅ |"
+    },
+    {
+      "line": 637,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 4 | WorkflowStage 4필드 (LOCK) | `len(WorkflowStage.model_fields) == 4` | ✅ |"
+    },
+    {
+      "line": 638,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | WorkflowOutput 3필드 (LOCK) | `len(WorkflowOutput.model_fields) == 3` | ✅ |"
+    },
+    {
+      "line": 942,
+      "keyword": "LOCK",
+      "key": "pipeline_state",
+      "value": "str",
+      "raw_line": "# - pipeline_state: str                        # S0_RECEIVED~S8_DONE (9-State, §2.2 LOCK)"
+    },
+    {
+      "line": 1021,
+      "keyword": "LOCK",
+      "key": "계층",
+      "value": "",
+      "raw_line": "- 메모리 계층: `D2.0-06` §2.1 <!-- SOURCE_CONFLICT: D2.0-06 §2=4계층(L0~L3) vs S7D=5계층(+L4). 4계층 LOCK 채택. L4 Archive는 V2+ 확장 옵션 -->"
+    },
+    {
+      "line": 1029,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "3. **config 로더 검증**: config.v1.toml 의 LOCK 값이 Pydantic ConfigModel로 정확히 로드되는지 확인 (특히 cost, safety, embedding 섹션)"
+    },
+    {
+      "line": 1155,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 9 | LOCK 값 정확성 | embedding.model=\"bge-m3\", cost.monthly_limit=40000, semantic_cache.similarity_threshold=0.95 등 | ✅ |"
+    },
+    {
+      "line": 1156,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 10 | 3단계 로딩 순서 | TOML → ENV 오버라이드 → CLI 인자 순서 동작 (LOCK 값은 변경 불가) | ✅ |"
+    },
+    {
+      "line": 1251,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "\"\"\"DecisionSchema는 정확히 18필드 (FREEZE)\"\"\""
+    },
+    {
+      "line": 1256,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "\"\"\"ResponseEnvelope은 정확히 5필드 (LOCK)\"\"\""
+    },
+    {
+      "line": 1344,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 3 | 스키마 검증 테스트 | 25개 모델 인스턴스 생성 + 필수 필드 누락 에러 + FREEZE/LOCK 필드 수 검증 | ✅ |"
+    },
+    {
+      "line": 1350,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 9 | Config 테스트 | 정상 로드 + LOCK 값 검증 + 잘못된 값 ValidationError + ENV 오버라이드 | ✅ |"
+    },
+    {
+      "line": 1376,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **비용 상한**: ₩40,000/월 (LOCK)"
+    },
+    {
+      "line": 1390,
+      "keyword": "Lock",
+      "key": null,
+      "value": null,
+      "raw_line": "| 4 | I-5 | 5-Gate 통합, Decision Lock, 라우팅 | I-1,I-2,I-15 | `i05_decision_engine.py` | D2.0-02 §7.41~7.50 |"
+    },
+    {
+      "line": 1412,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### ORANGE CORE 상태 머신 (D2.0-02 §2.2 정본, 9-State LOCK)"
+    },
+    {
+      "line": 1426,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **LOCK**: 상태 전이 순서 변경 불가. S3 이후 Decision locked=true."
+    },
+    {
+      "line": 1463,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | **Semantic Cache** | cosine >= 0.95 LOCK, 응답 캐싱 | D2.1-D6 |"
+    },
+    {
+      "line": 1466,
+      "keyword": "LOCK",
+      "key": "SOURCE_CONFLICT",
+      "value": "D2.0-01",
+      "raw_line": "| 8 | **메모리 B-3 Decay** | TTL 기반 자동 만료, activation_state 관리 | D2.0-06 §2.1 | <!-- SOURCE_CONFLICT: D2.0-01 §5.10 B-3=\"Memory Decay\" vs §8.4 B-3=\"Deep Reflection\". §5.10 LOCK 채택, §8.4는 [DEPRECATE] 레거시 "
+    },
+    {
+      "line": 1469,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "#### B↔L 매핑 테이블 (D2.0-06 §2.1 + CLAUDE.md §15, LOCK — 비직관적 매핑 주의)"
+    },
+    {
+      "line": 1478,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "#### 6-Stage RAG Pipeline (D2.0-06 §1.1 LOCK)"
+    },
+    {
+      "line": 1488,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 파라미터 | 값 | LOCK |"
+    },
+    {
+      "line": 1496,
+      "keyword": "LOCK",
+      "key": "25",
+      "value": "",
+      "raw_line": "#### Semantic Cache 파라미터 (M-25: LOCK 값 명시)"
+    },
+    {
+      "line": 1498,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 파라미터 | 값 | LOCK | 근거 |"
+    },
+    {
+      "line": 1539,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 3 | **Soft/Hard Loop** | 검증 실패 → 1회 자동 재시도 → HITL 승인 | D2.0-05 §4.2 LOCK |"
+    },
+    {
+      "line": 1540,
+      "keyword": "LOCK",
+      "key": "failure_threshold",
+      "value": "3, recovery_time_sec",
+      "raw_line": "| 4 | **Circuit Breaker** | closed/open/half_open, failure_threshold=3, recovery_time_sec=60 (D2.0-05 §4.4 LOCK), half_open_requests=1 | D2.0-05 §4.4 | <!-- SOURCE_CONFLICT: D2.1-D5/D7 스키마는 300s로 기재. "
+    },
+    {
+      "line": 1540,
+      "keyword": "LOCK",
+      "key": "half_open_requests",
+      "value": "1",
+      "raw_line": "| 4 | **Circuit Breaker** | closed/open/half_open, failure_threshold=3, recovery_time_sec=60 (D2.0-05 §4.4 LOCK), half_open_requests=1 | D2.0-05 §4.4 | <!-- SOURCE_CONFLICT: D2.1-D5/D7 스키마는 300s로 기재. "
+    },
+    {
+      "line": 1541,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | **A-1 MultiBrain Adapter** | Ollama + GPT-4o-mini 통합 인터페이스ㅤ**Failover**: GPT-4o→Claude→Ollama (3회 타임아웃 시 전환, LOCK) | D2.0-04 §3 |"
+    },
+    {
+      "line": 1547,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 11 | **E-4 Code Executor** | Docker 샌드박스 LOCK, E2B | D2.0-03 |"
+    },
+    {
+      "line": 1566,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 10 | 위임 깊이 제한 | 최대 2단계 (LOCK-AT-004 config 제한) 초과 시 차단 확인 | ✅ |"
+    },
+    {
+      "line": 1712,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **비용 상한**: ₩93,000/월 (LOCK)"
+    },
+    {
+      "line": 1729,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 마이그레이션 원칙 (LOCK, PHASE_B7 §1.2)"
+    },
+    {
+      "line": 1883,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **Module Catalog 표준 필드** (D2.0-01 §5.5 LOCK): 각 모듈은  enum = {CORE | COND | EXP | RE-ADD}로 분류됨."
+    },
+    {
+      "line": 1892,
+      "keyword": "LOCK",
+      "key": "SOURCE_CONFLICT",
+      "value": "D2.0-01",
+      "raw_line": "| 5 | **I-25 SDAR Engine** | 자가진단/수리 (AR-L2→AR-L3) | VAMOS_SDAR_DESIGN_SPECIFICATION | <!-- SOURCE_CONFLICT: D2.0-01 §5.6 I-25=\"Self-Directed Agent Runtime\" vs SDAR_SPEC=\"Self-Diagnosis and Auto-Repai"
+    },
+    {
+      "line": 2044,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 4 | **HMAC-SHA256** | MessageBus 인증 | VAMOS_AGENT_TEAMS_SPEC §LOCK-AT-012 |"
+    },
+    {
+      "line": 2201,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **비용 상한**: ₩266,000/월 (LOCK)"
+    },
+    {
+      "line": 2860,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| VAL-002 | LOCK 값 변경 불가 검증 | config 로드 |"
+    },
+    {
+      "line": 2918,
+      "keyword": "LOCK",
+      "key": "읽기전용",
+      "value": "자동승인, 외부API/쓰기/코드실행",
+      "raw_line": "| DEC-003 도구 승인 Allowlist | 읽기전용=자동승인, 외부API/쓰기/코드실행=확인 필요 (CLAUDE.md §7.1 LOCK) | V1 |"
+    },
+    {
+      "line": 2962,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 위임 깊이 | 2단계 (LOCK-AT-004 상한=3, V1 config 제한=2) |"
+    },
+    {
+      "line": 2989,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### LOCK-AT 아키텍처 제약 (17건, AGENT_TEAMS_SPEC §9 LOCK)"
+    },
+    {
+      "line": 2991,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> 아래 17건은 전부 LOCK — 구현 시 반드시 준수. ★ = v8.4.0 신규 추가."
+    },
+    {
+      "line": 2993,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| # | LOCK ID | 제약 내용 | 근거 |"
+    },
+    {
+      "line": 2995,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 1 | LOCK-AT-001 | ★ V1은 자체 경량 프레임워크 기본. 외부 엔진은 어댑터로만 연결 | D2.0-05 §5.1 |"
+    },
+    {
+      "line": 2996,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 2 | LOCK-AT-002 | ★ 단일결정 원칙: 최종 결론은 Lead Agent(ORANGE CORE)만 확정 | D2.0-02 §2.2 S3 |"
+    },
+    {
+      "line": 2997,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 3 | LOCK-AT-003 | ★ 에이전트 간 자유 상호 호출 / 무한 대화 루프 금지 | D2.0-03 §1.4, D2.0-05 §7.3 |"
+    },
+    {
+      "line": 2998,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 4 | LOCK-AT-004 | 위임 체인 최대 깊이 3단계 (V1 config=2) | S7E-080 |"
+    },
+    {
+      "line": 2999,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | LOCK-AT-005 | ★ 모든 에이전트 실행은 07 Gate 선행 통과 필수 | D2.0-05 §7.3 |"
+    },
+    {
+      "line": 3000,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 6 | LOCK-AT-006 | ★ Execute 단계에서만 도구 호출 수행 | D2.0-05 §7.3 |"
+    },
+    {
+      "line": 3001,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 7 | LOCK-AT-007 | ★ Checkpoint/Replay/Fork는 trace_id 단위로만 허용 | D2.0-05 §7.3 |"
+    },
+    {
+      "line": 3002,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 8 | LOCK-AT-008 | ★ P2 에이전트(Trading)는 기본 OFF, 세션별 승인, 세션 종료 시 자동 OFF | RULE 1.3 §3.3 |"
+    },
+    {
+      "line": 3003,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 9 | LOCK-AT-009 | 대화 턴 상한: P0=5, P1=10, P2=20 | D2.0-05 §12.4.4 |"
+    },
+    {
+      "line": 3004,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 10 | LOCK-AT-010 | TEE 최대 반복: P0=3, P1=5, P2=10 | D2.0-05 §12.5.1 |"
+    },
+    {
+      "line": 3005,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 11 | LOCK-AT-011 | ★ 비용 상한 초과 호출은 승인 없이 자동 차단 | RULE 1.3 §5 |"
+    },
+    {
+      "line": 3006,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 12 | LOCK-AT-012 | ★ Agent 메시지에 HMAC 무결성 서명 필수 | S7E-078 |"
+    },
+    {
+      "line": 3007,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 13 | LOCK-AT-013 | ★ 위임 시 원래 요청자(OWNER) 권한으로 실행 — 권한 상승 방지 | S7E-080 |"
+    },
+    {
+      "line": 3008,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 14 | LOCK-AT-014 | V1 병렬 상한=3, V2=10, V3=50+ | S7-A-008 |"
+    },
+    {
+      "line": 3009,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 15 | LOCK-AT-015 | ★ Lead Agent는 직접 실행 금지 (계획/분배/검증만 수행) | S7-A-001 |"
+    },
+    {
+      "line": 3010,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 16 | LOCK-AT-016 | LangChain import 금지 (패턴 참조만) | DEC-002 |"
+    },
+    {
+      "line": 3011,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 17 | LOCK-AT-017 | ★ 노코드 빌더는 n8n + Flowise 듀얼 구조 | D2.0-05 §12.10.2 |"
+    },
+    {
+      "line": 3013,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> LOCK-AT-004/009/010/014/016은 PART1 C.4에도 기반영. 위 테이블은 구현 시 전체 참조용."
+    },
+    {
+      "line": 3026,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 51% Gate 파라미터 (LOCK)"
+    },
+    {
+      "line": 3036,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### Circuit Breaker (LOCK)"
+    },
+    {
+      "line": 3046,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### AI Investing 기술스택 LOCK (AI_INVESTING_SPEC §14 참조)"
+    },
+    {
+      "line": 3051,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| # | 항목 | LOCK 값 | V1 충돌 여부 |"
+    },
+    {
+      "line": 3054,
+      "keyword": "LOCK",
+      "key": "ADOPT",
+      "value": "전략",
+      "raw_line": "| 2 | 백테스트 | vectorbt(조건부 ADOPT: 전략 ≥3개 시 도입) 또는 backtrader | 없음 | <!-- Phase 2-A FIX-05: AI_INVESTING_SPEC §14 D-S3-05 정본=\"VectorBT 조건부 ADOPT\". LOCK→조건부 ADOPT 정정 -->"
+    },
+    {
+      "line": 3057,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 5 | 전략 실행 | LangGraph Agent Pipeline | 없음 (메인 LOCK 동일) |"
+    },
+    {
+      "line": 3061,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 9 | 시계열 DB | TimescaleDB | V2+ 전용 (V1 LOCK 위반 주의) |"
+    },
+    {
+      "line": 3062,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 10 | 메시지 큐 | Kafka | V2+ 전용 (V1 LOCK 위반 주의) |"
+    },
+    {
+      "line": 3068,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "> **주의**: 항목 9~13은 V2+ 전용이며 V1에서 사용 시 LOCK 위반. AI_INVESTING_SPEC §14 정본 참조."
+    },
+    {
+      "line": 3136,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "4. 미승인 10분 → 자동 거부 (기존 LOCK)"
+    },
+    {
+      "line": 3193,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "**운영 제한 (LOCK, SDAR_SPEC §9.2)** — 9건 전수:"
+    },
+    {
+      "line": 3204,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### Self-evo 원칙 준수 (LOCK, SDAR_SPEC §9.3)"
+    },
+    {
+      "line": 3222,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 보안 오류(CATEGORY E) 특별 규칙 (LOCK, SDAR_SPEC §9.5)"
+    },
+    {
+      "line": 3230,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### P2 도메인 수리 제한 (LOCK, SDAR_SPEC §9.6)"
+    },
+    {
+      "line": 3236,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 비용 영향 제한 (LOCK, SDAR_SPEC §9.7)"
+    },
+    {
+      "line": 3253,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 평가 점수 (LOCK)"
+    },
+    {
+      "line": 3262,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### 소스 신뢰도 가중치 (LOCK)"
+    },
+    {
+      "line": 3286,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "### Cloud Library LOCK 결정 (M-29: CLOUD_LIBRARY_SPEC §16 정합성 검증 완료)"
+    },
+    {
+      "line": 3288,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| # | LOCK 항목 | 값 | 정본 근거 |"
+    },
+    {
+      "line": 3360,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "#### 소스 신뢰도 가중치 (RT-BNP 전용, 기존 LOCK 확장)"
+    },
+    {
+      "line": 3381,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "#### LOCK 추가 결정 (RT-BNP, CLOUD_LIBRARY_SPEC §16 확장)"
+    },
+    {
+      "line": 3383,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| # | LOCK 항목 | 값 |"
+    },
+    {
+      "line": 3399,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 접근 | 비용 | 품질 | 환각 위험 | LOCK 호환 |"
+    },
+    {
+      "line": 3583,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 10 | config.v1.toml LOCK 값 배치 | PHASE_B4 | [ ] |"
+    },
+    {
+      "line": 3587,
+      "keyword": "ABSOLUTE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK | [ ] |"
+    },
+    {
+      "line": 3629,
+      "keyword": "FREEZE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 2 | Agent Teams FREEZE 해석 확정 | V2-003 | [ ] |"
+    },
+    {
+      "line": 3640,
+      "keyword": "ABSOLUTE",
+      "key": null,
+      "value": null,
+      "raw_line": "| 13 | V2 비용 모니터링 대시보드 (₩93,000 이내) | ABSOLUTE LOCK | [ ] |"
+    },
+    {
+      "line": 3661,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| 8 | 에이전트 50+ 병렬 인프라 구축 | LOCK-AT-014 | [ ] |"
+    },
+    {
+      "line": 3678,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| LOCK 값 코드 반영 | config.v1.toml vs 문서 LOCK 값 대조 (B4-01/02 포함) |"
+    },
+    {
+      "line": 3725,
+      "keyword": "LOCK",
+      "key": "06",
+      "value": "4계층(L0",
+      "raw_line": "| SC-04 | §STEP-5 메모리 계층 | D2.0-06=4계층(L0~L3) vs S7D=5계층(+L4) | 4계층 LOCK | L4 Archive는 V2+ 확장 |"
+    },
+    {
+      "line": 3726,
+      "keyword": "LOCK",
+      "key": "5.10",
+      "value": "Memory Decay",
+      "raw_line": "| SC-05 | V1-Phase 2 B-3 | §5.10=\"Memory Decay\" vs §8.4=\"Deep Reflection\" | §5.10 LOCK | §8.4는 DEPRECATE 레거시 |"
+    },
+    {
+      "line": 3727,
+      "keyword": "LOCK",
+      "key": "D7",
+      "value": "300s vs D2.0-05",
+      "raw_line": "| SC-06 | §6.3.1 Circuit Breaker | D2.1-D5/D7=300s vs D2.0-05 §4.4=60s | 60s LOCK | DESIGN 2.0 LOCK > Schema |"
+    },
+    {
+      "line": 3729,
+      "keyword": "LOCK",
+      "key": "01",
+      "value": "Self-Directed Agent Runtime",
+      "raw_line": "| SC-08 | §6.9 I-25 명칭 | D2.0-01=\"Self-Directed Agent Runtime\" vs SDAR_SPEC=\"Self-Diagnosis and Auto-Repair\" | SDAR_SPEC | 전문 LOCK 채택 |"
+    },
+    {
+      "line": 3788,
+      "keyword": "LOCK",
+      "key": "반영",
+      "value": "V2",
+      "raw_line": "| v8.3.0 | 2026-02-25 | 4종 교차 검증 반영: V2 +10→+8 모듈 정정(I-7·I-12 V1 기활성), Circuit Breaker 300→60s(D2.0-05 §4.4 LOCK, SOURCE_CONFLICT 주석), 보안항목 합계 ~13→~14(§6.5 동기화), 위임깊이 LOCK-AT-004 상한 주석 추가, I-21 \"Sourc"
+    },
+    {
+      "line": 3789,
+      "keyword": "LOCK",
+      "key": "반영",
+      "value": "",
+      "raw_line": "| v8.4.0 | 2026-02-25 | Check B 역방향 누락 17건 반영: §6.7 LOCK-AT 아키텍처 제약 17건 전수 테이블 추가(LOCK-AT-001~017, 신규 12건+기반영 5건), §6.9 SDAR LOCK 규칙 2→9건 확장+Self-evo 원칙+Emergency Kill Switch+CATEGORY E 특별 규칙+P2 수리 제한"
+    },
+    {
+      "line": 3791,
+      "keyword": "LOCK",
+      "key": "수정",
+      "value": "Phase 1.5 REAL_ERROR 5건",
+      "raw_line": "| v10.0.0 | 2026-02-26 | Phase 2 수정: Phase 1.5 REAL_ERROR 5건+Ripple 1건 — (1) rbac_default_role OPERATOR→OWNER (2) Guardrails config V2+=4→V2=3/V3=4 + SOURCE_CONFLICT 13건 주석(L0 TTL 30일→7일, approval_sta"
+    },
+    {
+      "line": 3793,
+      "keyword": "LOCK",
+      "key": "추가",
+      "value": "",
+      "raw_line": "| v12.0.0 | 2026-03-01 | RT-BNP (Real-Time Breaking News Pipeline) 설계 추가: §6.10.1 RT-BNP 파이프라인(아키텍처/Tier 분류/Breaking Detector/Fast Gate/소스 가중치/버전별 범위/LOCK #14~18), §6.8.1 AI Investing 연동(VAMOS_EVENT b"
+    },
+    {
+      "line": 3796,
+      "keyword": "LOCK",
+      "key": "반영",
+      "value": "",
+      "raw_line": "| v14.0.0 | 2026-03-03 | 43개 산출물 크로스체크 ~45건 반영: **GROUP A** (10건) — AI 프롬프트 디렉토리 트리 vamos_core/ 추가, PHASE_B7 섹션 참조 6건 정정(§2→§3.1/§3.2/§3.3/§3.4/§3.5, §2→§6, §2→§6.4), Integration ~13→~14, §6.13 테스트 ~8"
+    },
+    {
+      "line": 3800,
+      "keyword": "LOCK",
+      "key": null,
+      "value": null,
+      "raw_line": "| v19.0.0 | 2026-03-06 | Phase 2-A Ripple Fix (v8.1 검증 파이프라인): **CRITICAL 3건** — (FIX-01/C-6) ORANGE CORE S0~S8 9-State 상태 머신 인라인 추가(D2.0-02 §2.2 정본, 타임아웃+LOCK 주석 포함), (FIX-02/C-2) VamosState pipeline"
+    },
+    {
+      "line": 3803,
+      "keyword": "LOCK",
+      "key": "수정",
+      "value": "(1) V2-Phase 1 Hybrid Search alpha",
+      "raw_line": "| v20.1.0 | 2026-03-06 | Stage Gate SOT 정합성 검증 후 4건 수정: (1) V2-Phase 1 Hybrid Search alpha=0.6→0.7 (LOCK 테이블 정본 α=0.7 일치), (2) V3-Phase 3 Stage Gate SDAR AR-L4 \"5개 액션\"→\"4개 액션\" (SDAR_SPEC 수리 액션 카탈로그 AR"
+    },
+    {
+      "line": 3804,
+      "keyword": "LOCK",
+      "key": "수정",
+      "value": "(1) V0-STEP-1 config 템플릿 semantic_cache.ttl_sec SOURCE_CONFLICT 주석 보완(D2.0-06",
+      "raw_line": "| v20.2.0 | 2026-03-06 | Stage Gate SOT 교차 검증 Phase 2 — V0/V1/V2/V3 에이전트 병렬 검증 후 7건 수정: (1) V0-STEP-1 config 템플릿 semantic_cache.ttl_sec SOURCE_CONFLICT 주석 보완(D2.0-06=86400 vs B4=3600, DESIGN>PHASE_B 원"
+    },
+    {
+      "line": 3807,
+      "keyword": "FREEZE",
+      "key": "반영",
+      "value": "",
+      "raw_line": "| v17.0.0 | 2026-03-03 | 잔존 이슈 방법론계획 v1.1 Track A 19건 일괄 반영: **BLOCKER 2건** — (B-1/B-2) Method A+B+C 통합: STEP-1에 Schema Seed 파일 생성 단계 추가, STEP-2에 전제조건 가드+FREEZE 스키마 인라인 참조(Method C)+SOT 문서 MANDATORY 강"
+    },
+    {
+      "line": 3807,
+      "keyword": "LOCK",
+      "key": "tauri",
+      "value": ":command]",
+      "raw_line": "| v17.0.0 | 2026-03-03 | 잔존 이슈 방법론계획 v1.1 Track A 19건 일괄 반영: **BLOCKER 2건** — (B-1/B-2) Method A+B+C 통합: STEP-1에 Schema Seed 파일 생성 단계 추가, STEP-2에 전제조건 가드+FREEZE 스키마 인라인 참조(Method C)+SOT 문서 MANDATORY 강"
+    }
+  ],
+  "src_canonical_keys": 77,
+  "errors": [
+    {
+      "line": 298,
+      "type": "lock_src_mismatch",
+      "key": "pipeline_stages",
+      "part2_value": "[",
+      "src_value": "[\"intake\", \"plan\", \"execute\", \"verify\", \"deliver\"]",
+      "src_key": "core.pipeline_stages"
+    },
+    {
+      "line": 305,
+      "type": "lock_src_mismatch",
+      "key": "max_tokens",
+      "part2_value": "2048",
+      "src_value": "4096",
+      "src_key": "llm.max_tokens"
+    },
+    {
+      "line": 309,
+      "type": "lock_src_mismatch",
+      "key": "model",
+      "part2_value": "bge-m3",
+      "src_value": "ollama/gemma-2b",
+      "src_key": "llm.mini_model"
+    },
+    {
+      "line": 321,
+      "type": "lock_src_mismatch",
+      "key": "backend",
+      "part2_value": "json_file",
+      "src_value": "chroma",
+      "src_key": "vector_db.backend"
+    },
+    {
+      "line": 364,
+      "type": "lock_src_mismatch",
+      "key": "format",
+      "part2_value": "json",
+      "src_value": "jsonl",
+      "src_key": "storage.log_format"
+    }
+  ],
+  "total_errors": 5,
+  "verdict": "FAIL"
+}

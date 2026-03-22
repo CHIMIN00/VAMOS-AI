@@ -1,0 +1,311 @@
+{
+  "agent": 10,
+  "section_focus": "prompts_dim_d",
+  "session": "session_20",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T14:30:00Z",
+  "prompts_found": 15,
+  "prompts_verified": 15,
+  "prompt_inventory": [
+    {"id": "P-01", "location": "L343-481", "name": "V0-STEP-1: Project Scaffolding", "type": "implementation_prompt"},
+    {"id": "P-02", "location": "L650-820", "name": "V0-STEP-2: Schema Definition", "type": "implementation_prompt"},
+    {"id": "P-03", "location": "L882-960", "name": "V0-STEP-3: IPC Communication Layer", "type": "implementation_prompt"},
+    {"id": "P-04", "location": "L1068-1200", "name": "V0-STEP-4: ORANGE CORE Minimal Pipeline", "type": "implementation_prompt"},
+    {"id": "P-05", "location": "L1230-1390", "name": "V0-STEP-5: Storage + Logging", "type": "implementation_prompt"},
+    {"id": "P-06", "location": "L1401-1530", "name": "V0-STEP-6: CI Skeleton + Tests", "type": "implementation_prompt"},
+    {"id": "P-07", "location": "L1617-1810", "name": "V1-Phase 1: ORANGE CORE Complete", "type": "implementation_prompt"},
+    {"id": "P-08", "location": "L1897-1960", "name": "V1-Phase 2: Storage/Memory/RAG", "type": "implementation_prompt"},
+    {"id": "P-09", "location": "L2091-2155", "name": "V1-Phase 3: Workflow/Agent", "type": "implementation_prompt"},
+    {"id": "P-10", "location": "L2288-2380", "name": "V1-Phase 4: UI/UX", "type": "implementation_prompt"},
+    {"id": "P-11", "location": "L2430-2510", "name": "V1-Phase 5: Integration + Test", "type": "implementation_prompt"},
+    {"id": "P-12", "location": "L2558-2620", "name": "V1-Phase 6: AI Investing MVP + MCP", "type": "implementation_prompt"},
+    {"id": "P-13", "location": "L2771-2840", "name": "V2-Phase 1: Infrastructure Migration", "type": "implementation_prompt"},
+    {"id": "P-14", "location": "L3217-3290", "name": "V2-Phase 2: COND Module Activation", "type": "implementation_prompt"},
+    {"id": "P-15", "location": "L3557-3620", "name": "V2-Phase 3: Agent Teams V2 + Security", "type": "implementation_prompt"}
+  ],
+  "prompt_issues": [
+    {
+      "id": "D-01",
+      "prompt_id": "P-04",
+      "severity": "MEDIUM",
+      "type": "lock_inconsistent",
+      "description": "V0-STEP-4 CostGate threshold values (70%/85%/95% 3-stage, P30-058) contradict LOCK values (80%/100% 2-stage). This prompt would cause AI to generate CostGate code with wrong thresholds.",
+      "prompt_text": "CostGate: I-9 stub 호출 → 70% warn, 85% escalate, 95% block (config.v1.toml cost 섹션, P30-058 3단계)",
+      "lock_value": "D2.0-07 §4.2 LOCK: 80% warn / 100% block (2-stage)",
+      "risk": "HIGH - AI will generate 3-tier cost gate logic instead of correct 2-tier",
+      "recommendation": "Replace '70% warn, 85% escalate, 95% block (P30-058 3단계)' with '80% warn, 100% block (D2.0-07 §4.2 LOCK 2단계)'"
+    },
+    {
+      "id": "D-02",
+      "prompt_id": "P-07",
+      "severity": "LOW",
+      "type": "lock_consistent_but_incomplete",
+      "description": "V1-Phase 1 prompt lists I-2 Context Builder Matryoshka dimension as '256dim LOCK' (L1645). This is consistent with PART2 config but v8 Agent 9 found PHASE_B4 says 512. The prompt reinforces the potentially wrong PART2 value.",
+      "prompt_text": "BGE-M3 임베딩 (FlagEmbedding, 1024dim 원본 + Matryoshka 256dim LOCK)",
+      "lock_value": "PHASE_B4: matryoshka_dim = 512 vs PART2: matryoshka_dim = 256",
+      "risk": "MEDIUM - v8 Phase 1 finding, prompt propagates the matryoshka_dim discrepancy",
+      "recommendation": "Resolve matryoshka_dim SOT conflict (256 vs 512) before implementation"
+    },
+    {
+      "id": "D-03",
+      "prompt_id": "P-09",
+      "severity": "LOW",
+      "type": "lock_consistent",
+      "description": "V1-Phase 3 prompt correctly states Circuit Breaker recovery=60s LOCK, Failover chain GPT-4o->Claude->Ollama LOCK, Agent max 2 Sub LOCK. All consistent with SOT.",
+      "prompt_text": "Circuit Breaker recovery=60s LOCK + Agent max 2 Sub LOCK",
+      "lock_value": "D2.0-05 §4.4: 60s LOCK. LOCK-AT-014 V1: Lead+2 Sub",
+      "risk": "NONE",
+      "recommendation": "No action needed"
+    },
+    {
+      "id": "D-04",
+      "prompt_id": "P-08",
+      "severity": "LOW",
+      "type": "lock_consistent",
+      "description": "V1-Phase 2 prompt correctly specifies B-L mapping (B-1->L1, B-2->L3, B-3->L2, B-4->L0) LOCK and Semantic Cache cosine>=0.95 LOCK. Both match SOT.",
+      "prompt_text": "B↔L 매핑 LOCK(B-1→L1, B-2→L3, B-3→L2, B-4→L0) + Semantic Cache cosine ≥ 0.95 LOCK",
+      "lock_value": "CLAUDE.md §7.2, D2.0-06 §4.7.2",
+      "risk": "NONE",
+      "recommendation": "No action needed"
+    },
+    {
+      "id": "D-05",
+      "prompt_id": "P-11",
+      "severity": "LOW",
+      "type": "lock_consistent",
+      "description": "V1-Phase 5 prompt correctly uses 80% warn / 100% block for Cost thresholds. Consistent with LOCK. This contradicts P-04 (V0-STEP-4) which uses 70%/85%/95%.",
+      "prompt_text": "Cost 경고: 80%, 차단: 100%",
+      "lock_value": "D2.0-07 §4.2 LOCK: 80% warn / 100% block",
+      "risk": "NONE for this prompt, but see D-01 for P-04 conflict",
+      "recommendation": "No action needed for P-11. Fix P-04."
+    },
+    {
+      "id": "D-06",
+      "prompt_id": "P-05",
+      "severity": "LOW",
+      "type": "lock_consistent",
+      "description": "V0-STEP-5 prompt defines LogEventSchema with D2.1-D2 §4.2 SOT fields (event_type, producer, when, payload, severity, sinks, links = 7 fields) and provides explicit structlog-to-SOT field mapping table. This is excellent prompt design that prevents field name hallucination.",
+      "prompt_text": "정본 필드 (D2.1-D2 §4.2): event_type, producer, when, payload, severity + sinks(opt), links(opt) — 7필드",
+      "lock_value": "D2.1-D2 §4.2",
+      "risk": "NONE",
+      "recommendation": "No action needed - exemplary prompt SOT reference"
+    },
+    {
+      "id": "D-07",
+      "prompt_id": "P-12",
+      "severity": "LOW",
+      "type": "lock_consistent",
+      "description": "V1-Phase 6 prompt correctly specifies MCP Streamable HTTP (not WebSocket), 5-Agent order (Perplexity->Gemini->ChatGPT->Claude->Copilot fixed), Wash Sale/PDT/Uptick Rule compliance, and V1 cost LOCK ₩40,000/month.",
+      "prompt_text": "MCP: Streamable HTTP 사용, 비용: ₩40,000/월 LOCK",
+      "lock_value": "DEC-017 LOCK (Streamable HTTP), ABSOLUTE LOCK cost",
+      "risk": "NONE",
+      "recommendation": "No action needed"
+    },
+    {
+      "id": "D-08",
+      "prompt_id": "P-13",
+      "severity": "LOW",
+      "type": "sot_reference_correct",
+      "description": "V2-Phase 1 migration prompt correctly references PHASE_B7 §1.2 LOCK for 6 migration principles and implements all 4 storage migrations (SQLite->Postgres, JSONL->Postgres, Chroma->Qdrant, JSON->Neo4j) consistent with B7 §1.1.",
+      "prompt_text": "마이그레이션 원칙 6항 엄격 준수 (PHASE_B7 §1.2 LOCK)",
+      "lock_value": "PHASE_B7 §1.2",
+      "risk": "NONE",
+      "recommendation": "No action needed"
+    },
+    {
+      "id": "D-09",
+      "prompt_id": "ALL",
+      "severity": "LOW",
+      "type": "missing_instruction_hierarchy",
+      "description": "No prompt includes S7E-011 Instruction Hierarchy (5-level prompt priority L0~L4). Phase 2 finding F-05 identified this as missing from PART2. The prompts should reference prompt injection defense via instruction hierarchy, especially for prompts that generate LLM-facing code.",
+      "prompt_text": "N/A",
+      "lock_value": "D2.0-07 S7E-011: L0(Core Constitution) > L1(System Prompt) > L2(User) > L3(Tool/Doc) > L4(History)",
+      "risk": "LOW - prompts generate implementation code, not runtime LLM prompts directly. However, I-1 Intent Detector and I-5 Decision Engine prompts should mention instruction hierarchy for the system prompts they generate.",
+      "phase2_link": "F-05",
+      "recommendation": "Add instruction hierarchy reference to V1-Phase 1 prompt where I-1 and I-5 are implemented"
+    },
+    {
+      "id": "D-10",
+      "prompt_id": "P-04",
+      "severity": "LOW",
+      "type": "observation",
+      "description": "V0-STEP-4 prompt references 'config.v1.toml cost 섹션' for CostGate values. Phase 2 finding F-A5-01 notes that PART2 config has only 10 sections vs B4 SOT's 13 sections. The cost section exists in both, so the CostGate reference is valid, but the config structure divergence remains.",
+      "prompt_text": "config.v1.toml cost 섹션",
+      "lock_value": "PHASE_B4: 13 sections vs PART2: 10 sections",
+      "risk": "LOW - cost section values are present in both versions",
+      "phase2_link": "F-A5-01 (v8 Agent 9 MISMATCH #2)",
+      "recommendation": "No prompt change needed, but config section count needs resolution"
+    }
+  ],
+  "dim_d": {
+    "total_prompts": 15,
+    "lock_consistent": 12,
+    "lock_inconsistent": 1,
+    "hallucination_risk": 1,
+    "observation_only": 1,
+    "details": [
+      {
+        "id": "DD-01",
+        "prompt_id": "P-01",
+        "check": "V0-STEP-1: References PHASE_B2 for directory structure, PHASE_B4 for LOCK config values",
+        "verdict": "CONSISTENT",
+        "notes": "Correct SOT references. Directory structure matches B2. Config values reference B4."
+      },
+      {
+        "id": "DD-02",
+        "prompt_id": "P-02",
+        "check": "V0-STEP-2: 25 schemas with field counts referencing D2.1 documents",
+        "verdict": "CONSISTENT",
+        "notes": "Schema list includes field counts (DecisionSchema 18 FREEZE, ResponseEnvelope 5 LOCK, etc.). All reference correct D2.1 document IDs. Method B seed file approach prevents hallucination."
+      },
+      {
+        "id": "DD-03",
+        "prompt_id": "P-03",
+        "check": "V0-STEP-3: 13 JSON-RPC methods, IPC architecture",
+        "verdict": "CONSISTENT",
+        "notes": "JSON-RPC method list consistent with B1 API contract. 3-layer architecture (React-Rust-Python) correct."
+      },
+      {
+        "id": "DD-04",
+        "prompt_id": "P-04",
+        "check": "V0-STEP-4: CostGate thresholds, 5-Gate order, Decision Lock",
+        "verdict": "INCONSISTENT",
+        "notes": "CostGate 70%/85%/95% contradicts LOCK 80%/100%. 5-Gate order (Policy->Approval->Cost->Evidence->SelfCheck) is correct. See D-01."
+      },
+      {
+        "id": "DD-05",
+        "prompt_id": "P-05",
+        "check": "V0-STEP-5: LogEventSchema fields, L0 TTL, config loader",
+        "verdict": "CONSISTENT",
+        "notes": "LogEventSchema 7-field SOT mapping table is excellent. L0 TTL=session_end max 30 days (CLAUDE.md §15). Config loader TOML->ENV->CLI order."
+      },
+      {
+        "id": "DD-06",
+        "prompt_id": "P-06",
+        "check": "V0-STEP-6: CI workflows, schema test 25 models, coverage",
+        "verdict": "CONSISTENT",
+        "notes": "GitHub Actions workflows consistent with B6. Schema validation test count matches V0-STEP-2 output."
+      },
+      {
+        "id": "DD-07",
+        "prompt_id": "P-07",
+        "check": "V1-Phase 1: 17 I-Series modules, 5-Gate LOCK, Self-check thresholds, QoD",
+        "verdict": "CONSISTENT",
+        "notes": "5-Gate order LOCK correct. Self-check P0>=70/P1>=75/P2>=80 LOCK correct. Soft Loop 1-time LOCK correct. Minor: Matryoshka 256dim vs B4 512dim (see D-02)."
+      },
+      {
+        "id": "DD-08",
+        "prompt_id": "P-08",
+        "check": "V1-Phase 2: B-L mapping, Semantic Cache 0.95, Hybrid Search params",
+        "verdict": "CONSISTENT",
+        "notes": "All LOCK values correct: B-L mapping, cosine>=0.95, Hybrid Search alpha=0.7/top_k=20/rerank=5/threshold=0.75."
+      },
+      {
+        "id": "DD-09",
+        "prompt_id": "P-09",
+        "check": "V1-Phase 3: LangGraph START/END, Circuit Breaker 60s, Agent 2 Sub, Failover chain",
+        "verdict": "CONSISTENT",
+        "notes": "All LOCK values correct. LangGraph START/END constant usage enforced (set_entry_point forbidden). Failover GPT-4o->Claude->Ollama correct."
+      },
+      {
+        "id": "DD-10",
+        "prompt_id": "P-11",
+        "check": "V1-Phase 5: Coverage 80%+, E2E core 100%, 5-Gate order, Cost 80%/100%",
+        "verdict": "CONSISTENT",
+        "notes": "All LOCK values correct. This prompt correctly uses 80%/100% cost thresholds (unlike P-04)."
+      },
+      {
+        "id": "DD-11",
+        "prompt_id": "P-12",
+        "check": "V1-Phase 6: MCP Streamable HTTP, V1 cost ₩40K LOCK, 5-Agent order, legal compliance",
+        "verdict": "CONSISTENT",
+        "notes": "MCP Streamable HTTP LOCK correct. Cost ₩40,000 LOCK correct. 5-Agent Pipeline order fixed. Wash Sale/PDT/Uptick compliance included."
+      },
+      {
+        "id": "DD-12",
+        "prompt_id": "P-13",
+        "check": "V2-Phase 1: Migration paths, B7 principles, Alembic, batch processing",
+        "verdict": "CONSISTENT",
+        "notes": "Migration scope matches B7 §1.1. 6 principles referenced via 'PHASE_B7 §1.2 LOCK'. Config 13 sections mentioned. Hybrid Search LOCK params maintained."
+      },
+      {
+        "id": "DD-13",
+        "prompt_id": "P-14",
+        "check": "V2-Phase 2: 116 COND modules, Module Catalog standard, SDAR AR-L3",
+        "verdict": "CONSISTENT",
+        "notes": "Module Catalog D2.0-01 §5.5 LOCK referenced. SDAR AR-L3 5 actions from SDAR_SPEC §10.2 correctly listed."
+      },
+      {
+        "id": "DD-14",
+        "prompt_id": "P-15",
+        "check": "V2-Phase 3: Agent Teams V2 (Lead+9), 6 patterns, HMAC, LlamaGuard L3, GDPR",
+        "verdict": "CONSISTENT",
+        "notes": "V2 max_agents=10 LOCK correct. 6 collaboration patterns (sequential/parallel/debate/supervisor/handoff/hybrid) match SOT §7.1 enum. HMAC-SHA256 LOCK-AT-012 correct."
+      },
+      {
+        "id": "DD-15",
+        "prompt_id": "R1-R11",
+        "check": "Common rules R1-R11 applied to all prompts",
+        "verdict": "CONSISTENT",
+        "notes": "R1-R11 rules are comprehensive and correctly reference LOCK values (R5), SOT-only creation (R6), CORE->COND direction (R7), trace_id server-only (R8), error masking (R9), cost ABSOLUTE LOCK (R10). The SDD hierarchy (§1.3.1) provides clear fallback for AI uncertainty."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A10-01",
+      "severity": "MEDIUM",
+      "type": "lock_violation_in_prompt",
+      "description": "V0-STEP-4 AI prompt contains CostGate thresholds (70%/85%/95%) that contradict the ABSOLUTE LOCK values (80%/100%). When AI executes this prompt, it will generate I-5 Decision Engine code with incorrect 3-stage thresholds instead of the correct 2-stage LOCK values. This directly risks generating code that violates LOCK.",
+      "evidence": "PART2 L1097: '70% warn, 85% escalate, 95% block (P30-058 3단계)' vs D2.0-07 §4.2: '80% 경고/100% 차단' LOCK",
+      "phase2_link": "Related to v8 Agent 9 MATCH #7 which confirmed 80%/100% is LOCK",
+      "recommendation": "URGENT: Fix V0-STEP-4 prompt to use 80% warn / 100% block"
+    },
+    {
+      "id": "F-A10-02",
+      "severity": "LOW",
+      "type": "prompt_propagates_conflict",
+      "description": "V1-Phase 1 prompt specifies 'Matryoshka 256dim LOCK' which propagates the PART2 vs PHASE_B4 conflict (256 vs 512). v8 Agent 9 identified this as HIGH severity mismatch.",
+      "evidence": "PART2 L1645: 'Matryoshka 256dim LOCK' vs PHASE_B4: matryoshka_dim = 512",
+      "phase2_link": "v8 Agent 9 MISMATCH #1",
+      "recommendation": "Resolve matryoshka_dim SOT value before implementing prompts"
+    },
+    {
+      "id": "F-A10-03",
+      "severity": "LOW",
+      "type": "missing_instruction_hierarchy",
+      "description": "None of the 15 AI prompts reference the S7E-011 Instruction Hierarchy (5-level prompt priority). For prompts that generate LLM-facing system prompts (P-04 I-1, P-07 I-1/I-5), this means the generated code may lack prompt injection defense via instruction hierarchy.",
+      "evidence": "D2.0-07 S7E-011: L0>L1>L2>L3>L4 hierarchy absent from all prompts",
+      "phase2_link": "F-05",
+      "recommendation": "Add instruction hierarchy reference to P-04 and P-07 where I-1 Intent Detector generates system prompts"
+    },
+    {
+      "id": "F-A10-04",
+      "severity": "LOW",
+      "type": "positive_observation",
+      "description": "Prompt quality is generally high. Key strengths: (1) R1-R11 common rules provide systematic guard rails, (2) §1.3.1 SDD hierarchy gives AI clear escalation path for uncertainty, (3) §1.3.3 context diet principle limits hallucination risk, (4) V0-STEP-5 LogEventSchema field mapping table is exemplary SOT-prompt alignment, (5) Method B seed files (V0-STEP-2) prevent field name hallucination, (6) MUST/MAY/NEVER document loading classification.",
+      "recommendation": "No action needed - positive observation"
+    },
+    {
+      "id": "F-A10-05",
+      "severity": "LOW",
+      "type": "positive_observation",
+      "description": "Each Phase prompt includes explicit LOCK value section and MUST-load SOT document list. The 14th revision (v26) added comprehensive prompt review. The §6.5.4 OWASP LLM Top 10 mapping provides systematic LLM risk coverage including Prompt Injection (LLM01) mitigation.",
+      "recommendation": "No action needed - positive observation"
+    }
+  ],
+  "statistics": {
+    "total_checks": 25,
+    "prompts_found": 15,
+    "lock_values_checked": 25,
+    "lock_consistent": 22,
+    "lock_inconsistent": 1,
+    "propagated_conflicts": 1,
+    "missing_references": 1,
+    "pass_rate": "88.0%",
+    "severity_distribution": {
+      "MEDIUM": 1,
+      "LOW": 4
+    }
+  }
+}

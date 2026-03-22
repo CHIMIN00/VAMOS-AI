@@ -1,0 +1,5 @@
+repos:
+  - repo: https://github.com/freddo1503/claude-pre-commit
+    rev: v0.1.0
+    hooks:
+      - id: claude-check

@@ -1,0 +1,47 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+  "python.analysis.typeCheckingMode": "basic",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[toml]": {
+    "editor.formatOnSave": true
+  },
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.check.command": "clippy",
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.trailingComma": "es5",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/node_modules": true,
+    "**/target": true,
+    "**/.pytest_cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/target": true,
+    "**/dist": true,
+    "**/.venv": true
+  }
+}

@@ -1,0 +1,8776 @@
+{
+  "meta": {
+    "source": "VAMOS_구현가이드_PART2_구현단계.md",
+    "version": "v25.0.0",
+    "total_lines": 5252,
+    "generated_at": "2026-03-13",
+    "task_id": "0-C"
+  },
+  "numeric_entries": [
+    {
+      "line": 5,
+      "value": "43",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 5,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 5,
+      "value": "19",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 5,
+      "value": "11",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 5,
+      "value": "1",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 5,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 13,
+      "value": "2",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 14,
+      "value": "12",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 15,
+      "value": "10",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 16,
+      "value": "16",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 25,
+      "value": "2",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 25,
+      "value": "12",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 25,
+      "value": "10",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 25,
+      "value": "16",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1"
+    },
+    {
+      "line": 41,
+      "value": "5",
+      "context": "합계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.1"
+    },
+    {
+      "line": 42,
+      "value": "32",
+      "context": "합계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.1"
+    },
+    {
+      "line": 43,
+      "value": "42",
+      "context": "합계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.1"
+    },
+    {
+      "line": 44,
+      "value": "81",
+      "context": "합계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.1"
+    },
+    {
+      "line": 54,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§1.3"
+    },
+    {
+      "line": 62,
+      "value": "2.1",
+      "context": "스키마",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.3"
+    },
+    {
+      "line": 76,
+      "value": "30",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§1.3"
+    },
+    {
+      "line": 92,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§1.3"
+    },
+    {
+      "line": 101,
+      "value": "2",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 103,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 103,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 104,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 161,
+      "value": "13",
+      "context": "섹션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 161,
+      "value": "17",
+      "context": "섹션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 201,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 217,
+      "value": "1",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 220,
+      "value": "10",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 221,
+      "value": "5",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 319,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 376,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 392,
+      "value": "1",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 395,
+      "value": "10",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 396,
+      "value": "5",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 474,
+      "value": "13",
+      "context": "섹션",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 475,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 487,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 487,
+      "value": "33",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 494,
+      "value": "7",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 524,
+      "value": "2",
+      "context": "seed",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 525,
+      "value": "1",
+      "context": "seed",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 557,
+      "value": "18",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 557,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 557,
+      "value": "4",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 557,
+      "value": "3",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 566,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 566,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 591,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 626,
+      "value": "2.",
+      "context": "레지스트리",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 633,
+      "value": "2",
+      "context": "seed",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 634,
+      "value": "1",
+      "context": "seed",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 649,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 650,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 651,
+      "value": "4",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 651,
+      "value": "3",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 660,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 661,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 666,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 671,
+      "value": "10",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 675,
+      "value": "6",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 683,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 686,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 689,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 697,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 698,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 699,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 700,
+      "value": "4",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 701,
+      "value": "3",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 702,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP2"
+    },
+    {
+      "line": 721,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 743,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 775,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 800,
+      "value": "3",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 802,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 806,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 863,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 867,
+      "value": "3",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 868,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP3"
+    },
+    {
+      "line": 904,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 925,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 948,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 968,
+      "value": "4",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 968,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1005,
+      "value": "9",
+      "context": "State",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1026,
+      "value": "600",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1040,
+      "value": "3",
+      "context": "단계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1041,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1056,
+      "value": "10",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1063,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1064,
+      "value": "5",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1078,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1078,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1108,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1109,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1138,
+      "value": "7",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1175,
+      "value": "3",
+      "context": "단계",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1197,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1197,
+      "value": "17",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1198,
+      "value": "17",
+      "context": "섹션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1198,
+      "value": "13",
+      "context": "섹션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1204,
+      "value": "2",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1204,
+      "value": "3",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1204,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1224,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1230,
+      "value": "7",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1231,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1233,
+      "value": "3",
+      "context": "단계",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP5"
+    },
+    {
+      "line": 1249,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1320,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1328,
+      "value": "18",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1333,
+      "value": "5",
+      "context": "필드",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1342,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1346,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1350,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1361,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1395,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1421,
+      "value": "25",
+      "context": "개",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1422,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1423,
+      "value": "10",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1424,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1425,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1428,
+      "value": "13",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1434,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1436,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1452,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1452,
+      "value": "12",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1454,
+      "value": "32",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1458,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1467,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1469,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1476,
+      "value": "1",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1489,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1492,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1493,
+      "value": "1",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1495,
+      "value": "10",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1496,
+      "value": "9",
+      "context": "State",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1499,
+      "value": "9",
+      "context": "State",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1527,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1529,
+      "value": "3",
+      "context": "단계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1531,
+      "value": "20",
+      "context": "턴",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1533,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1537,
+      "value": "17",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1538,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1539,
+      "value": "9",
+      "context": "State",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1542,
+      "value": "1",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1542,
+      "value": "2",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1543,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1552,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1554,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1561,
+      "value": "90",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1562,
+      "value": "1024",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1562,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1565,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1569,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1570,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1571,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1572,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1574,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1576,
+      "value": "90",
+      "context": "일",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1578,
+      "value": "1024",
+      "context": "dimension",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1578,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1579,
+      "value": "6",
+      "context": "Stage",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1591,
+      "value": "6",
+      "context": "Stage",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1594,
+      "value": "500",
+      "context": "token",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1595,
+      "value": "4",
+      "context": "Store",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1623,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1627,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1628,
+      "value": "90",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1629,
+      "value": "1024",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1629,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1632,
+      "value": "6",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase2"
+    },
+    {
+      "line": 1644,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1650,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1652,
+      "value": "1",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1653,
+      "value": "7",
+      "context": "스키마",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1654,
+      "value": "3",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1656,
+      "value": "2",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1665,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1666,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1667,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1668,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1669,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1670,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1671,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1672,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1673,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1674,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1675,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1676,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1677,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1678,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1679,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1680,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1681,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1682,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1683,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1684,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1685,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1686,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1687,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1688,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1689,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1690,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1691,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1692,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1693,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1694,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1695,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1696,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1697,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1698,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1699,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1700,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1701,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1702,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1703,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1704,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1705,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1706,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1707,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1708,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1710,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1711,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1712,
+      "value": "1",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1714,
+      "value": "3",
+      "context": "회",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1715,
+      "value": "2",
+      "context": "Sub-Agent",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1718,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1722,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1723,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1724,
+      "value": "1",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1727,
+      "value": "2",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1731,
+      "value": "2",
+      "context": "단계",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§3-Phase3"
+    },
+    {
+      "line": 1738,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1744,
+      "value": "300",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1744,
+      "value": "400",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1754,
+      "value": "44",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1755,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1756,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1759,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1760,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1761,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1762,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1764,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1768,
+      "value": "300",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1768,
+      "value": "400",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1771,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1772,
+      "value": "44",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1773,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1776,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1777,
+      "value": "9",
+      "context": "State",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase4"
+    },
+    {
+      "line": 1785,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1793,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1796,
+      "value": "45",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1797,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1798,
+      "value": "15",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1799,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1803,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1804,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1805,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1807,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1813,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1815,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1816,
+      "value": "45",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1817,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1818,
+      "value": "15",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1819,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1827,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1841,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1842,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1843,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1845,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1858,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1858,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1863,
+      "value": "17",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1864,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1865,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1868,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1876,
+      "value": "15",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1877,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1885,
+      "value": "10",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1887,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1887,
+      "value": "1",
+      "context": "모듈",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1891,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1897,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1897,
+      "value": "4",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1911,
+      "value": "10",
+      "context": "Step",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1926,
+      "value": "7",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1940,
+      "value": "10",
+      "context": "Step",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1950,
+      "value": "10",
+      "context": "Step",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1957,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1961,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1965,
+      "value": "1000",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1972,
+      "value": "7",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1973,
+      "value": "1000",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1978,
+      "value": "4",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1980,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1981,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1995,
+      "value": "13",
+      "context": "섹션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2024,
+      "value": "10",
+      "context": "Step",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2037,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2043,
+      "value": "256",
+      "context": "dimension",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2049,
+      "value": "10",
+      "context": "Step",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2049,
+      "value": "10",
+      "context": "단계",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2050,
+      "value": "7",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2056,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2072,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2073,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2075,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2076,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2077,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2078,
+      "value": "1000",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2078,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2078,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2079,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2080,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2081,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2082,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2083,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2084,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2085,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2086,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2087,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2088,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2089,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2090,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2091,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2092,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2093,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2094,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2095,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2096,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2097,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2098,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2099,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2100,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2101,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2102,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2103,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2104,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2105,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2106,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2107,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2108,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2109,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2110,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2111,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2112,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2113,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2114,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2115,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2116,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2117,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2118,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2119,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2120,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2121,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2122,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2123,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2124,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2125,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2126,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2127,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2128,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2129,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2130,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2131,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2132,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2133,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2134,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2135,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2136,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2137,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2138,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2139,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2140,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2141,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2142,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2143,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2144,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2145,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2146,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2147,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2148,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2149,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2150,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2151,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2152,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2153,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2154,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2155,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2156,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2157,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2158,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2159,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2160,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2161,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2162,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2163,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2164,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2165,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2166,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2167,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2168,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2169,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2170,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2171,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2172,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2173,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2174,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2175,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2176,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2177,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2178,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2179,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2180,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2196,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2202,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2205,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2213,
+      "value": "30",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2238,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2244,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2266,
+      "value": "7",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2267,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2270,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2285,
+      "value": "7",
+      "context": "필드",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2288,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2324,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2328,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2333,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2333,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2335,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2336,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2341,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2347,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2352,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2352,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2353,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2353,
+      "value": "9",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2355,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2355,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2357,
+      "value": "7",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2358,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2359,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2360,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2361,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2362,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2363,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2364,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2365,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2366,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2367,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2368,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2369,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2370,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2371,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2372,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2373,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2374,
+      "value": "10",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2378,
+      "value": "7",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2388,
+      "value": "6",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2391,
+      "value": "9",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2397,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2400,
+      "value": "10",
+      "context": "에이전트",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2400,
+      "value": "6",
+      "context": "패턴",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2401,
+      "value": "3",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2418,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2421,
+      "value": "9",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2437,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2440,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2440,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2458,
+      "value": "7",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2461,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2467,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2467,
+      "value": "3",
+      "context": "액션",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2468,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2473,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2475,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2475,
+      "value": "7.1",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2487,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2493,
+      "value": "9",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2494,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2496,
+      "value": "3",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2498,
+      "value": "7",
+      "context": "Stage",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2499,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2500,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2502,
+      "value": "60",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2510,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2511,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2512,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2512,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2517,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2525,
+      "value": "16",
+      "context": "주",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2527,
+      "value": "39",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2527,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2531,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2556,
+      "value": "24",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2564,
+      "value": "60",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2570,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2602,
+      "value": "8",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2602,
+      "value": "80",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2609,
+      "value": "5",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2609,
+      "value": "8",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2609,
+      "value": "2",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2615,
+      "value": "24",
+      "context": "GB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2648,
+      "value": "5",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2679,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2689,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2696,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2751,
+      "value": "60",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2758,
+      "value": "14",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2758,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2764,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2767,
+      "value": "39",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2767,
+      "value": "14",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2768,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2791,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2840,
+      "value": "3",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2860,
+      "value": "004",
+      "context": "벤치마크",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2891,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2977,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2984,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2991,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2993,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2998,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3009,
+      "value": "38",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3012,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3035,
+      "value": "38",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3037,
+      "value": "50",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3038,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3039,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3044,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3081,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3087,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3112,
+      "value": "38",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3125,
+      "value": "50",
+      "context": "req/day",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3127,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3155,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3160,
+      "value": "50",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3162,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3167,
+      "value": "38",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3168,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3171,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3176,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3192,
+      "value": "85",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.1"
+    },
+    {
+      "line": 3198,
+      "value": "300",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3198,
+      "value": "400",
+      "context": "pixel",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3203,
+      "value": "44",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.1"
+    },
+    {
+      "line": 3222,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3224,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3228,
+      "value": "4",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3234,
+      "value": "7",
+      "context": "페이지",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3235,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3235,
+      "value": "7",
+      "context": "페이지",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3273,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3284,
+      "value": "14",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3284,
+      "value": "9",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.1"
+    },
+    {
+      "line": 3297,
+      "value": "108",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.2"
+    },
+    {
+      "line": 3299,
+      "value": "72",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.2"
+    },
+    {
+      "line": 3299,
+      "value": "47",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.2"
+    },
+    {
+      "line": 3309,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.2"
+    },
+    {
+      "line": 3328,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.2"
+    },
+    {
+      "line": 3328,
+      "value": "2.1",
+      "context": "스키마",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.2"
+    },
+    {
+      "line": 3332,
+      "value": "84",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.3"
+    },
+    {
+      "line": 3338,
+      "value": "9",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3359,
+      "value": "50",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3359,
+      "value": "79",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3360,
+      "value": "1",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3360,
+      "value": "2",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3364,
+      "value": "14",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.4"
+    },
+    {
+      "line": 3377,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.4"
+    },
+    {
+      "line": 3387,
+      "value": "15",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3398,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3399,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3410,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3417,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3422,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.5"
+    },
+    {
+      "line": 3426,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.6"
+    },
+    {
+      "line": 3438,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.6"
+    },
+    {
+      "line": 3438,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.6"
+    },
+    {
+      "line": 3438,
+      "value": "1",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.6"
+    },
+    {
+      "line": 3438,
+      "value": "11",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.6"
+    },
+    {
+      "line": 3464,
+      "value": "2",
+      "context": "Sub-Agent",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3466,
+      "value": "2",
+      "context": "단계",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3493,
+      "value": "17",
+      "context": "건",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3495,
+      "value": "17",
+      "context": "건",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3502,
+      "value": "3",
+      "context": "단계",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3503,
+      "value": "07",
+      "context": "Gate",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3506,
+      "value": "2",
+      "context": "에이전트",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3532,
+      "value": "1",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3534,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3556,
+      "value": "50",
+      "context": "req/day",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3558,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3559,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3569,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3615,
+      "value": "14",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3615,
+      "value": "14",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3620,
+      "value": "3",
+      "context": "개",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3648,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3702,
+      "value": "10",
+      "context": "분",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3710,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3710,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3711,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3712,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3713,
+      "value": "3",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3715,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3715,
+      "value": "5",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3715,
+      "value": "2",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3715,
+      "value": "7",
+      "context": "State",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3717,
+      "value": "5",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3720,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3722,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3724,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3737,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3742,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3745,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3747,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3755,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3762,
+      "value": "2",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3763,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3764,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3765,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3766,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3766,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3766,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3768,
+      "value": "9",
+      "context": "건",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3769,
+      "value": "1",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3770,
+      "value": "3",
+      "context": "회",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3771,
+      "value": "3",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3774,
+      "value": "10",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3775,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3776,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3777,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3803,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3821,
+      "value": "10",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3849,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3859,
+      "value": "5",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3866,
+      "value": "1",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3868,
+      "value": "50",
+      "context": "MB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3872,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3874,
+      "value": "10",
+      "context": "KB",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3877,
+      "value": "1000",
+      "context": "페이지",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3879,
+      "value": "13",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3884,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3900,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3901,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3902,
+      "value": "120",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3909,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3932,
+      "value": "30",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3952,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3953,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3960,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3961,
+      "value": "30",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3963,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3964,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3964,
+      "value": "30",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3997,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 4001,
+      "value": "60",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§6.10"
+    },
+    {
+      "line": 4003,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 4042,
+      "value": "5",
+      "context": "분",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 4049,
+      "value": "11",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.11"
+    },
+    {
+      "line": 4049,
+      "value": "123",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.11"
+    },
+    {
+      "line": 4065,
+      "value": "11",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.11"
+    },
+    {
+      "line": 4081,
+      "value": "36",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.11"
+    },
+    {
+      "line": 4096,
+      "value": "23",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.11"
+    },
+    {
+      "line": 4112,
+      "value": "2",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.12"
+    },
+    {
+      "line": 4114,
+      "value": "1",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.12"
+    },
+    {
+      "line": 4118,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§6.12"
+    },
+    {
+      "line": 4142,
+      "value": "63",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4143,
+      "value": "193",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4144,
+      "value": "1",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4148,
+      "value": "16",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4150,
+      "value": "14",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4159,
+      "value": "2.1",
+      "context": "스키마",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4161,
+      "value": "24",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4164,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4165,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.1"
+    },
+    {
+      "line": 4171,
+      "value": "22",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4175,
+      "value": "25",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4177,
+      "value": "38",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4179,
+      "value": "2",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4179,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4182,
+      "value": "4",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4186,
+      "value": "15",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4194,
+      "value": "7",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4196,
+      "value": "3",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4196,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4201,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4202,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4205,
+      "value": "14",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4209,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4211,
+      "value": "190",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§7.3"
+    },
+    {
+      "line": 4212,
+      "value": "10",
+      "context": "Layer",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4219,
+      "value": "7",
+      "context": "모듈",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4220,
+      "value": "10",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4227,
+      "value": "60",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.3"
+    },
+    {
+      "line": 4231,
+      "value": "12",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.4"
+    },
+    {
+      "line": 4241,
+      "value": "317",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": true,
+      "section": "§7.4"
+    },
+    {
+      "line": 4258,
+      "value": "81",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4264,
+      "value": "10",
+      "context": "항목",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4274,
+      "value": "30",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4280,
+      "value": "2",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4281,
+      "value": "10",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4282,
+      "value": "1",
+      "context": "초",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4294,
+      "value": "5.",
+      "context": "스키마",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4304,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4304,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4308,
+      "value": "1",
+      "context": "Phase",
+      "is_locked": true,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4312,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4312,
+      "value": "6",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4313,
+      "value": "47",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4313,
+      "value": "72",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4314,
+      "value": "4",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4314,
+      "value": "2",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4315,
+      "value": "30",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4315,
+      "value": "7",
+      "context": "일",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4317,
+      "value": "1",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4318,
+      "value": "2",
+      "context": "Gate",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4320,
+      "value": "14",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4320,
+      "value": "12",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4320,
+      "value": "2",
+      "context": "건",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4320,
+      "value": "9",
+      "context": "Phase",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4326,
+      "value": "43",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.6"
+    },
+    {
+      "line": 4341,
+      "value": "8",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.6"
+    },
+    {
+      "line": 4343,
+      "value": "7",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.6"
+    },
+    {
+      "line": 4344,
+      "value": "5",
+      "context": "개",
+      "is_locked": false,
+      "is_approximate": false,
+      "section": "§7.6"
+    }
+  ],
+  "currency_values": [
+    {
+      "line": 76,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": ") | `/cost` 확인 | 비용 모니터링 → V1 ₩40,000/월 상한 준수 |",
+      "service": "비용관리",
+      "section": "§1.3"
+    },
+    {
+      "line": 102,
+      "amount": "5000",
+      "currency": "KRW",
+      "context": "> **비용**: 테스트용 (~₩5,000)",
+      "service": "비용관리",
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 208,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "it = 40000            # LOCK: ₩40,000/월",
+      "service": "",
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 383,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "it = 40000            # LOCK: ₩40,000/월",
+      "service": "",
+      "section": "§2-STEP1"
+    },
+    {
+      "line": 1453,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "> **비용 상한**: ₩40,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1878,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "- [ ] ₩40,000/월 비용 상한 준수",
+      "service": "비용관리",
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1886,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "> **비용 상한**: ₩93,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2028,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "- V2 비용 상한 ₩93,000/월 (LOCK) — 인프라 비용 모니터링 대시보드 포",
+      "service": "비용관리",
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2339,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "Prometheus 기반 비용 추적 대시보드 구축 + ₩93,000/월 상한 알림 설정 (V2-GNG-13 대응) | ✅",
+      "service": "비용관리",
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2477,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "- V2 비용 상한 ₩93,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2518,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "- [ ] ₩93,000/월 비용 상한 준수",
+      "service": "비용관리",
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2526,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "> **비용 상한**: ₩266,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2544,
+      "amount": "144",
+      "currency": "USD",
+      "context": "- **V3-003**: GPU 비용 상한 현실성 (~$144/월 A10G) — 실제 운영 비용 모니터링 필요",
+      "service": "GPU",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2563,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "*: Grafana + 클라우드 비용 API 연동 → ₩266,000/월 상한 알림 설정",
+      "service": "API",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2597,
+      "amount": "200",
+      "currency": "USD",
+      "context": "/Azure K8s 대비 **비용 절감 대안**으로, $200/월 ABSOLUTE LOCK 범위 내에서 운영 가능한",
+      "service": "비용관리",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2602,
+      "amount": "8",
+      "currency": "USD",
+      "context": "80GB SSD (독일 Falkenstein) | ~$8 |",
+      "service": "Hetzner",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2603,
+      "amount": "6",
+      "currency": "USD",
+      "context": "0/L4 on-demand (임베딩/추론 전용) | ~$6-15 |",
+      "service": "RunPod",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2604,
+      "amount": "79",
+      "currency": "USD",
+      "context": "*Polygon Pro** | 실시간 시세 데이터 | $79 |",
+      "service": "Polygon",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2605,
+      "amount": "20",
+      "currency": "USD",
+      "context": "/GPT) | Mini 중심 + Main 간헐적 | ~$20-30 |",
+      "service": "Claude",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2606,
+      "amount": "123",
+      "currency": "USD",
+      "context": "| **합계** | | **~$123-142/월** ($200 이내) |",
+      "service": "",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2606,
+      "amount": "200",
+      "currency": "USD",
+      "context": "| **합계** | | **~$123-142/월** ($200 이내) |",
+      "service": "",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2611,
+      "amount": "200",
+      "currency": "USD",
+      "context": "포 방식이며 특정 벤더에 종속되지 않음). 비용 상한 $200/월 ABSOLUTE LOCK 준수",
+      "service": "비용관리",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2646,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "- 비용 모니터링: 클라우드 비용 API → ₩266,000/월 상한 추적",
+      "service": "API",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2669,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "- 비용 상한 ₩266,000/월 (LOCK) — GPU 비용 실시간 추적 필수",
+      "service": "GPU",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2692,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "10 | 비용 모니터링 | Grafana 대시보드에서 ₩266,000/월 상한 알림 설정 + 동작 확인 | ✅ |",
+      "service": "비용관리",
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2968,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "- V3 비용 상한 ₩266,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 3143,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "- V3 비용 상한 ₩266,000/월 (LOCK)",
+      "service": "비용관리",
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3169,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "| 11 | 비용 상한 준수 | ₩266,000/월 이내 실제 비용 확인 (GPU + 클라우드 + A",
+      "service": "API",
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3182,
+      "amount": "266000",
+      "currency": "KRW",
+      "context": "- [ ] ₩266,000/월 비용 상한 준수",
+      "service": "비용관리",
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3469,
+      "amount": "1300",
+      "currency": "KRW",
+      "context": "| 비용 | ₩1,300/일 이내 |",
+      "service": "비용관리",
+      "section": "§6.7"
+    },
+    {
+      "line": 3615,
+      "amount": "14",
+      "currency": "KRW",
+      "context": "EF-S6-06): AI_INVESTING_SPEC §14 원본은 인프라/도구 14개 항목(Airflow, Kafk",
+      "service": "인프라",
+      "section": "§6.8"
+    },
+    {
+      "line": 3615,
+      "amount": "",
+      "currency": "KRW",
+      "context": "이블은 PART2에서 기능 카테고리별로 재구성한 것으로, 원본 §14 항목 순서와 다릅니다. 정확한 항목 목록은",
+      "service": "인프라",
+      "section": "§6.8"
+    },
+    {
+      "line": 3727,
+      "amount": "7",
+      "currency": "KRW",
+      "context": "NOTE (XREF-S6-05): SDAR_SPEC §7 원본은 S0~S6 정의(6+1). ESCALATED는 독",
+      "service": "",
+      "section": "§6.9"
+    },
+    {
+      "line": 3813,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "R 수리 추가 비용은 CostBudget 상한(V1: ₩40,000/월) 내에서만 허용",
+      "service": "비용관리",
+      "section": "§6.9"
+    },
+    {
+      "line": 3952,
+      "amount": "0",
+      "currency": "KRW",
+      "context": "3만) | 키워드 규칙 | EventBus 직접 | +₩0 (RSS 무료) |",
+      "service": "",
+      "section": "§6.10"
+    },
+    {
+      "line": 3953,
+      "amount": "5000",
+      "currency": "KRW",
+      "context": "+T4) | 키워드 + 빈도 | Kafka 토픽 | +₩5,000~10,000/월 |",
+      "service": "API",
+      "section": "§6.10"
+    },
+    {
+      "line": 3954,
+      "amount": "30000",
+      "currency": "KRW",
+      "context": "ML | Kafka + Redis Pub/Sub | +₩30,000~50,000/월 |",
+      "service": "",
+      "section": "§6.10"
+    },
+    {
+      "line": 4002,
+      "amount": "0",
+      "currency": "KRW",
+      "context": "Cloud Library 배치 | 1시간~매일 | +₩0 (RSS 무료) | V1+ |",
+      "service": "LLM",
+      "section": "§6.10"
+    },
+    {
+      "line": 4003,
+      "amount": "0",
+      "currency": "KRW",
+      "context": "SS 폴링 + RT-BNP 확장 | 5분~1시간 | +₩0 (RSS 무료) | V2+ |",
+      "service": "",
+      "section": "§6.10"
+    },
+    {
+      "line": 4035,
+      "amount": "0",
+      "currency": "KRW",
+      "context": "| 비용 상한 | DCL 전체 비용은 V1: +₩0, V2: +₩5,000/월, V3: +₩15,000/월",
+      "service": "비용관리",
+      "section": "§6.10"
+    },
+    {
+      "line": 4035,
+      "amount": "5000",
+      "currency": "KRW",
+      "context": "상한 | DCL 전체 비용은 V1: +₩0, V2: +₩5,000/월, V3: +₩15,000/월 이내 |",
+      "service": "비용관리",
+      "section": "§6.10"
+    },
+    {
+      "line": 4035,
+      "amount": "15000",
+      "currency": "KRW",
+      "context": "V1: +₩0, V2: +₩5,000/월, V3: +₩15,000/월 이내 |",
+      "service": "비용관리",
+      "section": "§6.10"
+    },
+    {
+      "line": 4167,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK | [ ]",
+      "service": "비용관리",
+      "section": "§7.1"
+    },
+    {
+      "line": 4183,
+      "amount": "40000",
+      "currency": "KRW",
+      "context": "| 9 | 비용 상한 ₩40,000 통일 | V1-013 | [ ] |",
+      "service": "비용관리",
+      "section": "§7.2"
+    },
+    {
+      "line": 4221,
+      "amount": "93000",
+      "currency": "KRW",
+      "context": "| 13 | V2 비용 모니터링 대시보드 (₩93,000 이내) | ABSOLUTE LOCK | [ ] |",
+      "service": "비용관리",
+      "section": "§7.3"
+    }
+  ],
+  "percentage_values": [
+    {
+      "line": 80,
+      "value": "50",
+      "context": "**: /compact + 세션 분리로 토큰 비용 30~50% 절감 예상 (에반 #13, #23 기반)",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§1.3"
+    },
+    {
+      "line": 889,
+      "value": "80",
+      "context": "- CostGate: 80%/100% 체크",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 889,
+      "value": "100",
+      "context": "- CostGate: 80%/100% 체크",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 938,
+      "value": "80",
+      "context": "3. **Gate 동작 검증**: CostGate 80%/100% 시나리오를 수동으로 트리거하여 deny/do",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 938,
+      "value": "100",
+      "context": "**Gate 동작 검증**: CostGate 80%/100% 시나리오를 수동으로 트리거하여 deny/downshi",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 970,
+      "value": "80",
+      "context": "- CostGate: I-9 stub 호출 → 80% warn, 100% block (config.v1.t",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 970,
+      "value": "100",
+      "context": "tGate: I-9 stub 호출 → 80% warn, 100% block (config.v1.toml 값 참조)",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1060,
+      "value": "80",
+      "context": "| 5 | CostGate 80%/100% | 사용량 80% → warn, 100% →",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1060,
+      "value": "100",
+      "context": "| 5 | CostGate 80%/100% | 사용량 80% → warn, 100% → bloc",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP4"
+    },
+    {
+      "line": 1353,
+      "value": "80",
+      "context": "- CostGate: 사용량 < 80% → allow 확인",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1354,
+      "value": "80",
+      "context": "- CostGate: 사용량 >= 80% → warn 확인",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1355,
+      "value": "100",
+      "context": "- CostGate: 사용량 >= 100% → block 확인",
+      "metric": "block_threshold",
+      "is_approximate": false,
+      "section": "§2-STEP6"
+    },
+    {
+      "line": 1529,
+      "value": "70",
+      "context": "| I-9 | 비용 3단계 경보 체계 | 70% 경고 / 85% 심화 경고 / 95% 차단 (conf",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1529,
+      "value": "85",
+      "context": "I-9 | 비용 3단계 경보 체계 | 70% 경고 / 85% 심화 경고 / 95% 차단 (config.v1.tom",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1529,
+      "value": "95",
+      "context": "계 경보 체계 | 70% 경고 / 85% 심화 경고 / 95% 차단 (config.v1.toml cost 섹션) |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase1"
+    },
+    {
+      "line": 1794,
+      "value": "80",
+      "context": "| 4 | **Cost 시뮬레이션** | 80% 경고, 100% 차단 검증 | PHASE_B5 |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1794,
+      "value": "100",
+      "context": "| 4 | **Cost 시뮬레이션** | 80% 경고, 100% 차단 검증 | PHASE_B5 |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1800,
+      "value": "80",
+      "context": "10 | **Coverage 달성** | Python 80%+, Rust 80%+, React 80%+ | PHA",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1800,
+      "value": "60",
+      "context": "SE_B6 v1.0.2 PH-11 기준 적용. Rust 60%→80%, React 70%→80%. Phase 1에서",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1800,
+      "value": "70",
+      "context": "-11 기준 적용. Rust 60%→80%, React 70%→80%. Phase 1에서 통일 완료. --> |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1814,
+      "value": "80",
+      "context": "| 4 | Cost 시뮬레이션 | 80% 경고 + 100% 차단 동작 검증 PASS | ✅ |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1814,
+      "value": "100",
+      "context": "| 4 | Cost 시뮬레이션 | 80% 경고 + 100% 차단 동작 검증 PASS | ✅ |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1816,
+      "value": "80",
+      "context": "thon 커버리지 | pytest ~45개 + 커버리지 80%+ 달성 | ✅ |",
+      "metric": "coverage",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1817,
+      "value": "80",
+      "context": "t 커버리지 | cargo test ~8개 + 커버리지 80%+ 달성 | ✅ |",
+      "metric": "coverage",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1818,
+      "value": "80",
+      "context": "eact 커버리지 | vitest ~15개 + 커버리지 80%+ 달성 | ✅ |",
+      "metric": "coverage",
+      "is_approximate": false,
+      "section": "§3-Phase5"
+    },
+    {
+      "line": 1833,
+      "value": "51",
+      "context": "r Trading MVP** | 시뮬레이션 트레이딩 (51% Gate) | VAMOS_AI_INVESTING_SP",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1849,
+      "value": "51",
+      "context": "Trading MVP | 시뮬레이션 트레이딩 실행 + 51% Gate 파라미터 검증 동작 | ✅ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1858,
+      "value": "60",
+      "context": "건 | QoD ≥ 0.85(30일), RAG 정확도 ≥ 60%, 메모리 승격/강등 오류율 < 1%, P0 테스트 1",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1858,
+      "value": "1",
+      "context": "RAG 정확도 ≥ 60%, 메모리 승격/강등 오류율 < 1%, P0 테스트 100%, 비용 초과 없이 30일, 사",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1858,
+      "value": "100",
+      "context": "0%, 메모리 승격/강등 오류율 < 1%, P0 테스트 100%, 비용 초과 없이 30일, 사용자 승인 (6개 전수)",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§3-Phase6"
+    },
+    {
+      "line": 1922,
+      "value": "10",
+      "context": "| 8 | 성능 벤치마크 | V1 대비 ±10% 이내 |",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1923,
+      "value": "10",
+      "context": "| 9 | Canary 배포 (10% 트래픽) | 에러율 < 0.1% |",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1923,
+      "value": "0.1",
+      "context": "| Canary 배포 (10% 트래픽) | 에러율 < 0.1% |",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1928,
+      "value": "100",
+      "context": "- [ ] 데이터 무결성: 원본 대비 100% 일치 (체크섬 비교)",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1929,
+      "value": "10",
+      "context": "] 성능 회귀 없음: 주요 쿼리 응답시간 V1 대비 ±10%",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1951,
+      "value": "10",
+      "context": "7. **Canary 배포 검증**: 10% 트래픽 전환 후 에러율 < 0.1% 확인, 이상 시",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 1951,
+      "value": "0.1",
+      "context": "ry 배포 검증**: 10% 트래픽 전환 후 에러율 < 0.1% 확인, 이상 시 `./scripts/deploy/ro",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2041,
+      "value": "100",
+      "context": "1 | SQLite → PostgreSQL | 행 수 100% 일치 + 체크섬(SHA-256) 비교 + FK 위반",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2048,
+      "value": "10",
+      "context": "| 성능 벤치마크 | 주요 쿼리 응답시간 V1 대비 ±10% 이내 | ✅ |",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§4-Phase1"
+    },
+    {
+      "line": 2192,
+      "value": "60",
+      "context": "검증 (QoD ≥ 0.85, RAG accuracy ≥ 60% 등)",
+      "metric": "accuracy",
+      "is_approximate": false,
+      "section": "§4-Phase2"
+    },
+    {
+      "line": 2469,
+      "value": "90",
+      "context": "성공률 추적: repair_success_rate ≥ 90% 목표",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§4-Phase3"
+    },
+    {
+      "line": 2589,
+      "value": "70",
+      "context": ": HorizontalPodAutoscaler (CPU 70%, min 2, max 10)",
+      "metric": "CPU",
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2608,
+      "value": "0",
+      "context": "- **장점**: VM 회수 리스크 0% (vs Oracle Free), x86 호환성 100",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2608,
+      "value": "100",
+      "context": "크 0% (vs Oracle Free), x86 호환성 100%, DDoS 방어 20Tbps, 투명 과금",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2691,
+      "value": "70",
+      "context": "| 9 | HPA 동작 | CPU 70% 초과 시 자동 스케일링 (min 2 → max 10)",
+      "metric": "CPU",
+      "is_approximate": false,
+      "section": "§5-Phase1"
+    },
+    {
+      "line": 2715,
+      "value": "80",
+      "context": "자동 확장/축소, 보상 스케줄(초기=병렬화, 후기=품질80%+효율20%), Decision Aggregator (",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2715,
+      "value": "20",
+      "context": "축소, 보상 스케줄(초기=병렬화, 후기=품질80%+효율20%), Decision Aggregator (D2.0-0",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2736,
+      "value": "90",
+      "context": "> - **V3-004**: GraphRAG 90% 벤치마크 미정의 — 벤치마크 기준 및 평가 파이프라인",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2759,
+      "value": "80",
+      "context": "상 함수 초기 가중치 설정 (초기=병렬화율, 후기=품질80%+효율20%), 에이전트 풀 자동 확장/축소 정책 정의",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2759,
+      "value": "20",
+      "context": "기 가중치 설정 (초기=병렬화율, 후기=품질80%+효율20%), 에이전트 풀 자동 확장/축소 정책 정의, Deci",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2790,
+      "value": "90",
+      "context": "hRAG: 지식 그래프 + RAG 결합 검색 (벤치마크 90% 목표, V3-004)",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2884,
+      "value": "80",
+      "context": "- 후기: 품질 80% + 효율 20% (exploitation)",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2884,
+      "value": "20",
+      "context": "- 후기: 품질 80% + 효율 20% (exploitation)",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2885,
+      "value": "90",
+      "context": "전환 트리거: 100 에피소드 후 또는 병렬 효율 ≥ 90% 도달 시",
+      "metric": "efficiency",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2993,
+      "value": "0.1",
+      "context": "체 모듈 활성 상태에서 시스템 안정성 확인 (에러율 < 0.1%) | ✅ |",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 2994,
+      "value": "95",
+      "context": "+ Decision Aggregator 집계 정확도 ≥ 95% + 보상 스케줄 전환 동작 확인 | ✅ |",
+      "metric": "accuracy",
+      "is_approximate": false,
+      "section": "§5-Phase2"
+    },
+    {
+      "line": 3039,
+      "value": "120",
+      "context": "메인 분화 기준), 특화 기준 (성능 > 기본 에이전트 120% 시 특화 확정), retire 트리거 (30일 미사용",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3039,
+      "value": "80",
+      "context": "retire 트리거 (30일 미사용 또는 성능 < 기본 80% 시 자동 retire) 정의",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3086,
+      "value": "95",
+      "context": "AR-L4 + repair_success_rate ≥ 95% + 스냅샷 복원 100%",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3086,
+      "value": "100",
+      "context": "ir_success_rate ≥ 95% + 스냅샷 복원 100%",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3118,
+      "value": "90",
+      "context": "- GraphRAG: 90% 목표 (V3-004)",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3162,
+      "value": "95",
+      "context": "ector) + repair_success_rate ≥ 95% | ✅ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3163,
+      "value": "95",
+      "context": "| SDAR ON 조건 | AR-L4 + 수리성공률 ≥ 95% + 스냅샷 복원 100% 전수 확인 | ✅ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3163,
+      "value": "100",
+      "context": "| AR-L4 + 수리성공률 ≥ 95% + 스냅샷 복원 100% 전수 확인 | ✅ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3167,
+      "value": "90",
+      "context": "LU/HumanEval/LogicKor/GraphRAG 90% 등 전수 실행 + 기준치 달성 | ✅ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3168,
+      "value": "0.1",
+      "context": "전체 활성 + 24시간 연속 운영 안정성 (에러율 < 0.1%) | ✅ |",
+      "metric": "error_rate",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3171,
+      "value": "120",
+      "context": "ASS — fork 조건 트리거 → 특화 확정(성능 > 120%) → retire(30일 미사용) 전체 라이프사이클",
+      "metric": "performance",
+      "is_approximate": false,
+      "section": "§5-Phase3"
+    },
+    {
+      "line": 3336,
+      "value": "80",
+      "context": "ety 7 + storage 5 + agent 10 | 80%+ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3337,
+      "value": "80",
+      "context": "~8 | IPC 핸들러 4 + Python 관리 4 | 80%+ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3338,
+      "value": "80",
+      "context": "6 + Store 3 + Hook 2 + 기타 4 | 80%+ | <!-- NOTE: B5 정본은 T-U-UI-0",
+      "metric": "test",
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3340,
+      "value": "100",
+      "context": "운시프트, HITL 승인, Guardrails 차단 | 100% core |",
+      "metric": "block_threshold",
+      "is_approximate": false,
+      "section": "§6.3"
+    },
+    {
+      "line": 3529,
+      "value": "80",
+      "context": "| 초기=병렬화율(exploration), 후기=품질80%+효율20%(exploitation) |",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3529,
+      "value": "20",
+      "context": "병렬화율(exploration), 후기=품질80%+효율20%(exploitation) |",
+      "metric": "quality",
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3530,
+      "value": "90",
+      "context": "환 트리거 | 100 에피소드 완료 또는 병렬 효율 ≥ 90% |",
+      "metric": "efficiency",
+      "is_approximate": false,
+      "section": "§6.7"
+    },
+    {
+      "line": 3589,
+      "value": "51",
+      "context": "ipeline → Strategy Execution → 51% Gate → Paper Trading",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3592,
+      "value": "51",
+      "context": "### 51% Gate 파라미터 (LOCK)",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3596,
+      "value": "51",
+      "context": "| Win Rate | >= 51% |",
+      "metric": "win_rate",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3598,
+      "value": "30",
+      "context": "| Decay | < 30% |",
+      "metric": "decay",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3606,
+      "value": "3",
+      "context": "| 일일 손실 -3% | 거래 중지 |",
+      "metric": "loss",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3608,
+      "value": "10",
+      "context": "| 포지션 -10% | 강제 청산 |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3609,
+      "value": "20",
+      "context": "| 현금 비율 | 최소 20% |",
+      "metric": "cash_ratio",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3610,
+      "value": "10",
+      "context": "| 단일 종목 | 최대 10% |",
+      "metric": "position_limit",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3682,
+      "value": "3",
+      "context": "| 일일 손실 -3% | BREAKING-P0 + sentiment < -",
+      "metric": "loss",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3684,
+      "value": "10",
+      "context": "| 포지션 -10% | BREAKING-P0 + 해당 섹터 | 해당 섹터",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§6.8"
+    },
+    {
+      "line": 3814,
+      "value": "10",
+      "context": "- 수리 비용이 일일 상한의 10% 초과 예상 시 인간 승인 필요",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§6.9"
+    },
+    {
+      "line": 3976,
+      "value": "90",
+      "context": "체 인터넷 배경 | V1 예산 3-4배 초과 | 노이즈 90% | 높음 | 위반 |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3985,
+      "value": "100",
+      "context": "[1] 사용자 입력               ← 100% 신뢰, 최우선",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3986,
+      "value": "95",
+      "context": "[2] 내부 메모리 L0-L3          ← 95% 신뢰, 핵심 백본",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3987,
+      "value": "80",
+      "context": "[3] I-2 RAG 검색              ← 80% 신뢰, 인덱싱된 지식",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3988,
+      "value": "70",
+      "context": "[4] Cloud Library 보조 보강    ← 70% 신뢰, E-15/S-5 배치 수집",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 3989,
+      "value": "60",
+      "context": "[5] 외부 API/MCP 도구          ← 60% 신뢰, 실시간 호출",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§6.10"
+    },
+    {
+      "line": 4187,
+      "value": "80",
+      "context": "| 13 | 테스트 인프라 구축 (Python 80%+, Rust 80%+, React 80%+) | PH",
+      "metric": "test",
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4201,
+      "value": "60",
+      "context": "QoD ≥ 0.85 (30일) / RAG 정확도 ≥ 60% / 메모리 승격/강등 오류율 < 1%",
+      "metric": "accuracy",
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4201,
+      "value": "1",
+      "context": "AG 정확도 ≥ 60% / 메모리 승격/강등 오류율 < 1%",
+      "metric": "accuracy",
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4202,
+      "value": "100",
+      "context": "P0 테스트 100% / 비용 초과 없이 30일 / 사용자 승인",
+      "metric": "cost",
+      "is_approximate": false,
+      "section": "§7.2"
+    },
+    {
+      "line": 4240,
+      "value": "95",
+      "context": "DAR V3 ON 조건 충족 (AR-L4, 수리성공률≥95%, 스냅샷복원100%) | SDAR SPEC | [ ]",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§7.4"
+    },
+    {
+      "line": 4240,
+      "value": "100",
+      "context": "조건 충족 (AR-L4, 수리성공률≥95%, 스냅샷복원100%) | SDAR SPEC | [ ] |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§7.4"
+    },
+    {
+      "line": 4262,
+      "value": "80",
+      "context": "비용 임계값 단일화 | config.toml warn=80%, block=100% 유일 SOT (BLOCKER-1",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4262,
+      "value": "100",
+      "context": "| config.toml warn=80%, block=100% 유일 SOT (BLOCKER-11) |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4270,
+      "value": "99",
+      "context": "스킹 동작 | 주민번호/전화번호/이메일/카드번호 탐지율 99%+ |",
+      "metric": "",
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4271,
+      "value": "100",
+      "context": "| Non-goal 차단 | Non-goal 목록 100% deny 확인 |",
+      "metric": "block_threshold",
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4273,
+      "value": "80",
+      "context": "| 비용 상한 준수 | 80% 경고 / 100% 차단 동작 확인 |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§7.5"
+    },
+    {
+      "line": 4273,
+      "value": "100",
+      "context": "| 비용 상한 준수 | 80% 경고 / 100% 차단 동작 확인 |",
+      "metric": "warning_threshold",
+      "is_approximate": false,
+      "section": "§7.5"
+    }
+  ],
+  "consistency_groups": {
+    "필드_7": [
+      {
+        "line": 494,
+        "value": "7",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 1138,
+        "value": "7",
+        "section": "§2-STEP5"
+      },
+      {
+        "line": 1230,
+        "value": "7",
+        "section": "§2-STEP5"
+      },
+      {
+        "line": 1972,
+        "value": "7",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 2285,
+        "value": "7",
+        "section": "§4-Phase2"
+      }
+    ],
+    "필드_18": [
+      {
+        "line": 557,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 649,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 660,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 661,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 686,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 698,
+        "value": "18",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 1328,
+        "value": "18",
+        "section": "§2-STEP6"
+      }
+    ],
+    "필드_5": [
+      {
+        "line": 557,
+        "value": "5",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 650,
+        "value": "5",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 666,
+        "value": "5",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 689,
+        "value": "5",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 699,
+        "value": "5",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 1064,
+        "value": "5",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1333,
+        "value": "5",
+        "section": "§2-STEP6"
+      }
+    ],
+    "필드_4": [
+      {
+        "line": 557,
+        "value": "4",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 651,
+        "value": "4",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 700,
+        "value": "4",
+        "section": "§2-STEP2"
+      }
+    ],
+    "필드_3": [
+      {
+        "line": 557,
+        "value": "3",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 651,
+        "value": "3",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 701,
+        "value": "3",
+        "section": "§2-STEP2"
+      }
+    ],
+    "필드_10": [
+      {
+        "line": 671,
+        "value": "10",
+        "section": "§2-STEP2"
+      },
+      {
+        "line": 1056,
+        "value": "10",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1423,
+        "value": "10",
+        "section": "§2-STEP6"
+      }
+    ],
+    "Gate_5": [
+      {
+        "line": 968,
+        "value": "5",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1249,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1350,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1424,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1467,
+        "value": "5",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1492,
+        "value": "5",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1538,
+        "value": "5",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1723,
+        "value": "5",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1793,
+        "value": "5",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1813,
+        "value": "5",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1864,
+        "value": "5",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 2244,
+        "value": "5",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2333,
+        "value": "5",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2468,
+        "value": "5",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 3087,
+        "value": "5",
+        "section": "§5-Phase3"
+      },
+      {
+        "line": 3715,
+        "value": "5",
+        "section": "§6.9"
+      },
+      {
+        "line": 3745,
+        "value": "5",
+        "section": "§6.9"
+      },
+      {
+        "line": 3747,
+        "value": "5",
+        "section": "§6.9"
+      },
+      {
+        "line": 3755,
+        "value": "5",
+        "section": "§6.9"
+      },
+      {
+        "line": 3849,
+        "value": "5",
+        "section": "§6.10"
+      },
+      {
+        "line": 3859,
+        "value": "5",
+        "section": "§6.10"
+      }
+    ],
+    "항목_7": [
+      {
+        "line": 1926,
+        "value": "7",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 2050,
+        "value": "7",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 4194,
+        "value": "7",
+        "section": "§7.2"
+      }
+    ],
+    "항목_14": [
+      {
+        "line": 3615,
+        "value": "14",
+        "section": "§6.8"
+      },
+      {
+        "line": 4205,
+        "value": "14",
+        "section": "§7.3"
+      }
+    ],
+    "건_1": [
+      {
+        "line": 5,
+        "value": "1",
+        "section": "§1"
+      },
+      {
+        "line": 3769,
+        "value": "1",
+        "section": "§6.9"
+      },
+      {
+        "line": 4144,
+        "value": "1",
+        "section": "§7.1"
+      }
+    ],
+    "건_1000": [
+      {
+        "line": 1965,
+        "value": "1000",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 1973,
+        "value": "1000",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 2078,
+        "value": "1000",
+        "section": "§4-Phase2"
+      }
+    ],
+    "건_17": [
+      {
+        "line": 3493,
+        "value": "17",
+        "section": "§6.7"
+      },
+      {
+        "line": 3495,
+        "value": "17",
+        "section": "§6.7"
+      }
+    ],
+    "건_2": [
+      {
+        "line": 4112,
+        "value": "2",
+        "section": "§6.12"
+      },
+      {
+        "line": 4320,
+        "value": "2",
+        "section": "§7.5"
+      }
+    ],
+    "건_14": [
+      {
+        "line": 4150,
+        "value": "14",
+        "section": "§7.1"
+      },
+      {
+        "line": 4320,
+        "value": "14",
+        "section": "§7.5"
+      }
+    ],
+    "State_9": [
+      {
+        "line": 1005,
+        "value": "9",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1496,
+        "value": "9",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1499,
+        "value": "9",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1539,
+        "value": "9",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1777,
+        "value": "9",
+        "section": "§3-Phase4"
+      }
+    ],
+    "Layer_3": [
+      {
+        "line": 1204,
+        "value": "3",
+        "section": "§2-STEP5"
+      },
+      {
+        "line": 2401,
+        "value": "3",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2496,
+        "value": "3",
+        "section": "§4-Phase3"
+      }
+    ],
+    "Layer_4": [
+      {
+        "line": 1204,
+        "value": "4",
+        "section": "§2-STEP5"
+      },
+      {
+        "line": 2355,
+        "value": "4",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2440,
+        "value": "4",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2473,
+        "value": "4",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2512,
+        "value": "4",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 4182,
+        "value": "4",
+        "section": "§7.2"
+      }
+    ],
+    "Layer_5": [
+      {
+        "line": 3715,
+        "value": "5",
+        "section": "§6.9"
+      },
+      {
+        "line": 3717,
+        "value": "5",
+        "section": "§6.9"
+      }
+    ],
+    "Layer_10": [
+      {
+        "line": 3821,
+        "value": "10",
+        "section": "§6.10"
+      },
+      {
+        "line": 4212,
+        "value": "10",
+        "section": "§7.3"
+      }
+    ],
+    "Phase_10": [
+      {
+        "line": 5,
+        "value": "10",
+        "section": "§1"
+      },
+      {
+        "line": 1569,
+        "value": "10",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1570,
+        "value": "10",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1571,
+        "value": "10",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1572,
+        "value": "10",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1665,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1666,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1667,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1668,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1669,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1670,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1671,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1672,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1673,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1674,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1675,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1676,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1677,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1678,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1679,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1680,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1681,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1682,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1683,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1684,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1685,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1686,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1687,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1688,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1689,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1690,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1691,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1692,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1693,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1694,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1695,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1696,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1697,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1698,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1699,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1700,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1701,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1702,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1703,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1704,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1705,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1706,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1707,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1708,
+        "value": "10",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1760,
+        "value": "10",
+        "section": "§3-Phase4"
+      },
+      {
+        "line": 1761,
+        "value": "10",
+        "section": "§3-Phase4"
+      },
+      {
+        "line": 1762,
+        "value": "10",
+        "section": "§3-Phase4"
+      },
+      {
+        "line": 1803,
+        "value": "10",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1804,
+        "value": "10",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1805,
+        "value": "10",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1841,
+        "value": "10",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 1842,
+        "value": "10",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 1843,
+        "value": "10",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 2075,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2076,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2077,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2078,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2079,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2080,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2081,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2082,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2083,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2084,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2085,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2086,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2087,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2088,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2089,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2090,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2091,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2092,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2093,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2094,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2095,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2096,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2097,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2098,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2099,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2100,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2101,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2102,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2103,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2104,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2105,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2106,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2107,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2108,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2109,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2110,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2111,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2112,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2113,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2114,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2115,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2116,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2117,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2118,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2119,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2120,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2121,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2122,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2123,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2124,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2125,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2126,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2127,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2128,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2129,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2130,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2131,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2132,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2133,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2134,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2135,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2136,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2137,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2138,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2139,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2140,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2141,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2142,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2143,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2144,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2145,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2146,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2147,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2148,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2149,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2150,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2151,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2152,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2153,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2154,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2155,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2156,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2157,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2158,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2159,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2160,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2161,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2162,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2163,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2164,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2165,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2166,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2167,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2168,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2169,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2170,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2171,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2172,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2173,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2174,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2175,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2176,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2177,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2178,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2179,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2180,
+        "value": "10",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2360,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2361,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2362,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2363,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2364,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2365,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2366,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2367,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2368,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2369,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2370,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2371,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2372,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2373,
+        "value": "10",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2374,
+        "value": "10",
+        "section": "§4-Phase3"
+      }
+    ],
+    "Phase_3": [
+      {
+        "line": 54,
+        "value": "3",
+        "section": "§1.3"
+      },
+      {
+        "line": 2531,
+        "value": "3",
+        "section": "§5-Phase1"
+      },
+      {
+        "line": 2570,
+        "value": "3",
+        "section": "§5-Phase1"
+      },
+      {
+        "line": 2679,
+        "value": "3",
+        "section": "§5-Phase1"
+      },
+      {
+        "line": 2696,
+        "value": "3",
+        "section": "§5-Phase2"
+      },
+      {
+        "line": 2764,
+        "value": "3",
+        "section": "§5-Phase2"
+      },
+      {
+        "line": 2791,
+        "value": "3",
+        "section": "§5-Phase2"
+      },
+      {
+        "line": 2977,
+        "value": "3",
+        "section": "§5-Phase2"
+      },
+      {
+        "line": 2998,
+        "value": "3",
+        "section": "§5-Phase3"
+      },
+      {
+        "line": 3044,
+        "value": "3",
+        "section": "§5-Phase3"
+      },
+      {
+        "line": 3155,
+        "value": "3",
+        "section": "§5-Phase3"
+      },
+      {
+        "line": 3712,
+        "value": "3",
+        "section": "§6.9"
+      },
+      {
+        "line": 3713,
+        "value": "3",
+        "section": "§6.9"
+      }
+    ],
+    "Phase_1": [
+      {
+        "line": 104,
+        "value": "1",
+        "section": "§2-STEP1"
+      },
+      {
+        "line": 1458,
+        "value": "1",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1489,
+        "value": "1",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1533,
+        "value": "1",
+        "section": "§3-Phase1"
+      },
+      {
+        "line": 1552,
+        "value": "1",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1554,
+        "value": "1",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1565,
+        "value": "1",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1574,
+        "value": "1",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1623,
+        "value": "1",
+        "section": "§3-Phase2"
+      },
+      {
+        "line": 1644,
+        "value": "1",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1710,
+        "value": "1",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1718,
+        "value": "1",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1738,
+        "value": "1",
+        "section": "§3-Phase4"
+      },
+      {
+        "line": 1764,
+        "value": "1",
+        "section": "§3-Phase4"
+      },
+      {
+        "line": 1785,
+        "value": "1",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1807,
+        "value": "1",
+        "section": "§3-Phase5"
+      },
+      {
+        "line": 1827,
+        "value": "1",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 1845,
+        "value": "1",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 1877,
+        "value": "1",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 3410,
+        "value": "1",
+        "section": "§6.5"
+      },
+      {
+        "line": 4196,
+        "value": "1",
+        "section": "§7.2"
+      },
+      {
+        "line": 4308,
+        "value": "1",
+        "section": "§7.5"
+      }
+    ],
+    "Phase_5": [
+      {
+        "line": 948,
+        "value": "5",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1063,
+        "value": "5",
+        "section": "§2-STEP4"
+      },
+      {
+        "line": 1361,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1425,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1436,
+        "value": "5",
+        "section": "§2-STEP6"
+      },
+      {
+        "line": 1650,
+        "value": "5",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1711,
+        "value": "5",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1722,
+        "value": "5",
+        "section": "§3-Phase3"
+      },
+      {
+        "line": 1868,
+        "value": "5",
+        "section": "§3-Phase6"
+      },
+      {
+        "line": 2648,
+        "value": "5",
+        "section": "§5-Phase1"
+      }
+    ],
+    "Phase_2": [
+      {
+        "line": 1891,
+        "value": "2",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 1957,
+        "value": "2",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 2037,
+        "value": "2",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 2056,
+        "value": "2",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2202,
+        "value": "2",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2324,
+        "value": "2",
+        "section": "§4-Phase2"
+      },
+      {
+        "line": 2347,
+        "value": "2",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2397,
+        "value": "2",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 2487,
+        "value": "2",
+        "section": "§4-Phase3"
+      },
+      {
+        "line": 3710,
+        "value": "2",
+        "section": "§6.9"
+      },
+      {
+        "line": 3711,
+        "value": "2",
+        "section": "§6.9"
+      },
+      {
+        "line": 3715,
+        "value": "2",
+        "section": "§6.9"
+      }
+    ],
+    "Phase_4": [
+      {
+        "line": 1897,
+        "value": "4",
+        "section": "§4-Phase1"
+      },
+      {
+        "line": 1978,
+        "value": "4",
+        "section": "§4-Phase1"
+      }
+    ],
+    "페이지_7": [
+      {
+        "line": 3234,
+        "value": "7",
+        "section": "§6.1"
+      },
+      {
+        "line": 3235,
+        "value": "7",
+        "section": "§6.1"
+      }
+    ],
+    "스키마_2.1": [
+      {
+        "line": 62,
+        "value": "2.1",
+        "section": "§1.3"
+      },
+      {
+        "line": 3328,
+        "value": "2.1",
+        "section": "§6.2"
+      },
+      {
+        "line": 4159,
+        "value": "2.1",
+        "section": "§7.1"
+      }
+    ]
+  },
+  "cross_checks": {
+    "section1_vs_sections2to5": {
+      "s1_count": {
+        "V0": 5,
+        "V1": 32,
+        "V2": 42,
+        "V3": 81
+      },
+      "s2to5_count": {
+        "V0": 5,
+        "V1": 32,
+        "V2": 42,
+        "V3": 81
+      },
+      "match": true,
+      "detail": "V0=5, V1=32, V2=42, V3=81 — §1.1 테이블과 §2~§5 본문 일치"
+    },
+    "section6_13_vs_details": {
+      "s6_13_total": 462,
+      "s6_13_row_sums": "V0(41)+V1(273)+V2(92)+V3(56)=462",
+      "s6_13_col_sums": "UI(135)+인프라(108)+테스트(84)+CI/CD(14)+도구(19)+보안(15)+MCP(7)+기타(80)=462",
+      "s6_1to12_sum": 462,
+      "match": true,
+      "detail": "§6.13 행/열 합계 모두 462로 일치"
+    },
+    "section7_header_vs_rows": {
+      "header_count": {
+        "V0": 16,
+        "V1": 22,
+        "V2": 14,
+        "V3": 12
+      },
+      "row_count": {
+        "V0": 16,
+        "V1": 22,
+        "V2": 14,
+        "V3": 12
+      },
+      "match": true,
+      "detail": "§7.1(V0)=16, §7.2(V1)=22, §7.3(V2)=14, §7.4(V3)=12 — 총 64건, 전수 일치"
+    }
+  },
+  "summary": {
+    "total_numeric_entries": 728,
+    "total_currency_values": 45,
+    "total_percentage_values": 103,
+    "consistency_groups_count": 27,
+    "consistency_issues": [
+      "없음 — 주요 크로스체크 항목 모두 일치"
+    ],
+    "locked_values_count": 56,
+    "approximate_values_count": 22,
+    "key_findings": [
+      "모듈 수: V0=5, V1=32, V2=42, V3=81 — §1.1과 §2~§5 전수 일치",
+      "비용 상한: V1=₩40,000/월, V2=₩93,000/월, V3=₩266,000/월 (LOCK)",
+      "DecisionSchema=18필드(FREEZE), ResponseEnvelope=5필드(LOCK)",
+      "GO/NO-GO: V0=16, V1=22, V2=14, V3=12 — 총 64건, 헤더/행 일치",
+      "Stage Gate: 총 ~193건 (V0=58, V1=66, V2=35, V3=34)",
+      "§6.13 작업량: ~462건 (V0~41, V1~273, V2~92, V3~56)",
+      "SOURCE_CONFLICT: 14건 전수 해결 완료"
+    ]
+  }
+}

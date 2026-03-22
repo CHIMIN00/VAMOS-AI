@@ -1,0 +1,9 @@
+{
+  "fix_id": "FIX-008",
+  "fg": "FG-B09",
+  "tier": 1,
+  "order": 8,
+  "severity": "BLOCKER",
+  "description": "§6.12를 2건 결정항목에서 종합 운영 섹션으로 대폭 확장: V0~V3 모니터링 전략, 백업 RPO/RTO, 인시던트 프로세스, 알림 체계 추가",
+  "applied_at": "2026-03-12"
+}

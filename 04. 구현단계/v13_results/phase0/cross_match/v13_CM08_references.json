@@ -1,0 +1,4595 @@
+{
+  "metadata": {
+    "agent": "CM-8",
+    "category": "C8",
+    "version": "v13",
+    "created": "2026-03-17",
+    "total_comparisons": 241,
+    "results": {
+      "SINGLE_SOURCE": 234,
+      "CONSISTENT": 5,
+      "INCONSISTENT": 2,
+      "SOURCE_CONFLICT": 0
+    },
+    "severity": {
+      "INFO": 239,
+      "WARNING": 2,
+      "CRITICAL": 0
+    }
+  },
+  "comparisons": [
+    {
+      "comparison_id": "CM-08_0001",
+      "key": "AC_D3_001",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_316",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 672,
+          "source_text": "AC-D3-001: NodeRegistry는 D3 SOT로만 확정된다",
+          "value": "D3 SOT 단독 확정"
+        }
+      ],
+      "analysis": "단일 소스. key=AC_D3_001, value=D3 SOT 단독 확정",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0002",
+      "key": "AC_D3_001_NodeRegistry_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_263",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 672,
+          "source_text": "- **AC-D3-001**: NodeRegistry는 D3 SOT로만 확정된다. (타 문서에서 재정의 금지)",
+          "value": "D3 SOT로만 확정"
+        }
+      ],
+      "analysis": "단일 소스. key=AC_D3_001_NodeRegistry_SOT, value=D3 SOT로만 확정",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0003",
+      "key": "AC_D3_004",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_317",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 676,
+          "source_text": "AC-D3-004: NodeRequestEnvelopeSchema 필수 7개 필드",
+          "value": "필수 7개 필드"
+        }
+      ],
+      "analysis": "단일 소스. key=AC_D3_004, value=필수 7개 필드",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0004",
+      "key": "AC_D3_008",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_318",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 686,
+          "source_text": "AC-D3-008: MCPBridgeLayerSchema.transport는 streamable_http만 허용 (DEC-017 LOCK)",
+          "value": "streamable_http LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=AC_D3_008, value=streamable_http LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0005",
+      "key": "AC_D3_008_transport_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_264",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 686,
+          "source_text": "- **AC-D3-008**: MCPBridgeLayerSchema.transport는 \"streamable_http\"만 허용한다 (DEC-017 LOCK — stdio 전송 제거).",
+          "value": "streamable_http만 허용 (DEC-017 LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=AC_D3_008_transport_LOCK, value=streamable_http만 허용 (DEC-017 LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0006",
+      "key": "B1_SCHEMA_REFERENCES_IN_ENDPOINTS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_128",
+          "source_file": "B1",
+          "source_line": 1977,
+          "source_text": "Section 5 endpoint summary table source schema column",
+          "value": [
+            "D2 DecisionSchema",
+            "D2 LogEventSchema",
+            "D3 NodeRequestEnvelopeSchema",
+            "D3 NodeResponseEnvelopeSchema",
+            "D3 NodeCapabilityProfileSchema",
+            "D3 NodeRegistry",
+            "D3 MCPBridgeLayerSchema",
+            "D3 ToolCallRegistrySchema",
+            "D4 BrainAdapterResponseSchema",
+            "D4 InfraInvokeResultSchema",
+            "D4 RateLimitConfigSchema",
+            "D4 PromptCacheManagerSchema",
+            "D4 ToolRegistryEntrySchema",
+            "D5 WorkflowStageSchema",
+            "D5 WorkflowOutputEnvelopeSchema",
+            "D5 FailureReportSchema",
+            "D5 VerifyChainEntrySchema",
+            "D5 CircuitBreakerSchema",
+            "D5 GatePipelineMappingSchema",
+            "D5 HITLRequestSchema",
+            "D5 AgentMarketplaceSchema",
+            "D6 MemoryRecordSchema",
+            "D6 VectorStoreAdapterSchema",
+            "D6 KBEmbeddingRecordSchema",
+            "D6 SemanticCacheSchema",
+            "D6 GraphRAGConfigSchema",
+            "D6 SourceQoDSchema",
+            "D7 PolicyCheckSchema",
+            "D7 CostBudgetSchema",
+            "D7 DownshiftSchema",
+            "D7 ApprovalSchema",
+            "D7 GuardrailsCheckSchema",
+            "D7 RBACRoleSchema",
+            "D7 AutonomyLevelSchema",
+            "D8 문서형 계약"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=B1_SCHEMA_REFERENCES_IN_ENDPOINTS, value=['D2 DecisionSchema', 'D2 LogEventSchema', 'D3 NodeRequestEnvelopeSchema', 'D3 N",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0007",
+      "key": "B1_SOURCE_SCHEMAS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_123",
+          "source_file": "B1",
+          "source_line": 12,
+          "source_text": "| 소스 스키마 | D2(Orange Core), D3(Blue Nodes), D4(Infra Core), D5(Agent Workflow), D6(Storage Memory), D7(Safety/Cost/Approval), D8(UI/UX) |",
+          "value": "D2(Orange Core), D3(Blue Nodes), D4(Infra Core), D5(Agent Workflow), D6(Storage Memory), D7(Safety/Cost/Approval), D8(UI/UX)"
+        }
+      ],
+      "analysis": "단일 소스. key=B1_SOURCE_SCHEMAS, value=D2(Orange Core), D3(Blue Nodes), D4(Infra Core), D5(Agent Workflow), D6(Storage ",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0008",
+      "key": "B1_UPPER_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_124",
+          "source_file": "B1",
+          "source_line": 11,
+          "source_text": "| 상위 정본 | BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schemas |",
+          "value": "BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schemas"
+        }
+      ],
+      "analysis": "단일 소스. key=B1_UPPER_SOT, value=BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schemas",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0009",
+      "key": "B2_CODEGEN_SCRIPTS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_130",
+          "source_file": "B2",
+          "source_line": 693,
+          "source_text": "└── codegen/                        # 타입 코드 생성 스크립트",
+          "value": {
+            "generate_ts.py": "JSON Schema → TypeScript 타입 생성",
+            "generate_rs.py": "JSON Schema → Rust serde 구조체 생성",
+            "generate_py.py": "JSON Schema → Pydantic v2 모델 생성 (검증용)"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=B2_CODEGEN_SCRIPTS, value={'generate_ts.py': 'JSON Schema → TypeScript 타입 생성', 'generate_rs.py': 'JSON Sch",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0010",
+      "key": "B2_D8_UI_MAPPING",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_129",
+          "source_file": "B2",
+          "source_line": 192,
+          "source_text": "### 3.2 UI 컴포넌트 카테고리 (D8 매핑)",
+          "value": {
+            "D8_S4": "components/canvas/ — 워크플로우 시각화",
+            "D8_S6": "components/artifacts/ — 산출물 뷰어",
+            "D8_S7": "components/notifications/ — 이벤트 알림",
+            "D8_S10": "components/autonomy/ — L0~L3 제어"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=B2_D8_UI_MAPPING, value={'D8_S4': 'components/canvas/ — 워크플로우 시각화', 'D8_S6': 'components/artifacts/ — 산출",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0011",
+      "key": "B2_UPPER_REFERENCE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_125",
+          "source_file": "B2",
+          "source_line": 11,
+          "source_text": "| 상위 참조 | A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), D1~D8 스키마 문서, D8 UI/UX 계약 |",
+          "value": "A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), D1~D8 스키마 문서, D8 UI/UX 계약"
+        }
+      ],
+      "analysis": "단일 소스. key=B2_UPPER_REFERENCE, value=A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), D1~D8 스키마 문서, D8 UI/UX 계약",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0012",
+      "key": "B3_CONNECTED_REFERENCES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_127",
+          "source_file": "B3",
+          "source_line": 15,
+          "source_text": "### 연결 참조",
+          "value": [
+            "A1 Tech Stack: COMBO-V1/V2/V3 LOCK 결정",
+            "B2 Project Structure: 디렉토리/모듈 구조 → 의존성 매핑",
+            "D1~D8 Schema: Pydantic v2 스키마 → 패키지 연결"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=B3_CONNECTED_REFERENCES, value=['A1 Tech Stack: COMBO-V1/V2/V3 LOCK 결정', 'B2 Project Structure: 디렉토리/모듈 구조 → 의존",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0013",
+      "key": "B3_LICENSE_CONCERN",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_131",
+          "source_file": "B3",
+          "source_line": 328,
+          "source_text": "| Neo4j Community | GPL-3.0 | **주의** | Community 에디션은 GPL, 서버 독립 실행으로 호환 가능 [V2+] |",
+          "value": "Neo4j Community: GPL-3.0 — 주의 (서버 독립 실행으로 호환 가능) [V2+]"
+        }
+      ],
+      "analysis": "단일 소스. key=B3_LICENSE_CONCERN, value=Neo4j Community: GPL-3.0 — 주의 (서버 독립 실행으로 호환 가능) [V2+]",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0014",
+      "key": "B3_SECURITY_POLICY",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_134",
+          "source_file": "B3",
+          "source_line": 347,
+          "source_text": "### 6.3 보안 정책",
+          "value": {
+            "API_키_보호": ".env 파일은 .gitignore에 포함, 커밋 금지",
+            "의존성_업데이트": "Dependabot 자동 PR, 보안 패치는 48시간 내 적용",
+            "취약점_대응": "Critical/High → 즉시 패치, Medium → 1주 내",
+            "최소_권한": "Tauri 2.0 capabilities로 앱 권한 최소화"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=B3_SECURITY_POLICY, value={'API_키_보호': '.env 파일은 .gitignore에 포함, 커밋 금지', '의존성_업데이트': 'Dependabot 자동 PR, 보안",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0015",
+      "key": "B3_UPPER_REFERENCE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_126",
+          "source_file": "B3",
+          "source_line": 12,
+          "source_text": "| 상위 참조 | A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE |",
+          "value": "A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE"
+        }
+      ],
+      "analysis": "단일 소스. key=B3_UPPER_REFERENCE, value=A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0016",
+      "key": "B3_V2_ADDITIONAL_PACKAGES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_132",
+          "source_file": "B3",
+          "source_line": 269,
+          "source_text": "### 5.2 V2 (서버, Docker Compose, <=93K/mo)",
+          "value": [
+            "langchain-anthropic",
+            "qdrant-client",
+            "asyncpg",
+            "neo4j (>=5.27,<6.0)",
+            "transformers",
+            "openai embedding",
+            "celery (>=5.4,<6.0) [선택]",
+            "redis (>=5.2,<6.0) [선택]"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=B3_V2_ADDITIONAL_PACKAGES, value=['langchain-anthropic', 'qdrant-client', 'asyncpg', 'neo4j (>=5.27,<6.0)', 'tran",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0017",
+      "key": "B3_V3_ADDITIONAL_PACKAGES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-9",
+          "item_id": "EA-09_133",
+          "source_file": "B3",
+          "source_line": 284,
+          "source_text": "### 5.3 V3 (엔터프라이즈, K8s, <=266K/mo)",
+          "value": [
+            "vllm",
+            "prometheus-client (>=0.21,<1.0)",
+            "opentelemetry-sdk (>=1.29,<2.0)",
+            "opentelemetry-exporter-otlp (>=1.29,<2.0)",
+            "kubernetes (>=31.0,<32.0) [선택]"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=B3_V3_ADDITIONAL_PACKAGES, value=['vllm', 'prometheus-client (>=0.21,<1.0)', 'opentelemetry-sdk (>=1.29,<2.0)', '",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0018",
+      "key": "C1_CLIB_QOD_WEIGHT_OFFICIAL",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_256",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 730,
+          "source_text": "공식 문서 (공식 API Doc, RFC 등) | 0.85",
+          "value": 0.85
+        }
+      ],
+      "analysis": "단일 소스. key=C1_CLIB_QOD_WEIGHT_OFFICIAL, value=0.85",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0019",
+      "key": "C8_AC_D2_001_TEST_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_193",
+          "source_file": "PHASE_B5_TEST_STRATEGY.md",
+          "source_line": 497,
+          "source_text": "AC-D2-001 -> T-U-D2-001 test_meta_required_fields",
+          "value": "AC-D2-001 -> T-U-D2-001, T-U-D2-002"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_AC_D2_001_TEST_REF, value=AC-D2-001 -> T-U-D2-001, T-U-D2-002",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0020",
+      "key": "C8_AC_D6_010_TEST_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_194",
+          "source_file": "PHASE_B5_TEST_STRATEGY.md",
+          "source_line": 565,
+          "source_text": "AC-D6-010 -> T-U-D6-010 test_semantic_cache_threshold_lock",
+          "value": "AC-D6-010 -> T-U-D6-010 (similarity_threshold >= 0.95 LOCK 검증)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_AC_D6_010_TEST_REF, value=AC-D6-010 -> T-U-D6-010 (similarity_threshold >= 0.95 LOCK 검증)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0021",
+      "key": "C8_AGENT_WORKFLOW_DEPENDENCIES",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_254",
+          "source_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "source_line": 62,
+          "source_text": "본 레이어는 I-5/I-12/I-13/I-6/I-9/I-18과 직결된다고 명시",
+          "value": "I-5, I-12, I-13, I-6, I-9, I-18"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_AGENT_WORKFLOW_DEPENDENCIES, value=I-5, I-12, I-13, I-6, I-9, I-18",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0022",
+      "key": "C8_APPROVAL_STATUS_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_173",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 432,
+          "source_text": "    approval_status: Literal[\"approved\",\"denied\"]  # D7 정본 2값 (PL-09 FIX). pending은 approval_required=True 상태로 표현",
+          "value": "D7 정본 2값 (PL-09 FIX)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_APPROVAL_STATUS_SOT, value=D7 정본 2값 (PL-09 FIX)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0023",
+      "key": "C8_B4_REFERENCES",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_063",
+          "source_file": "PHASE_B4_CONFIG_SPEC.md",
+          "source_line": 13,
+          "source_text": "연결 참조 | D7 (RBAC/Autonomy/Guardrails), D4 (ToolRegistry), D6 (Memory/VectorStore), D5 (Workflow), A1 (Tech Stack LOCK)",
+          "value": "D7, D4, D6, D5, A1"
+        }
+      ],
+      "analysis": "EA10 PHASE_B4~B7: 상위 참조 문서 목록. D7, D4, D6, D5, A1, D2~D8 등 모두 EA 소스에 존재.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0024",
+      "key": "C8_B5_REFERENCES",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_096",
+          "source_file": "PHASE_B5_TEST_STRATEGY.md",
+          "source_line": 13,
+          "source_text": "연결 참조 | D2~D8 Acceptance Criteria, A1 Tech Stack, B4 Config Spec",
+          "value": "D2~D8 AC, A1 Tech Stack, B4 Config Spec"
+        }
+      ],
+      "analysis": "EA10 PHASE_B4~B7: 상위 참조 문서 목록. D7, D4, D6, D5, A1, D2~D8 등 모두 EA 소스에 존재.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0025",
+      "key": "C8_B6_PATCH_PH11",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_195",
+          "source_file": "PHASE_B6_CICD_PIPELINE.md",
+          "source_line": 1752,
+          "source_text": "PH-11: vitest threshold 70->80 정합 (B5 80%+ 목표와 일치)",
+          "value": "v1.0.2 PH-11: vitest threshold 70->80 (B5 80%+ 정합)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_B6_PATCH_PH11, value=v1.0.2 PH-11: vitest threshold 70->80 (B5 80%+ 정합)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0026",
+      "key": "C8_B6_REFERENCES",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_131",
+          "source_file": "PHASE_B6_CICD_PIPELINE.md",
+          "source_line": 13,
+          "source_text": "의존 문서 | D2.1-A1 (Tech Stack), D2.0-04 (Infra Core), PLAN-3.0",
+          "value": "D2.1-A1, D2.0-04, PLAN-3.0"
+        }
+      ],
+      "analysis": "EA10 PHASE_B4~B7: 상위 참조 문서 목록. D7, D4, D6, D5, A1, D2~D8 등 모두 EA 소스에 존재.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0027",
+      "key": "C8_B7_REFERENCES",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_170",
+          "source_file": "PHASE_B7_MIGRATION_STRATEGY.md",
+          "source_line": 13,
+          "source_text": "의존 문서 | D2.1-D1~D8 (스키마), D2.1-A1 (Tech Stack), PHASE_B6 (CI/CD)",
+          "value": "D2.1-D1~D8, D2.1-A1, PHASE_B6"
+        }
+      ],
+      "analysis": "EA10 PHASE_B4~B7: 상위 참조 문서 목록. D7, D4, D6, D5, A1, D2~D8 등 모두 EA 소스에 존재.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0028",
+      "key": "C8_FALLBACK_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_248",
+          "source_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "source_line": 470,
+          "source_text": "fallback_id: FB_UPPER_SNAKE — 정본: 02 §6.3 Fallback Strategy Registry",
+          "value": "02 §6.3 Fallback Strategy Registry"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_FALLBACK_SOT, value=02 §6.3 Fallback Strategy Registry",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0029",
+      "key": "C8_LANGCHAIN_DECISION_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_175",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 1503,
+          "source_text": "| LangChain import | 금지 (DEC-002), 패턴만 참조 |",
+          "value": "DEC-002"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_LANGCHAIN_DECISION_REF, value=DEC-002",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0030",
+      "key": "C8_LOGEVENT_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_247",
+          "source_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "source_line": 339,
+          "source_text": "로그 스키마(LogEvent 필드/규칙)는 02 ORANGE CORE의 **§6.1(LogEvent Registry)** 를 정본으로 한다.",
+          "value": "02 §6.1 LogEvent Registry"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_LOGEVENT_SOT, value=02 §6.1 LogEvent Registry",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0031",
+      "key": "C8_LOG_STORAGE_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_251",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 1247,
+          "source_text": "정본: 로그 스키마(I-9)는 02 ORANGE CORE의 **§6.1(LogEvent Registry)** 를 정본으로 한다.",
+          "value": "02 §6.1 LogEvent Registry (로그 저장소 정본)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_LOG_STORAGE_SOT, value=02 §6.1 LogEvent Registry (로그 저장소 정본)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0032",
+      "key": "C8_MCP_BRIDGE_DECISION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_174",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 564,
+          "source_text": "## 5.5 MCP Bridge Layer (DEC-017 LOCK)",
+          "value": "DEC-017"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_MCP_BRIDGE_DECISION, value=DEC-017",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0033",
+      "key": "C8_QOD_DECISION_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_171",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 982,
+          "source_text": "## 8.8 QoD (Quality of Data) 점수 체계 (DEC-010 LOCK)",
+          "value": "DEC-010"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_QOD_DECISION_REF, value=DEC-010",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0034",
+      "key": "C8_QOD_WEIGHT_DECISION_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_172",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 986,
+          "source_text": "**가중치 공식 (DEC-014)**:",
+          "value": "DEC-014"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_QOD_WEIGHT_DECISION_REF, value=DEC-014",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0035",
+      "key": "C8_REF_AGENT_TEAMS_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_146",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 1760,
+          "source_text": "> **상세**: `VAMOS_AGENT_TEAMS_SPEC.md` 참조 (2,188줄, 11개 섹션)",
+          "value": "VAMOS_AGENT_TEAMS_SPEC.md"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_REF_AGENT_TEAMS_SPEC, value=VAMOS_AGENT_TEAMS_SPEC.md",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0036",
+      "key": "C8_REF_AI_INVESTING_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_144",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 1575,
+          "source_text": "> **상세**: `VAMOS_AI_INVESTING_SPEC.md` 참조 (1,368줄, 24개 섹션)",
+          "value": "VAMOS_AI_INVESTING_SPEC.md"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_REF_AI_INVESTING_SPEC, value=VAMOS_AI_INVESTING_SPEC.md",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0037",
+      "key": "C8_REF_SDAR_SPEC",
+      "result": "CONSISTENT",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_145",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 1676,
+          "source_text": "> **상세**: `VAMOS_SDAR_DESIGN_SPECIFICATION.md` 참조 (1,643줄, 10개 섹션 + 3개 부록)",
+          "value": "VAMOS_SDAR_DESIGN_SPECIFICATION.md"
+        }
+      ],
+      "analysis": "EA01 CLAUDE.md: VAMOS_SDAR_DESIGN_SPECIFICATION 참조. EA11 source_files에 VAMOS_SDAR_DESIGN_SPECIFICATION.md 존재. 참조 유효.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0038",
+      "key": "C8_REF_STEP7_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_147",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 1836,
+          "source_text": "> **상세**: `VAMOS_STEP7_보강_통합명세서.md` (1,519줄) + 카테고리별 상세명세서 참조",
+          "value": "VAMOS_STEP7_보강_통합명세서.md"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_REF_STEP7_SPEC, value=VAMOS_STEP7_보강_통합명세서.md",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0039",
+      "key": "C8_REGISTRY_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_249",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 1362,
+          "source_text": "event_type / failure_code / fallback_id의 \"값 목록 정본(Source of Truth)\"은 02(Registry)이다.",
+          "value": "02 Registry (event_type/failure_code/fallback_id 값 목록)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_REGISTRY_SOT, value=02 Registry (event_type/failure_code/fallback_id 값 목록)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0040",
+      "key": "C8_SCHEMA_SOT_LOCATION",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_255",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 1311,
+          "source_text": "Storage/Memory 스키마의 \"원본 정본(SOT)\"은 D6에 존재한다.",
+          "value": "D6 (Storage/Memory 스키마 원본 정본)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_SCHEMA_SOT_LOCATION, value=D6 (Storage/Memory 스키마 원본 정본)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0041",
+      "key": "C8_SELFCHECK_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_246",
+          "source_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "source_line": 133,
+          "source_text": "정책(정본/LOCK): **02 §7.6(I-6 Self-check 상세)** 를 따른다.",
+          "value": "02 §7.6 (I-6 Self-check 상세)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_SELFCHECK_SOT, value=02 §7.6 (I-6 Self-check 상세)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0042",
+      "key": "C8_SOURCE_DOCUMENTS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-3",
+          "item_id": "EA-03_170",
+          "source_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "source_line": 4,
+          "source_text": "> **소스**: D2.0-01~08, D2.1-D1~D8/A1/Q1, BASE-1.3, PLAN-3.0, PHASE_B1~B7",
+          "value": "D2.0-01~08, D2.1-D1~D8/A1/Q1, BASE-1.3, PLAN-3.0, PHASE_B1~B7"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_SOURCE_DOCUMENTS, value=D2.0-01~08, D2.1-D1~D8/A1/Q1, BASE-1.3, PLAN-3.0, PHASE_B1~B7",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0043",
+      "key": "C8_STEP7_FI_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_252",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 42,
+          "source_text": "`VAMOS_STEP7_F-I_상세명세서.md` (2,837줄, F~I 368건)",
+          "value": "VAMOS_STEP7_F-I_상세명세서.md (2837줄, 368건)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_STEP7_FI_REF, value=VAMOS_STEP7_F-I_상세명세서.md (2837줄, 368건)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0044",
+      "key": "C8_STEP7_NP_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_253",
+          "source_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+          "source_line": 42,
+          "source_text": "`VAMOS_STEP7_N-P_보강_상세명세서.md` (1,803줄, 204건)",
+          "value": "VAMOS_STEP7_N-P_보강_상세명세서.md (1803줄, 204건)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_STEP7_NP_REF, value=VAMOS_STEP7_N-P_보강_상세명세서.md (1803줄, 204건)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0045",
+      "key": "C8_STORAGE_STACK_SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-6",
+          "item_id": "EA-06_250",
+          "source_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+          "source_line": 135,
+          "source_text": "정본: 01(Overview) §3.3(P1 Technology Combos)와 본 문서 §2.2를 따른다.",
+          "value": "01(Overview) §3.3 P1 Technology Combos + 본 문서 §2.2"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_STORAGE_STACK_SOT, value=01(Overview) §3.3 P1 Technology Combos + 본 문서 §2.2",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0046",
+      "key": "C8_VAL001_AC_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_191",
+          "source_file": "PHASE_B4_CONFIG_SPEC.md",
+          "source_line": 1205,
+          "source_text": "VAL-001 mcp.transport -> AC-D3-008",
+          "value": "VAL-001 -> AC-D3-008 (mcp.transport = streamable_http)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_VAL001_AC_REF, value=VAL-001 -> AC-D3-008 (mcp.transport = streamable_http)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0047",
+      "key": "C8_VAL006_AC_REF",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-10",
+          "item_id": "EA-10_192",
+          "source_file": "PHASE_B4_CONFIG_SPEC.md",
+          "source_line": 1210,
+          "source_text": "VAL-006 semantic_cache.similarity_threshold >= 0.95 -> AC-D6-010",
+          "value": "VAL-006 -> AC-D6-010 (similarity_threshold >= 0.95 LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=C8_VAL006_AC_REF, value=VAL-006 -> AC-D6-010 (similarity_threshold >= 0.95 LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0048",
+      "key": "CL_semver_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_322",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 696,
+          "source_text": "AC-D3-013: Semantic Versioning MAJOR/MINOR/PATCH 기준 (LOCK L4)",
+          "value": "MAJOR/MINOR/PATCH LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=CL_semver_LOCK, value=MAJOR/MINOR/PATCH LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0049",
+      "key": "CL_source_weights",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_321",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 694,
+          "source_text": "AC-D3-012: 소스 가중치 7단계(공식 1.0>논문 0.9>기술문서 0.85>기술블로그 0.7>뉴스 0.6>개인블로그 0.5>SNS 0.3)",
+          "value": "공식1.0>논문0.9>기술문서0.85>블로그0.7>뉴스0.6>개인0.5>SNS0.3"
+        }
+      ],
+      "analysis": "단일 소스. key=CL_source_weights, value=공식1.0>논문0.9>기술문서0.85>블로그0.7>뉴스0.6>개인0.5>SNS0.3",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0050",
+      "key": "CONCURRENCY_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_072",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1379,
+          "source_text": "| 동시성 | Blue Nodes 최대 3, Tools 최대 5 |",
+          "value": "Blue Nodes 3, Tools 5"
+        }
+      ],
+      "analysis": "단일 소스. key=CONCURRENCY_LOCK, value=Blue Nodes 3, Tools 5",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0051",
+      "key": "CONFIG_COST_BLOCK_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_187",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 355,
+          "source_text": "| `cost.block_threshold` | 100 | **LOCK** | D7 Downshift |",
+          "value": "100 (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_COST_BLOCK_LOCK, value=100 (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0052",
+      "key": "CONFIG_COST_DAILY_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_170",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 352,
+          "source_text": "| `cost.daily_limit` | 1300 | **ABSOLUTE LOCK** | BASE §5 |",
+          "value": "1300 (ABSOLUTE LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_COST_DAILY_LOCK, value=1300 (ABSOLUTE LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0053",
+      "key": "CONFIG_COST_MONTHLY_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_171",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 353,
+          "source_text": "| `cost.monthly_limit` | 40000 | **ABSOLUTE LOCK** | BASE §5 |",
+          "value": "40000 (ABSOLUTE LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_COST_MONTHLY_LOCK, value=40000 (ABSOLUTE LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0054",
+      "key": "CONFIG_COST_WARN_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_186",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 354,
+          "source_text": "| `cost.warn_threshold` | 80 | **LOCK** | D7 Downshift |",
+          "value": "80 (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_COST_WARN_LOCK, value=80 (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0055",
+      "key": "CONFIG_DECISION_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_188",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 342,
+          "source_text": "| `core.single_decision_lock` | true | **LOCK** | 불변 원칙 |",
+          "value": "true (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_DECISION_LOCK, value=true (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0056",
+      "key": "CONFIG_EMBEDDING_DIM_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_168",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 347,
+          "source_text": "| `embedding.dimension` | 1024 | **LOCK** | BGE-M3 고정 |",
+          "value": "1024 (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_EMBEDDING_DIM_LOCK, value=1024 (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0057",
+      "key": "CONFIG_EMBEDDING_MODEL_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_167",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 346,
+          "source_text": "| `embedding.model` | bge-m3 | **LOCK** | DEC-005 |",
+          "value": "bge-m3 (LOCK, DEC-005)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_EMBEDDING_MODEL_LOCK, value=bge-m3 (LOCK, DEC-005)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0058",
+      "key": "CONFIG_GRAPHDB_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_189",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 350,
+          "source_text": "| `graph_db.backend` | json_file | **LOCK** | AC-D6-009 |",
+          "value": "json_file (LOCK, AC-D6-009)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_GRAPHDB_LOCK, value=json_file (LOCK, AC-D6-009)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0059",
+      "key": "CONFIG_MCP_TRANSPORT_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_174",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 361,
+          "source_text": "| `mcp.transport` | streamable_http | **LOCK** | DEC-017 |",
+          "value": "streamable_http (LOCK, DEC-017)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_MCP_TRANSPORT_LOCK, value=streamable_http (LOCK, DEC-017)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0060",
+      "key": "CONFIG_SEMANTIC_CACHE_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_172",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 359,
+          "source_text": "| `semantic_cache.similarity_threshold` | 0.95 | **LOCK** | AC-D6-010 |",
+          "value": "0.95 (LOCK, AC-D6-010)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_SEMANTIC_CACHE_LOCK, value=0.95 (LOCK, AC-D6-010)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0061",
+      "key": "CONFIG_TRACE_ID_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_173",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 360,
+          "source_text": "| `logging.trace_id_required` | true | **LOCK** | D2 LogEvent |",
+          "value": "true (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_TRACE_ID_LOCK, value=true (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0062",
+      "key": "CONFIG_VECTORDB_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_169",
+          "source_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+          "source_line": 348,
+          "source_text": "| `vector_db.backend` | chroma | **LOCK** | AC-D6-008 |",
+          "value": "chroma (LOCK, AC-D6-008)"
+        }
+      ],
+      "analysis": "단일 소스. key=CONFIG_VECTORDB_LOCK, value=chroma (LOCK, AC-D6-008)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0063",
+      "key": "D7_AC_001",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_248",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 319,
+          "source_text": "- **AC-D7-001**: D7의 모든 스키마 블록은 D1 Schema Meta Template의 `_meta` 필수 속성(`schema_name`, `schema_version`, `owner_doc`, `sec_id_slug`, `ref`, `ref_locked`, `ref_legacy`)을 포함한다.",
+          "value": "D7_AC_001"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AC_001, value=D7_AC_001",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0064",
+      "key": "D7_AC_005",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_238",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 327,
+          "source_text": "- **AC-D7-005**: GuardrailsCheckSchema.overall_decision은 3-Layer 모두 통과 시에만 \"allow\"이다. 어느 Layer든 실패 시 \"restrict\" 또는 \"deny\".",
+          "value": "D7_AC_005"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AC_005, value=D7_AC_005",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0065",
+      "key": "D7_AC_006",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_239",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 329,
+          "source_text": "- **AC-D7-006**: RBACRoleSchema.role enum은 OWNER | ADMIN | OPERATOR | VIEWER 4개만 허용한다 (07 §3.6 LOCK).",
+          "value": "D7_AC_006"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AC_006, value=D7_AC_006",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0066",
+      "key": "D7_AC_007",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_240",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 331,
+          "source_text": "- **AC-D7-007**: AutonomyLevelSchema.level은 L0~L3만 허용하며, L2/L3에서만 auto_execute=true가 허용된다 (07 §3.2.1 LOCK).",
+          "value": "D7_AC_007"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AC_007, value=D7_AC_007",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0067",
+      "key": "D7_AINV_CircuitBreaker_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_245",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 458,
+          "source_text": "    failure_threshold: int = 3  # 연속 실패 시 차단",
+          "value": "D7_AINV_CircuitBreaker_threshold"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_CircuitBreaker_threshold, value=D7_AINV_CircuitBreaker_threshold",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0068",
+      "key": "D7_AINV_PaperTrading_capital",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_242",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 384,
+          "source_text": "    initial_capital: float = Field(100_000_000, description=\"초기 자본 (원)\")",
+          "value": "D7_AINV_PaperTrading_capital"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_PaperTrading_capital, value=D7_AINV_PaperTrading_capital",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0069",
+      "key": "D7_AINV_PaperTrading_isLive",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_243",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 387,
+          "source_text": "    is_live: Literal[False] = False  # Paper Trading은 항상 False",
+          "value": "D7_AINV_PaperTrading_isLive"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_PaperTrading_isLive, value=D7_AINV_PaperTrading_isLive",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0070",
+      "key": "D7_AINV_Sentiment_confidence",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_246",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 480,
+          "source_text": "    confidence: float = Field(..., ge=0.0, le=1.0)",
+          "value": "D7_AINV_Sentiment_confidence"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_Sentiment_confidence, value=D7_AINV_Sentiment_confidence",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0071",
+      "key": "D7_AINV_StrategyPortfolio_allocation",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_244",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 433,
+          "source_text": "    allocation_method: Literal[\"equal_weight\", \"risk_parity\", \"kelly\"]",
+          "value": "D7_AINV_StrategyPortfolio_allocation"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_StrategyPortfolio_allocation, value=D7_AINV_StrategyPortfolio_allocation",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0072",
+      "key": "D7_AINV_WFV_train_window",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_241",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 370,
+          "source_text": "    train_window_days: int = Field(252, description=\"학습 윈도우 (거래일 기준)\")",
+          "value": "D7_AINV_WFV_train_window"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_WFV_train_window, value=D7_AINV_WFV_train_window",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0073",
+      "key": "D7_AINV_backtest_min_period",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_247",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 487,
+          "source_text": "- 최소 기간: **5년** (1,260 거래일)",
+          "value": "D7_AINV_backtest_min_period"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AINV_backtest_min_period, value=D7_AINV_backtest_min_period",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0074",
+      "key": "D7_Approval_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_222",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 86,
+          "source_text": "    \"schema_name\": \"ApprovalSchema\",",
+          "value": "D7_Approval_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Approval_name, value=D7_Approval_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0075",
+      "key": "D7_Approval_stage",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_223",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 97,
+          "source_text": "    { \"name\": \"approval_stage\", \"type\": \"string\", \"required\": true, \"example\": \"plan\", \"description\": \"승인 단계 enum: plan | execute (07 §3.1 '2단계 승인' 근거)\" },",
+          "value": "D7_Approval_stage"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Approval_stage, value=D7_Approval_stage",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0076",
+      "key": "D7_Approval_status",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_224",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 102,
+          "source_text": "    { \"name\": \"status\", \"type\": \"string\", \"required\": true, \"example\": \"approved\", \"description\": \"승인 결과 enum: approved | denied (07 §6.2 근거 확정. pending/expired 확장은 DECISION_NEEDED)\" },",
+          "value": "D7_Approval_status"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Approval_status, value=D7_Approval_status",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0077",
+      "key": "D7_AutonomyLevel_auto_execute",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_237",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 238,
+          "source_text": "    { \"name\": \"auto_execute\", \"type\": \"boolean\", \"required\": true, \"example\": false, \"description\": \"자동 실행 허용 (L0/L1=false, L2/L3=true)\" },",
+          "value": "D7_AutonomyLevel_auto_execute"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AutonomyLevel_auto_execute, value=D7_AutonomyLevel_auto_execute",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0078",
+      "key": "D7_AutonomyLevel_level",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_236",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 235,
+          "source_text": "    { \"name\": \"level\", \"type\": \"string\", \"required\": true, \"example\": \"L1\", \"description\": \"자율 수준. enum: L0 | L1 | L2 | L3\" },",
+          "value": "D7_AutonomyLevel_level"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AutonomyLevel_level, value=D7_AutonomyLevel_level",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0079",
+      "key": "D7_AutonomyLevel_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_235",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 226,
+          "source_text": "    \"schema_name\": \"AutonomyLevelSchema\",",
+          "value": "D7_AutonomyLevel_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_AutonomyLevel_name, value=D7_AutonomyLevel_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0080",
+      "key": "D7_CostBudget_daily_limit",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_226",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 129,
+          "source_text": "    { \"name\": \"daily_limit\", \"type\": \"integer\", \"required\": true, \"example\": 1300, \"description\": \"일일 상한(원). V1=1300, V2=3100, V3=8900 (07 §4.1 LOCK)\" },",
+          "value": "D7_CostBudget_daily_limit"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_CostBudget_daily_limit, value=D7_CostBudget_daily_limit",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0081",
+      "key": "D7_CostBudget_monthly_limit",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_227",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 130,
+          "source_text": "    { \"name\": \"monthly_limit\", \"type\": \"integer\", \"required\": true, \"example\": 40000, \"description\": \"월 상한(원). V1=40000, V2=93000, V3=266000 (07 §4.1 LOCK)\" },",
+          "value": "D7_CostBudget_monthly_limit"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_CostBudget_monthly_limit, value=D7_CostBudget_monthly_limit",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0082",
+      "key": "D7_CostBudget_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_225",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 117,
+          "source_text": "    \"schema_name\": \"CostBudgetSchema\",",
+          "value": "D7_CostBudget_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_CostBudget_name, value=D7_CostBudget_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0083",
+      "key": "D7_Downshift_block_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_230",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 163,
+          "source_text": "    { \"name\": \"block_threshold_percent\", \"type\": \"integer\", \"required\": true, \"example\": 100, \"description\": \"차단 임계값(LOCK): 100% (07 §4.2)\" },",
+          "value": "D7_Downshift_block_threshold"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Downshift_block_threshold, value=D7_Downshift_block_threshold",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0084",
+      "key": "D7_Downshift_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_228",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 147,
+          "source_text": "    \"schema_name\": \"DownshiftSchema\",",
+          "value": "D7_Downshift_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Downshift_name, value=D7_Downshift_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0085",
+      "key": "D7_Downshift_warn_threshold",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_229",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 162,
+          "source_text": "    { \"name\": \"warn_threshold_percent\", \"type\": \"integer\", \"required\": true, \"example\": 80, \"description\": \"경고 임계값(LOCK): 80% (07 §4.2)\" },",
+          "value": "D7_Downshift_warn_threshold"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_Downshift_warn_threshold, value=D7_Downshift_warn_threshold",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0086",
+      "key": "D7_GuardrailsCheck_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_231",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 177,
+          "source_text": "    \"schema_name\": \"GuardrailsCheckSchema\",",
+          "value": "D7_GuardrailsCheck_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_GuardrailsCheck_name, value=D7_GuardrailsCheck_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0087",
+      "key": "D7_GuardrailsCheck_overall_decision",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_232",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 191,
+          "source_text": "    { \"name\": \"overall_decision\", \"type\": \"string\", \"required\": true, \"example\": \"allow\", \"description\": \"종합 판정. enum: allow | restrict | deny (3-Layer 모두 통과 시 allow)\" },",
+          "value": "D7_GuardrailsCheck_overall_decision"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_GuardrailsCheck_overall_decision, value=D7_GuardrailsCheck_overall_decision",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0088",
+      "key": "D7_PolicyCheck_decision",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_220",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 71,
+          "source_text": "    { \"name\": \"decision\", \"type\": \"string\", \"required\": true, \"example\": \"deny\", \"description\": \"정책 판단 결과 enum: deny | restrict | allow\" },",
+          "value": "D7_PolicyCheck_decision"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_PolicyCheck_decision, value=D7_PolicyCheck_decision",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0089",
+      "key": "D7_PolicyCheck_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_219",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 60,
+          "source_text": "    \"schema_name\": \"PolicyCheckSchema\",",
+          "value": "D7_PolicyCheck_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_PolicyCheck_name, value=D7_PolicyCheck_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0090",
+      "key": "D7_PolicyCheck_sensitive_types",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_221",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 74,
+          "source_text": "    { \"name\": \"detected_sensitive_types\", \"type\": \"array\", \"required\": true, \"example\": [\"PII\"], \"description\": \"탐지된 민감 유형 배열. enum: PII | AUTH | MEDICAL | LEGAL (07 §6.4 '인증/의료/법률' 영문 코드화)\" },",
+          "value": "D7_PolicyCheck_sensitive_types"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_PolicyCheck_sensitive_types, value=D7_PolicyCheck_sensitive_types",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0091",
+      "key": "D7_RBACRole_name",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_233",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 202,
+          "source_text": "    \"schema_name\": \"RBACRoleSchema\",",
+          "value": "D7_RBACRole_name"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_RBACRole_name, value=D7_RBACRole_name",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0092",
+      "key": "D7_RBACRole_role",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_234",
+          "source_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+          "source_line": 211,
+          "source_text": "    { \"name\": \"role\", \"type\": \"string\", \"required\": true, \"example\": \"OWNER\", \"description\": \"역할 코드. enum: OWNER | ADMIN | OPERATOR | VIEWER\" },",
+          "value": "D7_RBACRole_role"
+        }
+      ],
+      "analysis": "단일 소스. key=D7_RBACRole_role, value=D7_RBACRole_role",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0093",
+      "key": "DEC_006_INFRA_CATALOG",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_209",
+          "source_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+          "source_line": 14,
+          "source_text": "> **[DEC-006 결정 완료]** D4 Infra Catalog(별도 카탈로그 문서) 유지 여부: **삭제 확정**.",
+          "value": "삭제 확정"
+        }
+      ],
+      "analysis": "단일 소스. key=DEC_006_INFRA_CATALOG, value=삭제 확정",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0094",
+      "key": "Design system colors: ORANGE=#F97316, BLUE=#00F6FF, BG=#1E1E1E",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_166",
+          "source_file": "D2.0-08",
+          "source_line": 1450,
+          "source_text": "**ORANGE CORE (Main):** `#F97316` / **BLUE NODE (Sub):** `#00F6FF` / **Background:** `#1E1E1E`",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=Design system colors: ORANGE=#F97316, BLUE=#00F6FF, BG=#1E1E1E, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0095",
+      "key": "EMBEDDING_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_074",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1398,
+          "source_text": "| Embedding | V1=BGE-M3 |",
+          "value": "V1=BGE-M3"
+        }
+      ],
+      "analysis": "단일 소스. key=EMBEDDING_LOCK, value=V1=BGE-M3",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0096",
+      "key": "FI_cross_reference_matrix",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_105",
+          "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+          "source_line": 2820,
+          "source_text": "| 연동 | F(인프라) | G(벤치마크) | H(비즈니스) | I(투자) |",
+          "value": {
+            "F->G": "모델 서빙이 벤치마크 대상",
+            "F->H": "인프라 비용이 가격 전략 기반",
+            "F->I": "모델 라우터가 투자 분석 모델 선택",
+            "G->F": "벤치마크 결과로 모델 교체 판단",
+            "G->H": "품질 지표가 마케팅 근거",
+            "G->I": "VBS-10이 투자 품질 평가",
+            "H->F": "비용 전략이 인프라 설계 제약",
+            "H->G": "경쟁 비교가 벤치마크 우선순위 결정",
+            "H->I": "투자자 페르소나가 투자 기능 방향",
+            "I->F": "투자 데이터 파이프라인이 인프라 요구",
+            "I->G": "투자 분석 정확도 평가 필요",
+            "I->H": "투자 기능이 니치 차별화 핵심"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=FI_cross_reference_matrix, value={'F->G': '모델 서빙이 벤치마크 대상', 'F->H': '인프라 비용이 가격 전략 기반', 'F->I': '모델 라우터가 투자 분석 모델",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0097",
+      "key": "FI_differentiation_summary",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_120",
+          "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+          "source_line": 2861,
+          "source_text": "| 인프라(F) | 클라우드 전용, 단일 모델 | 로컬+클라우드 하이브리드, 멀티 모델 라우팅 |",
+          "value": {
+            "인프라(F)": "로컬+클라우드 하이브리드, 멀티 모델 라우팅 vs 경쟁사 클라우드 전용",
+            "품질(G)": "투명한 벤치마크, VAMOS 고유 지표(VBS) vs 경쟁사 자체 벤치마크 비공개",
+            "비즈니스(H)": "사용량 기반 $5-10/mo, 비용 투명성 vs 경쟁사 $20/mo 고정 구독",
+            "투자(I)": "93개 데이터 소스, 백테스팅, 한국 시장 특화 vs 경쟁사 범용 AI 투자 특화 없음"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=FI_differentiation_summary, value={'인프라(F)': '로컬+클라우드 하이브리드, 멀티 모델 라우팅 vs 경쟁사 클라우드 전용', '품질(G)': '투명한 벤치마크, VAMOS ",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0098",
+      "key": "FRAMEWORK_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_069",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1176,
+          "source_text": "| **프레임워크** | **LangGraph** (LOCK) | 동일 | 동일 |",
+          "value": "LangGraph (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=FRAMEWORK_LOCK, value=LangGraph (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0099",
+      "key": "JM_cross_reference_matrix",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_106",
+          "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+          "source_line": 1755,
+          "source_text": "| 연동 항목 | J (멀티모달) | K (에이전트) | L (개발자도구) | M (PKM/지식관리) |",
+          "value": {
+            "코어아키텍처": "J-083 → ORANGE CORE, K-001 MCP 서버, L-011 REST API, M-023 4-Index Fusion RAG",
+            "메모리연동": "J-002 → 5-Layer, K-004 → 메모리 URI, L-037 → 개인화 코딩, M-001 → 5-Layer",
+            "지식그래프": "J-003 → KG 노드 생성, K-054 → KG, L-035 → 코드 KG, M-012 KG 자동 구축",
+            "투자연동": "J-005 차트 → Quant Node, K-062 → 투자 패턴, L-036 → 투자+코딩 통합, M-008 → 투자 지식",
+            "보안": "J-004 → PII 마스킹, K-025 → 에이전트 샌드박스, L-025+L-039 → 플러그인 보안, M-004 → Recall 로컬"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=JM_cross_reference_matrix, value={'코어아키텍처': 'J-083 → ORANGE CORE, K-001 MCP 서버, L-011 REST API, M-023 4-Index Fus",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0100",
+      "key": "J_reference_papers",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_114",
+          "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+          "source_line": 54,
+          "source_text": "**참고 논문**: LayoutLMv3(Microsoft), Donut(Naver CLOVA)",
+          "value": [
+            "LayoutLMv3 (Microsoft)",
+            "Donut (Naver CLOVA)",
+            "ChartQA dataset",
+            "DePlot (Google Research)",
+            "GraphRAG (Microsoft 2024)"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=J_reference_papers, value=['LayoutLMv3 (Microsoft)', 'Donut (Naver CLOVA)', 'ChartQA dataset', 'DePlot (Go",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0101",
+      "key": "MCP_TRANSPORT_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_070",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1177,
+          "source_text": "| **MCP 전송** | Streamable HTTP (LOCK) | 동일 | 동일 |",
+          "value": "Streamable HTTP (LOCK)"
+        }
+      ],
+      "analysis": "단일 소스. key=MCP_TRANSPORT_LOCK, value=Streamable HTTP (LOCK)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0102",
+      "key": "M_cross_references",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_108",
+          "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+          "source_line": 1746,
+          "source_text": "**크로스 레퍼런스**: STEP7-A(4-Index Fusion RAG), STEP7-D(5-Layer 메모리 시스템), STEP7-I(투자 지식 축적)",
+          "value": [
+            "STEP7-A(4-Index Fusion RAG)",
+            "STEP7-D(5-Layer 메모리 시스템)",
+            "STEP7-I(투자 지식 축적)",
+            "STEP7-J(멀티모달 지식 이미지/오디오)",
+            "STEP7-K(지식 기반 에이전트 의사결정)",
+            "STEP7-L(코드 지식 관리)"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=M_cross_references, value=['STEP7-A(4-Index Fusion RAG)', 'STEP7-D(5-Layer 메모리 시스템)', 'STEP7-I(투자 지식 축적)',",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0103",
+      "key": "M_reference_tools",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_115",
+          "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+          "source_line": 1733,
+          "source_text": "**핵심 도구**: Obsidian(obsidian.md 로컬 PKM), Notion(notion.so 클라우드 PKM), Logseq(logseq.com 오픈소스 PKM)",
+          "value": [
+            "Obsidian",
+            "Notion",
+            "Logseq",
+            "Tana",
+            "Mem",
+            "Reflect",
+            "Heptabase"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=M_reference_tools, value=['Obsidian', 'Notion', 'Logseq', 'Tana', 'Mem', 'Reflect', 'Heptabase']",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0104",
+      "key": "P0_blocker_contracts_alignment",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_179",
+          "source_file": "VAMOS_AI_INVESTING_SPEC.md",
+          "source_line": 1041,
+          "source_text": "**P0 (코드 생성 전 필수)**: contracts.py Pydantic 모델 -> JSON Schema 완전 정렬 (D-1~D-12, 12건)",
+          "value": "contracts.py Pydantic 모델 → JSON Schema 정렬 12건"
+        }
+      ],
+      "analysis": "단일 소스. key=P0_blocker_contracts_alignment, value=contracts.py Pydantic 모델 → JSON Schema 정렬 12건",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0105",
+      "key": "PARALLEL_EXEC_LIMIT_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_052",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 791,
+          "source_text": "| 병렬 실행 상한 | **3개** (LOCK) |",
+          "value": 3
+        }
+      ],
+      "analysis": "단일 소스. key=PARALLEL_EXEC_LIMIT_LOCK, value=3",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0106",
+      "key": "R2_Ch3_PLAN_items",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_211",
+          "source_file": "STEP7_R2_V1_HIGH.md",
+          "source_line": 648,
+          "source_text": "| Ch3 | PLAN-3.0 | ~25건 | H, M일부, A일부 |",
+          "value": "~25건"
+        }
+      ],
+      "analysis": "단일 소스. key=R2_Ch3_PLAN_items, value=~25건",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0107",
+      "key": "REF: D2.0-02 for Decision timing",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_146",
+          "source_file": "D2.0-07",
+          "source_line": 58,
+          "source_text": "Decision(단일결정) 확정 및 실행 타이밍: 02 참조",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-02 for Decision timing, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0108",
+      "key": "REF: D2.0-02 for pipeline states / Decision Lock",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_149",
+          "source_file": "D2.0-08",
+          "source_line": 67,
+          "source_text": "02 ORANGE CORE: 파이프라인 상태/Decision Lock 제약",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-02 for pipeline states / Decision Lock, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0109",
+      "key": "REF: D2.0-03 for node state / domain display rules",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_150",
+          "source_file": "D2.0-08",
+          "source_line": 68,
+          "source_text": "03 BLUE NODES: 노드 상태/도메인(P0/P1/P2) 표시 규칙",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-03 for node state / domain display rules, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0110",
+      "key": "REF: D2.0-04 for Tool/Run/Trace/log pipeline",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_151",
+          "source_file": "D2.0-08",
+          "source_line": 69,
+          "source_text": "04 INFRA CORE: Tool/Run/Trace/로그 파이프라인",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-04 for Tool/Run/Trace/log pipeline, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0111",
+      "key": "REF: D2.0-05 for execution stages / state machine / failover",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_152",
+          "source_file": "D2.0-08",
+          "source_line": 70,
+          "source_text": "05 AGENT WORKFLOW: 실행 단계/상태 머신/Failover 흐름",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-05 for execution stages / state machine / failover, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0112",
+      "key": "REF: D2.0-05 for workflow stage application",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_147",
+          "source_file": "D2.0-07",
+          "source_line": 59,
+          "source_text": "워크플로우 단계(Execute/Verify/Deliver)에서의 적용 방식: 05 참조",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-05 for workflow stage application, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0113",
+      "key": "REF: D2.0-06 for storage memory L0/L1/L2",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_153",
+          "source_file": "D2.0-08",
+          "source_line": 71,
+          "source_text": "06 STORAGE/MEMORY: L0/L1/L2 표시 및 저장 승인/마스킹",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-06 for storage memory L0/L1/L2, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0114",
+      "key": "REF: D2.0-07 for approval triggers / block / downshift rules",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_154",
+          "source_file": "D2.0-08",
+          "source_line": 72,
+          "source_text": "07 SAFETY/COST/APPROVAL: 승인 트리거/차단/다운시프트 규칙",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-07 for approval triggers / block / downshift rules, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0115",
+      "key": "REF: D2.0-08 for UI surfacing of approval/block/downshift",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_148",
+          "source_file": "D2.0-07",
+          "source_line": 60,
+          "source_text": "UI에서 승인/차단/다운시프트 표면화: 08 참조",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D2.0-08 for UI surfacing of approval/block/downshift, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0116",
+      "key": "REF: D7 ApprovalSchema SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_159",
+          "source_file": "D2.0-07",
+          "source_line": 435,
+          "source_text": "ApprovalSchema: [REF:D7:approval-schema:Schema:*:v2.1.0]",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D7 ApprovalSchema SOT, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0117",
+      "key": "REF: D7 CostBudgetSchema SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_161",
+          "source_file": "D2.0-07",
+          "source_line": 449,
+          "source_text": "CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v2.1.0]",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D7 CostBudgetSchema SOT, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0118",
+      "key": "REF: D7 DownshiftSchema SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_162",
+          "source_file": "D2.0-07",
+          "source_line": 450,
+          "source_text": "DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v2.1.0]",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D7 DownshiftSchema SOT, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0119",
+      "key": "REF: D7 PolicyCheckSchema SOT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_160",
+          "source_file": "D2.0-07",
+          "source_line": 448,
+          "source_text": "PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v2.1.0]",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: D7 PolicyCheckSchema SOT, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0120",
+      "key": "REF: DEC-008 remove provisional schema slots",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_163",
+          "source_file": "D2.0-08",
+          "source_line": 1436,
+          "source_text": "DEC-008 | D8 빈 스키마 처리 | **B: 제거**",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: DEC-008 remove provisional schema slots, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0121",
+      "key": "REF: DEC-011 P2 confirmation = modal",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_164",
+          "source_file": "D2.0-08",
+          "source_line": 1439,
+          "source_text": "DEC-011 | P2 재확인 UI | **A: 모달**",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: DEC-011 P2 confirmation = modal, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0122",
+      "key": "REF: DEC-015 cost warning colors 80% yellow, 100% red",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_165",
+          "source_file": "D2.0-08",
+          "source_line": 1440,
+          "source_text": "DEC-015 | 비용 경고 색상 | **80% 노란색, 100% 빨간색**",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: DEC-015 cost warning colors 80% yellow, 100% red, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0123",
+      "key": "REF: Pipeline S0-S8 mapping to 02/05",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_158",
+          "source_file": "D2.0-08",
+          "source_line": 246,
+          "source_text": "정본 매핑: RECEIVED=S0, INTENT=S1, EVIDENCE=S2, DECISION_LOCK=S3, EXEC=S4, OUTPUT=S5, SELF-CHECK=S6, MEMORY=S7, DONE=S8 (02 참조)",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: Pipeline S0-S8 mapping to 02/05, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0124",
+      "key": "REF: STEP7-C 104 items for UI/UX",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_156",
+          "source_file": "D2.0-08",
+          "source_line": 34,
+          "source_text": "C+J 카테고리 상세 항목은 `VAMOS_STEP7_A-E_상세명세서.md` (C 카테고리 104건)",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: STEP7-C 104 items for UI/UX, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0125",
+      "key": "REF: STEP7-E 92 items for security/governance",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_155",
+          "source_file": "D2.0-07",
+          "source_line": 62,
+          "source_text": "E 카테고리(보안/거버넌스) 상세 항목은 `VAMOS_STEP7_A-E_상세명세서.md` (E 카테고리 92건)",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: STEP7-E 92 items for security/governance, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0126",
+      "key": "REF: STEP7-J for multimodal specs",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_157",
+          "source_file": "D2.0-08",
+          "source_line": 36,
+          "source_text": "`VAMOS_STEP7_J-M_상세명세서.md` (J 카테고리)",
+          "value": null
+        }
+      ],
+      "analysis": "단일 소스. key=REF: STEP7-J for multimodal specs, value=None",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0127",
+      "key": "REF_AGENT_TEAMS_SPEC",
+      "result": "INCONSISTENT",
+      "severity": "WARNING",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "EA-01_138",
+          "source_file": "CLAUDE.md",
+          "source_line": 666,
+          "source_text": "Agent Teams → VAMOS_AGENT_TEAMS_SPEC 직접 읽기",
+          "value": "VAMOS_AGENT_TEAMS_SPEC"
+        }
+      ],
+      "analysis": "EA03 MASTER_SPEC: VAMOS_AGENT_TEAMS_SPEC.md = 2188줄, 11개 섹션. EA11 실제=2204줄. EA15=2188. 소스 기재값 일치하나 실제 파일과 16줄 차이.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0128",
+      "key": "REF_AI_INVESTING_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "EA-01_137",
+          "source_file": "CLAUDE.md",
+          "source_line": 665,
+          "source_text": "투자 도메인 → VAMOS_AI_INVESTING_SPEC 직접 읽기",
+          "value": "VAMOS_AI_INVESTING_SPEC"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_AI_INVESTING_SPEC, value=VAMOS_AI_INVESTING_SPEC",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0129",
+      "key": "REF_CAPABILITY_MATRIX",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_113",
+          "source_file": "PLAN-3.0",
+          "source_line": 6809,
+          "source_text": "Capability Matrix: 77모듈 × 4버전 ON/OFF/PARTIAL 매트릭스",
+          "value": "77모듈 × 4버전 ON/OFF/PARTIAL 매트릭스"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_CAPABILITY_MATRIX, value=77모듈 × 4버전 ON/OFF/PARTIAL 매트릭스",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0130",
+      "key": "REF_CHUNK_OVERLAP",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_120",
+          "source_file": "PLAN-3.0",
+          "source_line": 2711,
+          "source_text": "오버랩(Overlap): 각 청크 크기의 10% 적용 (연속성 보장)",
+          "value": "10%"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_CHUNK_OVERLAP, value=10%",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0131",
+      "key": "REF_CIRCUIT_BREAKER_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_202",
+          "source_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+          "source_line": 1210,
+          "source_text": "상태 머신: CLOSED → OPEN (연속 3회 실패) → HALF-OPEN (60초 후 1건 시도) → CLOSED. (D2.0-05 §4.4 LOCK 기준)",
+          "value": "D2.0-05 §4.4 LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_CIRCUIT_BREAKER_LOCK, value=D2.0-05 §4.4 LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0132",
+      "key": "REF_DECISION_RECORD_LINK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_097",
+          "source_file": "D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+          "source_line": 1146,
+          "source_text": "원칙(LOCK): 모든 NODE/Tool 실행은 실행 전·후에 **Decision 레코드**에 연결되어야 한다.",
+          "value": "02 ORANGE CORE Decision 레코드"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_DECISION_RECORD_LINK, value=02 ORANGE CORE Decision 레코드",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0133",
+      "key": "REF_DESIGN_DOCS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "EA-01_136",
+          "source_file": "CLAUDE.md",
+          "source_line": 661,
+          "source_text": "특정 모듈 상세 → 해당 DESIGN 문서 직접 읽기 (D2.0-02~08)",
+          "value": "D2.0-02~08"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_DESIGN_DOCS, value=D2.0-02~08",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0134",
+      "key": "REF_MODEL_TIERS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_152",
+          "source_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+          "source_line": 38,
+          "source_text": "RULE 1.3 §4.6: 모델 계층(Front Mini / Main / Tool)",
+          "value": "RULE 1.3 §4.6"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_MODEL_TIERS, value=RULE 1.3 §4.6",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0135",
+      "key": "REF_P1_TECH_COMBOS",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_203",
+          "source_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+          "source_line": 979,
+          "source_text": "정본: 01(Overview) §3.3 P1 Technology Combos(V1/V2/V3)",
+          "value": "01(Overview) §3.3"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_P1_TECH_COMBOS, value=01(Overview) §3.3",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0136",
+      "key": "REF_PRICING_V1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_116",
+          "source_file": "PLAN-3.0",
+          "source_line": 6864,
+          "source_text": "V1: 월 ~₩6,000 (로컬 LLM 중심 + 소량 API)",
+          "value": "월 ~₩6,000 (로컬 LLM 중심 + 소량 API)"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_PRICING_V1, value=월 ~₩6,000 (로컬 LLM 중심 + 소량 API)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0137",
+      "key": "REF_PRICING_V2",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_117",
+          "source_file": "PLAN-3.0",
+          "source_line": 6865,
+          "source_text": "V2: 월 ~₩20,000 (서버 LLM + 고급 기능)",
+          "value": "월 ~₩20,000 (서버 LLM + 고급 기능)"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_PRICING_V2, value=월 ~₩20,000 (서버 LLM + 고급 기능)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0138",
+      "key": "REF_PRICING_V3",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_118",
+          "source_file": "PLAN-3.0",
+          "source_line": 6866,
+          "source_text": "V3: 월 ~₩100,000 (엔터프라이즈)",
+          "value": "월 ~₩100,000 (엔터프라이즈)"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_PRICING_V3, value=월 ~₩100,000 (엔터프라이즈)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0139",
+      "key": "REF_SDAR_SPEC",
+      "result": "INCONSISTENT",
+      "severity": "WARNING",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "EA-01_135",
+          "source_file": "CLAUDE.md",
+          "source_line": 126,
+          "source_text": "I-25 | SDAR Engine (자가진단/수리) — D2.0-02 미수록, VAMOS_SDAR_DESIGN_SPECIFICATION 참조",
+          "value": "VAMOS_SDAR_DESIGN_SPECIFICATION"
+        }
+      ],
+      "analysis": "EA03 MASTER_SPEC: VAMOS_SDAR_DESIGN_SPECIFICATION.md = 1643줄, 10개 섹션+3개 부록. EA11 실제=1647줄. EA15=1643. 소스 기재값 일치하나 실제 파일과 4줄 차이.",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0140",
+      "key": "REF_SOT_PATH",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-1",
+          "item_id": "EA-01_134",
+          "source_file": "CLAUDE.md",
+          "source_line": 26,
+          "source_text": "정본 경로: D:\\VAMOS\\00. 통합\\02. TECH\\00. FINAL SUMMARY\\STEP6_pipeline\\output\\updated\\",
+          "value": "D:\\VAMOS\\00. 통합\\02. TECH\\00. FINAL SUMMARY\\STEP6_pipeline\\output\\updated\\"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_SOT_PATH, value=D:\\VAMOS\\00. 통합\\02. TECH\\00. FINAL SUMMARY\\STEP6_pipeline\\output\\updated\\",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0141",
+      "key": "REF_STEP7_FI_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_139",
+          "source_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+          "source_line": 29,
+          "source_text": "> `VAMOS_STEP7_F-I_상세명세서.md` (F 카테고리 96건) 를 참조하라.",
+          "value": "VAMOS_STEP7_F-I_상세명세서.md"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_STEP7_FI_SPEC, value=VAMOS_STEP7_F-I_상세명세서.md",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0142",
+      "key": "REF_STEP7_JM_SPEC",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_047",
+          "source_file": "D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+          "source_line": 37,
+          "source_text": "> `VAMOS_STEP7_J-M_상세명세서.md` (1,818줄, 284건) 를 참조하라.",
+          "value": "VAMOS_STEP7_J-M_상세명세서.md"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_STEP7_JM_SPEC, value=VAMOS_STEP7_J-M_상세명세서.md",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0143",
+      "key": "REF_STEP7_R1_COUNT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_114",
+          "source_file": "PLAN-3.0",
+          "source_line": 6846,
+          "source_text": "## STEP7 AI기술보강 — R1 V1+CRITICAL 추가 (5건)",
+          "value": 5
+        }
+      ],
+      "analysis": "단일 소스. key=REF_STEP7_R1_COUNT, value=5",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0144",
+      "key": "REF_STEP7_R2_COUNT",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_115",
+          "source_file": "PLAN-3.0",
+          "source_line": 6888,
+          "source_text": "## STEP7 AI기술보강 — R2 V1+HIGH 추가 (25건)",
+          "value": 25
+        }
+      ],
+      "analysis": "단일 소스. key=REF_STEP7_R2_COUNT, value=25",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0145",
+      "key": "REF_SUPERIOR_RULE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-5",
+          "item_id": "EA-05_086",
+          "source_file": "D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+          "source_line": 43,
+          "source_text": "우선순위/상위규칙: 본 문서는 RULE 1.3 BASE를 상위 규칙으로 따른다.",
+          "value": "RULE 1.3 BASE"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_SUPERIOR_RULE, value=RULE 1.3 BASE",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0146",
+      "key": "REF_VADD_MODULE_CARD_SCHEMA",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-2",
+          "item_id": "EA-02_119",
+          "source_file": "PLAN-3.0",
+          "source_line": 114,
+          "source_text": "(A) Module Card 표준 스키마",
+          "value": "module_id, name, domain, version, status, source, cost_tier, approval_required, depends_on, description"
+        }
+      ],
+      "analysis": "단일 소스. key=REF_VADD_MODULE_CARD_SCHEMA, value=module_id, name, domain, version, status, source, cost_tier, approval_required, ",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0147",
+      "key": "SELFCHECK_THRESHOLDS_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_071",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1377,
+          "source_text": "| Self-check 임계값 | P0:70, P1:75, P2:80 |",
+          "value": "P0:70, P1:75, P2:80"
+        }
+      ],
+      "analysis": "단일 소스. key=SELFCHECK_THRESHOLDS_LOCK, value=P0:70, P1:75, P2:80",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0148",
+      "key": "SEMANTIC_CACHE_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_073",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 1397,
+          "source_text": "| Semantic Cache | cosine ≥ 0.95 |",
+          "value": "cosine >= 0.95"
+        }
+      ],
+      "analysis": "단일 소스. key=SEMANTIC_CACHE_LOCK, value=cosine >= 0.95",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0149",
+      "key": "SEMANTIC_CACHE_THRESHOLD_LOCK",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-15",
+          "item_id": "EA-15_053",
+          "source_file": "VAMOS_BEGINNER_GUIDE.md",
+          "source_line": 900,
+          "source_text": "- **히트 조건**: 코사인 유사도 ≥ **0.95** (95% 이상 유사하면 같은 질문으로 판단)",
+          "value": 0.95
+        }
+      ],
+      "analysis": "단일 소스. key=SEMANTIC_CACHE_THRESHOLD_LOCK, value=0.95",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0150",
+      "key": "STEP7E_BOLD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_192",
+          "source_file": "STEP7-E_보안_안전_거버넌스_작업가이드.md",
+          "source_line": 43,
+          "source_text": "**S7E-001** | CRITICAL | V1 | Threat Model — STRIDE 기반 위협 모델링",
+          "value": "S7E-001~S7E-092"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7E_BOLD_ID_RANGE, value=S7E-001~S7E-092",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0151",
+      "key": "STEP7F_BOLD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_227",
+          "source_file": "STEP7-F_인프라_배포_MLOps_작업가이드.md",
+          "source_line": 49,
+          "source_text": "**S7F-001** | CRITICAL | V1 | Ollama 기반 로컬 LLM 서빙 — V1 핵심 엔진",
+          "value": "S7F-001~S7F-096"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7F_BOLD_ID_RANGE, value=S7F-001~S7F-096",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0152",
+      "key": "STEP7G_BOLD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_260",
+          "source_file": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+          "source_line": 46,
+          "source_text": "**S7G-001** | HIGH | V1 | MMLU/MMLU-Pro — 범용 지식 벤치마크",
+          "value": "S7G-001~S7G-088"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7G_BOLD_ID_RANGE, value=S7G-001~S7G-088",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0153",
+      "key": "STEP7H_BOLD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_291",
+          "source_file": "STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+          "source_line": 60,
+          "source_text": "**S7H-001** | HIGH | V1 | 가격 모니터링 대시보드 — API 가격 추적",
+          "value": "S7H-001~S7H-078"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7H_BOLD_ID_RANGE, value=S7H-001~S7H-078",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0154",
+      "key": "STEP7I_BOLD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_325",
+          "source_file": "STEP7-I_AI_Investing_보강_작업가이드.md",
+          "source_line": 89,
+          "source_text": "**S7I-001** | CRITICAL | V1 | 최신 AI 투자 도구 통합 전략 — 2025 생태계 매핑",
+          "value": "S7I-001~S7I-106"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7I_BOLD_ID_RANGE, value=S7I-001~S7I-106",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0155",
+      "key": "STEP7J_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_347",
+          "source_file": "STEP7-J_멀티모달_생성처리_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### J-001. 이미지 입력 처리 파이프라인",
+          "value": "J-001~J-098"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7J_HEADER_ID_RANGE, value=J-001~J-098",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0156",
+      "key": "STEP7K_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_366",
+          "source_file": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### K-001. MCP 서버 구현 아키텍처",
+          "value": "K-001~K-073"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7K_HEADER_ID_RANGE, value=K-001~K-073",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0157",
+      "key": "STEP7L_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_382",
+          "source_file": "STEP7-L_개발자도구_API_SDK_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### L-001. VAMOS Dev Node 코딩 엔진",
+          "value": "L-001~L-051"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7L_HEADER_ID_RANGE, value=L-001~L-051",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0158",
+      "key": "STEP7M_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_397",
+          "source_file": "STEP7-M_PKM_지식관리_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### M-001. 자동 지식 추출 파이프라인",
+          "value": "M-001~M-049"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7M_HEADER_ID_RANGE, value=M-001~M-049",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0159",
+      "key": "STEP7N_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_409",
+          "source_file": "STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### N-001. VAMOS 워크플로우 엔진 아키텍처",
+          "value": "N-001~N-035"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7N_HEADER_ID_RANGE, value=N-001~N-035",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0160",
+      "key": "STEP7O_HEADER_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_420",
+          "source_file": "STEP7-O_교육_학습_자기개발_작업가이드.md",
+          "source_line": 11,
+          "source_text": "### O-001. 적응형 학습 엔진",
+          "value": "O-001~O-029"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7O_HEADER_ID_RANGE, value=O-001~O-029",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0161",
+      "key": "STEP7_PART_A_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_116",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 11,
+          "source_text": "### A-ADD-01. GPT-4.1 시리즈 반영 [대상: STEP7-A]",
+          "value": "A-ADD-01~A-ADD-09"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_A_ADD_ID_RANGE, value=A-ADD-01~A-ADD-09",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0162",
+      "key": "STEP7_PART_A_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_078",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 75,
+          "source_text": "| 1 | S7-A-001 | 추가 CRITICAL | **Team Lead / Team Member 역할 분리 구조** — 팀 리드(조율 전담) + 팀원(실행 전담) 명시적 계층",
+          "value": "S7-A-001~S7-A-035"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_A_ID_RANGE, value=S7-A-001~S7-A-035",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0163",
+      "key": "STEP7_PART_B_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_117",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 177,
+          "source_text": "### B-ADD-01. A2A 기반 대화 패턴 [대상: STEP7-B]",
+          "value": "B-ADD-01~B-ADD-04"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_B_ADD_ID_RANGE, value=B-ADD-01~B-ADD-04",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0164",
+      "key": "STEP7_PART_B_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_079",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 127,
+          "source_text": "| 1 | S7-B-001 | 추가 CRITICAL | **추론 모드(Reasoning Mode) 통합** — o3/o4급 \"더 오래 생각하는\" 모드. 난이도별 추론 깊이 자동 조",
+          "value": "S7-B-001~S7-B-024"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_B_ID_RANGE, value=S7-B-001~S7-B-024",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0165",
+      "key": "STEP7_PART_C_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_118",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 225,
+          "source_text": "### C-ADD-01. NotebookLM Audio Overviews UI [대상: STEP7-C]",
+          "value": "C-ADD-01~C-ADD-03"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_C_ADD_ID_RANGE, value=C-ADD-01~C-ADD-03",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0166",
+      "key": "STEP7_PART_C_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_080",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 154,
+          "source_text": "| 1 | S7-C-001 | 추가 CRITICAL | **실시간 웹 검색 기반 응답(Search Grounding)** — Gemini Search Grounding 동등. I-",
+          "value": "S7-C-001~S7-C-020"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_C_ID_RANGE, value=S7-C-001~S7-C-020",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0167",
+      "key": "STEP7_PART_D_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_119",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 256,
+          "source_text": "### D-ADD-01. Microsoft Recall 개념 로컬 구현 [대상: STEP7-D]",
+          "value": "D-ADD-01~D-ADD-04"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_D_ADD_ID_RANGE, value=D-ADD-01~D-ADD-04",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0168",
+      "key": "STEP7_PART_D_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_081",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 180,
+          "source_text": "| 1 | S7-D-001 | 추가 CRITICAL | **Meta AI Controller 모듈(I-25)** — 모든 모듈/에이전트/스킬을 관리하는 상위 AI. 모듈 생성/삭제",
+          "value": "S7-D-001~S7-D-022"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_D_ID_RANGE, value=S7-D-001~S7-D-022",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0169",
+      "key": "STEP7_PART_E_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_120",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 295,
+          "source_text": "### E-ADD-01. A2A 프로토콜 보안 [대상: STEP7-E]",
+          "value": "E-ADD-01~E-ADD-03"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_E_ADD_ID_RANGE, value=E-ADD-01~E-ADD-03",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0170",
+      "key": "STEP7_PART_E_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_082",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 218,
+          "source_text": "| 1 | S7-E-001 | 수정 | **안전 프레임워크 → \"Guaranteed Safe AI\" 수준 강화** — 2025 연구 프레임워크 반영. (1) 월드 모델, (2) 안",
+          "value": "S7-E-001~S7-E-018"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_E_ID_RANGE, value=S7-E-001~S7-E-018",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0171",
+      "key": "STEP7_PART_F_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_121",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 326,
+          "source_text": "### F-ADD-01. PagedAttention / vLLM 최신 [대상: STEP7-F]",
+          "value": "F-ADD-01~F-ADD-04"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_F_ADD_ID_RANGE, value=F-ADD-01~F-ADD-04",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0172",
+      "key": "STEP7_PART_F_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_083",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 250,
+          "source_text": "| 1 | S7-F-001 | 추가 CRITICAL | **개인 지식 그래프 엔진(I-22 확장)** — 모든 사용자 상호작용에서 엔티티/관계/사실을 자동 추출하여 영속적 그래프 ",
+          "value": "S7-F-001~S7-F-099"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_F_ID_RANGE, value=S7-F-001~S7-F-099",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0173",
+      "key": "STEP7_PART_G_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_122",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 375,
+          "source_text": "### G-ADD-01. SWE-Bench 최신 변형 [대상: STEP7-G]",
+          "value": "G-ADD-01~G-ADD-03"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_G_ADD_ID_RANGE, value=G-ADD-01~G-ADD-03",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0174",
+      "key": "STEP7_PART_G_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_084",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 587,
+          "source_text": "| 1 | S7-G-001 | 추가 | **Think Mode (심층 추론 모드)** — Grok의 \"Think\" 버튼 동등. 사용자가 명시적으로 깊은 사고를 요청. 기존 Adap",
+          "value": "S7-G-001~S7-G-012"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_G_ID_RANGE, value=S7-G-001~S7-G-012",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0175",
+      "key": "STEP7_PART_H_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_123",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 408,
+          "source_text": "### H-ADD-01. 2025 AI 시장 데이터 업데이트 [대상: STEP7-H]",
+          "value": "H-ADD-01~H-ADD-03"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_H_ADD_ID_RANGE, value=H-ADD-01~H-ADD-03",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0176",
+      "key": "STEP7_PART_H_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_085",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 613,
+          "source_text": "| 1 | S7-H-001 | 추가 | **Le Chat Agent 모드 참조** — Mistral의 에이전트 기능. 웹 검색+코드 실행+캔버스 통합. VAMOS BLUE NODE",
+          "value": "S7-H-001~S7-H-010"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_H_ID_RANGE, value=S7-H-001~S7-H-010",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0177",
+      "key": "STEP7_PART_I_ADD_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_124",
+          "source_file": "STEP7_A-I_보강_추가항목_통합.md",
+          "source_line": 448,
+          "source_text": "### I-ADD-01. AI 기반 개인 데이터 분석 투자 [대상: STEP7-I]",
+          "value": "I-ADD-01~I-ADD-03"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_I_ADD_ID_RANGE, value=I-ADD-01~I-ADD-03",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0178",
+      "key": "STEP7_PART_I_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_086",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 632,
+          "source_text": "| 1 | S7-I-001 | 추가 CRITICAL | **Llama 4 Scout/Maverick 로컬 실행 전략** — Scout(17B 활성/109B 전체) INT4 양자화로",
+          "value": "S7-I-001~S7-I-008"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_I_ID_RANGE, value=S7-I-001~S7-I-008",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0179",
+      "key": "STEP7_PART_J_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_087",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 649,
+          "source_text": "| 1 | S7-J-001 | 추가 CRITICAL | **Hybrid Retrieval (BM25+벡터+재순위화) 파이프라인 구체화** — Perplexity의 3단계 검색을 V",
+          "value": "S7-J-001~S7-J-008"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_J_ID_RANGE, value=S7-J-001~S7-J-008",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0180",
+      "key": "STEP7_PART_K_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_088",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 666,
+          "source_text": "| 1 | S7-K-001 | 추가 CRITICAL | **온디바이스 우선 라우팅 정책** — Apple Intelligence 참조. (1) 로컬 SLM으로 시도 → (2) 로컬",
+          "value": "S7-K-001~S7-K-010"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_K_ID_RANGE, value=S7-K-001~S7-K-010",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0181",
+      "key": "STEP7_PART_L_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_089",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 685,
+          "source_text": "| 1 | S7-L-001 | 추가 CRITICAL | **Computer Use 에이전트 설계** — 화면 스크린샷 분석→UI 요소 인식→클릭/타이핑/스크롤 자동화. Claude",
+          "value": "S7-L-001~S7-L-008"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_L_ID_RANGE, value=S7-L-001~S7-L-008",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0182",
+      "key": "STEP7_PART_M_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_090",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 702,
+          "source_text": "| 1 | S7-M-001 | 추가 | **음성 대화 파이프라인 설계** — STT→LLM→TTS 전체 파이프라인. 실시간 양방향. WebSocket 기반. 기존 D2.0-08 §",
+          "value": "S7-M-001~S7-M-008"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_M_ID_RANGE, value=S7-M-001~S7-M-008",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0183",
+      "key": "STEP7_PART_N_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_091",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 719,
+          "source_text": "| 1 | S7-N-001 | 추가 CRITICAL | **EU AI Act 위험 분류 자동 평가** — VAMOS 각 기능의 EU AI Act 위험 등급(최소/제한/고위험/금지)",
+          "value": "S7-N-001~S7-N-012"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_N_ID_RANGE, value=S7-N-001~S7-N-012",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0184",
+      "key": "STEP7_PART_O_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_092",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 736,
+          "source_text": "| 1 | S7-O-001 | 추가 | **LangGraph 패턴 참조 (상태 기계 에이전트)** — LangGraph의 StateGraph 패턴. 에이전트 상태 전이를 그래프로 ",
+          "value": "S7-O-001~S7-O-010"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_O_ID_RANGE, value=S7-O-001~S7-O-010",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0185",
+      "key": "STEP7_PART_P_ID_RANGE",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-13",
+          "item_id": "EA-13_093",
+          "source_file": "STEP7_작업가이드.md",
+          "source_line": 755,
+          "source_text": "| 1 | S7-P-001 | 추가 CRITICAL | **Self-RAG (자기 반성 RAG)** — 검색 필요 여부 스스로 판단→검색→검색 결과 관련성 자기 평가→환각 감지→재",
+          "value": "S7-P-001~S7-P-010"
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_PART_P_ID_RANGE, value=S7-P-001~S7-P-010",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0186",
+      "key": "STEP7_to_AE_cross_refs",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_107",
+          "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+          "source_line": 2829,
+          "source_text": "| 카테고리 | F-I 주요 연동 |",
+          "value": {
+            "A(메모리/아키텍처)": "F: 메모리 저장소(SQLite), I: 투자 일지 기억",
+            "B(Self-Evolution)": "H: 개인화가 핵심 MOAT, I: 투자 스타일 학습",
+            "C(Knowledge Graph)": "I: 기업/산업 관계 그래프, H: 개인화 차별화",
+            "D(MCP/Tool)": "F: MCP Tool 실행 인프라, I: 투자 데이터 Tool",
+            "E(보안/프라이버시)": "F: 보안 인프라, H: 데이터 주권 가치, I: 투자 데이터 보호"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=STEP7_to_AE_cross_refs, value={'A(메모리/아키텍처)': 'F: 메모리 저장소(SQLite), I: 투자 일지 기억', 'B(Self-Evolution)': 'H: 개인화가",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0187",
+      "key": "ac_d3_001",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_349",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 672,
+          "source_text": "AC-D3-001: NodeRegistry는 D3 SOT로만 확정된다",
+          "value": "NodeRegistry는 D3 SOT로만 확정, 타 문서 재정의 금지"
+        }
+      ],
+      "analysis": "단일 소스. key=ac_d3_001, value=NodeRegistry는 D3 SOT로만 확정, 타 문서 재정의 금지",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0188",
+      "key": "ac_d3_008",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_350",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 686,
+          "source_text": "AC-D3-008: MCPBridgeLayerSchema.transport는 streamable_http만 허용 (DEC-017 LOCK)",
+          "value": "transport=streamable_http만 허용 LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=ac_d3_008, value=transport=streamable_http만 허용 LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0189",
+      "key": "ac_d3_009",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_351",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 688,
+          "source_text": "AC-D3-009: 점수 배분 Trust(25)+Relevance(30)+Quality(25)+Access(20)=100점 (LOCK L5)",
+          "value": "Trust25+Relevance30+Quality25+Access20=100 LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=ac_d3_009, value=Trust25+Relevance30+Quality25+Access20=100 LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0190",
+      "key": "ac_d3_010",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_352",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 690,
+          "source_text": "AC-D3-010: 5단계 Gate(G0 100%, G1 95%, G2 90%, G3 100%, G4 100%) 통과 기준 (LOCK L3)",
+          "value": "G0:100% G1:95% G2:90% G3:100% G4:100% LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=ac_d3_010, value=G0:100% G1:95% G2:90% G3:100% G4:100% LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0191",
+      "key": "ac_d3_012",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-8",
+          "item_id": "EA-08_353",
+          "source_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+          "source_line": 694,
+          "source_text": "AC-D3-012: 소스 가중치 7단계(공식 1.0>논문 0.9>기술문서 0.85>기술블로그 0.7>뉴스 0.6>개인블로그 0.5>SNS 0.3) LOCK L7",
+          "value": "7단계 소스 가중치 LOCK L7"
+        }
+      ],
+      "analysis": "단일 소스. key=ac_d3_012, value=7단계 소스 가중치 LOCK L7",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0192",
+      "key": "agent_teams_lock_basis",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_165",
+          "source_file": "VAMOS_AGENT_TEAMS_SPEC.md",
+          "source_line": 6,
+          "source_text": "> **LOCK 기준**: VAMOS RULE 1.3 BASE, PLAN-3.0, DESIGN 2.0 전 문서",
+          "value": "VAMOS RULE 1.3 BASE, PLAN-3.0, DESIGN 2.0 all documents"
+        }
+      ],
+      "analysis": "단일 소스. key=agent_teams_lock_basis, value=VAMOS RULE 1.3 BASE, PLAN-3.0, DESIGN 2.0 all documents",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0193",
+      "key": "agent_teams_module_integration",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_153",
+          "source_file": "VAMOS_AGENT_TEAMS_SPEC.md",
+          "source_line": 1289,
+          "source_text": "I/E/S/A 시리즈 모듈과의 연계: I-1 through I-25, E-1~E-n, S-1, S-4, S-8, A-4",
+          "value": "I-1, I-2, I-3, I-5, I-6, I-8, I-9, I-10, I-11, I-13, I-18, I-25, E-1~E-n, S-1, S-4, S-8, A-4"
+        }
+      ],
+      "analysis": "단일 소스. key=agent_teams_module_integration, value=I-1, I-2, I-3, I-5, I-6, I-8, I-9, I-10, I-11, I-13, I-18, I-25, E-1~E-n, S-1, S",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0194",
+      "key": "agent_teams_source_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_151",
+          "source_file": "VAMOS_AGENT_TEAMS_SPEC.md",
+          "source_line": 4,
+          "source_text": "> **원본 참조**: D2.0-02 §12 (S7-A-001 TITLE_ONLY) → 본 문서에서 95~100% 상세 확장",
+          "value": "D2.0-02 §12 (S7-A-001 TITLE_ONLY)"
+        }
+      ],
+      "analysis": "단일 소스. key=agent_teams_source_ref, value=D2.0-02 §12 (S7-A-001 TITLE_ONLY)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0195",
+      "key": "agent_teams_sources",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_152",
+          "source_file": "VAMOS_AGENT_TEAMS_SPEC.md",
+          "source_line": 5,
+          "source_text": "> **소스**: D2.0-02 (ORANGE CORE), D2.0-03 (BLUE NODES), D2.0-05 (AGENT WORKFLOW), D2.0-07 (SAFETY/COST/APPROVAL)",
+          "value": "D2.0-02, D2.0-03, D2.0-05, D2.0-07, STEP7 작업가이드, STEP7-K"
+        }
+      ],
+      "analysis": "단일 소스. key=agent_teams_sources, value=D2.0-02, D2.0-03, D2.0-05, D2.0-07, STEP7 작업가이드, STEP7-K",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0196",
+      "key": "cloud_library_source_docs",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_157",
+          "source_file": "VAMOS_CLOUD_LIBRARY_SPEC.md",
+          "source_line": 3,
+          "source_text": "> **소스 문서**: SPECIFICATION v1.0, 구현성 보완 방안 01, HYBRID ROADMAP v1.0, 대화 정리",
+          "value": "SPECIFICATION v1.0, Implementation Supplement 01, HYBRID ROADMAP v1.0, Conversation Summary"
+        }
+      ],
+      "analysis": "단일 소스. key=cloud_library_source_docs, value=SPECIFICATION v1.0, Implementation Supplement 01, HYBRID ROADMAP v1.0, Conversat",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0197",
+      "key": "cloud_library_vamos_rule_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_164",
+          "source_file": "VAMOS_CLOUD_LIBRARY_SPEC.md",
+          "source_line": 1329,
+          "source_text": "RULE: VAMOS_RULE_1.3_BASE.md (Section 4, 5, 6)",
+          "value": "VAMOS_RULE_1.3_BASE.md (Section 4, 5, 6)"
+        }
+      ],
+      "analysis": "단일 소스. key=cloud_library_vamos_rule_ref, value=VAMOS_RULE_1.3_BASE.md (Section 4, 5, 6)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0198",
+      "key": "conflict_priority_1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_203",
+          "source_file": "D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+          "source_line": 2033,
+          "source_text": "RULE 1.3 BASE: 최상위 — 다른 모든 정책보다 우선",
+          "value": "RULE 1.3 BASE 최상위"
+        }
+      ],
+      "analysis": "단일 소스. key=conflict_priority_1, value=RULE 1.3 BASE 최상위",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0199",
+      "key": "conflict_resolution_priority_1",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-7",
+          "item_id": "EA-07_174",
+          "source_file": "D2.0-07",
+          "source_line": 2033,
+          "source_text": "  1. **RULE 1.3 BASE**: 최상위 — 다른 모든 정책보다 우선",
+          "value": "RULE 1.3 BASE 최상위"
+        }
+      ],
+      "analysis": "단일 소스. key=conflict_resolution_priority_1, value=RULE 1.3 BASE 최상위",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0200",
+      "key": "cost_budget_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_156",
+          "source_file": "VAMOS_AI_INVESTING_SPEC.md",
+          "source_line": 691,
+          "source_text": "[AI-04] 위 비용은 AI Investing 도메인 전용 서브예산이며, VAMOS 전체 LOCK 상한과는 별도 산정. 전체 상한 내 배분은 D2.0-07 §4.2 참조.",
+          "value": "AI Investing sub-budget separate from VAMOS total LOCK ceiling. See D2.0-07 §4.2"
+        }
+      ],
+      "analysis": "단일 소스. key=cost_budget_ref, value=AI Investing sub-budget separate from VAMOS total LOCK ceiling. See D2.0-07 §4.2",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0201",
+      "key": "doc_role_01",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_155",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 816,
+          "source_text": "| 01 OVERVIEW | 통합 개요/연결 허브 | 버전 Combo, 다이어그램 |",
+          "value": "통합 개요/연결 허브"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_01, value=통합 개요/연결 허브",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0202",
+      "key": "doc_role_02",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_156",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 817,
+          "source_text": "| 02 ORANGE CORE | 중앙 판단/제어 명세 | I-1~I-24, Decision, 레지스트리 |",
+          "value": "중앙 판단/제어 명세"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_02, value=중앙 판단/제어 명세",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0203",
+      "key": "doc_role_03",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_157",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 818,
+          "source_text": "| 03 BLUE NODES | 도메인 실행 모듈 | P0/P1/P2 노드, 라이프사이클 |",
+          "value": "도메인 실행 모듈"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_03, value=도메인 실행 모듈",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0204",
+      "key": "doc_role_04",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_158",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 819,
+          "source_text": "| 04 INFRA-CORE | 실행 자원 계층 | Multi-Brain, Tool, Solver |",
+          "value": "실행 자원 계층"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_04, value=실행 자원 계층",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0205",
+      "key": "doc_role_05",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_159",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 820,
+          "source_text": "| 05 AGENT WORKFLOW | 파이프라인/루프 | 5단계, Retry, Fallback 동작 |",
+          "value": "파이프라인/루프"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_05, value=파이프라인/루프",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0206",
+      "key": "doc_role_06",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_160",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 821,
+          "source_text": "| 06 STORAGE/MEMORY | 저장 계층 | L0/L1/L2, QoD, Decay |",
+          "value": "저장 계층"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_06, value=저장 계층",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0207",
+      "key": "doc_role_07",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_161",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 822,
+          "source_text": "| 07 SAFETY/COST/APPROVAL | 정책/게이트 | PolicyCheck, CostBudget, Approval |",
+          "value": "정책/게이트"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_07, value=정책/게이트",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0208",
+      "key": "doc_role_08",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_162",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 823,
+          "source_text": "| 08 UI/UX | 화면/상호작용 | Builder, Hologram, 상태머신 |",
+          "value": "화면/상호작용"
+        }
+      ],
+      "analysis": "단일 소스. key=doc_role_08, value=화면/상호작용",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0209",
+      "key": "e15_module_references",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_158",
+          "source_file": "VAMOS_CLOUD_LIBRARY_SPEC.md",
+          "source_line": 556,
+          "source_text": "E-15 연동: I-2 (RAG 시스템), I-1 (Brain Router), OTHER BRAINS, E-Series 동료",
+          "value": "I-2 (RAG), I-1 (Brain Router), OTHER BRAINS, E-1(YouTube), E-2(Instagram)"
+        }
+      ],
+      "analysis": "단일 소스. key=e15_module_references, value=I-2 (RAG), I-1 (Brain Router), OTHER BRAINS, E-1(YouTube), E-2(Instagram)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0210",
+      "key": "embedding_cost_by_version",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_171",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 1528,
+          "source_text": "| Embedding 비용 | 무료 (BGE-M3 로컬) | $0.02/1M tokens (text-embedding-3-small) | $0.13/1M tokens (text-embedding-3-large) | A1 §A1-2A |",
+          "value": {
+            "V1": "무료 (BGE-M3 로컬)",
+            "V2": "$0.02/1M tokens (text-embedding-3-small)",
+            "V3": "$0.13/1M tokens (text-embedding-3-large)"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=embedding_cost_by_version, value={'V1': '무료 (BGE-M3 로컬)', 'V2': '$0.02/1M tokens (text-embedding-3-small)', 'V3':",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0211",
+      "key": "langchain_alternative_eval",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_170",
+          "source_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "source_line": 186,
+          "source_text": "| 순수 Python 직접 구현 | 의존성 없음, 완전한 제어 가능, 유지보수 부담 있음 | **채택** (VAMOS 핵심 파이프라인) |",
+          "value": {
+            "순수Python": "채택",
+            "LlamaIndex_core": "부분 채택(I-2 한정)",
+            "Haystack": "미채택",
+            "DSPy": "LATER(I-12 Self-evo)"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=langchain_alternative_eval, value={'순수Python': '채택', 'LlamaIndex_core': '부분 채택(I-2 한정)', 'Haystack': '미채택', 'DSPy'",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0212",
+      "key": "langgraph_role",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_169",
+          "source_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "source_line": 603,
+          "source_text": "**LangGraph**는 워크플로우 오케스트레이션 전용으로 **LOCK 확정**(DEC-002)",
+          "value": "노드/스텝 실행, 상태 전이, 체크포인트/리플레이 — 워크플로우 오케스트레이션 전용"
+        }
+      ],
+      "analysis": "단일 소스. key=langgraph_role, value=노드/스텝 실행, 상태 전이, 체크포인트/리플레이 — 워크플로우 오케스트레이션 전용",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0213",
+      "key": "master_source_file_mapping",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_097",
+          "source_file": "STEP7_STEP6통합_마스터인덱스.md",
+          "source_line": 804,
+          "source_text": "소스 파일 참조 table: A→STEP7_작업가이드.md, B→STEP7-B_*, C→STEP7-C_*, ..., 보강→STEP7_A-I_보강_추가항목_통합.md",
+          "value": {
+            "A": "STEP7_작업가이드.md",
+            "B": "STEP7-B_대화프로세스_작업가이드.md",
+            "C": "STEP7-C_UI_UX_전수비교_작업가이드.md",
+            "D": "STEP7-D_메모리_저장소_아키텍처_작업가이드.md",
+            "E": "STEP7-E_보안_안전_거버넌스_작업가이드.md",
+            "F": "STEP7-F_인프라_배포_MLOps_작업가이드.md",
+            "G": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+            "H": "STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+            "I": "STEP7-I_AI_Investing_보강_작업가이드.md",
+            "J": "STEP7-J_멀티모달_생성처리_작업가이드.md",
+            "K": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md",
+            "L": "STEP7-L_개발자도구_API_SDK_작업가이드.md",
+            "M": "STEP7-M_PKM_지식관리_작업가이드.md",
+            "N": "STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+            "O": "STEP7-O_교육_학습_자기개발_작업가이드.md",
+            "P": "STEP7-P_건강_웰니스_감성AI_작업가이드.md",
+            "보강": "STEP7_A-I_보강_추가항목_통합.md"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=master_source_file_mapping, value={'A': 'STEP7_작업가이드.md', 'B': 'STEP7-B_대화프로세스_작업가이드.md', 'C': 'STEP7-C_UI_UX_전수비교",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0214",
+      "key": "module_I1_ref_map",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_184",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 1566,
+          "source_text": "| I-1 | Intent Detector (의도 분석) | ON | D2.0-02 §7.1~7.10, §2.1~2.3 | D2.1-D2 §4.1 (DecisionSchema) | B1 §2.1, B2 §5.2, B4 | STEP7_A-E (B: 감정감지 S7B-002) |",
+          "value": "D2.0-02 §7.1~7.10, D2.1-D2 §4.1, B1 §2.1"
+        }
+      ],
+      "analysis": "단일 소스. key=module_I1_ref_map, value=D2.0-02 §7.1~7.10, D2.1-D2 §4.1, B1 §2.1",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0215",
+      "key": "module_S1_ref_map",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_186",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 1596,
+          "source_text": "| S-1 | Self-check Engine | ON | D2.0-02 §7.51~7.53-2, D2.0-01 §5.7 | D2.1-D2 §5 | B5 | STEP7_A-E (A: Constitutional AI) |",
+          "value": "D2.0-02 §7.51~7.53-2, D2.1-D2 §5, B5"
+        }
+      ],
+      "analysis": "단일 소스. key=module_S1_ref_map, value=D2.0-02 §7.51~7.53-2, D2.1-D2 §5, B5",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0216",
+      "key": "module_id_correction_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_155",
+          "source_file": "VAMOS_AI_INVESTING_SPEC.md",
+          "source_line": 830,
+          "source_text": "[PART1 SP-03] 모듈 ID는 D2.0-01 정본(CLAUDE.md §6) 기준으로 정정됨. I-7=Project/Session Manager, I-8=Policy Engine, I-9=Cost Manager.",
+          "value": "D2.0-01 CLAUDE.md §6: I-7=Project/Session Manager, I-8=Policy Engine, I-9=Cost Manager"
+        }
+      ],
+      "analysis": "단일 소스. key=module_id_correction_ref, value=D2.0-01 CLAUDE.md §6: I-7=Project/Session Manager, I-8=Policy Engine, I-9=Cost M",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0217",
+      "key": "phase7_priority_items_for_review",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_194",
+          "source_file": "STEP7_PHASE7_최종검증보고서.md",
+          "source_line": 177,
+          "source_text": "- S7E-068 vs S7D-068 ID 혼동 정리\n- S7C-099 (V2+HIGH) 실제 구현 라운드 확정",
+          "value": [
+            "S7E-068 vs S7D-068 ID 혼동 정리",
+            "S7C-099 V2+HIGH 구현 라운드 확정"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=phase7_priority_items_for_review, value=['S7E-068 vs S7D-068 ID 혼동 정리', 'S7C-099 V2+HIGH 구현 라운드 확정']",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0218",
+      "key": "r1_step6_ref_allowlist",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_178",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 649,
+          "source_text": "- **STEP6 연관**: DEC-003 (Allowlist 자동승인 LOCK)",
+          "value": "DEC-003 Allowlist 자동승인 LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_allowlist, value=DEC-003 Allowlist 자동승인 LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0219",
+      "key": "r1_step6_ref_cai",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_196",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 130,
+          "source_text": "- **STEP6 연관**: ADD-042~043 (RLHF/DPO + Constitutional AI)",
+          "value": "ADD-042~043 RLHF/DPO + Constitutional AI"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_cai, value=ADD-042~043 RLHF/DPO + Constitutional AI",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0220",
+      "key": "r1_step6_ref_chroma",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_175",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 372,
+          "source_text": "- **STEP6 연관**: DEC-004 (하이브리드 RAG LOCK), IR-016 (FAISS→Chroma)",
+          "value": "DEC-004 하이브리드 RAG LOCK, IR-016 FAISS→Chroma"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_chroma, value=DEC-004 하이브리드 RAG LOCK, IR-016 FAISS→Chroma",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0221",
+      "key": "r1_step6_ref_costbudget",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_180",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 793,
+          "source_text": "- **STEP6 연관**: ADD-057 (CostBudget 대시보드)",
+          "value": "ADD-057 CostBudget 대시보드"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_costbudget, value=ADD-057 CostBudget 대시보드",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0222",
+      "key": "r1_step6_ref_mcp",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_174",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 112,
+          "source_text": "- **STEP6 연관**: ADD-021 (MCP 기본값 설정 LOCK), S11-001",
+          "value": "ADD-021 MCP 기본값 LOCK, S11-001"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_mcp, value=ADD-021 MCP 기본값 LOCK, S11-001",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0223",
+      "key": "r1_step6_ref_qod",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_177",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 610,
+          "source_text": "- **STEP6 연관**: DEC-010 (QoD 0~1 LOCK)",
+          "value": "DEC-010 QoD 0~1 LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_qod, value=DEC-010 QoD 0~1 LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0224",
+      "key": "r1_step6_ref_rbac",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_176",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 583,
+          "source_text": "- **STEP6 연관**: MOD-023 (RBAC LOCK)",
+          "value": "MOD-023 RBAC LOCK"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_rbac, value=MOD-023 RBAC LOCK",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0225",
+      "key": "r1_step6_ref_s7b002",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_173",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 37,
+          "source_text": "- **STEP6 연관**: ADD-052 (Chat Engine 재설계)에 감정 차원 추가",
+          "value": "ADD-052 Chat Engine 재설계"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_s7b002, value=ADD-052 Chat Engine 재설계",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0226",
+      "key": "r1_step6_ref_tauri",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_179",
+          "source_file": "STEP7_R1_V1_CRITICAL.md",
+          "source_line": 781,
+          "source_text": "- **STEP6 연관**: S02-P30-DEC-005 (Electron+React → Tauri+React로 업데이트)",
+          "value": "S02-P30-DEC-005 Electron→Tauri"
+        }
+      ],
+      "analysis": "단일 소스. key=r1_step6_ref_tauri, value=S02-P30-DEC-005 Electron→Tauri",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0227",
+      "key": "sdar_logevent_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_162",
+          "source_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "source_line": 756,
+          "source_text": "SDAR의 모든 이벤트는 기존 LogEvent 스키마(Section 12.6)를 따른다.",
+          "value": "SDAR events follow existing LogEvent schema (Section 12.6)"
+        }
+      ],
+      "analysis": "단일 소스. key=sdar_logevent_ref, value=SDAR events follow existing LogEvent schema (Section 12.6)",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0228",
+      "key": "sdar_selfevo_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_163",
+          "source_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "source_line": 1364,
+          "source_text": "기존 VAMOS Self-evo 원칙(Section 11.1)에 따라",
+          "value": "SDAR complies with VAMOS Self-evo principle (Section 11.1): auto-apply absolutely forbidden"
+        }
+      ],
+      "analysis": "단일 소스. key=sdar_selfevo_ref, value=SDAR complies with VAMOS Self-evo principle (Section 11.1): auto-apply absolutel",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0229",
+      "key": "sdar_source_docs",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_160",
+          "source_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "source_line": 3,
+          "source_text": "> **소스**: VAMOS_MASTER_SPECIFICATION v1.0.0, BASE-1.3, PLAN-3.0",
+          "value": "VAMOS_MASTER_SPECIFICATION v1.0.0, BASE-1.3, PLAN-3.0"
+        }
+      ],
+      "analysis": "단일 소스. key=sdar_source_docs, value=VAMOS_MASTER_SPECIFICATION v1.0.0, BASE-1.3, PLAN-3.0",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0230",
+      "key": "sot_priority_order",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_231",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 1811,
+          "source_text": "#10 | 정본 우선순위 불일치 | RULE > PLAN > DESIGN LOCK > DESIGN 본문으로 통일",
+          "value": "RULE > PLAN > DESIGN LOCK > DESIGN"
+        }
+      ],
+      "analysis": "단일 소스. key=sot_priority_order, value=RULE > PLAN > DESIGN LOCK > DESIGN",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0231",
+      "key": "source_workguide_files",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_109",
+          "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+          "source_line": 1474,
+          "source_text": "| 카테고리 | 작업가이드 파일 | R 라운드 |",
+          "value": {
+            "A": "STEP7_작업가이드.md (R1~R6 전 라운드)",
+            "B": "STEP7-B_대화프로세스_작업가이드.md (R1~R6)",
+            "C": "STEP7-C_UI_UX_전수비교_작업가이드.md (R1~R6)",
+            "D": "STEP7-D_메모리_저장소_아키텍처_작업가이드.md (R1~R6)",
+            "E": "STEP7-E_보안_안전_거버넌스_작업가이드.md (R1~R6)",
+            "F": "STEP7-F_인프라_배포_MLOps_작업가이드.md (R1일부,R2일부)",
+            "G": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md (R1일부,R2일부)",
+            "H": "STEP7-H_비즈니스모델_시장전략_작업가이드.md (R2일부)",
+            "I": "STEP7-I_AI_Investing_보강_작업가이드.md (R2일부)",
+            "J": "STEP7-J_멀티모달_생성처리_작업가이드.md (R1일부,R2일부)",
+            "K": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md (R2일부)",
+            "L": "STEP7-L_개발자도구_API_SDK_작업가이드.md (R2일부)",
+            "M": "STEP7-M_PKM_지식관리_작업가이드.md (R2일부)",
+            "N": "STEP7-N_워크플로우자동화_RPA_작업가이드.md (R1~R3 완료)",
+            "O": "STEP7-O_교육_학습_자기개발_작업가이드.md (R1~R3 완료)",
+            "P": "STEP7-P_건강_웰니스_감성AI_작업가이드.md (R1~R3 완료)",
+            "보강": "STEP7_A-I_보강_추가항목_통합.md (R1~R3 일부)"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=source_workguide_files, value={'A': 'STEP7_작업가이드.md (R1~R6 전 라운드)', 'B': 'STEP7-B_대화프로세스_작업가이드.md (R1~R6)', 'C",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0232",
+      "key": "step7p_cross_references",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-14",
+          "item_id": "EA-14_014",
+          "source_file": "STEP7-P_건강_웰니스_감성AI_작업가이드.md",
+          "source_line": 650,
+          "source_text": "- STEP7-E: 보안 → 건강 데이터 프라이버시\n- STEP7-I: 투자 → 감정적 투자 방지\n- STEP7-J: 멀티모달 → 음성/표정 감정 인식\n- STEP7-K: 에이전트 → 감정 인식 에이전트\n- STEP7-M: 지식관리 → 감정 기록 지식화\n- STEP7-O: 교육 → 학습 감정 관리",
+          "value": [
+            "STEP7-E 보안",
+            "STEP7-I 투자",
+            "STEP7-J 멀티모달",
+            "STEP7-K 에이전트",
+            "STEP7-M 지식관리",
+            "STEP7-O 교육"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=step7p_cross_references, value=['STEP7-E 보안', 'STEP7-I 투자', 'STEP7-J 멀티모달', 'STEP7-K 에이전트', 'STEP7-M 지식관리', 'ST",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0233",
+      "key": "tech_combo_Deploy",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_167",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 381,
+          "source_text": "| Deploy | Windows/WSL 단일 | Docker Compose | K8s |",
+          "value": {
+            "V1": "Windows/WSL 단일",
+            "V2": "Docker Compose",
+            "V3": "K8s"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tech_combo_Deploy, value={'V1': 'Windows/WSL 단일', 'V2': 'Docker Compose', 'V3': 'K8s'}",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0234",
+      "key": "tech_combo_LLM",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_163",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 377,
+          "source_text": "| LLM | Ollama + GPT-4o mini | GPT-4o mini + Sonnet | vLLM + 외부 조합 |",
+          "value": {
+            "V1": "Ollama + GPT-4o mini",
+            "V2": "GPT-4o mini + Sonnet",
+            "V3": "vLLM + 외부 조합"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tech_combo_LLM, value={'V1': 'Ollama + GPT-4o mini', 'V2': 'GPT-4o mini + Sonnet', 'V3': 'vLLM + 외부 조합",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0235",
+      "key": "tech_combo_Logging",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_166",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 380,
+          "source_text": "| Logging | JSONL + SQLite | Postgres + JSONL 압축 | Loki/ELK + Object |",
+          "value": {
+            "V1": "JSONL + SQLite",
+            "V2": "Postgres + JSONL 압축",
+            "V3": "Loki/ELK + Object"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tech_combo_Logging, value={'V1': 'JSONL + SQLite', 'V2': 'Postgres + JSONL 압축', 'V3': 'Loki/ELK + Object'}",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0236",
+      "key": "tech_combo_Storage",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_164",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 378,
+          "source_text": "| Storage | SQLite + JSONL | Postgres 단일 | Managed Postgres |",
+          "value": {
+            "V1": "SQLite + JSONL",
+            "V2": "Postgres 단일",
+            "V3": "Managed Postgres"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tech_combo_Storage, value={'V1': 'SQLite + JSONL', 'V2': 'Postgres 단일', 'V3': 'Managed Postgres'}",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0237",
+      "key": "tech_combo_Vector",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_165",
+          "source_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "source_line": 379,
+          "source_text": "| Vector | Chroma 로컬 | Qdrant (셀프/클라우드) | Qdrant Cloud |",
+          "value": {
+            "V1": "Chroma 로컬",
+            "V2": "Qdrant (셀프/클라우드)",
+            "V3": "Qdrant Cloud"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tech_combo_Vector, value={'V1': 'Chroma 로컬', 'V2': 'Qdrant (셀프/클라우드)', 'V3': 'Qdrant Cloud'}",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0238",
+      "key": "tiktoken_model_mapping",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-4",
+          "item_id": "EA-04_168",
+          "source_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "source_line": 507,
+          "source_text": "**모델 매핑**: gpt-4o → `o200k_base`, gpt-4/3.5 → `cl100k_base` 등 모델별 인코딩 자동 선택.",
+          "value": {
+            "gpt-4o": "o200k_base",
+            "gpt-4/3.5": "cl100k_base"
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=tiktoken_model_mapping, value={'gpt-4o': 'o200k_base', 'gpt-4/3.5': 'cl100k_base'}",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0239",
+      "key": "v1_lock_tech_stack_ref",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-11",
+          "item_id": "EA-11_154",
+          "source_file": "VAMOS_AI_INVESTING_SPEC.md",
+          "source_line": 7,
+          "source_text": "V1 LOCK 기술스택 관계: Python 3.11+, LangGraph, Pydantic v2, Tauri 2.0+React 18, BGE-M3, Chroma",
+          "value": "VAMOS V1 LOCK: Python 3.11+, LangGraph, Pydantic v2, Tauri 2.0+React 18, BGE-M3, Chroma"
+        }
+      ],
+      "analysis": "단일 소스. key=v1_lock_tech_stack_ref, value=VAMOS V1 LOCK: Python 3.11+, LangGraph, Pydantic v2, Tauri 2.0+React 18, BGE-M3,",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0240",
+      "key": "보강_glossary_terms",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_116",
+          "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+          "source_line": 1496,
+          "source_text": "| 용어 | 정의 |",
+          "value": [
+            "TITLE_ONLY",
+            "5-Gate",
+            "9-State Machine",
+            "3-Part Output",
+            "I/E/S/A 시리즈",
+            "Decision Object",
+            "Blue Node",
+            "Orange Core",
+            "MCP",
+            "A2A",
+            "KG",
+            "RAG",
+            "QoD",
+            "Dream Mode",
+            "Digital Twin"
+          ]
+        }
+      ],
+      "analysis": "단일 소스. key=보강_glossary_terms, value=['TITLE_ONLY', '5-Gate', '9-State Machine', '3-Part Output', 'I/E/S/A 시리즈', 'Dec",
+      "recommendation": ""
+    },
+    {
+      "comparison_id": "CM-08_0241",
+      "key": "보강_priority_반영",
+      "result": "SINGLE_SOURCE",
+      "severity": "INFO",
+      "sources": [
+        {
+          "ea_agent": "EA-12",
+          "item_id": "EA-12_110",
+          "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+          "source_line": 1441,
+          "source_text": "### 12.1 즉시 반영 필요 (CRITICAL, 기존 문서에 미반영)",
+          "value": {
+            "즉시_CRITICAL": [
+              "Part F 혁신기술 V1 CRITICAL",
+              "F/G/H CRITICAL 인프라/벤치마크/비즈니스",
+              "I CRITICAL 실시간 데이터",
+              "K CRITICAL MCP/A2A 심화"
+            ],
+            "V1_HIGH": [
+              "비용 최적화 엔진(F)",
+              "할루시네이션 탐지(G)",
+              "REST API + Python SDK(L)",
+              "Obsidian 통합(M)",
+              "백테스팅 고급(I)"
+            ],
+            "V2_설계": [
+              "Kubernetes + 자동 스케일링(F)",
+              "A2A 프로토콜(K)",
+              "음성 대화 모드(J)",
+              "Dream Mode(A혁신)",
+              "IDE 플러그인(L)"
+            ]
+          }
+        }
+      ],
+      "analysis": "단일 소스. key=보강_priority_반영, value={'즉시_CRITICAL': ['Part F 혁신기술 V1 CRITICAL', 'F/G/H CRITICAL 인프라/벤치마크/비즈니스', 'I C",
+      "recommendation": ""
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "script": "0-H",
+  "name": "Header Count vs Row Count",
+  "errors": [
+    {
+      "file": "PART1",
+      "line": 432,
+      "heading": "B.1.2 소프트웨어 설치 (7건)",
+      "expected": 7,
+      "actual": 3,
+      "diff": -4
+    },
+    {
+      "file": "PART1",
+      "line": 730,
+      "heading": "C.4 LOCK 확정 사항 — 변경 불가 (핵심 57항목)",
+      "expected": 57,
+      "actual": 6,
+      "diff": -51
+    },
+    {
+      "file": "PART1",
+      "line": 1158,
+      "heading": "E.2.6 극고(極高) 위험 2건 — 해결 완료",
+      "expected": 2,
+      "actual": 6,
+      "diff": 4
+    },
+    {
+      "file": "PART2",
+      "line": 2382,
+      "heading": "6.1 UI/UX 상세 (~85개 항목)",
+      "expected": 85,
+      "actual": 4,
+      "diff": -81
+    },
+    {
+      "file": "PART2",
+      "line": 2393,
+      "heading": "6.1.2 React 컴포넌트 (~44개, V1)",
+      "expected": 44,
+      "actual": 11,
+      "diff": -33
+    },
+    {
+      "file": "PART2",
+      "line": 2487,
+      "heading": "6.2 Rust/Tauri 인프라 (~108개 항목)",
+      "expected": 108,
+      "actual": 5,
+      "diff": -103
+    },
+    {
+      "file": "PART2",
+      "line": 2489,
+      "heading": "6.2.1 Tauri IPC 커맨드 핸들러 (72개) <!-- SOURCE_CONFLICT: PHASE_B1 §5.1=47개 vs CLAUDE.md/B1 changelog=72개.",
+      "expected": 72,
+      "actual": 5,
+      "diff": -67
+    },
+    {
+      "file": "PART2",
+      "line": 2522,
+      "heading": "6.3 테스트 (~84개 항목) <!-- §6.13 합계와 동기화: V0~15+V1~62+V2~5+V3~2=~84 -->",
+      "expected": 84,
+      "actual": 5,
+      "diff": -79
+    },
+    {
+      "file": "PART2",
+      "line": 2611,
+      "heading": "MCP 외부 서버 카탈로그 (M-22: V1=7개, V2+=3개, V3=1개, 합계 11개)",
+      "expected": 7,
+      "actual": 11,
+      "diff": 4
+    }
+  ],
+  "total_errors": 9,
+  "verdict": "WARN"
+}

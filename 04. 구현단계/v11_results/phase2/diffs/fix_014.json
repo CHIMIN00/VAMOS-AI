@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-014",
+  "fg": "FG-H11",
+  "tier": 2,
+  "order": 14,
+  "severity": "HIGH",
+  "description": "config.v1.toml 이중 게시 라벨 명시: L161=V0 축약본(참조용), L333=V1 확장판(정본)",
+  "changes": [
+    {
+      "line": 161,
+      "section": "§2 STEP-1",
+      "action": "V0 축약본(참조용) 라벨 강화"
+    },
+    {
+      "line": 333,
+      "section": "§2 STEP-3",
+      "action": "V1 확장판(정본) 라벨 명시"
+    }
+  ],
+  "ripple_expected": ["변경이력"],
+  "applied_at": "2026-03-13"
+}

@@ -1,0 +1,151 @@
+{
+  "validation_id": "Val-1",
+  "target": "V0-STEP-1 (line 65-436, 372줄)",
+  "perspectives_tested": ["v9-A", "v9-B", "v9-C", "v9-D", "v9-E", "v9-F"],
+  "timestamp": "2026-03-07T10:00:00Z",
+  "objective": "6개 관점 프롬프트의 FP 0건 확인",
+
+  "results": {
+    "v9-A": {
+      "perspective": "의존성 순서",
+      "checks_performed": 6,
+      "findings": [],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "A-1": "V0-STEP-1은 최초 Stage. inputs는 외부 전제조건(Node.js, Python, Rust, GitHub, Ollama, PHASE_B 문서). 이전 Stage 산출물 참조 없음 → PASS",
+        "A-2": "단일 Stage로 순환 불가 → PASS",
+        "A-3": "Gate 8항목 ↔ outputs 8항목 1:1 대응. monorepo→Gate1, Python deps→Gate2, Rust deps→Gate3, Node deps→Gate4, config→Gate5, seeds→Gate6, 기본파일→Gate7, Ollama→Gate8 → PASS",
+        "A-4": "V0-STEP-1에서 §6 횡단 정의 참조 없음 → N/A (PASS)",
+        "A-5": "병렬 패턴 없음 → N/A (PASS)",
+        "A-6": "STEP 수준 GO/NO-GO UNIQUE 항목 해당 없음 → N/A (PASS)"
+      }
+    },
+
+    "v9-B": {
+      "perspective": "파일 경로 정합성",
+      "checks_performed": 42,
+      "findings": [],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "B-1": "V0-STEP-1 범위 경로 전수 대조: 본문 트리(line 70-109)와 AI 프롬프트 트리(line 223-259) 모두 GT-1 matched. rpc/(XREF-V0-12), data/(XREF-V0-10), logs/(NOTE) allowlisted. unmatched=0 → PASS",
+        "B-2": "본문 트리와 AI 프롬프트 트리의 경로 표현 일관. 차이 없음 → PASS",
+        "B-3": "모든 경로가 프로젝트 루트 기준 표기. 상대/절대 혼재 없음 → PASS",
+        "B-4": "§6은 Val-1 범위 밖 → N/A",
+        "B-5": "V1은 Val-1 범위 밖 → N/A",
+        "note": "schemas/seed/ 경로는 STEP-1에서 신규 생성. backend/vamos_core/schemas/ 하위 → PHASE_B2 schemas/ 디렉토리의 하위로 정상 처리"
+      }
+    },
+
+    "v9-C": {
+      "perspective": "구현 가능성",
+      "checks_performed": 7,
+      "findings": [
+        {
+          "id": "C-val1-001",
+          "check_item": "C-2",
+          "stage": "V0-STEP-1",
+          "line": "213-420",
+          "description": "함수/클래스 시그니처 부재 — 스캐폴딩 단계 특성상 생성할 코드가 아닌 디렉토리 구조/설정 파일이 주 산출물",
+          "severity": "LOW",
+          "classification": "STYLE_CONCERN",
+          "is_false_positive": false,
+          "justification": "GT-5에서 PARTIAL 판정. 스캐폴딩 단계 특성상 허용 가능으로 정확히 분류. 오탐 아님"
+        }
+      ],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "style_concern_count": 1,
+      "analysis": {
+        "C-1_path": "PASS — 전체 디렉토리 트리 + config + seed 파일 경로 명시",
+        "C-2_schema": "PARTIAL — 함수/클래스 시그니처 없음. Seed JSON 포맷만 제시. 스캐폴딩 특성상 허용",
+        "C-3_dependency": "PASS — Python 10개, Rust 3개, Node 4개 패키지 명시",
+        "C-4_config": "PASS — config.v1.toml 전문 인라인 (13섹션, LOCK 표기)",
+        "C-5_sot_ref": "PASS — PHASE_B2, B3, B4 참조",
+        "C-6_success": "PASS — Stage Gate 8항목",
+        "C-7_lock": "PASS — LOCK/FREEZE 변경 금지 명시 + config LOCK 주석"
+      }
+    },
+
+    "v9-D": {
+      "perspective": "누적 산출물 추적",
+      "checks_performed": 4,
+      "findings": [],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "D-1": "V0-STEP-1 outputs 8개 → V0-STEP-2 inputs 3개 ('STEP-1 완료', 'schemas/seed/ 5개', 'SOT 문서') 모두 충족. 'schemas/seed/'는 output[5]에 포함. SOT 문서는 외부 전제 → PASS",
+        "D-2": "단일 Stage → GO/NO-GO 포괄성은 전체 V0 완료 후 검증 대상 → N/A",
+        "D-3": "Gate count = 8 (PART2 line 424-433) = GT-2 gate_count(8) → PASS",
+        "D-4": "V0-STEP-1에서 §6 정의 참조 없음 → N/A"
+      }
+    },
+
+    "v9-E": {
+      "perspective": "수량 일관성",
+      "checks_performed": 15,
+      "findings": [],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "quantities_verified": [
+          {"item": "config sections", "value": 13, "precision": "EXACT_COUNT", "locations": ["line 117", "line 430"], "result": "PASS — 동일값"},
+          {"item": "B4 total sections", "value": 17, "precision": "EXACT_COUNT", "locations": ["line 117 주석"], "result": "PASS — 단일 위치"},
+          {"item": "seed JSON files", "value": 5, "precision": "EXACT_COUNT", "locations": ["line 387-392 (5파일 열거)", "line 431"], "result": "PASS — 5개 일치"},
+          {"item": "DecisionSchema fields", "value": 18, "precision": "EXACT_LOCK", "locations": ["line 387"], "result": "PASS — GT-3 EXACT_LOCK=18"},
+          {"item": "ResponseEnvelope fields", "value": 5, "precision": "EXACT_LOCK", "locations": ["line 388"], "result": "PASS"},
+          {"item": "IntentFrame fields", "value": 10, "precision": "EXACT_COUNT", "locations": ["line 389"], "result": "PASS"},
+          {"item": "EvidencePack fields", "value": 6, "precision": "EXACT_COUNT", "locations": ["line 390"], "result": "PASS"},
+          {"item": "EventType count", "value": 123, "precision": "EXACT_COUNT", "locations": ["line 391"], "result": "PASS"},
+          {"item": "FailureCode count", "value": 36, "precision": "EXACT_COUNT", "locations": ["line 391"], "result": "PASS"},
+          {"item": "Fallback count", "value": 23, "precision": "EXACT_COUNT", "locations": ["line 391"], "result": "PASS"},
+          {"item": "Gate items", "value": 8, "precision": "EXACT_COUNT", "locations": ["line 424-433"], "result": "PASS — 테이블 행 8개"},
+          {"item": "monthly_limit", "value": 40000, "precision": "EXACT_LOCK", "locations": ["line 164", "line 339"], "result": "PASS — 동일값"},
+          {"item": "approval timeout_s", "value": 600, "precision": "EXACT_LOCK", "locations": ["line 176", "line 351"], "result": "PASS — 동일값"},
+          {"item": "similarity_threshold", "value": 0.95, "precision": "EXACT_LOCK", "locations": ["line 193", "line 368"], "result": "PASS — 동일값"},
+          {"item": "embedding dimension", "value": 1024, "precision": "EXACT_LOCK", "locations": ["line 135", "line 310"], "result": "PASS — 동일값"}
+        ]
+      }
+    },
+
+    "v9-F": {
+      "perspective": "외부 의존성 실현성",
+      "checks_performed": 17,
+      "findings": [],
+      "fp_count": 0,
+      "real_error_count": 0,
+      "analysis": {
+        "python_libs": {
+          "count": 10,
+          "items": ["pydantic>=2.0", "langgraph", "langchain-core", "langchain-community", "chromadb", "aiosqlite", "tiktoken", "jsonrpcserver", "structlog", "FlagEmbedding"],
+          "all_exist": true,
+          "v_scope_correct": true,
+          "note": "langchain-community(allowlisted), FlagEmbedding(allowlisted L-3). 모두 PyPI 실존 패키지"
+        },
+        "rust_libs": {
+          "count": 3,
+          "items": ["tauri 2.0", "serde+serde_json", "tokio"],
+          "all_exist": true,
+          "v_scope_correct": true
+        },
+        "node_libs": {
+          "count": 4,
+          "items": ["react 18", "react-dom 18", "@tauri-apps/api", "zustand"],
+          "all_exist": true,
+          "v_scope_correct": true
+        },
+        "compatibility": "Python: pydantic v2 + langgraph 호환 확인. Rust: tauri+serde+tokio 표준 조합. Node: React 18+zustand 표준 조합 → PASS",
+        "license": "모두 MIT/Apache-2.0/BSD 계열. 충돌 없음 → PASS"
+      }
+    }
+  },
+
+  "val1_verdict": {
+    "total_checks": 91,
+    "fp_count": 0,
+    "real_error_count": 0,
+    "style_concern_count": 1,
+    "result": "PASS — FP 0건. 모든 관점에서 오탐 없음. C-2 PARTIAL은 STYLE_CONCERN으로 정확히 분류됨"
+  }
+}

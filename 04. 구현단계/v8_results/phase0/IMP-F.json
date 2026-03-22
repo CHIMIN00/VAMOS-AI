@@ -1,0 +1,83 @@
+{
+  "script": "IMP-F",
+  "name": "Tech Stack Conflict",
+  "v2_plus_tech_count": 20,
+  "lock_violations": [],
+  "premature_usage": [
+    {
+      "tech": "Qdrant",
+      "min_version": "V2+",
+      "found_in": "V0",
+      "line": 314,
+      "context": "backend = \"chroma\"               # LOCK (V1), V2=qdrant"
+    },
+    {
+      "tech": "Neo4j",
+      "min_version": "V2+",
+      "found_in": "V0",
+      "line": 321,
+      "context": "backend = \"json_file\"            # LOCK (V1), V2=neo4j"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1425,
+      "context": "> **타임아웃 (D2.0-02 §2.2)**: S1=5s, S2=30s, S3=120s, S4=10s, S5=15s"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1440,
+      "context": "| 3 | 9-State 상태 머신 | S0_RECEIVED → S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8_DONE 전이 로그 확인 | ✅ |"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1447,
+      "context": "| 10 | 상태 타임아웃 | S1=5s, S2=30s, S3=120s, S4=10s, S5=15s 타임아웃 동작 확인 | ✅ |"
+    }
+  ],
+  "premature_count": 5,
+  "errors": [
+    {
+      "tech": "Qdrant",
+      "min_version": "V2+",
+      "found_in": "V0",
+      "line": 314,
+      "context": "backend = \"chroma\"               # LOCK (V1), V2=qdrant"
+    },
+    {
+      "tech": "Neo4j",
+      "min_version": "V2+",
+      "found_in": "V0",
+      "line": 321,
+      "context": "backend = \"json_file\"            # LOCK (V1), V2=neo4j"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1425,
+      "context": "> **타임아웃 (D2.0-02 §2.2)**: S1=5s, S2=30s, S3=120s, S4=10s, S5=15s"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1440,
+      "context": "| 3 | 9-State 상태 머신 | S0_RECEIVED → S1 → S2 → S3 → S4 → S5 → S6 → S7 → S8_DONE 전이 로그 확인 | ✅ |"
+    },
+    {
+      "tech": "S3",
+      "min_version": "V2+",
+      "found_in": "V1",
+      "line": 1447,
+      "context": "| 10 | 상태 타임아웃 | S1=5s, S2=30s, S3=120s, S4=10s, S5=15s 타임아웃 동작 확인 | ✅ |"
+    }
+  ],
+  "total_errors": 5,
+  "verdict": "FAIL"
+}

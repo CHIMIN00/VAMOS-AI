@@ -1,0 +1,221 @@
+{
+  "script": "0-E",
+  "name": "Keyword Number Inconsistency",
+  "keywords_checked": 45,
+  "keywords_with_values": 33,
+  "errors": [
+    {
+      "keyword": "max_tokens",
+      "occurrences": [
+        {
+          "line": 305,
+          "value": 2048.0,
+          "raw": "max_tokens = 2048"
+        },
+        {
+          "line": 3787,
+          "value": 4096.0,
+          "raw": "max_tokens 4096"
+        }
+      ],
+      "distinct_values": [
+        2048.0,
+        4096.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "I-Series",
+      "occurrences": [
+        {
+          "line": 1438,
+          "value": 17.0,
+          "raw": "I-Series 17"
+        },
+        {
+          "line": 3595,
+          "value": 25.0,
+          "raw": "I-Series 25"
+        },
+        {
+          "line": 3790,
+          "value": 20.0,
+          "raw": "I-Series 20"
+        }
+      ],
+      "distinct_values": [
+        17.0,
+        20.0,
+        25.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "V1",
+      "occurrences": [
+        {
+          "line": 2934,
+          "value": 7.0,
+          "raw": "V1=7"
+        },
+        {
+          "line": 3783,
+          "value": 15.0,
+          "raw": "V1: 15"
+        },
+        {
+          "line": 3807,
+          "value": 7.0,
+          "raw": "V1=7"
+        }
+      ],
+      "distinct_values": [
+        7.0,
+        15.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "V2",
+      "occurrences": [
+        {
+          "line": 3008,
+          "value": 10.0,
+          "raw": "V2=10,"
+        },
+        {
+          "line": 3783,
+          "value": 9.0,
+          "raw": "V2: 9"
+        },
+        {
+          "line": 3791,
+          "value": 3.0,
+          "raw": "V2=3"
+        },
+        {
+          "line": 3795,
+          "value": 4.0,
+          "raw": "V2 4"
+        }
+      ],
+      "distinct_values": [
+        3.0,
+        4.0,
+        9.0,
+        10.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "V3",
+      "occurrences": [
+        {
+          "line": 2934,
+          "value": 1.0,
+          "raw": "V3=1"
+        },
+        {
+          "line": 3008,
+          "value": 50.0,
+          "raw": "V3=50"
+        },
+        {
+          "line": 3783,
+          "value": 8.0,
+          "raw": "V3: 8"
+        },
+        {
+          "line": 3791,
+          "value": 4.0,
+          "raw": "V3=4"
+        },
+        {
+          "line": 3807,
+          "value": 1.0,
+          "raw": "V3=1"
+        }
+      ],
+      "distinct_values": [
+        1.0,
+        4.0,
+        8.0,
+        50.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "DecisionSchema",
+      "occurrences": [
+        {
+          "line": 387,
+          "value": 18.0,
+          "raw": "DecisionSchema 18"
+        },
+        {
+          "line": 494,
+          "value": 18.0,
+          "raw": "DecisionSchema 18"
+        },
+        {
+          "line": 635,
+          "value": 18.0,
+          "raw": "DecisionSchema 18"
+        },
+        {
+          "line": 3790,
+          "value": 16.0,
+          "raw": "DecisionSchema 16"
+        }
+      ],
+      "distinct_values": [
+        16.0,
+        18.0
+      ],
+      "flag": "INCONSISTENCY"
+    },
+    {
+      "keyword": "ResponseEnvelope",
+      "occurrences": [
+        {
+          "line": 388,
+          "value": 5.0,
+          "raw": "ResponseEnvelope 5"
+        },
+        {
+          "line": 494,
+          "value": 5.0,
+          "raw": "ResponseEnvelope 5"
+        },
+        {
+          "line": 636,
+          "value": 5.0,
+          "raw": "ResponseEnvelope 5"
+        },
+        {
+          "line": 999,
+          "value": 5.0,
+          "raw": "ResponseEnvelope 5"
+        },
+        {
+          "line": 999,
+          "value": 5.0,
+          "raw": "ResponseEnvelope 5"
+        },
+        {
+          "line": 3787,
+          "value": 3.0,
+          "raw": "ResponseEnvelope 3"
+        }
+      ],
+      "distinct_values": [
+        3.0,
+        5.0
+      ],
+      "flag": "INCONSISTENCY"
+    }
+  ],
+  "total_errors": 7,
+  "verdict": "FAIL",
+  "note": "Inconsistencies may be expected (version-specific values V1/V2/V3)"
+}

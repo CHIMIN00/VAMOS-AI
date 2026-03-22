@@ -1,0 +1,2368 @@
+{
+  "metadata": {
+    "agent": "EA-12",
+    "version": "v13",
+    "created": "2026-03-21T00:00:00Z",
+    "source_files": [
+      "VAMOS_STEP7_A-E_상세명세서.md",
+      "VAMOS_STEP7_F-I_상세명세서.md",
+      "VAMOS_STEP7_J-M_상세명세서.md",
+      "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "VAMOS_STEP7_보강_통합명세서.md"
+    ],
+    "source_file_hashes": {
+      "VAMOS_STEP7_A-E_상세명세서.md": "24a8ca6f8abeb0f78e7211c0c591439df3a64f7d07e19e435412b52f62e23b36",
+      "VAMOS_STEP7_F-I_상세명세서.md": "d61b872083d398edc8b41836356e048aabfb57380f4bf6cf80d03de4d7980625",
+      "VAMOS_STEP7_J-M_상세명세서.md": "ed6c9f85c60399d9fb6236dee8526ad4a5f1ab32d4446903cc3c62e224a22e72",
+      "VAMOS_STEP7_N-P_보강_상세명세서.md": "c9ca79c183d78ae10114665cd92b47e798096453c60f21e69d33e2abf2e86f86",
+      "VAMOS_STEP7_보강_통합명세서.md": "63ff905e78b749b75e6195d01ed18d1d8f0937563a701d132cdbcb4037685581"
+    },
+    "total_lines_read": 9032,
+    "total_items_extracted": 120,
+    "categories": {
+      "C1": 30,
+      "C2": 18,
+      "C3": 15,
+      "C4": 15,
+      "C5": 12,
+      "C6": 10,
+      "C7": 10,
+      "C8": 10
+    }
+  },
+  "items": [
+    {
+      "item_id": "EA-12_001",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 1799,
+      "source_text": "**총 합계** | **~1,654항목**",
+      "key": "STEP7_grand_total",
+      "value": 1654,
+      "value_type": "number",
+      "context": "total_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_002",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **A — 시중 AI 기술 갭 해소 + 혁신** | 316건 |",
+      "key": "A_category_count",
+      "value": 316,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_003",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 17,
+      "source_text": "| **B — 대화 프로세스 전수 비교** | 35건 |",
+      "key": "B_category_count",
+      "value": 35,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_004",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 18,
+      "source_text": "| **C — UI/UX 전수 비교** | 104건 |",
+      "key": "C_category_count",
+      "value": 104,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_005",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 19,
+      "source_text": "| **D — 메모리/저장소 아키텍처** | 82건 |",
+      "key": "D_category_count",
+      "value": 82,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_006",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 20,
+      "source_text": "| **E — 보안/안전/거버넌스** | 92건 |",
+      "key": "E_category_count",
+      "value": 92,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_007",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 14,
+      "source_text": "| **F. 인프라/배포/MLOps** | 96건 (S7F-001~096) |",
+      "key": "F_category_count",
+      "value": 96,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_008",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 15,
+      "source_text": "| **G. 벤치마크/평가/품질보증** | 88건 (S7G-001~088) |",
+      "key": "G_category_count",
+      "value": 88,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_009",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **H. 비즈니스모델/시장전략** | 78건 (S7H-001~078) |",
+      "key": "H_category_count",
+      "value": 78,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_010",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 17,
+      "source_text": "| **I. AI Investing 보강** | 106건 (S7I-001~106) |",
+      "key": "I_category_count",
+      "value": 106,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_011",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 4,
+      "source_text": "STEP7-J(멀티모달/생성처리 98건)",
+      "key": "J_category_count",
+      "value": 98,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_012",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 4,
+      "source_text": "STEP7-K(에이전트 프로토콜 76건)",
+      "key": "K_category_count",
+      "value": 76,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_013",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 4,
+      "source_text": "STEP7-L(개발자도구/API/SDK 56건)",
+      "key": "L_category_count",
+      "value": 56,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_014",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 4,
+      "source_text": "STEP7-M(PKM/지식관리 54건)",
+      "key": "M_category_count",
+      "value": 54,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_015",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 14,
+      "source_text": "| **N — 워크플로우자동화/RPA** | 44건 |",
+      "key": "N_category_count",
+      "value": 44,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_016",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 15,
+      "source_text": "| **O — 교육/학습/자기개발** | 36건 |",
+      "key": "O_category_count",
+      "value": 36,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_017",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **P — 건강/웰니스/감성AI** | 42건 |",
+      "key": "P_category_count",
+      "value": 42,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_018",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 17,
+      "source_text": "| **보강 추가항목** | 82건 | A~I 보강(70건) + 독자 혁신 아이디어(12건) |",
+      "key": "보강_category_count",
+      "value": 82,
+      "value_type": "number",
+      "context": "category_item_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_019",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 25,
+      "source_text": "| CRITICAL | 13 | 11 | 11 | 22 | **57** |",
+      "key": "FI_priority_CRITICAL",
+      "value": 57,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_020",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 26,
+      "source_text": "| HIGH | 48 | 47 | 41 | 56 | **192** |",
+      "key": "FI_priority_HIGH",
+      "value": 192,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_021",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 27,
+      "source_text": "| MED | 31 | 30 | 26 | 28 | **115** |",
+      "key": "FI_priority_MED",
+      "value": 115,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_022",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 28,
+      "source_text": "| LOW | 4 | 0 | 0 | 0 | **4** |",
+      "key": "FI_priority_LOW",
+      "value": 4,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_023",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 809,
+      "source_text": "| **합계** | **92** | **CRITICAL 27 / HIGH 41 / MED 24** |",
+      "key": "E_priority_CRITICAL",
+      "value": 27,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_024",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 809,
+      "source_text": "| **합계** | **92** | **CRITICAL 27 / HIGH 41 / MED 24** |",
+      "key": "E_priority_HIGH",
+      "value": 41,
+      "value_type": "number",
+      "context": "priority_count",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_025",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 957,
+      "source_text": "| V1 | 57 | 17 | ~45 | ~35 | 47 | ~201 |",
+      "key": "AE_V1_count",
+      "value": 201,
+      "value_type": "number",
+      "context": "version_distribution",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_026",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 958,
+      "source_text": "| V2 | 175 | 15 | ~48 | ~38 | 38 | ~314 |",
+      "key": "AE_V2_count",
+      "value": 314,
+      "value_type": "number",
+      "context": "version_distribution",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_027",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 959,
+      "source_text": "| V3+ | 84 | 3 | ~11 | ~9 | 7 | ~114 |",
+      "key": "AE_V3_count",
+      "value": 114,
+      "value_type": "number",
+      "context": "version_distribution",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_028",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2855,
+      "source_text": "| V1 (MVP) | 40 | 40 | 30 | 52 | **162** |",
+      "key": "FI_V1_count",
+      "value": 162,
+      "value_type": "number",
+      "context": "version_distribution",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_029",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 53,
+      "source_text": "| Part A — Claude/Anthropic 미적용 기술 보강 | 35건 |",
+      "key": "A_part_breakdown",
+      "value": {
+        "count": 16,
+        "list": [
+          {
+            "part": "Part A — Claude/Anthropic",
+            "count": 35
+          },
+          {
+            "part": "Part B — GPT/OpenAI",
+            "count": 24
+          },
+          {
+            "part": "Part C — Gemini/Google",
+            "count": 20
+          },
+          {
+            "part": "Part D — Kimo/中 AI",
+            "count": 22
+          },
+          {
+            "part": "Part E — VAMOS 기존 강점 확장",
+            "count": 18
+          },
+          {
+            "part": "Part F — 혁신 기술 (선점)",
+            "count": 99
+          },
+          {
+            "part": "Part G — xAI Grok",
+            "count": 12
+          },
+          {
+            "part": "Part H — Mistral/오픈소스",
+            "count": 10
+          },
+          {
+            "part": "Part I — Meta Llama",
+            "count": 8
+          },
+          {
+            "part": "Part J — Perplexity",
+            "count": 8
+          },
+          {
+            "part": "Part K — Apple/온디바이스",
+            "count": 10
+          },
+          {
+            "part": "Part L — Computer Use/GUI",
+            "count": 8
+          },
+          {
+            "part": "Part M — Voice AI",
+            "count": 8
+          },
+          {
+            "part": "Part N — AI Safety/규제",
+            "count": 12
+          },
+          {
+            "part": "Part O — Multi-Agent",
+            "count": 10
+          },
+          {
+            "part": "Part P — RAG 최신",
+            "count": 10
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_030",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 611,
+      "source_text": "| Part 1 — 메인 대화 인터페이스 | 12건 |",
+      "key": "C_part_breakdown",
+      "value": {
+        "count": 10,
+        "list": [
+          {
+            "part": "Part 1 — 메인 대화 인터페이스",
+            "count": 12
+          },
+          {
+            "part": "Part 2 — Canvas/Artifacts",
+            "count": 10
+          },
+          {
+            "part": "Part 3 — Composer",
+            "count": 10
+          },
+          {
+            "part": "Part 4 — 응답 렌더링",
+            "count": 12
+          },
+          {
+            "part": "Part 5 — 음성 모드 UI",
+            "count": 8
+          },
+          {
+            "part": "Part 6 — 모바일/데스크톱/CLI",
+            "count": 10
+          },
+          {
+            "part": "Part 7 — 에이전트 실행 상태",
+            "count": 8
+          },
+          {
+            "part": "Part 8 — 설정/커스터마이징",
+            "count": 10
+          },
+          {
+            "part": "Part 9 — VAMOS 고유 UI 위젯",
+            "count": 16
+          },
+          {
+            "part": "Part 10 — 접근성/다크모드/국제화",
+            "count": 8
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_031",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 704,
+      "source_text": "| Part 1 — 시중 AI 메모리 전수 비교 | 8건 |",
+      "key": "D_part_breakdown",
+      "value": {
+        "count": 9,
+        "list": [
+          {
+            "part": "Part 1 — 시중 AI 메모리 전수 비교",
+            "count": 8
+          },
+          {
+            "part": "Part 2 — Vector DB 비교 + 선정",
+            "count": 10
+          },
+          {
+            "part": "Part 3 — Graph DB / Knowledge Graph",
+            "count": 8
+          },
+          {
+            "part": "Part 4 — 임베딩 모델 비교",
+            "count": 8
+          },
+          {
+            "part": "Part 5 — 5계층 메모리 상세 설계",
+            "count": 12
+          },
+          {
+            "part": "Part 6 — 캐싱 전략",
+            "count": 8
+          },
+          {
+            "part": "Part 7 — RAG 인덱싱 파이프라인",
+            "count": 10
+          },
+          {
+            "part": "Part 8 — 데이터 생명주기 + 프라이버시",
+            "count": 10
+          },
+          {
+            "part": "Part 9 — 저장소 비용 최적화",
+            "count": 8
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_032",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 799,
+      "source_text": "| Part 1: Threat Modeling | 10 | CRITICAL 4 / HIGH 4 / MED 2 |",
+      "key": "E_part_breakdown",
+      "value": {
+        "count": 10,
+        "list": [
+          {
+            "part": "Part 1: Threat Modeling",
+            "count": 10
+          },
+          {
+            "part": "Part 2: Prompt Injection 방어",
+            "count": 10
+          },
+          {
+            "part": "Part 3: 인증/권한/접근제어",
+            "count": 10
+          },
+          {
+            "part": "Part 4: 데이터 프라이버시",
+            "count": 10
+          },
+          {
+            "part": "Part 5: AI Safety / Alignment",
+            "count": 10
+          },
+          {
+            "part": "Part 6: 규제/컴플라이언스",
+            "count": 10
+          },
+          {
+            "part": "Part 7: 모니터링/감사/로깅",
+            "count": 8
+          },
+          {
+            "part": "Part 8: 인시던트 대응",
+            "count": 8
+          },
+          {
+            "part": "Part 9: Agent 보안 심화",
+            "count": 8
+          },
+          {
+            "part": "Part 10: VAMOS 고유 보안 차별화",
+            "count": 8
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_033",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 63,
+      "source_text": "| Part 1 — 워크플로우 엔진 | 10건 |",
+      "key": "N_part_breakdown",
+      "value": {
+        "count": 5,
+        "list": [
+          {
+            "part": "Part 1 — 워크플로우 엔진",
+            "count": 10
+          },
+          {
+            "part": "Part 2 — 브라우저 자동화",
+            "count": 8
+          },
+          {
+            "part": "Part 3 — 데이터 파이프라인 자동화",
+            "count": 8
+          },
+          {
+            "part": "Part 4 — 개인 자동화",
+            "count": 8
+          },
+          {
+            "part": "Part 5 — 차별화 전략 + 참고자료 + 로드맵",
+            "count": 10
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_034",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2843,
+      "source_text": "| 구분 | 항목 수 | CRITICAL | HIGH | MED | LOW |",
+      "key": "FI_priority_by_category",
+      "value": {
+        "count": 4,
+        "list": [
+          {
+            "category": "F",
+            "CRITICAL": 13,
+            "HIGH": 48,
+            "MED": 31,
+            "LOW": 4
+          },
+          {
+            "category": "G",
+            "CRITICAL": 11,
+            "HIGH": 47,
+            "MED": 30,
+            "LOW": 0
+          },
+          {
+            "category": "H",
+            "CRITICAL": 11,
+            "HIGH": 41,
+            "MED": 26,
+            "LOW": 0
+          },
+          {
+            "category": "I",
+            "CRITICAL": 22,
+            "HIGH": 56,
+            "MED": 28,
+            "LOW": 0
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_035",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2853,
+      "source_text": "| V1 (MVP) | 40 | 40 | 30 | 52 | **162** |",
+      "key": "FI_version_distribution",
+      "value": {
+        "count": 3,
+        "list": [
+          {
+            "version": "V1 (MVP)",
+            "F": 40,
+            "G": 40,
+            "H": 30,
+            "I": 52,
+            "total": 162
+          },
+          {
+            "version": "V2 (Server)",
+            "F": 40,
+            "G": 38,
+            "H": 35,
+            "I": 42,
+            "total": 155
+          },
+          {
+            "version": "V3 (Enterprise)",
+            "F": 16,
+            "G": 10,
+            "H": 13,
+            "I": 12,
+            "total": 51
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_036",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1776,
+      "source_text": "| **J 멀티모달** | 이미지 이해(CLIP+API), OCR(Tesseract)... | ~40건 |",
+      "key": "JM_V1_roadmap",
+      "value": {
+        "count": 4,
+        "list": [
+          {
+            "category": "J 멀티모달",
+            "count": 40
+          },
+          {
+            "category": "K 에이전트",
+            "count": 35
+          },
+          {
+            "category": "L 개발자도구",
+            "count": 30
+          },
+          {
+            "category": "M PKM",
+            "count": 30
+          }
+        ],
+        "total": 135
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_037",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 1782,
+      "source_text": "| **V1 즉시** | 28건 | 28건 | 30건 | 30건 | **116건** |",
+      "key": "NP보강_version_distribution",
+      "value": {
+        "count": 3,
+        "list": [
+          {
+            "version": "V1 즉시",
+            "N": 28,
+            "O": 28,
+            "P": 30,
+            "보강": 30,
+            "total": 116
+          },
+          {
+            "version": "V2 3개월",
+            "N": 8,
+            "O": 4,
+            "P": 4,
+            "보강": 30,
+            "total": 46
+          },
+          {
+            "version": "V3 6개월+",
+            "N": 1,
+            "O": 1,
+            "P": 2,
+            "보강": 8,
+            "total": 12
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_038",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 1795,
+      "source_text": "| 기존 A~I | 1,050항목 |",
+      "key": "AI_series_total",
+      "value": {
+        "count": 2,
+        "list": [
+          {
+            "series": "기존 A~I",
+            "count": 1050
+          },
+          {
+            "series": "신규 J~M + N~P + 보강",
+            "count": 604
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_039",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 22,
+      "source_text": "| 카테고리 | 총 건수 | 상세 완료 | TITLE_ONLY | 비율 |",
+      "key": "TITLE_ONLY_distribution",
+      "value": {
+        "count": 17,
+        "total_title_only": 675,
+        "total_specified": 1545,
+        "list": [
+          {
+            "category": "A",
+            "total": 316,
+            "title_only": 136,
+            "pct": "43%"
+          },
+          {
+            "category": "B",
+            "total": 35,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "C",
+            "total": 104,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "D",
+            "total": 82,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "E",
+            "total": 92,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "F",
+            "total": 96,
+            "title_only": 66,
+            "pct": "69%"
+          },
+          {
+            "category": "G",
+            "total": 88,
+            "title_only": 63,
+            "pct": "72%"
+          },
+          {
+            "category": "H",
+            "total": 78,
+            "title_only": 58,
+            "pct": "74%"
+          },
+          {
+            "category": "I",
+            "total": 106,
+            "title_only": 66,
+            "pct": "62%"
+          },
+          {
+            "category": "J",
+            "total": 98,
+            "title_only": 73,
+            "pct": "74%"
+          },
+          {
+            "category": "K",
+            "total": 86,
+            "title_only": 61,
+            "pct": "71%"
+          },
+          {
+            "category": "L",
+            "total": 82,
+            "title_only": 62,
+            "pct": "76%"
+          },
+          {
+            "category": "M",
+            "total": 78,
+            "title_only": 58,
+            "pct": "74%"
+          },
+          {
+            "category": "N",
+            "total": 44,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "O",
+            "total": 36,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "P",
+            "total": 42,
+            "title_only": 0,
+            "pct": "0%"
+          },
+          {
+            "category": "보강",
+            "total": 82,
+            "title_only": 32,
+            "pct": "39%"
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_040",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1814,
+      "source_text": "| **합계** | **284건** | | **344건** |",
+      "key": "JM_master_index_gap",
+      "value": {
+        "declared": 344,
+        "actual": 284,
+        "gap": 60,
+        "list": [
+          {
+            "category": "J",
+            "declared": 98,
+            "actual": 98,
+            "gap": 0
+          },
+          {
+            "category": "K",
+            "declared": 86,
+            "actual": 76,
+            "gap": 10
+          },
+          {
+            "category": "L",
+            "declared": 82,
+            "actual": 56,
+            "gap": 26
+          },
+          {
+            "category": "M",
+            "declared": 78,
+            "actual": 54,
+            "gap": 24
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_041",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 6,
+      "source_text": "**개별 엔트리 수**: 98건 (A=29, B=10, C=21, D=0, E=38) — 나머지 531건은 범위 묶음(range bundle) 형태로 수록",
+      "key": "AE_individual_entries",
+      "value": {
+        "count": 98,
+        "breakdown": "A=29, B=10, C=21, D=0, E=38"
+      },
+      "value_type": "list",
+      "context": "deliverable_list"
+    },
+    {
+      "item_id": "EA-12_042",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 41,
+      "source_text": "| vLLM | 서버 | Apache 2 | 필수 | GPTQ/AWQ | O | Continuous | V3 |",
+      "key": "F_model_serving_engines",
+      "value": {
+        "count": 9,
+        "list": [
+          "vLLM",
+          "Ollama",
+          "llama.cpp",
+          "LocalAI",
+          "TensorRT-LLM",
+          "TGI (HF)",
+          "SGLang",
+          "Triton",
+          "MLC LLM"
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_043",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2796,
+      "source_text": "### V1 (MVP) — 필수 구현: 52건",
+      "key": "I_V1_MVP_items",
+      "value": {
+        "count": 52,
+        "list": [
+          "Part 1: S7I-001~008 (8건)",
+          "Part 2: S7I-011~017 (7건)",
+          "Part 3: S7I-021~026 (6건)",
+          "Part 4: S7I-031~037 (7건)",
+          "Part 5: S7I-041~045 (5건)",
+          "Part 6: S7I-049~054 (6건)",
+          "Part 7: S7I-059~062 (4건)",
+          "Part 8: S7I-067~071 (5건)",
+          "Part 9: S7I-075~078 (4건)",
+          "Part 10: S7I-083~088 (6건)",
+          "Part 11: S7I-093~097 (5건)",
+          "Part 12: S7I-101~106 (6건)"
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_044",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 17,
+      "source_text": "| **보강 추가항목** | 82건 | A~I 보강(70건) + 독자 혁신 아이디어(12건) |",
+      "key": "보강_composition",
+      "value": {
+        "count": 2,
+        "list": [
+          {
+            "type": "A~I 보강",
+            "count": 70
+          },
+          {
+            "type": "독자 혁신 아이디어",
+            "count": 12
+          }
+        ],
+        "total": 82
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_045",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1763,
+      "source_text": "| **벤치마크** | J-074 VBS-11 멀티모달 성능 | K-068 VBS-12 에이전트 상호운용성 | L-042 VBS-13 코드 품질 | M-048 VBS-14 지식관리 |",
+      "key": "JM_VBS_benchmarks",
+      "value": {
+        "count": 4,
+        "list": [
+          {
+            "id": "VBS-11",
+            "name": "멀티모달 성능",
+            "ref": "J-074"
+          },
+          {
+            "id": "VBS-12",
+            "name": "에이전트 상호운용성",
+            "ref": "K-068"
+          },
+          {
+            "id": "VBS-13",
+            "name": "코드 품질",
+            "ref": "L-042"
+          },
+          {
+            "id": "VBS-14",
+            "name": "지식관리",
+            "ref": "M-048"
+          }
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_046",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 29,
+      "source_text": "| **V1 가능** | V1(로컬/MVP)에서 즉시 구현 | 오픈소스 도구 존재, API 호출만으로 가능, 비용 <= 1만원/월 |",
+      "key": "version_tier_definition",
+      "value": {
+        "V1": {
+          "label": "V1 가능",
+          "meaning": "V1(로컬/MVP)에서 즉시 구현",
+          "condition": "오픈소스 도구 존재, API 호출만으로 가능, 비용 <= 1만원/월"
+        },
+        "V2": {
+          "label": "V2 가능",
+          "meaning": "V2(서버/확장)에서 구현",
+          "condition": "중간 인프라 필요, 비용 <= 4만원/월, 외부 API 의존"
+        },
+        "V3": {
+          "label": "V3 가능",
+          "meaning": "V3(엔터프라이즈)에서 구현",
+          "condition": "고급 인프라/GPU 필요, 비용 <= 20만원/월"
+        },
+        "V3+": {
+          "label": "V3+ 연구",
+          "meaning": "V3 이후 연구 단계",
+          "condition": "미성숙 기술, 학술 논문만 존재"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_047",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 38,
+      "source_text": "| CRITICAL | VAMOS 핵심 정체성에 직결. 미적용 시 시중 AI 대비 열위 |",
+      "key": "priority_definition",
+      "value": {
+        "CRITICAL": "VAMOS 핵심 정체성에 직결. 미적용 시 시중 AI 대비 열위",
+        "HIGH": "경쟁력 확보에 중요. V2까지 반드시 보강",
+        "MEDIUM": "차별화에 기여. V3에서 반영",
+        "LOW": "장기 비전. 설계 문서에만 반영"
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_048",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1502,
+      "source_text": "| I/E/S/A 시리즈 | Intelligence/Evidence/Safety/Architecture 핵심 모듈 시리즈 |",
+      "key": "IESA_module_series",
+      "value": {
+        "I": "Intelligence — 내부 모듈",
+        "E": "Evidence/External — 외부 API/데이터",
+        "S": "Shared/Service — 공유 서비스 레이어",
+        "A": "Autonomous/Agent — 자율 에이전트"
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_049",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 1170,
+      "source_text": "│  Tier 0: VAMOS Free        → $0/mo (로컬+무료API)         │",
+      "key": "H_pricing_tiers",
+      "value": {
+        "Tier 0": {
+          "name": "VAMOS Free",
+          "price": "$0/mo",
+          "desc": "로컬+무료API"
+        },
+        "Tier 1": {
+          "name": "VAMOS Core",
+          "price": "$0+API",
+          "desc": "사용한 만큼"
+        },
+        "Tier 2": {
+          "name": "VAMOS Pro (V2)",
+          "price": "$15/mo",
+          "desc": "서버+크레딧"
+        },
+        "Tier 3": {
+          "name": "VAMOS Team (V3)",
+          "price": "$20/user/mo",
+          "desc": "팀+관리"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_050",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 1330,
+      "source_text": "P1: 테크 얼리어답터 개발자 (Primary)  — 25-40세, 오픈소스/CLI 선호",
+      "key": "H_target_personas",
+      "value": {
+        "P1": {
+          "name": "테크 얼리어답터 개발자",
+          "type": "Primary",
+          "age": "25-40세"
+        },
+        "P2": {
+          "name": "생산성 추구 지식 노동자",
+          "type": "Secondary",
+          "age": "28-45세"
+        },
+        "P3": {
+          "name": "AI 투자자/트레이더",
+          "type": "Niche",
+          "age": "30-50세"
+        },
+        "P4": {
+          "name": "프라이버시 중시 사용자",
+          "type": "Niche",
+          "age": "전 연령"
+        },
+        "P5": {
+          "name": "소규모 팀/스타트업",
+          "type": "V2~",
+          "size": "3-20명"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_051",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 732,
+      "source_text": "L0: 즉시 메모리 (Session Buffer)",
+      "key": "D_memory_5_layer",
+      "value": {
+        "L0": {
+          "name": "즉시 메모리 (Session Buffer)",
+          "storage": "인메모리 (Python dict)",
+          "lifetime": "세션 동안만",
+          "capacity": "최대 200K 토큰"
+        },
+        "L1": {
+          "name": "단기 메모리 (Short-Term)",
+          "storage": "SQLite + JSON",
+          "lifetime": "7일 TTL",
+          "capacity": "1,000 항목"
+        },
+        "L2": {
+          "name": "프로젝트 메모리 (Project)",
+          "storage": "SQLite + Vector DB (Chroma/Qdrant)",
+          "lifetime": "90일 TTL",
+          "capacity": "10,000 항목"
+        },
+        "L3": {
+          "name": "장기 메모리 (Long-Term)",
+          "storage": "SQLite + Vector DB + Knowledge Graph",
+          "lifetime": "영구",
+          "capacity": "무제한 (로컬 디스크)"
+        },
+        "L4": {
+          "name": "아카이브 메모리 (Archive)",
+          "storage": "압축 SQLite (ZSTD)",
+          "lifetime": "영구",
+          "capacity": "무제한 (압축)"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_052",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 850,
+      "source_text": "Layer 1: Input Filter (정규식 + 패턴)",
+      "key": "E_injection_defense_layers",
+      "value": {
+        "Layer 1": "Input Filter (정규식 + 패턴)",
+        "Layer 2": "Instruction Hierarchy",
+        "Layer 3": "LLM Self-Check",
+        "Layer 4": "Output Filter",
+        "Layer 5": "Behavioral Monitor",
+        "Layer 6": "Human-in-the-Loop"
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_053",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 832,
+      "source_text": "L0: VAMOS Core Constitution (불변, 최우선)",
+      "key": "E_prompt_hierarchy",
+      "value": {
+        "L0": "VAMOS Core Constitution (불변, 최우선)",
+        "L1": "System Prompt (관리자 설정)",
+        "L2": "User Instruction (사용자 직접 입력)",
+        "L3": "Tool/Document Content (외부 데이터)",
+        "L4": "Conversation History (이전 대화)"
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_054",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 16,
+      "source_text": "1. 마스터인덱스에 \"요약\" 1줄만 존재하고, R1~R6 문서에 구현 상세가 없는 항목",
+      "key": "TITLE_ONLY_criteria",
+      "value": {
+        "criterion_1": "마스터인덱스에 '요약' 1줄만 존재하고, R1~R6 문서에 구현 상세가 없는 항목",
+        "criterion_2": "R1~R6에 '~추정' / '원본 소스 파일 참조' 로 표기된 F~M 카테고리 대부분 항목",
+        "criterion_3": "보강 추가항목 중 B-ADD ~ I-ADD의 개별 구현 스펙 미작성 항목"
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_055",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1500,
+      "source_text": "| 9-State Machine | IDLE/RECEIVING/ANALYZING/RETRIEVING/ROUTING/EXECUTING/SELF_CHECKING/OUTPUTTING/LEARNING |",
+      "key": "9_state_machine",
+      "value": [
+        "IDLE",
+        "RECEIVING",
+        "ANALYZING",
+        "RETRIEVING",
+        "ROUTING",
+        "EXECUTING",
+        "SELF_CHECKING",
+        "OUTPUTTING",
+        "LEARNING"
+      ],
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_056",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1499,
+      "source_text": "| 5-Gate | Policy Gate + Approval Gate + Cost Gate + Evidence Gate + SelfCheck Gate (VAMOS 안전 장치, 정본: D2.0-02 §2.3 + CLAUDE.md §5 LOCK) |",
+      "key": "5_gate_system",
+      "value": [
+        "Policy Gate",
+        "Approval Gate",
+        "Cost Gate",
+        "Evidence Gate",
+        "SelfCheck Gate"
+      ],
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_057",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1501,
+      "source_text": "| 3-Part Output | [Header: 메타정보] [Body: 응답 본문] [Footer: 근거/비용/신뢰도] |",
+      "key": "3_part_output",
+      "value": [
+        "Header: 메타정보",
+        "Body: 응답 본문",
+        "Footer: 근거/비용/신뢰도"
+      ],
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_058",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 760,
+      "source_text": "| 구분 | V1 (로컬/MVP) | V2 (서버) | V3 (엔터프라이즈) |",
+      "key": "D_tech_selection",
+      "value": {
+        "V1": {
+          "main_db": "SQLite",
+          "vector_db": "Chroma",
+          "graph_db": "NetworkX + JSON",
+          "cache": "인메모리 dict + SQLite",
+          "embedding": "BGE-M3",
+          "monthly_cost": "0원"
+        },
+        "V2": {
+          "main_db": "PostgreSQL",
+          "vector_db": "Qdrant ($25/월)",
+          "graph_db": "Neo4j Community",
+          "cache": "Redis",
+          "embedding": "BGE-M3 + OpenAI",
+          "monthly_cost": "~$40/월"
+        },
+        "V3": {
+          "main_db": "PostgreSQL 클러스터",
+          "vector_db": "Qdrant 클러스터 or Milvus",
+          "graph_db": "Neo4j Enterprise",
+          "cache": "Redis Cluster",
+          "embedding": "+ Cohere",
+          "monthly_cost": "~$150/월"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_059",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 685,
+      "source_text": "| 데스크톱 | Tauri 2.0 + React 18.3 | Tauri 2.0 + React 18.3 | Tauri 2.0 + React 18.3 (LOCK) |",
+      "key": "C_UI_tech_stack",
+      "value": {
+        "V1": {
+          "desktop": "Tauri 2.0 + React 18.3",
+          "web": "Next.js/SvelteKit",
+          "cli": "Node.js CLI",
+          "chart": "Chart.js",
+          "code_editor": "Prism.js",
+          "design": "Tailwind CSS"
+        },
+        "V2": {
+          "desktop": "Tauri 2.0 + React 18.3",
+          "web": "Next.js + PWA",
+          "chart": "Plotly/D3.js",
+          "code_editor": "Monaco Editor",
+          "kg": "Cytoscape.js",
+          "design": "자체 컴포넌트"
+        },
+        "V3": {
+          "desktop": "Tauri 2.0 + React 18.3 (LOCK)",
+          "web": "Next.js + 모바일 최적화",
+          "chart": "D3.js + custom",
+          "code_editor": "Monaco Editor",
+          "kg": "D3.js Force Graph",
+          "design": "자체 Design System"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_060",
+      "category": "C3",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 721,
+      "source_text": "| AI | 계층 수 | 용량 | 사용자 제어 | 자동 학습 | 크로스 대화 |",
+      "key": "D_memory_AI_comparison",
+      "value": {
+        "ChatGPT": {
+          "layers": 4,
+          "capacity": "수백 항목",
+          "user_control": "추가/삭제/편집",
+          "auto_learning": "자동 추출",
+          "cross_convo": "O"
+        },
+        "Claude": {
+          "layers": 2,
+          "capacity": "200K 토큰/프로젝트",
+          "user_control": "프로젝트 파일",
+          "auto_learning": "제한적",
+          "cross_convo": "프로젝트 내"
+        },
+        "Gemini": {
+          "layers": 1.5,
+          "capacity": "제한적",
+          "user_control": "제한적",
+          "auto_learning": "X",
+          "cross_convo": "부분적"
+        },
+        "Perplexity": {
+          "layers": 0,
+          "capacity": "-",
+          "user_control": "-",
+          "auto_learning": "-",
+          "cross_convo": "X"
+        },
+        "VAMOS": {
+          "layers": 5,
+          "capacity": "무제한(로컬)",
+          "user_control": "완전 제어",
+          "auto_learning": "자동+승인",
+          "cross_convo": "O"
+        }
+      },
+      "value_type": "list",
+      "context": "classification"
+    },
+    {
+      "item_id": "EA-12_061",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1504,
+      "source_text": "| Orange Core | VAMOS 중앙 조율 엔진 (7단계 파이프라인) |",
+      "key": "VAMOS_core_modules",
+      "value": [
+        "ORANGE CORE (D2.0-02)",
+        "AGENT_WORKFLOW (D2.0-05)",
+        "STORAGE/MEMORY (D2.0-06)",
+        "BLUE NODEs (Dev/Research/Quant/Content/Trading)"
+      ],
+      "value_type": "list",
+      "context": "module_name"
+    },
+    {
+      "item_id": "EA-12_062",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 77,
+      "source_text": "**S7-A-001** | CRITICAL | V2 | **Team Lead / Team Member 역할 분리 구조**",
+      "key": "A_category_item_ids",
+      "value": "S7-A-001 ~ S7-A-035 (Part A Claude)",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_063",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 246,
+      "source_text": "**S7-B-001** | CRITICAL | V2 | **추론 모드(Reasoning Mode) 통합**",
+      "key": "B_category_item_ids",
+      "value": "S7-B-001 ~ S7-B-024",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_064",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 629,
+      "source_text": "**S7C-001** | CRITICAL | V1 | **3-Column 레이아웃**",
+      "key": "C_category_item_ids",
+      "value": "S7C-001 ~ S7C-104",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_065",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 275,
+      "source_text": "**S7-D-001** | CRITICAL | V3 | **Meta AI Controller 모듈(I-25)**",
+      "key": "D_category_item_ids",
+      "value": "S7-D-001~022 (competition) + S7D-001~082 (tech)",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_066",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 815,
+      "source_text": "**S7E-001** | CRITICAL | V1 | **STRIDE 기반 위협 모델링**",
+      "key": "E_category_item_ids",
+      "value": "S7E-001 ~ S7E-092",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_067",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 53,
+      "source_text": "### S7F-001 | CRITICAL | V1 | Ollama 기반 로컬 LLM 서빙",
+      "key": "F_category_item_ids",
+      "value": "S7F-001 ~ S7F-096",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_068",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 14,
+      "source_text": "| **F. 인프라/배포/MLOps** | 96건 (S7F-001~096) |",
+      "key": "GHI_category_item_ids",
+      "value": "S7G-001~088, S7H-001~078, S7I-001~106",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_069",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1810,
+      "source_text": "| J: 멀티모달 생성/처리 | 98건 | J-001 ~ J-098 | 98건 |",
+      "key": "JKLM_category_item_ids",
+      "value": "J-001~J-098, K-001~K-076, L-001~L-056, M-001~M-054",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_070",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 74,
+      "source_text": "### S7-N-001 | CRITICAL | V1 | VAMOS 워크플로우 엔진 아키텍처",
+      "key": "NOP_category_item_ids",
+      "value": "S7-N-001~044, S7-O-001~036, S7-P-001~042",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_071",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 1710,
+      "source_text": "- S7-ADD-I01: 개인 데이터 투자",
+      "key": "보강_item_ids",
+      "value": "S7-ADD-A01~I06, S7-INNOV-01~12",
+      "value_type": "string",
+      "context": "item_id_pattern"
+    },
+    {
+      "item_id": "EA-12_072",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 67,
+      "source_text": "Claude Sonnet 4.6, Claude Haiku 4.5, GPT-4o($2.50/$10), GPT-4o-mini($0.15/$0.60), Gemini 2.0 Flash($0.10/$0.40), DeepSeek-V3($0.27/$1.10), Groq Llama 3.3 70B($0.59/$0.79)",
+      "key": "F_API_providers",
+      "value": [
+        "Claude Sonnet 4.6",
+        "Claude Haiku 4.5",
+        "GPT-4o",
+        "GPT-4o-mini",
+        "Gemini 2.0 Flash",
+        "DeepSeek-V3",
+        "Groq Llama 3.3 70B"
+      ],
+      "value_type": "list",
+      "context": "module_name"
+    },
+    {
+      "item_id": "EA-12_073",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 963,
+      "source_text": "| 1 | 개인 지식 그래프 | 없음 (단순 Memory/Vector) | 영속적 KG + 추론 + 시각화 + 충돌 감지 |",
+      "key": "18_differentiation_axes",
+      "value": [
+        "개인 지식 그래프",
+        "예측적 AI",
+        "개인 헌법 AI (ICAI)",
+        "실수 학습",
+        "신뢰도 표시",
+        "데이터 주권",
+        "로컬+클라우드",
+        "감정 적응",
+        "태스크 롤백",
+        "AI가 AI 관리",
+        "에이전트 팀",
+        "드림 모드",
+        "5-Gate 시스템",
+        "Computer Use",
+        "RAG 4중 인덱스",
+        "음성 AI 통합",
+        "규제 네이티브",
+        "도구 자동 생성"
+      ],
+      "value_type": "list",
+      "context": "module_name"
+    },
+    {
+      "item_id": "EA-12_074",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 996,
+      "source_text": "*관련 설계 파일: BASE-1.3, D2.0-01~08, D2.1-D1~D8, PLAN-3.0*",
+      "key": "design_doc_references",
+      "value": [
+        "BASE-1.3",
+        "D2.0-01",
+        "D2.0-02",
+        "D2.0-03",
+        "D2.0-04",
+        "D2.0-05",
+        "D2.0-06",
+        "D2.0-07",
+        "D2.0-08",
+        "D2.1-D1~D8",
+        "PLAN-3.0"
+      ],
+      "value_type": "list",
+      "context": "module_name"
+    },
+    {
+      "item_id": "EA-12_075",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **A — 시중 AI 기술 갭 해소 + 혁신** | 316건 | Claude/GPT/Gemini/Kimo/Grok/Mistral/Llama/Perplexity/Apple/혁신기술 |",
+      "key": "A_category_scope",
+      "value": "시중 AI 기술 갭 해소 + 차별화 혁신 — Claude/GPT/Gemini/Kimo/Grok/Mistral/Llama/Perplexity/Apple/혁신기술",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_076",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 14,
+      "source_text": "| **F. 인프라/배포/MLOps** | 96건 (S7F-001~096) | 모델 서빙, V1/V2/V3 인프라, 컨테이너, CI/CD, 모니터링, 비용, MLOps, 네트워크, 백업, 성능 |",
+      "key": "F_category_scope",
+      "value": "인프라/배포/MLOps — 모델 서빙, V1/V2/V3 인프라, 컨테이너, CI/CD, 모니터링, 비용, MLOps, 네트워크, 백업, 성능",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_077",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 15,
+      "source_text": "| **G. 벤치마크/평가/품질보증** | 88건 (S7G-001~088) |",
+      "key": "G_category_scope",
+      "value": "벤치마크/평가/품질보증 — 표준 벤치마크, 한국어 특화, 코딩, Agent, RAG, 안전성, UX, VAMOS 고유, 자동 평가, QA",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_078",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **H. 비즈니스모델/시장전략** | 78건 (S7H-001~078) |",
+      "key": "H_category_scope",
+      "value": "비즈니스모델/시장전략 — 가격 분석, 가격 전략, 수익 모델, 타겟 페르소나, 시장 규모, 경쟁, GTM, 성장, 리스크, 재무",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_079",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 17,
+      "source_text": "| **I. AI Investing 보강** | 106건 (S7I-001~106) |",
+      "key": "I_category_scope",
+      "value": "AI Investing 보강 — AI 투자 플랫폼, LLM 분석, 대안 데이터, 한국 시장, 포트폴리오, 리스크, 백테스팅, 실시간, 크립토, Agent 워크플로우, 규제, GAP 해결",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_080",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 22,
+      "source_text": "# 카테고리 J: 멀티모달 생성/처리 (98건)",
+      "key": "J_category_scope",
+      "value": "멀티모달 생성/처리 — 비전-언어 통합, 이미지 생성, 오디오/TTS/STT, 비디오, 멀티모달 라우팅, Computer Use, 접근성, 최신 모델 연동",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_081",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 14,
+      "source_text": "2. [카테고리 K: 에이전트 프로토콜/상호운용성 (76건)]",
+      "key": "K_category_scope",
+      "value": "에이전트 프로토콜/상호운용성 — MCP 서버/클라이언트, A2A 프로토콜, 에이전트 오케스트레이션, 자율 에이전트, 보안",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_082",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 15,
+      "source_text": "3. [카테고리 L: 개발자도구/API/SDK (56건)]",
+      "key": "L_category_scope",
+      "value": "개발자도구/API/SDK — AI 코딩 어시스턴트, REST API, SDK, VS Code Extension, 플러그인 시스템",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_083",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 16,
+      "source_text": "4. [카테고리 M: PKM/지식관리 (54건)]",
+      "key": "M_category_scope",
+      "value": "PKM/지식관리 — 자동 지식 추출, 시맨틱 검색, KG 구축, Zettelkasten, Dream Mode 지식 처리",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_084",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 14,
+      "source_text": "| **N — 워크플로우자동화/RPA** | 44건 | 워크플로우 엔진/브라우저 자동화/데이터 파이프라인/개인 자동화/차별화 전략 |",
+      "key": "N_category_scope",
+      "value": "워크플로우자동화/RPA — 워크플로우 엔진, 브라우저 자동화, 데이터 파이프라인, 개인 자동화, 차별화 전략",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_085",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 15,
+      "source_text": "| **O — 교육/학습/자기개발** | 36건 | AI 튜터/콘텐츠 학습/자기개발·생산성/차별화 전략 |",
+      "key": "O_category_scope",
+      "value": "교육/학습/자기개발 — AI 튜터, 콘텐츠 학습, 자기개발/생산성, 차별화 전략",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_086",
+      "category": "C5",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 16,
+      "source_text": "| **P — 건강/웰니스/감성AI** | 42건 | 감성AI/신체 건강/정신 건강·웰빙/VAMOS 혁신/참고·로드맵 |",
+      "key": "P_category_scope",
+      "value": "건강/웰니스/감성AI — 감성AI, 신체 건강, 정신 건강/웰빙, VAMOS 혁신, 참고/로드맵",
+      "value_type": "string",
+      "context": "scope"
+    },
+    {
+      "item_id": "EA-12_087",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 29,
+      "source_text": "| **V1 가능** | V1(로컬/MVP)에서 즉시 구현 | 오픈소스 도구 존재, API 호출만으로 가능, 비용 <= 1만원/월 |",
+      "key": "V1_cost_targets",
+      "value": {
+        "V1": "<=10,000원/월 ($0 하드웨어비용만, API 사용한 만큼)",
+        "V2": "<=$40/월",
+        "V3": "<=$200,000원/월"
+      },
+      "value_type": "list",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_088",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1772,
+      "source_text": "## V1 — 로컬 MVP (즉시~1개월)",
+      "key": "V1_roadmap_timeline",
+      "value": "즉시~1개월",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_089",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1782,
+      "source_text": "## V2 — 서버 확장 (2~4개월)",
+      "key": "V2_roadmap_timeline",
+      "value": "2~4개월",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_090",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1792,
+      "source_text": "## V3 — 엔터프라이즈 (6개월+)",
+      "key": "V3_roadmap_timeline",
+      "value": "6개월+",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_091",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1424,
+      "source_text": "[V3 -- 엔터프라이즈] (18~30개월)",
+      "key": "보강_V3_extended_timeline",
+      "value": "18~30개월",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_092",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1425,
+      "source_text": "├─ V3 전체: ~248건 (R6)",
+      "key": "보강_V3_item_count",
+      "value": 248,
+      "value_type": "number",
+      "context": "version_assignment",
+      "unit": "건"
+    },
+    {
+      "item_id": "EA-12_093",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 65,
+      "source_text": "> **[PART1 ST-06]** 모델명 업데이트: Claude 3.5 Sonnet → Claude Sonnet 4.6, Claude 3.5 Haiku → Claude Haiku 4.5. 최신 모델 패밀리 반영.",
+      "key": "F_model_update_notes",
+      "value": "Claude 3.5 Sonnet → Claude Sonnet 4.6, Claude 3.5 Haiku → Claude Haiku 4.5",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_094",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 3,
+      "source_text": "> **생성일**: 2026-02-23 | **최종 수정**: 2026-02-23",
+      "key": "document_version_dates",
+      "value": {
+        "VAMOS_STEP7_A-E_상세명세서.md": "2026-02-23",
+        "VAMOS_STEP7_F-I_상세명세서.md": "2026-02-23 v1.0",
+        "VAMOS_STEP7_J-M_상세명세서.md": "2026-02-23 v1.1",
+        "VAMOS_STEP7_N-P_보강_상세명세서.md": "2026-02-23 v1.0",
+        "VAMOS_STEP7_보강_통합명세서.md": "2026-02-23 v1.0"
+      },
+      "value_type": "list",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_095",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 1342,
+      "source_text": "확보 목표: V1 출시 후 6개월 내 2,000 활성 사용자",
+      "key": "H_user_acquisition_targets",
+      "value": {
+        "V1_3mo": "1,000 GitHub Stars, 500 활성 사용자",
+        "V1_6mo": "2,000 활성 사용자",
+        "conversion_target": "5-10% (SaaS 평균 2-5%)"
+      },
+      "value_type": "list",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_096",
+      "category": "C6",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 1382,
+      "source_text": "6) 유지: 매일 사용(2주 리텐션 80%). 7) 추천: NPS 50+ 목표",
+      "key": "H_retention_target",
+      "value": "2주 리텐션 80%, NPS 50+ 목표",
+      "value_type": "string",
+      "context": "version_assignment"
+    },
+    {
+      "item_id": "EA-12_097",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 1182,
+      "source_text": "월 100회 질문 시 ChatGPT $20(회당 $0.20) vs VAMOS ~$3(회당 $0.03, 스마트 라우팅) → 6.7배 비용 효율",
+      "key": "H_cost_comparison_formula",
+      "value": "월 100회: ChatGPT $20(회당 $0.20) vs VAMOS ~$3(회당 $0.03) => 6.7x 효율. 월 1000회: ChatGPT $20(회당 $0.02) vs VAMOS ~$8(회당 $0.008) => 2.5x 효율",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_098",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 76,
+      "source_text": "**비용 절감 목표**: 단일 모델 대비 60-70% 비용 절감",
+      "key": "F_cost_reduction_target",
+      "value": "단일 모델 대비 60-70% 비용 절감 (Model Router)",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_099",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 96,
+      "source_text": "Claude Prompt Caching(90% 할인, 5분 TTL), OpenAI Automatic Caching(50% 할인), Gemini Context Caching(75% 할인, 최소 32K tokens)",
+      "key": "F_prompt_caching_savings",
+      "value": "Claude 90% 할인(5분 TTL), OpenAI 50% 할인, Gemini 75% 할인(최소 32K tokens). 월 API 비용의 30-50% 절감 예상",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_100",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1499,
+      "source_text": "| 5-Gate | Policy Gate + Approval Gate + Cost Gate + Evidence Gate + SelfCheck Gate (VAMOS 안전 장치, 정본: D2.0-02 §2.3 + CLAUDE.md §5 LOCK) |",
+      "key": "5_gate_lock",
+      "value": "5-Gate System LOCK (정본: D2.0-02 §2.3 + CLAUDE.md §5 LOCK)",
+      "value_type": "string",
+      "context": "lock"
+    },
+    {
+      "item_id": "EA-12_101",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 687,
+      "source_text": "| 데스크톱 | Tauri 2.0 + React 18.3 | Tauri 2.0 + React 18.3 | Tauri 2.0 + React 18.3 (LOCK) |",
+      "key": "C_desktop_framework_lock",
+      "value": "Tauri 2.0 + React 18.3 (LOCK) — V1/V2/V3 전 버전 고정",
+      "value_type": "string",
+      "context": "lock"
+    },
+    {
+      "item_id": "EA-12_102",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1747,
+      "source_text": "**성공 KPI**: 지식 추출 정확도 >= 80%, 자동 분류 정확도 >= 75%, 검색 정확도 >= 85%, 지식 활용률 >= 50%, 사용자 만족도 NPS >= 50",
+      "key": "M_success_KPIs",
+      "value": {
+        "knowledge_extraction_accuracy": ">= 80%",
+        "auto_classification_accuracy": ">= 75%",
+        "search_accuracy": ">= 85%",
+        "knowledge_utilization_rate": ">= 50%",
+        "user_satisfaction_NPS": ">= 50"
+      },
+      "value_type": "list",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_103",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 81,
+      "source_text": "Fallback 조건: API 타임아웃(30초), HTTP 5xx, Rate limit 초과, 비용 상한 도달",
+      "key": "F_fallback_conditions",
+      "value": "API 타임아웃(30초), HTTP 5xx, Rate limit 초과, 비용 상한 도달",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_104",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 862,
+      "source_text": "**S7E-021** | CRITICAL | V1 | **로컬 인증** — PIN/생체인증 (Windows Hello/Touch ID), 30분 타임아웃, 5회 실패 잠금",
+      "key": "E_auth_policies",
+      "value": "PIN/생체인증, 30분 타임아웃, 5회 실패 잠금, API Key 90일 rotation",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_105",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2820,
+      "source_text": "| 연동 | F(인프라) | G(벤치마크) | H(비즈니스) | I(투자) |",
+      "key": "FI_cross_reference_matrix",
+      "value": {
+        "F->G": "모델 서빙이 벤치마크 대상",
+        "F->H": "인프라 비용이 가격 전략 기반",
+        "F->I": "모델 라우터가 투자 분석 모델 선택",
+        "G->F": "벤치마크 결과로 모델 교체 판단",
+        "G->H": "품질 지표가 마케팅 근거",
+        "G->I": "VBS-10이 투자 품질 평가",
+        "H->F": "비용 전략이 인프라 설계 제약",
+        "H->G": "경쟁 비교가 벤치마크 우선순위 결정",
+        "H->I": "투자자 페르소나가 투자 기능 방향",
+        "I->F": "투자 데이터 파이프라인이 인프라 요구",
+        "I->G": "투자 분석 정확도 평가 필요",
+        "I->H": "투자 기능이 니치 차별화 핵심"
+      },
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_106",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1755,
+      "source_text": "| 연동 항목 | J (멀티모달) | K (에이전트) | L (개발자도구) | M (PKM/지식관리) |",
+      "key": "JM_cross_reference_matrix",
+      "value": {
+        "코어아키텍처": "J-083 → ORANGE CORE, K-001 MCP 서버, L-011 REST API, M-023 4-Index Fusion RAG",
+        "메모리연동": "J-002 → 5-Layer, K-004 → 메모리 URI, L-037 → 개인화 코딩, M-001 → 5-Layer",
+        "지식그래프": "J-003 → KG 노드 생성, K-054 → KG, L-035 → 코드 KG, M-012 KG 자동 구축",
+        "투자연동": "J-005 차트 → Quant Node, K-062 → 투자 패턴, L-036 → 투자+코딩 통합, M-008 → 투자 지식",
+        "보안": "J-004 → PII 마스킹, K-025 → 에이전트 샌드박스, L-025+L-039 → 플러그인 보안, M-004 → Recall 로컬"
+      },
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_107",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2829,
+      "source_text": "| 카테고리 | F-I 주요 연동 |",
+      "key": "STEP7_to_AE_cross_refs",
+      "value": {
+        "A(메모리/아키텍처)": "F: 메모리 저장소(SQLite), I: 투자 일지 기억",
+        "B(Self-Evolution)": "H: 개인화가 핵심 MOAT, I: 투자 스타일 학습",
+        "C(Knowledge Graph)": "I: 기업/산업 관계 그래프, H: 개인화 차별화",
+        "D(MCP/Tool)": "F: MCP Tool 실행 인프라, I: 투자 데이터 Tool",
+        "E(보안/프라이버시)": "F: 보안 인프라, H: 데이터 주권 가치, I: 투자 데이터 보호"
+      },
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_108",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1746,
+      "source_text": "**크로스 레퍼런스**: STEP7-A(4-Index Fusion RAG), STEP7-D(5-Layer 메모리 시스템), STEP7-I(투자 지식 축적)",
+      "key": "M_cross_references",
+      "value": [
+        "STEP7-A(4-Index Fusion RAG)",
+        "STEP7-D(5-Layer 메모리 시스템)",
+        "STEP7-I(투자 지식 축적)",
+        "STEP7-J(멀티모달 지식 이미지/오디오)",
+        "STEP7-K(지식 기반 에이전트 의사결정)",
+        "STEP7-L(코드 지식 관리)"
+      ],
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_109",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1474,
+      "source_text": "| 카테고리 | 작업가이드 파일 | R 라운드 |",
+      "key": "source_workguide_files",
+      "value": {
+        "A": "STEP7_작업가이드.md (R1~R6 전 라운드)",
+        "B": "STEP7-B_대화프로세스_작업가이드.md (R1~R6)",
+        "C": "STEP7-C_UI_UX_전수비교_작업가이드.md (R1~R6)",
+        "D": "STEP7-D_메모리_저장소_아키텍처_작업가이드.md (R1~R6)",
+        "E": "STEP7-E_보안_안전_거버넌스_작업가이드.md (R1~R6)",
+        "F": "STEP7-F_인프라_배포_MLOps_작업가이드.md (R1일부,R2일부)",
+        "G": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md (R1일부,R2일부)",
+        "H": "STEP7-H_비즈니스모델_시장전략_작업가이드.md (R2일부)",
+        "I": "STEP7-I_AI_Investing_보강_작업가이드.md (R2일부)",
+        "J": "STEP7-J_멀티모달_생성처리_작업가이드.md (R1일부,R2일부)",
+        "K": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md (R2일부)",
+        "L": "STEP7-L_개발자도구_API_SDK_작업가이드.md (R2일부)",
+        "M": "STEP7-M_PKM_지식관리_작업가이드.md (R2일부)",
+        "N": "STEP7-N_워크플로우자동화_RPA_작업가이드.md (R1~R3 완료)",
+        "O": "STEP7-O_교육_학습_자기개발_작업가이드.md (R1~R3 완료)",
+        "P": "STEP7-P_건강_웰니스_감성AI_작업가이드.md (R1~R3 완료)",
+        "보강": "STEP7_A-I_보강_추가항목_통합.md (R1~R3 일부)"
+      },
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_110",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1441,
+      "source_text": "### 12.1 즉시 반영 필요 (CRITICAL, 기존 문서에 미반영)",
+      "key": "보강_priority_반영",
+      "value": {
+        "즉시_CRITICAL": [
+          "Part F 혁신기술 V1 CRITICAL",
+          "F/G/H CRITICAL 인프라/벤치마크/비즈니스",
+          "I CRITICAL 실시간 데이터",
+          "K CRITICAL MCP/A2A 심화"
+        ],
+        "V1_HIGH": [
+          "비용 최적화 엔진(F)",
+          "할루시네이션 탐지(G)",
+          "REST API + Python SDK(L)",
+          "Obsidian 통합(M)",
+          "백테스팅 고급(I)"
+        ],
+        "V2_설계": [
+          "Kubernetes + 자동 스케일링(F)",
+          "A2A 프로토콜(K)",
+          "음성 대화 모드(J)",
+          "Dream Mode(A혁신)",
+          "IDE 플러그인(L)"
+        ]
+      },
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_111",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 67,
+      "source_text": "GPT-4o($2.50/$10), GPT-4o-mini($0.15/$0.60), Gemini 2.0 Flash($0.10/$0.40), DeepSeek-V3($0.27/$1.10), Groq Llama 3.3 70B($0.59/$0.79)",
+      "key": "F_API_costs",
+      "value": {
+        "GPT-4o": "$2.50/$10 (input/output per 1M tokens)",
+        "GPT-4o-mini": "$0.15/$0.60",
+        "Gemini_2.0_Flash": "$0.10/$0.40",
+        "DeepSeek-V3": "$0.27/$1.10",
+        "Groq_Llama_3.3_70B": "$0.59/$0.79"
+      },
+      "value_type": "list",
+      "context": "numeric_threshold"
+    },
+    {
+      "item_id": "EA-12_112",
+      "category": "C1",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 58,
+      "source_text": "`ollama pull llama3.2:3b`(2GB, 빠른 응답), `ollama pull qwen2.5:7b`(4.7GB, 범용), `ollama pull deepseek-r1:8b`(4.9GB, 추론 특화)",
+      "key": "F_model_sizes",
+      "value": {
+        "llama3.2:3b": "2GB",
+        "qwen2.5:7b": "4.7GB",
+        "deepseek-r1:8b": "4.9GB",
+        "min_RAM_7B": "~4GB"
+      },
+      "value_type": "list",
+      "context": "numeric_threshold"
+    },
+    {
+      "item_id": "EA-12_113",
+      "category": "C2",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 33,
+      "source_text": "**지원 포맷**: JPEG, PNG, WebP, GIF(애니메이션), SVG, BMP, TIFF, HEIC",
+      "key": "J_multimodal_image_formats",
+      "value": {
+        "count": 8,
+        "list": [
+          "JPEG",
+          "PNG",
+          "WebP",
+          "GIF(애니메이션)",
+          "SVG",
+          "BMP",
+          "TIFF",
+          "HEIC"
+        ]
+      },
+      "value_type": "list",
+      "context": "count_with_list"
+    },
+    {
+      "item_id": "EA-12_114",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 54,
+      "source_text": "**참고 논문**: LayoutLMv3(Microsoft), Donut(Naver CLOVA)",
+      "key": "J_reference_papers",
+      "value": [
+        "LayoutLMv3 (Microsoft)",
+        "Donut (Naver CLOVA)",
+        "ChartQA dataset",
+        "DePlot (Google Research)",
+        "GraphRAG (Microsoft 2024)"
+      ],
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_115",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "source_line": 1733,
+      "source_text": "**핵심 도구**: Obsidian(obsidian.md 로컬 PKM), Notion(notion.so 클라우드 PKM), Logseq(logseq.com 오픈소스 PKM)",
+      "key": "M_reference_tools",
+      "value": [
+        "Obsidian",
+        "Notion",
+        "Logseq",
+        "Tana",
+        "Mem",
+        "Reflect",
+        "Heptabase"
+      ],
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_116",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "source_line": 1496,
+      "source_text": "| 용어 | 정의 |",
+      "key": "보강_glossary_terms",
+      "value": [
+        "TITLE_ONLY",
+        "5-Gate",
+        "9-State Machine",
+        "3-Part Output",
+        "I/E/S/A 시리즈",
+        "Decision Object",
+        "Blue Node",
+        "Orange Core",
+        "MCP",
+        "A2A",
+        "KG",
+        "RAG",
+        "QoD",
+        "Dream Mode",
+        "Digital Twin"
+      ],
+      "value_type": "list",
+      "context": "reference"
+    },
+    {
+      "item_id": "EA-12_117",
+      "category": "C4",
+      "source_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "source_line": 76,
+      "source_text": "**노드 유형**: LLM Node(AI 텍스트 처리: 요약·분류·생성), Code Node(Python/JS 코드 실행)",
+      "key": "N_workflow_node_types",
+      "value": [
+        "LLM Node",
+        "Code Node",
+        "API Node",
+        "Browser Node",
+        "File Node",
+        "Decision Node",
+        "Loop Node",
+        "Human Node",
+        "Schedule Node",
+        "Notification Node"
+      ],
+      "value_type": "list",
+      "context": "module_name"
+    },
+    {
+      "item_id": "EA-12_118",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 866,
+      "source_text": "**S7E-023** | CRITICAL | V1 | **RBAC** — Owner/Admin/User/Guest 4역할 권한 매트릭스",
+      "key": "E_RBAC_roles",
+      "value": "Owner/Admin/User/Guest 4역할 권한 매트릭스",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_119",
+      "category": "C7",
+      "source_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "source_line": 890,
+      "source_text": "**S7E-051** | CRITICAL | V1 | **EU AI Act 위험등급 자체 평가** — VAMOS = \"제한 위험\" + 부분적 \"고위험\"(투자)",
+      "key": "E_EU_AI_Act_classification",
+      "value": "VAMOS = '제한 위험' + 부분적 '고위험'(투자)",
+      "value_type": "string",
+      "context": "formula"
+    },
+    {
+      "item_id": "EA-12_120",
+      "category": "C8",
+      "source_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "source_line": 2861,
+      "source_text": "| 인프라(F) | 클라우드 전용, 단일 모델 | 로컬+클라우드 하이브리드, 멀티 모델 라우팅 |",
+      "key": "FI_differentiation_summary",
+      "value": {
+        "인프라(F)": "로컬+클라우드 하이브리드, 멀티 모델 라우팅 vs 경쟁사 클라우드 전용",
+        "품질(G)": "투명한 벤치마크, VAMOS 고유 지표(VBS) vs 경쟁사 자체 벤치마크 비공개",
+        "비즈니스(H)": "사용량 기반 $5-10/mo, 비용 투명성 vs 경쟁사 $20/mo 고정 구독",
+        "투자(I)": "93개 데이터 소스, 백테스팅, 한국 시장 특화 vs 경쟁사 범용 AI 투자 특화 없음"
+      },
+      "value_type": "list",
+      "context": "reference"
+    }
+  ]
+}

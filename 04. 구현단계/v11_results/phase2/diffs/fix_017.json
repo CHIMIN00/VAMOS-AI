@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-017",
+  "fg": "FG-H12",
+  "tier": 3,
+  "order": 17,
+  "severity": "HIGH",
+  "description": "Glossary(주요 약어/모듈명 50+) + Reading Guide(문서 구조 안내) 신설",
+  "changes": [
+    {
+      "line": 20,
+      "section": "목차 뒤, §1 앞",
+      "action": "Reading Guide + Glossary 섹션 삽입"
+    },
+    {
+      "line": 18,
+      "section": "목차",
+      "action": "Reading Guide, Glossary 항목 추가"
+    }
+  ],
+  "ripple_expected": ["변경이력"],
+  "applied_at": "2026-03-13"
+}

@@ -1,0 +1,101 @@
+{
+  "session": "session_16",
+  "timestamp": "2026-03-21T23:43:30.337679",
+  "description": "Findings impact propagation map — which SOT files/sections are affected by which findings",
+  "ripples": [
+    {
+      "finding": "F-A5-01 (LogEventSchema field names)",
+      "severity": "MEDIUM",
+      "source": "D2.1-D2_SCHEMA_ORANGE_CORE",
+      "affected": [
+        "PART2 §6.1 모듈 구현 상세",
+        "D2.0-02 Orange Core"
+      ],
+      "propagation": "Schema field rename would require PART2 update + all code referencing LogEvent fields",
+      "resolution": "Determine canonical field names (SOT D2.1-D2 wins), update PART2 references"
+    },
+    {
+      "finding": "F-91 (HITL timeout conflict)",
+      "severity": "MEDIUM",
+      "source": "MASTER_SPEC §7.9 vs CLAUDE.md §7.3",
+      "affected": [
+        "PART2 §7 Decision",
+        "PHASE_B4 Config",
+        "SDAR timeout chain"
+      ],
+      "propagation": "Timeout value affects SDAR escalation timing, approval workflow UX, and config defaults",
+      "resolution": "Resolve MASTER_SPEC vs CLAUDE.md — likely MASTER_SPEC (30min) is authoritative per RULE 1.3 hierarchy"
+    },
+    {
+      "finding": "F-A4-01 (V2 Lead Agent Opus)",
+      "severity": "MEDIUM",
+      "source": "AGENT_TEAMS_SPEC §3.2",
+      "affected": [
+        "PART2 §6.7 Agent Teams",
+        "Cost projections V2"
+      ],
+      "propagation": "Opus model change affects cost calculations and capability assumptions for V2",
+      "resolution": "Add V2 model upgrade note to PART2 §6.7"
+    },
+    {
+      "finding": "F-A6-01 (RAG limits omitted)",
+      "severity": "MEDIUM",
+      "source": "D2.0-06 §1.1",
+      "affected": [
+        "PART2 §6.5 Memory/RAG",
+        "PHASE_B4 Config"
+      ],
+      "propagation": "RAG limits affect chunk retrieval performance and context window management",
+      "resolution": "Add RAG operation limits to PART2 §6.5 implementation notes"
+    },
+    {
+      "finding": "F-104 (Python version conflict)",
+      "severity": "MEDIUM",
+      "source": "AI_INVESTING_SPEC D-S5-01",
+      "affected": [
+        "PART2 §6.8 AI Investing",
+        "D2.1-A1 Tech Stack",
+        "PHASE_B3 Dependencies"
+      ],
+      "propagation": "Python 3.12 vs 3.11+ affects dependency compatibility across all modules",
+      "resolution": "Resolve to 3.11+ (VAMOS-wide) — AI_INVESTING_SPEC should align or document exception"
+    },
+    {
+      "finding": "F-A5-03 (V0 schema table incomplete)",
+      "severity": "MEDIUM (→LOW after adversarial)",
+      "source": "D2.1-D5 Phase-A",
+      "affected": [
+        "PART2 V0 schema inventory"
+      ],
+      "propagation": "Missing schemas in V0 table could cause implementation gaps",
+      "resolution": "Verify V0 scope — Phase-A schemas may be V1+ items"
+    },
+    {
+      "finding": "F-72 (Agent Lifecycle 5-state LOCK)",
+      "severity": "MEDIUM (→LOW after adversarial)",
+      "source": "AGENT_TEAMS_SPEC §2.4",
+      "affected": [
+        "PART2 §6.7"
+      ],
+      "propagation": "Lifecycle states affect state machine implementation and testing",
+      "resolution": "Add LOCK lifecycle reference to PART2 §6.7"
+    },
+    {
+      "finding": "F-A6-06 (VectorStore interface)",
+      "severity": "MEDIUM",
+      "source": "D2.0-06",
+      "affected": [
+        "PART2 §6.5 Memory/RAG",
+        "V1 implementation"
+      ],
+      "propagation": "Interface contract needed for adapter pattern implementation",
+      "resolution": "Add VectorStore adapter interface summary to PART2 §6.5"
+    }
+  ],
+  "cross_cutting_patterns": [
+    "Most findings (67%) are P3_omission — PART2 intentionally delegates details to SOT. These are documentation completeness issues, not errors.",
+    "LOCK violation count = 0 — all LOCK values are consistent (major improvement from v6).",
+    "Numeric mismatches (P1) dropped from v6 — Phase 0 SOT fixes resolved major value conflicts.",
+    "Schema-related findings cluster in Agent 5 — D2.1 schema documents are most divergent from PART2."
+  ]
+}

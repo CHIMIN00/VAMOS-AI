@@ -1,0 +1,110 @@
+{
+  "agent": "Agent 7",
+  "scope": "PART2 §6.7~6.8 Agent Teams + AI Investing 상세 구현 검증 (vs AGENT_TEAMS_SPEC, AI_INVESTING_SPEC)",
+  "session": "session_15",
+  "timestamp": "2026-03-21T14:00:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 20,
+    "matches": 18,
+    "mismatches": [
+      {
+        "id": "A7-M1",
+        "fact": "LOCK-AT-003 근거: D2.0-03 §1.4, D2.0-05 §7.3",
+        "part2_ref": "PART2 L2674",
+        "sot_ref": "AGENT_TEAMS_SPEC L1996",
+        "match": false,
+        "detail": "PART2='D2.0-03 §1.4, D2.0-05 §7.3', SOT='D2.0-03 §1.4, D2.0-05 §7.3 고정3'. SOT has suffix '고정3' which PART2 omits. Minor omission but affects traceability."
+      },
+      {
+        "id": "A7-M2",
+        "fact": "V1 에이전트 Lead LLM assignment",
+        "part2_ref": "PART2 L2648",
+        "sot_ref": "AGENT_TEAMS_SPEC §2.1/§9.1",
+        "match": false,
+        "detail": "PART2 states Lead Agent uses 'Sonnet' but AGENT_TEAMS_SPEC §9.1 V1 에이전트 구성 says Lead runs I-5 with context of ORANGE CORE. LLM assignment is Sonnet in PART2 table but the SOT does not explicitly assign 'Sonnet' to the Lead in the V1 table (it specifies the LLM choice through config). Minor inconsistency in LLM labeling specificity."
+      }
+    ],
+    "match_details": [
+      {"fact": "V1 에이전트 수: Lead + 2 Sub-Agent (최대 3)", "part2_ref": "PART2 L2637", "sot_ref": "AGENT_TEAMS_SPEC §9.1", "match": true, "detail": "SOT §9.1 states '2~3 에이전트'. Matches."},
+      {"fact": "위임 깊이: 2단계 (LOCK-AT-004 상한=3)", "part2_ref": "PART2 L2639", "sot_ref": "AGENT_TEAMS_SPEC §9.1 L1893", "match": true, "detail": "SOT states '최대 2단계 (Lead → Sub) — config 제한. LOCK-AT-004 절대상한=3단계'. Exact match."},
+      {"fact": "MessageBus: In-Memory Queue (V1)", "part2_ref": "PART2 L2640", "sot_ref": "AGENT_TEAMS_SPEC §2.3.0", "match": true, "detail": "SOT §2.3.0 confirms V1 uses In-Memory Queue, V2 upgrades to Redis/Kafka."},
+      {"fact": "LOCK-AT-001: V1 자체 경량 프레임워크", "part2_ref": "PART2 L2672", "sot_ref": "AGENT_TEAMS_SPEC L1994", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-002: 단일결정 원칙", "part2_ref": "PART2 L2673", "sot_ref": "AGENT_TEAMS_SPEC L1995", "match": true, "detail": "Exact match. Root ref: D2.0-02 §2.2 S3."},
+      {"fact": "LOCK-AT-004: 위임 체인 최대 깊이 3단계", "part2_ref": "PART2 L2675", "sot_ref": "AGENT_TEAMS_SPEC L1997", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-005: 07 Gate 선행 통과 필수", "part2_ref": "PART2 L2676", "sot_ref": "AGENT_TEAMS_SPEC L1998", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-008: P2 Trading 기본 OFF, 세션별 승인", "part2_ref": "PART2 L2679", "sot_ref": "AGENT_TEAMS_SPEC L2001", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-009: 대화 턴 상한 P0=5, P1=10, P2=20", "part2_ref": "PART2 L2680", "sot_ref": "AGENT_TEAMS_SPEC L2002", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-010: TEE 최대 반복 P0=3, P1=5, P2=10", "part2_ref": "PART2 L2681", "sot_ref": "AGENT_TEAMS_SPEC L2003", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-011: 비용 상한 초과 자동 차단", "part2_ref": "PART2 L2682", "sot_ref": "AGENT_TEAMS_SPEC L2004", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-012: HMAC 무결성 서명 필수", "part2_ref": "PART2 L2683", "sot_ref": "AGENT_TEAMS_SPEC L2005", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-014: V1 병렬 상한=3, V2=10, V3=50+", "part2_ref": "PART2 L2685", "sot_ref": "AGENT_TEAMS_SPEC L2007", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-015: Lead Agent 직접 실행 금지", "part2_ref": "PART2 L2686", "sot_ref": "AGENT_TEAMS_SPEC L2008", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-016: LangChain import 금지", "part2_ref": "PART2 L2687", "sot_ref": "AGENT_TEAMS_SPEC L2009", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-017: 노코드 빌더 n8n + Flowise 듀얼", "part2_ref": "PART2 L2688", "sot_ref": "AGENT_TEAMS_SPEC L2010", "match": true, "detail": "Exact match."},
+      {"fact": "LOCK-AT-013: 위임 시 OWNER 권한 실행", "part2_ref": "PART2 L2684", "sot_ref": "AGENT_TEAMS_SPEC L2006", "match": true, "detail": "Exact match."},
+      {"fact": "17건 LOCK-AT 총 수", "part2_ref": "PART2 L2666", "sot_ref": "AGENT_TEAMS_SPEC §9 LOCK table", "match": true, "detail": "SOT lists exactly 17 LOCK-AT items (001~017). PART2 also states 17건. Match."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 12,
+    "present": 10,
+    "missing": [
+      {
+        "id": "B7-M1",
+        "sot_fact": "V1/V2 통신 방식 구분 (LOCK): V1=Direct Call (In-Memory), V2+=MessageBus (Redis/Kafka)",
+        "sot_ref": "AGENT_TEAMS_SPEC §2.3.0",
+        "part2_present": "partial",
+        "detail": "PART2 L2640 states 'MessageBus: In-Memory Queue' for V1 but does not explicitly mention the V2 upgrade path to Redis/Kafka in the §6.7 table. However V2 §7.3 mentions MessageBus decision."
+      },
+      {
+        "id": "B7-M2",
+        "sot_fact": "Agent Lifecycle 5-state: IDLE → ASSIGNED → EXECUTING → REPORTING → TERMINATED (LOCK)",
+        "sot_ref": "AGENT_TEAMS_SPEC §2.4.1",
+        "part2_present": false,
+        "detail": "PART2 §6.7 does not include the Agent Lifecycle 5-state LOCK definition. This is a governance-level specification missing from the implementation guide."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "Lead Agent 역할: 계획/분배/검증만 수행, 직접 실행 금지 (LOCK)", "sot_ref": "AGENT_TEAMS_SPEC §2.1.1", "part2_present": true, "detail": "PART2 L2686 LOCK-AT-015 covers this."},
+      {"sot_fact": "Sub-Agent ↔ BLUE NODE 매핑: Research=P0, Dev=P0, Quant=P1, Content=P1, Trading=P2", "sot_ref": "AGENT_TEAMS_SPEC §2.2.1", "part2_present": true, "detail": "PART2 L2648-2661 has agent type table with domain/priority mappings."},
+      {"sot_fact": "LOCK 메시지 포맷 필드: msg_id, from_agent, to_agent, msg_type, payload, timestamp, trace_id, hmac_signature", "sot_ref": "AGENT_TEAMS_SPEC §2.3.1", "part2_present": "partial", "detail": "PART2 mentions HMAC requirement (LOCK-AT-012) but does not list the full message schema fields."},
+      {"sot_fact": "위임 체인 규칙 LOCK: max_depth=3, 순환 금지, OWNER 권한 유지", "sot_ref": "AGENT_TEAMS_SPEC §3.3.2", "part2_present": true, "detail": "PART2 LOCK-AT-004 and LOCK-AT-013 cover max_depth and OWNER privilege."},
+      {"sot_fact": "V2 추가 에이전트: Quant, Content, Trading, Productivity, Critic, SDAR", "sot_ref": "AGENT_TEAMS_SPEC §9.2", "part2_present": true, "detail": "PART2 L2652-2661 lists all 6 V2 additional agents."},
+      {"sot_fact": "V3 병렬 50+ (LOCK-AT-014)", "sot_ref": "AGENT_TEAMS_SPEC §9.3", "part2_present": true, "detail": "PART2 L2685 states V3=50+."},
+      {"sot_fact": "협업 패턴: Sequential, Parallel, Debate, Supervisor, Handoff (V1: Sequential+Parallel only)", "sot_ref": "AGENT_TEAMS_SPEC §9.1", "part2_present": true, "detail": "PART2 L2638 states 'Sequential, Parallel만' for V1."},
+      {"sot_fact": "DEFER-AT-003: Agent Marketplace 등록 기준 미정의", "sot_ref": "AGENT_TEAMS_SPEC §9.2 하단", "part2_present": true, "detail": "PART2 L2664 includes this DEFER."},
+      {"sot_fact": "Trading Agent P2 도메인 Opus LLM 사용", "sot_ref": "AGENT_TEAMS_SPEC §4.5", "part2_present": true, "detail": "PART2 L2658 states Trading Agent uses Opus."},
+      {"sot_fact": "Agent 이벤트 시스템: agent.task.assigned, agent.task.completed, agent.task.failed", "sot_ref": "AGENT_TEAMS_SPEC §2.3.2", "part2_present": "partial", "detail": "PART2 §6.11 mentions 'agent.*' events in registry but does not enumerate specific agent event types."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-71",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "LOCK-AT 근거 참조에서 SOT의 '고정N' 접미사가 PART2에서 누락",
+      "evidence": "SOT LOCK-AT-003='D2.0-05 §7.3 고정3', PART2='D2.0-05 §7.3'. 추적성 약간 저하."
+    },
+    {
+      "id": "F-72",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Agent Lifecycle 5-state LOCK (IDLE→ASSIGNED→EXECUTING→REPORTING→TERMINATED)가 PART2 §6.7에 없음",
+      "evidence": "AGENT_TEAMS_SPEC §2.4.1 정의된 필수 생명주기 상태가 PART2 구현 가이드에 미포함."
+    },
+    {
+      "id": "F-73",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent 메시지 포맷 상세 필드(msg_id, from_agent, to_agent 등)가 PART2에 미기재",
+      "evidence": "AGENT_TEAMS_SPEC §2.3.1의 LOCK 메시지 스키마 8개 필드가 PART2에서 HMAC만 언급."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 32,
+    "match_rate": "87.5%",
+    "findings_count": 3
+  }
+}

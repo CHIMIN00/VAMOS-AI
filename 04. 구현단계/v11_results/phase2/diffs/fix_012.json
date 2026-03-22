@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-012",
+  "fg": "FG-H10",
+  "tier": 2,
+  "order": 12,
+  "severity": "HIGH",
+  "description": "V3 K8s $1000+→Hetzner/Docker Compose 기본 경로 명확화, V2 LlamaGuard GPU를 CPU 양자화/RunPod serverless 대안 명시",
+  "changes": [
+    {
+      "line": 2662,
+      "section": "§5 V3 header",
+      "action": "K8s를 선택적으로 변경, Hetzner+Docker Compose 기본 경로 명시"
+    },
+    {
+      "line": 2526,
+      "section": "§4 V2-Phase 3 사용자 작업",
+      "action": "LlamaGuard GPU 필수→CPU 양자화 또는 RunPod serverless 대안 추가"
+    }
+  ],
+  "ripple_expected": ["변경이력"],
+  "applied_at": "2026-03-13"
+}

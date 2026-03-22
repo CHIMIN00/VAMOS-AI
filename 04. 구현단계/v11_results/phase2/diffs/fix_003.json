@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-003",
+  "fg": "FG-B03",
+  "tier": 1,
+  "order": 3,
+  "severity": "BLOCKER",
+  "description": "SelfCheckGate가 plan 노드(I-5)가 아닌 verify 노드에서 실행됨을 명확화. I-5는 4-Gate를 plan 노드에서 실행, SelfCheck는 별도 verify 노드에서 실행.",
+  "changes": [
+    {
+      "line": 970,
+      "section": "§2 STEP-4 I-5 설명",
+      "action": "4-Gate vs 5th Gate 분리 명확화, CostGate 수치 FG-B01 후속 반영(70/85/95)"
+    },
+    {
+      "line": 977,
+      "section": "§2 STEP-4 Gate 순서",
+      "action": "plan 노드(4-Gate) → verify 노드(SelfCheck) 2단계 실행 구조 명확화"
+    }
+  ],
+  "ripple_expected": ["§6.11 (파이프라인 상태 전이)", "§7.1 (V0 5-Gate 체크)", "변경이력"],
+  "applied_at": "2026-03-12"
+}

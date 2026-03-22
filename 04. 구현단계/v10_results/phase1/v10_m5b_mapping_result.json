@@ -1,0 +1,3246 @@
+{
+  "_meta": {
+    "agent": "M-5b",
+    "phase": "Phase 1",
+    "scope": "§6.8~§6.13 + §7 GO/NO-GO + V_UNKNOWN + 통합",
+    "method": "keyword matching + cross-reference",
+    "total_features_scanned": 3940,
+    "generated_date": "2026-03-09",
+    "part2_version": "v21.0.0",
+    "part2_lines": "L3167~L3974"
+  },
+  "statistics": {
+    "s6_back_sections": 9,
+    "s6_back_feature_matches": {
+      "§6.8": 307,
+      "§6.8.1": 29,
+      "§6.9": 202,
+      "§6.10": 37,
+      "§6.10.1": 127,
+      "§6.10.2": 0,
+      "§6.11": 147,
+      "§6.12": 1,
+      "§6.13": 0
+    },
+    "gonogo_total": 63,
+    "gonogo_matched": 46,
+    "gonogo_no_match": 17,
+    "m1_m4_missing_total": 1140,
+    "m1_m4_missing_found_in_s6_back": 24,
+    "m1_m4_missing_still_missing": 1116,
+    "v_unknown_total": 0
+  },
+  "task1_s6_back_mapping": {
+    "§6.8": {
+      "total_matched": 307,
+      "with_phase": 0,
+      "no_phase": 307,
+      "items_no_phase": [
+        {
+          "feature_id": "S7JM-015",
+          "feature_name": "투자 차트 자동 생성",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "투자"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-048",
+          "feature_name": "AI Investing 시스템 구현 (83개 데이터소스, 96개 전략, 51% Gate, 5-Agent 구조, 법적 준수)",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "ai investing",
+            "51% gate",
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-240",
+          "feature_name": "AI Investing 83개 데이터 소스 통합",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-241",
+          "feature_name": "AI Investing 96개 전략 카탈로그 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing",
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-242",
+          "feature_name": "51% Gate 구현 (Win Rate≥51%, Sharpe≥1.0, Decay<30%)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing",
+            "51% gate"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-243",
+          "feature_name": "5-Agent 구조 구현 (Perplexity→Gemini→ChatGPT→Claude→Copilot)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-244",
+          "feature_name": "법적 준수 자동 감지 (Wash Sale/PDT/Uptick Rule)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-258",
+          "feature_name": "주 10~12: 통합 + AI Investing Paper Trading MVP + E2E 테스트",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "ai investing",
+            "paper trading"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-031",
+          "feature_name": "V3 하드웨어/DB 인프라 결정사항 구현 (37건)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "timescaledb"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-053",
+          "feature_name": "Soft/Hard 재시도 루프 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-069",
+          "feature_name": "시장 비교 8축 평가 프레임워크",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-073",
+          "feature_name": "MOAT 4건 경쟁우위 구현 추적",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "투자"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-077",
+          "feature_name": "마이그레이션/배포 전략 구현 (Blue-Green, 환경분리)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-079",
+          "feature_name": "Non-Goal 버전별 진화 규칙 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "투자"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-080",
+          "feature_name": "R1 V1+CRITICAL 5건 (차별화/가격/Safety/Cost 전략)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-081",
+          "feature_name": "R2 V1+HIGH 25건 (비즈니스모델/시장전략)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "V0RD-009",
+          "feature_name": "LangGraph StateGraph + Gate 노드 + Soft/Hard Loop + Circuit Breaker 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D202-024",
+          "feature_name": "Fallback Strategy 레지스트리 구현",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D202-115",
+          "feature_name": "3단계 테스트 전략 구현 (단위≥80%/통합≥90%/시나리오≥95%)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "전략"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D202-127",
+          "feature_name": "도메인 통합 파이프라인 구현 (coding/investing/knowledge/life 분류)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "투자"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.8.1": {
+      "total_matched": 29,
+      "with_phase": 0,
+      "no_phase": 29,
+      "items_no_phase": [
+        {
+          "feature_id": "V0RD-009",
+          "feature_name": "LangGraph StateGraph + Gate 노드 + Soft/Hard Loop + Circuit Breaker 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D203-027",
+          "feature_name": "MCP 고급 패턴 구현 (동적 tool_id 협상/컨텍스트전파/적응형타임아웃/Circuit Breaker/버전핀닝)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D203-043",
+          "feature_name": "A2A 에러 처리 및 복구 (Circuit Breaker/폴백체인/exponential backoff)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D203-110",
+          "feature_name": "앰비언트 인텔리전스 (Ambient Intelligence) 구현",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-124",
+          "feature_name": "Circuit Breaker (CLOSED→OPEN 3회→HALF-OPEN 60s→CLOSED)",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D205-009",
+          "feature_name": "Circuit Breaker 패턴 (CLOSED/OPEN/HALF-OPEN 상태 머신)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D205-097",
+          "feature_name": "웹 모니터링 (가격/채용/뉴스/공시/경쟁사 추적)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D205-109",
+          "feature_name": "SNS/콘텐츠 자동화 (블로그/X/LinkedIn/뉴스레터/리퍼포징)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D205-135",
+          "feature_name": "뉴스/트렌드 학습 (AI 큐레이션/배경 보충/토론 포인트)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D205-153",
+          "feature_name": "투자 데이터 소스 통합 (FRED/DART/SEC/Earnings/뉴스감성/논문/교육)",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D206-225",
+          "feature_name": "M-010 RSS/뉴스피드 지식화 (자동수집+일일다이제스트)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "DA1-017",
+          "feature_name": "P6-INV-04 매크로 이벤트 캘린더 연동 (FOMC/CPI/금리/실적)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "fomc"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "DD7-016",
+          "feature_name": "DataSourceFallback + CircuitBreakerConfig Pydantic 모델 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "AINV-032",
+          "feature_name": "이벤트 기반 전략 6개 구현 (Earnings Momentum/Merger Arb/Spin-off/Index Rebalancing/Dividend Capture/FOMC)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "fomc"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "AINV-039",
+          "feature_name": "Circuit Breaker 5규칙 구현 (일일손실-3%/VIX>40/포지션-10%/현금20%/단일종목10%)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "AINV-089",
+          "feature_name": "I-2 RAG 과거 거래 패턴/시장 뉴스 검색",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLIB-024",
+          "feature_name": "소스 신뢰도 가중치 7단계 시스템",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLIB-032",
+          "feature_name": "크론 기반 스케줄러 (소스 유형별 수집 주기)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLIB-046",
+          "feature_name": "데이터 신선도 관리 (TTL 기반, N2)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "뉴스"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "TEAM-104",
+          "feature_name": "S-4 Error 연동 (에이전트 오류 처리 + Circuit Breaker)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "circuit breaker"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.9": {
+      "total_matched": 202,
+      "with_phase": 0,
+      "no_phase": 202,
+      "items_no_phase": [
+        {
+          "feature_id": "CLAUDE-004",
+          "feature_name": "5-Gate 시스템 구현 (PolicyGate, CostGate, ApprovalGate, EvidenceGate, SelfCheckGate)",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "5-gate"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-017",
+          "feature_name": "I-18~I-25 확장 모듈 8개 구현 (Self-evo, Approval Manager, Failure Manager, Source Evolution, Task Manager, Doc Structuring, Knowledge Graph, SDAR)",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "sdar",
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-020",
+          "feature_name": "S-1~S-8 자기진화 모듈 8개 구현 (Self-check, Benchmark QA, Template Evo, Error Pattern, Router Evo, Search Evo, User-Coop, Self-evo Governance)",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-022",
+          "feature_name": "B-1~B-6 Memory/Skill/Self-evo 자산 모듈 6개 구현 (Skill Library, Procedural Memory, Memory Decay, Auto Curriculum, RL Self Trainer, DSPy Optimizer)",
+          "version_scope": "V1,V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-029",
+          "feature_name": "Self-evo LOCK 구현 (제안만 가능, 허용 6개, 불변 7개, 롤백 14일 잠금)",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-033",
+          "feature_name": "V2 진입 전 필수 구현 14항목 (전환조건 6개, Agent Teams, STEP7 ~190건 보강, 접두어 변경, SQLite→Postgres, Chroma→Qdrant, NetworkX→Neo4j, SDAR, MessageBus, HMAC, STEP7 모듈연동, 인프라 10개, 비용 대시보드, QoD 이중체계)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-034",
+          "feature_name": "V3 진입 전 필수 구현 11항목 (K8s 배포, S-8 거버넌스, 비용 재산정, GraphRAG 벤치마크, SDAR V3 조건, STEP7 ~317건 보강, 에이전트 50+, A2A 프로토콜, Federated 승인, Agent Marketplace)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-049",
+          "feature_name": "SDAR I-25 시스템 구현 (5-Layer Detection→Diagnosis→Prescription→Repair→Verification, AR-L0~L4, NEVER_AUTO 10항목)",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "sdar",
+            "5-layer",
+            "ar-l0",
+            "ar-l2",
+            "ar-l4"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-062",
+          "feature_name": "S-8 Self-evo Governance 모듈 구현",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-129",
+          "feature_name": "Self-evo 제안-승인 워크플로우 구현 (자동 적용 절대 금지)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-130",
+          "feature_name": "Self-evo 허용 6개 영역 제한 구현 (프롬프트/도구조합/메모리관리/출력포맷/워크플로우순서/모델선택)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-131",
+          "feature_name": "Self-evo 롤백 잠금 구현 (동일 제안 롤백 후 14일 재적용 금지)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-144",
+          "feature_name": "I-21~I-25 모듈 정의 추가 (V1-016)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-155",
+          "feature_name": "SDAR V2 COND 활성화 조건 정의 (AR-L2→AR-L3, LOW성공률≥95%) (V2-002)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "sdar",
+            "ar-l2",
+            "ar-l3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-160",
+          "feature_name": "S-8 Self-evo 거버넌스 상세화 (V3-002)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "self-evo"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-163",
+          "feature_name": "EventTypeRegistry 완성: agent.* + sdar.* 이벤트 통합 등록 (CC-006)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-234",
+          "feature_name": "EventTypeRegistry 구현 (53+ 이벤트: oc.i1.*/oc.i2.*/wf.*/ui.*/mem.*/agent.*/sdar.*)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-245",
+          "feature_name": "SDAR 5-Layer 구현 (Detection→Diagnosis→Prescription→Repair→Verification)",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "sdar",
+            "5-layer"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-246",
+          "feature_name": "AR-Level 구현 (AR-L0 수동~AR-L4 고위험자동, 기본 AR-L2)",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "sdar",
+            "ar-l0",
+            "ar-l2",
+            "ar-l4"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-247",
+          "feature_name": "NEVER_AUTO 10개 영역 보호 구현",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "sdar"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.10": {
+      "total_matched": 37,
+      "with_phase": 0,
+      "no_phase": 37,
+      "items_no_phase": [
+        {
+          "feature_id": "CLAUDE-028",
+          "feature_name": "데이터/인프라 LOCK 구현 (GraphRAG DEC-004, Embedding BGE-M3, QoD 0~1, QoD 가중치, Semantic Cache 0.95, Vector DB, RAG 6단계, 병렬 3, 설정 우선순위 ENV>toml>default, JSON 로깅, 네이밍 규칙)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-037",
+          "feature_name": "V3 기술 스택 마이그레이션 (vLLM, text-embedding-3-large, Qdrant Cloud, Neo4j Aura, Managed Postgres, K8s, 모바일 네이티브)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-042",
+          "feature_name": "Python-Rust JSON-RPC 13개 엔드포인트 구현 (langgraph.*, embedding.*, llm.*, mcp.*)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-052",
+          "feature_name": "config.v1.toml LOCK 값 13개 구현 (single_decision_lock, embedding model/dim, vector_db, graph_db, cost daily/monthly/warn/block, semantic_cache, logging trace_id, mcp transport)",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-120",
+          "feature_name": "Embedding BGE-M3 로컬 구현 (1024dim) + text-embedding-3-small 클라우드",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-154",
+          "feature_name": "10-Layer 명칭 충돌 해결: Cloud Library CL-Layer 접두어 (V2-001)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "cloud library",
+            "10-layer"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-157",
+          "feature_name": "Chroma→Qdrant 벡터 재임베딩 (4-Phase, needs_reembedding 플래그) (V2-005)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-162",
+          "feature_name": "QoD 가중치 이중 체계 구분 명시: RAG 소스 vs Cloud Library 수집 (CC-003)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "cloud library"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-197",
+          "feature_name": "V2+ Embedding 확장: text-embedding-3-small 추가",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-214",
+          "feature_name": "Python-Rust JSON-RPC 구현 (langgraph.*/embedding.*/llm.*/mcp.* 13개)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-223",
+          "feature_name": "config 디렉토리 구성 (default.toml + llm/embedding/storage/safety/mcp)",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-260",
+          "feature_name": "config.v1.toml embedding.model=bge-m3 적용",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-261",
+          "feature_name": "config.v1.toml embedding.dimension=1024 적용",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D202-095",
+          "feature_name": "OpenAI API Brain Adapter 연동 구현 (12건)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D203-088",
+          "feature_name": "C8 크롤러 → MCP 기반 수집 구조 전환 (S14-A-010)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "크롤"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D206-072",
+          "feature_name": "Cloud Library 출처별 QoD 가중치 설정",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "cloud library"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D206-152",
+          "feature_name": "Batch Embedding + File Search + 동적 차원 선택",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D206-156",
+          "feature_name": "EmbeddingConfig 스키마 + Memory.type 4종 + rag_framework 3단계",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "embedding"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D208-046",
+          "feature_name": "S7C-001 3-Column 레이아웃 + S7C-002 대화 목록 사이드바 [V1/CRITICAL]",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "크롤"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D208-078",
+          "feature_name": "E-17 CLib UI (수집 라이브러리 목록/상태/수동 트리거/승인)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "cloud library"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.10.1": {
+      "total_matched": 127,
+      "with_phase": 0,
+      "no_phase": 127,
+      "items_no_phase": [
+        {
+          "feature_id": "S7JM-013",
+          "feature_name": "이미지 편집 (인페인팅/아웃페인팅)",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "t2"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-015",
+          "feature_name": "투자 차트 자동 생성",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "t2"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-113",
+          "feature_name": "A2A 보안 프레임워크",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "t2"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-124",
+          "feature_name": "AutoGen 대화 패턴 참조",
+          "version_scope": "V2",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "V0RD-005",
+          "feature_name": "72개 Tauri IPC 커맨드 핸들러 구현 (Core15/Agent15/Storage18/Safety19/UI5)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-155",
+          "feature_name": "INT4 QAT 로컬 배포 (메모리 75% 절감, 속도 2배)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-156",
+          "feature_name": "재무제표 시계열 DB (DuckDB 10년치, DART+EDGAR 수집)",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-157",
+          "feature_name": "엣지-클라우드 하이브리드 (복잡도 판별→로컬/클라우드 자동전환)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-158",
+          "feature_name": "예측적 비용 최적화 (30일 패턴 학습→자동 전환 스케줄)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-159",
+          "feature_name": "분산 에이전트 실행 (Ray/K8s Pod 기반)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D204-160",
+          "feature_name": "Muon 옵티마이저 (MoE 학습 특화)",
+          "version_scope": "V3",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "DQ1-001",
+          "feature_name": "D1~D8 전체 스키마 버전 v3.0.0 통일 승격 구현",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "AINV-024",
+          "feature_name": "51% Gate 통과 조건 검증 (승률>=51%, Sharpe>=1.0, Decay<30%, 최소거래>=30, Train70/Test30)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "t3"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "AINV-057",
+          "feature_name": "ML용 데이터 소스 우선순위 Fallback Chain 7소스 (yfinance/Alpha Vantage/Polygon.io/KRX/FRED/ccxt/finnhub)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "finnhub"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLIB-098",
+          "feature_name": "L5-L7 스코어링 LOCK 설정 반영",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "t2"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-001",
+          "feature_name": "이미지 입력 처리 파이프라인",
+          "version_scope": "V1,V2,V3",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-002",
+          "feature_name": "멀티모달 대화 컨텍스트 관리",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-003",
+          "feature_name": "OCR + 문서 이해",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-004",
+          "feature_name": "스크린 캡처 + 화면 이해",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "S7JM-005",
+          "feature_name": "차트/그래프/다이어그램 자동 분석",
+          "version_scope": "V1,V2",
+          "matched_keywords": [
+            "t1"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.10.2": {
+      "total_matched": 0,
+      "with_phase": 0,
+      "no_phase": 0,
+      "items_no_phase": []
+    },
+    "§6.11": {
+      "total_matched": 147,
+      "with_phase": 0,
+      "no_phase": 147,
+      "items_no_phase": [
+        {
+          "feature_id": "CLAUDE-015",
+          "feature_name": "I-10 Tool Registry/Router 모듈 구현",
+          "version_scope": "V0,V1,V2,V3",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-032",
+          "feature_name": "V1 진입 전 필수 구현 21항목 (I-Series 25개 확정, E-15/S-5 명칭, DEFER/TBD 확인, datetime 교체, enum 통일, QoD 통일, Front Mini, Guardrails, 비용, React, LangChain, 보안, 테스트, CI/CD, 스토리지, EventType, 스키마 동기화, BEGINNER 갱신 등)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "eventtype"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-043",
+          "feature_name": "MCP Tool Protocol 3개 엔드포인트 구현 (tools/call, tool_registry.get/list)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-047",
+          "feature_name": "6개 레지스트리 구현 (EventType 53+, FailureCode 20, Fallback 13, Tool, Node, VerifyChain EVX-1~6)",
+          "version_scope": "V2,V3",
+          "matched_keywords": [
+            "eventtype",
+            "이벤트",
+            "failurecode",
+            "fallback"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-128",
+          "feature_name": "네이밍 컨벤션 적용 (event:lower.dot / failure:UPPER_SNAKE / fallback:FB_ / state:S#_ / module:S-#)",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "fallback",
+            "fb_"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-163",
+          "feature_name": "EventTypeRegistry 완성: agent.* + sdar.* 이벤트 통합 등록 (CC-006)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "eventtype",
+            "이벤트",
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-215",
+          "feature_name": "MCP Tool Protocol 구현 (tools/call, tool_registry.get/list 3개)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-234",
+          "feature_name": "EventTypeRegistry 구현 (53+ 이벤트: oc.i1.*/oc.i2.*/wf.*/ui.*/mem.*/agent.*/sdar.*)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "eventtype",
+            "이벤트",
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-235",
+          "feature_name": "FailureCodeRegistry 구현 (20개: OC_I1_*/OC_I2_*/POLICY_DENY/GT_ERR_*/TOOL_*)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "failurecode",
+            "registry",
+            "oc_i1",
+            "oc_i2"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-236",
+          "feature_name": "FallbackRegistry 구현 (13개: FB_ASK_CLARIFICATION/FB_RAG_*/FB_COST_*/FB_REQUIRE_*/FB_OUTPUT_*)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "fallback",
+            "registry",
+            "fb_"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-237",
+          "feature_name": "ToolRegistry 구현 (tool_id, category 8종, adapter_id, risk_class, cost_class, required_gates)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-238",
+          "feature_name": "NodeRegistry 구현 (domain_name 기반)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "CLAUDE-239",
+          "feature_name": "VerifyChainRegistry 구현 (EVX-1~EVX-6)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "P30-016",
+          "feature_name": "Fallback/Retry/Recovery 시스템 구현",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "fallback"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "MSTR-018",
+          "feature_name": "Failure→Fallback 매핑 구현 (20쌍)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "fallback"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "MSTR-019",
+          "feature_name": "EventTypeRegistry 53개 구현",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "eventtype",
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "MSTR-020",
+          "feature_name": "FailureCodeRegistry 20개 구현",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "failurecode",
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "MSTR-021",
+          "feature_name": "FallbackRegistry 13개 구현",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "fallback",
+            "registry"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "IRRV-001",
+          "feature_name": "Storage event_type/failure_code 중앙 레지스트리 등록 (storage.* 5개 + failure 1개 + fallback 1개)",
+          "version_scope": "V0",
+          "matched_keywords": [
+            "fallback"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        },
+        {
+          "feature_id": "D201-008",
+          "feature_name": "이벤트/실패/폴백 ID 네이밍 규칙 구현",
+          "version_scope": "V0,V1",
+          "matched_keywords": [
+            "이벤트",
+            "fallback"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.12": {
+      "total_matched": 1,
+      "with_phase": 0,
+      "no_phase": 1,
+      "items_no_phase": [
+        {
+          "feature_id": "DD4-006",
+          "feature_name": "BackupConfigSchema Pydantic v2 모델 코드 생성 (7 fields)",
+          "version_scope": "V1",
+          "matched_keywords": [
+            "백업 주기"
+          ],
+          "has_phase_assignment": false,
+          "part2_phase": "",
+          "part2_line": null
+        }
+      ]
+    },
+    "§6.13": {
+      "total_matched": 0,
+      "with_phase": 0,
+      "no_phase": 0,
+      "items_no_phase": []
+    }
+  },
+  "task2_gonogo_mapping": [
+    {
+      "gonogo_id": "V0-001",
+      "gonogo_desc": "통신 계층: Python 백엔드 확정",
+      "gonogo_line": 3737,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-147",
+          "feature_name": "V0 비용 상한 = V1 동일 적용 ₩40,000/월 (V0-001)",
+          "matched_term": "v0-001"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V0-002",
+      "gonogo_desc": "IMPLEMENTATION 계층 = PHASE_B 명시",
+      "gonogo_line": 3738,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-138",
+          "feature_name": "IMPLEMENTATION 계층 = PHASE_B 명시 (V0-002)",
+          "matched_term": "implementation 계층 = phase_b 명시"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V0-003",
+      "gonogo_desc": "V0 비용 상한 = V1 동일 명시",
+      "gonogo_line": 3739,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-148",
+          "feature_name": "디렉토리 구조 PHASE_B2 정본 적용 (V0-003)",
+          "matched_term": "v0-003"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V0-004",
+      "gonogo_desc": "디렉토리 구조: PHASE_B2 정본 명시 + monorepo 생성",
+      "gonogo_line": 3740,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-139",
+          "feature_name": "Python 백엔드 통신 계층 확정 (V0-004)",
+          "matched_term": "v0-004"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V0-005",
+      "gonogo_desc": "config 포맷: config.toml 통일",
+      "gonogo_line": 3741,
+      "version": "V0",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "CC-001",
+      "gonogo_desc": "D2.1 스키마 v3.0.0 통일 승격",
+      "gonogo_line": 3742,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-161",
+          "feature_name": "스키마 버전 v3.0.0 통일 승격 (CC-001)",
+          "matched_term": "cc-001"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-010",
+      "gonogo_desc": "PLAN-2.0 (대체됨) 표기",
+      "gonogo_line": 3743,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-031",
+          "feature_name": "V0 진입 전 필수 구현 16항목 (통신 확정, IMPL 계층, 비용 상한, 디렉토리, config, 스키마 v3.0.0, PLAN-2.0 표기, BASE 규칙 매핑, 스캐폴딩, LOCK 배치, 24 스키마 생성, I-1~I-5+I-19 스켈레톤, L0 최소, 비용 하드코딩, Guardrails L1+L2, 초기화)",
+          "matched_term": "plan-2.0"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "RULE-1.3",
+      "gonogo_desc": "BASE-1.3 전 24개 규칙 코드 매핑",
+      "gonogo_line": 3744,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-170",
+          "feature_name": "BASE-1.3 전 24개 규칙 코드 매핑",
+          "matched_term": "base-1.3 전 24개 규칙 코드 매핑"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "PHASE_B2/B3",
+      "gonogo_desc": "스캐폴딩 + 의존성 설치",
+      "gonogo_line": 3745,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-031",
+          "feature_name": "V0 진입 전 필수 구현 16항목 (통신 확정, IMPL 계층, 비용 상한, 디렉토리, config, 스키마 v3.0.0, PLAN-2.0 표기, BASE 규칙 매핑, 스캐폴딩, LOCK 배치, 24 스키마 생성, I-1~I-5+I-19 스켈레톤, L0 최소, 비용 하드코딩, Guardrails L1+L2, 초기화)",
+          "matched_term": "스캐폴딩"
+        },
+        {
+          "feature_id": "CLAUDE-044",
+          "feature_name": "Monorepo 프로젝트 구조 스캐폴딩 (src/, src-tauri/, backend/vamos_core/, shared/types/, config/, data/, tests/)",
+          "matched_term": "스캐폴딩"
+        },
+        {
+          "feature_id": "CLAUDE-052",
+          "feature_name": "config.v1.toml LOCK 값 13개 구현 (single_decision_lock, embedding model/dim, vector_db, graph_db, cost daily/monthly/warn/block, semantic_cache, logging trace_id, mcp transport)",
+          "matched_term": "스캐폴딩"
+        },
+        {
+          "feature_id": "CLAUDE-171",
+          "feature_name": "스캐폴딩 + 의존성 설치 (pip/npm/cargo)",
+          "matched_term": "스캐폴딩"
+        },
+        {
+          "feature_id": "CLAUDE-217",
+          "feature_name": "Monorepo 디렉토리 스캐폴딩 (vamos/ 루트)",
+          "matched_term": "스캐폴딩"
+        },
+        {
+          "feature_id": "IRGD-004",
+          "feature_name": "PHASE_B2 Monorepo 디렉토리 스캐폴딩 생성",
+          "matched_term": "스캐폴딩"
+        }
+      ],
+      "match_count": 6,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "PHASE_B4",
+      "gonogo_desc": "config.v1.toml LOCK 값 배치",
+      "gonogo_line": 3746,
+      "version": "V0",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "D2.1-D1~D8",
+      "gonogo_desc": "25개 스키마 코드 생성",
+      "gonogo_line": 3747,
+      "version": "V0",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "READINESS-§2.7",
+      "gonogo_desc": "I-1~I-3, I-5, I-19 스켈레톤 생성",
+      "gonogo_line": 3748,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-010",
+          "feature_name": "I-5 Condition & Decision Engine (LOCK) 모듈 구현",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "CLAUDE-031",
+          "feature_name": "V0 진입 전 필수 구현 16항목 (통신 확정, IMPL 계층, 비용 상한, 디렉토리, config, 스키마 v3.0.0, PLAN-2.0 표기, BASE 규칙 매핑, 스캐폴딩, LOCK 배치, 24 스키마 생성, I-1~I-5+I-19 스켈레톤, L0 최소, 비용 하드코딩, Guardrails L1+L2, 초기화)",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "CLAUDE-173",
+          "feature_name": "I-1~I-5 + I-19 스켈레톤 생성",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "CLAUDE-254",
+          "feature_name": "주 1~2: ORANGE CORE 기본 파이프라인 구현 (I-1→I-2→I-5→I-8)",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "P30-078",
+          "feature_name": "I-Module 구현 우선순위 3 Phase 정의",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "P30-091",
+          "feature_name": "V0 스켈레톤 I-모듈 활성화 (I-1~I-5 + I-19)",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "IRGD-007",
+          "feature_name": "V0 구현 대상 모듈 (I-1~I-5+I-19 스켈레톤 + 비용엔진 + 로깅 + Guardrails L1+L2)",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "D201-003",
+          "feature_name": "V0 Minimal Core 구현 (stub 모듈 + 기본 파이프라인)",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "D202-046",
+          "feature_name": "I-5 Runtime Brain Router 모듈 구현",
+          "matched_term": "i-5"
+        },
+        {
+          "feature_id": "D202-103",
+          "feature_name": "TEE 루프 (Think-Execute-Evaluate) CORE 제어자 구현",
+          "matched_term": "i-5"
+        }
+      ],
+      "match_count": 12,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "D2.0-06-§2.1",
+      "gonogo_desc": "L0 세션 메모리 최소 구현",
+      "gonogo_line": 3749,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-174",
+          "feature_name": "L0 세션 메모리 최소 구현",
+          "matched_term": "l0 세션 메모리 최소 구현"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "ABSOLUTE-LOCK",
+      "gonogo_desc": "비용 엔진 ₩40,000/월 하드코딩",
+      "gonogo_line": 3750,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-110",
+          "feature_name": "V1 비용 엔진 구현 (₩40,000/월, ₩1,300/일, Mini 90%+)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-147",
+          "feature_name": "V0 비용 상한 = V1 동일 적용 ₩40,000/월 (V0-001)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-175",
+          "feature_name": "비용 엔진 ₩40,000/월 하드코딩",
+          "matched_term": "비용 엔진 ₩40"
+        },
+        {
+          "feature_id": "CLAUDE-187",
+          "feature_name": "V2 비용 모니터링 대시보드 구현 (₩93,000 이내)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-265",
+          "feature_name": "config.v1.toml cost.monthly_limit=40000 적용 (ABSOLUTE LOCK)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D203-093",
+          "feature_name": "MCP 성능 모니터링 및 감사 로그 구현 (Inspector/메트릭/감사로그스키마)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D204-162",
+          "feature_name": "모델 A/B 테스팅 고급 (1000건/7일, 자동 승격/롤백)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D204-167",
+          "feature_name": "API Gateway Layer (모든 기능 REST, Rate 1000/min)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D208-038",
+          "feature_name": "멀티모달 참고자료 및 구현 로드맵 (J-089~J-098, 10건: V1 즉시/V2 3개월/V3 6개월+ 항목 정리)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "DA1-010",
+          "feature_name": "COMBO-V1-LOCAL 스택 조합 구성 (월 ₩40,000 상한)",
+          "matched_term": "000"
+        }
+      ],
+      "match_count": 23,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "PHASE_B4-G",
+      "gonogo_desc": "Guardrails L1+L2 설정",
+      "gonogo_line": 3751,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-031",
+          "feature_name": "V0 진입 전 필수 구현 16항목 (통신 확정, IMPL 계층, 비용 상한, 디렉토리, config, 스키마 v3.0.0, PLAN-2.0 표기, BASE 규칙 매핑, 스캐폴딩, LOCK 배치, 24 스키마 생성, I-1~I-5+I-19 스켈레톤, L0 최소, 비용 하드코딩, Guardrails L1+L2, 초기화)",
+          "matched_term": "guardrails l1"
+        },
+        {
+          "feature_id": "CLAUDE-176",
+          "feature_name": "Guardrails L1+L2 초기 설정",
+          "matched_term": "guardrails l1"
+        },
+        {
+          "feature_id": "IRGD-007",
+          "feature_name": "V0 구현 대상 모듈 (I-1~I-5+I-19 스켈레톤 + 비용엔진 + 로깅 + Guardrails L1+L2)",
+          "matched_term": "guardrails l1"
+        }
+      ],
+      "match_count": 3,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "PHASE_B4-O",
+      "gonogo_desc": "Ollama + Chroma + SQLite 초기화",
+      "gonogo_line": 3752,
+      "version": "V0",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-033",
+          "feature_name": "V2 진입 전 필수 구현 14항목 (전환조건 6개, Agent Teams, STEP7 ~190건 보강, 접두어 변경, SQLite→Postgres, Chroma→Qdrant, NetworkX→Neo4j, SDAR, MessageBus, HMAC, STEP7 모듈연동, 인프라 10개, 비용 대시보드, QoD 이중체계)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-035",
+          "feature_name": "V1 기술 스택 구현 (Ollama+GPT-4o mini, BGE-M3, Chroma, JSON/NetworkX, SQLite+JSONL, Windows/WSL, Tauri+React, NeMo+Guardrails AI, LangGraph, MCP Streamable HTTP)",
+          "matched_term": "ollama"
+        },
+        {
+          "feature_id": "CLAUDE-107",
+          "feature_name": "Multi-Brain Failover 구현 (GPT-4o→Claude→Ollama, 3회 타임아웃 시 전환)",
+          "matched_term": "ollama"
+        },
+        {
+          "feature_id": "CLAUDE-124",
+          "feature_name": "Vector DB V1=Chroma 로컬 구현",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-157",
+          "feature_name": "Chroma→Qdrant 벡터 재임베딩 (4-Phase, needs_reembedding 플래그) (V2-005)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-177",
+          "feature_name": "Ollama + Chroma + SQLite 초기화",
+          "matched_term": "ollama"
+        },
+        {
+          "feature_id": "CLAUDE-181",
+          "feature_name": "스토리지 스택 구축 (SQLite+Chroma+JSONL+Graph)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-194",
+          "feature_name": "V1 LLM 통합: Ollama + GPT-4o mini",
+          "matched_term": "ollama"
+        },
+        {
+          "feature_id": "CLAUDE-198",
+          "feature_name": "V2 Vector DB: Chroma→Qdrant 서버 전환",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-224",
+          "feature_name": "data 디렉토리 구성 (sqlite/chroma/logs/graph/backups)",
+          "matched_term": "chroma"
+        }
+      ],
+      "match_count": 52,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-001/016",
+      "gonogo_desc": "I-Series 25개 모듈 정본 확정",
+      "gonogo_line": 3758,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V1-002/003",
+      "gonogo_desc": "E-15, S-5 명칭 겸용 처리",
+      "gonogo_line": 3759,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-019",
+          "feature_name": "E-7~E-16 V2/V3 외부 모듈 10개 구현 (STT, TTS, Video, API Gateway, Browser, DB, Calendar, Email, FileSystem, CloudStorage)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-032",
+          "feature_name": "V1 진입 전 필수 구현 21항목 (I-Series 25개 확정, E-15/S-5 명칭, DEFER/TBD 확인, datetime 교체, enum 통일, QoD 통일, Front Mini, Guardrails, 비용, React, LangChain, 보안, 테스트, CI/CD, 스토리지, EventType, 스키마 동기화, BEGINNER 갱신 등)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-141",
+          "feature_name": "E-15 명칭 충돌 처리: File System / Cloud Collector 겸용 (V1-002)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-150",
+          "feature_name": "datetime.utcnow() → datetime.now(timezone.utc) 전수 교체 (V1-005)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-151",
+          "feature_name": "QoD 5요소 가중치 통일: Accuracy 0.30 + Relevance 0.25 + Completeness 0.20 + Safety 0.15 + Efficiency 0.10 (V1-006)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-152",
+          "feature_name": "Front Mini LLM = I-1 내부 서브컴포넌트 명시 (V1-007)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-153",
+          "feature_name": "Guardrails 4-Layer 명시 (L4=V2+ 활성) (V1-010)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-154",
+          "feature_name": "10-Layer 명칭 충돌 해결: Cloud Library CL-Layer 접두어 (V2-001)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-155",
+          "feature_name": "SDAR V2 COND 활성화 조건 정의 (AR-L2→AR-L3, LOW성공률≥95%) (V2-002)",
+          "matched_term": "e-15"
+        },
+        {
+          "feature_id": "CLAUDE-156",
+          "feature_name": "JSONL→PostgreSQL+Loki 로그 마이그레이션 (V2-004)",
+          "matched_term": "e-15"
+        }
+      ],
+      "match_count": 43,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-008",
+      "gonogo_desc": "38개 DEFER/TBD V1 차단 0건 확인",
+      "gonogo_line": 3760,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V1-005",
+      "gonogo_desc": "datetime.utcnow() 전수 교체",
+      "gonogo_line": 3761,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-150",
+          "feature_name": "datetime.utcnow() → datetime.now(timezone.utc) 전수 교체 (V1-005)",
+          "matched_term": "datetime.utcnow"
+        },
+        {
+          "feature_id": "DD4-015",
+          "feature_name": "contracts.py datetime.utcnow() → datetime.now(timezone.utc) 전면 교체",
+          "matched_term": "datetime.utcnow"
+        },
+        {
+          "feature_id": "AINV-111",
+          "feature_name": "datetime.utcnow() Deprecated 교체 (I: datetime.now(UTC) 사용)",
+          "matched_term": "datetime.utcnow"
+        }
+      ],
+      "match_count": 3,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-004",
+      "gonogo_desc": "approval_status enum 통일",
+      "gonogo_line": 3762,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-149",
+          "feature_name": "approval_status enum 4값 통일: approved/denied/pending/expired (V1-004)",
+          "matched_term": "v1-004"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-006",
+      "gonogo_desc": "QoD 5요소 공식 통일",
+      "gonogo_line": 3763,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-151",
+          "feature_name": "QoD 5요소 가중치 통일: Accuracy 0.30 + Relevance 0.25 + Completeness 0.20 + Safety 0.15 + Efficiency 0.10 (V1-006)",
+          "matched_term": "v1-006"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-007",
+      "gonogo_desc": "Front Mini LLM = I-1 내부 명시",
+      "gonogo_line": 3764,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-152",
+          "feature_name": "Front Mini LLM = I-1 내부 서브컴포넌트 명시 (V1-007)",
+          "matched_term": "v1-007"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-010",
+      "gonogo_desc": "Guardrails 4-Layer 명시",
+      "gonogo_line": 3765,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-153",
+          "feature_name": "Guardrails 4-Layer 명시 (L4=V2+ 활성) (V1-010)",
+          "matched_term": "guardrails 4-layer 명시"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-013",
+      "gonogo_desc": "비용 상한 ₩40,000 통일",
+      "gonogo_line": 3766,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V1-014",
+      "gonogo_desc": "React 18.3 통일",
+      "gonogo_line": 3767,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-166",
+          "feature_name": "React 18.3 통일 (V1-014)",
+          "matched_term": "react 18.3 통일"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V1-009",
+      "gonogo_desc": "LangChain Allowlist 명시",
+      "gonogo_line": 3768,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "READINESS-§9",
+      "gonogo_desc": "V1 CRITICAL 보안항목 15개 구현",
+      "gonogo_line": 3769,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "PHASE_B5",
+      "gonogo_desc": "테스트 인프라 구축 (80%+)",
+      "gonogo_line": 3770,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-111",
+          "feature_name": "Downshift 로직 구현 (80% warn/force_mini, 100% block 자동차단)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "CLAUDE-136",
+          "feature_name": "비용 경고 색상 표시 구현 (80%=#FBBF24노란, 100%=#EF4444빨간, DEC-015)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "CLAUDE-179",
+          "feature_name": "테스트 인프라 구축 (80%+ 커버리지)",
+          "matched_term": "테스트 인프라 구축"
+        },
+        {
+          "feature_id": "P30-050",
+          "feature_name": "멀티모달 품질 메트릭 5종 구현 (OCR/구조/노이즈/언어/프레임)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "P30-060",
+          "feature_name": "자동 다운그레이드 규칙 구현 (5 트리거)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "P30-076",
+          "feature_name": "Capability Matrix + Gate 자동 체크리스트 구현",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "BASE-008",
+          "feature_name": "비용 관리 엔진 (실시간 토큰×단가 추적 + Hard Ceiling + 2단계 경고)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "IRGD-011",
+          "feature_name": "테스트 인프라 구축 (스키마100%/Core80%/Safety100%/통합100%)",
+          "matched_term": "테스트 인프라 구축"
+        },
+        {
+          "feature_id": "D202-115",
+          "feature_name": "3단계 테스트 전략 구현 (단위≥80%/통합≥90%/시나리오≥95%)",
+          "matched_term": "80%"
+        },
+        {
+          "feature_id": "D204-046",
+          "feature_name": "V1 저장소 비용 0원 (로컬 전용, 디스크 모니터링 80%/90%)",
+          "matched_term": "80%"
+        }
+      ],
+      "match_count": 25,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "PHASE_B6",
+      "gonogo_desc": "CI/CD 설정 완료",
+      "gonogo_line": 3771,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-180",
+          "feature_name": "CI/CD 설정 완료 (GitHub Actions 8-stage)",
+          "matched_term": "cd 설정 완료"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "D2.0-06",
+      "gonogo_desc": "스토리지 스택 구축",
+      "gonogo_line": 3772,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-181",
+          "feature_name": "스토리지 스택 구축 (SQLite+Chroma+JSONL+Graph)",
+          "matched_term": "스토리지 스택 구축"
+        },
+        {
+          "feature_id": "P30-072",
+          "feature_name": "IDEA 40건 로드맵 항목 추적",
+          "matched_term": "d2.0-06"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-006",
+      "gonogo_desc": "EventTypeRegistry 통합",
+      "gonogo_line": 3773,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-163",
+          "feature_name": "EventTypeRegistry 완성: agent.* + sdar.* 이벤트 통합 등록 (CC-006)",
+          "matched_term": "cc-006"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-007",
+      "gonogo_desc": "Python/TS 스키마 동기화 도구",
+      "gonogo_line": 3774,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-002",
+          "feature_name": "통신 계층 구현 (React UI ↔ Tauri IPC ↔ Rust Backend ↔ JSON-RPC stdin/stdout ↔ Python AI/ML ↔ MCP Streamable HTTP)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-042",
+          "feature_name": "Python-Rust JSON-RPC 13개 엔드포인트 구현 (langgraph.*, embedding.*, llm.*, mcp.*)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-045",
+          "feature_name": "Python contracts.py SOT → TypeScript Zod / Rust serde 타입 자동 생성",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-139",
+          "feature_name": "Python 백엔드 통신 계층 확정 (V0-004)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-143",
+          "feature_name": "Python 백엔드 진입점 정의 (V1-015)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-164",
+          "feature_name": "Python/TypeScript 스키마 동기화 메커니즘 (Pydantic→Zod 자동변환) (CC-007)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-214",
+          "feature_name": "Python-Rust JSON-RPC 구현 (langgraph.*/embedding.*/llm.*/mcp.* 13개)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-221",
+          "feature_name": "Python AI/ML 백엔드 구조 (orange_core/blue_nodes/infra/agent/storage/safety/schemas/mcp)",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-225",
+          "feature_name": "타입 동기화: Python contracts.py SOT → TypeScript Zod / Rust serde 생성",
+          "matched_term": "python"
+        },
+        {
+          "feature_id": "CLAUDE-251",
+          "feature_name": "Python PEP 8 + 타입 힌트 필수 + Pydantic v2 + async/await 적용",
+          "matched_term": "python"
+        }
+      ],
+      "match_count": 45,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-002",
+      "gonogo_desc": "BEGINNER_GUIDE 모듈 목록 갱신",
+      "gonogo_line": 3775,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "CC-009",
+      "gonogo_desc": "B↔L 매핑표 추가",
+      "gonogo_line": 3776,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "CC-011",
+      "gonogo_desc": "STEP7 항목 수 비고 추가",
+      "gonogo_line": 3777,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "§7.1-PASS",
+      "gonogo_desc": "V0 GO 체크리스트 전수 통과",
+      "gonogo_line": 3778,
+      "version": "V1",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V1-P6-MCP",
+      "gonogo_desc": "MCP Bridge/Server/Client 개별 검증",
+      "gonogo_line": 3779,
+      "version": "V1",
+      "matched_features": [
+        {
+          "feature_id": "V0RD-008",
+          "feature_name": "MCP Bridge/Server/Client + 래퍼 4개 구현 (Pyodide/PyMuPDF/CLIP/Playwright)",
+          "matched_term": "mcp bridge"
+        },
+        {
+          "feature_id": "D203-044",
+          "feature_name": "A2A ↔ MCP 브리지 (양방향 변환)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "D203-085",
+          "feature_name": "Claude Tool Use → MCP Bridge Layer 구현 (S09-B29-001/003)",
+          "matched_term": "mcp bridge"
+        },
+        {
+          "feature_id": "D203-088",
+          "feature_name": "C8 크롤러 → MCP 기반 수집 구조 전환 (S14-A-010)",
+          "matched_term": "mcp bridge"
+        },
+        {
+          "feature_id": "D203-090",
+          "feature_name": "MCP 인증 시스템 구현 (07Gate/API Key/OAuth2 + TLS 1.3 + 토큰마스킹)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "D203-104",
+          "feature_name": "웹 검색 MCP Server 구현 (Brave Search/Tavily/Serper 연동)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "D203-105",
+          "feature_name": "금융 데이터 수집 MCP Server 5종 구현 (DART/EDGAR/Yahoo Finance/네이버금융/ECOS)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "D203-106",
+          "feature_name": "Webhook MCP Server 구현 (register_webhook/list_webhooks/delete_webhook)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "D207-189",
+          "feature_name": "V2 서버 스택 조합 (GPT-4o mini+Qdrant+Postgres+Docker, 월≈65K~95K KRW)",
+          "matched_term": "server"
+        },
+        {
+          "feature_id": "DA1-011",
+          "feature_name": "COMBO-V2-SERVER 스택 조합 구성 (월 ₩93,000 상한)",
+          "matched_term": "server"
+        }
+      ],
+      "match_count": 15,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-TRANS",
+      "gonogo_desc": "V1→V2 전환 조건 6개 충족",
+      "gonogo_line": 3792,
+      "version": "V2",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V2-003",
+      "gonogo_desc": "Agent Teams FREEZE 해석 확정",
+      "gonogo_line": 3793,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-145",
+          "feature_name": "Agent Teams vs FREEZE 충돌 해결 (V2-003): Lead Agent 단방향만 V1, MessageBus는 V2",
+          "matched_term": "v2-003"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-008",
+      "gonogo_desc": "STEP7 V2 CRITICAL ~190건 상세 스펙 보강",
+      "gonogo_line": 3794,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-146",
+          "feature_name": "STEP7 TITLE_ONLY V2 CRITICAL ~190건 상세 스펙 보강 (V2-008)",
+          "matched_term": "v2-008"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-001/CC-004",
+      "gonogo_desc": "10-Layer/Gate 접두어 변경 (CL-)",
+      "gonogo_line": 3795,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-154",
+          "feature_name": "10-Layer 명칭 충돌 해결: Cloud Library CL-Layer 접두어 (V2-001)",
+          "matched_term": "10-layer"
+        },
+        {
+          "feature_id": "CLIB-097",
+          "feature_name": "L1-L4 아키텍처 LOCK 설정 반영",
+          "matched_term": "10-layer"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-004",
+      "gonogo_desc": "SQLite→PostgreSQL 마이그레이션",
+      "gonogo_line": 3796,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-033",
+          "feature_name": "V2 진입 전 필수 구현 14항목 (전환조건 6개, Agent Teams, STEP7 ~190건 보강, 접두어 변경, SQLite→Postgres, Chroma→Qdrant, NetworkX→Neo4j, SDAR, MessageBus, HMAC, STEP7 모듈연동, 인프라 10개, 비용 대시보드, QoD 이중체계)",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "CLAUDE-035",
+          "feature_name": "V1 기술 스택 구현 (Ollama+GPT-4o mini, BGE-M3, Chroma, JSON/NetworkX, SQLite+JSONL, Windows/WSL, Tauri+React, NeMo+Guardrails AI, LangGraph, MCP Streamable HTTP)",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "CLAUDE-156",
+          "feature_name": "JSONL→PostgreSQL+Loki 로그 마이그레이션 (V2-004)",
+          "matched_term": "v2-004"
+        },
+        {
+          "feature_id": "CLAUDE-177",
+          "feature_name": "Ollama + Chroma + SQLite 초기화",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "CLAUDE-181",
+          "feature_name": "스토리지 스택 구축 (SQLite+Chroma+JSONL+Graph)",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "CLAUDE-200",
+          "feature_name": "V2 Storage: SQLite+JSONL→PostgreSQL 전환",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "CLAUDE-224",
+          "feature_name": "data 디렉토리 구성 (sqlite/chroma/logs/graph/backups)",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "P30-011",
+          "feature_name": "메모리 저장 형식 JSON+SQLite 하이브리드 구현",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "IRGD-009",
+          "feature_name": "V1 Storage 스택 구축 (SQLite+Chroma+JSONL+Graph+Cache+Backup)",
+          "matched_term": "sqlite"
+        },
+        {
+          "feature_id": "IRGD-013",
+          "feature_name": "V2 3대 마이그레이션 스크립트 (SQLite→PostgreSQL/Chroma→Qdrant/NetworkX→Neo4j)",
+          "matched_term": "sqlite"
+        }
+      ],
+      "match_count": 37,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-005",
+      "gonogo_desc": "Chroma→Qdrant 재임베딩",
+      "gonogo_line": 3797,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-033",
+          "feature_name": "V2 진입 전 필수 구현 14항목 (전환조건 6개, Agent Teams, STEP7 ~190건 보강, 접두어 변경, SQLite→Postgres, Chroma→Qdrant, NetworkX→Neo4j, SDAR, MessageBus, HMAC, STEP7 모듈연동, 인프라 10개, 비용 대시보드, QoD 이중체계)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-035",
+          "feature_name": "V1 기술 스택 구현 (Ollama+GPT-4o mini, BGE-M3, Chroma, JSON/NetworkX, SQLite+JSONL, Windows/WSL, Tauri+React, NeMo+Guardrails AI, LangGraph, MCP Streamable HTTP)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-124",
+          "feature_name": "Vector DB V1=Chroma 로컬 구현",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-157",
+          "feature_name": "Chroma→Qdrant 벡터 재임베딩 (4-Phase, needs_reembedding 플래그) (V2-005)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-177",
+          "feature_name": "Ollama + Chroma + SQLite 초기화",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-181",
+          "feature_name": "스토리지 스택 구축 (SQLite+Chroma+JSONL+Graph)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-198",
+          "feature_name": "V2 Vector DB: Chroma→Qdrant 서버 전환",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-224",
+          "feature_name": "data 디렉토리 구성 (sqlite/chroma/logs/graph/backups)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-255",
+          "feature_name": "주 3~4: Storage/Memory + RAG 구현 (L0/L1, Chroma, BM25+Vector)",
+          "matched_term": "chroma"
+        },
+        {
+          "feature_id": "CLAUDE-262",
+          "feature_name": "config.v1.toml vector_db.backend=chroma 적용",
+          "matched_term": "chroma"
+        }
+      ],
+      "match_count": 38,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-006",
+      "gonogo_desc": "NetworkX→Neo4j 변환",
+      "gonogo_line": 3798,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-033",
+          "feature_name": "V2 진입 전 필수 구현 14항목 (전환조건 6개, Agent Teams, STEP7 ~190건 보강, 접두어 변경, SQLite→Postgres, Chroma→Qdrant, NetworkX→Neo4j, SDAR, MessageBus, HMAC, STEP7 모듈연동, 인프라 10개, 비용 대시보드, QoD 이중체계)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "CLAUDE-035",
+          "feature_name": "V1 기술 스택 구현 (Ollama+GPT-4o mini, BGE-M3, Chroma, JSON/NetworkX, SQLite+JSONL, Windows/WSL, Tauri+React, NeMo+Guardrails AI, LangGraph, MCP Streamable HTTP)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "CLAUDE-158",
+          "feature_name": "NetworkX JSON→Neo4j Community 변환 (V2-006)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "CLAUDE-199",
+          "feature_name": "V2 Graph DB: NetworkX JSON→Neo4j Community 전환",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "IRGD-013",
+          "feature_name": "V2 3대 마이그레이션 스크립트 (SQLite→PostgreSQL/Chroma→Qdrant/NetworkX→Neo4j)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "D202-075",
+          "feature_name": "I-20 Knowledge Graph 모듈 구현",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "D205-085",
+          "feature_name": "DAG 기반 워크플로우 엔진 (10개 노드 유형, asyncio/NetworkX/Pydantic v2)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "D206-081",
+          "feature_name": "V1 경량 KG: NetworkX + JSON",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "D206-122",
+          "feature_name": "V2 Neo4j 마이그레이션 (NetworkX→Neo4j)",
+          "matched_term": "networkx"
+        },
+        {
+          "feature_id": "S7NP-170",
+          "feature_name": "NetworkX KG 최적화",
+          "matched_term": "networkx"
+        }
+      ],
+      "match_count": 10,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V2-002",
+      "gonogo_desc": "SDAR V2 COND 활성화 조건 확정",
+      "gonogo_line": 3799,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-155",
+          "feature_name": "SDAR V2 COND 활성화 조건 정의 (AR-L2→AR-L3, LOW성공률≥95%) (V2-002)",
+          "matched_term": "v2-002"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "DEFER-AT-001",
+      "gonogo_desc": "MessageBus 구현 결정",
+      "gonogo_line": 3800,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-185",
+          "feature_name": "MessageBus 구현 결정 (Redis vs In-Memory)",
+          "matched_term": "messagebus 구현 결정"
+        },
+        {
+          "feature_id": "TEAM-008",
+          "feature_name": "RedisMessageBus 구현 (V2+ MessageBus)",
+          "matched_term": "defer-at-001"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-012",
+      "gonogo_desc": "HMAC 프로토콜 상세 완성",
+      "gonogo_line": 3801,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-165",
+          "feature_name": "HMAC-SHA256 키관리/검증 상세화 (Agent Teams MessageBus) (CC-012)",
+          "matched_term": "cc-012"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-005",
+      "gonogo_desc": "STEP7 모듈 연동 구체화",
+      "gonogo_line": 3802,
+      "version": "V2",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "PHASE_B6-V2",
+      "gonogo_desc": "V2 인프라 10개 컴포넌트 구축",
+      "gonogo_line": 3803,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-186",
+          "feature_name": "V2 인프라 10개 컴포넌트 구축",
+          "matched_term": "v2 인프라 10개 컴포넌트 구축"
+        },
+        {
+          "feature_id": "IRGD-014",
+          "feature_name": "V2 인프라 10개 컴포넌트 구축 (Next.js PWA/Nginx/PostgreSQL 16/Qdrant/Neo4j/Redis/MinIO/BullMQ/Socket.io)",
+          "matched_term": "v2 인프라 10개 컴포넌트 구축"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "ABSOLUTE-LOCK-V2",
+      "gonogo_desc": "V2 비용 모니터링 대시보드 (₩93,000)",
+      "gonogo_line": 3804,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-027",
+          "feature_name": "비용/안전 LOCK 구현 (V1 ₩40K / V2 ₩93K / V3 ₩266K, Downshift, RBAC 4역할, Autonomy L1, Guardrails 4-Layer, P2 자동OFF, Non-goal 7개, 불변 7구역, 승인 10분 타임아웃)",
+          "matched_term": "₩93"
+        },
+        {
+          "feature_id": "CLAUDE-110",
+          "feature_name": "V1 비용 엔진 구현 (₩40,000/월, ₩1,300/일, Mini 90%+)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-147",
+          "feature_name": "V0 비용 상한 = V1 동일 적용 ₩40,000/월 (V0-001)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-175",
+          "feature_name": "비용 엔진 ₩40,000/월 하드코딩",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "CLAUDE-187",
+          "feature_name": "V2 비용 모니터링 대시보드 구현 (₩93,000 이내)",
+          "matched_term": "v2 비용 모니터링 대시보드"
+        },
+        {
+          "feature_id": "CLAUDE-265",
+          "feature_name": "config.v1.toml cost.monthly_limit=40000 적용 (ABSOLUTE LOCK)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "BASE-011",
+          "feature_name": "V1/V2/V3 비용 상한 ABSOLUTE LOCK 적용 (V1:₩40K/V2:₩93K/V3:₩266K)",
+          "matched_term": "₩93"
+        },
+        {
+          "feature_id": "D203-093",
+          "feature_name": "MCP 성능 모니터링 및 감사 로그 구현 (Inspector/메트릭/감사로그스키마)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D204-162",
+          "feature_name": "모델 A/B 테스팅 고급 (1000건/7일, 자동 승격/롤백)",
+          "matched_term": "000"
+        },
+        {
+          "feature_id": "D204-167",
+          "feature_name": "API Gateway Layer (모든 기능 REST, Rate 1000/min)",
+          "matched_term": "000"
+        }
+      ],
+      "match_count": 25,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "CC-003",
+      "gonogo_desc": "QoD 가중치 이중 체계 구분 명시",
+      "gonogo_line": 3805,
+      "version": "V2",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-162",
+          "feature_name": "QoD 가중치 이중 체계 구분 명시: RAG 소스 vs Cloud Library 수집 (CC-003)",
+          "matched_term": "qod 가중치 이중 체계 구분 명시"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V3-TRANS",
+      "gonogo_desc": "V2→V3 전환 조건 충족",
+      "gonogo_line": 3818,
+      "version": "V3",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V3-001",
+      "gonogo_desc": "K8s 배포 명세 상세 완성",
+      "gonogo_line": 3819,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-159",
+          "feature_name": "K8s 배포 명세 보강 (Helm Chart, ArgoCD, 멀티리전) (V3-001)",
+          "matched_term": "v3-001"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V3-002",
+      "gonogo_desc": "S-8 Self-evo 거버넌스 상세화",
+      "gonogo_line": 3820,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-160",
+          "feature_name": "S-8 Self-evo 거버넌스 상세화 (V3-002)",
+          "matched_term": "s-8 self-evo 거버넌스 상세화"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V3-003",
+      "gonogo_desc": "V3 비용 상한 재산정 + 승인",
+      "gonogo_line": 3821,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-167",
+          "feature_name": "V3 비용 상한 재산정 (V2 운영 데이터 기반) (V3-003)",
+          "matched_term": "v3 비용 상한 재산정"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "V3-004",
+      "gonogo_desc": "GraphRAG 벤치마크 정의",
+      "gonogo_line": 3822,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-168",
+          "feature_name": "GraphRAG 90% 목표 벤치마크 기준/측정 방법 정의 (V3-004)",
+          "matched_term": "v3-004"
+        }
+      ],
+      "match_count": 1,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "SDAR-V3",
+      "gonogo_desc": "SDAR V3 ON 조건 충족",
+      "gonogo_line": 3823,
+      "version": "V3",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "V2-008-EXT",
+      "gonogo_desc": "STEP7 TITLE_ONLY ~317건 상세 보강",
+      "gonogo_line": 3824,
+      "version": "V3",
+      "matched_features": [],
+      "match_count": 0,
+      "judgment": "NO_MATCH"
+    },
+    {
+      "gonogo_id": "LOCK-AT-014",
+      "gonogo_desc": "에이전트 50+ 병렬 인프라 구축",
+      "gonogo_line": 3825,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-034",
+          "feature_name": "V3 진입 전 필수 구현 11항목 (K8s 배포, S-8 거버넌스, 비용 재산정, GraphRAG 벤치마크, SDAR V3 조건, STEP7 ~317건 보강, 에이전트 50+, A2A 프로토콜, Federated 승인, Agent Marketplace)",
+          "matched_term": "에이전트 50"
+        },
+        {
+          "feature_id": "CLAUDE-190",
+          "feature_name": "에이전트 50+ 병렬 인프라 구축",
+          "matched_term": "에이전트 50"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "DEFER-AT-005",
+      "gonogo_desc": "A2A 프로토콜 설계",
+      "gonogo_line": 3826,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-191",
+          "feature_name": "A2A 프로토콜 설계 구현",
+          "matched_term": "a2a 프로토콜 설계"
+        },
+        {
+          "feature_id": "TEAM-083",
+          "feature_name": "V3 A2A Protocol 구현 (Google A2A + MCP 양방향)",
+          "matched_term": "defer-at-005"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "DEFER-AT-004",
+      "gonogo_desc": "Federated Agent 승인 체계",
+      "gonogo_line": 3827,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-192",
+          "feature_name": "Federated Agent 승인 체계 구현",
+          "matched_term": "federated agent 승인 체계"
+        },
+        {
+          "feature_id": "TEAM-082",
+          "feature_name": "V3 Federated Agent 연합 (외부 에이전트 연합, ADD-084)",
+          "matched_term": "defer-at-004"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    },
+    {
+      "gonogo_id": "DEFER-AT-003",
+      "gonogo_desc": "Agent Marketplace 기준 확정",
+      "gonogo_line": 3828,
+      "version": "V3",
+      "matched_features": [
+        {
+          "feature_id": "CLAUDE-193",
+          "feature_name": "Agent Marketplace 기준 확정 구현",
+          "matched_term": "agent marketplace 기준 확정"
+        },
+        {
+          "feature_id": "TEAM-106",
+          "feature_name": "DEFER-AT-003 Agent Marketplace 등록/공유 기준",
+          "matched_term": "defer-at-003"
+        }
+      ],
+      "match_count": 2,
+      "judgment": "MATCHED"
+    }
+  ],
+  "task3_missing_found_in_s6_back": [
+    {
+      "feature_id": "D204-179",
+      "feature_name": "비용 관리 인프라 (가중치 테이블, 60/80/95% 경고)",
+      "severity": "HIGH",
+      "agent": "M-1",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "인프라",
+        "가중치",
+        "테이블",
+        "95%"
+      ]
+    },
+    {
+      "feature_id": "CLIB-123",
+      "feature_name": "YouTube 수집기 (yt-dlp 메타데이터 + 자막)",
+      "severity": "LOW",
+      "agent": "M-1",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "메타데이터"
+      ]
+    },
+    {
+      "feature_id": "P30-058",
+      "feature_name": "비용 3단계 경보 체계 구현 (70%/85%/95%)",
+      "severity": "HIGH",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "70%",
+        "95%"
+      ]
+    },
+    {
+      "feature_id": "D204-042",
+      "feature_name": "OTHER BRAINS→07 Gate 연결 규칙 (ToolRegistry 경유, Gate 결과 기록)",
+      "severity": "HIGH",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "gate",
+        "gate"
+      ]
+    },
+    {
+      "feature_id": "TEAM-074",
+      "feature_name": "V1 @vamos.agent 데코레이터(내부 Agent SDK 베이스)",
+      "severity": "HIGH",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "agent"
+      ]
+    },
+    {
+      "feature_id": "S7JM-158",
+      "feature_name": "OpenAI 대비 VAMOS 차별화",
+      "severity": "HIGH",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "vamos"
+      ]
+    },
+    {
+      "feature_id": "PB4-009",
+      "feature_name": "[mcp] 섹션 ConfigModel 구현 (streamable_http LOCK)",
+      "severity": "MEDIUM",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "mcp",
+        "lock"
+      ]
+    },
+    {
+      "feature_id": "D204-117",
+      "feature_name": "프롬프트 테스트 (promptfoo YAML 회귀 테스트)",
+      "severity": "LOW",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "테스트",
+        "테스트"
+      ]
+    },
+    {
+      "feature_id": "DA1-009",
+      "feature_name": "Graph DB 전환 구현 (V1: JSON 파일, V2+: Neo4j Community, V3: Aura)",
+      "severity": "LOW",
+      "agent": "M-2",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "graph",
+        "v1:",
+        "json",
+        "v3:"
+      ]
+    },
+    {
+      "feature_id": "CLAUDE-053",
+      "feature_name": "45개 미해소 이슈 해결 구현 (HIGH 10건, MEDIUM 21건, LOW 9건, INFO 5건)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "high",
+        "medium",
+        "low",
+        "info"
+      ]
+    },
+    {
+      "feature_id": "D202-130",
+      "feature_name": "Agent Swarm (PARL) 병렬 실행 구현",
+      "severity": "BLOCKER",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "agent"
+      ]
+    },
+    {
+      "feature_id": "D204-005",
+      "feature_name": "LLM 서빙 엔진 비교/선택 (10개 엔진 전수비교)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "llm",
+        "10개"
+      ]
+    },
+    {
+      "feature_id": "D204-040",
+      "feature_name": "Hardware Abstraction Layer (동일 계약 호출 추상화)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "layer"
+      ]
+    },
+    {
+      "feature_id": "D204-067",
+      "feature_name": "API/모델 호출 Rate Limit (외부 10/분, 고비용 3/분, 전체 60/분)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "api",
+        "rate",
+        "limit"
+      ]
+    },
+    {
+      "feature_id": "D204-075",
+      "feature_name": "JSON Structured Logging 표준 (timestamp/level/module/event/trace_id/payload)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "json",
+        "structured",
+        "timestamp",
+        "level",
+        "module",
+        "event"
+      ]
+    },
+    {
+      "feature_id": "D204-123",
+      "feature_name": "Fallback Chain (config/fallback_chains.yaml, 최대 3단계)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "fallback",
+        "config"
+      ]
+    },
+    {
+      "feature_id": "D205-067",
+      "feature_name": "PARL Agent Swarm Execute 단계",
+      "severity": "BLOCKER",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "agent"
+      ]
+    },
+    {
+      "feature_id": "D205-076",
+      "feature_name": "Agent Specialization Protocol (자동 fork/특화/retire)",
+      "severity": "BLOCKER",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "agent"
+      ]
+    },
+    {
+      "feature_id": "D206-155",
+      "feature_name": "RAG 통합 API (retrieve/index/delete/status)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "rag",
+        "api"
+      ]
+    },
+    {
+      "feature_id": "D206-234",
+      "feature_name": "M-039 Notion AI 대비 VAMOS 완전 차별화 (대화형+KG+L0~L3+로컬)",
+      "severity": "MEDIUM",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "vamos"
+      ]
+    },
+    {
+      "feature_id": "D207-001",
+      "feature_name": "Non-goal 절대 금지 7항목 정책 구현 (실거래/해킹/의료법률/PII/저작권/P2자동/위험자동)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "non-goal",
+        "pii"
+      ]
+    },
+    {
+      "feature_id": "D207-028",
+      "feature_name": "Prompt Injection 탐지 모델 (규칙→ML)",
+      "severity": "LOW",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "prompt"
+      ]
+    },
+    {
+      "feature_id": "AINV-080",
+      "feature_name": "실전 거래 소액 시작 모드 (Real Trading)",
+      "severity": "MEDIUM",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "real",
+        "trading"
+      ]
+    },
+    {
+      "feature_id": "S7NP-195",
+      "feature_name": "Cross-Device Seamless State Sync",
+      "severity": "MEDIUM",
+      "agent": "M-4",
+      "found_section": "§6.8~§6.13",
+      "matched_terms": [
+        "state"
+      ]
+    }
+  ],
+  "task3_missing_by_agent": {
+    "M-1": 8,
+    "M-2": 549,
+    "M-3": 478,
+    "M-4": 105
+  },
+  "task4_workload_comparison": {
+    "s6_13_matrix": {
+      "UI/UX": {
+        "V0": 0,
+        "V1": 75,
+        "V2": 40,
+        "V3": 20,
+        "total": 135
+      },
+      "Infrastructure": {
+        "V0": 8,
+        "V1": 80,
+        "V2": 15,
+        "V3": 5,
+        "total": 108
+      },
+      "Testing": {
+        "V0": 15,
+        "V1": 62,
+        "V2": 5,
+        "V3": 2,
+        "total": 84
+      },
+      "CI/CD": {
+        "V0": 0,
+        "V1": 8,
+        "V2": 4,
+        "V3": 2,
+        "total": 14
+      },
+      "Tools": {
+        "V0": 10,
+        "V1": 5,
+        "V2": 4,
+        "V3": 0,
+        "total": 19
+      },
+      "Security": {
+        "V0": 0,
+        "V1": 8,
+        "V2": 5,
+        "V3": 2,
+        "total": 15
+      },
+      "MCP": {
+        "V0": 0,
+        "V1": 5,
+        "V2": 2,
+        "V3": 0,
+        "total": 7
+      },
+      "Misc": {
+        "V0": 8,
+        "V1": 30,
+        "V2": 17,
+        "V3": 17,
+        "total": 72
+      }
+    },
+    "s6_13_grand_total_sp": 454,
+    "feature_registry_total": 3940,
+    "feature_registry_by_version": {
+      "V2": 1668,
+      "V3": 604,
+      "V0": 195,
+      "V1": 2245
+    },
+    "feature_registry_by_category": {
+      "FT-MOD": 244,
+      "FT-SCHEMA": 214,
+      "FT-FUNC": 1508,
+      "FT-TEST": 224,
+      "FT-INFRA": 575,
+      "FT-DOMAIN": 247,
+      "FT-UI": 178,
+      "FT-SEC": 278,
+      "FT-API": 135,
+      "FT-CFG": 290,
+      "FT-MIG": 47
+    },
+    "note": "§6.13은 스토리 포인트(~454), Registry는 기능 항목 수(3940). 단위가 다르므로 직접 비교 불가. 스토리 포인트는 구현 난이도 기반, 기능 항목은 개별 feature 단위."
+  },
+  "task5_v_unknown": {
+    "total": 0,
+    "items": [],
+    "conclusion": "V_UNKNOWN 잔여 항목 0건. Phase 0-E/F에서 전수 버전 배정 완료."
+  }
+}

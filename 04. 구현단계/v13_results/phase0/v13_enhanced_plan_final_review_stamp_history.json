@@ -1,0 +1,21 @@
+[
+  {
+    "archived_at": "2026-03-21T18:00:00+09:00",
+    "archive_reason": "SKILL.md 대폭 개선 (7건 본 수정 + 3건 자기검증 + 4건 전수 점검) 후 재검증 필요 → 기준 변경에 의한 stamp 무효화 (조건 4)",
+    "stamp": {
+      "verdict": "PLAN-VERIFIED",
+      "mode": "E (계획서 다층 교차검증) + D (수치 교차검산)",
+      "timestamp": "2026-03-21T12:00:00+09:00",
+      "post_review_patch": "2026-03-21T14:30:00+09:00",
+      "target": "v13_enhanced_plan.md",
+      "target_version": "v13.3.0-ENHANCED",
+      "target_lines": 2676,
+      "criteria_at_time": "FR-E01~E18 + FR-D15~D20 (FR-E19 미포함, Step 0-2 전체체계 역질문 미적용, 깊이 예산 미적용)",
+      "critical_count": 0,
+      "major_count": 0,
+      "minor_count": 3,
+      "post_review_findings": 1,
+      "invalidation_reason": "SKILL.md 기준 변경 (criteria_hash 불일치) — 조건 4 해당. 추가된 기준: FR-E19, Step 0-2 전체 체계 단위 역질문, Step 0-4d 독립 실행 보장, 깊이 예산, factual_claim_verification stamp 강제, 사후 환류 트리거"
+    }
+  }
+]

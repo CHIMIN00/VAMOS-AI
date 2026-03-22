@@ -1,0 +1,28 @@
+{
+  "fix_id": "FIX-004",
+  "fg": "FG-B04",
+  "tier": 1,
+  "order": 4,
+  "severity": "BLOCKER",
+  "decision": "B — S3a_APPROVE_WAIT 하위 상태 분리 (9-State LOCK 유지)",
+  "description": "S3=120s 처리 타임아웃과 approval=600s 대기 타임아웃은 본질적으로 다른 상태. S3 내 하위 상태 S3a_APPROVE_WAIT를 신설하여 P2 승인 대기 시에만 600s 적용.",
+  "changes": [
+    {
+      "line": 1512,
+      "section": "§3 V1 상태 머신",
+      "action": "S3_DECISION_LOCKED에 S3a 하위 상태 분기 추가"
+    },
+    {
+      "line": 1520,
+      "section": "§3 V1 타임아웃",
+      "action": "S3a=600s 타임아웃 추가"
+    },
+    {
+      "line": 1554,
+      "section": "§3 V1 완료 검증",
+      "action": "S3a 타임아웃 검증 항목 반영"
+    }
+  ],
+  "ripple_expected": ["§6.11 (파이프라인 상태 전이)", "§7.1 (V0 체크리스트)", "변경이력"],
+  "applied_at": "2026-03-12"
+}

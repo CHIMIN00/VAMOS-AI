@@ -1,0 +1,2011 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA15_etc.json",
+    "total_items_checked": 258,
+    "pass_count": 8,
+    "fail_count": 250,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_001",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_002",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_003",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_004",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_005",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_006",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_007",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: enum_list",
+      "expected": "number|string|list|boolean",
+      "actual": "enum_list"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_008",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: enum_list",
+      "expected": "number|string|list|boolean",
+      "actual": "enum_list"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_009",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_015",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_016",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: enum_list",
+      "expected": "number|string|list|boolean",
+      "actual": "enum_list"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_017",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula",
+      "expected": "number|string|list|boolean",
+      "actual": "formula"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_018",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_019",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_020",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_022",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_023",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_024",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_025",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_026",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_027",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_028",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_029",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_030",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_031",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_032",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_033",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_034",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_043",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_044",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_045",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_046",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_047",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_048",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_049",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_051",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: rate",
+      "expected": "number|string|list|boolean",
+      "actual": "rate"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_052",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_053",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_055",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_056",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_057",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_058",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_059",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_060",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_061",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_062",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_063",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_064",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_065",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_066",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_067",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_068",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: versioned_integer",
+      "expected": "number|string|list|boolean",
+      "actual": "versioned_integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_075",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_076",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_077",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_078",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_081",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_082",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_083",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_093",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_094",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_095",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_096",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: rate",
+      "expected": "number|string|list|boolean",
+      "actual": "rate"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_097",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: rate",
+      "expected": "number|string|list|boolean",
+      "actual": "rate"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_098",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_099",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: range",
+      "expected": "number|string|list|boolean",
+      "actual": "range"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_100",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_101",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_102",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: object",
+      "expected": "number|string|list|boolean",
+      "actual": "object"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_103",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: object",
+      "expected": "number|string|list|boolean",
+      "actual": "object"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_104",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_105",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_106",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_107",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_108",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_109",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_110",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: object",
+      "expected": "number|string|list|boolean",
+      "actual": "object"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_111",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_112",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_113",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_114",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_116",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_118",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_124",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_125",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_126",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_127",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_128",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_129",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_130",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_131",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_138",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_139",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_140",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_141",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_142",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_143",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_144",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_145",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_146",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_150",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: semver",
+      "expected": "number|string|list|boolean",
+      "actual": "semver"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_151",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: semver",
+      "expected": "number|string|list|boolean",
+      "actual": "semver"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_152",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: semver",
+      "expected": "number|string|list|boolean",
+      "actual": "semver"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_153",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: semver",
+      "expected": "number|string|list|boolean",
+      "actual": "semver"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_154",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_155",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_156",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_157",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_158",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_159",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_160",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: object",
+      "expected": "number|string|list|boolean",
+      "actual": "object"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_168",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_170",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_171",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_172",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_175",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_176",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_177",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: duration",
+      "expected": "number|string|list|boolean",
+      "actual": "duration"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_178",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_179",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_180",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_181",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: percentage",
+      "expected": "number|string|list|boolean",
+      "actual": "percentage"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_185",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: rate",
+      "expected": "number|string|list|boolean",
+      "actual": "rate"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_186",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_187",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_190",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_191",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_192",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: cost",
+      "expected": "number|string|list|boolean",
+      "actual": "cost"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_193",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_194",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: threshold",
+      "expected": "number|string|list|boolean",
+      "actual": "threshold"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_195",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_196",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_197",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_204",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_205",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_214",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_215",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_216",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_217",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_218",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_220",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_221",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_235",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: count+list",
+      "expected": "number|string|list|boolean",
+      "actual": "count+list"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_238",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_239",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_244",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_246",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_257",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_258",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_259",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_270",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-15_276",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-15_190",
+      "severity": "WARNING",
+      "message": "source_text 키워드가 line 1256 근처가 아닌 파일 다른 위치에서 발견",
+      "expected": "near line 1256",
+      "actual": "found elsewhere"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 161~164"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 219~219"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 223~224"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 226~227"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 234~234"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 242~242"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 248~251"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 254~255"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-15",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 264~266"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-15_147",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'str' 불일치",
+      "expected": "list",
+      "actual": "str"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-15_148",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'str' 불일치",
+      "expected": "list",
+      "actual": "str"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-15_149",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'str' 불일치",
+      "expected": "list",
+      "actual": "str"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-15_173",
+      "severity": "WARNING",
+      "message": "value_type 'boolean' vs 실제 타입 'str' 불일치",
+      "expected": "boolean",
+      "actual": "str"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-15_188",
+      "severity": "WARNING",
+      "message": "value_type 'boolean' vs 실제 타입 'str' 불일치",
+      "expected": "boolean",
+      "actual": "str"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_010",
+      "severity": "WARNING",
+      "message": "비표준 키 'GATE_1_POLICY'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "GATE_1_POLICY"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_011",
+      "severity": "WARNING",
+      "message": "비표준 키 'GATE_2_COST'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "GATE_2_COST"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_012",
+      "severity": "WARNING",
+      "message": "비표준 키 'GATE_3_APPROVAL'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "GATE_3_APPROVAL"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_013",
+      "severity": "WARNING",
+      "message": "비표준 키 'GATE_4_EVIDENCE'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "GATE_4_EVIDENCE"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_014",
+      "severity": "WARNING",
+      "message": "비표준 키 'GATE_5_SELFCHECK'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "GATE_5_SELFCHECK"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_049",
+      "severity": "WARNING",
+      "message": "비표준 키 'ARCHITECTURE_10_LAYER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "ARCHITECTURE_10_LAYER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_061",
+      "severity": "WARNING",
+      "message": "비표준 키 'AINV_51GATE_WINRATE'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "AINV_51GATE_WINRATE"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_062",
+      "severity": "WARNING",
+      "message": "비표준 키 'AINV_51GATE_SHARPE'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "AINV_51GATE_SHARPE"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_063",
+      "severity": "WARNING",
+      "message": "비표준 키 'AINV_51GATE_DECAY'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "AINV_51GATE_DECAY"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_064",
+      "severity": "WARNING",
+      "message": "비표준 키 'AINV_51GATE_MIN_TRADES'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "AINV_51GATE_MIN_TRADES"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_165",
+      "severity": "WARNING",
+      "message": "비표준 키 'OPEN_DECISION_1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "OPEN_DECISION_1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_166",
+      "severity": "WARNING",
+      "message": "비표준 키 'OPEN_DECISION_2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "OPEN_DECISION_2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_196",
+      "severity": "WARNING",
+      "message": "비표준 키 'CB4_implementation_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "CB4_implementation_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_197",
+      "severity": "WARNING",
+      "message": "비표준 키 'C10ALT_confidence_routing_auto'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C10ALT_confidence_routing_auto"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_198",
+      "severity": "WARNING",
+      "message": "비표준 키 'C8ALT_guided_rule_evolution'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C8ALT_guided_rule_evolution"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_199",
+      "severity": "WARNING",
+      "message": "비표준 키 '5gate_accuracy_G0_100'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "5gate_accuracy_G0_100"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_200",
+      "severity": "WARNING",
+      "message": "비표준 키 'S6_template_workflow_selfevo'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S6_template_workflow_selfevo"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_201",
+      "severity": "WARNING",
+      "message": "비표준 키 'S7_self_design_meta_partner'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S7_self_design_meta_partner"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_202",
+      "severity": "WARNING",
+      "message": "비표준 키 'S8_selfevo_ui_report_hub'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S8_selfevo_ui_report_hub"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_203",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_spec_1_0_title'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_spec_1_0_title"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_204",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_memory_retention_days'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_memory_retention_days"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_205",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_memory_retention_days'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_memory_retention_days"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_206",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_memory_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_memory_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_207",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_memory_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_memory_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_208",
+      "severity": "WARNING",
+      "message": "비표준 키 'global_prefs_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "global_prefs_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_209",
+      "severity": "WARNING",
+      "message": "비표준 키 'rag_docs_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rag_docs_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_210",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_plan_description'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_plan_description"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_211",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_V2_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_V2_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_212",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_V2_tech'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_V2_tech"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_213",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_V3_tech'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_V3_tech"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_214",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_215",
+      "severity": "WARNING",
+      "message": "비표준 키 'C8ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C8ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_216",
+      "severity": "WARNING",
+      "message": "비표준 키 'C9ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C9ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_217",
+      "severity": "WARNING",
+      "message": "비표준 키 'C10ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "C10ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_218",
+      "severity": "WARNING",
+      "message": "비표준 키 'trust_routing_thresholds'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "trust_routing_thresholds"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_220",
+      "severity": "WARNING",
+      "message": "비표준 키 'phase_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "phase_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_221",
+      "severity": "WARNING",
+      "message": "비표준 키 'gate_thresholds'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "gate_thresholds"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_222",
+      "severity": "WARNING",
+      "message": "비표준 키 'S6_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S6_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_225",
+      "severity": "WARNING",
+      "message": "비표준 키 'S7_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S7_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_228",
+      "severity": "WARNING",
+      "message": "비표준 키 'S7_priority'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S7_priority"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_229",
+      "severity": "WARNING",
+      "message": "비표준 키 'S8_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S8_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_230",
+      "severity": "WARNING",
+      "message": "비표준 키 'S8_report'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S8_report"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_231",
+      "severity": "WARNING",
+      "message": "비표준 키 'S8_template_center'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S8_template_center"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_232",
+      "severity": "WARNING",
+      "message": "비표준 키 'S8_external_eval'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S8_external_eval"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_233",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_spec_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_spec_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_235",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_spec_fields'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_spec_fields"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_236",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_spec_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_spec_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_237",
+      "severity": "WARNING",
+      "message": "비표준 키 'storage_policy_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "storage_policy_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_238",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_retention'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_retention"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_239",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_retention'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_retention"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_240",
+      "severity": "WARNING",
+      "message": "비표준 키 'data_catalog_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "data_catalog_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_241",
+      "severity": "WARNING",
+      "message": "비표준 키 'consent_log_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "consent_log_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_243",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_memory_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_memory_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_244",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_memory_ttl'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_memory_ttl"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_245",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_memory_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_memory_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_246",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_memory_retention'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_memory_retention"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_247",
+      "severity": "WARNING",
+      "message": "비표준 키 'global_prefs_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "global_prefs_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_252",
+      "severity": "WARNING",
+      "message": "비표준 키 'rag_docs_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rag_docs_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_253",
+      "severity": "WARNING",
+      "message": "비표준 키 'rag_index_path'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rag_index_path"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_256",
+      "severity": "WARNING",
+      "message": "비표준 키 'spec_safety'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "spec_safety"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_257",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_cost_modes'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_cost_modes"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_258",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_source_weights'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_source_weights"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_259",
+      "severity": "WARNING",
+      "message": "비표준 키 'G3_security_gate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "G3_security_gate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_260",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_external_deps'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_external_deps"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_261",
+      "severity": "WARNING",
+      "message": "비표준 키 'S5_s_module_deps'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S5_s_module_deps"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_262",
+      "severity": "WARNING",
+      "message": "비표준 키 'S6_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S6_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_263",
+      "severity": "WARNING",
+      "message": "비표준 키 'S6_safety'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "S6_safety"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_267",
+      "severity": "WARNING",
+      "message": "비표준 키 'E2ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "E2ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_268",
+      "severity": "WARNING",
+      "message": "비표준 키 'E3ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "E3ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_269",
+      "severity": "WARNING",
+      "message": "비표준 키 'E5ALT_pipeline'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "E5ALT_pipeline"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_270",
+      "severity": "WARNING",
+      "message": "비표준 키 'priority_queue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "priority_queue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_271",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_theme_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_theme_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_272",
+      "severity": "WARNING",
+      "message": "비표준 키 'session_vector'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "session_vector"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_273",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_meta'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_meta"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_274",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_vector'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_vector"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_275",
+      "severity": "WARNING",
+      "message": "비표준 키 'project_safety'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "project_safety"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_276",
+      "severity": "WARNING",
+      "message": "비표준 키 'v3_feasibility_cb4'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v3_feasibility_cb4"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_277",
+      "severity": "WARNING",
+      "message": "비표준 키 'c10_alt_confidence_routing'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "c10_alt_confidence_routing"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_278",
+      "severity": "WARNING",
+      "message": "비표준 키 's6_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "s6_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_029~EA-15_034",
+      "severity": "WARNING",
+      "message": "동일 키 'GUARDRAILS_LAYER_COUNT'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_055~EA-15_058",
+      "severity": "WARNING",
+      "message": "동일 키 'API_ENDPOINT_COUNT'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-15_156~EA-15_192",
+      "severity": "WARNING",
+      "message": "동일 키 'COST_CEILING_MONTHLY'가 4회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "4 distinct values"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:VAMOS_BEGINNER_GUIDE.md",
+      "severity": "WARNING",
+      "message": "파일 'VAMOS_BEGINNER_GUIDE.md'(1844줄)의 후반부 추출 비율이 낮음: 18/96건 (19%)",
+      "expected": ">= 20%",
+      "actual": "19%"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 241,
+    "INFO": 9
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

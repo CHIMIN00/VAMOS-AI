@@ -1,0 +1,106 @@
+{
+  "script": "0-G",
+  "name": "HTML Comment Integrity + SOURCE_CONFLICT Body Verification",
+  "source_conflicts": [
+    {
+      "line": 59,
+      "content": "§2.8 체크리스트는 \"I-1~I-5+I-19\"(6개)로 표기하나, §2.7 상세 테이블에 I-4 미포함. §2.7이 더 구체적이므로 5개 채택",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 159,
+      "content": "B4=\"indefinite\" vs BASE-1.3=\"영구\". 동일 의미, B4 리터럴 채택",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 194,
+      "content": "B4=\"3600\" vs D2.0-06=\"86400\". DESIGN 2.0 > PHASE_B 원칙",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 369,
+      "content": "B4=\"3600\" vs D2.0-06=\"86400\". DESIGN 2.0 > PHASE_B 원칙",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 1021,
+      "content": "D2.0-06 §2=4계층(L0~L3) vs S7D=5계층(+L4). 4계층 LOCK 채택. L4 Archive는 V2+ 확장 옵션",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 1466,
+      "content": "D2.0-01 §5.10 B-3=\"Memory Decay\" vs §8.4 B-3=\"Deep Reflection\". §5.10 LOCK 채택, §8.4는 [DEPRECATE] 레거시",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 1540,
+      "content": "D2.1-D5/D7 스키마는 300s로 기재. 정본 우선순위(DESIGN 2.0 LOCK > Schema)에 따라 60s 채택",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 1590,
+      "content": "PART2 기존=\"D2.0-08\" vs 실제 유래=CLAUDE.md §14/PHASE_B2. 출처 정정",
+      "adopted_value": "기존=",
+      "body_verified": true
+    },
+    {
+      "line": 1591,
+      "content": "PART2 기존=\"D2.0-08\" vs 실제 유래=CLAUDE.md §14/PHASE_B2. 출처 정정. v11.0.0: agent→notification, config→auth (PHASE_B2 §3.1 정본)",
+      "adopted_value": "기존=",
+      "body_verified": true
+    },
+    {
+      "line": 1892,
+      "content": "D2.0-01 §5.6 I-25=\"Self-Directed Agent Runtime\" vs SDAR_SPEC=\"Self-Diagnosis and Auto-Repair\". SDAR_SPEC(전문 LOCK) 채택. D2.0-01 표기는 오기재",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 2042,
+      "content": "§5=5개 vs §7.1 enum=6개(HYBRID 포함). §7.1 enum(코드 생성 기준) 채택. §5에 HYBRID 설명 추가 필요",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 2812,
+      "content": "PHASE_B1 §5.1=47개 vs CLAUDE.md/B1 changelog=72개. 72개(CLAUDE.md) 정본 채택. B1 §5.1은 내부 자기모순(상세=47, changelog=72)",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 3279,
+      "content": "CLOUD_LIBRARY_SPEC §8 G1=\"Content Quality\"(내용 품질), PART2는 \"Trust Score\"(신뢰도). 동일 게이트, 의미 범위 차이. SRC 정본 우선 시 \"Content Quality\"로 변경 필요",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 3280,
+      "content": "CLOUD_LIBRARY_SPEC §8 G2=\"Consistency\"(일관성), PART2는 \"Relevance\"(관련성). 동일 게이트, 의미 범위 차이. SRC 정본 우선 시 \"Consistency\"로 변경 필요",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 3599,
+      "content": "CLAUDE.md=4개(+pending+expired) vs D2.1-D7 DN-014=2개(approved/denied). D2.1-D7 SOT 채택. 4값은 ApprovalSchema.status 용도",
+      "adopted_value": null,
+      "body_verified": null
+    },
+    {
+      "line": 3735,
+      "content": "...",
+      "adopted_value": null,
+      "body_verified": null
+    }
+  ],
+  "total_source_conflicts": 16,
+  "errors": [],
+  "total_errors": 0,
+  "verdict": "PASS"
+}

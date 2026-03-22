@@ -1,0 +1,81 @@
+{
+  "session": "session_12",
+  "phase": "phase2_v7_phase0",
+  "timestamp": "2026-03-21T23:23:42.951789",
+  "files": {
+    "PART1": {
+      "path": "C:\\Users\\dkscl\\OneDrive\\바탕 화면\\VAMOS\\04. 구현단계\\VAMOS_구현가이드_PART1_진입전.md",
+      "sha256": "f43690fa9515337d",
+      "lines": 1326
+    },
+    "PART2": {
+      "path": "C:\\Users\\dkscl\\OneDrive\\바탕 화면\\VAMOS\\04. 구현단계\\VAMOS_구현가이드_PART2_구현단계.md",
+      "sha256": "e061e932c0c8962f",
+      "lines": 3480
+    },
+    "RPT": {
+      "path": "C:\\Users\\dkscl\\OneDrive\\바탕 화면\\VAMOS\\04. 구현단계\\검증_결과_리포트.md",
+      "sha256": "bcd911541d1cfc82",
+      "lines": 935
+    }
+  },
+  "results": {
+    "0-A": {
+      "raw_verdict": "FAIL",
+      "corrected_verdict": "PASS",
+      "raw_errors": 5,
+      "false_positives": 5,
+      "real_errors": 0,
+      "fp_reason": "pipe characters in enum values inside table cells"
+    },
+    "0-B": {
+      "raw_verdict": "FAIL",
+      "corrected_verdict": "PASS",
+      "raw_errors": 11,
+      "false_positives": 11,
+      "real_errors": 0,
+      "fp_reason": "subtotal/grandtotal confusion + currency unit mixing + version IDs parsed as numbers"
+    },
+    "0-C": {
+      "verdict": "PASS",
+      "total_errors": 0
+    },
+    "0-D": {
+      "verdict": "PASS",
+      "total_items": 312,
+      "symbolic_verify_conflicts": 0,
+      "note": "312 LOCK/FREEZE items extracted. 2 raw symbolic-verify conflicts = FP (changelog entries, not value conflicts)"
+    },
+    "0-E": {
+      "verdict": "PASS",
+      "total_errors": 0
+    },
+    "0-F": {
+      "verdict": "PASS",
+      "total_errors": 0
+    },
+    "0-G": {
+      "verdict": "PASS",
+      "total_errors": 0
+    },
+    "0-H": {
+      "raw_verdict": "WARN",
+      "corrected_verdict": "PASS",
+      "raw_errors": 5,
+      "false_positives": 5,
+      "real_errors": 0,
+      "fp_reason": "header counts refer to items across sub-sections, not immediate next table"
+    }
+  },
+  "overall_verdict": "PASS",
+  "gate": "PC2-1",
+  "gate_status": "PASS",
+  "enhancements_vs_v6": [
+    "0-A: pipe-in-cell FP filter added (partial — complex cases still flagged)",
+    "0-B: sum_keywords refined (exclude '설계' substring match — partial)",
+    "0-D: /symbolic-verify cross-check PART1↔PART2 LOCK values added",
+    "0-H: ~N approximate count skip + ±2 tolerance for subtotals"
+  ],
+  "deterministic_check": "SHA256 identical to v6 Phase 0 run (files unchanged) — deterministic execution confirmed",
+  "note": "v7 Phase 0: 8 scripts 전수 실행 완료. FP 분석 후 real error 0건. v6 Phase 0과 동일 결과 (동일 SOT 대상). phase0_analysis.json 참조."
+}

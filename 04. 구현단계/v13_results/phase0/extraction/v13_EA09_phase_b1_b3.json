@@ -1,0 +1,2000 @@
+{
+  "metadata": {
+    "agent": "EA-9",
+    "version": "v13",
+    "created": "2026-03-21",
+    "source_files": [
+      "D:/VAMOS/docs/sot/PHASE_B1_API_CONTRACT.md",
+      "D:/VAMOS/docs/sot/PHASE_B2_PROJECT_STRUCTURE.md",
+      "D:/VAMOS/docs/sot/PHASE_B3_DEPENDENCIES.md"
+    ],
+    "source_file_hashes": {
+      "D:/VAMOS/docs/sot/PHASE_B1_API_CONTRACT.md": "3a8d3c88ac35e532f857c062eed29c63e75013a2afaaac747d1d83dfd251218c",
+      "D:/VAMOS/docs/sot/PHASE_B2_PROJECT_STRUCTURE.md": "4a64b1f594d9d307722d27f28df994e6fd1261be78a595e9e49b64fa47504875",
+      "D:/VAMOS/docs/sot/PHASE_B3_DEPENDENCIES.md": "27e71559eba1b4fa097b42e20ba07cf9b350aec19f074a6d7b77c0a33fac6c42"
+    },
+    "total_lines_read": 3471,
+    "total_items_extracted": 134,
+    "categories": {
+      "C1": 30,
+      "C2": 18,
+      "C3": 16,
+      "C4": 26,
+      "C5": 8,
+      "C6": 10,
+      "C7": 14,
+      "C8": 12
+    }
+  },
+  "items": [
+    {
+      "item_id": "EA-09_001",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1975,
+      "source_text": "### 5.1 Tauri IPC Commands (총 72개)",
+      "key": "TAURI_IPC_COMMAND_COUNT",
+      "value": 72,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_002",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2052,
+      "source_text": "### 5.2 Python-Rust JSON-RPC Methods (총 13개)",
+      "key": "PYTHON_RUST_JSONRPC_METHOD_COUNT",
+      "value": 13,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_003",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2070,
+      "source_text": "### 5.3 MCP Tool Protocol (총 3개)",
+      "key": "MCP_TOOL_PROTOCOL_COUNT",
+      "value": 3,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_004",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2214,
+      "source_text": "Tauri IPC 72개, Python-Rust JSON-RPC 13개, MCP Tool 3개 정의",
+      "key": "API_ENDPOINT_COUNT",
+      "value": 88,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_005",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2214,
+      "source_text": "에러 규격(D2 FailureCode 20개 연동)",
+      "key": "FAILURE_CODE_COUNT",
+      "value": 20,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_006",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2124,
+      "source_text": "### 6.3 HTTP 상태 코드 매핑 (MCP/API용)",
+      "key": "HTTP_STATUS_CODE_COUNT",
+      "value": 8,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_007",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2138,
+      "source_text": "### 6.4 JSON-RPC 에러 코드 (Python-Rust용)",
+      "key": "JSONRPC_ERROR_CODE_COUNT",
+      "value": 6,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_008",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2153,
+      "source_text": "### 7.1 RBAC 역할 체계 (D7 RBACRoleSchema LOCK)",
+      "key": "RBAC_ROLE_COUNT",
+      "value": 4,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_009",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 2162,
+      "source_text": "### 7.2 자율 수준별 동작 (D7 AutonomyLevelSchema LOCK)",
+      "key": "AUTONOMY_LEVEL_COUNT",
+      "value": 4,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_010",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 30,
+      "source_text": "### 1.1 API 계층 구조",
+      "key": "API_ENDPOINT_COUNT",
+      "value": 3,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_011",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 63,
+      "source_text": "### 1.3 통신 프로토콜 요약",
+      "key": "COMMUNICATION_PROTOCOL_COUNT",
+      "value": 4,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_012",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 899,
+      "source_text": "similarity_threshold?: number;   // 기본: 0.95 (LOCK)",
+      "key": "SEMANTIC_CACHE_SIMILARITY_THRESHOLD",
+      "value": 0.95,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_013",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1127,
+      "source_text": "warn_threshold_percent: 80;     // LOCK",
+      "key": "DOWNSHIFT_WARN_THRESHOLD_PERCENT",
+      "value": 80,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_014",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1128,
+      "source_text": "block_threshold_percent: 100;   // LOCK",
+      "key": "DOWNSHIFT_BLOCK_THRESHOLD_PERCENT",
+      "value": 100,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_015",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1104,
+      "source_text": "daily_limit: number;           // 원. V1=1300, V2=3100, V3=8900",
+      "key": "COST_DAILY_LIMIT_V1_KRW",
+      "value": 1300,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_016",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1105,
+      "source_text": "monthly_limit: number;         // 원. V1=40000, V2=93000, V3=266000",
+      "key": "COST_MONTHLY_LIMIT_V1_KRW",
+      "value": 40000,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_017",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1105,
+      "source_text": "monthly_limit: number;         // 원. V1=40000, V2=93000, V3=266000",
+      "key": "COST_MONTHLY_LIMIT_V2_KRW",
+      "value": 93000,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_018",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1105,
+      "source_text": "monthly_limit: number;         // 원. V1=40000, V2=93000, V3=266000",
+      "key": "COST_MONTHLY_LIMIT_V3_KRW",
+      "value": 266000,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_019",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1607,
+      "source_text": "\"dimension\": 1024,",
+      "key": "BGE_M3_EMBEDDING_DIMENSION",
+      "value": 1024,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_020",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1608,
+      "source_text": "\"matryoshka_dim\": 256",
+      "key": "BGE_M3_MATRYOSHKA_DIM",
+      "value": 256,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_021",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 1634,
+      "source_text": "\"dimension\": 1536",
+      "key": "OPENAI_EMBEDDING_DIMENSION",
+      "value": 1536,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_022",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 186,
+      "source_text": "limit: number;             // 기본 20, 최대 100",
+      "key": "PAGINATION_DEFAULT_LIMIT",
+      "value": 20,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_023",
+      "category": "C1",
+      "source_file": "B1",
+      "source_line": 186,
+      "source_text": "limit: number;             // 기본 20, 최대 100",
+      "key": "PAGINATION_MAX_LIMIT",
+      "value": 100,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_024",
+      "category": "C1",
+      "source_file": "B2",
+      "source_line": 192,
+      "source_text": "### 3.2 UI 컴포넌트 카테고리 (D8 매핑)",
+      "key": "B2_FRONTEND_COMPONENT_CATEGORIES",
+      "value": 8,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_025",
+      "category": "C1",
+      "source_file": "B2",
+      "source_line": 263,
+      "source_text": "### 4.2 IPC Command 모듈",
+      "key": "B2_RUST_IPC_COMMAND_MODULES",
+      "value": 7,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_026",
+      "category": "C1",
+      "source_file": "B2",
+      "source_line": 295,
+      "source_text": "### 5.1 패키지 구조 (vamos_core/)",
+      "key": "B2_PYTHON_SUBPACKAGE_COUNT",
+      "value": 8,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_027",
+      "category": "C1",
+      "source_file": "B2",
+      "source_line": 366,
+      "source_text": "### 5.3 blue_nodes/ (도메인별 노드)",
+      "key": "B2_BLUE_NODE_DOMAIN_COUNT",
+      "value": 5,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_028",
+      "category": "C1",
+      "source_file": "B2",
+      "source_line": 610,
+      "source_text": "### 5.8 schemas/ (contracts.py -- Pydantic v2 모델)",
+      "key": "B2_PYDANTIC_SCHEMA_COUNT",
+      "value": 32,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_029",
+      "category": "C1",
+      "source_file": "B3",
+      "source_line": 46,
+      "source_text": "### 2.1 dependencies",
+      "key": "B3_FRONTEND_DEPENDENCY_COUNT",
+      "value": 14,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_030",
+      "category": "C1",
+      "source_file": "B3",
+      "source_line": 65,
+      "source_text": "### 2.2 devDependencies",
+      "key": "B3_FRONTEND_DEVDEPENDENCY_COUNT",
+      "value": 14,
+      "value_type": "number",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_031",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 1979,
+      "source_text": "IPC commands #1~#15 Core category",
+      "key": "TAURI_IPC_CORE_COMMANDS",
+      "value": {
+        "count": 15,
+        "list": [
+          "vamos:decision:create",
+          "vamos:decision:get",
+          "vamos:decision:list",
+          "vamos:decision:lock",
+          "vamos:decision:event",
+          "vamos:workflow:start",
+          "vamos:workflow:status",
+          "vamos:workflow:cancel",
+          "vamos:workflow:output",
+          "vamos:workflow:stage_event",
+          "vamos:workflow:failure_report",
+          "vamos:session:create",
+          "vamos:session:get",
+          "vamos:session:list",
+          "vamos:session:close"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_032",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 1994,
+      "source_text": "IPC commands #16~#30 Agent category",
+      "key": "TAURI_IPC_AGENT_COMMANDS",
+      "value": {
+        "count": 15,
+        "list": [
+          "vamos:node:dispatch",
+          "vamos:node:response",
+          "vamos:node:profile",
+          "vamos:node:list",
+          "vamos:node:register",
+          "vamos:pipeline:gate_status",
+          "vamos:pipeline:gate_mapping",
+          "vamos:pipeline:verify_chain",
+          "vamos:pipeline:circuit_breaker",
+          "vamos:pipeline:hitl_respond",
+          "vamos:pipeline:hitl_event",
+          "vamos:marketplace:list",
+          "vamos:marketplace:get",
+          "vamos:marketplace:install",
+          "vamos:marketplace:uninstall"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_033",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2009,
+      "source_text": "IPC commands #31~#48 Storage category",
+      "key": "TAURI_IPC_STORAGE_COMMANDS",
+      "value": {
+        "count": 18,
+        "list": [
+          "vamos:memory:save",
+          "vamos:memory:get",
+          "vamos:memory:search",
+          "vamos:memory:delete",
+          "vamos:memory:list",
+          "vamos:memory:update_event",
+          "vamos:vector:search",
+          "vamos:vector:upsert",
+          "vamos:vector:delete",
+          "vamos:vector:adapter_config",
+          "vamos:cache:semantic_lookup",
+          "vamos:cache:semantic_save",
+          "vamos:cache:prompt_lookup",
+          "vamos:cache:invalidate",
+          "vamos:graphrag:query",
+          "vamos:graphrag:config",
+          "vamos:qod:get",
+          "vamos:qod:compute"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_034",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2027,
+      "source_text": "IPC commands #49~#67 Safety category",
+      "key": "TAURI_IPC_SAFETY_COMMANDS",
+      "value": {
+        "count": 19,
+        "list": [
+          "vamos:policy:check",
+          "vamos:policy:result",
+          "vamos:policy:block_event",
+          "vamos:cost:budget_get",
+          "vamos:cost:budget_update",
+          "vamos:cost:downshift_status",
+          "vamos:cost:downshift_event",
+          "vamos:approval:request",
+          "vamos:approval:decide",
+          "vamos:approval:get",
+          "vamos:approval:list",
+          "vamos:approval:request_event",
+          "vamos:guardrails:check",
+          "vamos:guardrails:result",
+          "vamos:guardrails:block_event",
+          "vamos:rbac:get_role",
+          "vamos:rbac:check_permission",
+          "vamos:autonomy:get_level",
+          "vamos:autonomy:set_level"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_035",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2046,
+      "source_text": "IPC commands #68~#72 UI category",
+      "key": "TAURI_IPC_UI_COMMANDS",
+      "value": {
+        "count": 5,
+        "list": [
+          "vamos:ui:log_stream",
+          "vamos:ui:config_get",
+          "vamos:ui:config_set",
+          "vamos:ui:theme_set",
+          "vamos:ui:notification"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_036",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2052,
+      "source_text": "### 5.2 Python-Rust JSON-RPC Methods (총 13개)",
+      "key": "PYTHON_RUST_JSONRPC_METHODS",
+      "value": {
+        "count": 13,
+        "list": [
+          "langgraph.workflow.run",
+          "langgraph.stage.execute",
+          "langgraph.decision.create",
+          "langgraph.node.dispatch",
+          "langgraph.verify.run_chain",
+          "embedding.encode",
+          "embedding.store",
+          "llm.generate",
+          "llm.record_invoke",
+          "llm.rate_limit.get",
+          "mcp.bridge.init",
+          "mcp.bridge.health",
+          "mcp.tools.discover"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_037",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2070,
+      "source_text": "### 5.3 MCP Tool Protocol (총 3개)",
+      "key": "MCP_TOOL_METHODS",
+      "value": {
+        "count": 3,
+        "list": [
+          "tools/call",
+          "mcp.tool_registry.get",
+          "mcp.tool_registry.list"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_038",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2126,
+      "source_text": "| 상태 코드 | 용도 |",
+      "key": "HTTP_STATUS_CODES",
+      "value": {
+        "count": 8,
+        "list": [
+          "200",
+          "400",
+          "401",
+          "403",
+          "404",
+          "409",
+          "429",
+          "503"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_039",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2140,
+      "source_text": "| 코드 | 의미 |",
+      "key": "JSONRPC_ERROR_CODES",
+      "value": {
+        "count": 6,
+        "list": [
+          "-32700",
+          "-32600",
+          "-32601",
+          "-32602",
+          "-32603",
+          "-32000"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_040",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2101,
+      "source_text": "| failure_code | 설명 | fallback_id | 사용자 메시지 예시 |",
+      "key": "FAILURE_CODE_LIST",
+      "value": {
+        "count": 20,
+        "list": [
+          "OC_I1_PARSE_FAIL",
+          "OC_I1_AMBIGUOUS_UNRESOLVED",
+          "OC_I2_RAG_NO_SOURCE",
+          "OC_I2_EVIDENCE_QOD_LOW",
+          "OC_I2_SOURCE_POLICY_BLOCK",
+          "OC_I2_TIMEOUT",
+          "OC_I3_MEMORY_POLICY_DENY",
+          "OC_I3_APPROVAL_REQUIRED",
+          "OC_I3_COMMIT_FAIL",
+          "OC_I4_OUTPUT_SPEC_VIOLATION",
+          "OC_I4_CITATION_MISSING",
+          "OC_I4_MASK_FAIL",
+          "OC_I5_POLICY_BLOCK",
+          "OC_I5_APPROVAL_REQUIRED",
+          "OC_I5_COST_OVER_BUDGET",
+          "OC_I5_EVIDENCE_INSUFFICIENT",
+          "OC_I5_ROUTE_NOT_FOUND",
+          "POLICY_DENY",
+          "GT_ERR_COST_LIMIT",
+          "TOOL_TIMEOUT"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_041",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2155,
+      "source_text": "| 역할 | 권한 | 최대 자율 수준 | P2 접근 | 비용 승인 한도 |",
+      "key": "RBAC_ROLES",
+      "value": {
+        "count": 4,
+        "list": [
+          "OWNER",
+          "ADMIN",
+          "OPERATOR",
+          "VIEWER"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_042",
+      "category": "C2",
+      "source_file": "B1",
+      "source_line": 2164,
+      "source_text": "| 수준 | 이름 | 자동 실행 | 알림 필수 | 승인 필수 |",
+      "key": "AUTONOMY_LEVELS",
+      "value": {
+        "count": 4,
+        "list": [
+          "L0 (수동)",
+          "L1 (제안 모드)",
+          "L2 (자율+알림)",
+          "L3 (완전자율)"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_043",
+      "category": "C2",
+      "source_file": "B2",
+      "source_line": 366,
+      "source_text": "### 5.3 blue_nodes/ (도메인별 노드)",
+      "key": "B2_BLUE_NODE_DOMAINS",
+      "value": {
+        "count": 5,
+        "list": [
+          "dev",
+          "research",
+          "content",
+          "quant",
+          "trading"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_044",
+      "category": "C2",
+      "source_file": "B2",
+      "source_line": 136,
+      "source_text": "├── pages/                          # 페이지 컴포넌트 (라우트 단위)",
+      "key": "B2_FRONTEND_PAGES",
+      "value": {
+        "count": 7,
+        "list": [
+          "DashboardPage.tsx",
+          "ChatPage.tsx",
+          "WorkflowPage.tsx",
+          "MemoryPage.tsx",
+          "SettingsPage.tsx",
+          "LogPage.tsx",
+          "NodeDetailPage.tsx"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_045",
+      "category": "C2",
+      "source_file": "B2",
+      "source_line": 145,
+      "source_text": "├── hooks/                          # 커스텀 React 훅",
+      "key": "B2_CUSTOM_HOOKS",
+      "value": {
+        "count": 8,
+        "list": [
+          "useTauriIPC.ts",
+          "useDecision.ts",
+          "useWorkflow.ts",
+          "useMemory.ts",
+          "useCost.ts",
+          "useNotification.ts",
+          "useAutonomy.ts",
+          "useLog.ts"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_046",
+      "category": "C2",
+      "source_file": "B2",
+      "source_line": 155,
+      "source_text": "├── stores/                         # 상태 관리 (Zustand 또는 Jotai)",
+      "key": "B2_ZUSTAND_STORES",
+      "value": {
+        "count": 7,
+        "list": [
+          "appStore.ts",
+          "decisionStore.ts",
+          "workflowStore.ts",
+          "memoryStore.ts",
+          "costStore.ts",
+          "notificationStore.ts",
+          "authStore.ts"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_047",
+      "category": "C2",
+      "source_file": "B3",
+      "source_line": 89,
+      "source_text": "### 3.1 [dependencies]",
+      "key": "B3_RUST_DEPENDENCIES",
+      "value": {
+        "count": 14,
+        "list": [
+          "tauri ^2.2",
+          "tauri-plugin-shell ^2.2",
+          "serde ^1.0",
+          "serde_json ^1.0",
+          "tokio ^1.42",
+          "reqwest ^0.12",
+          "chrono ^0.4",
+          "uuid ^1.11",
+          "thiserror ^2.0",
+          "anyhow ^1.0",
+          "tracing ^0.1",
+          "tracing-subscriber ^0.3",
+          "toml ^0.8",
+          "dirs ^5.0"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_048",
+      "category": "C2",
+      "source_file": "B3",
+      "source_line": 155,
+      "source_text": "### 4.1 core (핵심 의존성)",
+      "key": "B3_PYTHON_CORE_DEPS",
+      "value": {
+        "count": 7,
+        "list": [
+          "pydantic >=2.10,<3.0",
+          "pydantic-settings >=2.7,<3.0",
+          "langgraph >=0.2.60,<1.0",
+          "langchain-core >=0.3.25,<1.0",
+          "langchain-openai >=0.2.14,<1.0",
+          "langchain-community >=0.3.15,<1.0",
+          "langchain-anthropic >=0.3.0,<1.0"
+        ]
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_049",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 1977,
+      "source_text": "| # | Command | 방향 | 카테고리 | 소스 스키마 |",
+      "key": "IPC_COMMAND_CATEGORIES",
+      "value": [
+        "Core",
+        "Agent",
+        "Storage",
+        "Safety",
+        "UI"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_050",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 76,
+      "source_text": "방향: `invoke` = React에서 Rust로 요청-응답, `event` = Rust에서 React로 단방향 푸시",
+      "key": "IPC_DIRECTION_TYPES",
+      "value": [
+        "invoke",
+        "event"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_051",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 130,
+      "source_text": "conclusion: \"ACCEPT\" | \"REJECT\" | \"HOLD\" | \"ESCALATE\";",
+      "key": "DECISION_CONCLUSION_VALUES",
+      "value": [
+        "ACCEPT",
+        "REJECT",
+        "HOLD",
+        "ESCALATE"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_052",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 117,
+      "source_text": "policy_gate: \"deny\" | \"restrict\" | \"allow\";",
+      "key": "POLICY_GATE_VALUES",
+      "value": [
+        "deny",
+        "restrict",
+        "allow"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_053",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 120,
+      "source_text": "cost_gate: \"normal\" | \"downshift\" | \"split\" | \"stop\";",
+      "key": "COST_GATE_VALUES",
+      "value": [
+        "normal",
+        "downshift",
+        "split",
+        "stop"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_054",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 123,
+      "source_text": "execution_mode: \"mini\" | \"main\" | \"tool\";",
+      "key": "EXECUTION_MODE_VALUES",
+      "value": [
+        "mini",
+        "main",
+        "tool"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_055",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 725,
+      "source_text": "scope: \"L0\" | \"L1\" | \"L2\" | \"L3\";",
+      "key": "MEMORY_LAYER_VALUES",
+      "value": [
+        "L0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_056",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 258,
+      "source_text": "current_stage: \"intake\" | \"plan\" | \"execute\" | \"verify\" | \"deliver\";",
+      "key": "WORKFLOW_STAGE_VALUES",
+      "value": [
+        "intake",
+        "plan",
+        "execute",
+        "verify",
+        "deliver"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_057",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 726,
+      "source_text": "memory_type: \"B-1\" | \"B-2\" | \"B-3\" | \"B-4\";",
+      "key": "MEMORY_TYPE_VALUES",
+      "value": [
+        "B-1",
+        "B-2",
+        "B-3",
+        "B-4"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_058",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 592,
+      "source_text": "state: \"closed\" | \"open\" | \"half_open\";",
+      "key": "CIRCUIT_BREAKER_STATES",
+      "value": [
+        "closed",
+        "open",
+        "half_open"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_059",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 868,
+      "source_text": "backend: \"chroma\" | \"qdrant\" | \"pgvector\";",
+      "key": "VECTOR_BACKEND_TYPES",
+      "value": [
+        "chroma",
+        "qdrant",
+        "pgvector"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_060",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 1384,
+      "source_text": "notification_type: \"guardrails_block\" | \"cost_warning\" | \"cost_block\" | \"approval_needed\" | \"hitl_request\" | \"circuit_breaker\" | \"cache_hit\";",
+      "key": "NOTIFICATION_TYPES",
+      "value": [
+        "guardrails_block",
+        "cost_warning",
+        "cost_block",
+        "approval_needed",
+        "hitl_request",
+        "circuit_breaker",
+        "cache_hit"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_061",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 558,
+      "source_text": "gate_type: \"policy\" | \"cost\" | \"approval\" | \"evidence\" | \"self_check\";",
+      "key": "GATE_TYPES",
+      "value": [
+        "policy",
+        "cost",
+        "approval",
+        "evidence",
+        "self_check"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_062",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 483,
+      "source_text": "risk_class: \"low\" | \"med\" | \"high\";",
+      "key": "RISK_CLASS_VALUES",
+      "value": [
+        "low",
+        "med",
+        "high"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_063",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 1962,
+      "source_text": "\"category\": \"llm.text|llm.vision|llm.embedding|browser.render|api.http|code.exec|data.vector|data.graph|mcp.tool\"",
+      "key": "TOOL_CATEGORY_VALUES",
+      "value": [
+        "llm.text",
+        "llm.vision",
+        "llm.embedding",
+        "browser.render",
+        "api.http",
+        "code.exec",
+        "data.vector",
+        "data.graph",
+        "mcp.tool"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_064",
+      "category": "C3",
+      "source_file": "B1",
+      "source_line": 1066,
+      "source_text": "detected_sensitive_types: Array<\"PII\" | \"AUTH\" | \"MEDICAL\" | \"LEGAL\">;",
+      "key": "SENSITIVE_DATA_TYPES",
+      "value": [
+        "PII",
+        "AUTH",
+        "MEDICAL",
+        "LEGAL"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_065",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 19,
+      "source_text": "Tauri IPC command 네이밍: `vamos:{category}:{action}` 패턴",
+      "key": "IPC_COMMAND_NAMING_PATTERN",
+      "value": "vamos:{category}:{action}",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_066",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 22,
+      "source_text": "에러 응답 표준: `{ success: false, error: { code: string, message: string, trace_id: string } }`",
+      "key": "ERROR_RESPONSE_STRUCTURE",
+      "value": "{ success: false, error: { code: string, message: string, trace_id: string } }",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_067",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 23,
+      "source_text": "성공 응답 표준: `{ success: true, data: T, trace_id: string }`",
+      "key": "SUCCESS_RESPONSE_STRUCTURE",
+      "value": "{ success: true, data: T, trace_id: string }",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_068",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 1401,
+      "source_text": "### 3.0 JSON-RPC 공통 규격",
+      "key": "JSONRPC_VERSION",
+      "value": "2.0",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_069",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 1884,
+      "source_text": "POST {base_url}/mcp",
+      "key": "MCP_TOOL_INVOCATION_ENDPOINT",
+      "value": "POST {base_url}/mcp",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_070",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 38,
+      "source_text": "vamos/                  # Git 루트 (Monorepo)",
+      "key": "B2_GIT_ROOT_NAME",
+      "value": "vamos/",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_071",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 54,
+      "source_text": "├── src/                            # React 프론트엔드 (섹션 3)",
+      "key": "B2_FRONTEND_DIR",
+      "value": "src/",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_072",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 55,
+      "source_text": "├── src-tauri/                      # Rust Tauri 백엔드 (섹션 4)",
+      "key": "B2_RUST_DIR",
+      "value": "src-tauri/",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_073",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 56,
+      "source_text": "├── backend/                        # Python AI/ML 백엔드 (섹션 5)",
+      "key": "B2_PYTHON_DIR",
+      "value": "backend/",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_074",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 57,
+      "source_text": "├── shared/                         # 공유 타입/인터페이스 (섹션 6)",
+      "key": "B2_SHARED_DIR",
+      "value": "shared/",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_075",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 302,
+      "source_text": "├── vamos_core/                     # 메인 패키지",
+      "key": "B2_PYTHON_PACKAGE_NAME",
+      "value": "vamos_core",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_076",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 617,
+      "source_text": "├── contracts.py                    # 중앙 Pydantic v2 모델 정의 (전수 검증 의무)",
+      "key": "B2_SCHEMAS_FILE",
+      "value": "backend/vamos_core/schemas/contracts.py",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_077",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 690,
+      "source_text": "│   ├── schemas.json                # JSON Schema 정의 (D2~D7 스키마 기반)",
+      "key": "B2_GOLDEN_SOURCE_FILE",
+      "value": "shared/types/schemas.json",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_078",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 323,
+      "source_text": "### 5.2 orange_core/ (I-1~I-5 모듈, Decision Kernel)",
+      "key": "B2_ORANGE_CORE_MODULES",
+      "value": [
+        "decision_kernel.py",
+        "front_mini.py",
+        "i1_intent/",
+        "i2_evidence/",
+        "i3_memory/",
+        "i4_output/",
+        "i5_gate/"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_079",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 416,
+      "source_text": "### 5.4 infra/ (BrainAdapter, ToolRegistry, PromptCache, RateLimit)",
+      "key": "B2_INFRA_SUBMODULES",
+      "value": [
+        "brain/",
+        "tools/",
+        "prompt/",
+        "rate_limit/",
+        "backup/"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_080",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 562,
+      "source_text": "### 5.7 safety/ (PolicyCheck, Approval, CostBudget, Guardrails, RBAC, Autonomy)",
+      "key": "B2_SAFETY_SUBMODULES",
+      "value": [
+        "policy/",
+        "approval/",
+        "cost/",
+        "guardrails/",
+        "rbac/",
+        "autonomy/"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_081",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 502,
+      "source_text": "### 5.6 storage/ (Memory, VectorStore, GraphRAG, SemanticCache)",
+      "key": "B2_STORAGE_SUBMODULES",
+      "value": [
+        "memory/",
+        "vector/",
+        "graph/",
+        "cache/",
+        "db/",
+        "logging/",
+        "kb/"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_082",
+      "category": "C4",
+      "source_file": "B3",
+      "source_line": 149,
+      "source_text": "name = \"vamos-core\"",
+      "key": "B3_PYTHON_PROJECT_NAME",
+      "value": "vamos-core",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_083",
+      "category": "C4",
+      "source_file": "B3",
+      "source_line": 155,
+      "source_text": "Python dependency groups: sections 4.1~4.8",
+      "key": "B3_DEPENDENCY_CATEGORIES",
+      "value": [
+        "core",
+        "embedding",
+        "vector",
+        "storage",
+        "guardrails",
+        "mcp",
+        "utils",
+        "dev"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_084",
+      "category": "C4",
+      "source_file": "B3",
+      "source_line": 338,
+      "source_text": "### 6.2 보안 감사 도구",
+      "key": "B3_SECURITY_AUDIT_TOOLS",
+      "value": [
+        "npm audit",
+        "cargo audit",
+        "pip-audit",
+        "GitHub Dependabot"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_085",
+      "category": "C4",
+      "source_file": "B3",
+      "source_line": 34,
+      "source_text": "### 1.2 의존성 관리 도구",
+      "key": "B3_DEPENDENCY_MANAGEMENT_TOOLS",
+      "value": {
+        "Frontend": "npm / pnpm",
+        "Rust": "Cargo",
+        "Python": "Poetry (또는 pip + pip-tools)"
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_086",
+      "category": "C4",
+      "source_file": "B3",
+      "source_line": 36,
+      "source_text": "| 영역 | 도구 | 잠금 파일 |",
+      "key": "B3_LOCK_FILES",
+      "value": [
+        "package-lock.json / pnpm-lock.yaml",
+        "Cargo.lock",
+        "poetry.lock (또는 requirements.lock)"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_087",
+      "category": "C4",
+      "source_file": "B2",
+      "source_line": 851,
+      "source_text": "### 8.1 환경 변수 (.env)",
+      "key": "ENV_VARS_LIST",
+      "value": [
+        "VAMOS_ENV",
+        "VAMOS_LOG_LEVEL",
+        "OPENAI_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "OLLAMA_HOST",
+        "SQLITE_DB_PATH",
+        "CHROMA_PERSIST_DIR",
+        "VAMOS_COST_LIMIT_USD",
+        "MCP_SERVER_URL"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_088",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 2199,
+      "source_text": "### 7.5 API 키 / 토큰 관리",
+      "key": "AUTH_METHODS",
+      "value": {
+        "OpenAI": "API Key (OPENAI_API_KEY)",
+        "MCP_Server": "Bearer Token (MCP_TOKEN)",
+        "OAuth2": "Secure Storage (Tauri) [V2+]",
+        "Local_User": "Session Token (SQLite V1 / Postgres V2+)"
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_089",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 2099,
+      "source_text": "### 6.2 FailureCode -> Fallback 매핑 (D2 정본)",
+      "key": "FALLBACK_IDS",
+      "value": [
+        "FB_INTENT_HEURISTIC_PARSE",
+        "FB_ASK_CLARIFICATION",
+        "FB_RAG_RETRY_EXPAND",
+        "FB_RAG_SWITCH_SOURCE",
+        "FB_MEMORY_META_ONLY",
+        "FB_REQUIRE_APPROVAL",
+        "FB_DENY_WITH_REASON",
+        "FB_OUTPUT_REFORMAT",
+        "FB_POLICY_MASK",
+        "FB_COST_DOWNSHIFT",
+        "FB_ROUTE_SAFE_NODE"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_090",
+      "category": "C4",
+      "source_file": "B1",
+      "source_line": 214,
+      "source_text": "event_type: \"oc.i5.decision.locked\" | \"oc.i5.route.selected\" | \"oc.i5.approval.required\";",
+      "key": "DECISION_EVENT_TYPES",
+      "value": [
+        "oc.i5.decision.locked",
+        "oc.i5.route.selected",
+        "oc.i5.approval.required"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_091",
+      "category": "C5",
+      "source_file": "B1",
+      "source_line": 10,
+      "source_text": "| 역할 | VAMOS AI 에이전트 플랫폼 API/IPC 엔드포인트 계약서 |",
+      "key": "B1_DOCUMENT_SCOPE",
+      "value": "VAMOS AI 에이전트 플랫폼 API/IPC 엔드포인트 계약서",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_092",
+      "category": "C5",
+      "source_file": "B2",
+      "source_line": 10,
+      "source_text": "| 역할 | VAMOS AI 에이전트 플랫폼 프로젝트 디렉토리/모듈 구조 설계 |",
+      "key": "B2_DOCUMENT_SCOPE",
+      "value": "VAMOS AI 에이전트 플랫폼 프로젝트 디렉토리/모듈 구조 설계",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_093",
+      "category": "C5",
+      "source_file": "B3",
+      "source_line": 11,
+      "source_text": "| 역할 | VAMOS AI 에이전트 플랫폼 의존성 목록 (Frontend / Rust / Python) |",
+      "key": "B3_DOCUMENT_SCOPE",
+      "value": "VAMOS AI 에이전트 플랫폼 의존성 목록 (Frontend / Rust / Python)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_094",
+      "category": "C5",
+      "source_file": "B1",
+      "source_line": 13,
+      "source_text": "| 기술 스택 | Tauri 2.0 + React (프론트) / Rust (IPC/시스템) / Python (AI/ML 백엔드) |",
+      "key": "B1_TECH_STACK",
+      "value": "Tauri 2.0 + React (프론트) / Rust (IPC/시스템) / Python (AI/ML 백엔드)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_095",
+      "category": "C5",
+      "source_file": "B1",
+      "source_line": 14,
+      "source_text": "| 통신 방식 | Tauri IPC (Rust-React) / JSON-RPC over subprocess (Python-Rust) / MCP Streamable HTTP (도구) |",
+      "key": "B1_COMMUNICATION_METHODS",
+      "value": "Tauri IPC (Rust-React) / JSON-RPC over subprocess (Python-Rust) / MCP Streamable HTTP (도구)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_096",
+      "category": "C5",
+      "source_file": "B1",
+      "source_line": 2171,
+      "source_text": "### 7.3 IPC Command별 권한 요구사항",
+      "key": "RBAC_PERMISSION_SCOPE",
+      "value": {
+        "Core": "OPERATOR (read: VIEWER)",
+        "Agent": "OPERATOR (register: ADMIN)",
+        "Storage": "OPERATOR (delete: ADMIN)",
+        "Safety_view": "VIEWER",
+        "Safety_modify": "ADMIN",
+        "Approval_request": "OPERATOR",
+        "Approval_decide": "ADMIN/OWNER",
+        "Autonomy": "ADMIN (L3: OWNER)",
+        "UI": "VIEWER"
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_097",
+      "category": "C5",
+      "source_file": "B2",
+      "source_line": 700,
+      "source_text": "[shared/types/schemas.json]  <-- Golden Source (D1~D8 스키마 기반)",
+      "key": "B2_TYPE_SYNC_STRATEGY",
+      "value": "contracts.py (SOT) -> schemas.json (중간형식) -> TypeScript/Rust codegen",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_098",
+      "category": "C5",
+      "source_file": "B3",
+      "source_line": 28,
+      "source_text": "| 최소 의존 | V1에 필요한 패키지만 포함, V2+ 패키지는 `[V2+]` 표시 |",
+      "key": "B3_V1_SCOPE_PACKAGES",
+      "value": "V1에 필요한 패키지만 포함, V2+ 패키지는 [V2+] 표시",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_099",
+      "category": "C6",
+      "source_file": "B1",
+      "source_line": 8,
+      "source_text": "| 버전 | 1.0.0 |",
+      "key": "B1_DOCUMENT_VERSION",
+      "value": "1.0.0",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_100",
+      "category": "C6",
+      "source_file": "B2",
+      "source_line": 8,
+      "source_text": "| 버전 | 1.0.0 |",
+      "key": "B2_DOCUMENT_VERSION",
+      "value": "1.0.0",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_101",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 9,
+      "source_text": "| 버전 | 1.0.0 |",
+      "key": "B3_DOCUMENT_VERSION",
+      "value": "1.0.0",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_102",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 363,
+      "source_text": "| 1.0.1 | 2026-03-01 | B3-01: pyproject.toml `requires-python = \">=3.11\"` 추가 (§4.0).",
+      "key": "B3_LATEST_PATCH_VERSION",
+      "value": "1.0.1",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_103",
+      "category": "C6",
+      "source_file": "B1",
+      "source_line": 9,
+      "source_text": "| 작성일 | 2026-02-22 |",
+      "key": "B1_CREATION_DATE",
+      "value": "2026-02-22",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_104",
+      "category": "C6",
+      "source_file": "B2",
+      "source_line": 9,
+      "source_text": "| 작성일 | 2026-02-22 |",
+      "key": "B2_CREATION_DATE",
+      "value": "2026-02-22",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_105",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 10,
+      "source_text": "| 작성일 | 2026-02-22 |",
+      "key": "B3_CREATION_DATE",
+      "value": "2026-02-22",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_106",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 151,
+      "source_text": "requires-python = \">=3.11\"",
+      "key": "PYTHON_REQUIRES_VERSION",
+      "value": ">=3.11",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_107",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 310,
+      "source_text": "| **비용 상한** | 40K KRW/mo ($30) | 93K KRW/mo ($70) | 266K KRW/mo ($200) |",
+      "key": "B3_V1_COST_LIMIT",
+      "value": "40K KRW/mo ($30)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_108",
+      "category": "C6",
+      "source_file": "B3",
+      "source_line": 310,
+      "source_text": "| **비용 상한** | 40K KRW/mo ($30) | 93K KRW/mo ($70) | 266K KRW/mo ($200) |",
+      "key": "B3_V2_COST_LIMIT",
+      "value": "93K KRW/mo ($70)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_109",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 21,
+      "source_text": "MCP 전송: Streamable HTTP only (DEC-017 LOCK, stdio 제거)",
+      "key": "LOCK_MCP_TRANSPORT",
+      "value": "Streamable HTTP only (DEC-017 LOCK, stdio 제거)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_110",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 899,
+      "source_text": "similarity_threshold?: number;   // 기본: 0.95 (LOCK)",
+      "key": "LOCK_SEMANTIC_CACHE_THRESHOLD",
+      "value": "similarity_threshold >= 0.95 (LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_111",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 1127,
+      "source_text": "warn_threshold_percent: 80;     // LOCK",
+      "key": "LOCK_DOWNSHIFT_WARN",
+      "value": "warn_threshold_percent: 80 (LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_112",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 1128,
+      "source_text": "block_threshold_percent: 100;   // LOCK",
+      "key": "LOCK_DOWNSHIFT_BLOCK",
+      "value": "block_threshold_percent: 100 (LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_113",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 2153,
+      "source_text": "### 7.1 RBAC 역할 체계 (D7 RBACRoleSchema LOCK)",
+      "key": "LOCK_RBAC_ROLE_SCHEMA",
+      "value": "D7 RBACRoleSchema LOCK",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_114",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 2162,
+      "source_text": "### 7.2 자율 수준별 동작 (D7 AutonomyLevelSchema LOCK)",
+      "key": "LOCK_AUTONOMY_LEVEL_SCHEMA",
+      "value": "D7 AutonomyLevelSchema LOCK",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_115",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 1445,
+      "source_text": "> Agent Framework: LangGraph (LOCK). StateGraph 패턴 기반.",
+      "key": "LOCK_LANGGRAPH_FRAMEWORK",
+      "value": "Agent Framework: LangGraph (LOCK). StateGraph 패턴 기반.",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_116",
+      "category": "C7",
+      "source_file": "B2",
+      "source_line": 24,
+      "source_text": "### 1.1 결정: Monorepo (LOCK)",
+      "key": "LOCK_MONOREPO",
+      "value": "Monorepo (LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_117",
+      "category": "C7",
+      "source_file": "B3",
+      "source_line": 159,
+      "source_text": "| `pydantic` | `>=2.10,<3.0` | Pydantic v2 스키마 검증 (LOCK) | `schemas/contracts.py` — 전수 검증 의무 (ADD-036b) |",
+      "key": "LOCK_PYDANTIC_V2_VALIDATION",
+      "value": "Pydantic v2 스키마 검증 (LOCK) — 전수 검증 의무 (ADD-036b)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_118",
+      "category": "C7",
+      "source_file": "B3",
+      "source_line": 161,
+      "source_text": "| `langgraph` | `>=0.2.60,<1.0` | LangGraph StateGraph 프레임워크 (LOCK) |",
+      "key": "LOCK_LANGGRAPH_PACKAGE",
+      "value": "langgraph >=0.2.60,<1.0 (LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_119",
+      "category": "C7",
+      "source_file": "B3",
+      "source_line": 217,
+      "source_text": "| `tiktoken` | `>=0.8.0,<1.0` | 토큰 카운팅 (cl100k_base LOCK) |",
+      "key": "LOCK_TIKTOKEN_ENCODING",
+      "value": "tiktoken cl100k_base LOCK",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_120",
+      "category": "C7",
+      "source_file": "B3",
+      "source_line": 208,
+      "source_text": "| `httpx` | `>=0.28.0,<1.0` | 비동기 HTTP 클라이언트 (MCP Streamable HTTP) | `mcp/client.py` — MCP 도구 호출 (DEC-017 LOCK) |",
+      "key": "LOCK_MCP_DEC017",
+      "value": "Streamable HTTP 전송 (DEC-017 LOCK)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_121",
+      "category": "C7",
+      "source_file": "B3",
+      "source_line": 29,
+      "source_text": "| 버전 고정 | 메이저 버전 호환 범위 지정 (`>=`, `<` 사용) |",
+      "key": "LOCK_VERSION_PINNING",
+      "value": "메이저 버전 호환 범위 지정 (>=, < 사용)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_122",
+      "category": "C7",
+      "source_file": "B1",
+      "source_line": 18,
+      "source_text": "모든 요청에 `trace_id: string` 포함 (추적/감사용)",
+      "key": "RULE_TRACE_ID_REQUIRED",
+      "value": "모든 요청에 trace_id: string 포함 (추적/감사용)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_123",
+      "category": "C8",
+      "source_file": "B1",
+      "source_line": 12,
+      "source_text": "| 소스 스키마 | D2(Orange Core), D3(Blue Nodes), D4(Infra Core), D5(Agent Workflow), D6(Storage Memory), D7(Safety/Cost/Approval), D8(UI/UX) |",
+      "key": "B1_SOURCE_SCHEMAS",
+      "value": "D2(Orange Core), D3(Blue Nodes), D4(Infra Core), D5(Agent Workflow), D6(Storage Memory), D7(Safety/Cost/Approval), D8(UI/UX)",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_124",
+      "category": "C8",
+      "source_file": "B1",
+      "source_line": 11,
+      "source_text": "| 상위 정본 | BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schemas |",
+      "key": "B1_UPPER_SOT",
+      "value": "BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schemas",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_125",
+      "category": "C8",
+      "source_file": "B2",
+      "source_line": 11,
+      "source_text": "| 상위 참조 | A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), D1~D8 스키마 문서, D8 UI/UX 계약 |",
+      "key": "B2_UPPER_REFERENCE",
+      "value": "A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), D1~D8 스키마 문서, D8 UI/UX 계약",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_126",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 12,
+      "source_text": "| 상위 참조 | A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE |",
+      "key": "B3_UPPER_REFERENCE",
+      "value": "A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_127",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 15,
+      "source_text": "### 연결 참조",
+      "key": "B3_CONNECTED_REFERENCES",
+      "value": [
+        "A1 Tech Stack: COMBO-V1/V2/V3 LOCK 결정",
+        "B2 Project Structure: 디렉토리/모듈 구조 → 의존성 매핑",
+        "D1~D8 Schema: Pydantic v2 스키마 → 패키지 연결"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_128",
+      "category": "C8",
+      "source_file": "B1",
+      "source_line": 1977,
+      "source_text": "Section 5 endpoint summary table source schema column",
+      "key": "B1_SCHEMA_REFERENCES_IN_ENDPOINTS",
+      "value": [
+        "D2 DecisionSchema",
+        "D2 LogEventSchema",
+        "D3 NodeRequestEnvelopeSchema",
+        "D3 NodeResponseEnvelopeSchema",
+        "D3 NodeCapabilityProfileSchema",
+        "D3 NodeRegistry",
+        "D3 MCPBridgeLayerSchema",
+        "D3 ToolCallRegistrySchema",
+        "D4 BrainAdapterResponseSchema",
+        "D4 InfraInvokeResultSchema",
+        "D4 RateLimitConfigSchema",
+        "D4 PromptCacheManagerSchema",
+        "D4 ToolRegistryEntrySchema",
+        "D5 WorkflowStageSchema",
+        "D5 WorkflowOutputEnvelopeSchema",
+        "D5 FailureReportSchema",
+        "D5 VerifyChainEntrySchema",
+        "D5 CircuitBreakerSchema",
+        "D5 GatePipelineMappingSchema",
+        "D5 HITLRequestSchema",
+        "D5 AgentMarketplaceSchema",
+        "D6 MemoryRecordSchema",
+        "D6 VectorStoreAdapterSchema",
+        "D6 KBEmbeddingRecordSchema",
+        "D6 SemanticCacheSchema",
+        "D6 GraphRAGConfigSchema",
+        "D6 SourceQoDSchema",
+        "D7 PolicyCheckSchema",
+        "D7 CostBudgetSchema",
+        "D7 DownshiftSchema",
+        "D7 ApprovalSchema",
+        "D7 GuardrailsCheckSchema",
+        "D7 RBACRoleSchema",
+        "D7 AutonomyLevelSchema",
+        "D8 문서형 계약"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_129",
+      "category": "C8",
+      "source_file": "B2",
+      "source_line": 192,
+      "source_text": "### 3.2 UI 컴포넌트 카테고리 (D8 매핑)",
+      "key": "B2_D8_UI_MAPPING",
+      "value": {
+        "D8_S4": "components/canvas/ — 워크플로우 시각화",
+        "D8_S6": "components/artifacts/ — 산출물 뷰어",
+        "D8_S7": "components/notifications/ — 이벤트 알림",
+        "D8_S10": "components/autonomy/ — L0~L3 제어"
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_130",
+      "category": "C8",
+      "source_file": "B2",
+      "source_line": 693,
+      "source_text": "└── codegen/                        # 타입 코드 생성 스크립트",
+      "key": "B2_CODEGEN_SCRIPTS",
+      "value": {
+        "generate_ts.py": "JSON Schema → TypeScript 타입 생성",
+        "generate_rs.py": "JSON Schema → Rust serde 구조체 생성",
+        "generate_py.py": "JSON Schema → Pydantic v2 모델 생성 (검증용)"
+      },
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_131",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 328,
+      "source_text": "| Neo4j Community | GPL-3.0 | **주의** | Community 에디션은 GPL, 서버 독립 실행으로 호환 가능 [V2+] |",
+      "key": "B3_LICENSE_CONCERN",
+      "value": "Neo4j Community: GPL-3.0 — 주의 (서버 독립 실행으로 호환 가능) [V2+]",
+      "value_type": "string",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_132",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 269,
+      "source_text": "### 5.2 V2 (서버, Docker Compose, <=93K/mo)",
+      "key": "B3_V2_ADDITIONAL_PACKAGES",
+      "value": [
+        "langchain-anthropic",
+        "qdrant-client",
+        "asyncpg",
+        "neo4j (>=5.27,<6.0)",
+        "transformers",
+        "openai embedding",
+        "celery (>=5.4,<6.0) [선택]",
+        "redis (>=5.2,<6.0) [선택]"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_133",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 284,
+      "source_text": "### 5.3 V3 (엔터프라이즈, K8s, <=266K/mo)",
+      "key": "B3_V3_ADDITIONAL_PACKAGES",
+      "value": [
+        "vllm",
+        "prometheus-client (>=0.21,<1.0)",
+        "opentelemetry-sdk (>=1.29,<2.0)",
+        "opentelemetry-exporter-otlp (>=1.29,<2.0)",
+        "kubernetes (>=31.0,<32.0) [선택]"
+      ],
+      "value_type": "list",
+      "context": ""
+    },
+    {
+      "item_id": "EA-09_134",
+      "category": "C8",
+      "source_file": "B3",
+      "source_line": 347,
+      "source_text": "### 6.3 보안 정책",
+      "key": "B3_SECURITY_POLICY",
+      "value": {
+        "API_키_보호": ".env 파일은 .gitignore에 포함, 커밋 금지",
+        "의존성_업데이트": "Dependabot 자동 PR, 보안 패치는 48시간 내 적용",
+        "취약점_대응": "Critical/High → 즉시 패치, Medium → 1주 내",
+        "최소_권한": "Tauri 2.0 capabilities로 앱 권한 최소화"
+      },
+      "value_type": "list",
+      "context": ""
+    }
+  ]
+}

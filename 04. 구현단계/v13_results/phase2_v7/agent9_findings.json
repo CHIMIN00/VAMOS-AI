@@ -1,0 +1,120 @@
+{
+  "agent": "Agent 9",
+  "scope": "PART2 §7 최종 검토사항 (Decision/Governance) 검증 (vs VAMOS_MASTER_SPECIFICATION §7, §17)",
+  "session": "session_15",
+  "timestamp": "2026-03-21T14:20:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 20,
+    "matches": 18,
+    "mismatches": [
+      {
+        "id": "A9-M1",
+        "fact": "V0 GO/NO-GO 항목 11: 25개 스키마 코드 생성",
+        "part2_ref": "PART2 L3261",
+        "sot_ref": "CLAUDE.md §10 V0 체크리스트",
+        "match": false,
+        "detail": "PART2 states '25개 스키마' but CLAUDE.md §10 says '24개 스키마'. PART2 v15.0.0 changelog added AutonomyLevelSchema (24→25), which may not be reflected in CLAUDE.md. Discrepancy exists between PART2 and CLAUDE.md."
+      },
+      {
+        "id": "A9-M2",
+        "fact": "V0 GO/NO-GO 항목 12: I-1~I-3, I-5, I-19 스켈레톤 (5개, I-4 제외)",
+        "part2_ref": "PART2 L3262",
+        "sot_ref": "CLAUDE.md §10 V0 checklist",
+        "match": false,
+        "detail": "CLAUDE.md §10 lists 'I-1~I-5 + I-19 스켈레톤' (6 modules). PART2 says 'I-1~I-3, I-5, I-19 (5개, I-4 제외)' based on READINESS §2.7. The two sources differ on whether I-4 is included in V0 skeleton generation."
+      }
+    ],
+    "match_details": [
+      {"fact": "V0 GO/NO-GO 16항목", "part2_ref": "PART2 L3245", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "CLAUDE.md §10 V0 section has 16 items. Match."},
+      {"fact": "V1 GO/NO-GO 21항목", "part2_ref": "PART2 L3268", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "CLAUDE.md §10 V1 section has 21 items. Match."},
+      {"fact": "V2 GO/NO-GO 14항목", "part2_ref": "PART2 L3301", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "CLAUDE.md §10 V2 section has 14 items. Match."},
+      {"fact": "V3 GO/NO-GO 11항목", "part2_ref": "PART2 L3327", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "CLAUDE.md §10 V3 section has 11 items. Match."},
+      {"fact": "V1→V2 전환 조건: QoD>=0.85(30일), RAG 정확도>=60%, 메모리 오류<1%, P0 100%, 비용 초과 없이 30일, 사용자 승인", "part2_ref": "PART2 L3296-3298", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "6 conditions match CLAUDE.md exactly."},
+      {"fact": "V2→V3 전환 조건: QoD>=0.90(60일), 2-tier LLM 최적화, P1 고급 테스트, Self-evo 체계, V3 비용 재검토, Loki+Grafana 배포", "part2_ref": "PART2 L3322-3324", "sot_ref": "CLAUDE.md §10", "match": true, "detail": "6 conditions match CLAUDE.md exactly."},
+      {"fact": "정본 우선순위: RULE 1.3 > PLAN 3.0 > DESIGN LOCK > DESIGN 본문 > 스키마", "part2_ref": "PART2 L3384-3389", "sot_ref": "MASTER_SPEC §17.1 L1498", "match": true, "detail": "Exact match with MASTER_SPEC §17.1."},
+      {"fact": "PII 마스킹: 주민번호/전화번호/이메일/카드번호 탐지율 99%+", "part2_ref": "PART2 L3365", "sot_ref": "MASTER_SPEC §9 Safety section", "match": true, "detail": "Consistent with safety specifications."},
+      {"fact": "P2 자동 OFF: 세션 종료 시 즉시 비활성", "part2_ref": "PART2 L3367", "sot_ref": "MASTER_SPEC §17.3 L1533", "match": true, "detail": "MASTER_SPEC §17.3 confirms 'P2 자동 OFF: 세션 종료 시 즉시 OFF'. Match."},
+      {"fact": "비용 상한: 80% 경고 / 100% 차단", "part2_ref": "PART2 L3368", "sot_ref": "MASTER_SPEC §17.3 L1529", "match": true, "detail": "MASTER_SPEC confirms 'Downshift: 80% warn/force_mini, 100% block'. Match."},
+      {"fact": "Docker 샌드박스: 네트워크 격리, 30초 타임아웃", "part2_ref": "PART2 L3369", "sot_ref": "MASTER_SPEC §17.2 L1517", "match": true, "detail": "MASTER_SPEC confirms 'Docker 샌드박스 필수 (네트워크 차단, 30초)'. Match."},
+      {"fact": "Simple response <= 2초", "part2_ref": "PART2 L3375", "sot_ref": "MASTER_SPEC §4.8", "match": true, "detail": "Performance benchmarks match MASTER_SPEC targets."},
+      {"fact": "Complex response <= 10초", "part2_ref": "PART2 L3376", "sot_ref": "MASTER_SPEC §4.8", "match": true, "detail": "Performance benchmarks match."},
+      {"fact": "동시 처리: BLUE_NODES=3, TOOLS=5", "part2_ref": "PART2 L3378", "sot_ref": "MASTER_SPEC §17.2 L1519", "match": true, "detail": "MASTER_SPEC confirms 'MAX_CONCURRENT_BLUE_NODES=3, TOOLS=5'. Match."},
+      {"fact": "SOURCE_CONFLICT 전수 12건", "part2_ref": "PART2 L3392-3412", "sot_ref": "Internal consistency", "match": true, "detail": "12 SOURCE_CONFLICT items are self-documented with resolution evidence."},
+      {"fact": "43개 산출물 파일 인덱스", "part2_ref": "PART2 L3416-3443", "sot_ref": "MASTER_SPEC §0 (39개 + 추가분)", "match": true, "detail": "MASTER_SPEC lists 39 files in §0. PART2 lists 43 (39 + CLAUDE.md + Guide + Review + etc.). Reasonable expansion."},
+      {"fact": "Self-check <= 1초", "part2_ref": "PART2 L3377", "sot_ref": "MASTER_SPEC §4.8", "match": true, "detail": "Performance target matches."},
+      {"fact": "SDAR NEVER_AUTO 완전성: 10항목 전체 코드 반영", "part2_ref": "PART2 L3359", "sot_ref": "MASTER_SPEC §17.2/SDAR_SPEC §9", "match": true, "detail": "Cross-cut review item consistent with SDAR SOT."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 15,
+    "present": 13,
+    "missing": [
+      {
+        "id": "B9-M1",
+        "sot_fact": "HITL 타임아웃: 기본 30분, P2는 무제한",
+        "sot_ref": "MASTER_SPEC §7.9 L856",
+        "part2_present": false,
+        "detail": "PART2 §7.5.2 mentions '승인 타임아웃 10분 auto-deny' from CLAUDE.md §7.3 but MASTER_SPEC §7.9 specifies different values: 기본 30분, P2 무제한. This is a potential conflict not surfaced in PART2."
+      },
+      {
+        "id": "B9-M2",
+        "sot_fact": "워크플로우 패턴 카탈로그 12건",
+        "sot_ref": "MASTER_SPEC §7.14",
+        "part2_present": false,
+        "detail": "MASTER_SPEC §7.14 lists 12 workflow patterns (Sequential, Parallel Fan-out, Map-Reduce, Router, Retry-with-Backoff, Saga, Pipeline, Observer, Mediator, Chain of Responsibility, State Machine, + 1 more). PART2 §7 does not reference this catalog."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "5-Phase Pipeline LOCK: Intake→Plan→Execute→Verify→Deliver", "sot_ref": "MASTER_SPEC §7.1", "part2_present": true, "detail": "PART2 references 5-Phase throughout (e.g., §7.5.4 검증 순서)."},
+      {"sot_fact": "Gate-Pipeline Mapping: G0(Intake), G1(Plan), G2(Plan), G3(Verify), G4(Deliver)", "sot_ref": "MASTER_SPEC §7.5", "part2_present": true, "detail": "Referenced in PART2 pipeline descriptions and §7.5.1."},
+      {"sot_fact": "Circuit Breaker: CLOSED→OPEN(3회)→HALF-OPEN(60초)", "sot_ref": "MASTER_SPEC §7.4", "part2_present": true, "detail": "PART2 SC-06 resolves to 60s LOCK."},
+      {"sot_fact": "TEE 최대 반복: P0=3, P1=5, P2=10", "sot_ref": "MASTER_SPEC §7.7", "part2_present": true, "detail": "Referenced in LOCK-AT-010 (PART2 L2681)."},
+      {"sot_fact": "Soft/Hard Loop: Soft 자동 1회, Hard 승인 필요", "sot_ref": "MASTER_SPEC §7.8", "part2_present": true, "detail": "Referenced in §7.5.1 and throughout PART2."},
+      {"sot_fact": "DEC-003 도구 승인 Allowlist LOCK", "sot_ref": "MASTER_SPEC §7.11", "part2_present": true, "detail": "PART2 L2595 includes DEC-003 in §6.5 security items."},
+      {"sot_fact": "대화 턴 상한: P0=5, P1=10, P2=20", "sot_ref": "MASTER_SPEC §7.12", "part2_present": true, "detail": "PART2 LOCK-AT-009 (L2680)."},
+      {"sot_fact": "4-Layer Guardrails: L1 NeMo + L2 Guardrails AI + L3 LlamaGuard + L4 사후감사", "sot_ref": "MASTER_SPEC §7.13", "part2_present": true, "detail": "PART2 §6.5 lists all 4 layers with version assignments."},
+      {"sot_fact": "Decision Lock: locked=true, S3 이후 변경불가", "sot_ref": "MASTER_SPEC §17.2 L1511", "part2_present": true, "detail": "Referenced throughout PART2 and in §7.5.1 Gate 우회 불가."},
+      {"sot_fact": "Self-evo LOCK: 제안만 가능, 자동 적용 금지", "sot_ref": "MASTER_SPEC §17.5", "part2_present": true, "detail": "Referenced in SDAR section §6.9 Self-evo 원칙 준수."},
+      {"sot_fact": "EVX-1~EVX-6 검증 체인 LOCK", "sot_ref": "MASTER_SPEC §7.3", "part2_present": "partial", "detail": "PART2 mentions EVX chain in V1 pipeline but does not reproduce the full EVX table in §7."},
+      {"sot_fact": "3단 출력 LOCK: user_response, evidence_summary, log_report", "sot_ref": "MASTER_SPEC §7.6", "part2_present": "partial", "detail": "Referenced via ResponseEnvelope in PART2 §2 STEP-2 but not in §7 directly."},
+      {"sot_fact": "UI/UX LOCK: 비용 경고 색상 80%=#FBBF24, 100%=#EF4444", "sot_ref": "MASTER_SPEC §17.6 L1569", "part2_present": false, "detail": "PART2 §7 does not reference specific color codes. This is covered in CLAUDE.md §7.6 but not in PART2 cross-cut review."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-91",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "HITL 타임아웃 불일치: PART2는 '10분 auto-deny' (CLAUDE.md §7.3), MASTER_SPEC §7.9는 '기본 30분, P2 무제한'",
+      "evidence": "PART2 L3368 '승인 타임아웃 10분 auto-deny' vs MASTER_SPEC §7.9 L856 '기본 30분, P2는 무제한'. 이 두 값은 서로 다른 컨텍스트(일반 승인 vs HITL 개입)일 수 있으나 명시적 구분이 없어 구현 시 혼동 가능."
+    },
+    {
+      "id": "F-92",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "V0 스키마 수: PART2=25개 vs CLAUDE.md=24개",
+      "evidence": "PART2 L3261 '25개 스키마' vs CLAUDE.md §10 '24개 스키마'. v15.0.0에서 AutonomyLevelSchema 추가로 25개가 됐으나 CLAUDE.md는 미갱신 상태."
+    },
+    {
+      "id": "F-93",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "V0 모듈 스켈레톤: PART2='I-1~I-3,I-5,I-19 (5개)' vs CLAUDE.md='I-1~I-5+I-19 (6개, I-4 포함)'",
+      "evidence": "PART2 L3262 explicitly excludes I-4 citing READINESS §2.7. CLAUDE.md §10 includes I-4. 구현 시 I-4 포함 여부 혼동 가능."
+    },
+    {
+      "id": "F-94",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "워크플로우 패턴 카탈로그 12건이 PART2 §7 크로스컷 검토에 미포함",
+      "evidence": "MASTER_SPEC §7.14 defines 12 workflow patterns. Not referenced in PART2 review section."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "88.6%",
+    "findings_count": 4
+  }
+}

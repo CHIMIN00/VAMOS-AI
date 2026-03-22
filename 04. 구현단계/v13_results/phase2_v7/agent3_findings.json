@@ -1,0 +1,328 @@
+{
+  "agent": "Agent 3",
+  "scope": "SDAR 설계문서 검증 — PART2 §6.9 vs VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+  "session": "session_13",
+  "timestamp": "2026-03-21T10:30:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 20,
+    "matches": 19,
+    "mismatches": [
+      {
+        "id": "A3-M01",
+        "fact": "PART2 §6.9 SDAR State Machine 7상태 (IDLE/DETECTING/DIAGNOSING/PRESCRIBING/REPAIRING/VERIFYING/ESCALATED)",
+        "part2_ref": "PART2 L2829-2845",
+        "sot_ref": "SDAR_SPEC §7.1",
+        "match": false,
+        "detail": "PART2 L2829 uses simplified state names (IDLE, DETECTING, etc.) while SDAR_SPEC §7.1 uses SDAR_S0_MONITORING through SDAR_S6_DONE (7 states). PART2 lists ESCALATED as a state, but SDAR_SPEC shows SDAR_S6_DONE as the final state with escalation as a transition path, not a named state. PART2 notes this discrepancy in XREF-S6-05 comment: 'ESCALATED는 독립 상태가 아니라... 종료 상태. 편의상 7상태로 표기'. This is an acknowledged simplification."
+      }
+    ],
+    "match_details": [
+      {
+        "fact": "5-Layer Pipeline: DETECTION→DIAGNOSIS→PRESCRIPTION→REPAIR→VERIFICATION",
+        "part2_ref": "PART2 L2819-2826",
+        "sot_ref": "SDAR_SPEC §2.1",
+        "match": true,
+        "detail": "5-layer pipeline structure matches exactly"
+      },
+      {
+        "fact": "Health Monitoring 30초 간격",
+        "part2_ref": "PART2 L2822, L2839",
+        "sot_ref": "SDAR_SPEC §2.2 Channel A: 기본 30초 간격",
+        "match": true,
+        "detail": "30-second health check interval matches"
+      },
+      {
+        "fact": "AR-Level 5단계: AR-L0(MANUAL)~AR-L4(AUTO_AGGRESSIVE)",
+        "part2_ref": "PART2 L2825, L2861-2867",
+        "sot_ref": "SDAR_SPEC §3.1",
+        "match": true,
+        "detail": "5 AR-levels match exactly"
+      },
+      {
+        "fact": "시스템 기본값 AR-L2 (AUTO_SAFE)",
+        "part2_ref": "PART2 implied in L2865 (LOW risk at AR-L2)",
+        "sot_ref": "SDAR_SPEC §3.1 기본값: AR-L2",
+        "match": true,
+        "detail": "Default AR-L2 matches"
+      },
+      {
+        "fact": "NEVER_AUTO 10항목: 7개 불변구역 + escalate_own_privilege + disable_guardrails + bypass_gate",
+        "part2_ref": "PART2 L2868",
+        "sot_ref": "SDAR_SPEC §9.1 (7개) + §5.1 RA_NEVER_08~10 (3개)",
+        "match": true,
+        "detail": "All 10 NEVER_AUTO items match exactly"
+      },
+      {
+        "fact": "MAX_CONCURRENT_REPAIRS = 1",
+        "part2_ref": "PART2 L2871",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Concurrent repair limit matches"
+      },
+      {
+        "fact": "MAX_AUTO_REPAIRS_PER_ISSUE_PER_HOUR = 3",
+        "part2_ref": "PART2 L2872",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Hourly repair limit matches"
+      },
+      {
+        "fact": "MAX_CONCURRENT_SDAR_INSTANCES = 3",
+        "part2_ref": "PART2 L2873",
+        "sot_ref": "SDAR_SPEC §9.2, §7.4",
+        "match": true,
+        "detail": "Concurrent instances limit matches"
+      },
+      {
+        "fact": "SNAPSHOT_MANDATORY for MEDIUM/HIGH risk",
+        "part2_ref": "PART2 L2874",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Snapshot requirement matches"
+      },
+      {
+        "fact": "NOTIFICATION_MANDATORY for all repairs",
+        "part2_ref": "PART2 L2875",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Notification requirement matches"
+      },
+      {
+        "fact": "APPROVAL_TIMEOUT = 600s (10분)",
+        "part2_ref": "PART2 L2876",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Approval timeout matches"
+      },
+      {
+        "fact": "OBSERVATION_PERIOD = 300s (5분)",
+        "part2_ref": "PART2 L2877",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Observation period matches"
+      },
+      {
+        "fact": "ROLLBACK_TIMEOUT = 300s",
+        "part2_ref": "PART2 L2878",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Rollback timeout matches"
+      },
+      {
+        "fact": "COOLDOWN_BETWEEN_REPAIRS = 60s",
+        "part2_ref": "PART2 L2879",
+        "sot_ref": "SDAR_SPEC §9.2",
+        "match": true,
+        "detail": "Cooldown period matches"
+      },
+      {
+        "fact": "Emergency Kill Switch: 모든 RBAC 역할 활성화 가능, ADMIN 이상 해제",
+        "part2_ref": "PART2 L2892-2897",
+        "sot_ref": "SDAR_SPEC §9.4",
+        "match": true,
+        "detail": "Kill switch permissions match exactly"
+      },
+      {
+        "fact": "자동 Kill Switch ON 조건: SDAR_ROLLBACK_FAILED",
+        "part2_ref": "PART2 L2897",
+        "sot_ref": "SDAR_SPEC §9.4",
+        "match": true,
+        "detail": "Auto kill switch trigger matches"
+      },
+      {
+        "fact": "CATEGORY E 보안 오류 5가지 특별 규칙 (자동수리 금지, 즉시 차단, 감사 로그 강제, 인간 알림, 데이터 30일 보존)",
+        "part2_ref": "PART2 L2901-2905",
+        "sot_ref": "SDAR_SPEC §9.5",
+        "match": true,
+        "detail": "All 5 CATEGORY E rules match exactly"
+      },
+      {
+        "fact": "P2 도메인 수리 제한: AR-Level 무관 인간 승인, Circuit Breaker 자동 복구 금지, P2 자동 생성 금지",
+        "part2_ref": "PART2 L2909-2911",
+        "sot_ref": "SDAR_SPEC §9.6",
+        "match": true,
+        "detail": "P2 repair restrictions match exactly"
+      },
+      {
+        "fact": "비용 영향 제한: CostBudget 상한 내, 일일 10% 초과 시 승인, switch_model CostGate 재검증",
+        "part2_ref": "PART2 L2915-2917",
+        "sot_ref": "SDAR_SPEC §9.7",
+        "match": true,
+        "detail": "Cost impact limits match exactly"
+      }
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 15,
+    "present": 9,
+    "missing": [
+      {
+        "sot_fact": "AR-Level과 Autonomy Level 매핑: L0→AR-L0, L1→AR-L2, L2→AR-L3, L3→AR-L4",
+        "sot_ref": "SDAR_SPEC §3.2",
+        "detail": "PART2 §6.9 does not include the AR-Level to Autonomy Level mapping table"
+      },
+      {
+        "sot_fact": "RBAC와 AR-Level: OWNER=L0~L4, ADMIN=L0~L3, OPERATOR=L0~L2, VIEWER=조회만",
+        "sot_ref": "SDAR_SPEC §3.4",
+        "detail": "PART2 §6.9 does not include the RBAC-AR Level permission matrix"
+      },
+      {
+        "sot_fact": "SDAR Failure Code 13개 (SDAR_DETECTION_TIMEOUT ~ SDAR_KILL_SWITCH_ACTIVE)",
+        "sot_ref": "SDAR_SPEC §6.4",
+        "detail": "PART2 §6.9 does not enumerate the 13 SDAR-specific failure codes"
+      },
+      {
+        "sot_fact": "SDAR Fallback 4개: FB_SDAR_MANUAL_ESCALATION/DEGRADE_AR_LEVEL/RETRY_DIAGNOSIS/SNAPSHOT_ROLLBACK",
+        "sot_ref": "SDAR_SPEC §6.4",
+        "detail": "PART2 §6.9 does not list the 4 SDAR fallback strategies"
+      },
+      {
+        "sot_fact": "V1→V2 전환 조건: LOW 성공률≥95%, 오탐<5%, Kill Switch 0회",
+        "sot_ref": "SDAR_SPEC §10.4",
+        "detail": "PART2 does not include SDAR-specific version transition conditions"
+      },
+      {
+        "sot_fact": "Monorepo 구조 확장: backend/vamos_core/sdar/ 디렉토리 구조",
+        "sot_ref": "SDAR_SPEC §6.5",
+        "detail": "PART2 §6.9 does not include the detailed sdar/ directory structure from SDAR_SPEC §6.5"
+      }
+    ],
+    "check_details": [
+      {
+        "sot_fact": "SDAR 모듈 ID: I-25, status=COND, V1=OFF, V2=COND, V3=ON",
+        "sot_ref": "SDAR_SPEC §1.4",
+        "part2_present": true,
+        "detail": "PART2 references I-25 correctly with COND status throughout"
+      },
+      {
+        "sot_fact": "기존 모듈 통합 8개: S-1, S-4, I-6, I-16, I-20, S-8, I-19, I-8",
+        "sot_ref": "SDAR_SPEC §1.3",
+        "part2_present": true,
+        "detail": "PART2 §6.9 5-Gate integration references I-19, I-8 connection. Full integration table partially covered"
+      },
+      {
+        "sot_fact": "5-Gate 통합: Safety/Risk/Cost/Approval/Verification",
+        "sot_ref": "SDAR_SPEC §6.1",
+        "part2_present": true,
+        "detail": "PART2 L2849-2855 lists all 5 SDAR gates correctly"
+      },
+      {
+        "sot_fact": "Gate 코드 공유: Gate 1/3/4가 VAMOS 5-Gate와 BaseGate(ABC) 공유",
+        "sot_ref": "SDAR_SPEC §6.1 통합",
+        "part2_present": true,
+        "detail": "PART2 L2857 explicitly describes BaseGate(ABC) → check(context) → GateResult pattern"
+      },
+      {
+        "sot_fact": "수리 액션: LOW 5개(RA_001~005), MEDIUM 5개(RA_006~010), HIGH 4개(RA_011~014), NEVER 10개",
+        "sot_ref": "SDAR_SPEC §5.1",
+        "part2_present": true,
+        "detail": "PART2 L2861-2868 matches action catalog: NONE=0, MINIMAL=2, LOW=5, MEDIUM=5, HIGH=4, NEVER=10"
+      },
+      {
+        "sot_fact": "오류 분류 5 카테고리: A=Infra(12), B=Model(8), C=Logic(6), D=Code(6), E=Security(6)",
+        "sot_ref": "SDAR_SPEC §4.1",
+        "part2_present": "partial",
+        "detail": "PART2 does not enumerate specific error codes per category but references SDAR_SPEC for details"
+      },
+      {
+        "sot_fact": "Self-evo 원칙: 수리 결과 자동 적용 절대 금지, Layer 3 = 제안",
+        "sot_ref": "SDAR_SPEC §9.3",
+        "part2_present": true,
+        "detail": "PART2 L2881-2886 matches exactly"
+      },
+      {
+        "sot_fact": "AR-Level과 Autonomy Level 매핑: L0→AR-L0, L1→AR-L2, L2→AR-L3, L3→AR-L4",
+        "sot_ref": "SDAR_SPEC §3.2",
+        "part2_present": false,
+        "detail": "PART2 §6.9 does not include the AR-Level to Autonomy Level mapping table"
+      },
+      {
+        "sot_fact": "RBAC와 AR-Level: OWNER=L0~L4, ADMIN=L0~L3, OPERATOR=L0~L2, VIEWER=조회만",
+        "sot_ref": "SDAR_SPEC §3.4",
+        "part2_present": false,
+        "detail": "PART2 §6.9 does not include the RBAC-AR Level permission matrix"
+      },
+      {
+        "sot_fact": "SDAR 이벤트: oc.sdar.* 네임스페이스 26개 이벤트",
+        "sot_ref": "SDAR_SPEC §6.4",
+        "part2_present": "partial",
+        "detail": "PART2 mentions kill_switch events but does not list all 26 SDAR events"
+      },
+      {
+        "sot_fact": "SDAR Failure Code 13개 (SDAR_DETECTION_TIMEOUT ~ SDAR_KILL_SWITCH_ACTIVE)",
+        "sot_ref": "SDAR_SPEC §6.4",
+        "part2_present": false,
+        "detail": "PART2 §6.9 does not enumerate the 13 SDAR-specific failure codes"
+      },
+      {
+        "sot_fact": "SDAR Fallback 4개: FB_SDAR_MANUAL_ESCALATION/DEGRADE_AR_LEVEL/RETRY_DIAGNOSIS/SNAPSHOT_ROLLBACK",
+        "sot_ref": "SDAR_SPEC §6.4",
+        "part2_present": false,
+        "detail": "PART2 §6.9 does not list the 4 SDAR fallback strategies"
+      },
+      {
+        "sot_fact": "V1→V2 전환 조건: LOW 성공률≥95%, 오탐<5%, Kill Switch 0회",
+        "sot_ref": "SDAR_SPEC §10.4",
+        "part2_present": false,
+        "detail": "PART2 does not include SDAR-specific version transition conditions"
+      },
+      {
+        "sot_fact": "Circuit Breaker 양방향 통합: CB→SDAR (OPEN시 signal), SDAR→CB (수리후 HALF-OPEN)",
+        "sot_ref": "SDAR_SPEC §6.3",
+        "part2_present": "partial",
+        "detail": "PART2 mentions Circuit Breaker in P2 context but doesn't detail the bidirectional integration"
+      },
+      {
+        "sot_fact": "Monorepo 구조 확장: backend/vamos_core/sdar/ 디렉토리 구조",
+        "sot_ref": "SDAR_SPEC §6.5",
+        "part2_present": false,
+        "detail": "PART2 §6.9 does not include the detailed sdar/ directory structure from SDAR_SPEC §6.5"
+      }
+    ],
+    "missing_count": 6
+  },
+  "findings": [
+    {
+      "id": "F-09",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "SDAR State Machine 상태명 차이: PART2는 간소화된 이름(IDLE, DETECTING 등)을 사용하고, SDAR_SPEC은 정식 이름(SDAR_S0_MONITORING 등)을 사용. PART2가 XREF 주석으로 인지하고 있는 차이.",
+      "evidence": "PART2 L2832: 'IDLE → DETECTING → ...' vs SDAR_SPEC §7.1: 'SDAR_S0_MONITORING → SDAR_S1_DETECTED → ...'"
+    },
+    {
+      "id": "F-10",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR Layer 1 Channel B/C 세부 감지 규칙(빈도 임계값, 이상탐지 baseline)이 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §2.2: Channel B 빈도(5분내 3회), 연쇄(60초), Channel C 응답시간 200%, QoD<0.5 3회 등"
+    },
+    {
+      "id": "F-11",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR AR-Level ↔ Autonomy Level 매핑 및 RBAC-AR 권한 매트릭스가 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §3.2: L0→AR-L0, L1→AR-L2(기본값), L2→AR-L3, L3→AR-L4. §3.4: OWNER=AR-L4까지, ADMIN=AR-L3까지"
+    },
+    {
+      "id": "F-12",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR Failure Code 13개 및 Fallback 4개가 PART2 §6.9에 열거되지 않음. 구현 시 SDAR_SPEC 직접 참조 필요.",
+      "evidence": "SDAR_SPEC §6.4: 13 failure codes (SDAR_DETECTION_TIMEOUT~SDAR_KILL_SWITCH_ACTIVE) + 4 fallbacks"
+    },
+    {
+      "id": "F-13",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR sdar/ 디렉토리 구조(detection/, diagnosis/, prescription/, repair/, verification/)가 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §6.5 defines full sdar/ subdirectory with 6 subpackages and specific file names"
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "88.6%",
+    "findings_count": 5
+  }
+}

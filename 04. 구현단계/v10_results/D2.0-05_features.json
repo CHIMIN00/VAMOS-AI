@@ -1,0 +1,2520 @@
+[
+  {
+    "feature_id": "D205-001",
+    "source_file": "D2.0-05",
+    "source_line": "68-93",
+    "source_section": "S1.1 Agent Mode 열거형 정의 (ADD-009)",
+    "feature_name": "AgentMode Enum 정의 (MANUAL/SEMI_AUTO/SUPERVISED_AUTO)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V1 기본값 SEMI_AUTO, V2 SUPERVISED_AUTO, V3 AUTONOMOUS 검토"
+  },
+  {
+    "feature_id": "D205-002",
+    "source_file": "D2.0-05",
+    "source_line": "84-90",
+    "source_section": "S1.1 모드별 Gate 연동",
+    "feature_name": "AgentMode별 Gate 연동 분기 테이블 (P0/P1/P2별 동작)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D205-001"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-003",
+    "source_file": "D2.0-05",
+    "source_line": "97-105",
+    "source_section": "S2 Agent Pool",
+    "feature_name": "Task 분해/우선순위/병렬 실행 Agent Pool",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03",
+      "D2.0-04"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "최대 3 병렬, V3 확장 10"
+  },
+  {
+    "feature_id": "D205-004",
+    "source_file": "D2.0-05",
+    "source_line": "107-108",
+    "source_section": "S2.1 P2 작업 Queue 등록 제약",
+    "feature_name": "P2 작업 승인 기반 Queue 등록 제약",
+    "version_scope": "V1",
+    "category": "FT-SEC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-005",
+    "source_file": "D2.0-05",
+    "source_line": "110-116",
+    "source_section": "S2.2 도구 승인 Allowlist 자동승인 규칙 (IM-004)",
+    "feature_name": "Allowlist 자동승인 / 명시적 확인 이원화 도구 승인",
+    "version_scope": "V1",
+    "category": "FT-SEC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-006",
+    "source_file": "D2.0-05",
+    "source_line": "119-127",
+    "source_section": "S3 Workflow Automation Engine",
+    "feature_name": "워크플로우 자동화 엔진 (파이프라인/조건 분기)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "PolicyCheck=deny 즉시 중단, 비용 상한 초과 자동 차단"
+  },
+  {
+    "feature_id": "D205-007",
+    "source_file": "D2.0-05",
+    "source_line": "130-153",
+    "source_section": "S4.1-4.2 Fallback/Retry/Recovery",
+    "feature_name": "Soft loop 1회 자동 + 승인 기반 Hard loop 재시도 설계",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. 위험/정책 위반 재시도 불가"
+  },
+  {
+    "feature_id": "D205-008",
+    "source_file": "D2.0-05",
+    "source_line": "157-167",
+    "source_section": "S4.3 Walk-Forward Validation (ADD-044)",
+    "feature_name": "Walk-Forward Validation 투자 전략 검증 절차",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. In-Sample Out-of-Sample 순차 검증"
+  },
+  {
+    "feature_id": "D205-009",
+    "source_file": "D2.0-05",
+    "source_line": "169-191",
+    "source_section": "S4.4 Circuit Breaker 패턴 (ADD-072)",
+    "feature_name": "Circuit Breaker 패턴 (CLOSED/OPEN/HALF-OPEN 상태 머신)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-06",
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. 연속 3회 실패 OPEN, 60초 후 HALF-OPEN. P2 이상은 승인 필수"
+  },
+  {
+    "feature_id": "D205-010",
+    "source_file": "D2.0-05",
+    "source_line": "193-210",
+    "source_section": "S5.1 VAMOS 자체 경량 프레임워크 아키텍처",
+    "feature_name": "VAMOS 자체 경량 에이전트 프레임워크 (CORE-NODE-Sub-agent)",
+    "version_scope": "V1",
+    "category": "FT-INFRA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. 외부 프레임워크 import 금지"
+  },
+  {
+    "feature_id": "D205-011",
+    "source_file": "D2.0-05",
+    "source_line": "215-218",
+    "source_section": "S5.2.1 V2 Autonomous Agent (ADD-075)",
+    "feature_name": "V2 Autonomous Agent (Plan-Execute-Verify 자율 루프)",
+    "version_scope": "V2",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-012",
+    "source_file": "D2.0-05",
+    "source_line": "220-223",
+    "source_section": "S5.2.2 V2 GroupChat (ADD-076)",
+    "feature_name": "V2 GroupChat 멀티에이전트 협업 구조",
+    "version_scope": "V2",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-013",
+    "source_file": "D2.0-05",
+    "source_line": "225-228",
+    "source_section": "S5.2.3 V2 Crew (ADD-077)",
+    "feature_name": "V2 Crew 역할 기반 에이전트 팀 구조",
+    "version_scope": "V2",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-014",
+    "source_file": "D2.0-05",
+    "source_line": "230-233",
+    "source_section": "S5.2.4 V3 Multi-Agent Mesh (ADD-080)",
+    "feature_name": "V3 Multi-Agent Mesh 분산 협업 구조",
+    "version_scope": "V3",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-015",
+    "source_file": "D2.0-05",
+    "source_line": "235-238",
+    "source_section": "S5.2.5 V3 Federated Agent (ADD-084)",
+    "feature_name": "V3 Federated Agent 외부 에이전트 연합 구조",
+    "version_scope": "V3",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-016",
+    "source_file": "D2.0-05",
+    "source_line": "258-284",
+    "source_section": "S5.3.1 Agent 3요소 정의 (ADD-024)",
+    "feature_name": "AgentProfile 3요소 (Identity/Capability/Policy) 데이터 모델",
+    "version_scope": "V1",
+    "category": "FT-SCHEMA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-001"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-017",
+    "source_file": "D2.0-05",
+    "source_line": "286-298",
+    "source_section": "S5.3.2 Agent 통신 패턴 (ADD-025)",
+    "feature_name": "Agent 통신 패턴 표준화 (Request-Response/Event-Driven/Pipeline/Broadcast)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK: Node-to-Node 직접 통신 금지, CORE 경유"
+  },
+  {
+    "feature_id": "D205-018",
+    "source_file": "D2.0-05",
+    "source_line": "300-313",
+    "source_section": "S5.3.3 Agentic Coding 패턴 (ADD-026)",
+    "feature_name": "Agentic Coding 파이프라인 (Spec-코드계획-생성-샌드박스-검증-전달)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-03",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK: 샌드박스 내부에서만 파일 쓰기"
+  },
+  {
+    "feature_id": "D205-019",
+    "source_file": "D2.0-05",
+    "source_line": "315-327",
+    "source_section": "S5.3.4 Agent 프로파일링 (ADD-027)",
+    "feature_name": "Agent 프로파일링 (latency/성공률/비용효율/도구효율/Self-check 통과율)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06",
+      "D2.0-04"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V2+에서 자동 Brain 라우팅 최적화"
+  },
+  {
+    "feature_id": "D205-020",
+    "source_file": "D2.0-05",
+    "source_line": "331-340",
+    "source_section": "S6 Logging/Tracing/Reporting",
+    "feature_name": "워크플로우 Logging/Tracing/실패 리포트 생성",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "실패 리포트: 원인/근거부족/위험탐지/개선연결"
+  },
+  {
+    "feature_id": "D205-021",
+    "source_file": "D2.0-05",
+    "source_line": "343-357",
+    "source_section": "S7.1 표준 5단계 Pipeline (정본)",
+    "feature_name": "표준 5단계 Pipeline (Intake/Plan/Execute/Verify/Deliver)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. TEE 루프 내장"
+  },
+  {
+    "feature_id": "D205-022",
+    "source_file": "D2.0-05",
+    "source_line": "359-367",
+    "source_section": "S7.2 표준 3단 출력 (정본)",
+    "feature_name": "표준 3단 출력 (user_response/evidence_summary/log_report)",
+    "version_scope": "V1",
+    "category": "FT-SCHEMA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-023",
+    "source_file": "D2.0-05",
+    "source_line": "369-385",
+    "source_section": "S7.3 외부 Workflow Engine 어댑터 규칙",
+    "feature_name": "외부 Workflow Engine 어댑터 규칙 (Gate 선행/Checkpoint/멀티에이전트 제약)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "FREEZE 확정"
+  },
+  {
+    "feature_id": "D205-024",
+    "source_file": "D2.0-05",
+    "source_line": "387-441",
+    "source_section": "S7.4 Verify 체인 EVX 배치/기록 규칙",
+    "feature_name": "EVX-1~EVX-6 Verify 체인 배치/기록/차단 조건",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-025",
+    "source_file": "D2.0-05",
+    "source_line": "446-449",
+    "source_section": "S7.5.1 프롬프트 라이브러리 (ADD-061)",
+    "feature_name": "중앙 프롬프트 라이브러리",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "prompt_id/version/template/tags/owner/created_at"
+  },
+  {
+    "feature_id": "D205-026",
+    "source_file": "D2.0-05",
+    "source_line": "451-453",
+    "source_section": "S7.5.2 프롬프트 최적화 (ADD-062)",
+    "feature_name": "프롬프트 최적화 (QoD/실패 로그 기반)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-025"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-027",
+    "source_file": "D2.0-05",
+    "source_line": "455-458",
+    "source_section": "S7.5.3 프롬프트 버전관리 (ADD-063)",
+    "feature_name": "프롬프트 버전관리 (Semantic Versioning)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-028",
+    "source_file": "D2.0-05",
+    "source_line": "460-463",
+    "source_section": "S7.5.4 A/B 테스트 (ADD-064)",
+    "feature_name": "프롬프트 A/B 테스트",
+    "version_scope": "V1",
+    "category": "FT-TEST",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-025",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "P1 이하만 자동, P2 이상 승인 후"
+  },
+  {
+    "feature_id": "D205-029",
+    "source_file": "D2.0-05",
+    "source_line": "465-492",
+    "source_section": "S8 레지스트리 (Event/Failure/Fallback)",
+    "feature_name": "Event/Failure/Fallback 레지스트리",
+    "version_scope": "V1",
+    "category": "FT-SCHEMA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. wf.stage.enter/exit, wf.approval.requested"
+  },
+  {
+    "feature_id": "D205-030",
+    "source_file": "D2.0-05",
+    "source_line": "521-529",
+    "source_section": "S11 S-Module 결과의 Decision 기록 방식",
+    "feature_name": "S-Module 산출물 Decision 기록 방식 (즉시 적용 금지)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-031",
+    "source_file": "D2.0-05",
+    "source_line": "539-553",
+    "source_section": "S12.1 시나리오 매핑",
+    "feature_name": "P0/P1/P2 시나리오별 워크플로우 분기 매핑",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-032",
+    "source_file": "D2.0-05",
+    "source_line": "566-577",
+    "source_section": "S12.2.1 LangGraph 패턴",
+    "feature_name": "LangGraph StateGraph 패턴 참조 (VAMOS 대응 매핑)",
+    "version_scope": "V1",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "패턴 참조만, import 금지"
+  },
+  {
+    "feature_id": "D205-033",
+    "source_file": "D2.0-05",
+    "source_line": "643-651",
+    "source_section": "S12.4.1 Checkpointer 패턴",
+    "feature_name": "워크플로우 Checkpoint/Replay/Fork (trace_id 단위)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-034",
+    "source_file": "D2.0-05",
+    "source_line": "653-659",
+    "source_section": "S12.4.2 DI Kernel 패턴 CRITICAL",
+    "feature_name": "DI Kernel (의존성 주입) 패턴",
+    "version_scope": "V1",
+    "category": "FT-INFRA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL. Brain Adapter/RAG/MCP/Cost Tracker/Gate Client 주입"
+  },
+  {
+    "feature_id": "D205-035",
+    "source_file": "D2.0-05",
+    "source_line": "661-682",
+    "source_section": "S12.4.3 SOP 패턴",
+    "feature_name": "SOP JSON/YAML 워크플로우 자동 생성",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-021"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-036",
+    "source_file": "D2.0-05",
+    "source_line": "684-695",
+    "source_section": "S12.4.4 AutoGen Conversation 패턴",
+    "feature_name": "에이전트 대화 패턴 (Round-Robin/Selector/Broadcast/Direct + 턴 상한)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. P0=5턴, P1=10턴, P2=20턴"
+  },
+  {
+    "feature_id": "D205-037",
+    "source_file": "D2.0-05",
+    "source_line": "697-703",
+    "source_section": "S12.4.5 Agent Handoff 패턴",
+    "feature_name": "Agent Handoff 작업 인계 프로토콜",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "인계 메시지 포맷, trace_id 유지"
+  },
+  {
+    "feature_id": "D205-038",
+    "source_file": "D2.0-05",
+    "source_line": "705-710",
+    "source_section": "S12.4.6 Function Calling 고급 패턴",
+    "feature_name": "Function Calling 고급 패턴 (병렬/순차/조건부)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-039",
+    "source_file": "D2.0-05",
+    "source_line": "714-729",
+    "source_section": "S12.5.1 TEE 루프 CRITICAL",
+    "feature_name": "TEE (Think-Execute-Evaluate) 루프 구현",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL/LOCK. 최대 반복: P0=3, P1=5, P2=10"
+  },
+  {
+    "feature_id": "D205-040",
+    "source_file": "D2.0-05",
+    "source_line": "731-737",
+    "source_section": "S12.5.2 Routine 패턴",
+    "feature_name": "Routine 패턴 (사전 정의 에이전트 동작 시퀀스)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-025",
+      "D205-035"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-041",
+    "source_file": "D2.0-05",
+    "source_line": "739-748",
+    "source_section": "S12.5.3 Context Variables 패턴",
+    "feature_name": "Context Variables 패턴 (전역/단계별/에이전트별 스코프)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. 스코프 규칙 고정"
+  },
+  {
+    "feature_id": "D205-042",
+    "source_file": "D2.0-05",
+    "source_line": "750-758",
+    "source_section": "S12.5.4 MCP 통합 패턴",
+    "feature_name": "MCP 서버 통합 패턴 (도구 등록/호출/승인/에러/멀티 MCP)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03",
+      "D2.0-04",
+      "D205-009"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-043",
+    "source_file": "D2.0-05",
+    "source_line": "762-781",
+    "source_section": "S12.6.1 .vamosrules 규칙 시스템",
+    "feature_name": ".vamosrules 커스텀 규칙 시스템",
+    "version_scope": "V1",
+    "category": "FT-CFG",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "YAML 규칙 파일, Plan 단계 G1 적용"
+  },
+  {
+    "feature_id": "D205-044",
+    "source_file": "D2.0-05",
+    "source_line": "783-803",
+    "source_section": "S12.6.2 Skill Loader 시스템",
+    "feature_name": "Skill Loader 시스템 (저장/로드/재사용)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-025",
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Skill 카탈로그, 자동 선택, QoD 추적"
+  },
+  {
+    "feature_id": "D205-045",
+    "source_file": "D2.0-05",
+    "source_line": "805-815",
+    "source_section": "대화 패턴 기반 .vamosrules 자동 제안",
+    "feature_name": ".vamosrules 대화 패턴 분석 자동 제안",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-043"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V1: 월 1회, V2: 주 1회, V3: 실시간"
+  },
+  {
+    "feature_id": "D205-046",
+    "source_file": "D2.0-05",
+    "source_line": "819-834",
+    "source_section": "S12.7.1 Trigger/Action 이벤트 스키마 CRITICAL",
+    "feature_name": "Trigger/Action 이벤트 시스템 (schedule/event/webhook/manual/chain)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL"
+  },
+  {
+    "feature_id": "D205-047",
+    "source_file": "D2.0-05",
+    "source_line": "836-844",
+    "source_section": "S12.7.2 Prompt Chaining 패턴",
+    "feature_name": "Prompt Chaining 패턴 (Sequential/Branching/Aggregation/Loop)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-048",
+    "source_file": "D2.0-05",
+    "source_line": "846-861",
+    "source_section": "S12.7.3 워크플로우 패턴 카탈로그",
+    "feature_name": "워크플로우 패턴 카탈로그 (12개 패턴)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-049",
+    "source_file": "D2.0-05",
+    "source_line": "865-873",
+    "source_section": "S12.8.1 Agent Marketplace",
+    "feature_name": "Agent Marketplace (에이전트/워크플로우 템플릿 공유)",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "품질 보증: 자동 테스트 + QoD 기준"
+  },
+  {
+    "feature_id": "D205-050",
+    "source_file": "D2.0-05",
+    "source_line": "875-884",
+    "source_section": "S12.8.2 에이전트 라이프사이클 관리",
+    "feature_name": "에이전트 라이프사이클 관리",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-051",
+    "source_file": "D2.0-05",
+    "source_line": "886-895",
+    "source_section": "S12.8.3 배포 자동화",
+    "feature_name": "에이전트/워크플로우 배포 파이프라인",
+    "version_scope": "V2",
+    "category": "FT-INFRA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-04"
+    ],
+    "extractable": true,
+    "confidence": "추론",
+    "notes": "판단필요. 상세 구현 시점 미확정"
+  },
+  {
+    "feature_id": "D205-052",
+    "source_file": "D2.0-05",
+    "source_line": "899-914",
+    "source_section": "S12.9.1 RAG 통합 API",
+    "feature_name": "RAG 통합 API (retrieve/retrieve_and_rank/hybrid_search/multi_source_retrieve)",
+    "version_scope": "V1",
+    "category": "FT-API",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-053",
+    "source_file": "D2.0-05",
+    "source_line": "916-924",
+    "source_section": "S12.9.2 4레이어 Guardrails 에이전트 연동",
+    "feature_name": "4레이어 Guardrails 연동 (NeMo/Guardrails AI/LlamaGuard/Post-delivery Audit)",
+    "version_scope": "V1",
+    "category": "FT-SEC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "L1:Intake, L2:Plan, L3:Execute, L4:Deliver 이후"
+  },
+  {
+    "feature_id": "D205-054",
+    "source_file": "D2.0-05",
+    "source_line": "926-940",
+    "source_section": "S12.10 듀얼 에이전트 / 노코드 빌더",
+    "feature_name": "듀얼 에이전트 (코드+노코드) + n8n/Flowise 노코드 빌더",
+    "version_scope": "V1,V2",
+    "category": "FT-UI",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK. n8n + Flowise"
+  },
+  {
+    "feature_id": "D205-055",
+    "source_file": "D2.0-05",
+    "source_line": "944-954",
+    "source_section": "S12.11.1 HITL 패턴",
+    "feature_name": "HITL (Human-in-the-Loop) 패턴",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-056",
+    "source_file": "D2.0-05",
+    "source_line": "956-966",
+    "source_section": "S12.11.2 DSPy Evaluation 패턴",
+    "feature_name": "DSPy Evaluation 패턴 (Accuracy/Faithfulness/Relevance/Toxicity/Cost-efficiency)",
+    "version_scope": "V1",
+    "category": "FT-TEST",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Verify 단계 자동 실행"
+  },
+  {
+    "feature_id": "D205-057",
+    "source_file": "D2.0-05",
+    "source_line": "968-980",
+    "source_section": "S12.11.3 오케스트레이션 패턴",
+    "feature_name": "오케스트레이션 패턴 (Centralized/Hierarchical/Market-based/Stigmergic)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V1: Centralized, V2: Hierarchical, V3: 고급"
+  },
+  {
+    "feature_id": "D205-058",
+    "source_file": "D2.0-05",
+    "source_line": "984-1003",
+    "source_section": "S12.12 HITL Node + StateGraph",
+    "feature_name": "StateGraph 기반 워크플로우 + HITL Node 구현",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LangGraph StateGraph 패턴 참조"
+  },
+  {
+    "feature_id": "D205-059",
+    "source_file": "D2.0-05",
+    "source_line": "1005-1027",
+    "source_section": "S12.12.3 Multi-Agent 코드 예제",
+    "feature_name": "V2+ Multi-Agent 워크플로우 코드 패턴",
+    "version_scope": "V2",
+    "category": "FT-MOD",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-010"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-060",
+    "source_file": "D2.0-05",
+    "source_line": "1029-1036",
+    "source_section": "S12.12.4 Agent Loop 패턴",
+    "feature_name": "Agent Loop 패턴 (TEE 루프 구현 레벨)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-039"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-061",
+    "source_file": "D2.0-05",
+    "source_line": "1040-1047",
+    "source_section": "S12.13.1 D5 컨텍스트 최적화",
+    "feature_name": "에이전트 컨텍스트 최적화 (압축/윈도우/슬라이딩/도구 결과 요약)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "tiktoken 기반 토큰 수 관리"
+  },
+  {
+    "feature_id": "D205-062",
+    "source_file": "D2.0-05",
+    "source_line": "1049-1058",
+    "source_section": "S12.13.2 병렬 처리 확장",
+    "feature_name": "병렬 에이전트 컨텍스트 격리 + 병렬 처리 확장",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V1: 3, V2: 10, V3: 100 병렬"
+  },
+  {
+    "feature_id": "D205-063",
+    "source_file": "D2.0-05",
+    "source_line": "1060-1069",
+    "source_section": "S12.14 PoC 검증 워크플로우",
+    "feature_name": "PoC 검증 워크플로우",
+    "version_scope": "V1",
+    "category": "FT-TEST",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "통과 기준: 단위 테스트 100% + 성능 80%+"
+  },
+  {
+    "feature_id": "D205-064",
+    "source_file": "D2.0-05",
+    "source_line": "1071-1094",
+    "source_section": "작업 완료 자동 검증 리포트",
+    "feature_name": "작업 완료 자동 검증 리포트 생성",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "V1: 코드 변경만, V2: 모든 작업+QoD, V3: 실시간"
+  },
+  {
+    "feature_id": "D205-065",
+    "source_file": "D2.0-05",
+    "source_line": "1096-1111",
+    "source_section": "S12.15 투자 에이전트 / Multi-Agent",
+    "feature_name": "투자 에이전트 역할 분담 (Researcher/Analyst/Strategist/Risk Manager/Reporter)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Risk Manager deny=무효화"
+  },
+  {
+    "feature_id": "D205-066",
+    "source_file": "D2.0-05",
+    "source_line": "1113-1133",
+    "source_section": "S12.16 G0-G4 워크플로우 / Gate 피드백",
+    "feature_name": "G0-G4 Gate-Pipeline 통합 매핑 및 피드백 루프",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07",
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "LOCK"
+  },
+  {
+    "feature_id": "D205-067",
+    "source_file": "D2.0-05",
+    "source_line": "1137-1140",
+    "source_section": "S12.17.1 PARL Agent Swarm",
+    "feature_name": "PARL Agent Swarm Execute 단계",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "최대 100 서브에이전트"
+  },
+  {
+    "feature_id": "D205-068",
+    "source_file": "D2.0-05",
+    "source_line": "1142-1146",
+    "source_section": "S12.17.2 백테스팅 엔진 Blue Node",
+    "feature_name": "Backtesting Blue Node (Backtrader/VectorBT 내장)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "DEC-018: 전략>=3이면 VectorBT"
+  },
+  {
+    "feature_id": "D205-069",
+    "source_file": "D2.0-05",
+    "source_line": "1148-1152",
+    "source_section": "S12.17.3 장기 계획 에이전트",
+    "feature_name": "장기 계획 에이전트",
+    "version_scope": "V2,V3",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Tree-of-Thought + Monte Carlo Planning"
+  },
+  {
+    "feature_id": "D205-070",
+    "source_file": "D2.0-05",
+    "source_line": "1154-1157",
+    "source_section": "S12.17.4 자기 반성 루프 Reflexion",
+    "feature_name": "Self-Reflection 루프 (Verify 단계, 최대 3회)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-021"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-071",
+    "source_file": "D2.0-05",
+    "source_line": "1159-1162",
+    "source_section": "S12.17.5 에이전트 메모리 진화",
+    "feature_name": "에이전트 메모리 진화 (Episodic + Semantic 이중 구조)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-072",
+    "source_file": "D2.0-05",
+    "source_line": "1164-1167",
+    "source_section": "S12.17.6 수직 에이전트",
+    "feature_name": "수직 도메인 Blue Node 확장 (법률/세무/의료)",
+    "version_scope": "V3",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-073",
+    "source_file": "D2.0-05",
+    "source_line": "1173-1178",
+    "source_section": "S13.1 연속 도구 호출 확장 P6-AGT-01",
+    "feature_name": "200+ 연속 도구 호출 지원",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "50회마다 자동 스냅샷"
+  },
+  {
+    "feature_id": "D205-074",
+    "source_file": "D2.0-05",
+    "source_line": "1180-1185",
+    "source_section": "S13.2 Computer Use 에이전트 P6-AGT-02",
+    "feature_name": "Computer Use 에이전트 (브라우저/데스크톱 직접 조작)",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "P2 승인 필수, URL 화이트리스트"
+  },
+  {
+    "feature_id": "D205-075",
+    "source_file": "D2.0-05",
+    "source_line": "1187-1192",
+    "source_section": "S13.3 에이전트 간 학습 전이 P6-AGT-03",
+    "feature_name": "Shared Experience Pool 에이전트 학습 전이 프로토콜",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "콜드스타트 70% 단축 목표"
+  },
+  {
+    "feature_id": "D205-076",
+    "source_file": "D2.0-05",
+    "source_line": "1194-1199",
+    "source_section": "S13.4 에이전트 자기 복제/특화 P6-AGT-04",
+    "feature_name": "Agent Specialization Protocol (자동 fork/특화/retire)",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "30일 미사용 자동 retire"
+  },
+  {
+    "feature_id": "D205-077",
+    "source_file": "D2.0-05",
+    "source_line": "1201-1206",
+    "source_section": "S13.5 에이전트 신뢰도 점수 P6-AGT-05",
+    "feature_name": "Agent Trust Score 시스템 (0-1 신뢰도 점수)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "신뢰도 기반 태스크 우선 배정"
+  },
+  {
+    "feature_id": "D205-078",
+    "source_file": "D2.0-05",
+    "source_line": "1208-1213",
+    "source_section": "S13.6 동적 에이전트 풀 관리자 P6-ORC-01",
+    "feature_name": "Dynamic Agent Pool Manager (3-20개 동적 생성/소멸)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "max_concurrent_agents=20"
+  },
+  {
+    "feature_id": "D205-079",
+    "source_file": "D2.0-05",
+    "source_line": "1215-1221",
+    "source_section": "S13.7 조건부 분기 + 루프 P6-ORC-02",
+    "feature_name": "Workflow Engine 조건부 분기 + 루프 노드",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "max_loops=5 + quality_threshold"
+  },
+  {
+    "feature_id": "D205-080",
+    "source_file": "D2.0-05",
+    "source_line": "1223-1228",
+    "source_section": "S13.8 워크플로우 템플릿 라이브러리 P6-ORC-03",
+    "feature_name": "Workflow Template Registry",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-081",
+    "source_file": "D2.0-05",
+    "source_line": "1230-1236",
+    "source_section": "S13.9 Plugin/Extension SDK P6-DEV-02",
+    "feature_name": "Plugin Interface SDK (제3자 Blue Node 개발)",
+    "version_scope": "V2",
+    "category": "FT-API",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Python SDK"
+  },
+  {
+    "feature_id": "D205-082",
+    "source_file": "D2.0-05",
+    "source_line": "1238-1243",
+    "source_section": "S13.10 커스텀 프롬프트 템플릿 P6-DEV-04",
+    "feature_name": "Prompt Template Manager",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-025"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "Git-like diff 버전 관리"
+  },
+  {
+    "feature_id": "D205-083",
+    "source_file": "D2.0-05",
+    "source_line": "1264-1269",
+    "source_section": "S14.1 병렬 에이전트 분기 패턴 P7-PIP",
+    "feature_name": "scatter-gather 병렬 에이전트 분기 패턴",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "3중 2 성공 시 진행, 최대 300초"
+  },
+  {
+    "feature_id": "D205-084",
+    "source_file": "D2.0-05",
+    "source_line": "1271-1276",
+    "source_section": "S14.2 Blue Node 템플릿 격리 P7-BNT",
+    "feature_name": "Blue Node 표준 규격 (도메인 템플릿/위험 매트릭스/A2A 통신)",
+    "version_scope": "V1",
+    "category": "FT-SCHEMA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": ""
+  },
+  {
+    "feature_id": "D205-085",
+    "source_file": "D2.0-05",
+    "source_line": "1291-1321",
+    "source_section": "S15.1 N-001 VAMOS 워크플로우 엔진 아키텍처",
+    "feature_name": "DAG 기반 워크플로우 엔진 (10개 노드 유형, asyncio/NetworkX/Pydantic v2)",
+    "version_scope": "V1",
+    "category": "FT-INFRA",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-021"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-001"
+  },
+  {
+    "feature_id": "D205-086",
+    "source_file": "D2.0-05",
+    "source_line": "1323-1338",
+    "source_section": "S15.2 N-002 자연어 워크플로우 생성",
+    "feature_name": "자연어 DAG JSON 워크플로우 자동 생성",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-085"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-002. LLM 기반 자연어 파싱"
+  },
+  {
+    "feature_id": "D205-087",
+    "source_file": "D2.0-05",
+    "source_line": "1346-1351",
+    "source_section": "S16.1 N-003 워크플로우 트리거 시스템",
+    "feature_name": "워크플로우 트리거 시스템 (cron/이벤트/조건/수동/대화/앰비언트)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-046"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-003"
+  },
+  {
+    "feature_id": "D205-088",
+    "source_file": "D2.0-05",
+    "source_line": "1353-1356",
+    "source_section": "S16.2 N-004 워크플로우 템플릿 라이브러리",
+    "feature_name": "워크플로우 템플릿 라이브러리 (투자/코딩/생산성/콘텐츠)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-035"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-004"
+  },
+  {
+    "feature_id": "D205-089",
+    "source_file": "D2.0-05",
+    "source_line": "1358-1362",
+    "source_section": "S16.3 N-005 워크플로우 비주얼 에디터",
+    "feature_name": "워크플로우 비주얼 에디터 (React Flow)",
+    "version_scope": "V2",
+    "category": "FT-UI",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-005. V2: 4개월"
+  },
+  {
+    "feature_id": "D205-090",
+    "source_file": "D2.0-05",
+    "source_line": "1364-1368",
+    "source_section": "S16.4 N-006 워크플로우 실행 관리",
+    "feature_name": "워크플로우 실행 관리 (모니터링/제어/히스토리)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-085"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-006"
+  },
+  {
+    "feature_id": "D205-091",
+    "source_file": "D2.0-05",
+    "source_line": "1370-1374",
+    "source_section": "S16.5 N-007 워크플로우 에러 처리",
+    "feature_name": "워크플로우 에러 처리 (재시도/폴백/스킵/알림/HITL/AI 분석)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-009",
+      "D205-007"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-007"
+  },
+  {
+    "feature_id": "D205-092",
+    "source_file": "D2.0-05",
+    "source_line": "1376-1380",
+    "source_section": "S16.6 N-008 워크플로우 변수/시크릿 관리",
+    "feature_name": "워크플로우 변수/시크릿 관리 (AES-256 암호화, 로그 마스킹)",
+    "version_scope": "V1",
+    "category": "FT-SEC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06",
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-008"
+  },
+  {
+    "feature_id": "D205-093",
+    "source_file": "D2.0-05",
+    "source_line": "1382-1385",
+    "source_section": "S16.7 N-009 워크플로우 버전 관리",
+    "feature_name": "워크플로우 버전 관리 (자동 버전/diff/롤백/브랜치)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-009"
+  },
+  {
+    "feature_id": "D205-094",
+    "source_file": "D2.0-05",
+    "source_line": "1387-1390",
+    "source_section": "S16.8 N-010 워크플로우 공유/내보내기",
+    "feature_name": "워크플로우 JSON/YAML 내보내기/임포트/공유",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-010"
+  },
+  {
+    "feature_id": "D205-095",
+    "source_file": "D2.0-05",
+    "source_line": "1398-1405",
+    "source_section": "S17.1 N-011 AI 브라우저 에이전트",
+    "feature_name": "AI 브라우저 에이전트 (Playwright + AI 비전)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-011"
+  },
+  {
+    "feature_id": "D205-096",
+    "source_file": "D2.0-05",
+    "source_line": "1407-1411",
+    "source_section": "S17.2 N-012 웹 스크래핑 자동화",
+    "feature_name": "웹 스크래핑 자동화 (BeautifulSoup + AI)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-012"
+  },
+  {
+    "feature_id": "D205-097",
+    "source_file": "D2.0-05",
+    "source_line": "1413-1417",
+    "source_section": "S17.3 N-013 웹 모니터링",
+    "feature_name": "웹 모니터링 (가격/채용/뉴스/공시/경쟁사 추적)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-046"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-013"
+  },
+  {
+    "feature_id": "D205-098",
+    "source_file": "D2.0-05",
+    "source_line": "1419-1422",
+    "source_section": "S17.4 N-014 폼 자동 입력",
+    "feature_name": "폼 자동 입력 (Playwright + AI 답변 제안)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-014"
+  },
+  {
+    "feature_id": "D205-099",
+    "source_file": "D2.0-05",
+    "source_line": "1424-1426",
+    "source_section": "S17.5 N-015 파일 다운로드/업로드 자동화",
+    "feature_name": "파일 다운로드/업로드 자동화",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-015"
+  },
+  {
+    "feature_id": "D205-100",
+    "source_file": "D2.0-05",
+    "source_line": "1428-1431",
+    "source_section": "S17.6 N-016 API 자동화",
+    "feature_name": "No-Code API 자동화 (자연어 API 호출)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-042",
+      "D2.0-04"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-016"
+  },
+  {
+    "feature_id": "D205-101",
+    "source_file": "D2.0-05",
+    "source_line": "1433-1437",
+    "source_section": "S17.7 N-017 데스크톱 자동화",
+    "feature_name": "데스크톱 자동화 (pyautogui+Win32, AppleScript, OCR)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-017. V2: 4개월"
+  },
+  {
+    "feature_id": "D205-102",
+    "source_file": "D2.0-05",
+    "source_line": "1439-1441",
+    "source_section": "S17.8 N-018 모바일 자동화",
+    "feature_name": "모바일 자동화 (Appium 크로스플랫폼)",
+    "version_scope": "V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-018. V3: 6개월+"
+  },
+  {
+    "feature_id": "D205-103",
+    "source_file": "D2.0-05",
+    "source_line": "1451-1456",
+    "source_section": "S18.1 N-019 ETL 자동 파이프라인",
+    "feature_name": "ETL 자동 파이프라인 (Extract Transform Load, pandas)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-019"
+  },
+  {
+    "feature_id": "D205-104",
+    "source_file": "D2.0-05",
+    "source_line": "1458-1461",
+    "source_section": "S18.1 N-020 데이터 정제 자동화",
+    "feature_name": "AI 데이터 정제 자동화 (결측치/이상치/포맷/중복/검증)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-020"
+  },
+  {
+    "feature_id": "D205-105",
+    "source_file": "D2.0-05",
+    "source_line": "1463-1467",
+    "source_section": "S18.1 N-021 리포트 자동 생성",
+    "feature_name": "리포트 자동 생성 파이프라인 (수집 분석 차트 문서 배포)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-021. Plotly/Mermaid 차트, MD/PDF 문서"
+  },
+  {
+    "feature_id": "D205-106",
+    "source_file": "D2.0-05",
+    "source_line": "1469-1474",
+    "source_section": "S18.1 N-022 알림/노티피케이션 엔진",
+    "feature_name": "알림/노티피케이션 엔진 (시스템/이메일/Slack/Discord + 피로 방지)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-046"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-022"
+  },
+  {
+    "feature_id": "D205-107",
+    "source_file": "D2.0-05",
+    "source_line": "1476-1479",
+    "source_section": "S18.1 N-023 이메일 자동화",
+    "feature_name": "이메일 자동화 (분류/요약/답장/후속/지식저장, Gmail API)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-023"
+  },
+  {
+    "feature_id": "D205-108",
+    "source_file": "D2.0-05",
+    "source_line": "1481-1485",
+    "source_section": "S18.1 N-024 파일 시스템 자동화",
+    "feature_name": "파일 시스템 자동화 (정리/변환, watchdog/Pillow/ffmpeg)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-024"
+  },
+  {
+    "feature_id": "D205-109",
+    "source_file": "D2.0-05",
+    "source_line": "1487-1490",
+    "source_section": "S18.1 N-025 SNS/콘텐츠 자동화",
+    "feature_name": "SNS/콘텐츠 자동화 (블로그/X/LinkedIn/뉴스레터/리퍼포징)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-025"
+  },
+  {
+    "feature_id": "D205-110",
+    "source_file": "D2.0-05",
+    "source_line": "1492-1494",
+    "source_section": "S18.1 N-026 데이터 동기화",
+    "feature_name": "양방향 데이터 동기화 (Notion/Google Sheets/GitHub/Calendar)",
+    "version_scope": "V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-026"
+  },
+  {
+    "feature_id": "D205-111",
+    "source_file": "D2.0-05",
+    "source_line": "1498-1502",
+    "source_section": "S18.2 N-027 일일 루틴 자동화",
+    "feature_name": "일일 루틴 자동화 (아침/저녁 자동 워크플로우)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-087",
+      "D205-106"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-027"
+  },
+  {
+    "feature_id": "D205-112",
+    "source_file": "D2.0-05",
+    "source_line": "1504-1507",
+    "source_section": "S18.2 N-028 스마트 알림 관리",
+    "feature_name": "스마트 알림 관리 (컨텍스트/중요도/배치/타이밍 최적화)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-106"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-028"
+  },
+  {
+    "feature_id": "D205-113",
+    "source_file": "D2.0-05",
+    "source_line": "1509-1513",
+    "source_section": "S18.2 N-029 습관 추적 + 자동화",
+    "feature_name": "습관 추적 + 자동화 (코딩/학습/투자/운동/독서)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-029"
+  },
+  {
+    "feature_id": "D205-114",
+    "source_file": "D2.0-05",
+    "source_line": "1515-1518",
+    "source_section": "S18.2 N-030 개인 재무 자동화",
+    "feature_name": "개인 재무 자동화 (가계부 CSV 분류, 배당/세금 추적)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-030"
+  },
+  {
+    "feature_id": "D205-115",
+    "source_file": "D2.0-05",
+    "source_line": "1520-1523",
+    "source_section": "S18.2 N-031 학습 자동화",
+    "feature_name": "학습 자동화 파이프라인 (수집 요약 카드 진도 추천)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-031"
+  },
+  {
+    "feature_id": "D205-116",
+    "source_file": "D2.0-05",
+    "source_line": "1525-1528",
+    "source_section": "S18.2 N-032 회의 자동화",
+    "feature_name": "회의 자동화 (Whisper STT 노트 회의록 후속, Calendar API)",
+    "version_scope": "V1,V2",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-032"
+  },
+  {
+    "feature_id": "D205-117",
+    "source_file": "D2.0-05",
+    "source_line": "1530-1532",
+    "source_section": "S18.2 N-033 여행/이벤트 자동화",
+    "feature_name": "여행/이벤트 자동화",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-033"
+  },
+  {
+    "feature_id": "D205-118",
+    "source_file": "D2.0-05",
+    "source_line": "1534-1536",
+    "source_section": "S18.2 N-034 건강/웰니스 자동화",
+    "feature_name": "건강/웰니스 자동화 (리마인더: 물/스트레칭/수면/약 복용)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-034"
+  },
+  {
+    "feature_id": "D205-119",
+    "source_file": "D2.0-05",
+    "source_line": "1544-1552",
+    "source_section": "S19.1 N-035~N-039 차별화",
+    "feature_name": "VAMOS 워크플로우 5대 차별화 (AI 네이티브/대화형/패턴자동제안/통합/로컬)",
+    "version_scope": "V1",
+    "category": "FT-FUNC",
+    "implementation_type": "보강",
+    "dependencies": [],
+    "extractable": false,
+    "confidence": "명시적",
+    "notes": "TITLE_ONLY. N-035~N-039 차별화 축 정의"
+  },
+  {
+    "feature_id": "D205-120",
+    "source_file": "D2.0-05",
+    "source_line": "1566-1568",
+    "source_section": "S19.3 VBS-15 워크플로우 벤치마크 N-041",
+    "feature_name": "VBS-15 워크플로우 벤치마크",
+    "version_scope": "V1",
+    "category": "FT-TEST",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-063"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "N-041"
+  },
+  {
+    "feature_id": "D205-121",
+    "source_file": "D2.0-05",
+    "source_line": "1587-1593",
+    "source_section": "S20.1 O-001 적응형 학습 엔진",
+    "feature_name": "적응형 학습 엔진 (소크라테스 교수법, Bloom Taxonomy 난이도 적응)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06",
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-001"
+  },
+  {
+    "feature_id": "D205-122",
+    "source_file": "D2.0-05",
+    "source_line": "1595-1600",
+    "source_section": "S20.1 O-002 간격 반복 SM-2 시스템",
+    "feature_name": "간격 반복 SM-2 시스템 (플래시카드 자동 생성, 망각 곡선 기반)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-002"
+  },
+  {
+    "feature_id": "D205-123",
+    "source_file": "D2.0-05",
+    "source_line": "1602-1605",
+    "source_section": "S20.1 O-003 학습 경로 생성",
+    "feature_name": "학습 경로 자동 생성 (목표 Phase별 커리큘럼 자동 재조정)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-003"
+  },
+  {
+    "feature_id": "D205-124",
+    "source_file": "D2.0-05",
+    "source_line": "1607-1610",
+    "source_section": "S20.1 O-004 코딩 학습 특화",
+    "feature_name": "코딩 학습 특화 (인터랙티브/LeetCode/프로젝트 기반)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-004"
+  },
+  {
+    "feature_id": "D205-125",
+    "source_file": "D2.0-05",
+    "source_line": "1612-1616",
+    "source_section": "S20.1 O-005 투자 교육 특화",
+    "feature_name": "투자 교육 특화 (기초 기본 기술 퀀트 리스크, 모의 투자)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-005"
+  },
+  {
+    "feature_id": "D205-126",
+    "source_file": "D2.0-05",
+    "source_line": "1618-1621",
+    "source_section": "S20.1 O-006 언어 학습 지원",
+    "feature_name": "언어 학습 지원 (AI 대화/발음 평가/문법/어휘/게이미피케이션)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-006"
+  },
+  {
+    "feature_id": "D205-127",
+    "source_file": "D2.0-05",
+    "source_line": "1623-1626",
+    "source_section": "S20.1 O-007 독서 어시스턴트",
+    "feature_name": "독서 어시스턴트 (챕터 핵심/Q&A/논문 분석)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-007"
+  },
+  {
+    "feature_id": "D205-128",
+    "source_file": "D2.0-05",
+    "source_line": "1628-1630",
+    "source_section": "S20.1 O-008 퀴즈/테스트 자동 생성",
+    "feature_name": "퀴즈/테스트 자동 생성 (객관식/주관식/코드/시나리오, 난이도 자동 조정)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-008"
+  },
+  {
+    "feature_id": "D205-129",
+    "source_file": "D2.0-05",
+    "source_line": "1632-1635",
+    "source_section": "S20.1 O-009 마인드맵/개념맵 학습",
+    "feature_name": "마인드맵/개념맵 학습 (핵심 추출 시각화 탐색 갭분석, Markmap/D3.js)",
+    "version_scope": "V1,V2",
+    "category": "FT-UI",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-009"
+  },
+  {
+    "feature_id": "D205-130",
+    "source_file": "D2.0-05",
+    "source_line": "1637-1640",
+    "source_section": "S20.1 O-010 학습 분석 대시보드",
+    "feature_name": "학습 분석 대시보드 (학습시간/진행률/테스트/간격반복/강점/약점)",
+    "version_scope": "V1,V2",
+    "category": "FT-UI",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-08"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-010"
+  },
+  {
+    "feature_id": "D205-131",
+    "source_file": "D2.0-05",
+    "source_line": "1644-1646",
+    "source_section": "S20.2 O-011 YouTube 학습 시스템",
+    "feature_name": "YouTube 학습 시스템 (URL 자막 Whisper 요약 카드 퀴즈)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-011. yt-dlp + Whisper"
+  },
+  {
+    "feature_id": "D205-132",
+    "source_file": "D2.0-05",
+    "source_line": "1648-1651",
+    "source_section": "S20.2 O-012 논문 학습 시스템",
+    "feature_name": "논문 학습 시스템 (구조화 요약/핵심/수학/코드/관련 논문 맵)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-012"
+  },
+  {
+    "feature_id": "D205-133",
+    "source_file": "D2.0-05",
+    "source_line": "1653-1655",
+    "source_section": "S20.2 O-013 팟캐스트/오디오 학습",
+    "feature_name": "팟캐스트/오디오 학습 (전사 요약 카드, NotebookLM 스타일 오디오 생성)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-013"
+  },
+  {
+    "feature_id": "D205-134",
+    "source_file": "D2.0-05",
+    "source_line": "1657-1659",
+    "source_section": "S20.2 O-014 책 요약 + 독서 관리",
+    "feature_name": "책 요약 + 독서 관리 (트래킹/노트/인용구/책 간 연결)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-014"
+  },
+  {
+    "feature_id": "D205-135",
+    "source_file": "D2.0-05",
+    "source_line": "1661-1664",
+    "source_section": "S20.2 O-015 뉴스/트렌드 학습",
+    "feature_name": "뉴스/트렌드 학습 (AI 큐레이션/배경 보충/토론 포인트)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-015"
+  },
+  {
+    "feature_id": "D205-136",
+    "source_file": "D2.0-05",
+    "source_line": "1666-1668",
+    "source_section": "S20.2 O-016 온라인 강의 통합",
+    "feature_name": "온라인 강의 통합 (Coursera/edX/Udemy 보조)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-016"
+  },
+  {
+    "feature_id": "D205-137",
+    "source_file": "D2.0-05",
+    "source_line": "1670-1673",
+    "source_section": "S20.2 O-017 실습 환경 통합",
+    "feature_name": "실습 환경 통합 (Jupyter/코드 샌드박스/투자 시뮬레이터/DB)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-03"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-017"
+  },
+  {
+    "feature_id": "D205-138",
+    "source_file": "D2.0-05",
+    "source_line": "1675-1677",
+    "source_section": "S20.2 O-018 학습 커뮤니티",
+    "feature_name": "학습 커뮤니티 (스터디 그룹/공유/토론/멘토-멘티)",
+    "version_scope": "V3",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-018. V3: 6개월"
+  },
+  {
+    "feature_id": "D205-139",
+    "source_file": "D2.0-05",
+    "source_line": "1681-1683",
+    "source_section": "S20.3 O-019 목표 관리",
+    "feature_name": "목표 관리 (OKR/SMART)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-019"
+  },
+  {
+    "feature_id": "D205-140",
+    "source_file": "D2.0-05",
+    "source_line": "1685-1687",
+    "source_section": "S20.3 O-020 시간 관리",
+    "feature_name": "시간 관리 (포모도로/시간 기록/효율 분석/일정 최적화)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-020"
+  },
+  {
+    "feature_id": "D205-141",
+    "source_file": "D2.0-05",
+    "source_line": "1689-1691",
+    "source_section": "S20.3 O-021 저널링/일기 지원",
+    "feature_name": "저널링/일기 지원 (프롬프트/감정 트렌드/패턴/회고)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-021"
+  },
+  {
+    "feature_id": "D205-142",
+    "source_file": "D2.0-05",
+    "source_line": "1693-1695",
+    "source_section": "S20.3 O-022 커리어 개발 지원",
+    "feature_name": "커리어 개발 지원 (스킬 갭 분석/이력서/자기소개서)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-022"
+  },
+  {
+    "feature_id": "D205-143",
+    "source_file": "D2.0-05",
+    "source_line": "1697-1699",
+    "source_section": "S20.3 O-023 글쓰기 코칭",
+    "feature_name": "글쓰기 코칭 (문법/문체/구조/가독성/톤)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-023"
+  },
+  {
+    "feature_id": "D205-144",
+    "source_file": "D2.0-05",
+    "source_line": "1701-1703",
+    "source_section": "S20.3 O-024 프레젠테이션 코칭",
+    "feature_name": "프레젠테이션 코칭 (슬라이드/스크립트/리허설/Q&A)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-024"
+  },
+  {
+    "feature_id": "D205-145",
+    "source_file": "D2.0-05",
+    "source_line": "1705-1707",
+    "source_section": "S20.3 O-025 네트워킹/인맥 관리",
+    "feature_name": "네트워킹/인맥 관리 (연락처/리마인더/인맥 KG)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-025"
+  },
+  {
+    "feature_id": "D205-146",
+    "source_file": "D2.0-05",
+    "source_line": "1709-1711",
+    "source_section": "S20.3 O-026 마인드풀니스/명상 가이드",
+    "feature_name": "마인드풀니스/명상 가이드 (TTS/호흡/기록/스트레스)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-026"
+  },
+  {
+    "feature_id": "D205-147",
+    "source_file": "D2.0-05",
+    "source_line": "1713-1716",
+    "source_section": "S20.3 O-027 게이미피케이션 시스템",
+    "feature_name": "게이미피케이션 시스템 (XP/레벨/배지/챌린지/리더보드)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-FUNC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-06"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-027"
+  },
+  {
+    "feature_id": "D205-148",
+    "source_file": "D2.0-05",
+    "source_line": "1718-1720",
+    "source_section": "S20.3 O-028 학습 VBS-16 벤치마크",
+    "feature_name": "VBS-16 학습 벤치마크",
+    "version_scope": "V2",
+    "category": "FT-TEST",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "O-028"
+  },
+  {
+    "feature_id": "D205-149",
+    "source_file": "D2.0-05",
+    "source_line": "1724-1729",
+    "source_section": "S20.4 O-029~O-033 교육 차별화",
+    "feature_name": "교육 차별화 (성인 전문/메모리 개인화/실전 연동/지식관리/멀티모달)",
+    "version_scope": "V1,V2,V3",
+    "category": "FT-DOMAIN",
+    "implementation_type": "보강",
+    "dependencies": [],
+    "extractable": false,
+    "confidence": "명시적",
+    "notes": "TITLE_ONLY. O-029~O-033 차별화 축 정의"
+  },
+  {
+    "feature_id": "D205-150",
+    "source_file": "D2.0-05",
+    "source_line": "1750-1753",
+    "source_section": "S21.1 S7I-001 최신 AI 투자 도구 통합 전략",
+    "feature_name": "AI 투자 데이터 소스 93개 통합 전략 (OpenBB/FinGPT/FRED/DART 등)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-04"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL/V1. S7I-001"
+  },
+  {
+    "feature_id": "D205-151",
+    "source_file": "D2.0-05",
+    "source_line": "1755-1758",
+    "source_section": "S21.1 S7I-002 FinGPT 통합",
+    "feature_name": "FinGPT 금융 특화 LLM 통합 (감성 분석, LoRA fine-tuning)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-02"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL/V1. S7I-002"
+  },
+  {
+    "feature_id": "D205-152",
+    "source_file": "D2.0-05",
+    "source_line": "1760-1762",
+    "source_section": "S21.1 S7I-003 OpenBB Platform v4",
+    "feature_name": "OpenBB Platform v4 통합 (50+ 데이터 프로바이더)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "CRITICAL/V1. S7I-003"
+  },
+  {
+    "feature_id": "D205-153",
+    "source_file": "D2.0-05",
+    "source_line": "1764-1774",
+    "source_section": "S21.1 S7I-004~010 데이터 소스/분석 도구",
+    "feature_name": "투자 데이터 소스 통합 (FRED/DART/SEC/Earnings/뉴스감성/논문/교육)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-004~010"
+  },
+  {
+    "feature_id": "D205-154",
+    "source_file": "D2.0-05",
+    "source_line": "1776-1797",
+    "source_section": "S21.2 S7I-011~020 LLM 기반 투자 분석 고도화",
+    "feature_name": "LLM 투자 분석 3레벨 (정보수집/분석인사이트/전략의사결정)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-011~020"
+  },
+  {
+    "feature_id": "D205-155",
+    "source_file": "D2.0-05",
+    "source_line": "1799-1812",
+    "source_section": "S21.3 S7I-021~030 대안 데이터",
+    "feature_name": "대안 데이터 통합 (소셜감성/내부자/기관/FGI/특허/온체인/웹트래픽/ESG/고용/이벤트)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-021~030"
+  },
+  {
+    "feature_id": "D205-156",
+    "source_file": "D2.0-05",
+    "source_line": "1814-1831",
+    "source_section": "S21.4 S7I-031~040 한국 시장 특화",
+    "feature_name": "한국 시장 특화 (키움/KIS API/ETF/세금/용어/배당/IPO/펀드/부동산/연금)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-031~040. CRITICAL: 031/032/033"
+  },
+  {
+    "feature_id": "D205-157",
+    "source_file": "D2.0-05",
+    "source_line": "1833-1846",
+    "source_section": "S21.5 S7I-041~048 포트폴리오 최적화",
+    "feature_name": "포트폴리오 최적화 (MPT/자산배분/리밸런싱/대시보드/배당/Factor/시나리오/TLH)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-041~048"
+  },
+  {
+    "feature_id": "D205-158",
+    "source_file": "D2.0-05",
+    "source_line": "1848-1863",
+    "source_section": "S21.6 S7I-049~058 리스크 관리",
+    "feature_name": "리스크 관리 (VaR/StopLoss/상관/드로다운/스코어카드/스트레스/사이징/환율/유동성/블랙스완)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-049~058. CRITICAL: 049/050"
+  },
+  {
+    "feature_id": "D205-159",
+    "source_file": "D2.0-05",
+    "source_line": "1865-1878",
+    "source_section": "S21.7 S7I-059~066 백테스팅/시뮬레이션",
+    "feature_name": "백테스팅/시뮬레이션 (vectorbt/backtrader/과적합방지/성과/Paper/A-B/레짐/슬리피지)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-008"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-059~066. CRITICAL: 059/060"
+  },
+  {
+    "feature_id": "D205-160",
+    "source_file": "D2.0-05",
+    "source_line": "1880-1893",
+    "source_section": "S21.8 S7I-067~074 실시간 데이터 알림",
+    "feature_name": "실시간 데이터 및 투자 알림 (가격/공시/일일/오버뷰/경제지표/대시보드/커스텀/정기)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-106"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-067~074"
+  },
+  {
+    "feature_id": "D205-161",
+    "source_file": "D2.0-05",
+    "source_line": "1895-1906",
+    "source_section": "S21.9 S7I-075~082 크립토/DeFi",
+    "feature_name": "크립토/DeFi 통합 (시장데이터/온체인/감성/포트폴리오/DeFi/NFT/규제/에어드랍)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-075~082"
+  },
+  {
+    "feature_id": "D205-162",
+    "source_file": "D2.0-05",
+    "source_line": "1908-1931",
+    "source_section": "S21.10 S7I-083~092 AI Agent 투자 워크플로우",
+    "feature_name": "AI 투자 Agent 워크플로우 (Quant/안전장치/면책/일지/Research/Content/협업/학습/시뮬/자동매매)",
+    "version_scope": "V1,V2",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D205-065"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-083~092. CRITICAL: 083/084/085"
+  },
+  {
+    "feature_id": "D205-163",
+    "source_file": "D2.0-05",
+    "source_line": "1933-1946",
+    "source_section": "S21.11 S7I-093~100 규제/컴플라이언스",
+    "feature_name": "투자 규제/컴플라이언스 (자본시장법/금투세/불법방지/적합성/SEC/크립토/환전/감사)",
+    "version_scope": "V1,V2",
+    "category": "FT-SEC",
+    "implementation_type": "신규구현",
+    "dependencies": [
+      "D2.0-07"
+    ],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-093~100. CRITICAL: 093/094"
+  },
+  {
+    "feature_id": "D205-164",
+    "source_file": "D2.0-05",
+    "source_line": "1948-1957",
+    "source_section": "S21.12 S7I-101~106 기존 GAP 해결",
+    "feature_name": "투자 GAP 해결 (ConnectorResponse/OHLCV/yfinance폴백/RSI_BB/VBS-10/온보딩)",
+    "version_scope": "V1",
+    "category": "FT-DOMAIN",
+    "implementation_type": "신규구현",
+    "dependencies": [],
+    "extractable": true,
+    "confidence": "명시적",
+    "notes": "S7I-101~106. CRITICAL: 101/102/103"
+  }
+]

@@ -1,0 +1,68 @@
+# [-1G] SOT 문서 안정 경로 이동 결과
+
+## 실행 정보
+- **실행일**: 2026-03-07
+- **작업**: 정본 경로 → 안정 경로 전체 복사
+
+## 경로
+- **소스**: `C:\Users\dkscl\OneDrive\바탕 화면\VAMOS\00. 통합\02. TECH\00. FINAL SUMMARY\STEP6_pipeline\output\updated\`
+- **대상**: `D:\VAMOS\docs\sot\`
+
+## 결과: 43개 파일 복사 완료
+
+| # | 파일명 | 카테고리 |
+|---|--------|----------|
+| 1 | BASE-1.3_VAMOS_RULE_1.3_BASE.md | RULE |
+| 2 | CLAUDE.md | CONFIG |
+| 3 | D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md | DESIGN 2.0 |
+| 4 | D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md | DESIGN 2.0 |
+| 5 | D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md | DESIGN 2.0 |
+| 6 | D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md | DESIGN 2.0 |
+| 7 | D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md | DESIGN 2.0 |
+| 8 | D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md | DESIGN 2.0 |
+| 9 | D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md | DESIGN 2.0 |
+| 10 | D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md | DESIGN 2.0 |
+| 11 | D2.1-A1_A1_TECH_STACK.md | DESIGN 2.1 |
+| 12 | D2.1-D1_D1_SCHEMA_GLOSSARY.md | SCHEMA |
+| 13 | D2.1-D2_D2_SCHEMA_ORANGE_CORE.md | SCHEMA |
+| 14 | D2.1-D3_D3_SCHEMA_BLUE_NODES.md | SCHEMA |
+| 15 | D2.1-D4_D4_SCHEMA_INFRA_CORE.md | SCHEMA |
+| 16 | D2.1-D5_D5_SCHEMA_AGENT_WORKFLOW.md | SCHEMA |
+| 17 | D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md | SCHEMA |
+| 18 | D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md | SCHEMA |
+| 19 | D2.1-D8_D8_SCHEMA_UI_UX.md | SCHEMA |
+| 20 | D2.1-Q1_Q1_AUDIT_REPORT.md | AUDIT |
+| 21 | PHASE_B1_API_CONTRACT.md | PHASE B |
+| 22 | PHASE_B2_PROJECT_STRUCTURE.md | PHASE B |
+| 23 | PHASE_B3_DEPENDENCIES.md | PHASE B |
+| 24 | PHASE_B4_CONFIG_SPEC.md | PHASE B |
+| 25 | PHASE_B5_TEST_STRATEGY.md | PHASE B |
+| 26 | PHASE_B6_CICD_PIPELINE.md | PHASE B |
+| 27 | PHASE_B7_MIGRATION_STRATEGY.md | PHASE B |
+| 28 | PLAN-2.0_VAMOS_PLAN_2.0_.md | PLAN |
+| 29 | PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md | PLAN |
+| 30 | VAMOS_AGENT_TEAMS_SPEC.md | SPEC |
+| 31 | VAMOS_AI_INVESTING_SPEC.md | SPEC |
+| 32 | VAMOS_BEGINNER_GUIDE.md | GUIDE |
+| 33 | VAMOS_CLOUD_LIBRARY_SPEC.md | SPEC |
+| 34 | VAMOS_IMPLEMENTATION_READINESS_GUIDE.md | GUIDE |
+| 35 | VAMOS_IMPLEMENTATION_READINESS_REVIEW.md | REVIEW |
+| 36 | VAMOS_MASTER_SPECIFICATION.md | SPEC |
+| 37 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC |
+| 38 | VAMOS_STEP7_A-E_상세명세서.md | STEP7 |
+| 39 | VAMOS_STEP7_F-I_상세명세서.md | STEP7 |
+| 40 | VAMOS_STEP7_J-M_상세명세서.md | STEP7 |
+| 41 | VAMOS_STEP7_N-P_보강_상세명세서.md | STEP7 |
+| 42 | VAMOS_STEP7_보강_통합명세서.md | STEP7 |
+| 43 | VAMOS_V0_READINESS_FINAL_REVIEW.md | REVIEW |
+
+## 참고: §7.6 인덱스 대응
+- 43개 중 **41개**가 §7.6 산출물 인덱스에 등재
+- **2개 추가 파일** (§7.6 미포함, 참조용):
+  - `PLAN-2.0_VAMOS_PLAN_2.0_.md` — PLAN-3.0으로 대체됨 (SUPERSEDED)
+  - `VAMOS_V0_READINESS_FINAL_REVIEW.md` — 정본 경로에 존재하나 §7.6 미등재
+
+## 상태
+- [x] 디렉토리 생성
+- [x] 43개 SOT 문서 전체 복사 (§7.6 41개 + 추가 2개)
+- [x] 산출물 저장: `D:\VAMOS\docs\sot\` (43개 파일)

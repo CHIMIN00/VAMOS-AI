@@ -1,0 +1,1697 @@
+{
+  "meta": {
+    "source_file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+    "source_version": "v25.0.0",
+    "source_date": "2026-03-13",
+    "total_lines": 5252,
+    "generated_at": "2026-03-13",
+    "task_id": "0-D",
+    "description": "Terminology Dictionary extracted from VAMOS_구현가이드_PART2_구현단계.md"
+  },
+  "terms": [
+    {
+      "canonical_name": "VAMOS",
+      "variants": ["VAMOS", "VAMOS AI"],
+      "category": "other",
+      "first_line": 1,
+      "has_definition": true,
+      "definition_line": 1,
+      "occurrences": [1, 3, 100, 258, 764, 944, 1451],
+      "occurrence_count": 200,
+      "id_code": null
+    },
+    {
+      "canonical_name": "I-1 Intent Detector",
+      "variants": ["I-1", "I-1 Intent Detector", "I1", "i01_intent_detector.py", "IntentDetector"],
+      "category": "module",
+      "first_line": 103,
+      "has_definition": true,
+      "definition_line": 879,
+      "occurrences": [103, 879, 950, 1057, 1344, 1464],
+      "occurrence_count": 30,
+      "id_code": "I-1"
+    },
+    {
+      "canonical_name": "I-2 Context Builder",
+      "variants": ["I-2", "I-2 Context Builder", "I2", "i02_context_builder.py", "ContextBuilder"],
+      "category": "module",
+      "first_line": 103,
+      "has_definition": true,
+      "definition_line": 884,
+      "occurrences": [103, 884, 960, 1058, 1465],
+      "occurrence_count": 25,
+      "id_code": "I-2"
+    },
+    {
+      "canonical_name": "I-3 Memory System",
+      "variants": ["I-3", "I-3 Memory System", "I3", "i03_memory_commit.py", "Memory Commit"],
+      "category": "module",
+      "first_line": 103,
+      "has_definition": true,
+      "definition_line": 1479,
+      "occurrences": [103, 1479, 1508],
+      "occurrence_count": 15,
+      "id_code": "I-3"
+    },
+    {
+      "canonical_name": "I-4 Multimodal Interpreter",
+      "variants": ["I-4", "I-4 Multimodal Interpreter", "I4", "i04_multimodal_interpreter.py"],
+      "category": "module",
+      "first_line": 1475,
+      "has_definition": true,
+      "definition_line": 1475,
+      "occurrences": [1475, 1506],
+      "occurrence_count": 8,
+      "id_code": "I-4"
+    },
+    {
+      "canonical_name": "I-5 Condition & Decision Engine",
+      "variants": ["I-5", "I-5 Decision Engine", "I-5 Condition & Decision Engine", "I5", "i05_decision_engine.py", "DecisionEngine"],
+      "category": "module",
+      "first_line": 103,
+      "has_definition": true,
+      "definition_line": 887,
+      "occurrences": [103, 887, 966, 1062, 1350, 1467],
+      "occurrence_count": 40,
+      "id_code": "I-5"
+    },
+    {
+      "canonical_name": "I-6 Self-check",
+      "variants": ["I-6", "I-6 Self-check", "I6", "i06_self_check.py", "SelfCheck"],
+      "category": "module",
+      "first_line": 1477,
+      "has_definition": true,
+      "definition_line": 1477,
+      "occurrences": [973, 1011, 1477, 1507, 1541],
+      "occurrence_count": 15,
+      "id_code": "I-6"
+    },
+    {
+      "canonical_name": "I-7 Project/Session Manager",
+      "variants": ["I-7", "I-7 Project/Session Manager", "I7", "i07_project_session_manager.py"],
+      "category": "module",
+      "first_line": 2063,
+      "has_definition": true,
+      "definition_line": 2063,
+      "occurrences": [2063, 2209, 2291, 2510],
+      "occurrence_count": 8,
+      "id_code": "I-7"
+    },
+    {
+      "canonical_name": "I-8 Policy Engine",
+      "variants": ["I-8", "I-8 Policy Engine", "I8", "i08_policy_engine.py", "PolicyEngine"],
+      "category": "module",
+      "first_line": 104,
+      "has_definition": true,
+      "definition_line": 894,
+      "occurrences": [104, 894, 977, 1468, 1527],
+      "occurrence_count": 15,
+      "id_code": "I-8"
+    },
+    {
+      "canonical_name": "I-9 Cost Manager",
+      "variants": ["I-9", "I-9 Cost Manager", "I9", "i09_cost_manager.py", "CostManager"],
+      "category": "module",
+      "first_line": 104,
+      "has_definition": true,
+      "definition_line": 898,
+      "occurrences": [104, 898, 984, 1485, 1529],
+      "occurrence_count": 15,
+      "id_code": "I-9"
+    },
+    {
+      "canonical_name": "I-10 Tool Registry/Router",
+      "variants": ["I-10", "I-10 Tool Router", "I10", "i10_tool_router.py", "ToolRouter"],
+      "category": "module",
+      "first_line": 1478,
+      "has_definition": true,
+      "definition_line": 1478,
+      "occurrences": [1478],
+      "occurrence_count": 5,
+      "id_code": "I-10"
+    },
+    {
+      "canonical_name": "I-11 Output Composer",
+      "variants": ["I-11", "I-11 Output Composer", "I11", "i11_output_composer.py", "OutputComposer"],
+      "category": "module",
+      "first_line": 1479,
+      "has_definition": true,
+      "definition_line": 1479,
+      "occurrences": [1479, 1505, 1545],
+      "occurrence_count": 5,
+      "id_code": "I-11"
+    },
+    {
+      "canonical_name": "I-12 Workflow Builder",
+      "variants": ["I-12", "I-12 Workflow Builder", "I12", "i12_workflow_builder.py"],
+      "category": "module",
+      "first_line": 2064,
+      "has_definition": true,
+      "definition_line": 2064,
+      "occurrences": [2064, 2218, 2294, 2510],
+      "occurrence_count": 5,
+      "id_code": "I-12"
+    },
+    {
+      "canonical_name": "I-13 Multimodal Output Renderer",
+      "variants": ["I-13", "I-13 Multimodal Output Renderer", "I13", "i13_multimodal_renderer.py"],
+      "category": "module",
+      "first_line": 1480,
+      "has_definition": true,
+      "definition_line": 1480,
+      "occurrences": [1480],
+      "occurrence_count": 3,
+      "id_code": "I-13"
+    },
+    {
+      "canonical_name": "I-14 Summarizer",
+      "variants": ["I-14", "I-14 Summarizer", "I14", "i14_summarizer.py"],
+      "category": "module",
+      "first_line": 1481,
+      "has_definition": true,
+      "definition_line": 1481,
+      "occurrences": [1481],
+      "occurrence_count": 3,
+      "id_code": "I-14"
+    },
+    {
+      "canonical_name": "I-15 QoD Evaluator",
+      "variants": ["I-15", "I-15 QoD Evaluator", "I15", "i15_qod_evaluator.py"],
+      "category": "module",
+      "first_line": 1466,
+      "has_definition": true,
+      "definition_line": 1466,
+      "occurrences": [1466],
+      "occurrence_count": 3,
+      "id_code": "I-15"
+    },
+    {
+      "canonical_name": "I-16 Knowledge Search Engine",
+      "variants": ["I-16", "I-16 Knowledge Search Engine", "I16", "i16_knowledge_search.py"],
+      "category": "module",
+      "first_line": 1482,
+      "has_definition": true,
+      "definition_line": 1482,
+      "occurrences": [1482],
+      "occurrence_count": 3,
+      "id_code": "I-16"
+    },
+    {
+      "canonical_name": "I-17 Blue Node Manager",
+      "variants": ["I-17", "I-17 Blue Node Manager", "I17", "i17_blue_node_manager.py"],
+      "category": "module",
+      "first_line": 1483,
+      "has_definition": true,
+      "definition_line": 1483,
+      "occurrences": [1483],
+      "occurrence_count": 3,
+      "id_code": "I-17"
+    },
+    {
+      "canonical_name": "I-18 Self-evo Engine",
+      "variants": ["I-18", "I-18 Self-evo Engine", "I18", "i18_self_evo_engine.py"],
+      "category": "module",
+      "first_line": 2700,
+      "has_definition": true,
+      "definition_line": 2700,
+      "occurrences": [2700, 2771],
+      "occurrence_count": 5,
+      "id_code": "I-18"
+    },
+    {
+      "canonical_name": "I-19 Approval Manager",
+      "variants": ["I-19", "I-19 Approval Manager", "I19", "i19_approval_manager.py", "ApprovalManager"],
+      "category": "module",
+      "first_line": 103,
+      "has_definition": true,
+      "definition_line": 902,
+      "occurrences": [103, 105, 902, 1022, 1469, 1543],
+      "occurrence_count": 20,
+      "id_code": "I-19"
+    },
+    {
+      "canonical_name": "I-20 Failure/Fallback Manager",
+      "variants": ["I-20", "I-20 Failure/Fallback Manager", "I20", "i20_failure_manager.py"],
+      "category": "module",
+      "first_line": 104,
+      "has_definition": true,
+      "definition_line": 906,
+      "occurrences": [104, 906, 1028, 1484],
+      "occurrence_count": 10,
+      "id_code": "I-20"
+    },
+    {
+      "canonical_name": "I-21 Source Evolution Engine",
+      "variants": ["I-21", "I-21 Source Evolution Engine", "I21", "i21_source_evolution_engine.py"],
+      "category": "module",
+      "first_line": 2701,
+      "has_definition": true,
+      "definition_line": 2701,
+      "occurrences": [2701, 2779],
+      "occurrence_count": 5,
+      "id_code": "I-21"
+    },
+    {
+      "canonical_name": "I-22 Task/Project Manager",
+      "variants": ["I-22", "I-22 Task/Project Manager", "I22", "i22_task_project_manager.py"],
+      "category": "module",
+      "first_line": 2065,
+      "has_definition": true,
+      "definition_line": 2065,
+      "occurrences": [2065, 2224, 2510],
+      "occurrence_count": 5,
+      "id_code": "I-22"
+    },
+    {
+      "canonical_name": "I-23 Doc/Code Structuring",
+      "variants": ["I-23", "I-23 Doc/Code Structuring", "I23", "i23_doc_code_structuring.py"],
+      "category": "module",
+      "first_line": 2066,
+      "has_definition": true,
+      "definition_line": 2066,
+      "occurrences": [2066, 2230, 2510],
+      "occurrence_count": 5,
+      "id_code": "I-23"
+    },
+    {
+      "canonical_name": "I-24 Knowledge Graph Engine",
+      "variants": ["I-24", "I-24 Knowledge Graph Engine", "I24", "i24_knowledge_graph_engine.py"],
+      "category": "module",
+      "first_line": 2702,
+      "has_definition": true,
+      "definition_line": 2702,
+      "occurrences": [2702, 2787],
+      "occurrence_count": 5,
+      "id_code": "I-24"
+    },
+    {
+      "canonical_name": "I-25 SDAR Engine",
+      "variants": ["I-25", "I-25 SDAR Engine", "I25", "i25_sdar_engine.py", "Self-Directed Adaptive Reasoning", "Self-Diagnosis and Auto-Repair", "SDAR"],
+      "category": "module",
+      "first_line": 2067,
+      "has_definition": true,
+      "definition_line": 2067,
+      "occurrences": [2067, 2235, 2300, 2359, 2466, 3080, 3706],
+      "occurrence_count": 30,
+      "id_code": "I-25"
+    },
+    {
+      "canonical_name": "E-1 Coding Helper",
+      "variants": ["E-1", "E-1 Coding Helper"],
+      "category": "module",
+      "first_line": 1658,
+      "has_definition": true,
+      "definition_line": 1658,
+      "occurrences": [1658],
+      "occurrence_count": 5,
+      "id_code": "E-1"
+    },
+    {
+      "canonical_name": "E-2 Web Search",
+      "variants": ["E-2", "E-2 Web Search"],
+      "category": "module",
+      "first_line": 1659,
+      "has_definition": true,
+      "definition_line": 1659,
+      "occurrences": [1659],
+      "occurrence_count": 5,
+      "id_code": "E-2"
+    },
+    {
+      "canonical_name": "E-3 Document Parser",
+      "variants": ["E-3", "E-3 Document Parser"],
+      "category": "module",
+      "first_line": 1660,
+      "has_definition": true,
+      "definition_line": 1660,
+      "occurrences": [1660],
+      "occurrence_count": 5,
+      "id_code": "E-3"
+    },
+    {
+      "canonical_name": "E-4 Code Executor",
+      "variants": ["E-4", "E-4 Code Executor"],
+      "category": "module",
+      "first_line": 1661,
+      "has_definition": true,
+      "definition_line": 1661,
+      "occurrences": [1661, 3417],
+      "occurrence_count": 5,
+      "id_code": "E-4"
+    },
+    {
+      "canonical_name": "E-5 Image Analyzer",
+      "variants": ["E-5", "E-5 Image Analyzer"],
+      "category": "module",
+      "first_line": 1662,
+      "has_definition": true,
+      "definition_line": 1662,
+      "occurrences": [1662],
+      "occurrence_count": 3,
+      "id_code": "E-5"
+    },
+    {
+      "canonical_name": "E-6 Z3 Solver",
+      "variants": ["E-6", "E-6 Z3 Solver"],
+      "category": "module",
+      "first_line": 1663,
+      "has_definition": true,
+      "definition_line": 1663,
+      "occurrences": [1663],
+      "occurrence_count": 3,
+      "id_code": "E-6"
+    },
+    {
+      "canonical_name": "E-7 STT",
+      "variants": ["E-7", "E-7 STT", "e07_stt.py"],
+      "category": "module",
+      "first_line": 2815,
+      "has_definition": true,
+      "definition_line": 2815,
+      "occurrences": [2704, 2815],
+      "occurrence_count": 3,
+      "id_code": "E-7"
+    },
+    {
+      "canonical_name": "E-8 TTS",
+      "variants": ["E-8", "E-8 TTS", "e08_tts.py"],
+      "category": "module",
+      "first_line": 2816,
+      "has_definition": true,
+      "definition_line": 2816,
+      "occurrences": [2704, 2816],
+      "occurrence_count": 3,
+      "id_code": "E-8"
+    },
+    {
+      "canonical_name": "E-13 Calendar/Task Sync",
+      "variants": ["E-13", "E-13 Calendar/Task Sync", "e13_calendar_task_sync.py"],
+      "category": "module",
+      "first_line": 2069,
+      "has_definition": true,
+      "definition_line": 2069,
+      "occurrences": [2069, 2253, 2510],
+      "occurrence_count": 5,
+      "id_code": "E-13"
+    },
+    {
+      "canonical_name": "E-14 Email Handler",
+      "variants": ["E-14", "E-14 Email Handler", "e14_email_handler.py"],
+      "category": "module",
+      "first_line": 2070,
+      "has_definition": true,
+      "definition_line": 2070,
+      "occurrences": [2070, 2259, 2510],
+      "occurrence_count": 5,
+      "id_code": "E-14"
+    },
+    {
+      "canonical_name": "E-15 Cloud Collector",
+      "variants": ["E-15", "E-15 Cloud Collector", "e15_cloud_collector.py"],
+      "category": "module",
+      "first_line": 2071,
+      "has_definition": true,
+      "definition_line": 2071,
+      "occurrences": [2071, 2265, 2456, 2510, 3089, 3819],
+      "occurrence_count": 10,
+      "id_code": "E-15"
+    },
+    {
+      "canonical_name": "E-16 Cloud Storage Sync",
+      "variants": ["E-16", "E-16 Cloud Storage Sync", "e16_cloud_storage_sync.py"],
+      "category": "module",
+      "first_line": 2074,
+      "has_definition": true,
+      "definition_line": 2074,
+      "occurrences": [2074, 2274, 2510],
+      "occurrence_count": 5,
+      "id_code": "E-16"
+    },
+    {
+      "canonical_name": "S-1 Self-check Engine",
+      "variants": ["S-1", "S-1 Self-check Engine"],
+      "category": "module",
+      "first_line": 1840,
+      "has_definition": true,
+      "definition_line": 1840,
+      "occurrences": [1840],
+      "occurrence_count": 5,
+      "id_code": "S-1"
+    },
+    {
+      "canonical_name": "S-2 Pattern Miner",
+      "variants": ["S-2", "S-2 Pattern Miner", "s02_pattern_miner.py"],
+      "category": "module",
+      "first_line": 2798,
+      "has_definition": true,
+      "definition_line": 2798,
+      "occurrences": [2703, 2798],
+      "occurrence_count": 3,
+      "id_code": "S-2"
+    },
+    {
+      "canonical_name": "S-8 Self-evo Governance",
+      "variants": ["S-8", "S-8 Self-evo Governance", "s08_governance.py"],
+      "category": "module",
+      "first_line": 2810,
+      "has_definition": true,
+      "definition_line": 2810,
+      "occurrences": [2810, 3004, 3071],
+      "occurrence_count": 8,
+      "id_code": "S-8"
+    },
+    {
+      "canonical_name": "A-1 MultiBrain Adapter",
+      "variants": ["A-1", "A-1 MultiBrain Adapter"],
+      "category": "module",
+      "first_line": 1655,
+      "has_definition": true,
+      "definition_line": 1655,
+      "occurrences": [1655, 1714],
+      "occurrence_count": 5,
+      "id_code": "A-1"
+    },
+    {
+      "canonical_name": "A-2 Preset Modularization",
+      "variants": ["A-2", "A-2 Preset Modularization"],
+      "category": "module",
+      "first_line": 1656,
+      "has_definition": true,
+      "definition_line": 1656,
+      "occurrences": [1656, 1732],
+      "occurrence_count": 3,
+      "id_code": "A-2"
+    },
+    {
+      "canonical_name": "A-3 Meta AI",
+      "variants": ["A-3", "A-3 Meta AI", "a03_meta_ai.py"],
+      "category": "module",
+      "first_line": 2706,
+      "has_definition": true,
+      "definition_line": 2822,
+      "occurrences": [2706, 2822],
+      "occurrence_count": 3,
+      "id_code": "A-3"
+    },
+    {
+      "canonical_name": "A-4 Debate Mode",
+      "variants": ["A-4", "A-4 Debate Mode", "a04_debate_mode.py"],
+      "category": "module",
+      "first_line": 2068,
+      "has_definition": true,
+      "definition_line": 2068,
+      "occurrences": [2068, 2247, 2303, 2510],
+      "occurrence_count": 5,
+      "id_code": "A-4"
+    },
+    {
+      "canonical_name": "A-5 Lazy Generation",
+      "variants": ["A-5", "A-5 Lazy Generation", "a05_lazy_generation.py"],
+      "category": "module",
+      "first_line": 2707,
+      "has_definition": true,
+      "definition_line": 2827,
+      "occurrences": [2707, 2827],
+      "occurrence_count": 3,
+      "id_code": "A-5"
+    },
+    {
+      "canonical_name": "A-6 Federated",
+      "variants": ["A-6", "A-6 Federated", "a06_federated.py"],
+      "category": "module",
+      "first_line": 2708,
+      "has_definition": true,
+      "definition_line": 2832,
+      "occurrences": [2708, 2832],
+      "occurrence_count": 3,
+      "id_code": "A-6"
+    },
+    {
+      "canonical_name": "A-7 Remote Executor",
+      "variants": ["A-7", "A-7 Remote Executor", "a07_remote_executor.py"],
+      "category": "module",
+      "first_line": 2709,
+      "has_definition": true,
+      "definition_line": 2837,
+      "occurrences": [2709, 2837],
+      "occurrence_count": 3,
+      "id_code": "A-7"
+    },
+    {
+      "canonical_name": "B-1 Skill Library",
+      "variants": ["B-1", "B-1 Skill Library", "B-1 Episodic", "b01_skill_library.py"],
+      "category": "module",
+      "first_line": 1586,
+      "has_definition": true,
+      "definition_line": 2844,
+      "occurrences": [1586, 2709, 2844],
+      "occurrence_count": 5,
+      "id_code": "B-1"
+    },
+    {
+      "canonical_name": "B-2 Procedural Memory",
+      "variants": ["B-2", "B-2 Procedural Memory", "B-2 Procedural", "b02_procedural_memory.py"],
+      "category": "module",
+      "first_line": 1587,
+      "has_definition": true,
+      "definition_line": 2845,
+      "occurrences": [1587, 2845],
+      "occurrence_count": 5,
+      "id_code": "B-2"
+    },
+    {
+      "canonical_name": "B-3 Memory Decay",
+      "variants": ["B-3", "B-3 Memory Decay", "B-3 Semantic"],
+      "category": "module",
+      "first_line": 1567,
+      "has_definition": true,
+      "definition_line": 1567,
+      "occurrences": [1567, 1588, 1635],
+      "occurrence_count": 5,
+      "id_code": "B-3"
+    },
+    {
+      "canonical_name": "B-4 DSPy Integration",
+      "variants": ["B-4", "B-4 DSPy", "B-4 Working", "b04_dspy.py"],
+      "category": "module",
+      "first_line": 1589,
+      "has_definition": true,
+      "definition_line": 2846,
+      "occurrences": [1589, 2846],
+      "occurrence_count": 3,
+      "id_code": "B-4"
+    },
+    {
+      "canonical_name": "C-1 Logic Verifier",
+      "variants": ["C-1", "C-1 Logic Verifier"],
+      "category": "module",
+      "first_line": 1664,
+      "has_definition": true,
+      "definition_line": 1664,
+      "occurrences": [1664],
+      "occurrence_count": 3,
+      "id_code": "C-1"
+    },
+    {
+      "canonical_name": "C-2 Math Verifier",
+      "variants": ["C-2", "C-2 Math Verifier"],
+      "category": "module",
+      "first_line": 1664,
+      "has_definition": true,
+      "definition_line": 1664,
+      "occurrences": [1664],
+      "occurrence_count": 3,
+      "id_code": "C-2"
+    },
+    {
+      "canonical_name": "C-3 Code Verifier",
+      "variants": ["C-3", "C-3 Code Verifier"],
+      "category": "module",
+      "first_line": 1664,
+      "has_definition": true,
+      "definition_line": 1664,
+      "occurrences": [1664],
+      "occurrence_count": 3,
+      "id_code": "C-3"
+    },
+    {
+      "canonical_name": "D-1 Think Engine",
+      "variants": ["D-1", "D-1 Think Engine"],
+      "category": "module",
+      "first_line": 1665,
+      "has_definition": true,
+      "definition_line": 1665,
+      "occurrences": [1665],
+      "occurrence_count": 3,
+      "id_code": "D-1"
+    },
+    {
+      "canonical_name": "D-2 Multimodal Engine",
+      "variants": ["D-2", "D-2 Multimodal Engine"],
+      "category": "module",
+      "first_line": 1665,
+      "has_definition": true,
+      "definition_line": 1665,
+      "occurrences": [1665],
+      "occurrence_count": 3,
+      "id_code": "D-2"
+    },
+    {
+      "canonical_name": "D-6 GraphRAG",
+      "variants": ["D-6", "D-6 GraphRAG", "d06_graphrag.py"],
+      "category": "module",
+      "first_line": 2712,
+      "has_definition": true,
+      "definition_line": 2860,
+      "occurrences": [2712, 2860],
+      "occurrence_count": 3,
+      "id_code": "D-6"
+    },
+    {
+      "canonical_name": "EVX-1 Code-as-Policy",
+      "variants": ["EVX-1", "EVX-1 Code-as-Policy", "evx01_code_as_policy.py"],
+      "category": "module",
+      "first_line": 2713,
+      "has_definition": true,
+      "definition_line": 2864,
+      "occurrences": [2713, 2864],
+      "occurrence_count": 3,
+      "id_code": "EVX-1"
+    },
+    {
+      "canonical_name": "EVX-2 Adversarial Tester",
+      "variants": ["EVX-2", "EVX-2 Adversarial Tester", "evx02_adversarial.py"],
+      "category": "module",
+      "first_line": 2865,
+      "has_definition": true,
+      "definition_line": 2865,
+      "occurrences": [2865],
+      "occurrence_count": 2,
+      "id_code": "EVX-2"
+    },
+    {
+      "canonical_name": "EVX-3 Log-prob Analyzer",
+      "variants": ["EVX-3", "EVX-3 Log-prob Analyzer", "evx03_logprob.py"],
+      "category": "module",
+      "first_line": 2866,
+      "has_definition": true,
+      "definition_line": 2866,
+      "occurrences": [2866],
+      "occurrence_count": 2,
+      "id_code": "EVX-3"
+    },
+    {
+      "canonical_name": "PolicyGate",
+      "variants": ["PolicyGate", "Policy Gate"],
+      "category": "gate",
+      "first_line": 888,
+      "has_definition": true,
+      "definition_line": 888,
+      "occurrences": [888, 969, 1350, 1492, 3749],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "ApprovalGate",
+      "variants": ["ApprovalGate", "Approval Gate"],
+      "category": "gate",
+      "first_line": 890,
+      "has_definition": true,
+      "definition_line": 890,
+      "occurrences": [890, 971, 1356, 1492, 3752],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "CostGate",
+      "variants": ["CostGate", "Cost Gate"],
+      "category": "gate",
+      "first_line": 889,
+      "has_definition": true,
+      "definition_line": 889,
+      "occurrences": [889, 970, 1353, 1492, 3751],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "EvidenceGate",
+      "variants": ["EvidenceGate", "Evidence Gate"],
+      "category": "gate",
+      "first_line": 891,
+      "has_definition": true,
+      "definition_line": 891,
+      "occurrences": [891, 972, 1068, 1492],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "SelfCheckGate",
+      "variants": ["SelfCheckGate", "Self-Check Gate", "SelfCheck Gate"],
+      "category": "gate",
+      "first_line": 973,
+      "has_definition": true,
+      "definition_line": 973,
+      "occurrences": [973, 1011, 1492],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "ORANGE CORE 9-State Pipeline",
+      "variants": ["9-State", "ORANGE CORE 9-State", "S0_RECEIVED", "S1_INTENT_PARSED", "S2_EVIDENCE_READY", "S3_DECISION_LOCKED", "S4_EXECUTING", "S5_OUTPUT_READY", "S6_SELF_CHECKED", "S7_MEMORY_COMMITTED", "S8_DONE"],
+      "category": "status_code",
+      "first_line": 1005,
+      "has_definition": true,
+      "definition_line": 1499,
+      "occurrences": [1005, 1499, 1502, 1539],
+      "occurrence_count": 30,
+      "id_code": null
+    },
+    {
+      "canonical_name": "UI 9-State Machine",
+      "variants": ["UI 9-State", "UI_S0_BOOT", "UI_S1_IDLE", "UI_S2_EDITING", "UI_S3_READY", "UI_S4_RUNNING", "UI_S5_AWAIT_APPROVAL", "UI_S6_PRESENTING", "UI_S7_RECOVERY", "UI_S8_ARCHIVED"],
+      "category": "status_code",
+      "first_line": 3253,
+      "has_definition": true,
+      "definition_line": 3256,
+      "occurrences": [1777, 3253, 3256],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "SDAR 7-State Machine",
+      "variants": ["SDAR 7-State", "IDLE", "DETECTING", "DIAGNOSING", "PRESCRIBING", "REPAIRING", "VERIFYING", "ESCALATED"],
+      "category": "status_code",
+      "first_line": 3727,
+      "has_definition": true,
+      "definition_line": 3730,
+      "occurrences": [3727, 3730, 3735],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "AR Level (Autonomy Repair Level)",
+      "variants": ["AR-L0", "AR-L1", "AR-L2", "AR-L3", "AR-L4", "AR Level"],
+      "category": "status_code",
+      "first_line": 2237,
+      "has_definition": true,
+      "definition_line": 3759,
+      "occurrences": [2237, 2301, 2359, 2466, 3080, 3759],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Cloud Library 5-Gate (CL-G0 to CL-G4)",
+      "variants": ["CL-G0", "CL-G1", "CL-G2", "CL-G3", "CL-G4", "G0-G4"],
+      "category": "gate",
+      "first_line": 3849,
+      "has_definition": true,
+      "definition_line": 3849,
+      "occurrences": [3849, 3853, 3859],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "SDAR 5-Gate",
+      "variants": ["Safety Gate", "Risk Gate", "Cost Gate (SDAR)", "Approval Gate (SDAR)", "Verification Gate"],
+      "category": "gate",
+      "first_line": 3745,
+      "has_definition": true,
+      "definition_line": 3745,
+      "occurrences": [3745, 3749],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "RT-BNP (Real-Time Breaking News Pipeline)",
+      "variants": ["RT-BNP", "Real-Time Breaking News Pipeline"],
+      "category": "other",
+      "first_line": 2072,
+      "has_definition": true,
+      "definition_line": 3881,
+      "occurrences": [2072, 2267, 2358, 2461, 2713, 2871, 3881, 3948],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "DCL (Domain Context Layer)",
+      "variants": ["DCL", "Domain Context Layer", "DCL-FIN", "DCL-TECH", "DCL-GEO"],
+      "category": "other",
+      "first_line": 1568,
+      "has_definition": true,
+      "definition_line": 3966,
+      "occurrences": [1568, 2073, 3966, 3997, 4001],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "BREAKING-P0",
+      "variants": ["BREAKING-P0", "BREAKING-P1", "BREAKING-P2"],
+      "category": "status_code",
+      "first_line": 3904,
+      "has_definition": true,
+      "definition_line": 3906,
+      "occurrences": [3661, 3906, 3908],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "LOCK-AT Architecture Constraints",
+      "variants": ["LOCK-AT", "LOCK-AT-001", "LOCK-AT-002", "LOCK-AT-003", "LOCK-AT-004", "LOCK-AT-005", "LOCK-AT-006", "LOCK-AT-007", "LOCK-AT-008", "LOCK-AT-009", "LOCK-AT-010", "LOCK-AT-011", "LOCK-AT-012", "LOCK-AT-013", "LOCK-AT-014", "LOCK-AT-015", "LOCK-AT-016", "LOCK-AT-017"],
+      "category": "other",
+      "first_line": 3493,
+      "has_definition": true,
+      "definition_line": 3493,
+      "occurrences": [1466, 1715, 2472, 3493, 3499],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Tauri",
+      "variants": ["Tauri", "Tauri 2.0", "Tauri IPC"],
+      "category": "tech_stack",
+      "first_line": 121,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [121, 261, 717, 742, 806, 842],
+      "occurrence_count": 30,
+      "id_code": null
+    },
+    {
+      "canonical_name": "React",
+      "variants": ["React", "React 18", "React 18.3"],
+      "category": "tech_stack",
+      "first_line": 115,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [115, 261, 327, 717, 1798],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Python",
+      "variants": ["Python", "Python 3.11", "Python 3.11+"],
+      "category": "tech_stack",
+      "first_line": 129,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [129, 250, 309, 715, 720, 773],
+      "occurrence_count": 40,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Rust",
+      "variants": ["Rust"],
+      "category": "tech_stack",
+      "first_line": 121,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [121, 158, 321, 739, 796],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "LangGraph",
+      "variants": ["LangGraph", "LangGraph StateGraph", "StateGraph"],
+      "category": "tech_stack",
+      "first_line": 910,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [910, 913, 992, 1007, 1042, 1650, 1711],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Ollama",
+      "variants": ["Ollama"],
+      "category": "tech_stack",
+      "first_line": 170,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [170, 252, 477, 882, 936, 1038, 1067, 1406, 1655, 1714],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "SQLite",
+      "variants": ["SQLite", "aiosqlite"],
+      "category": "tech_stack",
+      "first_line": 197,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [197, 315, 1077, 1107, 1116, 1560, 1895],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Chroma",
+      "variants": ["Chroma", "Chroma Vector DB", "ChromaDB", "chromadb"],
+      "category": "tech_stack",
+      "first_line": 183,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [183, 314, 1562, 1630, 1867, 1897],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "PostgreSQL",
+      "variants": ["PostgreSQL", "Postgres", "Managed Postgres"],
+      "category": "tech_stack",
+      "first_line": 1895,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [1895, 1946, 1963, 2004, 2539],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Qdrant",
+      "variants": ["Qdrant", "Qdrant Cloud"],
+      "category": "tech_stack",
+      "first_line": 1897,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [1897, 1977, 2005, 2537],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Neo4j",
+      "variants": ["Neo4j", "Neo4j Community", "Neo4j Aura"],
+      "category": "tech_stack",
+      "first_line": 1898,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [1898, 1986, 2006, 2538, 2788],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Redis",
+      "variants": ["Redis", "Redis Pub/Sub", "Redis MessageBus", "Redis Streams"],
+      "category": "tech_stack",
+      "first_line": 2007,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2007, 2351, 2385, 2403, 2874],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Kafka",
+      "variants": ["Kafka"],
+      "category": "tech_stack",
+      "first_line": 2358,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2358, 2389, 2462, 2514, 3628],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Kubernetes",
+      "variants": ["Kubernetes", "K8s", "Helm"],
+      "category": "tech_stack",
+      "first_line": 2524,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2524, 2535, 2576, 2658, 2683],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "vLLM",
+      "variants": ["vLLM"],
+      "category": "tech_stack",
+      "first_line": 2536,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2536, 2613, 2684],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "BGE-M3",
+      "variants": ["BGE-M3", "bge-m3", "FlagEmbedding"],
+      "category": "tech_stack",
+      "first_line": 178,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [178, 319, 353, 1465, 1491, 1562, 1578],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "MCP (Model Context Protocol)",
+      "variants": ["MCP", "MCP Bridge", "MCP Server", "MCP Client", "Streamable HTTP"],
+      "category": "tech_stack",
+      "first_line": 223,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [223, 398, 1837, 1838, 1839, 3426],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "JSON-RPC",
+      "variants": ["JSON-RPC", "JSON-RPC 2.0", "JSON-RPC stdin/stdout"],
+      "category": "tech_stack",
+      "first_line": 715,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [715, 720, 794, 845, 862, 3099, 3309],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Pydantic v2",
+      "variants": ["Pydantic", "Pydantic v2", "BaseModel", "ConfigDict"],
+      "category": "tech_stack",
+      "first_line": 310,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [310, 456, 487, 589, 592, 697],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Docker",
+      "variants": ["Docker", "Docker Compose", "Docker Compose v2"],
+      "category": "tech_stack",
+      "first_line": 1661,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [1661, 1900, 1945, 2001, 3398, 3417],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Zustand",
+      "variants": ["Zustand", "Zustand Stores"],
+      "category": "tech_stack",
+      "first_line": 159,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [159, 329, 1756, 1774, 3224],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "EventTypeRegistry",
+      "variants": ["EventTypeRegistry", "EventType Registry"],
+      "category": "registry",
+      "first_line": 521,
+      "has_definition": true,
+      "definition_line": 521,
+      "occurrences": [435, 521, 630, 702, 1441, 1519, 4049],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "FailureCodeRegistry",
+      "variants": ["FailureCodeRegistry", "FailureCode Registry"],
+      "category": "registry",
+      "first_line": 522,
+      "has_definition": true,
+      "definition_line": 522,
+      "occurrences": [435, 522, 631, 702, 907, 1441, 4081],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "FallbackRegistry",
+      "variants": ["FallbackRegistry", "Fallback Registry"],
+      "category": "registry",
+      "first_line": 523,
+      "has_definition": true,
+      "definition_line": 523,
+      "occurrences": [435, 523, 632, 702, 907, 1441, 4096],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "ToolRegistry",
+      "variants": ["ToolRegistry", "Tool Registry", "ToolRegistryEntry"],
+      "category": "registry",
+      "first_line": 524,
+      "has_definition": true,
+      "definition_line": 524,
+      "occurrences": [506, 508, 524, 634],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "NodeRegistry",
+      "variants": ["NodeRegistry", "Node Registry"],
+      "category": "registry",
+      "first_line": 525,
+      "has_definition": true,
+      "definition_line": 525,
+      "occurrences": [525, 635],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "DecisionSchema",
+      "variants": ["DecisionSchema", "Decision Schema"],
+      "category": "other",
+      "first_line": 431,
+      "has_definition": true,
+      "definition_line": 493,
+      "occurrences": [431, 441, 493, 557, 599, 660, 698, 892, 974, 1062, 1329],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "ResponseEnvelope",
+      "variants": ["ResponseEnvelope", "Response Envelope"],
+      "category": "other",
+      "first_line": 432,
+      "has_definition": true,
+      "definition_line": 495,
+      "occurrences": [432, 495, 557, 601, 666, 700, 918, 1004, 1064, 1335],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "IntentFrame",
+      "variants": ["IntentFrame", "Intent Frame"],
+      "category": "other",
+      "first_line": 433,
+      "has_definition": true,
+      "definition_line": 491,
+      "occurrences": [433, 491, 597, 671, 880, 953, 1000, 1056, 1346],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "EvidencePack",
+      "variants": ["EvidencePack", "Evidence Pack"],
+      "category": "other",
+      "first_line": 434,
+      "has_definition": true,
+      "definition_line": 492,
+      "occurrences": [434, 492, 598, 675, 885, 962, 1001, 1058],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "V0 Scaffold",
+      "variants": ["V0", "V0 구현", "V0 Scaffold", "구조 기반"],
+      "category": "other",
+      "first_line": 25,
+      "has_definition": true,
+      "definition_line": 98,
+      "occurrences": [25, 41, 98, 109],
+      "occurrence_count": 50,
+      "id_code": null
+    },
+    {
+      "canonical_name": "V1 MVP",
+      "variants": ["V1", "V1 구현", "V1 MVP", "Operational MVP"],
+      "category": "other",
+      "first_line": 25,
+      "has_definition": true,
+      "definition_line": 1449,
+      "occurrences": [25, 42, 1449, 1458],
+      "occurrence_count": 80,
+      "id_code": null
+    },
+    {
+      "canonical_name": "V2 Pro Server",
+      "variants": ["V2", "V2 구현", "V2 Pro Server", "Pro Server"],
+      "category": "other",
+      "first_line": 25,
+      "has_definition": true,
+      "definition_line": 1882,
+      "occurrences": [25, 43, 1882, 1891],
+      "occurrence_count": 60,
+      "id_code": null
+    },
+    {
+      "canonical_name": "V3 Enterprise",
+      "variants": ["V3", "V3 구현", "V3 Enterprise", "Enterprise"],
+      "category": "other",
+      "first_line": 25,
+      "has_definition": true,
+      "definition_line": 2522,
+      "occurrences": [25, 44, 2522, 2531],
+      "occurrence_count": 50,
+      "id_code": null
+    },
+    {
+      "canonical_name": "RBAC",
+      "variants": ["RBAC", "OWNER", "ADMIN", "OPERATOR", "VIEWER"],
+      "category": "other",
+      "first_line": 228,
+      "has_definition": true,
+      "definition_line": 3286,
+      "occurrences": [228, 404, 1778, 3286, 3395],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Autonomy Level",
+      "variants": ["L0", "L1", "L2", "L3", "Autonomy Level", "autonomy_level"],
+      "category": "other",
+      "first_line": 164,
+      "has_definition": true,
+      "definition_line": 164,
+      "occurrences": [164, 339, 1490, 3396],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Cost Limit",
+      "variants": ["monthly_limit", "daily_limit", "cost limit", "비용 상한"],
+      "category": "other",
+      "first_line": 208,
+      "has_definition": true,
+      "definition_line": 208,
+      "occurrences": [76, 102, 208, 383, 1453, 1494, 1886, 2028, 2526, 2669],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "B-to-L Memory Mapping",
+      "variants": ["B↔L 매핑", "B-1→L1", "B-2→L3", "B-3→L2", "B-4→L0"],
+      "category": "other",
+      "first_line": 1580,
+      "has_definition": true,
+      "definition_line": 1582,
+      "occurrences": [1580, 1582, 1638],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "6-Stage RAG Pipeline",
+      "variants": ["6-Stage RAG", "RAG Pipeline", "Collect→Chunk→Embed→Store→Retrieve→Generate"],
+      "category": "other",
+      "first_line": 1591,
+      "has_definition": true,
+      "definition_line": 1593,
+      "occurrences": [1579, 1591, 1593, 1632],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Hybrid Search",
+      "variants": ["Hybrid Search", "Dense weight", "Sparse weight"],
+      "category": "other",
+      "first_line": 1599,
+      "has_definition": true,
+      "definition_line": 1599,
+      "occurrences": [1599, 1633, 1984],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Semantic Cache",
+      "variants": ["Semantic Cache", "semantic_cache"],
+      "category": "other",
+      "first_line": 236,
+      "has_definition": true,
+      "definition_line": 1564,
+      "occurrences": [236, 411, 1564, 1609, 1617, 1631],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Circuit Breaker",
+      "variants": ["Circuit Breaker"],
+      "category": "other",
+      "first_line": 1653,
+      "has_definition": true,
+      "definition_line": 1653,
+      "occurrences": [1653, 1713, 1725, 3602, 3678],
+      "occurrence_count": 12,
+      "id_code": null
+    },
+    {
+      "canonical_name": "51% Gate",
+      "variants": ["51% Gate"],
+      "category": "gate",
+      "first_line": 1833,
+      "has_definition": true,
+      "definition_line": 3592,
+      "occurrences": [1833, 3592],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Agent Teams",
+      "variants": ["Agent Teams", "Agent Teams V1", "Agent Teams V2", "PARL Agent Swarm", "Agent Mesh"],
+      "category": "other",
+      "first_line": 1657,
+      "has_definition": true,
+      "definition_line": 3458,
+      "occurrences": [1657, 1715, 1871, 2347, 2400, 2714, 3003, 3458, 3520],
+      "occurrence_count": 25,
+      "id_code": null
+    },
+    {
+      "canonical_name": "PARL (Parallel Agent Reinforcement Learning)",
+      "variants": ["PARL", "Parallel Agent Reinforcement Learning", "PARL Agent Swarm"],
+      "category": "other",
+      "first_line": 2714,
+      "has_definition": true,
+      "definition_line": 3520,
+      "occurrences": [2714, 2715, 2877, 3520, 3526],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Cloud Library",
+      "variants": ["Cloud Library", "Cloud Library V2", "Cloud Library V3", "10-Layer"],
+      "category": "other",
+      "first_line": 2357,
+      "has_definition": true,
+      "definition_line": 3819,
+      "occurrences": [2071, 2357, 2457, 2513, 3005, 3089, 3819],
+      "occurrence_count": 20,
+      "id_code": null
+    },
+    {
+      "canonical_name": "HMAC-SHA256",
+      "variants": ["HMAC-SHA256", "HMAC"],
+      "category": "other",
+      "first_line": 2354,
+      "has_definition": true,
+      "definition_line": 2433,
+      "occurrences": [2354, 2409, 2433, 2472, 2494, 2515, 3403, 3510],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "LlamaGuard",
+      "variants": ["LlamaGuard", "LlamaGuard L3"],
+      "category": "tech_stack",
+      "first_line": 2355,
+      "has_definition": true,
+      "definition_line": 2439,
+      "occurrences": [2355, 2439, 2495, 2512, 3393],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "GDPR",
+      "variants": ["GDPR", "열람", "이동", "제한", "삭제"],
+      "category": "other",
+      "first_line": 2356,
+      "has_definition": true,
+      "definition_line": 2449,
+      "occurrences": [1998, 2356, 2449, 2497, 2516, 3404],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "NeMo Guardrails",
+      "variants": ["NeMo Guardrails", "NeMo", "Guardrails L1"],
+      "category": "tech_stack",
+      "first_line": 2441,
+      "has_definition": true,
+      "definition_line": 3391,
+      "occurrences": [2441, 2496, 2512, 3391],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "GuardrailsAI",
+      "variants": ["GuardrailsAI", "Guardrails AI", "Guardrails L2"],
+      "category": "tech_stack",
+      "first_line": 2442,
+      "has_definition": true,
+      "definition_line": 3392,
+      "occurrences": [2442, 2496, 2512, 3392],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "FinBERT",
+      "variants": ["FinBERT"],
+      "category": "tech_stack",
+      "first_line": 2713,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2713, 2873, 3626, 3919],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Loki + Grafana",
+      "variants": ["Loki", "Grafana", "Loki + Grafana", "Observability"],
+      "category": "tech_stack",
+      "first_line": 2540,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [2540, 2639, 2689],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "TimescaleDB",
+      "variants": ["TimescaleDB"],
+      "category": "tech_stack",
+      "first_line": 2008,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [546, 2008, 3627],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Playwright",
+      "variants": ["Playwright"],
+      "category": "tech_stack",
+      "first_line": 1799,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [1799, 1811, 2819, 3436, 3452],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "structlog",
+      "variants": ["structlog"],
+      "category": "tech_stack",
+      "first_line": 318,
+      "has_definition": false,
+      "definition_line": null,
+      "occurrences": [318, 847, 1036, 1137, 1158],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "LogEventSchema",
+      "variants": ["LogEventSchema", "Log Event Schema"],
+      "category": "other",
+      "first_line": 494,
+      "has_definition": true,
+      "definition_line": 494,
+      "occurrences": [494, 600, 956, 1036, 1079, 1135, 1230],
+      "occurrence_count": 10,
+      "id_code": null
+    },
+    {
+      "canonical_name": "MemoryRecord",
+      "variants": ["MemoryRecord", "Memory Record"],
+      "category": "other",
+      "first_line": 497,
+      "has_definition": true,
+      "definition_line": 497,
+      "occurrences": [497, 603, 1077, 1107, 1225, 1366],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "trace_id",
+      "variants": ["trace_id"],
+      "category": "other",
+      "first_line": 234,
+      "has_definition": true,
+      "definition_line": 998,
+      "occurrences": [234, 998, 1081, 1151, 1229, 3416, 3506],
+      "occurrence_count": 15,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Soft Loop / Hard Loop",
+      "variants": ["Soft Loop", "Hard Loop", "Soft/Hard Loop"],
+      "category": "other",
+      "first_line": 1652,
+      "has_definition": true,
+      "definition_line": 1652,
+      "occurrences": [217, 1493, 1542, 1652, 1712, 1724],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "A2A Protocol",
+      "variants": ["A2A", "A2A Protocol", "A2A 프로토콜"],
+      "category": "other",
+      "first_line": 3007,
+      "has_definition": true,
+      "definition_line": 3097,
+      "occurrences": [3007, 3097, 3142, 3165],
+      "occurrence_count": 5,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Agent Marketplace",
+      "variants": ["Agent Marketplace"],
+      "category": "other",
+      "first_line": 3002,
+      "has_definition": true,
+      "definition_line": 3051,
+      "occurrences": [31, 3002, 3051, 3138, 3159],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Agent Specialization",
+      "variants": ["Agent Specialization", "fork/특화/retire"],
+      "category": "other",
+      "first_line": 3010,
+      "has_definition": true,
+      "definition_line": 3550,
+      "occurrences": [3010, 3123, 3550, 3564],
+      "occurrence_count": 8,
+      "id_code": null
+    },
+    {
+      "canonical_name": "Emergency Kill Switch",
+      "variants": ["Kill Switch", "Emergency Kill Switch"],
+      "category": "other",
+      "first_line": 3786,
+      "has_definition": true,
+      "definition_line": 3786,
+      "occurrences": [3786, 3791, 3795],
+      "occurrence_count": 5,
+      "id_code": null
+    }
+  ],
+  "categories": {
+    "module": "I-Series / E-Series / S-Series / A-Series / B-Series / C-Series / D-Series / EVX modules",
+    "gate": "5-Gate system (PolicyGate, ApprovalGate, CostGate, EvidenceGate, SelfCheckGate), CL-G0~G4, SDAR gates, 51% Gate",
+    "status_code": "ORANGE CORE 9-State, UI 9-State, SDAR 7-State, AR Levels, Breaking Event classifications",
+    "tech_stack": "Languages, frameworks, databases, tools, and libraries",
+    "registry": "EventTypeRegistry, FailureCodeRegistry, FallbackRegistry, ToolRegistry, NodeRegistry",
+    "other": "Schemas, concepts, systems, architectural constraints, protocols"
+  },
+  "variant_groups": [
+    {
+      "group_id": "VG-001",
+      "concept": "SDAR System",
+      "members": ["I-25 SDAR Engine", "Self-Directed Adaptive Reasoning", "Self-Diagnosis and Auto-Repair", "SDAR", "SDAR 7-State Machine", "SDAR 5-Gate", "AR Level (Autonomy Repair Level)", "Emergency Kill Switch"]
+    },
+    {
+      "group_id": "VG-002",
+      "concept": "VAMOS 5-Gate Decision System",
+      "members": ["PolicyGate", "ApprovalGate", "CostGate", "EvidenceGate", "SelfCheckGate", "I-5 Condition & Decision Engine"]
+    },
+    {
+      "group_id": "VG-003",
+      "concept": "ORANGE CORE Pipeline States",
+      "members": ["ORANGE CORE 9-State Pipeline", "S0_RECEIVED", "S1_INTENT_PARSED", "S2_EVIDENCE_READY", "S3_DECISION_LOCKED", "S4_EXECUTING", "S5_OUTPUT_READY", "S6_SELF_CHECKED", "S7_MEMORY_COMMITTED", "S8_DONE"]
+    },
+    {
+      "group_id": "VG-004",
+      "concept": "Cloud Library / RT-BNP / DCL",
+      "members": ["Cloud Library", "RT-BNP (Real-Time Breaking News Pipeline)", "DCL (Domain Context Layer)", "E-15 Cloud Collector", "Cloud Library 5-Gate (CL-G0 to CL-G4)", "BREAKING-P0"]
+    },
+    {
+      "group_id": "VG-005",
+      "concept": "Version Stages",
+      "members": ["V0 Scaffold", "V1 MVP", "V2 Pro Server", "V3 Enterprise"]
+    },
+    {
+      "group_id": "VG-006",
+      "concept": "Memory System (B-to-L)",
+      "members": ["B-to-L Memory Mapping", "B-1 Skill Library", "B-2 Procedural Memory", "B-3 Memory Decay", "B-4 DSPy Integration", "MemoryRecord", "6-Stage RAG Pipeline", "Semantic Cache"]
+    },
+    {
+      "group_id": "VG-007",
+      "concept": "Agent Teams Architecture",
+      "members": ["Agent Teams", "PARL (Parallel Agent Reinforcement Learning)", "Agent Marketplace", "Agent Specialization", "LOCK-AT Architecture Constraints", "A2A Protocol", "HMAC-SHA256"]
+    },
+    {
+      "group_id": "VG-008",
+      "concept": "Security / Guardrails",
+      "members": ["NeMo Guardrails", "GuardrailsAI", "LlamaGuard", "RBAC", "GDPR", "HMAC-SHA256"]
+    },
+    {
+      "group_id": "VG-009",
+      "concept": "Core Schemas (FREEZE/LOCK)",
+      "members": ["DecisionSchema", "ResponseEnvelope", "IntentFrame", "EvidencePack", "LogEventSchema"]
+    },
+    {
+      "group_id": "VG-010",
+      "concept": "Database Stack Evolution",
+      "members": ["SQLite", "Chroma", "PostgreSQL", "Qdrant", "Neo4j", "Redis", "TimescaleDB"]
+    },
+    {
+      "group_id": "VG-011",
+      "concept": "UI State Machine",
+      "members": ["UI 9-State Machine", "UI_S0_BOOT", "UI_S1_IDLE", "UI_S2_EDITING", "UI_S3_READY", "UI_S4_RUNNING", "UI_S5_AWAIT_APPROVAL", "UI_S6_PRESENTING", "UI_S7_RECOVERY", "UI_S8_ARCHIVED"]
+    },
+    {
+      "group_id": "VG-012",
+      "concept": "Cost Management",
+      "members": ["Cost Limit", "I-9 Cost Manager", "CostGate", "Circuit Breaker", "51% Gate"]
+    },
+    {
+      "group_id": "VG-013",
+      "concept": "IPC / Communication Layer",
+      "members": ["Tauri", "JSON-RPC", "MCP (Model Context Protocol)", "Rust"]
+    },
+    {
+      "group_id": "VG-014",
+      "concept": "LLM / AI Models",
+      "members": ["Ollama", "vLLM", "BGE-M3", "FinBERT", "LangGraph"]
+    },
+    {
+      "group_id": "VG-015",
+      "concept": "Self-Evolution System",
+      "members": ["I-18 Self-evo Engine", "S-1 Self-check Engine", "S-2 Pattern Miner", "S-8 Self-evo Governance", "I-21 Source Evolution Engine"]
+    },
+    {
+      "group_id": "VG-016",
+      "concept": "Event Registries",
+      "members": ["EventTypeRegistry", "FailureCodeRegistry", "FallbackRegistry", "ToolRegistry", "NodeRegistry"]
+    },
+    {
+      "group_id": "VG-017",
+      "concept": "Observability / CI/CD",
+      "members": ["Loki + Grafana", "structlog", "Playwright", "Docker"]
+    },
+    {
+      "group_id": "VG-018",
+      "concept": "Approval / Autonomy",
+      "members": ["I-19 Approval Manager", "ApprovalGate", "Autonomy Level", "RBAC", "Soft Loop / Hard Loop"]
+    },
+    {
+      "group_id": "VG-019",
+      "concept": "RT-BNP Tier System",
+      "members": ["RT-BNP (Real-Time Breaking News Pipeline)", "BREAKING-P0", "DCL (Domain Context Layer)"]
+    },
+    {
+      "group_id": "VG-020",
+      "concept": "Experimental Modules (EVX)",
+      "members": ["EVX-1 Code-as-Policy", "EVX-2 Adversarial Tester", "EVX-3 Log-prob Analyzer"]
+    }
+  ],
+  "summary": {
+    "total_terms": 121,
+    "by_category": {
+      "module": 62,
+      "gate": 8,
+      "status_code": 6,
+      "tech_stack": 27,
+      "registry": 5,
+      "other": 13
+    },
+    "total_variant_groups": 20,
+    "module_series_breakdown": {
+      "I-Series": 25,
+      "E-Series": 14,
+      "S-Series": 3,
+      "A-Series": 7,
+      "B-Series": 5,
+      "C-Series": 3,
+      "D-Series": 3,
+      "EVX": 3
+    },
+    "notes": [
+      "81 total modules across 8 series (I:25, E:16, S:8, A:7, B:6, C:7, D:6, EVX:6). Not all are individually listed here; only those with explicit definitions or significant appearances in the document are included as separate term entries.",
+      "The document defines 5 distinct Gate systems: VAMOS 5-Gate (Policy/Approval/Cost/Evidence/SelfCheck), Cloud Library 5-Gate (CL-G0~CL-G4), SDAR 5-Gate (Safety/Risk/Cost/Approval/Verification), 51% Gate (AI Investing), and LangGraph 5-Phase pipeline gates.",
+      "3 state machines are defined: ORANGE CORE 9-State (S0-S8), UI 9-State (UI_S0-UI_S8), SDAR 7-State (IDLE through ESCALATED).",
+      "17 LOCK-AT architecture constraints (LOCK-AT-001 through LOCK-AT-017) govern Agent Teams behavior.",
+      "25 Pydantic v2 schemas are defined in V0-STEP-2, with DecisionSchema (18 fields, FREEZE) and ResponseEnvelope (5 fields, LOCK) being the most critical.",
+      "EventTypeRegistry has 123 items, FailureCodeRegistry has 36 items, FallbackRegistry has 23 items.",
+      "Cost limits: V1=40,000 KRW/month, V2=93,000 KRW/month, V3=266,000 KRW/month (all LOCK).",
+      "RT-BNP operates across 4 tiers: T1 (<10s, WebSocket, V3), T2 (<60s, REST API, V2), T3 (<300s, RSS, V1), T4 (<600s, Social API, V2).",
+      "DCL has 3 channels: DCL-FIN (finance), DCL-TECH (technology), DCL-GEO (geopolitics).",
+      "SDAR AR levels: AR-L0 (monitoring only), AR-L1 (notifications), AR-L2 (LOW risk auto-repair, 5 actions), AR-L3 (MEDIUM risk, 5 actions), AR-L4 (HIGH risk, 4 actions)."
+    ]
+  }
+}

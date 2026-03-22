@@ -1,0 +1,22 @@
+{
+  "fix_id": "FIX-010",
+  "fg": "FG-H06",
+  "tier": 2,
+  "order": 10,
+  "severity": "HIGH",
+  "description": "LangGraph 0.2+ deprecated API(set_entry_point→START/END) + Rust HashMap::get() Option 처리(map_err→ok_or) 수정",
+  "changes": [
+    {
+      "line": 1025,
+      "section": "§2 STEP-4 Python 코드",
+      "action": "set_entry_point/set_finish_point → START/END edge 패턴으로 변경"
+    },
+    {
+      "line": 840,
+      "section": "§2 STEP-3 Rust 코드",
+      "action": "HashMap::get() Option에 map_err 대신 ok_or 사용"
+    }
+  ],
+  "ripple_expected": ["§4 V2 코드 (동일 패턴 확인)", "변경이력"],
+  "applied_at": "2026-03-12"
+}

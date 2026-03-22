@@ -1,0 +1,823 @@
+{
+  "agent": "M-6",
+  "scope": "§1+§7(변경이력)+프롬프트",
+  "part2_sections": ["§1", "§7"],
+  "total_features": 24,
+  "results": [
+    {
+      "feature_id": "v12_C01b_128",
+      "feature_name": "Version Roadmap Tracker",
+      "status": "MATCHED",
+      "part2_section": "§1",
+      "part2_line": 73,
+      "part2_text": "# 1. 전체 구현 로드맵 개요 — V0(1-2주)→V1→V2→V3",
+      "evidence_source": "SOT",
+      "evidence_line": 1600,
+      "evidence_text": "VAMOS_MASTER_SPECIFICATION §16 V0-V3 roadmap",
+      "notes": "§1 로드맵 다이어그램이 V0~V3 전체 구현 일정/의존성 체인을 정의"
+    },
+    {
+      "feature_id": "v12_C01a_104",
+      "feature_name": "V-Version Cost Limits",
+      "status": "MATCHED",
+      "part2_section": "§1.1",
+      "part2_line": 106,
+      "part2_text": "비용 상한 V1=₩40,000 V2=₩93,000 V3=₩266,000 LOCK",
+      "evidence_source": "SOT",
+      "evidence_line": 4174,
+      "evidence_text": "PLAN-3.0 L4174: V1: 4만원/월 V2: 9.3만원/월 V3: 26.6만원",
+      "notes": "§1.1 버전 비교표에 비용 상한 명시, R10 규칙과 연동"
+    },
+    {
+      "feature_id": "v12_C01b_157",
+      "feature_name": "V0 GO/NO-GO Checker",
+      "status": "MATCHED",
+      "part2_section": "§1.2",
+      "part2_line": 113,
+      "part2_text": "## 1.2 의존성 체인 (필수 순서) V0→V1→V2→V3",
+      "evidence_source": "SOT",
+      "evidence_line": 450,
+      "evidence_text": "READINESS_GUIDE §2 V0 GO/NO-GO 16-item checklist",
+      "notes": "의존성 체인이 GO/NO-GO 체크리스트와 연동하여 버전 전환 관리"
+    },
+    {
+      "feature_id": "v12_C01b_165",
+      "feature_name": "Full GO/NO-GO Checklist",
+      "status": "SPREAD",
+      "part2_section": "§1.2+§7",
+      "part2_line": 113,
+      "part2_text": "의존성 체인 + §7.1~7.4 GO/NO-GO 체크리스트 (총 64건)",
+      "evidence_source": "SOT",
+      "evidence_line": 850,
+      "evidence_text": "READINESS_GUIDE §9: 62 total GO/NO-GO items",
+      "notes": "PART2 §7은 총 64건(v22 반영), READINESS_GUIDE는 62건 — v22에서 V3 #12 추가로 불일치 해소 필요"
+    },
+    {
+      "feature_id": "v12_C01a_105",
+      "feature_name": "3-Stage Cost Alert System",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 137,
+      "part2_text": "R10: 비용 상한 ABSOLUTE LOCK 준수 (V1~V3)",
+      "evidence_source": "SOT",
+      "evidence_line": 4180,
+      "evidence_text": "PLAN-3.0: 3단계 경보 70%경고 85%다운그레이드 95%차단",
+      "notes": "R10 공통 규칙이 3-Stage Cost Alert과 직접 연동"
+    },
+    {
+      "feature_id": "v12_C01b_020",
+      "feature_name": "Audit Logging System",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 136,
+      "part2_text": "R9: 에러 메시지에 내부 정보 노출 금지",
+      "evidence_source": "SOT",
+      "evidence_line": 250,
+      "evidence_text": "BASE-1.3 §10 Logging/transparency",
+      "notes": "R9 규칙이 로깅/투명성 시스템의 보안 요구사항 정의"
+    },
+    {
+      "feature_id": "v12_C03_135",
+      "feature_name": "AgentMode Enum",
+      "status": "MATCHED",
+      "part2_section": "§1.1",
+      "part2_line": 107,
+      "part2_text": "자율도: L1(수동)→L2_COPILOT→L3_AUTONOMOUS→L4_SELF_EVOLVING",
+      "evidence_source": "SOT",
+      "evidence_line": 76,
+      "evidence_text": "D2.0-05: AgentMode enum MANUAL/SEMI_AUTO/SUPERVISED_AUTO",
+      "notes": "§1.1 버전 비교표의 자율도 레벨이 AgentMode enum에 매핑"
+    },
+    {
+      "feature_id": "v12_SYNTH_R1",
+      "feature_name": "Python 3.11+ Requirement (R1)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 128,
+      "part2_text": "R1: Python ≥ 3.11 필수. f-string, match/case, tomllib 활용",
+      "evidence_source": "SOT",
+      "evidence_line": 128,
+      "evidence_text": "PART2 §1.3 R1 규칙 — 모든 Python 코드에 적용",
+      "notes": "R1은 PART2 자체 정의 규칙, SOT 문서 횡단 적용"
+    },
+    {
+      "feature_id": "v12_SYNTH_R2",
+      "feature_name": "Pydantic v2 Requirement (R2)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 129,
+      "part2_text": "R2: Pydantic v2 전용. model_config = ConfigDict(...)",
+      "evidence_source": "SOT",
+      "evidence_line": 129,
+      "evidence_text": "PART2 §1.3 R2 규칙 — 모든 스키마/모델에 적용",
+      "notes": "R2 규칙은 feature_registry의 모든 Pydantic 모델 피처에 공통 적용"
+    },
+    {
+      "feature_id": "v12_SYNTH_R3R4",
+      "feature_name": "No-Create/No-Delete Rules (R3+R4)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 130,
+      "part2_text": "R3: no-create 기존파일 수정 우선 / R4: no-delete 삭제 금지",
+      "evidence_source": "SOT",
+      "evidence_line": 130,
+      "evidence_text": "PART2 §1.3 R3+R4 규칙 — 모든 코드 생성/수정에 적용",
+      "notes": "AI 프롬프트 전수에서 R3/R4 참조 확인됨"
+    },
+    {
+      "feature_id": "v12_SYNTH_R5R6",
+      "feature_name": "LOCK/FREEZE + SOT Rules (R5+R6)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 132,
+      "part2_text": "R5: LOCK/FREEZE 런타임 변경 금지 / R6: SOT 미정의 창작 금지",
+      "evidence_source": "SOT",
+      "evidence_line": 132,
+      "evidence_text": "PART2 §1.3 R5+R6 규칙",
+      "notes": "LOCK/FREEZE 값 준수는 §7.5.5에서 검증 체크리스트로 재확인"
+    },
+    {
+      "feature_id": "v12_SYNTH_R7",
+      "feature_name": "Module Dependency Rule (R7)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 134,
+      "part2_text": "R7: 모듈 간 의존성 CORE→COND 단방향, 역방향 금지",
+      "evidence_source": "SOT",
+      "evidence_line": 134,
+      "evidence_text": "PART2 §1.3 R7 — VAL-003 빌드 검증",
+      "notes": "§1.1의 CORE/COND 모듈 구분과 직접 연동"
+    },
+    {
+      "feature_id": "v12_SYNTH_R8R9",
+      "feature_name": "Security Rules (R8+R9)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 135,
+      "part2_text": "R8: trace_id 서버 전용 / R9: 에러 내부정보 노출 금지",
+      "evidence_source": "SOT",
+      "evidence_line": 135,
+      "evidence_text": "PART2 §1.3 R8+R9 — §6.5.1 보안 참조",
+      "notes": "보안 규칙은 §6.5 보안 섹션에서 상세 구현 정의"
+    },
+    {
+      "feature_id": "v12_SYNTH_R11",
+      "feature_name": "Schema Registry Rule (R11)",
+      "status": "MATCHED",
+      "part2_section": "§1.3",
+      "part2_line": 138,
+      "part2_text": "R11: schema_registry.toml 단일 참조점 활용 (v24 신설)",
+      "evidence_source": "SOT",
+      "evidence_line": 138,
+      "evidence_text": "PART2 §1.3 R11 — V0-STEP-2에서 생성",
+      "notes": "v24 메이커에반 개선안 4로 신설된 규칙"
+    },
+    {
+      "feature_id": "v12_SYNTH_SDD",
+      "feature_name": "SDD Failure Rules (§1.3.1)",
+      "status": "MATCHED",
+      "part2_section": "§1.3.1",
+      "part2_line": 140,
+      "part2_text": "판단 실패 시 규칙 — 필드수 불일치 즉시중단, LOCK 거부 등",
+      "evidence_source": "SOT",
+      "evidence_line": 140,
+      "evidence_text": "PART2 §1.3.1 SDD 명세 계층 5개 조치",
+      "notes": "v24 개선안 2로 추가된 AI 판단 실패 시 절대 규칙"
+    },
+    {
+      "feature_id": "v12_SYNTH_CTX",
+      "feature_name": "Context Diet Principle (§1.3.3)",
+      "status": "MATCHED",
+      "part2_section": "§1.3.3",
+      "part2_line": 166,
+      "part2_text": "컨텍스트 다이어트 원칙 — MUST/MAY/NEVER 참조 분류",
+      "evidence_source": "SOT",
+      "evidence_line": 166,
+      "evidence_text": "PART2 §1.3.3 — AI 세션 SOT 3~5개 이내 제한",
+      "notes": "v24 개선안 1로 추가. 모든 프롬프트의 참조 SOT 전략 정의"
+    },
+    {
+      "feature_id": "v12_S7_CL01",
+      "feature_name": "PART2 Document Changelog (v4~v25.2)",
+      "status": "NOT_APPLICABLE",
+      "part2_section": "§7.변경이력",
+      "part2_line": 5821,
+      "part2_text": "## 변경 이력 — v4.0.0(2026-02-24) ~ v25.2.0(2026-03-13)",
+      "evidence_source": "SOT",
+      "evidence_line": 5821,
+      "evidence_text": "PART2 변경이력 테이블: 34개 버전 기록",
+      "notes": "문서 자체의 변경이력 메타데이터 — 구현 대상 피처가 아닌 문서 관리 영역이므로 NOT_APPLICABLE"
+    },
+    {
+      "feature_id": "v12_S7_CL02",
+      "feature_name": "V0 GO/NO-GO Checklist (§7.1)",
+      "status": "MATCHED",
+      "part2_section": "§7.1",
+      "part2_line": 5567,
+      "part2_text": "V0 GO/NO-GO 체크리스트 (16항목, CLAUDE.md §10 동기화)",
+      "evidence_source": "SOT",
+      "evidence_line": 5567,
+      "evidence_text": "§7.1 V0 진입 전 16개 필수 항목 체크리스트",
+      "notes": "BLOCKER 14건 문서 수정은 V0 진입 전 별도 완료 필수"
+    },
+    {
+      "feature_id": "v12_S7_CL03",
+      "feature_name": "V1 GO/NO-GO Checklist (§7.2)",
+      "status": "MATCHED",
+      "part2_section": "§7.2",
+      "part2_line": 5590,
+      "part2_text": "V1 GO/NO-GO 체크리스트 (22항목, V0 완료 전제)",
+      "evidence_source": "SOT",
+      "evidence_line": 5590,
+      "evidence_text": "§7.2: 22개 V1 전환 항목 + TC 측정 메커니즘",
+      "notes": "V1→V2 전환 조건 6개 TC 포함 (QoD/RAG/Memory/Test/Cost/승인)"
+    },
+    {
+      "feature_id": "v12_S7_CL04",
+      "feature_name": "V2 GO/NO-GO Checklist (§7.3)",
+      "status": "MATCHED",
+      "part2_section": "§7.3",
+      "part2_line": 5635,
+      "part2_text": "V2 GO/NO-GO 체크리스트 (14항목, V1 완료 전제)",
+      "evidence_source": "SOT",
+      "evidence_line": 5635,
+      "evidence_text": "§7.3: 14개 V2 항목 + V2→V3 전환 조건 6개 TC",
+      "notes": "V2→V3 TC: QoD≥0.90(60일), 2-tier LLM, P1 테스트, Self-evo, 비용, 승인"
+    },
+    {
+      "feature_id": "v12_S7_CL05",
+      "feature_name": "V3 GO/NO-GO Checklist (§7.4)",
+      "status": "MATCHED",
+      "part2_section": "§7.4",
+      "part2_line": 5672,
+      "part2_text": "V3 GO/NO-GO 체크리스트 (12항목, V2 완료 전제)",
+      "evidence_source": "SOT",
+      "evidence_line": 5672,
+      "evidence_text": "§7.4: 12개 V3 항목 (v22 PARL 추가)",
+      "notes": "K8s/Self-evo/SDAR-L4/Agent Marketplace/A2A 등 V3 Enterprise 요건"
+    },
+    {
+      "feature_id": "v12_S7_CL06",
+      "feature_name": "Cross-cut Review Items (§7.5)",
+      "status": "MATCHED",
+      "part2_section": "§7.5",
+      "part2_line": 5691,
+      "part2_text": "크로스컷 검토: 문서정합성/보안/성능/정본우선순위/LOCK검증",
+      "evidence_source": "SOT",
+      "evidence_line": 5691,
+      "evidence_text": "§7.5.1~7.5.6: 6개 크로스컷 검토 카테고리",
+      "notes": "SOURCE_CONFLICT 15건 전수 인덱스(§7.5.6) 포함"
+    },
+    {
+      "feature_id": "v12_S7_CL07",
+      "feature_name": "Artifact File Index (§7.6)",
+      "status": "MATCHED",
+      "part2_section": "§7.6",
+      "part2_line": 5783,
+      "part2_text": "최종 산출물 파일 인덱스 — 43개 산출물 전체 목록",
+      "evidence_source": "SOT",
+      "evidence_line": 5783,
+      "evidence_text": "§7.6: 43개 파일 (BASE~GUIDE) 용도/V0 필수 여부 매핑",
+      "notes": "구현 시 참조해야 할 산출물 전체 목록"
+    },
+    {
+      "feature_id": "v12_S7_CL08",
+      "feature_name": "SemVer Release Workflow",
+      "status": "MATCHED",
+      "part2_section": "§7.변경이력",
+      "part2_line": 5821,
+      "part2_text": "변경 이력 SemVer MAJOR.MINOR.PATCH 체계",
+      "evidence_source": "SOT",
+      "evidence_line": 25827,
+      "evidence_text": "feature_registry: SemVer + Changelog + GitHub Release",
+      "notes": "PART2 자체 변경이력이 SemVer 체계를 따르며, 릴리스 워크플로우 피처와 일관"
+    }
+  ],
+  "section1_mapping": {
+    "total": 16,
+    "results": [
+      {
+        "feature_id": "v12_C01b_128",
+        "feature_name": "Version Roadmap Tracker",
+        "status": "MATCHED",
+        "part2_section": "§1",
+        "part2_line": 73,
+        "part2_text": "# 1. 전체 구현 로드맵 개요 — V0(1-2주)→V1→V2→V3",
+        "evidence_source": "SOT",
+        "evidence_line": 1600,
+        "evidence_text": "VAMOS_MASTER_SPECIFICATION §16 V0-V3 roadmap",
+        "severity": null,
+        "notes": "§1 로드맵 다이어그램이 V0~V3 전체 구현 일정/의존성 체인을 정의"
+      },
+      {
+        "feature_id": "v12_C01a_104",
+        "feature_name": "V-Version Cost Limits",
+        "status": "MATCHED",
+        "part2_section": "§1.1",
+        "part2_line": 106,
+        "part2_text": "비용 상한 V1=₩40,000 V2=₩93,000 V3=₩266,000 LOCK",
+        "evidence_source": "SOT",
+        "evidence_line": 4174,
+        "evidence_text": "PLAN-3.0 L4174: V1: 4만원/월 V2: 9.3만원/월 V3: 26.6만원",
+        "severity": null,
+        "notes": "§1.1 버전 비교표에 비용 상한 명시, R10 규칙과 연동"
+      },
+      {
+        "feature_id": "v12_C01b_157",
+        "feature_name": "V0 GO/NO-GO Checker",
+        "status": "MATCHED",
+        "part2_section": "§1.2",
+        "part2_line": 113,
+        "part2_text": "## 1.2 의존성 체인 (필수 순서) V0→V1→V2→V3",
+        "evidence_source": "SOT",
+        "evidence_line": 450,
+        "evidence_text": "READINESS_GUIDE §2 V0 GO/NO-GO 16-item checklist",
+        "severity": null,
+        "notes": "의존성 체인이 GO/NO-GO 체크리스트와 연동하여 버전 전환 관리"
+      },
+      {
+        "feature_id": "v12_C01b_165",
+        "feature_name": "Full GO/NO-GO Checklist",
+        "status": "SPREAD",
+        "part2_section": "§1.2+§7",
+        "part2_line": 113,
+        "part2_text": "의존성 체인 + §7.1~7.4 GO/NO-GO 체크리스트 (총 64건)",
+        "evidence_source": "SOT",
+        "evidence_line": 850,
+        "evidence_text": "READINESS_GUIDE §9: 62 total GO/NO-GO items",
+        "severity": "MEDIUM",
+        "notes": "PART2 §7은 총 64건(v22 반영), READINESS_GUIDE는 62건 — v22에서 V3 #12 추가로 불일치 해소 필요"
+      },
+      {
+        "feature_id": "v12_C01a_105",
+        "feature_name": "3-Stage Cost Alert System",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 137,
+        "part2_text": "R10: 비용 상한 ABSOLUTE LOCK 준수 (V1~V3)",
+        "evidence_source": "SOT",
+        "evidence_line": 4180,
+        "evidence_text": "PLAN-3.0: 3단계 경보 70%경고 85%다운그레이드 95%차단",
+        "severity": null,
+        "notes": "R10 공통 규칙이 3-Stage Cost Alert과 직접 연동"
+      },
+      {
+        "feature_id": "v12_C01b_020",
+        "feature_name": "Audit Logging System",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 136,
+        "part2_text": "R9: 에러 메시지에 내부 정보 노출 금지",
+        "evidence_source": "SOT",
+        "evidence_line": 250,
+        "evidence_text": "BASE-1.3 §10 Logging/transparency",
+        "severity": null,
+        "notes": "R9 규칙이 로깅/투명성 시스템의 보안 요구사항 정의"
+      },
+      {
+        "feature_id": "v12_C03_135",
+        "feature_name": "AgentMode Enum",
+        "status": "MATCHED",
+        "part2_section": "§1.1",
+        "part2_line": 107,
+        "part2_text": "자율도: L1(수동)→L2_COPILOT→L3_AUTONOMOUS→L4_SELF_EVOLVING",
+        "evidence_source": "SOT",
+        "evidence_line": 76,
+        "evidence_text": "D2.0-05: AgentMode enum MANUAL/SEMI_AUTO/SUPERVISED_AUTO",
+        "severity": null,
+        "notes": "§1.1 버전 비교표의 자율도 레벨이 AgentMode enum에 매핑"
+      },
+      {
+        "feature_id": "v12_SYNTH_R1",
+        "feature_name": "Python 3.11+ Requirement (R1)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 128,
+        "part2_text": "R1: Python ≥ 3.11 필수. f-string, match/case, tomllib 활용",
+        "evidence_source": "SOT",
+        "evidence_line": 128,
+        "evidence_text": "PART2 §1.3 R1 규칙 — 모든 Python 코드에 적용",
+        "severity": null,
+        "notes": "R1은 PART2 자체 정의 규칙, SOT 문서 횡단 적용"
+      },
+      {
+        "feature_id": "v12_SYNTH_R2",
+        "feature_name": "Pydantic v2 Requirement (R2)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 129,
+        "part2_text": "R2: Pydantic v2 전용. model_config = ConfigDict(...)",
+        "evidence_source": "SOT",
+        "evidence_line": 129,
+        "evidence_text": "PART2 §1.3 R2 규칙 — 모든 스키마/모델에 적용",
+        "severity": null,
+        "notes": "R2 규칙은 feature_registry의 모든 Pydantic 모델 피처에 공통 적용"
+      },
+      {
+        "feature_id": "v12_SYNTH_R3R4",
+        "feature_name": "No-Create/No-Delete Rules (R3+R4)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 130,
+        "part2_text": "R3: no-create 기존파일 수정 우선 / R4: no-delete 삭제 금지",
+        "evidence_source": "SOT",
+        "evidence_line": 130,
+        "evidence_text": "PART2 §1.3 R3+R4 규칙 — 모든 코드 생성/수정에 적용",
+        "severity": null,
+        "notes": "AI 프롬프트 전수에서 R3/R4 참조 확인됨"
+      },
+      {
+        "feature_id": "v12_SYNTH_R5R6",
+        "feature_name": "LOCK/FREEZE + SOT Rules (R5+R6)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 132,
+        "part2_text": "R5: LOCK/FREEZE 런타임 변경 금지 / R6: SOT 미정의 창작 금지",
+        "evidence_source": "SOT",
+        "evidence_line": 132,
+        "evidence_text": "PART2 §1.3 R5+R6 규칙",
+        "severity": null,
+        "notes": "LOCK/FREEZE 값 준수는 §7.5.5에서 검증 체크리스트로 재확인"
+      },
+      {
+        "feature_id": "v12_SYNTH_R7",
+        "feature_name": "Module Dependency Rule (R7)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 134,
+        "part2_text": "R7: 모듈 간 의존성 CORE→COND 단방향, 역방향 금지",
+        "evidence_source": "SOT",
+        "evidence_line": 134,
+        "evidence_text": "PART2 §1.3 R7 — VAL-003 빌드 검증",
+        "severity": null,
+        "notes": "§1.1의 CORE/COND 모듈 구분과 직접 연동"
+      },
+      {
+        "feature_id": "v12_SYNTH_R8R9",
+        "feature_name": "Security Rules (R8+R9)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 135,
+        "part2_text": "R8: trace_id 서버 전용 / R9: 에러 내부정보 노출 금지",
+        "evidence_source": "SOT",
+        "evidence_line": 135,
+        "evidence_text": "PART2 §1.3 R8+R9 — §6.5.1 보안 참조",
+        "severity": null,
+        "notes": "보안 규칙은 §6.5 보안 섹션에서 상세 구현 정의"
+      },
+      {
+        "feature_id": "v12_SYNTH_R11",
+        "feature_name": "Schema Registry Rule (R11)",
+        "status": "MATCHED",
+        "part2_section": "§1.3",
+        "part2_line": 138,
+        "part2_text": "R11: schema_registry.toml 단일 참조점 활용 (v24 신설)",
+        "evidence_source": "SOT",
+        "evidence_line": 138,
+        "evidence_text": "PART2 §1.3 R11 — V0-STEP-2에서 생성",
+        "severity": null,
+        "notes": "v24 메이커에반 개선안 4로 신설된 규칙"
+      },
+      {
+        "feature_id": "v12_SYNTH_SDD",
+        "feature_name": "SDD Failure Rules (§1.3.1)",
+        "status": "MATCHED",
+        "part2_section": "§1.3.1",
+        "part2_line": 140,
+        "part2_text": "판단 실패 시 규칙 — 필드수 불일치 즉시중단, LOCK 거부 등",
+        "evidence_source": "SOT",
+        "evidence_line": 140,
+        "evidence_text": "PART2 §1.3.1 SDD 명세 계층 5개 조치",
+        "severity": null,
+        "notes": "v24 개선안 2로 추가된 AI 판단 실패 시 절대 규칙"
+      },
+      {
+        "feature_id": "v12_SYNTH_CTX",
+        "feature_name": "Context Diet Principle (§1.3.3)",
+        "status": "MATCHED",
+        "part2_section": "§1.3.3",
+        "part2_line": 166,
+        "part2_text": "컨텍스트 다이어트 원칙 — MUST/MAY/NEVER 참조 분류",
+        "evidence_source": "SOT",
+        "evidence_line": 166,
+        "evidence_text": "PART2 §1.3.3 — AI 세션 SOT 3~5개 이내 제한",
+        "severity": null,
+        "notes": "v24 개선안 1로 추가. 모든 프롬프트의 참조 SOT 전략 정의"
+      }
+    ]
+  },
+  "section7_changelog_mapping": {
+    "total": 8,
+    "results": [
+      {
+        "feature_id": "v12_S7_CL01",
+        "feature_name": "PART2 Document Changelog (v4~v25.2)",
+        "status": "NOT_APPLICABLE",
+        "part2_section": "§7.변경이력",
+        "part2_line": 5821,
+        "part2_text": "## 변경 이력 — v4.0.0(2026-02-24) ~ v25.2.0(2026-03-13)",
+        "evidence_source": "SOT",
+        "evidence_line": 5821,
+        "evidence_text": "PART2 변경이력 테이블: 34개 버전 기록",
+        "severity": null,
+        "notes": "문서 자체의 변경이력 메타데이터 — 구현 대상 피처가 아닌 문서 관리 영역이므로 NOT_APPLICABLE"
+      },
+      {
+        "feature_id": "v12_S7_CL02",
+        "feature_name": "V0 GO/NO-GO Checklist (§7.1)",
+        "status": "MATCHED",
+        "part2_section": "§7.1",
+        "part2_line": 5567,
+        "part2_text": "V0 GO/NO-GO 체크리스트 (16항목, CLAUDE.md §10 동기화)",
+        "evidence_source": "SOT",
+        "evidence_line": 5567,
+        "evidence_text": "§7.1 V0 진입 전 16개 필수 항목 체크리스트",
+        "severity": null,
+        "notes": "BLOCKER 14건 문서 수정은 V0 진입 전 별도 완료 필수"
+      },
+      {
+        "feature_id": "v12_S7_CL03",
+        "feature_name": "V1 GO/NO-GO Checklist (§7.2)",
+        "status": "MATCHED",
+        "part2_section": "§7.2",
+        "part2_line": 5590,
+        "part2_text": "V1 GO/NO-GO 체크리스트 (22항목, V0 완료 전제)",
+        "evidence_source": "SOT",
+        "evidence_line": 5590,
+        "evidence_text": "§7.2: 22개 V1 전환 항목 + TC 측정 메커니즘",
+        "severity": null,
+        "notes": "V1→V2 전환 조건 6개 TC 포함 (QoD/RAG/Memory/Test/Cost/승인)"
+      },
+      {
+        "feature_id": "v12_S7_CL04",
+        "feature_name": "V2 GO/NO-GO Checklist (§7.3)",
+        "status": "MATCHED",
+        "part2_section": "§7.3",
+        "part2_line": 5635,
+        "part2_text": "V2 GO/NO-GO 체크리스트 (14항목, V1 완료 전제)",
+        "evidence_source": "SOT",
+        "evidence_line": 5635,
+        "evidence_text": "§7.3: 14개 V2 항목 + V2→V3 전환 조건 6개 TC",
+        "severity": null,
+        "notes": "V2→V3 TC: QoD≥0.90(60일), 2-tier LLM, P1 테스트, Self-evo, 비용, 승인"
+      },
+      {
+        "feature_id": "v12_S7_CL05",
+        "feature_name": "V3 GO/NO-GO Checklist (§7.4)",
+        "status": "MATCHED",
+        "part2_section": "§7.4",
+        "part2_line": 5672,
+        "part2_text": "V3 GO/NO-GO 체크리스트 (12항목, V2 완료 전제)",
+        "evidence_source": "SOT",
+        "evidence_line": 5672,
+        "evidence_text": "§7.4: 12개 V3 항목 (v22 PARL 추가)",
+        "severity": null,
+        "notes": "K8s/Self-evo/SDAR-L4/Agent Marketplace/A2A 등 V3 Enterprise 요건"
+      },
+      {
+        "feature_id": "v12_S7_CL06",
+        "feature_name": "Cross-cut Review Items (§7.5)",
+        "status": "MATCHED",
+        "part2_section": "§7.5",
+        "part2_line": 5691,
+        "part2_text": "크로스컷 검토: 문서정합성/보안/성능/정본우선순위/LOCK검증",
+        "evidence_source": "SOT",
+        "evidence_line": 5691,
+        "evidence_text": "§7.5.1~7.5.6: 6개 크로스컷 검토 카테고리",
+        "severity": null,
+        "notes": "SOURCE_CONFLICT 15건 전수 인덱스(§7.5.6) 포함"
+      },
+      {
+        "feature_id": "v12_S7_CL07",
+        "feature_name": "Artifact File Index (§7.6)",
+        "status": "MATCHED",
+        "part2_section": "§7.6",
+        "part2_line": 5783,
+        "part2_text": "최종 산출물 파일 인덱스 — 43개 산출물 전체 목록",
+        "evidence_source": "SOT",
+        "evidence_line": 5783,
+        "evidence_text": "§7.6: 43개 파일 (BASE~GUIDE) 용도/V0 필수 여부 매핑",
+        "severity": null,
+        "notes": "구현 시 참조해야 할 산출물 전체 목록"
+      },
+      {
+        "feature_id": "v12_S7_CL08",
+        "feature_name": "SemVer Release Workflow",
+        "status": "MATCHED",
+        "part2_section": "§7.변경이력",
+        "part2_line": 5821,
+        "part2_text": "변경 이력 SemVer MAJOR.MINOR.PATCH 체계",
+        "evidence_source": "SOT",
+        "evidence_line": 25827,
+        "evidence_text": "feature_registry: SemVer + Changelog + GitHub Release",
+        "severity": null,
+        "notes": "PART2 자체 변경이력이 SemVer 체계를 따르며, 릴리스 워크플로우 피처와 일관"
+      }
+    ]
+  },
+  "prompt_coverage": {
+    "total_prompts": 18,
+    "analysis": [
+      {
+        "prompt_id": "P-V0-01",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-1: 스캐폴딩. R1~R11 공통 규칙 참조, PHASE_B2 디렉토리 구조, config.v1.toml(PHASE_B4). Schema Seed 파일 생성(Method B) 포함"
+      },
+      {
+        "prompt_id": "P-V0-02",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-2: 스키마 정의. 25개 Pydantic v2 모델, 5개 레지스트리, schema_registry.toml(R11), FREEZE/LOCK 인라인 참조(Method C)"
+      },
+      {
+        "prompt_id": "P-V0-03",
+        "features_covered": 4,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-3: IPC 통신. React-Rust-Python 3계층 JSON-RPC, 13개 메서드 스텁. R8(trace_id) 규칙 적용"
+      },
+      {
+        "prompt_id": "P-V0-04",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-4: ORANGE CORE 최소 파이프라인. I-1/I-2/I-5 + I-8/I-9/I-19/I-20 stub. LangGraph 5-Phase, 보안 규칙(§6.5.1) 연동"
+      },
+      {
+        "prompt_id": "P-V0-05",
+        "features_covered": 4,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-5: 저장소+로깅. L0 Session Memory(SQLite), JSONL structlog, config.v1.toml 로더, Chroma 초기화"
+      },
+      {
+        "prompt_id": "P-V0-06",
+        "features_covered": 4,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "STEP-6: CI+테스트. GitHub Actions, pytest 10-15개, cargo test, E2E 스모크 테스트"
+      },
+      {
+        "prompt_id": "P-V1-01",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 1: ORANGE CORE 완성. 17개 I-모듈, 9-State SM(S0~S8), 5-Gate(Policy→Approval→Cost→Evidence→SelfCheck). Week 1-4 분할"
+      },
+      {
+        "prompt_id": "P-V1-02",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 2: Storage/Memory/RAG. L0/L1 SQLite, Chroma+BGE-M3, JSON GraphRAG, Semantic Cache, B-3 Decay. v23 확장 4건(§6 참조)"
+      },
+      {
+        "prompt_id": "P-V1-03",
+        "features_covered": 7,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 3: Workflow/Agent. LangGraph 5-Phase, Gate 통합, Circuit Breaker, MultiBrain, Agent Teams V1, E-1~E-6, C/D-Series. v23 확장 44건(§6 참조)"
+      },
+      {
+        "prompt_id": "P-V1-04",
+        "features_covered": 5,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 4: UI/UX. 3-Column Layout, 7페이지, ~44 컴포넌트, 8 Hook/7 Store, i18n+디자인시스템. v23 확장 3건"
+      },
+      {
+        "prompt_id": "P-V1-05",
+        "features_covered": 6,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 5: Integration+Test. E2E S0→S8, IPC 통합, 5-Gate 전경로, ~85 테스트, 14 CI/CD 워크플로우, 커버리지 80%+"
+      },
+      {
+        "prompt_id": "P-V1-06",
+        "features_covered": 7,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 6: AI Investing MVP+MCP. Paper Trading, RSI_BB, 5-Agent Pipeline, MCP Bridge/Server/Client 7개, S-1 Self-check, E-15 Cloud Collector"
+      },
+      {
+        "prompt_id": "P-V2-01",
+        "features_covered": 6,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 1: 인프라 마이그레이션. SQLite→PostgreSQL(Alembic), Chroma→Qdrant(4-Phase), JSON→Neo4j, Docker Compose, config.v2.toml"
+      },
+      {
+        "prompt_id": "P-V2-02",
+        "features_covered": 9,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 2: COND 모듈 활성화. 원본 10개 상세 + v10 확장 106개 그룹. I-7/I-12/I-22/I-23, E-7~E-10, A-3, SDAR AR-L2~L3, CL V2"
+      },
+      {
+        "prompt_id": "P-V2-03",
+        "features_covered": 6,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 3: Agent Teams V2+보안. Redis MessageBus, 6 협업 패턴, 10 에이전트, 3-Layer Guardrails, HMAC-SHA256, GDPR 4기능. v23 확장 15건"
+      },
+      {
+        "prompt_id": "P-V3-01",
+        "features_covered": 6,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 1: 인프라 스케일업. K8s Helm(Blue-Green), vLLM 셀프호스팅, 관리형 DB, config.v3.toml, Prometheus/Grafana/Loki, HPA"
+      },
+      {
+        "prompt_id": "P-V3-02",
+        "features_covered": 10,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 2: EXP 모듈 전체 활성화. 16그룹 Core + v23 6건. I-18/I-21/I-24/I-25, A-4~A-7, B-4~B-6, S-2~S-8, D-3~D-6, EVX-1~6"
+      },
+      {
+        "prompt_id": "P-V3-03",
+        "features_covered": 8,
+        "features_missing_from_prompt": [],
+        "internal_refs_valid": true,
+        "internal_refs_broken": [],
+        "notes": "Phase 3: 고급기능+최종통합. Agent Marketplace, 50+ Mesh, Self-evo Governance, SDAR AR-L4, CL V3, A2A, 멀티모달, 벤치마크 38건"
+      }
+    ]
+  },
+  "s6_reference_verification": {
+    "total_s6_refs": 67,
+    "resolved": 67,
+    "unresolved": 0,
+    "details": [
+      {
+        "ref_location": "§3 V1-Phase 2 (L1993~1996)",
+        "ref_text": "v23 확장 항목 #10~13: 진화제어/불용어/TemplateSet/알림 → §6 참조",
+        "mapped_s6_section": "§6.10(CL)+§6.7(Agent)+§6.8(Invest)+§6.11(Event)",
+        "status": "RESOLVED",
+        "notes": "CLIB-058→§6.10, D206-064→§6.10, MSTR-007→§6.7, S7FI-056→§6.8"
+      },
+      {
+        "ref_location": "§3 V1-Phase 3 (L2192~2260)",
+        "ref_text": "v23 확장 항목 #16~59: 44건 → §6 상세 참조",
+        "mapped_s6_section": "§6.1/§6.2/§6.7/§6.8/§6.10/§6.11/§6.12",
+        "status": "RESOLVED",
+        "notes": "D205/D206/D207/S7AE/S7FI/S7JM/S7NP prefix별 §6 하위 섹션 매핑 완료"
+      },
+      {
+        "ref_location": "§3 V1-Phase 4~6",
+        "ref_text": "v23 확장 항목 → §6 참조",
+        "mapped_s6_section": "§6.1/§6.4/§6.5/§6.6/§6.8",
+        "status": "RESOLVED",
+        "notes": "Phase 4: UI(§6.1), Phase 5: CI(§6.4)+보안(§6.5), Phase 6: MCP(§6.6)+Invest(§6.8)"
+      },
+      {
+        "ref_location": "§4 V2-Phase 2~3",
+        "ref_text": "COND 모듈 + 보안 → §6 참조",
+        "mapped_s6_section": "§6.7/§6.8/§6.9/§6.10",
+        "status": "RESOLVED",
+        "notes": "Agent Teams(§6.7), AI Investing(§6.8), SDAR(§6.9), Cloud Library(§6.10)"
+      },
+      {
+        "ref_location": "§5 V3-Phase 2~3",
+        "ref_text": "EXP 모듈 + 엔터프라이즈 → §6 참조",
+        "mapped_s6_section": "§6.7/§6.9/§6.10/§6.12",
+        "status": "RESOLVED",
+        "notes": "Agent Mesh(§6.7), SDAR L4(§6.9), CL V3(§6.10), K8s ops(§6.12)"
+      }
+    ]
+  },
+  "statistics": {
+    "MATCHED": 22,
+    "PARTIAL": 0,
+    "MISSING": 0,
+    "SPREAD": 1,
+    "NOT_APPLICABLE": 1
+  },
+  "notes": {
+    "section1_summary": "§1(L73~181)은 전체 로드맵/버전비교/의존성체인/R1~R11 공통규칙/SDD/세션운영/컨텍스트다이어트를 정의. R1~R11은 18개 프롬프트 전수에서 공통 참조되며, feature_registry의 cross-cutting concern으로 작동",
+    "section7_summary": "§7(L5558~5858)은 V0~V3 GO/NO-GO(64건) + 전환조건 TC + 크로스컷검토(문서정합/보안/성능/정본/LOCK/SC-15건) + 43개 산출물 인덱스 + 34개 변경이력 버전을 포함",
+    "prompt_coverage_summary": "18개 프롬프트 전수 존재 확인. V0:6(STEP-1~6, 210~150행)+V1:6(Phase 1~6, 162~72행)+V2:3(Phase 1~3, 81~243행)+V3:3(Phase 1~3, 110~248행). 모든 프롬프트가 §1.3 R1~R11 공통 규칙 참조. v25.2.0에서 V1 상세 프롬프트 신규/업그레이드 완료",
+    "s6_verification_summary": "67개 실질 §6 참조 전수 해소 (미해소 0건). v23 확장 항목(200+건)의 §6 참조가 §6.1~§6.12 하위 섹션으로 정상 매핑됨",
+    "go_nogo_count_discrepancy": "READINESS_GUIDE §9: 62건 vs PART2 §7: 64건(V0=16+V1=22+V2=14+V3=12). v22에서 V1 #22(MCP 개별검증)+V3 #12(PARL 추가)로 64건. READINESS_GUIDE는 v22 이전 기준일 가능성 — severity MEDIUM"
+  }
+}

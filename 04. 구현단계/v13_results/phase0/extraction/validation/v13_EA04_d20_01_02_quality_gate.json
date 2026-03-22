@@ -1,0 +1,476 @@
+{
+  "quality_gate": {
+    "target_file": "v13_EA04_d20_01_02.json",
+    "agent": "EA-4",
+    "version": "v13",
+    "gate_date": "2026-03-16",
+    "total_items": 233,
+    "source_files": [
+      "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+      "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md"
+    ],
+    "layer_a_result": "PASS (DV-1 WARNING: integer value_type는 number의 하위 분류로 허용 — 구조 오류 아님)",
+    "final_grade": "GOLD",
+    "final_score": 96.5,
+    "summary": "233건 전수 검토. C1~C8 전 카테고리 분포 양호. source_line 직접 대조 결과 모든 샘플이 SOT와 정확히 일치. 숫자 값 정합성 완전. 약점 패턴 미발견. GOLD 판정."
+  },
+
+  "step2_layer_b": {
+    "SV-1": {
+      "description": "무작위 20% 샘플링 key/context 맥락 검증",
+      "sample_count": 47,
+      "sampled_ids": [
+        "EA-04_001", "EA-04_007", "EA-04_016", "EA-04_023", "EA-04_027",
+        "EA-04_033", "EA-04_039", "EA-04_047", "EA-04_054", "EA-04_060",
+        "EA-04_066", "EA-04_074", "EA-04_078", "EA-04_085", "EA-04_088",
+        "EA-04_092", "EA-04_099", "EA-04_106", "EA-04_112", "EA-04_116",
+        "EA-04_121", "EA-04_128", "EA-04_132", "EA-04_138", "EA-04_145",
+        "EA-04_149", "EA-04_155", "EA-04_158", "EA-04_162", "EA-04_166",
+        "EA-04_170", "EA-04_175", "EA-04_180", "EA-04_185", "EA-04_190",
+        "EA-04_195", "EA-04_200", "EA-04_204", "EA-04_208", "EA-04_213",
+        "EA-04_218", "EA-04_222", "EA-04_226", "EA-04_229", "EA-04_231",
+        "EA-04_233", "EA-04_103"
+      ],
+      "result": "PASS",
+      "pass_count": 47,
+      "fail_count": 0,
+      "details": [
+        {
+          "item_id": "EA-04_001",
+          "key": "cost_ceiling.V1.daily_krw",
+          "context": "§1.4.3 비용 상한 불변 원칙",
+          "verdict": "PASS — key는 V1 일일 비용 상한(KRW)을 명확히 반영, context가 OVERVIEW §1.4.3과 정확히 일치"
+        },
+        {
+          "item_id": "EA-04_023",
+          "key": "thinking_budget.instant",
+          "context": "§2.1-A Adaptive Thinking",
+          "verdict": "PASS — ORANGE_CORE §2.1-A의 AdaptiveThinkingConfig.thinking_budget 필드와 정확히 대응"
+        },
+        {
+          "item_id": "EA-04_088",
+          "key": "state_machine.states",
+          "context": "§2.2 상태 머신",
+          "verdict": "PASS — S0~S8 9개 상태 목록이 SOT §2.2와 완전 일치"
+        },
+        {
+          "item_id": "EA-04_106",
+          "key": "registry.event_types",
+          "context": "§6.1 LogEvent Registry",
+          "verdict": "PASS — 35개 event_type 리스트가 SOT §6.1과 대응"
+        },
+        {
+          "item_id": "EA-04_158",
+          "key": "decision.DEC_002_FREEZE",
+          "context": "§0.6-A/§0.7-A DEC-002 FREEZE",
+          "verdict": "PASS — LangGraph 허용/LangChain 패턴 참조만 정책이 SOT와 일치"
+        },
+        {
+          "item_id": "EA-04_204",
+          "key": "v1.agent_framework",
+          "context": "§8.5.3 COMBO-V1-LOCAL Agent Framework LOCK",
+          "verdict": "PASS — LangGraph LOCK이 OVERVIEW §8.5.3 COMBO 표와 일치"
+        }
+      ],
+      "note": "47건 전수 key/context 맥락 검증 — 모든 키가 SOT 섹션에 자연스럽게 귀속, 맥락 왜곡 없음"
+    },
+
+    "SV-2": {
+      "description": "핵심 값 완전성 검증 — LOCK 값, 모듈 파라미터, API 수, 스키마 등",
+      "result": "PASS",
+      "checks": [
+        {
+          "check": "OVERVIEW 정본 우선순위(LOCK) 5단계",
+          "item_id": "EA-04_116",
+          "expected": "RULE > PLAN > LOCK > 본문 > 스키마",
+          "actual": "5개 계층 정확히 추출",
+          "verdict": "PASS"
+        },
+        {
+          "check": "비용 상한 V1/V2/V3 월간 KRW",
+          "item_ids": ["EA-04_003", "EA-04_007", "EA-04_011"],
+          "expected": "40000 / 93000 / 266000",
+          "actual": "40000 / 93000 / 266000",
+          "verdict": "PASS"
+        },
+        {
+          "check": "비용 상한 V1/V2/V3 월간 USD",
+          "item_ids": ["EA-04_004", "EA-04_008", "EA-04_012"],
+          "expected": "30 / 70 / 200",
+          "actual": "30 / 70 / 200",
+          "verdict": "PASS"
+        },
+        {
+          "check": "Thinking Budget 5단계 (instant~max)",
+          "item_ids": ["EA-04_023", "EA-04_024", "EA-04_025", "EA-04_026", "EA-04_027"],
+          "expected": "0 / 1024 / 4096 / 16384 / 65536",
+          "actual": "0 / 1024 / 4096 / 16384 / 65536",
+          "verdict": "PASS"
+        },
+        {
+          "check": "상태 머신 9개 상태(S0~S8)",
+          "item_id": "EA-04_088",
+          "expected": 9,
+          "actual": 9,
+          "verdict": "PASS"
+        },
+        {
+          "check": "5-Gate 체계 이름 5개",
+          "item_id": "EA-04_104",
+          "expected": "PolicyGate/CostGate/EvidenceGate/ApprovalGate/SelfCheckGate",
+          "actual": "PolicyGate/CostGate/EvidenceGate/ApprovalGate/SelfCheckGate",
+          "verdict": "PASS"
+        },
+        {
+          "check": "event_type 35건, failure_code 17건, fallback_id 13건",
+          "item_ids": ["EA-04_105", "EA-04_107", "EA-04_109"],
+          "expected": "35 / 17 / 13",
+          "actual": "35 / 17 / 13",
+          "verdict": "PASS"
+        },
+        {
+          "check": "Self-check 임계값 P0/P1/P2",
+          "item_ids": ["EA-04_041", "EA-04_042", "EA-04_043"],
+          "expected": "70 / 75 / 80",
+          "actual": "70 / 75 / 80",
+          "verdict": "PASS"
+        },
+        {
+          "check": "ORANGE CORE 모듈 I-1~I-25 = 25개",
+          "item_id": "EA-04_092",
+          "expected": 25,
+          "actual": 25,
+          "verdict": "PASS"
+        },
+        {
+          "check": "전체 모듈 합계 81개",
+          "item_id": "EA-04_100",
+          "expected": 81,
+          "actual": 81,
+          "verdict": "PASS"
+        },
+        {
+          "check": "Compaction config (trigger=0.8, target=0.5, preserve=5, max_summary=2048)",
+          "item_ids": ["EA-04_034", "EA-04_035", "EA-04_036", "EA-04_037"],
+          "expected": "0.8 / 0.5 / 5 / 2048",
+          "actual": "0.8 / 0.5 / 5 / 2048",
+          "verdict": "PASS"
+        },
+        {
+          "check": "벤치마크 최소 기준 MMLU/HumanEval/SafetyBench",
+          "item_ids": ["EA-04_054", "EA-04_055", "EA-04_056"],
+          "expected": "70 / 60 / 90",
+          "actual": "70 / 60 / 90",
+          "verdict": "PASS"
+        }
+      ]
+    },
+
+    "SV-3": {
+      "description": "표준 키 적절성 검증",
+      "result": "PASS",
+      "checks": [
+        {
+          "check": "key 네이밍 일관성 (dot-separated hierarchical)",
+          "verdict": "PASS — cost_ceiling.V1.daily_krw, thinking_budget.instant, selfcheck.threshold.P0 등 일관된 dot-notation 사용"
+        },
+        {
+          "check": "카테고리 분포 균형",
+          "distribution": {"C1": 106, "C2": 33, "C3": 16, "C4": 21, "C5": 19, "C6": 10, "C7": 12, "C8": 16},
+          "verdict": "PASS — C1(수치)가 최대 비중(45%)으로 적절, C2~C8도 모두 10건 이상"
+        },
+        {
+          "check": "value_type 사용 적절성",
+          "verdict": "PASS — integer/number는 수치 파라미터, string은 정성 항목, list는 열거형에 적절히 사용. integer를 number 하위 분류로 사용한 것은 의미적으로 타당"
+        },
+        {
+          "check": "중복 키 없음",
+          "verdict": "PASS — 233개 item_id 모두 고유, key 중복 시 context가 다른 섹션을 가리킴(의도적 다면 추출)"
+        }
+      ]
+    }
+  },
+
+  "step3_adversarial_audit": {
+    "AD-1": {
+      "description": "무작위 20% 샘플링, SOT에서 source_line 직접 확인",
+      "sample_count": 47,
+      "sampled_ids": [
+        "EA-04_001", "EA-04_010", "EA-04_019", "EA-04_023", "EA-04_028",
+        "EA-04_033", "EA-04_038", "EA-04_039", "EA-04_041", "EA-04_047",
+        "EA-04_048", "EA-04_049", "EA-04_050", "EA-04_051", "EA-04_052",
+        "EA-04_054", "EA-04_057", "EA-04_060", "EA-04_065", "EA-04_067",
+        "EA-04_070", "EA-04_074", "EA-04_077", "EA-04_078", "EA-04_085",
+        "EA-04_088", "EA-04_092", "EA-04_100", "EA-04_106", "EA-04_112",
+        "EA-04_116", "EA-04_128", "EA-04_132", "EA-04_145", "EA-04_155",
+        "EA-04_162", "EA-04_166", "EA-04_172", "EA-04_180", "EA-04_185",
+        "EA-04_195", "EA-04_204", "EA-04_208", "EA-04_213", "EA-04_218",
+        "EA-04_226", "EA-04_233"
+      ],
+      "result": "PASS",
+      "pass_count": 47,
+      "fail_count": 0,
+      "spot_checks": [
+        {
+          "item_id": "EA-04_001",
+          "source_line": 214,
+          "sot_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "sot_content_at_line": "| V1 | 1,300원 ($1) | 40,000원 ($30) | Mini 90%+ |",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_023",
+          "source_line": 256,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "\"instant\": 0,           # thinking 토큰 없음",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_033",
+          "source_line": 369,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "timeout_ms: int = 10000                 # 실행 타임아웃 (기본 10초)",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_041",
+          "source_line": 1822,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "- P0: self_check_score >= 70  → PASS",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_048",
+          "source_line": 1379,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "daily_limit: int = 100                  # V1 일일 호출 제한",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_054",
+          "source_line": 4087,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "최소 기준(LOCK): 신규 모델 등록 시 MMLU ≥ 70%, HumanEval ≥ 60%, SafetyBench ≥ 90%",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_060",
+          "source_line": 4287,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "상태별 타임아웃: S1=5초, S2=30초, S3=120초, S4=10초, S5=15초",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_074",
+          "source_line": 953,
+          "sot_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "sot_content_at_line": "**집계**: 총 70건 (미해소 **38건** / [해소] **32건**)",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_077",
+          "source_line": 869,
+          "sot_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+          "sot_content_at_line": "- 병렬 실행 상한: 3",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        },
+        {
+          "item_id": "EA-04_070",
+          "source_line": 4444,
+          "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+          "sot_content_at_line": "비용: V1 목표 ≤ ₩10,000/월 (로컬 우선이므로 대부분 무료)",
+          "source_text_match": true,
+          "value_match": true,
+          "verdict": "PASS"
+        }
+      ]
+    },
+
+    "AD-2": {
+      "description": "source_text 내 숫자 vs value 일치 확인",
+      "sample_count": 47,
+      "result": "PASS",
+      "pass_count": 47,
+      "fail_count": 0,
+      "spot_checks": [
+        {
+          "item_id": "EA-04_001",
+          "source_text": "V1 | 1,300원 ($1) | 40,000원 ($30) | Mini 90%+",
+          "key": "cost_ceiling.V1.daily_krw",
+          "value": 1300,
+          "extracted_number_from_text": "1,300",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_027",
+          "source_text": "\"max\": 65536",
+          "key": "thinking_budget.max",
+          "value": 65536,
+          "extracted_number_from_text": "65536",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_038",
+          "source_text": "heartbeat_interval_ms: int = 15000",
+          "key": "streaming.heartbeat_interval_ms",
+          "value": 15000,
+          "extracted_number_from_text": "15000",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_050",
+          "source_text": "max_wait_hours: int = 24",
+          "key": "batch.max_wait_hours",
+          "value": 24,
+          "extracted_number_from_text": "24",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_052",
+          "source_text": "TTL 5분, 90% 비용 절감",
+          "key": "prompt_cache.anthropic_savings_pct",
+          "value": 90,
+          "extracted_number_from_text": "90",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_065",
+          "source_text": "Router < 100ms",
+          "key": "sla.router_ms",
+          "value": 100,
+          "extracted_number_from_text": "100",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_067",
+          "source_text": "단위 테스트: 각 I-Module 독립 검증 (coverage ≥ 80%)",
+          "key": "test_coverage.unit_pct",
+          "value": 80,
+          "extracted_number_from_text": "80",
+          "match": true
+        },
+        {
+          "item_id": "EA-04_208",
+          "source_text": "| Embedding | BGE-M3 로컬 (1024차원, 무료, DEC-005) |",
+          "key": "v1.embedding_dim",
+          "value": 1024,
+          "extracted_number_from_text": "1024",
+          "match": true
+        }
+      ]
+    },
+
+    "AD-3": {
+      "description": "W1~W5 약점 패턴 분석",
+      "result": "PASS — 약점 패턴 미발견",
+      "checks": [
+        {
+          "pattern": "W1: 환각(Hallucination) — SOT에 없는 값을 생성",
+          "verdict": "NOT FOUND — 47건 source_line 대조 결과, 모든 값이 SOT에서 직접 확인됨"
+        },
+        {
+          "pattern": "W2: 숫자 전사 오류 — 쉼표/소수점/단위 오류",
+          "verdict": "NOT FOUND — 1,300→1300, 40,000→40000 등 쉼표 제거가 올바르게 수행됨. $2.3→2.3, $6.7→6.7 등 소수점도 정확"
+        },
+        {
+          "pattern": "W3: 맥락 이탈 — 다른 섹션의 값을 잘못 귀속",
+          "verdict": "NOT FOUND — 모든 context가 해당 source_line의 실제 섹션과 일치"
+        },
+        {
+          "pattern": "W4: 누락 — 핵심 파라미터 미추출",
+          "verdict": "NOT FOUND — 비용 상한(V1~V3), 5-Gate 체계, 상태 머신, 레지스트리 카운트, 임계값 등 핵심 설계 값이 빠짐없이 추출됨"
+        },
+        {
+          "pattern": "W5: 중복/과잉 추출 — 같은 값을 다른 키로 반복 추출",
+          "verdict": "MINOR NOTE — C1의 selfcheck.threshold.P0=70과 C7의 threshold.selfcheck_P0='score>=70'은 같은 SOT에서 수치/텍스트 이중 추출. 그러나 C1은 수치, C7은 로직 규칙으로 카테고리가 다르므로 의도적 다면 추출로 판단. 오류 아님."
+        }
+      ]
+    }
+  },
+
+  "step4_sot_cross_check": {
+    "description": "의심 항목에 대한 SOT 직접 대조 (AD-3 W5에서 식별된 항목)",
+    "suspicious_items": [
+      {
+        "pair": ["EA-04_041 (selfcheck.threshold.P0=70)", "EA-04_180 (threshold.selfcheck_P0='score>=70')"],
+        "sot_line": 1822,
+        "sot_text": "- P0: self_check_score >= 70  → PASS",
+        "verdict": "VALID — 동일 소스에서 C1(수치)과 C7(규칙 텍스트)로 이중 추출. 카테고리 분리가 타당."
+      },
+      {
+        "pair": ["EA-04_128 (policy_gate.priority_order='deny>restrict>allow')", "EA-04_129 (policy_gate.expanded_priority_order='block>require_approval>mask>allow')"],
+        "sot_lines": [597, 2902],
+        "verdict": "VALID — §3.3(기본 3값)과 §I-5(확장 4값)에서 각각 추출. 서로 다른 맥락/스키마의 정당한 이중 표현."
+      }
+    ],
+    "result": "PASS — 의심 항목 모두 정당한 다면 추출로 확인"
+  },
+
+  "step5_final_verdict": {
+    "grade": "GOLD",
+    "score": 96.5,
+    "criteria": {
+      "GOLD_threshold": "score >= 95, 0 CRITICAL errors, <= 2 MINOR notes",
+      "SILVER_threshold": "score >= 85, 0 CRITICAL errors, <= 5 MINOR notes",
+      "BRONZE_threshold": "score >= 70, <= 2 CRITICAL errors",
+      "REJECT_threshold": "score < 70 or > 2 CRITICAL errors"
+    },
+    "breakdown": {
+      "SV-1_key_context_accuracy": {
+        "weight": 25,
+        "score": 25,
+        "note": "47/47 PASS"
+      },
+      "SV-2_completeness": {
+        "weight": 25,
+        "score": 25,
+        "note": "12/12 핵심 체크 PASS — 비용, 임계값, 모듈 수, 레지스트리 카운트 모두 정확"
+      },
+      "SV-3_key_standards": {
+        "weight": 10,
+        "score": 10,
+        "note": "키 네이밍 일관, 카테고리 분포 양호, 중복 없음"
+      },
+      "AD-1_source_line_verification": {
+        "weight": 20,
+        "score": 20,
+        "note": "47/47 source_line이 SOT에서 직접 확인됨"
+      },
+      "AD-2_numeric_accuracy": {
+        "weight": 10,
+        "score": 10,
+        "note": "47/47 숫자 값이 source_text와 정확히 일치"
+      },
+      "AD-3_weakness_patterns": {
+        "weight": 10,
+        "score": 6.5,
+        "note": "W5 MINOR 관찰 1건 (의도적 다면 추출, 오류 아님) — 완벽은 아니나 감점 최소"
+      }
+    },
+    "critical_errors": 0,
+    "minor_notes": 1,
+    "minor_note_details": [
+      "W5: selfcheck threshold가 C1/C7에서 이중 추출됨 — 의도적이나 향후 dedup 검토 권장"
+    ],
+    "layer_a_alignment": "Layer A DV-1 WARNING(integer value_type)은 Layer B에서 의미적으로 타당함을 확인. integer는 number의 하위 분류로 허용.",
+    "recommendation": "GOLD 판정 유지. EA-4 JSON은 프로덕션 파이프라인 투입 가능."
+  }
+}

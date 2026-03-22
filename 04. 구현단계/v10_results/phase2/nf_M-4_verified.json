@@ -1,0 +1,182 @@
+[
+  {
+    "feature_id": "AINV-076",
+    "feature_name": "LSTM 가격 예측 모듈 (lstm_predictor.py)",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 §5(V3 Phase 1~3) 및 STEP7-I/J/K 전체 검색 결과 LSTM/가격 예측 관련 스펙 없음. 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "AINV-080",
+    "feature_name": "실전 거래 소액 시작 모드 (Real Trading)",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 §5 및 STEP7-I 검색 결과 '실전 거래/소액 시작' 관련 구현 스펙 없음. PART2 §6.8 AI Investing에도 해당 항목 없음."
+  },
+  {
+    "feature_id": "D204-160",
+    "feature_name": "Muon 옵티마이저 (MoE 학습 특화)",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7-I/J/K에 Muon 옵티마이저/MoE 학습 특화 관련 스펙 없음. 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "D205-138",
+    "feature_name": "학습 커뮤니티 (스터디 그룹/공유/토론/멘토-멘티)",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '학습 커뮤니티/스터디 그룹/멘토' 구현 스펙 없음. 도메인 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "D207-084",
+    "feature_name": "국가별 규제 적응",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '국가별 규제 적응' 관련 구현 스펙 없음."
+  },
+  {
+    "feature_id": "D207-116",
+    "feature_name": "웰니스 커뮤니티 (V3 익명 참여)",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '웰니스 커뮤니티' 구현 스펙 없음. 도메인 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-031",
+    "feature_name": "멀티테넌시",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "STEP7-D2.0-06",
+    "evidence_line": 1654,
+    "evidence_text": "10.8.1 멀티테넌시 — tenant_id 기반 벡터 저장소 분리 (Chroma collection per tenant 또는 메타 필터)",
+    "reason": "D2.0-06 §10.8.1에 멀티테넌시 구현 스펙 존재 (V3 엔터프라이즈 패턴). UPPER_MODULE로 재분류."
+  },
+  {
+    "feature_id": "S7FI-033",
+    "feature_name": "감사 로깅",
+    "classification": "UPPER_MODULE",
+    "evidence_source": "STEP7-D2.0-06",
+    "evidence_line": 158,
+    "evidence_text": "엔터프라이즈 패턴: 멀티테넌시, SOC-2/GDPR 준수, 감사 로깅 (S05-B08 시리즈, §10.5 참조)",
+    "reason": "D2.0-06 L158 및 §10.5에 감사 로깅 명시. D2.0-02에도 audit_log sink 구현 참조 존재. UPPER_MODULE로 재분류."
+  },
+  {
+    "feature_id": "S7FI-034",
+    "feature_name": "관리자 콘솔",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '관리자 콘솔/admin console' 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-084",
+    "feature_name": "VPN 구성",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 VPN 관련 구현 스펙 없음. 인프라/보안 범위."
+  },
+  {
+    "feature_id": "S7FI-180",
+    "feature_name": "장기 평가 추적",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '장기 평가 추적' 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7FI-239",
+    "feature_name": "글로벌 확장 전략",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '글로벌 확장 전략' 구현 스펙 없음. 비즈니스 전략으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-247",
+    "feature_name": "확장 시장 진입",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '확장 시장 진입' 구현 스펙 없음. 비즈니스 전략으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-248",
+    "feature_name": "M&A 전략",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 'M&A 전략' 구현 스펙 없음. 비즈니스 전략으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7FI-262",
+    "feature_name": "장기 재무 예측",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '장기 재무 예측' 구현 스펙 없음. 비즈니스 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7NP-034",
+    "feature_name": "CRM 통합",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 CRM 통합 구현 스펙 없음."
+  },
+  {
+    "feature_id": "S7NP-055",
+    "feature_name": "동료 학습 매칭",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '동료 학습 매칭' 구현 스펙 없음. 소셜/교육 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7NP-065",
+    "feature_name": "학습 커뮤니티",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '학습 커뮤니티' 구현 스펙 없음. 소셜/교육 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7NP-121",
+    "feature_name": "웰니스 커뮤니티",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 '웰니스 커뮤니티' 구현 스펙 없음. 소셜/웰니스 기능으로 구현 가이드 범위 외."
+  },
+  {
+    "feature_id": "S7NP-185",
+    "feature_name": "B2B 컨설팅 모델",
+    "classification": "TRUE_MISSING",
+    "evidence_source": "none",
+    "evidence_line": 0,
+    "evidence_text": "",
+    "reason": "PART2 및 STEP7 전체 검색 결과 'B2B 컨설팅 모델' 구현 스펙 없음. 비즈니스 모델로 구현 가이드 범위 외."
+  }
+]

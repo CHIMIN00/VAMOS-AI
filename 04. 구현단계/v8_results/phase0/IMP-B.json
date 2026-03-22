@@ -1,0 +1,187 @@
+{
+  "script": "IMP-B",
+  "name": "Schema Field Count + SRC Cross-Check",
+  "total_schemas": 25,
+  "schemas": [
+    {
+      "schema_name": "IntentFrame",
+      "part2_count": 10,
+      "lock": false,
+      "raw": "10",
+      "line": 447
+    },
+    {
+      "schema_name": "EvidencePack",
+      "part2_count": 6,
+      "lock": false,
+      "raw": "6",
+      "line": 448
+    },
+    {
+      "schema_name": "DecisionSchema",
+      "part2_count": 18,
+      "lock": true,
+      "raw": "18 (FREEZE)",
+      "line": 449
+    },
+    {
+      "schema_name": "LogEventSchema",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 450
+    },
+    {
+      "schema_name": "ResponseEnvelope",
+      "part2_count": 5,
+      "lock": true,
+      "raw": "5 (LOCK)",
+      "line": 451
+    },
+    {
+      "schema_name": "StructuredOutput",
+      "part2_count": 4,
+      "lock": false,
+      "raw": "4",
+      "line": 452
+    },
+    {
+      "schema_name": "MemoryRecord",
+      "part2_count": 20,
+      "lock": false,
+      "raw": "20",
+      "line": 453
+    },
+    {
+      "schema_name": "SourceQoD",
+      "part2_count": 8,
+      "lock": false,
+      "raw": "8",
+      "line": 454
+    },
+    {
+      "schema_name": "PolicyCheck",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 455
+    },
+    {
+      "schema_name": "ApprovalSchema",
+      "part2_count": 12,
+      "lock": false,
+      "raw": "12",
+      "line": 456
+    },
+    {
+      "schema_name": "CostBudget",
+      "part2_count": 9,
+      "lock": false,
+      "raw": "9",
+      "line": 457
+    },
+    {
+      "schema_name": "DownshiftSchema",
+      "part2_count": 6,
+      "lock": false,
+      "raw": "6",
+      "line": 458
+    },
+    {
+      "schema_name": "NodeCapabilityProfile",
+      "part2_count": 6,
+      "lock": false,
+      "raw": "6",
+      "line": 459
+    },
+    {
+      "schema_name": "NodeRequestEnvelope",
+      "part2_count": 12,
+      "lock": false,
+      "raw": "12",
+      "line": 460
+    },
+    {
+      "schema_name": "NodeResponseEnvelope",
+      "part2_count": 6,
+      "lock": false,
+      "raw": "6",
+      "line": 461
+    },
+    {
+      "schema_name": "ToolCallRegistry",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 462
+    },
+    {
+      "schema_name": "MCPBridgeLayer",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 463
+    },
+    {
+      "schema_name": "ToolRegistryEntry",
+      "part2_count": 8,
+      "lock": false,
+      "raw": "8",
+      "line": 464
+    },
+    {
+      "schema_name": "BrainAdapterResponse",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 465
+    },
+    {
+      "schema_name": "WorkflowStage",
+      "part2_count": 4,
+      "lock": true,
+      "raw": "4 (LOCK)",
+      "line": 466
+    },
+    {
+      "schema_name": "WorkflowOutput",
+      "part2_count": 3,
+      "lock": true,
+      "raw": "3 (LOCK)",
+      "line": 467
+    },
+    {
+      "schema_name": "FailureReport",
+      "part2_count": 4,
+      "lock": false,
+      "raw": "4",
+      "line": 468
+    },
+    {
+      "schema_name": "GuardrailsCheck",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 469
+    },
+    {
+      "schema_name": "RBACRole",
+      "part2_count": 6,
+      "lock": false,
+      "raw": "6",
+      "line": 470
+    },
+    {
+      "schema_name": "AutonomyLevelSchema",
+      "part2_count": 7,
+      "lock": false,
+      "raw": "7",
+      "line": 471
+    }
+  ],
+  "src_schemas_found": 0,
+  "src_mismatches": [],
+  "errors": [],
+  "total_errors": 0,
+  "verdict": "PASS"
+}

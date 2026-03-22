@@ -1,0 +1,2314 @@
+{
+  "agent": "C-7",
+  "phase": "0-C",
+  "source_files": [
+    "PHASE_B1_API_CONTRACT",
+    "PHASE_B2_PROJECT_STRUCTURE",
+    "PHASE_B3_DEPENDENCIES",
+    "PHASE_B4_CONFIG_SPEC",
+    "PHASE_B5_TEST_STRATEGY",
+    "PHASE_B6_CICD_PIPELINE",
+    "PHASE_B7_MIGRATION_STRATEGY"
+  ],
+  "reference": "v10_feature_definition.md",
+  "features": [
+    {
+      "feature_id": "PB1-001",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 17,
+      "source_section": "§0 규칙",
+      "feature_name": "API 공통 규칙 구현 (trace_id 필수, 네이밍 패턴, 표준 응답 포맷)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "trace_id 필수, vamos:{category}:{action} 네이밍"
+    },
+    {
+      "feature_id": "PB1-002",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 30,
+      "source_section": "§1 개요",
+      "feature_name": "3계층 API 통신 아키텍처 구현 (Tauri IPC / JSON-RPC / MCP)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Layer1=Tauri IPC, Layer2=JSON-RPC subprocess, Layer3=MCP Streamable HTTP"
+    },
+    {
+      "feature_id": "PB1-003",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 82,
+      "source_section": "§2.1.1 Decision",
+      "feature_name": "Decision IPC 커맨드 그룹 구현 (5개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "create/get/list/lock/event. D2 DecisionSchema 기반"
+    },
+    {
+      "feature_id": "PB1-004",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 223,
+      "source_section": "§2.1.2 Workflow",
+      "feature_name": "Workflow IPC 커맨드 그룹 구현 (6개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "start/status/cancel/output/stage_event/failure_report"
+    },
+    {
+      "feature_id": "PB1-005",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 351,
+      "source_section": "§2.1.3 Session",
+      "feature_name": "Session IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "create/get/list/close"
+    },
+    {
+      "feature_id": "PB1-006",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 391,
+      "source_section": "§2.2.1 Node",
+      "feature_name": "Node IPC 커맨드 그룹 구현 (5개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "dispatch/response/profile/list/register"
+    },
+    {
+      "feature_id": "PB1-007",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 525,
+      "source_section": "§2.2.2 Pipeline/Gate",
+      "feature_name": "Pipeline/Gate IPC 커맨드 그룹 구현 (6개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "gate_status/gate_mapping/verify_chain/circuit_breaker/hitl"
+    },
+    {
+      "feature_id": "PB1-008",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 649,
+      "source_section": "§2.2.3 Marketplace",
+      "feature_name": "Marketplace IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "list/get/install/uninstall"
+    },
+    {
+      "feature_id": "PB1-009",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 704,
+      "source_section": "§2.3.1 Memory",
+      "feature_name": "Memory IPC 커맨드 그룹 구현 (6개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "save/get/search/delete/list/update_event"
+    },
+    {
+      "feature_id": "PB1-010",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 801,
+      "source_section": "§2.3.2 Vector Store",
+      "feature_name": "Vector Store IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "search/upsert/delete/adapter_config"
+    },
+    {
+      "feature_id": "PB1-011",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 880,
+      "source_section": "§2.3.3 Semantic Cache",
+      "feature_name": "Semantic/Prompt Cache IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "similarity_threshold=0.95 LOCK"
+    },
+    {
+      "feature_id": "PB1-012",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 950,
+      "source_section": "§2.3.4 GraphRAG",
+      "feature_name": "GraphRAG IPC 커맨드 그룹 구현 (2개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "query/config. json_file(V1)/neo4j(V2+)"
+    },
+    {
+      "feature_id": "PB1-013",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 987,
+      "source_section": "§2.3.5 QoD",
+      "feature_name": "QoD IPC 커맨드 그룹 구현 (2개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "get/compute"
+    },
+    {
+      "feature_id": "PB1-014",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1029,
+      "source_section": "§2.4.1 Policy",
+      "feature_name": "Policy IPC 커맨드 그룹 구현 (3개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "check/result/block_event"
+    },
+    {
+      "feature_id": "PB1-015",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1074,
+      "source_section": "§2.4.2 Cost",
+      "feature_name": "Cost IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "budget_get/update/downshift_status/event"
+    },
+    {
+      "feature_id": "PB1-016",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1154,
+      "source_section": "§2.4.3 Approval",
+      "feature_name": "Approval IPC 커맨드 그룹 구현 (5개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "request/decide/get/list/request_event"
+    },
+    {
+      "feature_id": "PB1-017",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1228,
+      "source_section": "§2.4.4 Guardrails",
+      "feature_name": "Guardrails IPC 커맨드 그룹 구현 (3개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "3-Layer NeMo/GuardrailsAI/LlamaGuard"
+    },
+    {
+      "feature_id": "PB1-018",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1279,
+      "source_section": "§2.4.5 RBAC/Autonomy",
+      "feature_name": "RBAC/Autonomy IPC 커맨드 그룹 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "get_role/check_permission/get_level/set_level"
+    },
+    {
+      "feature_id": "PB1-019",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1341,
+      "source_section": "§2.5 UI Commands",
+      "feature_name": "UI IPC 커맨드 그룹 구현 (5개)",
+      "version_scope": "V1",
+      "category": "FT-UI",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "log_stream/config_get/set/theme/notification"
+    },
+    {
+      "feature_id": "PB1-020",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1396,
+      "source_section": "§3.0 JSON-RPC 공통",
+      "feature_name": "Python-Rust JSON-RPC 2.0 프로토콜 구현",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "subprocess stdin/stdout"
+    },
+    {
+      "feature_id": "PB1-021",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1443,
+      "source_section": "§3.1 LangGraph",
+      "feature_name": "LangGraph JSON-RPC 메서드 구현 (workflow.run/stage.execute)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "2개 메서드"
+    },
+    {
+      "feature_id": "PB1-022",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1507,
+      "source_section": "§3.1 Decision/Node/Verify",
+      "feature_name": "Decision/Node/Verify JSON-RPC 메서드 구현 (3개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "decision.create/node.dispatch/verify.run_chain"
+    },
+    {
+      "feature_id": "PB1-023",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1594,
+      "source_section": "§3.2 Embedding",
+      "feature_name": "Embedding JSON-RPC 메서드 구현 (encode/store)",
+      "version_scope": "V1,V2",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1=bge-m3, V2=OpenAI"
+    },
+    {
+      "feature_id": "PB1-024",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1688,
+      "source_section": "§3.3 LLM Adapter",
+      "feature_name": "LLM Adapter JSON-RPC 메서드 구현 (3개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "generate/record_invoke/rate_limit.get"
+    },
+    {
+      "feature_id": "PB1-025",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1782,
+      "source_section": "§4.1 MCP Bridge",
+      "feature_name": "MCP Bridge 메서드 구현 (init/health)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Streamable HTTP LOCK"
+    },
+    {
+      "feature_id": "PB1-026",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 1846,
+      "source_section": "§4.2 Tool Discovery",
+      "feature_name": "MCP Tool Discovery/Invocation/Registry 구현 (4개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-025"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "tools.discover/call/registry.get/list"
+    },
+    {
+      "feature_id": "PB1-027",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 2080,
+      "source_section": "§6 에러 응답",
+      "feature_name": "표준 에러 응답 체계 구현 (FailureCode 20개)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "HTTP 9개 + JSON-RPC 6개 코드"
+    },
+    {
+      "feature_id": "PB1-028",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 2151,
+      "source_section": "§7 인증/권한",
+      "feature_name": "RBAC 역할/권한 검증 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-018"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "4역할 권한 매핑"
+    },
+    {
+      "feature_id": "PB1-029",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 2162,
+      "source_section": "§7.2 자율 수준",
+      "feature_name": "Autonomy Level 동작 로직 구현 (L0~L3)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-018"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "L0 수동~L3 완전자율"
+    },
+    {
+      "feature_id": "PB1-030",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 2199,
+      "source_section": "§7.5 API 키/토큰",
+      "feature_name": "API 키/토큰 관리 구현",
+      "version_scope": "V1,V2",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB1-028"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "환경변수, SecureStorage, OAuth2(V2+)"
+    },
+    {
+      "feature_id": "PB1-031",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "source_line": 21,
+      "source_section": "§0 규칙",
+      "feature_name": "Python-Rust gRPC 전환 대응",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB1-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "판단필요: 전환 시점 미확정. 추천: 기능, 확신도: 중간",
+      "judgment_needed": true
+    },
+    {
+      "feature_id": "PB2-001",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 23,
+      "source_section": "§1 개요",
+      "feature_name": "Monorepo 루트 저장소(vamos/) 생성 및 Git 초기화",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Monorepo LOCK"
+    },
+    {
+      "feature_id": "PB2-002",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 46,
+      "source_section": "§2 루트 디렉토리",
+      "feature_name": "루트 레벨 디렉토리 구조 생성 (10개 디렉토리)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": ".github, src, src-tauri, backend, shared, tests, config, docs, scripts"
+    },
+    {
+      "feature_id": "PB2-003",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 48,
+      "source_section": "§2 루트 디렉토리",
+      "feature_name": "GitHub Actions 워크플로우 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": ".github/workflows/"
+    },
+    {
+      "feature_id": "PB2-004",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 53,
+      "source_section": "§2 루트 디렉토리",
+      "feature_name": "VSCode 공유 설정 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB2-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "settings.json, extensions.json"
+    },
+    {
+      "feature_id": "PB2-005",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 63,
+      "source_section": "§2 루트 디렉토리",
+      "feature_name": "빌드/배포 스크립트 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "scripts/ setup.sh, dev.sh, build.sh"
+    },
+    {
+      "feature_id": "PB2-006",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 67,
+      "source_section": "§2 루트 디렉토리",
+      "feature_name": "루트 설정 파일 생성 (package.json, tsconfig.json 등)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB2-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "프론트엔드 빌드 도구 설정"
+    },
+    {
+      "feature_id": "PB2-007",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 84,
+      "source_section": "§3.1 src/",
+      "feature_name": "React 엔트리포인트 파일 생성 (main.tsx, App.tsx)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": ""
+    },
+    {
+      "feature_id": "PB2-008",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 89,
+      "source_section": "§3.1 src/",
+      "feature_name": "React 컴포넌트 디렉토리 생성 (common/layout/canvas/artifacts/notifications/autonomy/decision/memory/cost/log)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "10개 컴포넌트 그룹 디렉토리"
+    },
+    {
+      "feature_id": "PB2-009",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 137,
+      "source_section": "§3.1 src/",
+      "feature_name": "Pages 디렉토리 생성 (7개 페이지)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Dashboard, Chat, Workflow, Memory, Settings, Log, NodeDetail"
+    },
+    {
+      "feature_id": "PB2-010",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 146,
+      "source_section": "§3.1 src/",
+      "feature_name": "hooks/stores/types/utils/styles 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Zustand 스토어, 커스텀 훅, TS 타입, 유틸, 스타일"
+    },
+    {
+      "feature_id": "PB2-011",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 213,
+      "source_section": "§4.1 src-tauri/",
+      "feature_name": "Rust Tauri 디렉토리 구조 생성 (Cargo.toml, commands/, bridge/, state/, models/, utils/)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "IPC 핸들러, Python bridge, 상태 관리, 데이터 모델"
+    },
+    {
+      "feature_id": "PB2-012",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 218,
+      "source_section": "§4.1 src-tauri/",
+      "feature_name": "Tauri 2.0 capabilities 설정 생성",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB2-011"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "권한 매니페스트 default.json"
+    },
+    {
+      "feature_id": "PB2-013",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 299,
+      "source_section": "§5.1 패키지 구조",
+      "feature_name": "Python 백엔드 루트 패키지 생성 (backend/vamos_core/)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "pyproject.toml, main.py, config.py"
+    },
+    {
+      "feature_id": "PB2-014",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 328,
+      "source_section": "§5.2 orange_core/",
+      "feature_name": "ORANGE CORE 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "decision_kernel, front_mini, i1~i5"
+    },
+    {
+      "feature_id": "PB2-015",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 371,
+      "source_section": "§5.3 blue_nodes/",
+      "feature_name": "BLUE NODES 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "dev/research/content/quant. trading V2+"
+    },
+    {
+      "feature_id": "PB2-016",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 402,
+      "source_section": "§5.3 blue_nodes/",
+      "feature_name": "Trading 노드 디렉토리 생성 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-015"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "[V2+] TradingNode"
+    },
+    {
+      "feature_id": "PB2-017",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 421,
+      "source_section": "§5.4 infra/",
+      "feature_name": "인프라 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "brain/tools/prompt/rate_limit. backup V2+"
+    },
+    {
+      "feature_id": "PB2-018",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 447,
+      "source_section": "§5.4 infra/",
+      "feature_name": "Backup 모듈 디렉토리 생성 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-017"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "[V2+] BackupConfig"
+    },
+    {
+      "feature_id": "PB2-019",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 466,
+      "source_section": "§5.5 agent/",
+      "feature_name": "Agent 워크플로우 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "graph/pipeline/circuit_breaker/hitl/gate_pipeline"
+    },
+    {
+      "feature_id": "PB2-020",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 487,
+      "source_section": "§5.5 agent/",
+      "feature_name": "AgentMarketplace 모듈 파일 생성 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-019"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "[V2+] marketplace.py"
+    },
+    {
+      "feature_id": "PB2-021",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 507,
+      "source_section": "§5.6 storage/",
+      "feature_name": "Storage 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "memory/vector/graph/cache/db/logging/kb"
+    },
+    {
+      "feature_id": "PB2-022",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 535,
+      "source_section": "§5.6 storage/",
+      "feature_name": "DB 마이그레이션 디렉토리 생성 (Alembic)",
+      "version_scope": "V1",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-021"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "env.py + versions/"
+    },
+    {
+      "feature_id": "PB2-023",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 567,
+      "source_section": "§5.7 safety/",
+      "feature_name": "Safety 모듈 디렉토리 구조 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "policy/approval/cost/guardrails/rbac/autonomy"
+    },
+    {
+      "feature_id": "PB2-024",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 614,
+      "source_section": "§5.8 schemas/",
+      "feature_name": "Pydantic v2 스키마 모듈 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "contracts.py, enums.py, validators.py"
+    },
+    {
+      "feature_id": "PB2-025",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 665,
+      "source_section": "§5.9 mcp/",
+      "feature_name": "MCP Bridge 모듈 디렉토리 생성",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "bridge/server/client/tool_discovery/protocol"
+    },
+    {
+      "feature_id": "PB2-026",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 687,
+      "source_section": "§6 공유 타입",
+      "feature_name": "공유 타입 디렉토리 + JSON Schema + 3-way codegen 스크립트",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "schemas.json Golden Source, generate_ts/rs/py.py"
+    },
+    {
+      "feature_id": "PB2-027",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 717,
+      "source_section": "§7 테스트 디렉토리",
+      "feature_name": "전체 테스트 디렉토리 구조 생성 (Python/React/Rust/통합)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "backend/tests/(unit/integration/e2e), src/__tests__/, src-tauri/src/tests/, tests/"
+    },
+    {
+      "feature_id": "PB2-028",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "source_line": 812,
+      "source_section": "§8 설정/환경 파일",
+      "feature_name": "Config 디렉토리 구조 + .env.example 생성",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB2-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "default/dev/prod/test TOML, llm/embedding/storage/safety/mcp/nemo 하위 디렉토리"
+    },
+    {
+      "feature_id": "PB3-001",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 28,
+      "source_section": "§1 관리 원칙",
+      "feature_name": "의존성 관리 원칙 및 도구 설정 (npm/Cargo/Poetry + 잠금파일)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "최소 의존, 버전 고정, LOCK 준수"
+    },
+    {
+      "feature_id": "PB3-002",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 49,
+      "source_section": "§2.1 Frontend dependencies",
+      "feature_name": "React 18 프론트엔드 핵심 패키지 설치 (React/Router/Tauri API/Zustand/ReactQuery/Recharts/XYFlow/Zod)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "10개 패키지"
+    },
+    {
+      "feature_id": "PB3-003",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 68,
+      "source_section": "§2.2 Frontend devDependencies",
+      "feature_name": "프론트엔드 개발 도구 설치 (TypeScript/Vite/vitest/TailwindCSS/ESLint/Prettier)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "빌드/테스트/린트/포맷 도구"
+    },
+    {
+      "feature_id": "PB3-004",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 92,
+      "source_section": "§3.1 Rust dependencies",
+      "feature_name": "Rust 핵심 크레이트 설치 (tauri/serde/tokio/reqwest/chrono/uuid/thiserror/tracing/toml)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "12개 크레이트"
+    },
+    {
+      "feature_id": "PB3-005",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 112,
+      "source_section": "§3.2~3.4 Rust build/dev/features",
+      "feature_name": "Rust 빌드/테스트 크레이트 및 features 설정",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB3-004"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "tauri-build, tokio-test, tempfile, Cargo features"
+    },
+    {
+      "feature_id": "PB3-006",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 159,
+      "source_section": "§4.1 Python core",
+      "feature_name": "Python 핵심 패키지 설치 (Pydantic v2/LangGraph/LangChain core+openai+community)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "pydantic>=2.10, langgraph>=0.2.60 LOCK"
+    },
+    {
+      "feature_id": "PB3-007",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 165,
+      "source_section": "§4.1 Python core",
+      "feature_name": "LangChain Anthropic 통합 설치 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB3-006"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "langchain-anthropic>=0.3.0"
+    },
+    {
+      "feature_id": "PB3-008",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 171,
+      "source_section": "§4.2 Python embedding",
+      "feature_name": "임베딩 패키지 설치 (FlagEmbedding/sentence-transformers/torch/openai)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "BGE-M3 1024D 로컬 임베딩"
+    },
+    {
+      "feature_id": "PB3-009",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 182,
+      "source_section": "§4.3 Python vector",
+      "feature_name": "벡터 DB 패키지 설치 (ChromaDB V1 / Qdrant V2+)",
+      "version_scope": "V1,V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "chromadb>=0.5.23(V1), qdrant-client>=1.12.0(V2+)"
+    },
+    {
+      "feature_id": "PB3-010",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 189,
+      "source_section": "§4.4 Python storage",
+      "feature_name": "스토리지 패키지 설치 (aiosqlite/SQLAlchemy/Alembic/asyncpg V2+)",
+      "version_scope": "V1,V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "SQLite(V1), Postgres(V2+)"
+    },
+    {
+      "feature_id": "PB3-011",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 198,
+      "source_section": "§4.5 Python guardrails",
+      "feature_name": "가드레일 패키지 설치 (NeMo/GuardrailsAI V1 / Transformers V2+)",
+      "version_scope": "V1,V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "L1+L2(V1), L3 LlamaGuard(V2+)"
+    },
+    {
+      "feature_id": "PB3-012",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 208,
+      "source_section": "§4.6 Python mcp",
+      "feature_name": "MCP 서버/클라이언트 패키지 설치 (httpx/sse-starlette/starlette/uvicorn)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Streamable HTTP DEC-017"
+    },
+    {
+      "feature_id": "PB3-013",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 217,
+      "source_section": "§4.7~4.8 Python utils/dev",
+      "feature_name": "Python 유틸리티 + 개발 도구 설치 (tiktoken/structlog/rich/pytest/ruff/mypy/pre-commit)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "테스트/린트/포맷/보안감사 도구"
+    },
+    {
+      "feature_id": "PB3-014",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 278,
+      "source_section": "§5.2 V2 추가",
+      "feature_name": "V2 추가 패키지 설치 (Neo4j/Celery+Redis)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "neo4j>=5.27, celery>=5.4(선택)"
+    },
+    {
+      "feature_id": "PB3-015",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 290,
+      "source_section": "§5.3 V3 추가",
+      "feature_name": "V3 추가 패키지 설치 (vLLM/prometheus/opentelemetry/kubernetes)",
+      "version_scope": "V3",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "K8s 자체호스팅/모니터링/트레이싱"
+    },
+    {
+      "feature_id": "PB3-016",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "source_line": 317,
+      "source_section": "§6 보안",
+      "feature_name": "라이선스 호환성 매트릭스 + 보안 감사 도구 + 보안 정책 설정",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "npm/cargo/pip audit, Dependabot, 라이선스 체크"
+    },
+    {
+      "feature_id": "PB4-001",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 19,
+      "source_section": "§1 설정 계층",
+      "feature_name": "3계층 설정 관리 구조 구현 (L1 .env / L2 config.toml / L3 DB runtime)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "오버라이드 우선순위: .env > DB > toml > 프리셋"
+    },
+    {
+      "feature_id": "PB4-002",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 57,
+      "source_section": "§2 환경 변수",
+      "feature_name": ".env 환경 변수 정의 및 .env.example 생성",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "공통 6개, LLM 4개, 외부서비스 9개"
+    },
+    {
+      "feature_id": "PB4-003",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 137,
+      "source_section": "§3.1 [core]",
+      "feature_name": "[core] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "autonomy_level, execution_mode, pipeline_stages 5단계 고정"
+    },
+    {
+      "feature_id": "PB4-004",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 156,
+      "source_section": "§3.2 [llm]",
+      "feature_name": "[llm] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "mini/main/fallback 모델, temperature, max_tokens"
+    },
+    {
+      "feature_id": "PB4-005",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 181,
+      "source_section": "§3.3 [embedding]",
+      "feature_name": "[embedding] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1: bge-m3/1024, V2+: text-embedding-3-small/1536"
+    },
+    {
+      "feature_id": "PB4-006",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 200,
+      "source_section": "§3.4~3.5 [vector_db]/[graph_db]",
+      "feature_name": "[vector_db] + [graph_db] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "vector: chroma(V1)/qdrant(V2+), graph: json_file(V1)/neo4j(V2+)"
+    },
+    {
+      "feature_id": "PB4-007",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 238,
+      "source_section": "§3.6~3.7 [storage]/[cost]",
+      "feature_name": "[storage] + [cost] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "sqlite(V1)/postgres(V2+), 비용 warn80%/block100%"
+    },
+    {
+      "feature_id": "PB4-008",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 293,
+      "source_section": "§3.8 [guardrails]/[self_check]/[approval]",
+      "feature_name": "[guardrails] + [self_check] + [approval] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "4-Layer guardrails, threshold LOCK, timeout LOCK"
+    },
+    {
+      "feature_id": "PB4-009",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 353,
+      "source_section": "§3.9 [mcp]",
+      "feature_name": "[mcp] 섹션 ConfigModel 구현 (streamable_http LOCK)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "transport=streamable_http DEC-017 LOCK"
+    },
+    {
+      "feature_id": "PB4-010",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 383,
+      "source_section": "§3.10~3.11 [rbac]/[rate_limit]",
+      "feature_name": "[rbac] + [rate_limit] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "4역할 권한 매트릭스, RPM/TPM/burst/cooldown"
+    },
+    {
+      "feature_id": "PB4-011",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 460,
+      "source_section": "§3.12~3.15 [logging]/[blue_nodes]/[ui]/[semantic_cache]",
+      "feature_name": "[logging]+[blue_nodes]+[ui]+[semantic_cache] 섹션 ConfigModel 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "trace_id LOCK, node cap LOCK, similarity>=0.95 LOCK"
+    },
+    {
+      "feature_id": "PB4-012",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 554,
+      "source_section": "§4.1 config.v1.toml",
+      "feature_name": "V1 프리셋 설정 파일 생성 (config.v1.toml)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB4-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "로컬 MVP, <=40000원/월"
+    },
+    {
+      "feature_id": "PB4-013",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 700,
+      "source_section": "§4.2 config.v2.toml",
+      "feature_name": "V2 프리셋 설정 파일 생성 (config.v2.toml)",
+      "version_scope": "V2",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB4-012"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "서버, <=93000원/월"
+    },
+    {
+      "feature_id": "PB4-014",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 796,
+      "source_section": "§4.3 config.v3.toml",
+      "feature_name": "V3 프리셋 설정 파일 생성 (config.v3.toml)",
+      "version_scope": "V3",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB4-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "엔터프라이즈, <=266000원/월"
+    },
+    {
+      "feature_id": "PB4-015",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 884,
+      "source_section": "§5 런타임 설정 DB",
+      "feature_name": "runtime_config + config_audit_log DB 테이블 및 오버라이드 구현 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "JSONB config, 7종 동적 변경, 변경 이력 추적"
+    },
+    {
+      "feature_id": "PB4-016",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 934,
+      "source_section": "§6.1 VamosConfig",
+      "feature_name": "Pydantic v2 VamosConfig 최상위 모델 + 서브모델 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "13개 섹션 모델 + Enum 9종 + 서브모델(MCPBridge, RBACRoleConfig 등)"
+    },
+    {
+      "feature_id": "PB4-017",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 1201,
+      "source_section": "§6.2 검증 규칙",
+      "feature_name": "VAL-001~VAL-010 설정 검증 규칙 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-016"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "MCP transport LOCK, block>=warn, RBAC 4역할, pipeline 5단계 고정 등"
+    },
+    {
+      "feature_id": "PB4-018",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 1216,
+      "source_section": "§6.3 설정 로딩",
+      "feature_name": "설정 로딩 파이프라인 구현 (load_dotenv->tomli->Pydantic->DB->validate)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-016"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "6단계 로딩 흐름"
+    },
+    {
+      "feature_id": "PB4-019",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "source_line": 32,
+      "source_section": "§1.2 핵심 원칙",
+      "feature_name": "버전별 프리셋 로딩 로직 구현 (VAMOS_VERSION_TIER 기반)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB4-002",
+        "PB4-012"
+      ],
+      "extractable": true,
+      "confidence": "추론",
+      "notes": "환경변수에 따라 v1/v2/v3 프리셋 선택"
+    },
+    {
+      "feature_id": "PB5-001",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 19,
+      "source_section": "§1 테스트 피라미드",
+      "feature_name": "3-Layer 테스트 피라미드 구조 + 테스트 ID 체계 (T-{layer}-{docID}-{seq})",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Unit 80%+, Integration 60%+, E2E 100%"
+    },
+    {
+      "feature_id": "PB5-002",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 62,
+      "source_section": "§2.1.1 schemas/",
+      "feature_name": "Python pytest 스키마 단위 테스트 구현 (11개 파일)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "decision/log_event/node/tool/workflow/agent/memory/graph_cache/safety/guardrails/config"
+    },
+    {
+      "feature_id": "PB5-003",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 127,
+      "source_section": "§2.1.2~2.1.6",
+      "feature_name": "Python pytest 모듈 단위 테스트 구현 (orange_core 6 + blue_nodes 6 + safety 7 + storage 5 + agent 10)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "34개 테스트 파일"
+    },
+    {
+      "feature_id": "PB5-004",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 255,
+      "source_section": "§2.2 Rust",
+      "feature_name": "Rust cargo test IPC/subprocess 단위 테스트 구현 (8개)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "invoke_python_agent, handle_ipc_error, spawn_python 등"
+    },
+    {
+      "feature_id": "PB5-005",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 311,
+      "source_section": "§2.3 React",
+      "feature_name": "React vitest 컴포넌트/Store/Hook 테스트 구현 (11개)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "ChatPanel, DecisionCard, CostDashboard 등"
+    },
+    {
+      "feature_id": "PB5-006",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 361,
+      "source_section": "§3 통합 테스트",
+      "feature_name": "통합 테스트 구현 (IPC 4 + Pipeline 7 + Storage 6 + Safety 6 = 23개)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "IPC 라운드트립, Gate차단, CircuitBreaker, 3-Layer Guardrails 등"
+    },
+    {
+      "feature_id": "PB5-007",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 436,
+      "source_section": "§4 E2E",
+      "feature_name": "E2E 시나리오 테스트 구현 (8개 시나리오)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "기본채팅, 비용차단, HITL승인, Guardrails, MCP 등"
+    },
+    {
+      "feature_id": "PB5-008",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 491,
+      "source_section": "§5 AC 매핑",
+      "feature_name": "50 AC -> 79 테스트 케이스 매핑 구현",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "D2:9, D3:9, D4:7, D5:19, D6:13, D7:15, D8:7"
+    },
+    {
+      "feature_id": "PB5-009",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 596,
+      "source_section": "§6 도구/fixture/명령어",
+      "feature_name": "테스트 인프라 구성 (도구 스택 + conftest.py 계층 + 실행 명령어)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "pytest/cargo/vitest/Playwright, 8개 conftest.py"
+    },
+    {
+      "feature_id": "PB5-010",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 842,
+      "source_section": "§6.4~7 CI/CD + 커버리지",
+      "feature_name": "GitHub Actions 테스트 파이프라인 + 모듈별 커버리지 목표",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "schemas 95%, safety 90%, orange_core 85%, 기타 80%"
+    },
+    {
+      "feature_id": "PB5-011",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "source_line": 36,
+      "source_section": "§1.2 테스트 원칙",
+      "feature_name": "테스트 원칙 (AC 완전 매핑, 스키마 우선, 비밀 분리, 재현성, 추적성)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": false,
+      "confidence": "명시적",
+      "notes": "원칙 서술. extractable=false"
+    },
+    {
+      "feature_id": "PB6-001",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 44,
+      "source_section": "§1.3 브랜치 전략",
+      "feature_name": "Git 브랜치 전략 설정 (main/develop/feature/hotfix/release)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "5개 브랜치 전략"
+    },
+    {
+      "feature_id": "PB6-002",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 56,
+      "source_section": "§2 코드 품질",
+      "feature_name": "3개 언어 코드 품질 워크플로우 (Python ruff+mypy / Rust clippy+rustfmt / React eslint+tsc+prettier + 스키마 검증)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "quality-python/rust/react/schema.yml"
+    },
+    {
+      "feature_id": "PB6-003",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 273,
+      "source_section": "§3 테스트 파이프라인",
+      "feature_name": "3개 언어 테스트 워크플로우 + 커버리지 합산 (Python pytest+Postgres / Rust cargo+tarpaulin / React vitest)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB6-002"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "test-python/rust/react.yml + coverage-report.yml"
+    },
+    {
+      "feature_id": "PB6-004",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 536,
+      "source_section": "§4.1~4.2 빌드",
+      "feature_name": "Tauri 크로스플랫폼 빌드 + Python wheel 빌드 워크플로우",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Linux/Windows/macOS ARM64/x64, python -m build"
+    },
+    {
+      "feature_id": "PB6-005",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 668,
+      "source_section": "§4.3 Docker 빌드",
+      "feature_name": "Docker 이미지 빌드 워크플로우 (V2+ GHCR)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "3 서비스 매트릭스, Buildx, 멀티플랫폼"
+    },
+    {
+      "feature_id": "PB6-006",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 738,
+      "source_section": "§5 릴리스",
+      "feature_name": "릴리스 워크플로우 (SemVer + git-cliff changelog + GitHub Release + Tauri 바이너리)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB6-004"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "release.yml, cliff.toml, Conventional Commits"
+    },
+    {
+      "feature_id": "PB6-007",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 925,
+      "source_section": "§5.4 Docker Push",
+      "feature_name": "릴리스 시 Docker Registry Push (V2+)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB6-005"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "GHCR multi-platform push"
+    },
+    {
+      "feature_id": "PB6-008",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 969,
+      "source_section": "§6.1 Docker Compose 배포",
+      "feature_name": "V2 Docker Compose 배포 워크플로우 + 서비스 정의 (deploy-v2.yml)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB6-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "5 서비스: orange-core, blue-nodes, postgres, qdrant, neo4j"
+    },
+    {
+      "feature_id": "PB6-009",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 1127,
+      "source_section": "§6.2 K8s 배포",
+      "feature_name": "V3 Kubernetes Helm 배포 워크플로우 (deploy-v3.yml)",
+      "version_scope": "V3",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Helm upgrade, rollout status, auto-rollback"
+    },
+    {
+      "feature_id": "PB6-010",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 1210,
+      "source_section": "§7 보안",
+      "feature_name": "보안 스캔 워크플로우 (의존성 취약점 + gitleaks + 라이선스 검사)",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "security.yml, pip-audit/cargo-audit/npm-audit/Trivy/gitleaks/license-checker"
+    },
+    {
+      "feature_id": "PB6-011",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 1442,
+      "source_section": "§8 통합 CI",
+      "feature_name": "통합 CI 워크플로우 (ci.yml - 5 Stage 오케스트레이션)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB6-002",
+        "PB6-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "품질->스키마->테스트->보안->빌드->요약"
+    },
+    {
+      "feature_id": "PB6-012",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 1707,
+      "source_section": "§8 nightly",
+      "feature_name": "Nightly 전체 테스트 워크플로우 스텁 (nightly.yml)",
+      "version_scope": "V3",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V3 구현 예정 스텁"
+    },
+    {
+      "feature_id": "PB6-013",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 1729,
+      "source_section": "§8 Secrets",
+      "feature_name": "GitHub Secrets 14개 등록 설정",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "TAURI_SIGNING, DEPLOY_SSH, DB 비밀번호, API 키 등"
+    },
+    {
+      "feature_id": "PB6-014",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 92,
+      "source_section": "§2~3 설정 파일",
+      "feature_name": "CI/CD 설정 파일 생성 (pyproject.toml ruff/mypy/pytest + vitest.config.ts + cliff.toml + .gitleaks.toml + deny.toml)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "린트/테스트/릴리스/보안 설정"
+    },
+    {
+      "feature_id": "PB6-015",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "source_line": 500,
+      "source_section": "§3.4 커버리지 합산",
+      "feature_name": "커버리지 합산 스크립트 (merge_coverage.py + check_thresholds.py)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "3개 언어 XML/JSON 합산"
+    },
+    {
+      "feature_id": "PB7-001",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 59,
+      "source_section": "§2.1 스키마 버전 관리",
+      "feature_name": "VersionedSchema 기본 클래스 및 SchemaVersion 모델 구현",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "37개 스키마 독립 SemVer, is_compatible_with"
+    },
+    {
+      "feature_id": "PB7-002",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 102,
+      "source_section": "§2.1~2.2 스키마 변경",
+      "feature_name": "스키마 변경 유형별 처리 (Additive/Breaking/Deprecation) + 37개 버전 레지스트리",
+      "version_scope": "V2",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-001"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "deprecated 필드 자동 마이그레이션"
+    },
+    {
+      "feature_id": "PB7-003",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 204,
+      "source_section": "§2.3 마이그레이션 스크립트",
+      "feature_name": "Alembic 마이그레이션 디렉토리 + V2 테이블 생성 스크립트",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "002_add_v2_tables: decisions/log_events/memory_records/policy_checks/rbac_roles"
+    },
+    {
+      "feature_id": "PB7-004",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 365,
+      "source_section": "§3.1 SQLite->Postgres",
+      "feature_name": "SQLiteToPostgresMigrator 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "6테이블, BATCH_SIZE=1000, UUID생성, JSON파싱"
+    },
+    {
+      "feature_id": "PB7-005",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 579,
+      "source_section": "§3.2 JSONL->Postgres",
+      "feature_name": "JSONLToPostgresMigrator 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "BATCH_SIZE=5000, Pydantic v2 검증, ON CONFLICT"
+    },
+    {
+      "feature_id": "PB7-006",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 697,
+      "source_section": "§3.3 Chroma->Qdrant",
+      "feature_name": "ChromaToQdrantMigrator 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "BATCH_SIZE=500, needs_reembedding=True 플래그"
+    },
+    {
+      "feature_id": "PB7-007",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 841,
+      "source_section": "§3.4 JSON->Neo4j",
+      "feature_name": "JSONToNeo4jMigrator 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "MERGE 기반 노드/엣지, BATCH_SIZE=200"
+    },
+    {
+      "feature_id": "PB7-008",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 990,
+      "source_section": "§3.5 설정 파일 변환",
+      "feature_name": "config.v1->v2 설정 파일 변환 구현",
+      "version_scope": "V2",
+      "category": "FT-CFG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "tomllib 파싱, 13섹션 매핑, tomli_w 저장"
+    },
+    {
+      "feature_id": "PB7-009",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1120,
+      "source_section": "§4.1 V2->V3 Postgres",
+      "feature_name": "V2->V3 Postgres 매니지드 마이그레이션",
+      "version_scope": "V3",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-004"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "pg_dump/pg_restore 5단계"
+    },
+    {
+      "feature_id": "PB7-010",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1175,
+      "source_section": "§4.2 Qdrant->Cloud",
+      "feature_name": "QdrantCloudMigrator 구현",
+      "version_scope": "V3",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-006"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Snapshot API 또는 배치 전송"
+    },
+    {
+      "feature_id": "PB7-011",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1244,
+      "source_section": "§4.3 Neo4j->Aura",
+      "feature_name": "Neo4jAuraMigrator 구현",
+      "version_scope": "V3",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "constraints/nodes/edges 복제, BATCH_SIZE=500"
+    },
+    {
+      "feature_id": "PB7-012",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1389,
+      "source_section": "§5.1 롤백",
+      "feature_name": "Alembic downgrade 롤백 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "target_revision 지정 롤백"
+    },
+    {
+      "feature_id": "PB7-013",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1428,
+      "source_section": "§5.2 백업/복원",
+      "feature_name": "BackupManager 백업/복원 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "full/incremental/snapshot, AES-256-CBC 암호화"
+    },
+    {
+      "feature_id": "PB7-014",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1567,
+      "source_section": "§5.3 블루-그린",
+      "feature_name": "블루-그린 배포 롤백 전략 구현",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Docker Compose profiles, nginx upstream 전환"
+    },
+    {
+      "feature_id": "PB7-015",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1635,
+      "source_section": "§6.1 사전 검증",
+      "feature_name": "PreValidator 사전 검증 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "source/target 접근성, 레코드수, 샘플 SHA-256"
+    },
+    {
+      "feature_id": "PB7-016",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1753,
+      "source_section": "§6.2 백업 실행",
+      "feature_name": "pre_migration_backup 자동 백업 실행",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "마이그레이션 전 필수 full 백업"
+    },
+    {
+      "feature_id": "PB7-017",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1781,
+      "source_section": "§6.3 오케스트레이터",
+      "feature_name": "MigrationOrchestrator 10단계 통합 오케스트레이터 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-004",
+        "PB7-005",
+        "PB7-006",
+        "PB7-007",
+        "PB7-008",
+        "PB7-012",
+        "PB7-013",
+        "PB7-015"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "사전검증->백업->스키마->SQLite->JSONL->Chroma->JSON->설정->사후검증->정리"
+    },
+    {
+      "feature_id": "PB7-018",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 1954,
+      "source_section": "§6.4 사후 검증",
+      "feature_name": "PostValidator 사후 검증 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-015"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "레코드수 비교, all_match 판정"
+    },
+    {
+      "feature_id": "PB7-019",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 2008,
+      "source_section": "§6.5 정리",
+      "feature_name": "V1 데이터 아카이브 및 보존 정책",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB7-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "~/.vamos/archive/v1/, 90일 보존"
+    },
+    {
+      "feature_id": "PB7-020",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 2030,
+      "source_section": "§7.1 재임베딩 전략",
+      "feature_name": "Dual-Collection 임베딩 전환 전략 (3-Phase)",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-006"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1(BGE-M3 1024D) + V2(text-embedding-3-small 1536D)"
+    },
+    {
+      "feature_id": "PB7-021",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 2077,
+      "source_section": "§7.2 EmbeddingMigrator",
+      "feature_name": "EmbeddingMigrator 점진적 재임베딩 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "PB7-020"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "BATCH_SIZE=100, OpenAI API 재임베딩, 속도제한"
+    },
+    {
+      "feature_id": "PB7-022",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 2242,
+      "source_section": "§7.2 HybridSearcher",
+      "feature_name": "HybridSearcher V1+V2 하이브리드 검색 구현",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "PB7-021"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1 결과 0.9배 페널티, 점수 병합"
+    },
+    {
+      "feature_id": "PB7-023",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "source_line": 2317,
+      "source_section": "§7.2 전환 스케줄",
+      "feature_name": "임베딩 전환 4단계 스케줄 정의",
+      "version_scope": "V2",
+      "category": "FT-MIG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "PB7-021",
+        "PB7-022"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "배포직후->7일배치->14일확인->30일삭제"
+    }
+  ],
+  "statistics": {
+    "total_features": 143,
+    "by_source": {
+      "PHASE_B1_API_CONTRACT": 31,
+      "PHASE_B2_PROJECT_STRUCTURE": 28,
+      "PHASE_B3_DEPENDENCIES": 16,
+      "PHASE_B4_CONFIG_SPEC": 19,
+      "PHASE_B5_TEST_STRATEGY": 11,
+      "PHASE_B6_CICD_PIPELINE": 15,
+      "PHASE_B7_MIGRATION_STRATEGY": 23
+    },
+    "extractable_true": 142,
+    "extractable_false": 1,
+    "by_category": {
+      "FT-API": 24,
+      "FT-INFRA": 42,
+      "FT-UI": 1,
+      "FT-SEC": 4,
+      "FT-FUNC": 4,
+      "FT-CFG": 23,
+      "FT-MOD": 11,
+      "FT-MIG": 19,
+      "FT-SCHEMA": 5,
+      "FT-TEST": 10
+    },
+    "by_version_scope": {
+      "V1": 101,
+      "V1,V2": 5,
+      "V2": 30,
+      "V3": 7
+    },
+    "by_implementation_type": {
+      "신규구현": 117,
+      "마이그레이션": 11,
+      "설정변경": 15
+    },
+    "confidence_explicit": 142,
+    "confidence_inferred": 1,
+    "v_unknown_count": 0,
+    "judgment_needed_count": 1
+  },
+  "reading_completion": {
+    "PHASE_B1_API_CONTRACT": {
+      "total_lines": 1300,
+      "lines_read": 1300,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B1 완료"
+    },
+    "PHASE_B2_PROJECT_STRUCTURE": {
+      "total_lines": 887,
+      "lines_read": 887,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B2 완료"
+    },
+    "PHASE_B3_DEPENDENCIES": {
+      "total_lines": 368,
+      "lines_read": 368,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B3 완료"
+    },
+    "PHASE_B4_CONFIG_SPEC": {
+      "total_lines": 1243,
+      "lines_read": 1243,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B4 완료"
+    },
+    "PHASE_B5_TEST_STRATEGY": {
+      "total_lines": 946,
+      "lines_read": 946,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B5 완료"
+    },
+    "PHASE_B6_CICD_PIPELINE": {
+      "total_lines": 1746,
+      "lines_read": 1746,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B6 완료"
+    },
+    "PHASE_B7_MIGRATION_STRATEGY": {
+      "total_lines": 2337,
+      "lines_read": 2337,
+      "read_rate": "100%",
+      "unread_areas": "없음",
+      "last_line_quote": "> **문서 끝** | PHASE_B7 완료"
+    },
+    "총_줄수": 8827,
+    "총_읽은_줄수": 8827,
+    "전체_읽기_완료율": "100%"
+  }
+}

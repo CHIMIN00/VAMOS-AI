@@ -1,0 +1,17 @@
+{
+  "fix_id": "FIX-006",
+  "fg": "FG-B08",
+  "tier": 1,
+  "order": 6,
+  "severity": "BLOCKER",
+  "description": "v10 추가(~378건) 후 §6.3 테스트 ~84→~128 갱신. V2-PH2 COND 모듈 테스트 대폭 보강(~5→~30). §6.13 동기화.",
+  "test_count_change": {
+    "V0": "~15 (유지)",
+    "V1": "~62→~70 (+8: v10 추가 모듈 커버)",
+    "V2": "~5→~30 (+25: COND 모듈, SDAR, HMAC, LlamaGuard, VAL-003/005)",
+    "V3": "~2→~13 (+11: EXP 모듈, B-시리즈, Self-evo)",
+    "total": "~84→~128"
+  },
+  "s613_total_change": "~462→~506 (+44: 테스트 증가분)",
+  "applied_at": "2026-03-12"
+}

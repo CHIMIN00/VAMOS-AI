@@ -1,0 +1,87 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA02_base_plan.json",
+    "total_items_checked": 108,
+    "pass_count": 100,
+    "fail_count": 8,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-5",
+      "item_id": "EA-02",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 13~13"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-02",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 80~80"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-02",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 83~92"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-02_067",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-02_001~EA-02_010",
+      "severity": "WARNING",
+      "message": "동일 키 'COST_CEILING_DAILY'가 6회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "6 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-02_003~EA-02_012",
+      "severity": "WARNING",
+      "message": "동일 키 'COST_CEILING_MONTHLY'가 6회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "6 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-02_040~EA-02_050",
+      "severity": "WARNING",
+      "message": "동일 키 'CORE_MODULE_COUNT'가 4회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "4 distinct values"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:PLAN-3.0",
+      "severity": "WARNING",
+      "message": "파일 'PLAN-3.0'(7046줄)의 후반부 추출 비율이 낮음: 13/79건 (16%)",
+      "expected": ">= 20%",
+      "actual": "16%"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 5,
+    "INFO": 3
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

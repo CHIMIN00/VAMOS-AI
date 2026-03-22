@@ -1,0 +1,1418 @@
+{
+  "meta": {
+    "task": "[GT-1] 파일 경로 레지스트리 (관점 B용)",
+    "created": "2026-03-07",
+    "sources": {
+      "part2": "VAMOS_구현가이드_PART2_구현단계.md (v21.0.0, Phase 2 수정 반영)",
+      "phase_b2": "PHASE_B2_PROJECT_STRUCTURE.md",
+      "allowlist": "v9_allowlist.json ([-1C] 산출물)"
+    },
+    "exclude_lines": "3777-3807 (changelog)",
+    "naming_convention_note": "PART2 V0-STEP-4는 'i1_intent_detector.py'(zero없음), V1-Phase1은 'i01_intent_detector.py'(zero있음). PHASE_B2는 'i1_intent/'(디렉토리 구조). 구조적 불일치 존재."
+  },
+
+  "structural_discrepancies": [
+    {
+      "id": "SD-01",
+      "description": "PART2는 orange_core I-모듈을 단일 파일(i01_intent_detector.py)로 참조하나, PHASE_B2는 서브디렉토리 구조(i1_intent/parser.py, classifier.py)로 정의",
+      "part2_pattern": "backend/vamos_core/orange_core/i{N}_{name}.py",
+      "phase_b2_pattern": "backend/vamos_core/orange_core/i{N}_{name}/",
+      "affected_modules": ["i1_intent", "i2_evidence", "i3_memory", "i4_output", "i5_gate"],
+      "severity": "MEDIUM",
+      "note": "관점 C에서 '구현 시 어떤 구조를 따를 것인지 모호' 결함으로 플래그 가능"
+    },
+    {
+      "id": "SD-02",
+      "description": "PART2 V0-STEP-4 명명(i1_)과 V1-Phase 1 명명(i01_) 불일치",
+      "v0_step4_example": "i1_intent_detector.py (line 887)",
+      "v1_phase1_example": "i01_intent_detector.py (line 1387)",
+      "severity": "LOW",
+      "note": "동일 모듈에 대한 명명 불일치. PHASE_B2는 i1_ 사용"
+    },
+    {
+      "id": "SD-03",
+      "description": "PART2 V2/V3는 backend/vamos_core/modules/ 하위에 COND/EXP 모듈 배치. PHASE_B2에는 modules/ 디렉토리 미정의",
+      "part2_paths": ["backend/vamos_core/modules/i07_project_session_manager.py", "backend/vamos_core/modules/i25_sdar_engine.py"],
+      "phase_b2_note": "PHASE_B2에 modules/ 디렉토리 미존재. V2+ 모듈의 물리적 위치 불명확",
+      "severity": "MEDIUM"
+    }
+  ],
+
+  "entries": [
+    {
+      "normalized_path": "vamos/",
+      "part2_references": [
+        {"line": 70, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 223, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§1.2",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/",
+      "part2_references": [
+        {"line": 71, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 224, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §3.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/App.tsx",
+      "part2_references": [
+        {"line": 76, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 229, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/components/",
+      "part2_references": [
+        {"line": 72, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 225, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/hooks/",
+      "part2_references": [
+        {"line": 73, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 226, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/stores/",
+      "part2_references": [
+        {"line": 74, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 227, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/types/",
+      "part2_references": [
+        {"line": 75, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 228, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src/pages/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PART2 V1-Phase 4에서 7개 페이지 언급하나 src/pages/ 디렉토리 자체 미참조"
+    },
+    {
+      "normalized_path": "src/utils/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "src/styles/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "src/assets/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§3.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "src-tauri/",
+      "part2_references": [
+        {"line": 77, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 230, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §4.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/main.rs",
+      "part2_references": [
+        {"line": 82, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 235, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/Cargo.toml",
+      "part2_references": [
+        {"line": 83, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 236, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/tauri.conf.json",
+      "part2_references": [
+        {"line": 84, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 237, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/commands/",
+      "part2_references": [
+        {"line": 79, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 232, "section": "V0-STEP-1 프롬프트", "format": "absolute"},
+        {"line": 679, "section": "V0-STEP-3", "format": "absolute"},
+        {"line": 741, "section": "V0-STEP-3 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/models/",
+      "part2_references": [
+        {"line": 80, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 233, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/bridge/",
+      "part2_references": [
+        {"line": 81, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 234, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/bridge/python_manager.rs",
+      "part2_references": [
+        {"line": 676, "section": "V0-STEP-3", "format": "absolute"},
+        {"line": 733, "section": "V0-STEP-3 프롬프트", "format": "absolute"},
+        {"line": 2839, "section": "§6.2.3", "format": "relative", "raw": "python_manager.rs"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/bridge/ipc_protocol.rs",
+      "part2_references": [
+        {"line": 2838, "section": "§6.2.3", "format": "relative", "raw": "ipc_protocol.rs"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/state/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "src-tauri/src/utils/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "src-tauri/src/tests/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 V1-Phase 5에서 Rust Unit Tests ~8개 언급하나 디렉토리 경로 미명시"
+    },
+    {
+      "normalized_path": "backend/",
+      "part2_references": [
+        {"line": 85, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 238, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §5.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/",
+      "part2_references": [
+        {"line": 86, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 239, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/",
+      "part2_references": [
+        {"line": 87, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 240, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.2",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i1_intent/",
+      "part2_references": [
+        {"line": 887, "section": "V0-STEP-4", "format": "absolute", "raw": "backend/vamos_core/orange_core/i1_intent_detector.py", "note": "SD-01: PART2는 flat file로 참조"},
+        {"line": 1387, "section": "V1-Phase 1", "format": "relative", "raw": "i01_intent_detector.py", "note": "SD-02: V1은 i01_ 사용"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "phase_b2_files": ["parser.py", "classifier.py", "__init__.py"],
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-01"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i2_evidence/",
+      "part2_references": [
+        {"line": 897, "section": "V0-STEP-4", "format": "absolute", "raw": "backend/vamos_core/orange_core/i2_context_builder.py"},
+        {"line": 1388, "section": "V1-Phase 1", "format": "relative", "raw": "i02_context_builder.py"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "phase_b2_files": ["collector.py", "qod_scorer.py", "__init__.py"],
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-01",
+      "note": "PART2는 'context_builder'로, PHASE_B2는 'evidence'로 명명. 역할명 불일치"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i3_memory/",
+      "part2_references": [
+        {"line": 1402, "section": "V1-Phase 1", "format": "relative", "raw": "i03_memory_commit.py"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "phase_b2_files": ["planner.py", "__init__.py"],
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-01"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i4_output/",
+      "part2_references": [
+        {"line": 1401, "section": "V1-Phase 1", "format": "relative", "raw": "i11_output_composer.py"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "phase_b2_files": ["structurer.py", "masker.py", "__init__.py"],
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-01",
+      "note": "PART2 I-11 output_composer → PHASE_B2 i4_output. 번호 체계 불일치"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i5_gate/",
+      "part2_references": [
+        {"line": 903, "section": "V0-STEP-4", "format": "absolute", "raw": "backend/vamos_core/orange_core/i5_decision_engine.py"},
+        {"line": 1390, "section": "V1-Phase 1", "format": "relative", "raw": "i05_decision_engine.py"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "phase_b2_files": ["evaluator.py", "router.py", "__init__.py"],
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-01",
+      "note": "PART2 'decision_engine' → PHASE_B2 'gate'. 역할명 불일치"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/decision_kernel.py",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/front_mini.py",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.2",
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B2에만 존재. PART2 미참조"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/pipeline.py",
+      "part2_references": [
+        {"line": 929, "section": "V0-STEP-4 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 agent/pipeline/ 디렉토리 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i8_policy_engine.py",
+      "part2_references": [
+        {"line": 914, "section": "V0-STEP-4 프롬프트", "format": "absolute"},
+        {"line": 1391, "section": "V1-Phase 1", "format": "relative", "raw": "i08_policy_engine.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/policy/checker.py로 대체"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i9_cost_manager.py",
+      "part2_references": [
+        {"line": 921, "section": "V0-STEP-4 프롬프트", "format": "absolute"},
+        {"line": 1408, "section": "V1-Phase 1", "format": "relative", "raw": "i09_cost_manager.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/cost/budget.py로 대체"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i19_approval_manager.py",
+      "part2_references": [
+        {"line": 959, "section": "V0-STEP-4 프롬프트", "format": "absolute"},
+        {"line": 1392, "section": "V1-Phase 1", "format": "relative", "raw": "i19_approval_manager.py"},
+        {"line": 3177, "section": "§6.9", "format": "absolute", "raw": "orange_core/i19_approval_manager.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/approval/manager.py로 대체"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i20_failure_manager.py",
+      "part2_references": [
+        {"line": 965, "section": "V0-STEP-4 프롬프트", "format": "absolute"},
+        {"line": 1407, "section": "V1-Phase 1", "format": "relative", "raw": "i20_failure_manager.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2에 해당 파일 없음"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i15_qod_evaluator.py",
+      "part2_references": [
+        {"line": 1389, "section": "V1-Phase 1", "format": "relative", "raw": "i15_qod_evaluator.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. QoD는 PHASE_B2 i2_evidence/qod_scorer.py에 통합"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i04_multimodal_interpreter.py",
+      "part2_references": [
+        {"line": 1398, "section": "V1-Phase 1", "format": "relative", "raw": "i04_multimodal_interpreter.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i06_self_check.py",
+      "part2_references": [
+        {"line": 1399, "section": "V1-Phase 1", "format": "relative", "raw": "i06_self_check.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i10_tool_router.py",
+      "part2_references": [
+        {"line": 1400, "section": "V1-Phase 1", "format": "relative", "raw": "i10_tool_router.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 infra/tools/registry.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i13_multimodal_renderer.py",
+      "part2_references": [
+        {"line": 1403, "section": "V1-Phase 1", "format": "relative", "raw": "i13_multimodal_renderer.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i14_summarizer.py",
+      "part2_references": [
+        {"line": 1404, "section": "V1-Phase 1", "format": "relative", "raw": "i14_summarizer.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i16_knowledge_search.py",
+      "part2_references": [
+        {"line": 1405, "section": "V1-Phase 1", "format": "relative", "raw": "i16_knowledge_search.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/orange_core/i17_blue_node_manager.py",
+      "part2_references": [
+        {"line": 1406, "section": "V1-Phase 1", "format": "relative", "raw": "i17_blue_node_manager.py"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B2는 blue_nodes/node_registry.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/blue_nodes/",
+      "part2_references": [
+        {"line": 88, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 241, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.3",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/infra/",
+      "part2_references": [
+        {"line": 89, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 242, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.4",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/infra/logger.py",
+      "part2_references": [
+        {"line": 1068, "section": "V0-STEP-5 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 storage/logging/jsonl_logger.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/infra/config_loader.py",
+      "part2_references": [
+        {"line": 1092, "section": "V0-STEP-5 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 vamos_core/config.py + src-tauri/src/utils/config.rs 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/agent/",
+      "part2_references": [
+        {"line": 90, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 243, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.5",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/storage/",
+      "part2_references": [
+        {"line": 91, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 244, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.6",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/storage/memory_store.py",
+      "part2_references": [
+        {"line": 1039, "section": "V0-STEP-5 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 storage/memory/ 서브디렉토리 구조"
+    },
+    {
+      "normalized_path": "backend/vamos_core/safety/",
+      "part2_references": [
+        {"line": 92, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 245, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.7",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/safety/gates/policy_gate.py",
+      "part2_references": [
+        {"line": 3174, "section": "§6.9", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "§6.9 SDAR Gate 코드 경로에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/policy/checker.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/safety/gates/cost_gate.py",
+      "part2_references": [
+        {"line": 3176, "section": "§6.9", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "§6.9 SDAR Gate 코드 경로에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/cost/budget.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/schemas/",
+      "part2_references": [
+        {"line": 93, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 246, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.8",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/schemas/contracts.py",
+      "part2_references": [
+        {"line": 443, "section": "V0-STEP-2", "format": "absolute"},
+        {"line": 634, "section": "V0-STEP-2", "format": "relative", "raw": "contracts.py"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.8",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/schemas/registries.py",
+      "part2_references": [
+        {"line": 473, "section": "V0-STEP-2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 schemas/registry_types.py 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/mcp/",
+      "part2_references": [
+        {"line": 94, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 247, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §5.9",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/rpc/",
+      "part2_references": [
+        {"line": 95, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 248, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": true,
+      "allowlist_reason": "XREF-V0-12: PHASE_B2 정본에 미명시. Tauri↔Python 통신에 기능적 필요로 추가"
+    },
+    {
+      "normalized_path": "backend/vamos_core/rpc/server.py",
+      "part2_references": [
+        {"line": 657, "section": "V0-STEP-3", "format": "absolute"},
+        {"line": 709, "section": "V0-STEP-3 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": true,
+      "allowlist_reason": "XREF-V0-12: 기능적 필요로 추가"
+    },
+    {
+      "normalized_path": "backend/tests/",
+      "part2_references": [
+        {"line": 96, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 249, "section": "V0-STEP-1 프롬프트", "format": "absolute"},
+        {"line": 1240, "section": "V0-STEP-6 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1, §7.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/pyproject.toml",
+      "part2_references": [
+        {"line": 97, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 250, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§5.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "shared/",
+      "part2_references": [
+        {"line": 98, "section": "V0-STEP-1", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §6.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "shared/types/",
+      "part2_references": [
+        {"line": 99, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 251, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§6.1",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "config/",
+      "part2_references": [
+        {"line": 100, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 252, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §8",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "config/config.v1.toml",
+      "part2_references": [
+        {"line": 101, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 253, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2 핵심 설정 파일. PHASE_B2는 config/default.toml, development.toml 등 환경별 분리 구조 사용. config.v1.toml 미존재"
+    },
+    {
+      "normalized_path": "config/.env.example",
+      "part2_references": [
+        {"line": 102, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 254, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B2는 루트의 .env.example 사용. config/ 하위가 아닌 루트에 위치"
+    },
+    {
+      "normalized_path": "data/",
+      "part2_references": [
+        {"line": 103, "section": "V0-STEP-1", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": true,
+      "allowlist_reason": "XREF-V0-10: CLAUDE.md 기준 추가. PHASE_B2 정본에 미포함, 실무 필요로 추가"
+    },
+    {
+      "normalized_path": "logs/",
+      "part2_references": [
+        {"line": 104, "section": "V0-STEP-1", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": true,
+      "allowlist_reason": "NOTE: CLAUDE.md 기준 추가. PHASE_B2 정본에 미포함, 실무 필요로 추가"
+    },
+    {
+      "normalized_path": "scripts/",
+      "part2_references": [
+        {"line": 105, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 255, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "scripts/generate_types.py",
+      "part2_references": [
+        {"line": 483, "section": "V0-STEP-2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B2는 shared/codegen/generate_ts.py, generate_rs.py, generate_py.py로 분리"
+    },
+    {
+      "normalized_path": "docs/",
+      "part2_references": [
+        {"line": 106, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 256, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": ".github/workflows/",
+      "part2_references": [
+        {"line": 107, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 257, "section": "V0-STEP-1 프롬프트", "format": "absolute"},
+        {"line": 1194, "section": "V0-STEP-6 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "CLAUDE.md",
+      "part2_references": [
+        {"line": 108, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 258, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "PART2 디렉토리 트리에 포함. PHASE_B2에 미명시 (외부 SOT 문서)"
+    },
+    {
+      "normalized_path": "README.md",
+      "part2_references": [
+        {"line": 109, "section": "V0-STEP-1", "format": "absolute"},
+        {"line": 259, "section": "V0-STEP-1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "schemas/seed/",
+      "part2_references": [
+        {"line": 386, "section": "V0-STEP-1", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PART2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 docs/schemas/ 사용"
+    },
+    {
+      "normalized_path": ".github/workflows/quality-python.yml",
+      "part2_references": [
+        {"line": 1166, "section": "V0-STEP-6", "format": "relative", "raw": "quality-python.yml"},
+        {"line": 1196, "section": "V0-STEP-6 프롬프트", "format": "relative"},
+        {"line": 2883, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19: PHASE_B6 정본은 ci.yml 단일 통합. PART2는 역할별 분리"
+    },
+    {
+      "normalized_path": ".github/workflows/quality-rust.yml",
+      "part2_references": [
+        {"line": 2884, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/quality-react.yml",
+      "part2_references": [
+        {"line": 2885, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/quality-schema.yml",
+      "part2_references": [
+        {"line": 2886, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/test-python.yml",
+      "part2_references": [
+        {"line": 1167, "section": "V0-STEP-6", "format": "relative", "raw": "test-python.yml"},
+        {"line": 1219, "section": "V0-STEP-6 프롬프트", "format": "relative"},
+        {"line": 2887, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/test-rust.yml",
+      "part2_references": [
+        {"line": 2888, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/test-react.yml",
+      "part2_references": [
+        {"line": 2889, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/coverage-report.yml",
+      "part2_references": [
+        {"line": 2890, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/build-tauri.yml",
+      "part2_references": [
+        {"line": 2891, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/release.yml",
+      "part2_references": [
+        {"line": 2892, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": ".github/workflows/security.yml",
+      "part2_references": [
+        {"line": 2893, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/build-docker.yml",
+      "part2_references": [
+        {"line": 2894, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/deploy-v2.yml",
+      "part2_references": [
+        {"line": 2895, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/deploy-v3.yml",
+      "part2_references": [
+        {"line": 2896, "section": "§6.4", "format": "relative"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "file",
+      "allowlist": false,
+      "note": "XREF-V0-19"
+    },
+    {
+      "normalized_path": ".github/workflows/ci.yml",
+      "part2_references": [
+        {"line": 2879, "section": "§6.4", "format": "relative", "raw": "ci.yml", "note": "주석으로 언급"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V1",
+      "type": "file",
+      "allowlist": false,
+      "note": "PHASE_B6 정본의 통합 CI. PART2 §6.4는 역할별 분리 14개 yml 사용"
+    },
+    {
+      "normalized_path": "tests/",
+      "part2_references": [],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2, §7.4",
+      "v_scope": "V1",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PHASE_B2 루트 tests/ 디렉토리. PART2는 backend/tests/만 명시적 참조"
+    },
+    {
+      "normalized_path": "backend/vamos_core/modules/",
+      "part2_references": [
+        {"line": 1928, "section": "V2-Phase 2", "format": "absolute", "raw": "backend/vamos_core/modules/i07_project_session_manager.py"},
+        {"line": 1937, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1943, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1949, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1954, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1966, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1972, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1978, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1984, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 1993, "section": "V2-Phase 2", "format": "absolute"},
+        {"line": 2407, "section": "V3-Phase 2", "format": "absolute"},
+        {"line": 2435, "section": "V3-Phase 2 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2+",
+      "type": "directory",
+      "allowlist": false,
+      "structural_discrepancy": "SD-03",
+      "note": "PART2 V2/V3 COND/EXP 모듈의 물리적 위치. PHASE_B2에 modules/ 디렉토리 미정의"
+    },
+    {
+      "normalized_path": "backend/vamos_core/security/",
+      "part2_references": [
+        {"line": 2108, "section": "V2-Phase 3", "format": "absolute", "raw": "backend/vamos_core/security/hmac_auth.py"},
+        {"line": 2114, "section": "V2-Phase 3", "format": "absolute"},
+        {"line": 2124, "section": "V2-Phase 3", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PART2 V2에 명시되나 PHASE_B2에 미존재. PHASE_B2는 safety/ 디렉토리 사용"
+    },
+    {
+      "normalized_path": "backend/vamos_core/agent_teams/",
+      "part2_references": [
+        {"line": 2078, "section": "V2-Phase 3", "format": "absolute"},
+        {"line": 2086, "section": "V2-Phase 3", "format": "absolute"},
+        {"line": 2096, "section": "V2-Phase 3", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2+",
+      "type": "directory",
+      "allowlist": false,
+      "note": "PART2 V2/V3에 명시되나 PHASE_B2에 미존재"
+    },
+    {
+      "normalized_path": "backend/vamos_core/self_evo/",
+      "part2_references": [
+        {"line": 2424, "section": "V3-Phase 2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/learning/",
+      "part2_references": [
+        {"line": 2463, "section": "V3-Phase 2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/reasoning/",
+      "part2_references": [
+        {"line": 2471, "section": "V3-Phase 2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/generation/",
+      "part2_references": [
+        {"line": 2477, "section": "V3-Phase 2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/experimental/",
+      "part2_references": [
+        {"line": 2483, "section": "V3-Phase 2", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "backend/vamos_core/multimodal/",
+      "part2_references": [
+        {"line": 2633, "section": "V3-Phase 3", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "deploy/k8s/helm/vamos/",
+      "part2_references": [
+        {"line": 2251, "section": "V3-Phase 1", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "directory",
+      "allowlist": false,
+      "note": "V3 Kubernetes 배포. PHASE_B2 범위 외"
+    },
+    {
+      "normalized_path": "scripts/migration/",
+      "part2_references": [
+        {"line": 1776, "section": "V2-Phase 1", "format": "absolute"},
+        {"line": 1789, "section": "V2-Phase 1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "scripts/deploy/",
+      "part2_references": [
+        {"line": 1838, "section": "V2-Phase 1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V2+",
+      "type": "directory",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "config/config.v3.toml",
+      "part2_references": [
+        {"line": 2308, "section": "V3-Phase 1 프롬프트", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V3",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "data/vamos.db",
+      "part2_references": [
+        {"line": 1027, "section": "V0-STEP-5", "format": "absolute"}
+      ],
+      "phase_b2_exists": false,
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": true,
+      "allowlist_reason": "data/ 허용목록 하위 파일. 런타임 생성"
+    },
+    {
+      "normalized_path": "package.json",
+      "part2_references": [
+        {"line": 282, "section": "V0-STEP-1 프롬프트", "format": "relative"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": ".gitignore",
+      "part2_references": [
+        {"line": 375, "section": "V0-STEP-1", "format": "relative"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§2",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false
+    },
+    {
+      "normalized_path": "src-tauri/src/utils/config.rs",
+      "part2_references": [
+        {"line": 2840, "section": "§6.2.3", "format": "relative", "raw": "config.rs"}
+      ],
+      "phase_b2_exists": true,
+      "phase_b2_section": "§4.1",
+      "v_scope": "V0+",
+      "type": "file",
+      "allowlist": false,
+      "note": "[FIX-10 적용] PART2 v21.0.0에서 config.rs로 수정 완료. PHASE_B2 §4.1과 정합"
+    }
+  ],
+
+  "v1_phase2to6_reverse_mapping": {
+    "description": "V1 Phase 2~6은 구현 항목에 파일 경로를 명시하지 않음. PHASE_B2 기반 예상 파일 위치 역추론",
+    "phase2_storage_memory_rag": [
+      {"item": "L0 Session Memory", "inferred_path": "backend/vamos_core/storage/memory/l0_session.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "L1 Project Memory", "inferred_path": "backend/vamos_core/storage/memory/l1_project.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "L2 Long-term Memory", "inferred_path": "backend/vamos_core/storage/memory/l2_longterm.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "L3 Procedural Memory", "inferred_path": "backend/vamos_core/storage/memory/l3_procedural.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "Chroma Vector DB", "inferred_path": "backend/vamos_core/storage/vector/chroma_store.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "JSON GraphRAG", "inferred_path": "backend/vamos_core/storage/graph/json_graph.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "Semantic Cache", "inferred_path": "backend/vamos_core/storage/cache/semantic_cache.py", "phase_b2_section": "§5.6", "confidence": "HIGH"},
+      {"item": "PII 마스킹", "inferred_path": "backend/vamos_core/orange_core/i4_output/masker.py", "phase_b2_section": "§5.2", "confidence": "HIGH"},
+      {"item": "메모리 B-3 Decay", "inferred_path": "backend/vamos_core/storage/memory/manager.py", "phase_b2_section": "§5.6", "confidence": "MEDIUM"}
+    ],
+    "phase3_workflow_agent": [
+      {"item": "LangGraph StateGraph 5-Phase", "inferred_path": "backend/vamos_core/agent/graph/", "phase_b2_section": "§5.5", "confidence": "HIGH"},
+      {"item": "Gate 통합 노드", "inferred_path": "backend/vamos_core/agent/gate_pipeline.py", "phase_b2_section": "§5.5", "confidence": "HIGH"},
+      {"item": "Circuit Breaker", "inferred_path": "backend/vamos_core/agent/circuit_breaker.py", "phase_b2_section": "§5.5", "confidence": "HIGH"},
+      {"item": "A-1 MultiBrain Adapter", "inferred_path": "backend/vamos_core/infra/brain/adapter.py", "phase_b2_section": "§5.4", "confidence": "HIGH"},
+      {"item": "HITL 승인", "inferred_path": "backend/vamos_core/agent/hitl.py", "phase_b2_section": "§5.5", "confidence": "HIGH"},
+      {"item": "Tool Registry (E-1~E-6)", "inferred_path": "backend/vamos_core/infra/tools/registry.py", "phase_b2_section": "§5.4", "confidence": "HIGH"},
+      {"item": "Agent Teams V1", "inferred_path": "backend/vamos_core/agent/graph/", "phase_b2_section": "§5.5", "confidence": "MEDIUM", "note": "V1에서는 별도 디렉토리 없이 agent/ 내에서 처리"}
+    ],
+    "phase4_ui_ux": [
+      {"item": "3-Column Layout + Views", "inferred_path": "src/components/layout/MainLayout.tsx", "phase_b2_section": "§3.1", "confidence": "HIGH"},
+      {"item": "7개 페이지", "inferred_path": "src/pages/*.tsx (Dashboard/Chat/Workflow/Memory/Settings/Log/NodeDetail)", "phase_b2_section": "§3.1", "confidence": "HIGH"},
+      {"item": "~44개 React 컴포넌트", "inferred_path": "src/components/**/*.tsx", "phase_b2_section": "§3.1", "confidence": "HIGH"},
+      {"item": "8 Custom Hooks", "inferred_path": "src/hooks/*.ts", "phase_b2_section": "§3.1", "confidence": "HIGH"},
+      {"item": "7 Zustand Stores", "inferred_path": "src/stores/*.ts", "phase_b2_section": "§3.1", "confidence": "HIGH"}
+    ],
+    "phase5_integration_test": [
+      {"item": "Python Unit Tests ~45개", "inferred_path": "backend/tests/unit/**/*.py", "phase_b2_section": "§7.1", "confidence": "HIGH"},
+      {"item": "Rust Unit Tests ~8개", "inferred_path": "src-tauri/src/tests/*.rs", "phase_b2_section": "§4.1, §7.3", "confidence": "HIGH"},
+      {"item": "React Unit Tests ~15개", "inferred_path": "src/__tests__/**/*.test.tsx", "phase_b2_section": "§7.2", "confidence": "HIGH"},
+      {"item": "E2E Tests ~8개", "inferred_path": "tests/integration/*.py + backend/tests/e2e/*.py", "phase_b2_section": "§7.1, §7.4", "confidence": "MEDIUM"}
+    ],
+    "phase6_ai_investing_mcp": [
+      {"item": "MCP Bridge Layer", "inferred_path": "backend/vamos_core/mcp/bridge.py", "phase_b2_section": "§5.9", "confidence": "HIGH"},
+      {"item": "MCP Server", "inferred_path": "backend/vamos_core/mcp/server.py", "phase_b2_section": "§5.9", "confidence": "HIGH"},
+      {"item": "MCP Client", "inferred_path": "backend/vamos_core/mcp/client.py", "phase_b2_section": "§5.9", "confidence": "HIGH"},
+      {"item": "Paper Trading / AI Investing", "inferred_path": "backend/vamos_core/blue_nodes/quant/", "phase_b2_section": "§5.3", "confidence": "MEDIUM", "note": "PHASE_B2 quant 노드 활용. 별도 investing 디렉토리 미존재"},
+      {"item": "S-1 Self-check Engine", "inferred_path": "backend/vamos_core/orange_core/i5_gate/evaluator.py", "phase_b2_section": "§5.2", "confidence": "MEDIUM"}
+    ],
+    "perspective_c_flag_criteria": "V1 Phase 2~6의 구현 항목에 파일 경로가 미명시된 경우: (1) PHASE_B2에서 명확히 추론 가능하면 INFO 등급, (2) 추론 불확실(confidence=MEDIUM)이면 WARN 등급으로 분류. 구현 가능성 관점(C)에서 '경로 모호성'으로 플래그"
+  },
+
+  "phase_b2_only_paths": {
+    "description": "PHASE_B2에만 존재하고 PART2에 미참조된 주요 경로들 (구조적 차이에 의한 것 제외)",
+    "notable": [
+      {"path": "src/main.tsx", "phase_b2_section": "§3.1"},
+      {"path": "src/vite-env.d.ts", "phase_b2_section": "§3.1"},
+      {"path": "src-tauri/build.rs", "phase_b2_section": "§4.1"},
+      {"path": "src-tauri/src/lib.rs", "phase_b2_section": "§4.1"},
+      {"path": "src-tauri/capabilities/default.json", "phase_b2_section": "§4.1"},
+      {"path": "backend/vamos_core/__init__.py", "phase_b2_section": "§5.1"},
+      {"path": "backend/vamos_core/main.py", "phase_b2_section": "§5.1"},
+      {"path": "backend/vamos_core/config.py", "phase_b2_section": "§5.1"},
+      {"path": "shared/codegen/", "phase_b2_section": "§6.1"},
+      {"path": "vite.config.ts", "phase_b2_section": "§2"},
+      {"path": "tailwind.config.ts", "phase_b2_section": "§2"},
+      {"path": "postcss.config.js", "phase_b2_section": "§2"},
+      {"path": "tsconfig.json", "phase_b2_section": "§2"},
+      {"path": ".vscode/", "phase_b2_section": "§2"},
+      {"path": "backend/poetry.lock", "phase_b2_section": "§5.1"},
+      {"path": "src-tauri/Cargo.lock", "phase_b2_section": "§4.1"},
+      {"path": "backend/tests/pytest.ini", "phase_b2_section": "§7.1"},
+      {"path": "backend/vamos_core/mcp/protocol.py", "phase_b2_section": "§5.9"},
+      {"path": "backend/vamos_core/mcp/tool_discovery.py", "phase_b2_section": "§5.9"},
+      {"path": "backend/vamos_core/schemas/enums.py", "phase_b2_section": "§5.8"},
+      {"path": "backend/vamos_core/schemas/validators.py", "phase_b2_section": "§5.8"}
+    ]
+  },
+
+  "stats": {
+    "total_unique_paths_in_registry": 111,
+    "part2_referenced": 101,
+    "phase_b2_only": 10,
+    "matched": 46,
+    "allowlisted": 5,
+    "unmatched_part2_only": 55,
+    "unmatched_phase_b2_only": 10,
+    "structural_discrepancies": 3,
+    "ci_cd_yml_count": 15,
+    "v1_phase2to6_reverse_mapped_items": 30,
+    "v1_phase2to6_high_confidence": 25,
+    "v1_phase2to6_medium_confidence": 5,
+    "note": "V2/V3 전용 경로(modules/, security/, agent_teams/, self_evo/, deploy/ 등)는 PHASE_B2에 미존재가 정상 (V2+ 범위)"
+  }
+}

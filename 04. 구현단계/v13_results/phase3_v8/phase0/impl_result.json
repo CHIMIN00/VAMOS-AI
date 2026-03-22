@@ -1,0 +1,268 @@
+{
+  "session": "session_17",
+  "phase": "phase3_v8_phase0_implementation",
+  "timestamp": "2026-03-22T00:15:00Z",
+  "scripts": {
+    "IMP-A": {
+      "name": "File Paths",
+      "verdict": "PASS",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "part2_extension",
+          "path": "backend/vamos_core/rpc/",
+          "detail": "PART2 adds rpc/ directory not in PHASE_B2 canonical structure. PART2 self-annotates this as XREF-V0-12 functional addition."
+        },
+        {
+          "type": "part2_extension",
+          "path": "data/",
+          "detail": "PART2 adds data/ at root (XREF-V0-10). PHASE_B2 has data/ under config/ layout (B4 §1.3). Acceptable divergence."
+        },
+        {
+          "type": "part2_extension",
+          "path": "logs/",
+          "detail": "PART2 adds logs/ at root. PHASE_B2 places logs under data/logs/. Acceptable divergence."
+        }
+      ],
+      "total_errors": 0,
+      "details": {
+        "part2_paths_checked": 28,
+        "b2_paths_verified": 25,
+        "part2_only_paths": 3,
+        "b2_only_paths": 0,
+        "description": "All file paths in PART2 (src/, src-tauri/, backend/vamos_core/, shared/, config/, scripts/, docs/, .github/workflows/) exist in PHASE_B2 project structure. PART2 references orange_core/, blue_nodes/, infra/, agent/, storage/, safety/, schemas/, mcp/ under vamos_core/ — all match B2 §5.1-5.9. Three extensions (rpc/, data/, logs/) are self-documented in PART2 with XREF notes. Module file paths (i01_intent_detector.py through i20_failure_manager.py) use M-7 naming convention under backend/vamos_core/orange_core/ which is consistent with B2 §5.2 orange_core/ directory."
+      },
+      "v8_delta": "v8 IMP-A was Module Dependency Graph (nodes/edges/cycles), not File Paths. v13 re-scopes IMP-A to File Path verification per task spec. Different verification target.",
+      "facts_checked": 28
+    },
+    "IMP-B": {
+      "name": "Dependency Order",
+      "verdict": "PASS",
+      "errors": [],
+      "total_errors": 0,
+      "details": {
+        "modules_checked": 17,
+        "dependency_edges": 19,
+        "cycles_found": 0,
+        "topological_order": [
+          "I-1 (no deps)",
+          "I-16 (no deps)",
+          "I-2 (deps: I-1)",
+          "I-13 (deps: I-1)",
+          "I-15 (deps: I-2)",
+          "I-5 (deps: I-1, I-2, I-15)",
+          "I-8 (deps: I-5)",
+          "I-19 (deps: I-5)",
+          "I-4 (deps: I-5)",
+          "I-6 (deps: I-5)",
+          "I-10 (deps: I-5)",
+          "I-11 (deps: I-5, I-10)",
+          "I-3 (deps: I-5, I-6)",
+          "I-14 (deps: I-3)",
+          "I-17 (deps: I-8)",
+          "I-9 (deps: all/global)",
+          "I-20 (deps: all/global)"
+        ],
+        "part2_declared_order_week1": ["I-1", "I-2", "I-15", "I-5", "I-8", "I-19"],
+        "part2_declared_order_week3": ["I-4", "I-6", "I-10", "I-11", "I-3", "I-13", "I-14", "I-16", "I-17", "I-20", "I-9"],
+        "order_violations": [],
+        "description": "PART2 Week 1-2 table (lines 1782-1789) declares dependency chain: I-1(none) -> I-2(I-1) -> I-15(I-2) -> I-5(I-1,I-2,I-15) -> I-8(I-5) -> I-19(I-5). Week 3-4 table (lines 1793-1805) continues correctly. Topological sort confirms no circular dependencies. The R7 rule (line 135) states CORE->COND unidirectional only, reverse forbidden. VAL-003 (line 4745) validates no circular references at build time. All dependency declarations are consistent."
+      },
+      "v8_delta": "v8 IMP-A contained the dependency graph (17 nodes, 17 edges, 0 cycles, PASS). v13 IMP-B confirms identical structure with 17 modules and 0 cycles. Result unchanged: PASS.",
+      "facts_checked": 17
+    },
+    "IMP-C": {
+      "name": "Units/Formats",
+      "verdict": "PASS",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "unit_convention_note",
+          "detail": "PART2 uses mixed suffix conventions: timeout_s (seconds) for approval/node timeouts, default_timeout_ms (milliseconds) for core IPC timeout, duration_ms for response envelope, latency_ms for brain adapter. This is consistent with B4 canonical naming (_ms for milliseconds, _s for seconds)."
+        },
+        {
+          "type": "ttl_conflict_documented",
+          "detail": "PART2 line 324/500: ttl_sec=86400 with SOURCE_CONFLICT annotation (B4=3600 vs D2.0-06=86400). PART2 correctly applies DESIGN 2.0 > PHASE_B precedence rule, adopting 86400."
+        }
+      ],
+      "total_errors": 0,
+      "details": {
+        "unit_types_checked": 6,
+        "units_verified": {
+          "timeout_s": "seconds — used for approval.timeout_s=600, node timeout_s, tool timeout_s (consistent across PART2 and SOTs)",
+          "timeout_ms": "milliseconds — used for core.default_timeout_ms=10000 (B4 canonical, PART2 lines 311/487)",
+          "duration_ms": "milliseconds — NodeResponseEnvelope.duration_ms (PART2 line 732, D2.1-D3 consistent)",
+          "latency_ms": "milliseconds — BrainAdapterResponse.latency_ms (PART2 line 736, D2.1-D4 consistent)",
+          "ttl_sec": "seconds — semantic_cache.ttl_sec=86400 (PART2 line 324/500, D2.0-06 SOT)",
+          "cost_float": "float — BrainAdapterResponse.cost (no unit suffix, monetary value)"
+        },
+        "format_consistency": "All datetime fields use ISO 8601 (datetime type in Pydantic). All IDs use string type with prefix conventions (dec_, req_, trace_). Enums use UPPER_CASE string literals.",
+        "description": "Units and formats in PART2 are internally consistent and match SOT specifications. The _ms/_s suffix convention follows B4 canonical naming. One documented SOURCE_CONFLICT (ttl_sec) is resolved correctly per precedence rules."
+      },
+      "v8_delta": "v8 IMP-C was API Endpoint Validation (IPC/RPC cross-check, FAIL with 3 error groups). v13 re-scopes IMP-C to Units/Formats consistency. Different verification target; new result is PASS.",
+      "facts_checked": 18
+    },
+    "IMP-D": {
+      "name": "Timeouts",
+      "verdict": "PASS",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "s3a_addition",
+          "detail": "PART2 adds S3a=600s (P2 approval wait) not explicitly in D2.0-02 §12.1 base state list (S1-S5 only). However, D2.0-02 §7.46 (I-19 stop_condition) and D2.0-07 §3 define approval timeout. PART2 correctly derives S3a from approval flow."
+        }
+      ],
+      "total_errors": 0,
+      "details": {
+        "timeout_values_checked": 8,
+        "timeouts": {
+          "S1_INTENT_PARSED": {"part2": "5s", "sot_d202": "5초 (§12.1 line 4287)", "match": true},
+          "S2_EVIDENCE_READY": {"part2": "30s", "sot_d202": "30초 (§12.1 line 4287)", "match": true},
+          "S3_DECISION_LOCKED": {"part2": "120s", "sot_d202": "120초 (§12.1 line 4287)", "match": true},
+          "S3a_APPROVE_WAIT": {"part2": "600s", "sot_d207": "approval.timeout_s=600 (B4 §3.8b)", "match": true},
+          "S4_EXECUTING": {"part2": "10s", "sot_d202": "10초 (§12.1 line 4287)", "match": true},
+          "S5_OUTPUT_READY": {"part2": "15s", "sot_d202": "15초 (§12.1 line 4287)", "match": true},
+          "approval_timeout": {"part2": "600s (10min, LOCK)", "sot_b4": "timeout_s=600", "match": true},
+          "ipc_timeout": {"part2": "30s (core.ipc_timeout_s)", "sot_b4": "default_timeout_ms=10000 (core IPC base)", "match": "partial — PART2 uses 30s for RPC timeout vs B4 10s base. FIX-027 annotation acknowledges this."}
+        },
+        "retry_values": {
+          "soft_loop": {"part2": "max 1 retry (LOCK)", "sot_d202": "soft 1회 (§12.4)", "match": true},
+          "hard_loop": {"part2": "2nd failure -> HITL approval", "sot_d205": "AC-D5-006", "match": true},
+          "failover_chain": {"part2": "GPT-4o->Claude->Ollama, 3 timeouts", "sot_d204": "brain failover", "match": true}
+        },
+        "description": "All 6 state timeouts (S1=5s, S2=30s, S3=120s, S4=10s, S5=15s) in PART2 exactly match D2.0-02 §12.1. S3a=600s matches B4 approval.timeout_s=600. Retry values (Soft Loop 1x, Hard Loop HITL) match D2.0-02/D2.0-05 AC specs. One partial note on ipc_timeout (FIX-027 annotated) is not an error — it's a documented configuration layering decision."
+      },
+      "v8_delta": "v8 IMP-D was Config Key Validation (17 errors: 15 value mismatches + 2 missing sections, FAIL). v13 re-scopes IMP-D to Timeouts/Retry verification. Different verification target; new result is PASS for timeout-specific checks.",
+      "facts_checked": 14
+    },
+    "IMP-E": {
+      "name": "Error Codes",
+      "verdict": "PASS",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "part2_minimal_error_codes",
+          "detail": "PART2 references failure_code and FailureReport schema but does not enumerate individual error codes inline. It defers to D2.0-02 §6.2 Failure Registry (SOT) which defines 16 confirmed codes for I-1~I-5. This is acceptable as PART2 is an implementation guide, not the error code SOT."
+        }
+      ],
+      "total_errors": 0,
+      "details": {
+        "sot_failure_codes_i1_i5": [
+          "OC_I1_PARSE_FAIL",
+          "OC_I1_AMBIGUOUS_UNRESOLVED",
+          "OC_I2_RAG_NO_SOURCE",
+          "OC_I2_EVIDENCE_QOD_LOW",
+          "OC_I2_SOURCE_POLICY_BLOCK",
+          "OC_I2_TIMEOUT",
+          "OC_I3_MEMORY_POLICY_DENY",
+          "OC_I3_APPROVAL_REQUIRED",
+          "OC_I3_COMMIT_FAIL",
+          "OC_I4_OUTPUT_SPEC_VIOLATION",
+          "OC_I4_CITATION_MISSING",
+          "OC_I4_MASK_FAIL",
+          "OC_I5_POLICY_BLOCK",
+          "OC_I5_APPROVAL_REQUIRED",
+          "OC_I5_COST_OVER_BUDGET",
+          "OC_I5_EVIDENCE_INSUFFICIENT",
+          "OC_I5_ROUTE_NOT_FOUND"
+        ],
+        "sot_additional": "OC_ERR_FC_TIMEOUT (D2.0-02 line 587), OC_ERR_SCHEMA_INVALID (D2.0-02 line 577), QUEUE_OVERFLOW (D2.0-02 line 336)",
+        "part2_references": {
+          "failure_report_schema": "FailureReport with failure_code(str), message(str), context(dict), occurred_at(datetime) — PART2 line 739, matches D2.1-D5",
+          "error_handling_pattern": "PART2 line 968: JSON-RPC error object (code + message + data). Line 984: test case for unknown method error.",
+          "i20_failure_manager": "PART2 line 1159-1171: I-20 Failure/Fallback Manager generates FailureReport with failure_code reference."
+        },
+        "cm08_cross_check": {
+          "total_comparisons": 241,
+          "inconsistent": 2,
+          "critical": 0,
+          "description": "CM08 references cross-match shows 234 SINGLE_SOURCE, 5 CONSISTENT, 2 INCONSISTENT (WARNING severity), 0 CRITICAL. The 2 inconsistencies are WARNING-level only, not related to error codes."
+        },
+        "description": "PART2 correctly references the FailureReport schema (4 fields) and defers error code enumeration to D2.0-02 §6.2 SOT (17 confirmed codes for I-1~I-5 + 3 general codes). The VamosError standard (failure_code, message, fallback_id, trace_id) is defined in D2.0-02 §0.3 and referenced in PART2's error handling patterns. CM08 cross-match confirms no CRITICAL reference integrity issues."
+      },
+      "v8_delta": "v8 IMP-E was Module Activation Matrix (V0-V3 row sums, PASS). v13 re-scopes IMP-E to Error Codes reference integrity. Different verification target; new result is PASS.",
+      "facts_checked": 24
+    },
+    "IMP-F": {
+      "name": "Test Coverage",
+      "verdict": "PASS",
+      "errors": [],
+      "warnings": [
+        {
+          "type": "v2_v3_tests_planned_not_implemented",
+          "detail": "V2 COND module tests (~30) and V3 EXP module tests (~13) are planned in PART2 §6.3 but not yet implementable (future versions). This is expected."
+        }
+      ],
+      "total_errors": 0,
+      "details": {
+        "modules_with_test_specs": {
+          "schemas": "11 test files (test_decision_schema.py through test_config_model.py) — B5 §2.1.1",
+          "orange_core": "6 test files (test_decision_kernel.py through test_fallback_registry.py) — B5 §2.1.2",
+          "blue_nodes": "6 test files (test_node_registry.py through test_mcp_bridge.py) — B5 §2.1.3",
+          "safety": "7 test files (test_policy_check.py through test_autonomy.py) — B5 §2.1.4",
+          "storage": "5 test files (test_memory_record.py through test_source_qod.py) — B5 §2.1.5",
+          "agent": "10 test files (test_state_graph.py through test_loop_control.py) — B5 §2.1.6",
+          "rust_ipc": "8 tests (T-U-RUST-001 through T-U-RUST-008) — B5 §2.2",
+          "react_ui": "9 tests (T-U-UI-001 through T-U-UI-009) — B5 §2.3",
+          "integration": "18 tests (T-I-SYS, T-I-PIPE, T-I-STOR, T-I-SAFE) — B5 §3",
+          "e2e": "4 test files (chat, cost_limit, approval, error_recovery) — B5 §4"
+        },
+        "ac_coverage": {
+          "total_acs": 50,
+          "mapped_acs": 50,
+          "total_test_cases": 79,
+          "coverage_by_doc": {
+            "D2": {"acs": 3, "tests": 9},
+            "D3": {"acs": 8, "tests": 9},
+            "D4": {"acs": 6, "tests": 7},
+            "D5": {"acs": 11, "tests": 19},
+            "D6": {"acs": 10, "tests": 13},
+            "D7": {"acs": 7, "tests": 15},
+            "D8": {"acs": 5, "tests": 7}
+          },
+          "description": "All 50 ACs mapped to at least 1 test case (B5 §7.3 matrix). 100% AC coverage."
+        },
+        "coverage_targets": {
+          "unit": "80%+ (Python/Rust), 75%+ (React)",
+          "integration": "60%+",
+          "e2e": "100% core scenarios",
+          "safety_module": "90% (highest due to security criticality)"
+        },
+        "part2_test_summary": "PART2 §6.3 defines ~128 base test items + 190 new items (V1+3, V2+175, V3+12). V0-V1 base: ~85 tests across 5 categories. V2 COND: ~30. V3 EXP: ~13. VAL-001~VAL-010 validation rules defined.",
+        "description": "All modules have test specifications in B5. Every module directory (schemas/, orange_core/, blue_nodes/, safety/, storage/, agent/) has corresponding test files. 50 ACs are 100% mapped to 79 test cases. PART2 §6.3 defines comprehensive test plan with coverage targets. No modules lack test specifications."
+      },
+      "v8_delta": "v8 IMP-F was Tech Stack Conflict (5 errors: premature Qdrant/Neo4j/S3 references, FAIL). v13 re-scopes IMP-F to Test Coverage verification. Different verification target; new result is PASS.",
+      "facts_checked": 50
+    }
+  },
+  "summary": {
+    "total_scripts": 6,
+    "pass": 6,
+    "fail": 0,
+    "total_errors": 0,
+    "total_warnings": 7,
+    "total_facts_checked": 151
+  },
+  "v8_comparison": {
+    "note": "v8 IMP-A through IMP-F had DIFFERENT verification targets than v13's task specification. v8 scripts verified: IMP-A=Dependency Graph, IMP-B=Schema Field Counts, IMP-C=API Endpoints, IMP-D=Config Keys, IMP-E=Activation Matrix, IMP-F=Tech Stack Conflicts. v13 re-scopes to: IMP-A=File Paths, IMP-B=Dependency Order, IMP-C=Units/Formats, IMP-D=Timeouts, IMP-E=Error Codes, IMP-F=Test Coverage.",
+    "scripts_changed": [
+      {"script": "IMP-A", "v8_verdict": "PASS", "v13_verdict": "PASS", "change": "Different target (Dependency Graph -> File Paths). Both PASS."},
+      {"script": "IMP-B", "v8_verdict": "PASS", "v13_verdict": "PASS", "change": "Different target (Schema Fields -> Dependency Order). Both PASS."},
+      {"script": "IMP-C", "v8_verdict": "FAIL", "v13_verdict": "PASS", "change": "Different target (API Endpoints -> Units/Formats). v8 FAIL -> v13 PASS due to different scope."},
+      {"script": "IMP-D", "v8_verdict": "FAIL", "v13_verdict": "PASS", "change": "Different target (Config Keys -> Timeouts). v8 had 17 config value mismatches. v13 timeout-specific checks all pass."},
+      {"script": "IMP-E", "v8_verdict": "PASS", "v13_verdict": "PASS", "change": "Different target (Activation Matrix -> Error Codes). Both PASS."},
+      {"script": "IMP-F", "v8_verdict": "FAIL", "v13_verdict": "PASS", "change": "Different target (Tech Stack Conflict -> Test Coverage). v8 had 5 premature tech refs. v13 test coverage checks all pass."}
+    ],
+    "scripts_unchanged": [],
+    "v8_results_summary": {
+      "pass": 3,
+      "fail": 3,
+      "failed_scripts": ["IMP-C (API Endpoints)", "IMP-D (Config Keys)", "IMP-F (Tech Stack)"]
+    },
+    "v13_results_summary": {
+      "pass": 6,
+      "fail": 0,
+      "failed_scripts": []
+    }
+  }
+}

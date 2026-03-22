@@ -1,0 +1,135 @@
+{
+  "agent": "Agent 4",
+  "scope": "PART2 §6.4~6.7 Teams/MCP verification",
+  "session": "session_14",
+  "timestamp": "2026-03-21T14:30:00+09:00",
+  "step_a": {
+    "direction": "PART2 -> SOT",
+    "facts_checked": 20,
+    "matches": 18,
+    "mismatches": [
+      {
+        "id": "A4-M1",
+        "fact": "PART2 §6.7 V1 LLM: Sonnet(Lead) / Haiku(Sub)",
+        "part2_ref": "PART2 L2641",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.1",
+        "match": false,
+        "detail": "PART2 states V1 Lead=Sonnet, Sub=Haiku. SOT §9.1 also states Lead=Sonnet(cost savings), Sub=Haiku. However, SOT §11.2.1 cost table shows V1 Lead=Sonnet, V2 Lead=Opus. PART2 §6.7 V2 agent table says Trading Agent LLM=Opus which is a Sub-agent, not Lead. SOT §9.2 says V2 Lead=Opus. Minor inconsistency: PART2 §6.7 V2 table lists Opus only for Trading Agent (a sub), while SOT §9.2 explicitly says V2 Lead=Opus. PART2 implies Lead model stays Sonnet in V2 by not mentioning Lead upgrade."
+      },
+      {
+        "id": "A4-M2",
+        "fact": "PART2 §6.7 LOCK-AT-007 reference: D2.0-05 §7.3",
+        "part2_ref": "PART2 L2678",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1",
+        "match": false,
+        "detail": "PART2 cites LOCK-AT-007 source as 'D2.0-05 §7.3'. SOT AGENT_TEAMS_SPEC §10.1 cites it as 'D2.0-05 §7.3 고정2'. Minor: PART2 drops the suffix '고정2' which is a precision detail in the SOT. Technically the reference is the same section, but the SOT is more specific."
+      }
+    ],
+    "match_details": [
+      {"fact": "V1 agent count: Lead + max 2 Sub-agents (total 3)", "part2_ref": "PART2 L2637", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.1", "match": true, "detail": "Exact match: 'Lead + 최대 2 Sub-agents (총 3)'"},
+      {"fact": "V1 collaboration patterns: Sequential, Parallel only", "part2_ref": "PART2 L2638", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.1", "match": true, "detail": "Exact match"},
+      {"fact": "V1 delegation depth: max 2 (LOCK-AT-004 absolute max=3)", "part2_ref": "PART2 L2639", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.1", "match": true, "detail": "SOT: '최대 2단계 (Lead → Sub) — config 제한. LOCK-AT-004 절대상한=3단계'. Match."},
+      {"fact": "V1 MessageBus: In-Memory Queue", "part2_ref": "PART2 L2640", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.3.0", "match": true, "detail": "SOT: 'InMemoryDispatcher'. PART2 says 'In-Memory Queue'. Semantically equivalent."},
+      {"fact": "V1 cost: 1,300/day within budget", "part2_ref": "PART2 L2642", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.1, §11.2.1", "match": true, "detail": "SOT: '일일 1,300원 / 월 40,000원'. Match."},
+      {"fact": "LOCK-AT count: 17 items", "part2_ref": "PART2 L2666", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "SOT §10.1 has exactly 17 LOCK-AT entries (001-017). Match."},
+      {"fact": "LOCK-AT-001: V1 lightweight framework, external via adapter only", "part2_ref": "PART2 L2672", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Exact match on content and reference D2.0-05 §5.1"},
+      {"fact": "LOCK-AT-004: delegation chain max depth 3", "part2_ref": "PART2 L2675", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Match. Both cite S7E-080."},
+      {"fact": "LOCK-AT-009: Turn limits P0=5, P1=10, P2=20", "part2_ref": "PART2 L2680", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Exact match. Both cite D2.0-05 §12.4.4."},
+      {"fact": "LOCK-AT-010: TEE max repeats P0=3, P1=5, P2=10", "part2_ref": "PART2 L2681", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Exact match. Both cite D2.0-05 §12.5.1."},
+      {"fact": "LOCK-AT-014: V1 parallel=3, V2=10, V3=50+", "part2_ref": "PART2 L2685", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Exact match. Both cite S7-A-008."},
+      {"fact": "LOCK-AT-015: Lead Agent no direct execution", "part2_ref": "PART2 L2686", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Match. Both cite S7-A-001."},
+      {"fact": "MCP transport: Streamable HTTP (LOCK)", "part2_ref": "PART2 L2603", "sot_ref": "D2.1-D3 §5.5 MCPBridgeLayerSchema (DEC-017 LOCK)", "match": true, "detail": "Match. MCP Bridge Layer uses Streamable HTTP."},
+      {"fact": "MCP external server catalog: V1=7, V2+=3, V3=1, total=11", "part2_ref": "PART2 L2611", "sot_ref": "D2.0-05 §12.10.2, D2.1-D3", "match": true, "detail": "PART2 counts: mcp.search.tavily, serpapi, mcp.code.e2b, pyodide, mcp.doc.unstructured, pymupdf, mcp.browser.playwright = 7 V1. mcp.vision.clip, mcp.speech.whisper, mcp.db.postgres = 3 V2. mcp.realtime.websocket = 1 V3. Total=11. Consistent."},
+      {"fact": "V2 collaboration patterns: Sequential, Parallel, Debate, Supervisor, Handoff", "part2_ref": "PART2 context (§6.7 V2)", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.2", "match": true, "detail": "SOT §9.2: all 5 patterns listed. Match."},
+      {"fact": "V2 agents max 10", "part2_ref": "PART2 context", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.2", "match": true, "detail": "SOT: 'Lead + 최대 9 Sub-agents (총 10)'. Match."},
+      {"fact": "V1/V2 communication: V1=InMemoryDispatcher (Lead hub), V2+=Redis MessageBus", "part2_ref": "PART2 L2640", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.3.0", "match": true, "detail": "SOT: V1=InMemoryDispatcher, V2+=RedisMessageBus. Match."},
+      {"fact": "LOCK-AT-017: No-code builder = n8n + Flowise dual structure", "part2_ref": "PART2 L2688", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.1", "match": true, "detail": "Exact match. Both cite D2.0-05 §12.10.2."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT -> PART2",
+    "facts_checked": 15,
+    "present": 11,
+    "missing": [
+      {
+        "sot_fact": "V2 Lead model tier = Opus (SOT §9.2, §11.2.1)",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.2",
+        "part2_present": false,
+        "detail": "PART2 §6.7 V2 section only lists Sub-agent types and their models. It does not explicitly state V2 Lead Agent model changes to Opus. SOT §9.2 explicitly says Lead=Opus for V2."
+      },
+      {
+        "sot_fact": "DEFER-AT-001: MessageBus implementation decision (In-Memory vs Redis) deferred to V1.1",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.2",
+        "part2_present": "partial",
+        "detail": "PART2 mentions V2-003 Agent Teams vs FREEZE conflict (CLAUDE.md §9) but does not explicitly list DEFER-AT-001 as a deferred decision item in §6.7."
+      },
+      {
+        "sot_fact": "V2 cost per task budget: 2,000 KRW/task",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §11.2.1",
+        "part2_present": false,
+        "detail": "SOT §11.2.1 specifies V1=500/task, V2=2000/task, V3=5000/task. PART2 only mentions daily/monthly cost limits, not per-task budgets."
+      },
+      {
+        "sot_fact": "Agent lifecycle states: created->initialized->active->suspended->terminated->archived",
+        "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.4.1",
+        "part2_present": false,
+        "detail": "PART2 §6.7 does not describe agent lifecycle states. This detailed specification from SOT is omitted."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "Lead Agent roles: Planning, Assignment, Monitoring, Merging, Verification, Decision Lock", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.1.1", "part2_present": true, "detail": "PART2 L2648: 'plans, assigns, monitors'. Covers main roles, though abbreviated."},
+      {"sot_fact": "Sub-Agent types: Research, Coding, Quant, Content, Trading, SDAR, Critic, Productivity", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.2.1", "part2_present": true, "detail": "PART2 §6.7 lists all 8 agent types across V1 and V2 tables. Match."},
+      {"sot_fact": "AgentMessage format includes hmac_signature field", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.3.1", "part2_present": true, "detail": "PART2 L2683: LOCK-AT-012 'Agent 메시지에 HMAC 무결성 서명 필수'. Present."},
+      {"sot_fact": "MessageType enum: delegation, result, progress, handoff, help_request, abort, context_update", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.3.1", "part2_present": false, "detail": "PART2 does not list MessageType enum values. Only general HMAC requirement is mentioned."},
+      {"sot_fact": "5 Gate system (G0~G4) integrated with Agent Teams", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §1.2", "part2_present": true, "detail": "PART2 L2676: LOCK-AT-005 '모든 에이전트 실행은 07 Gate 선행 통과 필수'. Present."},
+      {"sot_fact": "Delegation Attack defense: chain depth limit, privilege escalation detection, circular reference detection", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §11.1.1", "part2_present": "partial", "detail": "PART2 mentions LOCK-AT-004 (depth limit) and LOCK-AT-013 (privilege escalation prevention), but does not detail circular reference detection from SOT §11.1.1."},
+      {"sot_fact": "Agent isolation: context isolation, file ownership, tool allowlist, network via MCP only, code sandbox", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §11.1.3", "part2_present": false, "detail": "PART2 does not describe agent isolation policies in detail. Security section §6.5 covers general security but not agent-specific isolation."},
+      {"sot_fact": "V3 agents: 50+ dynamic spawn/destroy, Multi-Agent Mesh, Federated, A2A Protocol", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §9.3", "part2_present": "partial", "detail": "PART2 CLAUDE.md §17 mentions V3=50+, A2A, Federated. But PART2 §6.7 itself does not have a V3 section with these details."},
+      {"sot_fact": "DEFER-AT-003: Agent Marketplace registration criteria undefined (V2)", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §10.2", "part2_present": true, "detail": "PART2 L2664: explicitly notes 'DEFER-AT-003: Agent Marketplace 등록 기준 미정의'. Match."},
+      {"sot_fact": "Prompt Injection defense: 6 layers (NeMo, Guardrails AI, LlamaGuard, Post-audit, Instruction Hierarchy, Canary Token)", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §11.1.2", "part2_present": "partial", "detail": "PART2 §6.5 covers NeMo(L1), Guardrails AI(L2), LlamaGuard(L3) but does not mention Canary Token or Instruction Hierarchy from SOT §11.1.2."},
+      {"sot_fact": "AgentEvent enum: 17+ lifecycle events (team.*, delegation.*, agent.*, handoff.*, gate.*, cost.*)", "sot_ref": "VAMOS_AGENT_TEAMS_SPEC §2.3.2", "part2_present": "partial", "detail": "PART2 §6.11 lists 'agent.task.started/completed/failed' (3 events). SOT §2.3.2 defines 17+ agent events. PART2 coverage is very partial."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A4-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "PART2 §6.7 V2 section does not explicitly state V2 Lead Agent model upgrades to Opus. SOT AGENT_TEAMS_SPEC §9.2 and §11.2.1 clearly specify V2 Lead=Opus.",
+      "evidence": "PART2 V2 table only lists Sub-agent models. SOT §9.2: 'Lead=Opus, Sub=Sonnet/Haiku 차등'. SOT §11.2.1: 'V2 Lead=Opus'."
+    },
+    {
+      "id": "F-A4-02",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Per-task budget information not included in PART2. SOT §11.2.1 specifies V1=500/task, V2=2000/task, V3=5000/task.",
+      "evidence": "SOT §11.2.1 cost table includes 'per-task budget' column. PART2 only mentions daily/monthly limits."
+    },
+    {
+      "id": "F-A4-03",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent lifecycle states (created->initialized->active->suspended->terminated->archived) from SOT §2.4.1 not described in PART2 §6.7.",
+      "evidence": "SOT §2.4 provides detailed lifecycle with LogEvent mappings. PART2 omits this."
+    },
+    {
+      "id": "F-A4-04",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "SOT agent events (AgentEvent enum, 17+ events) poorly covered in PART2. Only 3 agent events listed in §6.11 vs 17+ in SOT §2.3.2.",
+      "evidence": "PART2 §6.11: 'agent.task.started/completed/failed'. SOT §2.3.2: team.created/started/completed/aborted, delegation.sent/accepted/rejected/timeout, agent.spawned/active/suspended/terminated, handoff.initiated/completed, etc."
+    },
+    {
+      "id": "F-A4-05",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent isolation policies (context, file, tool, network, code sandbox isolation) from SOT §11.1.3 not documented in PART2 §6.7.",
+      "evidence": "SOT §11.1.3 AgentIsolationPolicy class with 5 isolation dimensions. PART2 has general security in §6.5 but no agent-specific isolation."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "83%",
+    "findings_count": 5
+  }
+}

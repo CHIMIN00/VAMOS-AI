@@ -1,0 +1,695 @@
+{
+  "agent": "C-09",
+  "source_files": [
+    "D:\\VAMOS\\docs\\sot\\PHASE_B5_TEST_STRATEGY.md",
+    "D:\\VAMOS\\docs\\sot\\PHASE_B6_CICD_PIPELINE.md",
+    "D:\\VAMOS\\docs\\sot\\PHASE_B7_MIGRATION_STRATEGY.md"
+  ],
+  "features": [
+    {
+      "id": "PB5-001",
+      "name": "Python Unit Tests - Pydantic Schema Validation (D2.1)",
+      "description": "Unit tests for all D2.1 Pydantic v2 schemas (DecisionSchema, LogEventSchema, Node/Tool/Workflow/Agent/Memory/Graph/Safety/Guardrails/Config schemas) with valid/invalid instance testing. 11 test files in tests/unit/schemas/.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "95%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D2-001", "AC-D2-002", "AC-D2-003", "AC-D3-002", "AC-D4-002", "AC-D5-002", "AC-D6-001", "AC-D7-001"]
+    },
+    {
+      "id": "PB5-002",
+      "name": "Python Unit Tests - Orange Core (Decision Kernel, Intent, Evidence)",
+      "description": "Unit tests for orange_core/ module: DecisionKernel logic, IntentParser, EvidenceCollector, EventTypeRegistry, FailureCodeRegistry, FallbackRegistry. 6 test files.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "85%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D2-001", "AC-D2-002", "AC-D2-003"]
+    },
+    {
+      "id": "PB5-003",
+      "name": "Python Unit Tests - Blue Nodes (NodeRegistry, Executor, MCP Bridge)",
+      "description": "Unit tests for blue_nodes/ module: NodeRegistry SOT, NodeExecutor, RequestEnvelope 7-field validation, ResponseEnvelope, ToolCallRegistry, MCPBridgeLayer transport. 6 test files.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "80%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D3-001", "AC-D3-004", "AC-D3-005", "AC-D3-006", "AC-D3-007", "AC-D3-008"]
+    },
+    {
+      "id": "PB5-004",
+      "name": "Python Unit Tests - Safety (PolicyCheck, Approval, CostBudget, Guardrails, RBAC, Autonomy)",
+      "description": "Unit tests for safety/ module: PolicyCheck deny/restrict/allow, Approval request/response, CostBudget limits/thresholds, Downshift 80%/100%, 3-Layer Guardrails, RBAC 4 roles, Autonomy L0-L3. 7 test files.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "90%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D7-002", "AC-D7-005", "AC-D7-006", "AC-D7-007"]
+    },
+    {
+      "id": "PB5-005",
+      "name": "Python Unit Tests - Storage (Memory, VectorStore, SemanticCache, GraphRAG)",
+      "description": "Unit tests for storage/ module: MemoryRecord scope/type, VectorStore adapter transparency, SemanticCache 0.95 threshold LOCK, GraphRAG scope V1=P1/V2+=FULL, SourceQoD scoring. 5 test files.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "80%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D6-002", "AC-D6-003", "AC-D6-004", "AC-D6-008", "AC-D6-009", "AC-D6-010"]
+    },
+    {
+      "id": "PB5-006",
+      "name": "Python Unit Tests - Agent (LangGraph StateGraph, Pipeline, CircuitBreaker, HITL)",
+      "description": "Unit tests for agent/ module: LangGraph StateGraph, 5-stage Pipeline (Intake-Deliver), WorkflowOutputEnvelope 3-output, VerifyChainEntry EVX-1~6, FailureReport, CircuitBreaker, GatePipelineMapping, HITLRequest, AgentMarketplace, Loop control. 10 test files.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "80%",
+      "test_layer": "unit",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D5-003", "AC-D5-004", "AC-D5-006", "AC-D5-008", "AC-D5-009", "AC-D5-010", "AC-D5-011"]
+    },
+    {
+      "id": "PB5-007",
+      "name": "Rust Unit Tests - IPC Command Handler & Subprocess Management",
+      "description": "Rust cargo test for IPC command handler (invoke_python_agent, handle_ipc_error, serialize_response, config_load) and Python subprocess management (spawn, health_check, restart, stdin/stdout pipe). 8 test cases T-U-RUST-001~008.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "80%",
+      "test_layer": "unit",
+      "test_framework": "cargo test"
+    },
+    {
+      "id": "PB5-008",
+      "name": "React Unit Tests - Component Tests (ChatPanel, DecisionCard, CostDashboard, etc.)",
+      "description": "Vitest component tests: ChatPanel message rendering, CostDashboard daily/monthly display, ApprovalDialog HITL, GuardrailsAlert deny/restrict, NodeStatusBadge, Tauri IPC invoke. 6 test files, 5 test cases T-U-UI-001~005.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1",
+      "coverage_target": "75%",
+      "test_layer": "unit",
+      "test_framework": "vitest",
+      "related_ac": ["AC-D8-003", "AC-D8-004", "AC-D8-005"]
+    },
+    {
+      "id": "PB5-009",
+      "name": "React Unit Tests - Store/Hook Tests (useAgentStore, useCostStore, useIPC, useStreaming)",
+      "description": "Vitest store/hook tests: useAgentStore state transitions, useCostStore cost accumulation, useConfigStore, useIPC Tauri invoke, useStreaming streamable HTTP handling. 5 test files, 4 test cases T-U-UI-006~009.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1",
+      "coverage_target": "75%",
+      "test_layer": "unit",
+      "test_framework": "vitest"
+    },
+    {
+      "id": "PB5-010",
+      "name": "Integration Tests - Python <-> Rust IPC Bridge",
+      "description": "Integration tests for IPC round-trip, error propagation, timeout handling, trace_id propagation between Python and Rust. 4 test cases T-I-SYS-001~004.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "60%",
+      "test_layer": "integration",
+      "test_framework": "pytest"
+    },
+    {
+      "id": "PB5-011",
+      "name": "Integration Tests - LangGraph Pipeline (Intake -> Deliver)",
+      "description": "Integration tests for 5-stage pipeline: normal flow with 3-output, Gate blocking, Soft loop auto-retry, Hard loop approval wait, CircuitBreaker open block, cost-overrun downshift, Decision-Node link. 7 test cases T-I-PIPE-001~007.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "60%",
+      "test_layer": "integration",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D5-003", "AC-D5-006", "AC-D5-009", "AC-D5-010", "AC-D7-005", "AC-D3-006"]
+    },
+    {
+      "id": "PB5-012",
+      "name": "Integration Tests - Storage Stack (Memory + Vector + Cache)",
+      "description": "Integration tests for storage stack: MemoryRecord CRUD, VectorStore write/search, SemanticCache hit/miss, Chroma->Qdrant migration, GraphRAG query, Memory TTL expiration. 6 test cases T-I-STOR-001~006.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1",
+      "coverage_target": "60%",
+      "test_layer": "integration",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D6-002", "AC-D6-003", "AC-D6-008", "AC-D6-009", "AC-D6-010"]
+    },
+    {
+      "id": "PB5-013",
+      "name": "Integration Tests - Safety Chain (PolicyCheck -> Approval -> CostBudget)",
+      "description": "Integration tests for safety chain: PolicyCheck->Approval linkage, CostBudget->Downshift, 3-Layer Guardrails sequential check, RBAC permission-based execution control, Autonomy level approval flow, ToolRegistry bypass blocking. 6 test cases T-I-SAFE-001~006.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "60%",
+      "test_layer": "integration",
+      "test_framework": "pytest",
+      "related_ac": ["AC-D7-002", "AC-D7-005", "AC-D7-006", "AC-D7-007", "AC-D4-006"]
+    },
+    {
+      "id": "PB5-014",
+      "name": "E2E Tests - User Chat Flow",
+      "description": "E2E test T-E-SYS-001: User sends question -> receives AI response through 5-stage Pipeline with 3-output (user_response/evidence_summary/log_report). Tauri WebDriver + Playwright.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "100%",
+      "test_layer": "e2e",
+      "test_framework": "Playwright + Tauri WebDriver",
+      "related_ac": ["AC-D5-003", "AC-D8-003"]
+    },
+    {
+      "id": "PB5-015",
+      "name": "E2E Tests - Cost Limit Downshift & Block",
+      "description": "E2E tests T-E-SYS-002 and T-E-SYS-003: Repeated requests reach 80% -> mini model switch with CostDashboard warning; 100% -> request blocked with block message.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "100%",
+      "test_layer": "e2e",
+      "test_framework": "Playwright + Tauri WebDriver",
+      "related_ac": ["AC-D8-005"]
+    },
+    {
+      "id": "PB5-016",
+      "name": "E2E Tests - HITL Approval Flow",
+      "description": "E2E test T-E-SYS-004: P2 domain request -> ApprovalDialog shown -> approve/deny action. Verifies execution resume on approve, halt on deny.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "100%",
+      "test_layer": "e2e",
+      "test_framework": "Playwright + Tauri WebDriver",
+      "related_ac": ["AC-D5-011", "AC-D7-007"]
+    },
+    {
+      "id": "PB5-017",
+      "name": "E2E Tests - Guardrails Block, Error Recovery, MCP Bridge, Config Change",
+      "description": "E2E tests T-E-SYS-005~008: PII input -> deny with GuardrailsAlert; BLUE NODE error -> fallback execution; Web search via MCP bridge; Config change -> app restart -> verify applied.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1",
+      "coverage_target": "100%",
+      "test_layer": "e2e",
+      "test_framework": "Playwright + Tauri WebDriver",
+      "related_ac": ["AC-D7-005", "AC-D3-008"]
+    },
+    {
+      "id": "PB5-018",
+      "name": "AC Verification Mapping - D2~D8 Complete (50 ACs -> 79 Tests)",
+      "description": "Complete AC-to-test mapping ensuring all 50 Acceptance Criteria from D2~D8 are covered by at least 1 test case. Total 79 test cases: 60 unit + 14 integration + 5 E2E. Includes D2(9), D3(9), D4(7), D5(19), D6(13), D7(15), D8(7).",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "100%",
+      "test_layer": "all"
+    },
+    {
+      "id": "PB5-019",
+      "name": "Test Fixtures Strategy - pytest conftest.py Hierarchy",
+      "description": "Implement pytest fixture hierarchy: root conftest.py (project_root, env_setup with mock API keys), unit/ conftest, schemas/ conftest (valid_decision_fixture, valid_memory_record_fixture, valid_policy_check_fixture, etc.), storage/ conftest (temp_chroma_dir, temp_sqlite_db, temp_graph_json).",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1",
+      "test_layer": "infrastructure",
+      "test_framework": "pytest"
+    },
+    {
+      "id": "PB5-020",
+      "name": "Coverage Targets - Module-Level Minimum Coverage Enforcement",
+      "description": "Enforce module-level minimum coverage: schemas/ 95%, safety/ 90%, orange_core/ 85%, blue_nodes/ 80%, storage/ 80%, agent/ 80%, ui/React 75%, src-tauri/Rust 80%. Overall unit 80%+, integration 60%+, E2E key scenarios 100%.",
+      "type": "FT-TEST",
+      "source_doc": "PHASE_B5_TEST_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0",
+      "coverage_target": "80%",
+      "test_layer": "all"
+    },
+    {
+      "id": "PB6-001",
+      "name": "CI Pipeline - Python Quality (ruff lint + format + mypy strict)",
+      "description": "GitHub Actions job: python-quality. Runs ruff check with github output format, ruff format --check, mypy --strict --ignore-missing-imports on backend/vamos_core/. PR/push trigger.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-002",
+      "name": "CI Pipeline - Rust Quality (clippy + rustfmt + cargo build)",
+      "description": "GitHub Actions job: rust-quality. Runs cargo fmt --check, clippy with -D warnings -W clippy::pedantic, cargo build debug. Cargo cache with registry/git/target.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-003",
+      "name": "CI Pipeline - React Quality (eslint + tsc --noEmit + prettier)",
+      "description": "GitHub Actions job: react-quality. Runs eslint src/ --max-warnings=0, tsc --noEmit --strict, prettier --check on src/**/*.{ts,tsx,css,json}. Node 20 + npm ci.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-004",
+      "name": "CI Pipeline - Schema Validation (Pydantic v2 import + JSON Schema export)",
+      "description": "GitHub Actions job: schema-validation. Depends on python-quality. Validates all 37 D2.1 Pydantic v2 schemas import correctly and model_json_schema() exports valid JSON Schema.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-005",
+      "name": "CI Pipeline - Python Unit/Integration Tests with Coverage",
+      "description": "GitHub Actions job: python-test. Postgres 16 service container. pytest tests/unit/ and tests/integration/ with --cov=vamos, --cov-report=xml, --junitxml. Coverage artifact upload.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-006",
+      "name": "CI Pipeline - Rust Tests with Coverage (cargo-tarpaulin)",
+      "description": "GitHub Actions job: rust-test. Installs Tauri system deps, runs cargo test --all-targets --all-features, installs cargo-tarpaulin for coverage XML output.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-007",
+      "name": "CI Pipeline - React Tests with Coverage (vitest + v8)",
+      "description": "GitHub Actions job: react-test. vitest run --coverage with json-summary + lcov reporters. Coverage thresholds: statements 80%, branches 75%, functions 80%, lines 80%.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-008",
+      "name": "CI Pipeline - Coverage Report Aggregation (Python + Rust + React)",
+      "description": "GitHub Actions job: coverage-report. Downloads all coverage artifacts, runs scripts/ci/merge_coverage.py to merge Python/Rust/React coverage, posts sticky PR comment, enforces thresholds (Python 75%, Rust 80%, React 80%).",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-009",
+      "name": "Build Pipeline - Tauri Cross-Platform Build (Linux/Windows/macOS)",
+      "description": "GitHub Actions job: build-tauri. Matrix build for 4 targets: x86_64-unknown-linux-gnu, x86_64-pc-windows-msvc, aarch64-apple-darwin, x86_64-apple-darwin. Uses tauri-apps/tauri-action@v0 with signing keys. Uploads .msi/.dmg/.deb/.AppImage artifacts.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-010",
+      "name": "Build Pipeline - Python Package Build (wheel + sdist + twine check)",
+      "description": "GitHub Actions job: build-python. python -m build for wheel and sdist, twine check dist/* for package validation. Upload dist/ artifacts.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-011",
+      "name": "Build Pipeline - Docker Image Build (V2+ multi-service)",
+      "description": "GitHub Actions job: build-docker. Builds 3 Docker images: vamos-orange-core, vamos-blue-nodes, vamos-api-gateway. Docker Buildx with GHA cache. GHCR push with semver/sha/latest tags. Multi-platform linux/amd64,linux/arm64.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-012",
+      "name": "Release Pipeline - Semantic Versioning + Conventional Commits",
+      "description": "Implement Semantic Versioning 2.0.0 with Conventional Commits convention. feat->MINOR, fix->PATCH, feat!/BREAKING CHANGE->MAJOR. Enforce commit message format.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-013",
+      "name": "Release Pipeline - Changelog Auto-Generation (git-cliff)",
+      "description": "GitHub Actions job: changelog. Uses orhun/git-cliff-action@v3 with cliff.toml config. Groups commits by feat/fix/perf/refactor/doc/test. Auto-commit CHANGELOG.md.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-014",
+      "name": "Release Pipeline - GitHub Release + Tauri Binary Upload",
+      "description": "GitHub Actions workflow: release.yml. Triggered on tag push (v*). Runs quality->test->build-tauri sequence. Creates GitHub Release with tauri-apps/tauri-action, uploads cross-platform binaries. Release notes from git-cliff.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-015",
+      "name": "Release Pipeline - Docker Registry Push (V2+ GHCR)",
+      "description": "GitHub Actions job: push-docker. On tag push, builds and pushes 3 service images to GHCR with version and latest tags. Multi-platform (linux/amd64, linux/arm64). GHA build cache.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-016",
+      "name": "Deploy Pipeline - Docker Compose Deployment (V2)",
+      "description": "GitHub Actions workflow: deploy-v2.yml. Manual trigger with environment (staging/production) and version inputs. SSH-based deployment: docker compose pull/up, health check, post-deploy smoke test, Slack notification. Docker Compose with orange-core, blue-nodes, postgres, qdrant, neo4j services.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-017",
+      "name": "Deploy Pipeline - Kubernetes Deployment with Helm (V3)",
+      "description": "GitHub Actions workflow: deploy-v3.yml. Helm upgrade --install with Blue-Green strategy. kubectl rollout status verification. E2E smoke tests against LoadBalancer endpoint. Auto-rollback on failure via helm rollback.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V3",
+      "priority": "P2"
+    },
+    {
+      "id": "PB6-018",
+      "name": "Security Pipeline - Dependency Vulnerability Scan (pip-audit, cargo-audit, npm audit)",
+      "description": "GitHub Actions jobs: python-audit (pip-audit --strict), rust-audit (cargo audit), npm-audit (npm audit). Weekly schedule (Monday 09:00 UTC) + push/PR triggers. Upload audit reports as artifacts.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-019",
+      "name": "Security Pipeline - Docker Image Scan (Trivy)",
+      "description": "GitHub Actions job: docker-scan. Runs Trivy filesystem scan with SARIF output for CRITICAL/HIGH severity. Uploads results to GitHub Security tab via codeql-action/upload-sarif. Main branch only.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-020",
+      "name": "Security Pipeline - Secret Leak Detection (gitleaks + custom patterns)",
+      "description": "GitHub Actions job: secret-scan. Uses gitleaks/gitleaks-action@v2 with custom .gitleaks.toml. Custom pattern check for OPENAI_API_KEY, ANTHROPIC_API_KEY, POSTGRES_PASSWORD, NEO4J_AUTH, QDRANT_API_KEY, TAURI_SIGNING_PRIVATE_KEY.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-021",
+      "name": "Security Pipeline - License Compliance Check (Python/NPM/Rust)",
+      "description": "GitHub Actions job: license-check. pip-licenses with --fail-on GPL-3.0/AGPL-3.0/SSPL-1.0. npx license-checker with --failOn. cargo deny check licenses with deny.toml config. Allows MIT/Apache-2.0/BSD-2/BSD-3/ISC.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB6-022",
+      "name": "CI Orchestration - Integrated CI Workflow (ci.yml)",
+      "description": "GitHub Actions workflow: ci.yml. PR/push trigger for main/develop. 5-stage pipeline: (1) Quality (python/rust/react in parallel + schema validation), (2) Tests (python/rust/react in parallel), (3) Security scan, (4) Build check (cross-platform matrix), (5) CI summary. Concurrency group with cancel-in-progress.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-023",
+      "name": "CI Pipeline - Nightly Full Test Suite (V3 stub)",
+      "description": "GitHub Actions workflow: nightly.yml. Daily 03:00 UTC schedule + manual dispatch. V3 implementation planned: full unit tests, full integration tests, full E2E, performance benchmarks, security audit, Slack report.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V3",
+      "priority": "P2"
+    },
+    {
+      "id": "PB6-024",
+      "name": "CI/CD - GitHub Secrets Configuration",
+      "description": "Configure required GitHub Secrets: TAURI_SIGNING_PRIVATE_KEY (V1+), DEPLOY_SSH_KEY/HOST (V2+), POSTGRES_USER/PASSWORD (V2+), QDRANT_API_KEY (V2+), NEO4J_AUTH (V2+), OPENAI_API_KEY (V2+), KUBECONFIG (V3), SLACK_WEBHOOK_URL (V2+). 11 secrets total.",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB6-025",
+      "name": "CI/CD - Branch Strategy (main/develop/feature/hotfix/release)",
+      "description": "Implement branch strategy: main (production, tag push trigger), develop (integration, merge commit trigger), feature/* (PR open/push), hotfix/* (PR open/push), release/* (manual trigger).",
+      "type": "FT-INFRA",
+      "source_doc": "PHASE_B6_CICD_PIPELINE",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-001",
+      "name": "Schema Version Management - VersionedSchema Base Class",
+      "description": "Implement SchemaVersion model (major/minor/patch with is_compatible_with) and VersionedSchema base class with schema_version, created_at, updated_at fields. All 37 D2.1 schemas inherit from VersionedSchema with explicit version pinning.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-002",
+      "name": "Schema Change Management - Additive/Breaking/Deprecation Patterns",
+      "description": "Implement schema change patterns: Additive (optional field addition, MINOR bump), Breaking (field type change, MAJOR bump), Deprecation (model_validator warn + auto-migrate legacy fields). Version rules: MAJOR=field delete/type change, MINOR=optional field add, PATCH=description/default change.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P1"
+    },
+    {
+      "id": "PB7-003",
+      "name": "Alembic Migration Infrastructure (env.py, alembic.ini, versions/)",
+      "description": "Set up Alembic migration infrastructure: env.py environment config, alembic.ini settings, versions/ directory with 5 initial migrations (001_initial_v1, 002_add_v2_tables, 003_migrate_jsonl, 004_add_vector_metadata, 005_add_rbac_tables). Custom scripts in custom/ and utils/ directories.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-004",
+      "name": "V2 Postgres Tables - Alembic Migration (decisions, log_events, memory_records, policy_checks, rbac_roles)",
+      "description": "Alembic migration 002_add_v2_tables: Create decisions table (DecisionSchema v2.2.1), log_events table with time-series index, memory_records table (19 fields, MemoryRecordSchema v2.2.0), policy_checks table, rbac_roles table with 4 default roles (OWNER/ADMIN/OPERATOR/VIEWER). All with UUID PKs, JSONB columns, schema_version tracking. Includes downgrade().",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-005",
+      "name": "SQLite -> Postgres Data Migration (V1 -> V2)",
+      "description": "SQLiteToPostgresMigrator class: batch migration (1000 records) for 6 tables (decisions, log_events, memory_records, policy_checks, approvals, cost_budgets). Type mapping (TEXT->TEXT, INTEGER->BIGINT, JSON->JSONB). UUID generation, JSON string parsing. Pre-validation (table existence), post-validation (record count match). BackupConfigSchema integration.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-006",
+      "name": "JSONL -> Postgres Log Migration (V1 -> V2)",
+      "description": "JSONLToPostgresMigrator class: Process *.jsonl and *.jsonl.gz files from ~/.vamos/logs/. Validate each line against LogEventSchema v2.2.1 using Pydantic. Batch INSERT (5000 records) with ON CONFLICT DO NOTHING. Error tracking with file/line/error details (max 100 errors reported).",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB7-007",
+      "name": "Chroma -> Qdrant Vector DB Migration (V1 -> V2)",
+      "description": "ChromaToQdrantMigrator class: Migrate 2 collections (vamos_memory, vamos_knowledge) from Chroma embedded to Qdrant server. BGE-M3 1024D vectors with COSINE distance. Batch (500) transfer preserving metadata. needs_reembedding=True flag for V2 re-embedding. Post-migration count validation.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-008",
+      "name": "JSON File -> Neo4j Graph Migration (V1 -> V2)",
+      "description": "JSONToNeo4jMigrator class: Migrate JSON graph files (nodes/edges) from ~/.vamos/graph/ to Neo4j Community. Create indexes/constraints (Agent unique, Memory unique, Concept index). Batch (200) node MERGE and edge MERGE operations. Post-migration validation (source vs Neo4j node/edge counts).",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-009",
+      "name": "Config File Migration (config.v1.toml -> config.v2.toml)",
+      "description": "migrate_config function: Convert V1Config (nested 13-section B4 structure: core/llm/embedding/storage/cost) to V2Config (flat structure with openai provider, text-embedding-3-small, PostgreSQL URL, Qdrant URL, Neo4j URI, log-to-postgres, incremental backup with encryption, streamable-http MCP). Preserves legacy embedding info.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB7-010",
+      "name": "Postgres -> Managed Postgres Migration (V2 -> V3)",
+      "description": "Shell script migrate_v2_to_v3_postgres.sh: 5-step process (pre-validate record counts, pg_dump --format=custom --compress=9, pg_restore --clean --if-exists --no-owner, Alembic upgrade head, post-validate record count match). Zero data loss verification.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V3",
+      "priority": "P2"
+    },
+    {
+      "id": "PB7-011",
+      "name": "Qdrant Self-Hosted -> Qdrant Cloud Migration (V2 -> V3)",
+      "description": "QdrantCloudMigrator class: Migrate collections from self-hosted Qdrant to Qdrant Cloud. Recreates collection with same vector config. Batch (500) point scroll and upsert with payload and vectors. Count validation.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V3",
+      "priority": "P2"
+    },
+    {
+      "id": "PB7-012",
+      "name": "Neo4j Community -> Neo4j Aura Migration (V2 -> V3)",
+      "description": "Neo4jAuraMigrator class: Migrate constraints/indexes, nodes (by label, batch 500), and edges (by relationship type, batch 500) from Neo4j Community to Neo4j Aura. Uses MERGE for idempotent migration.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V3",
+      "priority": "P2"
+    },
+    {
+      "id": "PB7-013",
+      "name": "Rollback Strategy - Alembic Downgrade + BackupConfigSchema Restore",
+      "description": "rollback_migration function supporting -1 (one step back), base (initial state), or specific revision targets. BackupManager class with full/incremental/snapshot backup types, AES-256-CBC encryption, restore_from_backup, cleanup_old_backups (retention policy). All migrations include downgrade() functions.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V1",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-014",
+      "name": "Blue-Green Deployment Rollback (V2+)",
+      "description": "Docker Compose blue-green deployment with nginx upstream switching. Rollback script (scripts/rollback.sh): detects current env, switches nginx upstream to previous env, reloads nginx. Health check gates traffic switch.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB7-015",
+      "name": "Migration Pre-Validation (source/target accessibility, schema compatibility, record counts, sample hashes)",
+      "description": "PreValidator class with validate_v1_to_v2: checks SQLite file existence, Postgres connectivity, Alembic schema head, record counts per table, sample data SHA-256 hashes (top 10 records). Returns PreValidationResult with passed property. 7-item checklist including disk space and backup existence.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-016",
+      "name": "Migration Post-Validation (record count comparison, integrity verification)",
+      "description": "PostValidator class: compares expected vs actual record counts per table in Postgres. 7-item checklist: record counts (exact match), sample hashes, schema_version validity, vector counts (Chroma vs Qdrant), graph node/edge counts, config.v2.toml parsing, /health endpoint 200 OK.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-017",
+      "name": "Migration Orchestrator - V1->V2 Full Integration (10-step pipeline)",
+      "description": "MigrationOrchestrator class: 10-step sequential execution: (1) pre-validate, (2) backup, (3) Alembic upgrade, (4) SQLite->Postgres, (5) JSONL->Postgres, (6) Chroma->Qdrant, (7) JSON->Neo4j, (8) config migration, (9) post-validate, (10) cleanup/archive. Failure handling with rollback guidance. JSON report generation.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-018",
+      "name": "V1 Data Archive & Cleanup Post-Migration",
+      "description": "Archive V1 data to ~/.vamos/archive/v1/: SQLite original (vamos.db), JSONL logs (logs.tar.gz), Chroma DB (chroma.tar.gz), JSON graph (graph.tar.gz), config.v1.toml, migration_report.json. 90-day retention policy linked to BackupConfigSchema.retention_days. Auto-delete via cron or BackupManager.cleanup_old_backups.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P1"
+    },
+    {
+      "id": "PB7-019",
+      "name": "Embedding Model Migration - BGE-M3 -> text-embedding-3-small (Dual-Collection Re-embedding)",
+      "description": "EmbeddingMigrator class: Dual-Collection strategy for BGE-M3 (1024D) -> text-embedding-3-small (1536D). Phase 1: create V2 collection; Phase 2: batch re-embed (100/batch) needs_reembedding=True points via OpenAI API with rate limit; Phase 3: deactivate V1; Phase 4: delete V1 after 30 days. HybridSearcher for transition period (V1 results 0.9x penalty).",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P0"
+    },
+    {
+      "id": "PB7-020",
+      "name": "Hybrid Vector Search During Embedding Transition",
+      "description": "HybridSearcher class: Searches both V1 (BGE-M3) and V2 (text-embedding-3-small) collections during transition. V1 results get 0.9x score penalty. Merges and sorts by score, returns top-N. Queries V1 with needs_reembedding=True filter to avoid duplicates.",
+      "type": "FT-MIG",
+      "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
+      "version_scope": "V2",
+      "priority": "P1"
+    }
+  ],
+  "statistics": {
+    "total_features": 60,
+    "by_source": {
+      "PHASE_B5_TEST_STRATEGY": 20,
+      "PHASE_B6_CICD_PIPELINE": 20,
+      "PHASE_B7_MIGRATION_STRATEGY": 20
+    },
+    "by_type": {
+      "FT-TEST": 20,
+      "FT-INFRA": 20,
+      "FT-MIG": 20
+    },
+    "by_version_scope": {
+      "V1": 34,
+      "V2": 20,
+      "V3": 6
+    },
+    "by_priority": {
+      "P0": 33,
+      "P1": 20,
+      "P2": 7
+    },
+    "lines_read": {
+      "PHASE_B5_TEST_STRATEGY": 945,
+      "PHASE_B6_CICD_PIPELINE": 1757,
+      "PHASE_B7_MIGRATION_STRATEGY": 2336
+    },
+    "total_lines_read": 5038
+  }
+}

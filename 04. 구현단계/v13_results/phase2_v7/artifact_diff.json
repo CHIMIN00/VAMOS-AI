@@ -1,0 +1,203 @@
+{
+  "session": "session_16",
+  "timestamp": "2026-03-21T23:43:30.336681",
+  "comparison": "phase1_v6 vs phase2_v7 + v9_results baseline",
+  "v6_baseline": {
+    "total_findings": 16,
+    "high": [
+      {
+        "id": "F-HIGH-001",
+        "canonical": "DEDUP-RETRY-001",
+        "source_agents": [
+          "Agent 3"
+        ],
+        "description": "PART2 config.v1.toml max_retries=3 (2개소) — SOT B4 LOCK V1/V2=2",
+        "severity": "HIGH",
+        "type": "LOCK_VIOLATION",
+        "action": "PART2 수정 필요"
+      },
+      {
+        "id": "F-HIGH-002",
+        "canonical": "DEDUP-TRADE-001",
+        "source_agents": [
+          "Agent 5"
+        ],
+        "description": "AI_INVESTING_SPEC §1.1 실전거래 경로 vs CLAUDE.md Non-goal 2.1 실거래 즉시 거부 LOCK",
+        "severity": "HIGH",
+        "type": "LOCK_CONFLICT",
+        "action": "AI_INVESTING_SPEC 수정 또는 관계 명확화 필요"
+      },
+      {
+        "id": "F-HIGH-003",
+        "canonical": "DEDUP-L0TTL-001",
+        "source_agents": [
+          "Agent 4"
+        ],
+        "description": "CLAUDE.md §15 L0 TTL '7일' vs D2.0-06 §2.1 LOCK '세션 종료 즉시'",
+        "severity": "HIGH",
+        "type": "LOCK_VIOLATION",
+        "action": "CLAUDE.md 갱신 필요"
+      },
+      {
+        "id": "F-HIGH-004",
+        "canonical": "DEDUP-RESP-001",
+        "source_agents": [
+          "Agent 4"
+        ],
+        "description": "ResponseEnvelope 5필드 FREEZE 스키마 D2.1 SOT 미등록",
+        "severity": "HIGH",
+        "type": "SOT_MISSING",
+        "action": "D2.1-D2 또는 D2.1-D5에 등록 (Phase 0 INC-E012 이관 건)"
+      },
+      {
+        "id": "F-HIGH-005",
+        "canonical": "DEDUP-I4-001",
+        "source_agents": [
+          "Agent 5"
+        ],
+        "description": "PART2 V0 #12 모듈 스켈레톤에서 I-4(IntentClassifier) 누락",
+        "severity": "HIGH",
+        "type": "OMISSION",
+        "action": "PART2 수정 필요"
+      },
+      {
+        "id": "F-HIGH-006",
+        "canonical": "DEDUP-CLOUD-001",
+        "source_agents": [
+          "Agent 5"
+        ],
+        "description": "PART2 §6.10 Cloud Library §16.1~§16.13 인용 — SOT에 해당 번호 체계 미존재",
+        "severity": "HIGH (pending verification)",
+        "type": "P1_CREATION",
+        "action": "CLOUD_LIBRARY_SPEC 재확인 후 삭제 또는 근거 추가"
+      },
+      {
+        "id": "F-HIGH-007",
+        "canonical": "DEDUP-GATE-001",
+        "source_agents": [
+          "Agent 2"
+        ],
+        "description": "PART2 §3 Phase3 #2 Gate 통합 노드 — G0~G4 5개 미열거",
+        "severity": "MEDIUM (ADV-04에서 HIGH→MEDIUM 하향)",
+        "type": "INCOMPLETE",
+        "action": "권고: G0~G4 명시 추가"
+      },
+      {
+        "id": "F-HIGH-008",
+        "canonical": "DEDUP-SC-READINESS",
+        "source_agents": [
+          "Agent 5"
+        ],
+        "description": "READINESS_GUIDE 내부 §2.8 vs §9.1 V0 체크리스트 내용 불일치",
+        "severity": "HIGH",
+        "type": "SOURCE_CONFLICT",
+        "action": "READINESS_GUIDE SOT 수정 필요"
+      }
+    ],
+    "medium": [
+      {
+        "id": "F-MED-001",
+        "canonical": "DEDUP-REG-001",
+        "description": "CLAUDE.md §16 레지스트리 수치 구버전(53+/20/13 vs 123/36/23)",
+        "action": "CLAUDE.md 갱신"
+      },
+      {
+        "id": "F-MED-002",
+        "canonical": "DEDUP-ENUM-001",
+        "description": "approval_status(2값) vs policy_gate(4값) 혼동",
+        "action": "PART1/CLAUDE.md 용어 정리"
+      },
+      {
+        "id": "F-MED-003",
+        "description": "CLAUDE.md §10 V0 스키마 수 24→25 미갱신",
+        "action": "CLAUDE.md 갱신"
+      },
+      {
+        "id": "F-MED-004",
+        "description": "PART1 B.5 V0 비용 상한 ₩5,000 → SOT ₩40,000",
+        "action": "PART1 수정"
+      },
+      {
+        "id": "F-MED-005",
+        "description": "V1 보안항목 14개 vs 15개 (DEC-003 별도 건 여부)",
+        "action": "정본 확인"
+      },
+      {
+        "id": "F-MED-006",
+        "description": "Cloud Library G1/G2 Gate 명칭 불일치",
+        "action": "PART2 수정"
+      }
+    ],
+    "low": [
+      {
+        "id": "F-LOW-001",
+        "description": "STEP7-F React 19 표기 (SOT는 18.3)",
+        "action": "참고"
+      },
+      {
+        "id": "F-LOW-002",
+        "description": "BEGINNER_GUIDE 온보딩 체크리스트 PART 미반영",
+        "action": "참고"
+      }
+    ],
+    "agents": 5,
+    "facts_checked": 231
+  },
+  "v7_current": {
+    "total_findings": 45,
+    "high": 0,
+    "medium": 8,
+    "low": 37,
+    "agents": 10,
+    "facts_checked": 342
+  },
+  "key_deltas": [
+    {
+      "category": "scope_expansion",
+      "detail": "v6: 5 agents → v7: 10 agents. Coverage doubled with Teams, Schema, Memory/RAG, UI, AI_Investing agents added."
+    },
+    {
+      "category": "severity_improvement",
+      "detail": "v6: 8 HIGH → v7: 0 HIGH. All v6 HIGH findings resolved in Phase 0 SOT corrections."
+    },
+    {
+      "category": "finding_type_shift",
+      "detail": "v7 findings are predominantly omissions (P3=30) — PART2 delegates details to SOT. Not errors per se."
+    },
+    {
+      "category": "new_coverage",
+      "detail": "v7 added: LogEventSchema field divergence (F-A5-01), HITL timeout conflict (F-91), Python version conflict (F-104)"
+    },
+    {
+      "category": "resolved_from_v6",
+      "detail": "v6 HIGH issues (AI_INVESTING LOCK, ResponseEnvelope, max_retries) — all addressed in Phase 0 SOT fixes"
+    }
+  ],
+  "new_in_v7": [
+    "Agent 7-10 scope areas (UI, CI/CD, Decision, AI_Investing) — not covered in v6",
+    "Spot-check program (61 spot-checks, 96.7% accuracy)",
+    "18-Tier classification applied",
+    "Adversarial challenges with per-finding verdicts"
+  ],
+  "v9_baseline_reference": {
+    "path": "D:/VAMOS/04. 구현단계/v9_results/",
+    "phase1_files": [
+      "wave1_v9B_path_results.json",
+      "wave1_v9E_quantity_results.json",
+      "wave2_v9A_dependency_results.json",
+      "wave2_v9D_artifact_results.json",
+      "wave3_v9C_implementability_results.json",
+      "wave3_v9F_feasibility_results.json"
+    ],
+    "phase2_files": [
+      "v9_phase2_final_report.md",
+      "v9_phase2_ripple_map.md"
+    ],
+    "comparison_notes": [
+      "v9 Phase 1: 6개 wave script 결과 — v13 Phase 2에서 10 Agent 구조로 대체 (동일 검증 범위 포함)",
+      "v9 Phase 2: ripple_map + final_report — v13 Phase 2에서 동일 구조 산출물 생성",
+      "v9→v13 주요 차이: v9는 구현가능성(implementability) 중심, v13은 SOT 충실성(faithfulness) 중심",
+      "v9 findings의 v13 재검증: v9에서 발견된 핵심 이슈(경로/의존/수량)는 Phase 0 SOT 수정으로 해소됨"
+    ]
+  }
+}

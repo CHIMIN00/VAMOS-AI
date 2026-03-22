@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "type": "completeness_map",
+    "scope": "CM-1~CM-8 (Session 4-5 Enhanced)",
+    "created": "2026-03-21",
+    "version": "v13",
+    "pipeline": "v13 Enhanced Pipeline"
+  },
+  "coverage_matrix": {
+    "CM-1": {
+      "category": "C1_values",
+      "total": 1036,
+      "consistent": 4,
+      "inconsistent": 0,
+      "source_conflict": 9,
+      "single_source": 1023,
+      "severity": {
+        "CRITICAL": 9,
+        "WARNING": 0,
+        "INFO": 1027
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "symbolic-verify",
+      "enhanced_result": "PASS"
+    },
+    "CM-2": {
+      "category": "C2_counts",
+      "total": 519,
+      "consistent": 10,
+      "inconsistent": 10,
+      "source_conflict": 1,
+      "single_source": 498,
+      "severity": {
+        "CRITICAL": 1,
+        "WARNING": 10,
+        "INFO": 508
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "fact-audit",
+      "enhanced_result": "PASS"
+    },
+    "CM-3": {
+      "category": "C3_taxonomy",
+      "total": 325,
+      "consistent": 0,
+      "inconsistent": 0,
+      "source_conflict": 1,
+      "single_source": 324,
+      "severity": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 324
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "sot-conflict",
+      "enhanced_result": "PASS"
+    },
+    "CM-4": {
+      "category": "C4_names",
+      "total": 461,
+      "consistent": 4,
+      "inconsistent": 0,
+      "source_conflict": 0,
+      "single_source": 457,
+      "severity": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 461
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "deep-diff",
+      "enhanced_result": "PASS"
+    },
+    "CM-5": {
+      "category": "C5_scope",
+      "total": 175,
+      "consistent": 0,
+      "inconsistent": 1,
+      "source_conflict": 0,
+      "single_source": 174,
+      "severity": {
+        "CRITICAL": 0,
+        "WARNING": 1,
+        "INFO": 174
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "symbolic-verify",
+      "enhanced_result": "PASS"
+    },
+    "CM-6": {
+      "category": "C6_versions",
+      "total": 230,
+      "consistent": 0,
+      "inconsistent": 0,
+      "source_conflict": 4,
+      "single_source": 226,
+      "severity": {
+        "CRITICAL": 4,
+        "WARNING": 0,
+        "INFO": 226
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "deep-diff",
+      "enhanced_result": "PASS"
+    },
+    "CM-7": {
+      "category": "C7_thresholds",
+      "total": 249,
+      "consistent": 25,
+      "inconsistent": 2,
+      "source_conflict": 0,
+      "single_source": 222,
+      "severity": {
+        "CRITICAL": 1,
+        "WARNING": 1,
+        "INFO": 247
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "symbolic-verify",
+      "enhanced_result": "PASS"
+    },
+    "CM-8": {
+      "category": "C8_references",
+      "total": 241,
+      "consistent": 5,
+      "inconsistent": 2,
+      "source_conflict": 0,
+      "single_source": 234,
+      "severity": {
+        "CRITICAL": 0,
+        "WARNING": 2,
+        "INFO": 239
+      },
+      "dv_result": "PASS",
+      "enhanced_skill": "json-diff",
+      "enhanced_result": "PASS"
+    }
+  },
+  "summary": {
+    "total_comparisons": 3236,
+    "total_consistent": 48,
+    "total_issues": 30,
+    "total_single_source": 3158,
+    "cross_match_rate_pct": 2.4,
+    "issue_rate_pct": 0.93,
+    "all_dv_pass": true,
+    "all_enhanced_pass": true
+  },
+  "enhanced_validation_results": {
+    "CM-1_symbolic_verify": "PASS - 27 LOCK/FREEZE items checked, 0 mismatches, Advisory: Decision schema key fragmentation (18 vs 16)",
+    "CM-2_fact_audit": "PASS - 13 COUNT/LIST cross-checks, 4 genuine mismatches correctly flagged",
+    "CM-3_sot_conflict": "PASS - 1 SOURCE_CONFLICT (MODULE_TIER_SYSTEM 3-axis taxonomy), all correct",
+    "CM-4_deep_diff": "PASS - 30 naming comparisons, item_id traceability issue resolved via rebuild",
+    "CM-5_symbolic_verify": "PASS - 34 scope range checks, 0 boundary errors",
+    "CM-6_deep_diff": "PASS - 230 version checks, 4 SOURCE_CONFLICT (VERSION_SCOPE V0-V3), all V1<V2<V3 paths consistent",
+    "CM-7_symbolic_verify": "PASS - 35 LOCK/FREEZE items, all math relationships valid, 1 false-positive INCONSISTENT (generic key)",
+    "CM-8_json_diff": "PASS - 48 source files verified against SOT corpus, 2 INCONSISTENT (line count staleness), 0 broken refs"
+  }
+}

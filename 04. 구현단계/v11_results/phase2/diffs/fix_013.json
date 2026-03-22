@@ -1,0 +1,27 @@
+{
+  "fix_id": "FIX-013",
+  "fg": "FG-H01",
+  "tier": 2,
+  "order": 13,
+  "severity": "HIGH",
+  "description": "FIX-09 Gate 명칭 전파(Trust→Content Quality, Relevance→Consistency) 4개소 + B-시리즈 매핑표 V3 역할명 명확화",
+  "changes": [
+    {
+      "line": 4036,
+      "section": "§6.10 LOCK 테이블",
+      "action": "Trust Score→Content Quality Score, Relevance Score→Consistency Score"
+    },
+    {
+      "line": 4088,
+      "section": "§6.10 Fast Gate 테이블",
+      "action": "CL-G1 (Trust)→(Content Quality), CL-G2 (Relevance)→(Consistency)"
+    },
+    {
+      "line": 1596,
+      "section": "§3 B↔L 매핑 테이블",
+      "action": "V3 B-Series 모듈 역할명과 일치하도록 설명 보강"
+    }
+  ],
+  "ripple_expected": ["§7.5 SC-13/SC-14", "변경이력"],
+  "applied_at": "2026-03-13"
+}

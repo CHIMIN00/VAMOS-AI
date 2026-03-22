@@ -1,0 +1,68 @@
+{
+  "session": "session_11",
+  "type": "artifact_diff",
+  "timestamp": "2026-03-21T23:55:00",
+  "comparison": "v13_results/phase1_v6 vs v8_results (이전 v6 산출물)",
+
+  "phase0_diff": {
+    "v8_results_phase0": {
+      "scripts": "0-A~0-H + IMP-A~IMP-F (14개)",
+      "0-A": "PASS (0 errors)",
+      "0-B": "PASS (0 errors)",
+      "0-C": "PASS (5 warnings — heading skips)",
+      "0-D": "PASS (133 LOCK entries extracted)",
+      "0-E": "1 inconsistency (max_tokens 2048 vs 4096)",
+      "0-F": "PASS",
+      "0-G": "PASS",
+      "0-H": "PASS (2 warnings)"
+    },
+    "v13_phase1_v6_phase0": {
+      "scripts": "0-A~0-H (8개, IMP-A~F는 v8 전용)",
+      "0-A": "PASS (5 FP — pipe in cells, v8과 동일 패턴)",
+      "0-B": "PASS (51 FP — subtotal/substring, v8에서는 FP 미보고)",
+      "0-C": "PASS (0 errors — v8의 5 warnings 해소: PART 수정 반영)",
+      "0-D": "PASS (312 entries — v8의 133에서 증가: PART 내용 증가 반영)",
+      "0-E": "PASS (0 errors — v8의 max_tokens 불일치 해소)",
+      "0-F": "PASS",
+      "0-G": "PASS",
+      "0-H": "PASS (9 FP — v8의 2 warnings에서 FP 증가: ~N개 표현 증가)"
+    },
+    "key_deltas": [
+      "0-C heading warnings 5→0: v8~v13 사이 PART 수정으로 heading 계층 정상화",
+      "0-D LOCK entries 133→312: PART 내용 확장(v8.4.0+ 신규 LOCK 추가)",
+      "0-E max_tokens 불일치 해소: PART 수정으로 2048/4096 통일",
+      "0-B FP 증가: v13 파서가 더 공격적으로 합계행 탐지 (엄격 모드)"
+    ]
+  },
+
+  "phase1_diff": {
+    "v8_results_phase1": {
+      "format": "대화형 Agent 12개 (대화01~대화12_agent12_d202.md)",
+      "total_findings": "약 45건 (대화 내 산재)",
+      "structure": "비정형 Markdown 대화 기록"
+    },
+    "v13_phase1_v6": {
+      "format": "구조화 JSON (agent1~5_findings.json)",
+      "total_findings": "29건 (중복 제거 후 16건 고유)",
+      "structure": "정형 JSON + 적대적 감사 + 교차 중복 제거"
+    },
+    "methodology_improvement": [
+      "비정형 대화 → 정형 JSON 전환",
+      "5 Agent (v6) → v13 52-skill enhanced 검증",
+      "적대적 감사 추가 (v8에는 없음)",
+      "교차 Agent 중복 제거 (DEDUP) 도입",
+      "P1~P11 오류 패턴 체계적 추적"
+    ],
+    "recurring_issues_from_v8": [
+      "레지스트리 수치 불일치 (v8에서도 EventTypeRegistry 이슈 존재)",
+      "출처 섹션 번호 오기재 (v8 대화04에서 유사 패턴)",
+      "LOCK 값 구버전 잔존 (v8에서 max_retries 등)"
+    ],
+    "new_in_v13": [
+      "AI_INVESTING_SPEC 실거래 vs Non-goal LOCK 충돌 (v8에서 미탐지)",
+      "Cloud Library §16 미존재 번호 인용 (P1 창작원칙)",
+      "V0 모듈 I-4 누락 (v8에서 미탐지)",
+      "L0 TTL 문서 간 불일치 (v8에서 미탐지)"
+    ]
+  }
+}

@@ -1,0 +1,413 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA13_step7_guides.json",
+    "total_items_checked": 425,
+    "pass_count": 377,
+    "fail_count": 48,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_003",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_3RD_REVIEW_DELTA'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_3RD_REVIEW_DELTA"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_032",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_PART_F_3RD_ADD'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_PART_F_3RD_ADD"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_050",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_A_1_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_A_1_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_051",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_A_2_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_A_2_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_052",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_A_3_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_A_3_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_053",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_A_4_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_A_4_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_054",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_D_1_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_D_1_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_055",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_D_2_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_D_2_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_056",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_D_3_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_D_3_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_057",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_1_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_1_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_058",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_2_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_2_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_059",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_3_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_3_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_060",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_4_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_4_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_061",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_5_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_5_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_062",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_6_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_6_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_063",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_7_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_7_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_064",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_8_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_8_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_065",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_9_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_9_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_066",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_10_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_10_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_067",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_11_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_11_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_068",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_12_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_12_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_069",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_13_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_13_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_070",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_14_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_14_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_071",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_15_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_15_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_072",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_16_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_16_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_073",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_17_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_17_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_074",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_18_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_18_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_075",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_19_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_19_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_076",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_20_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_20_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_077",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_F_21_SUBSECTION'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_F_21_SUBSECTION"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_096",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_REINF_SEC1_STEP7_A__________LLM'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_REINF_SEC1_STEP7_A__________LLM"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_098",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_REINF_SEC3_STEP7_C__UI_UX'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_REINF_SEC3_STEP7_C__UI_UX"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_101",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_REINF_SEC6_STEP7_F_________MLOPS'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_REINF_SEC6_STEP7_F_________MLOPS"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_104",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_REINF_SEC9_STEP7_I__AI_INVESTING'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_REINF_SEC9_STEP7_I__AI_INVESTING"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_105",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7_REINF_SEC10____AI_____VAMOS'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7_REINF_SEC10____AI_____VAMOS"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_130",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC1_CLAUDE__ANTHROPIC____8_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC1_CLAUDE__ANTHROPIC____8_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_131",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC2_CHATGPT_GPT__OPENAI____10_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC2_CHATGPT_GPT__OPENAI____10_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_132",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC3_GEMINI__GOOGLE____6_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC3_GEMINI__GOOGLE____6_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_134",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC5_KIMO_KIMI__MOONSHOT_AI_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC5_KIMO_KIMI__MOONSHOT_AI_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_137",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC8_XAI_GROK___THINK___DEEPSE_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC8_XAI_GROK___THINK___DEEPSE_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_139",
+      "severity": "WARNING",
+      "message": "비표준 키 'STEP7B_SEC10_META_AI__LLAMA_HEADER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "STEP7B_SEC10_META_AI__LLAMA_HEADER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_170~EA-13_415",
+      "severity": "WARNING",
+      "message": "동일 키 'TOTAL_MODULE_COUNT'가 11회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "10 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-13_393~EA-13_394",
+      "severity": "WARNING",
+      "message": "동일 키 'STEP7M_PART3_COUNT'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:STEP7_작업가이드.md",
+      "severity": "WARNING",
+      "message": "파일 'STEP7_작업가이드.md'(940줄)의 후반부 추출 비율이 낮음: 15/93건 (16%)",
+      "expected": ">= 20%",
+      "actual": "16%"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:STEP7-E_보안_안전_거버넌스_작업가이드.md",
+      "severity": "WARNING",
+      "message": "파일 'STEP7-E_보안_안전_거버넌스_작업가이드.md'(1210줄)의 후반부 추출 비율이 낮음: 5/31건 (16%)",
+      "expected": ">= 20%",
+      "actual": "16%"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+      "severity": "WARNING",
+      "message": "파일 'STEP7-G_벤치마크_평가_품질보증_작업가이드.md'(891줄)의 후반부 추출 비율이 낮음: 6/33건 (18%)",
+      "expected": ">= 20%",
+      "actual": "18%"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+      "severity": "WARNING",
+      "message": "파일 'STEP7-H_비즈니스모델_시장전략_작업가이드.md'(1053줄)의 후반부 추출 비율이 낮음: 5/30건 (17%)",
+      "expected": ">= 20%",
+      "actual": "17%"
+    },
+    {
+      "rule": "DV-10",
+      "item_id": "coverage:STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+      "severity": "WARNING",
+      "message": "파일 'STEP7-N_워크플로우자동화_RPA_작업가이드.md'(667줄)의 후반부 추출 비율이 낮음: 2/12건 (17%)",
+      "expected": ">= 20%",
+      "actual": "17%"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 48,
+    "INFO": 0
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

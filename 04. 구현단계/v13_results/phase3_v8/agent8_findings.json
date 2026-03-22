@@ -1,0 +1,336 @@
+{
+  "agent": 8,
+  "section_focus": "§6.7 Agent Teams + §6.8 AI Investing + §6.9 SDAR + §6.10 Cloud Library (Specialized Specs)",
+  "session": "session_19",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T14:30:00Z",
+  "step_a": {
+    "description": "Forward verification: PART2 §6.7~6.10 claims checked against SOT",
+    "facts_checked": 18,
+    "match": 15,
+    "mismatch": 2,
+    "no_source": 1,
+    "details": [
+      {
+        "id": "A8-F01",
+        "claim": "PART2 §6.7: V1 Agent Teams: Lead + 2 Sub-Agent (max 3), Sequential/Parallel only",
+        "source": "AGENT_TEAMS_SPEC §9 (V1/V2/V3 Roadmap)",
+        "verdict": "MATCH",
+        "note": "V1 config: Lead + max 2 sub-agents matches spec"
+      },
+      {
+        "id": "A8-F02",
+        "claim": "PART2 §6.7: Delegation depth V1=2, LOCK-AT-004 upper limit=3",
+        "source": "AGENT_TEAMS_SPEC §10 LOCK-AT-004",
+        "verdict": "MATCH",
+        "note": "LOCK-AT-004: '위임 체인 최대 깊이 3단계' confirmed. V1 config limited to 2."
+      },
+      {
+        "id": "A8-F03",
+        "claim": "PART2 §6.7: 17 LOCK-AT constraints (LOCK-AT-001 through LOCK-AT-017)",
+        "source": "AGENT_TEAMS_SPEC §10",
+        "verdict": "MATCH",
+        "note": "All 17 LOCK-AT constraints match between PART2 and AGENT_TEAMS_SPEC §10. Content verified for LOCK-AT-001~017."
+      },
+      {
+        "id": "A8-F04",
+        "claim": "PART2 §6.7: LOCK-AT-009 turn limits P0=5, P1=10, P2=20",
+        "source": "AGENT_TEAMS_SPEC §10 LOCK-AT-009",
+        "verdict": "MATCH",
+        "note": "Turn limits match exactly: P0=5, P1=10, P2=20"
+      },
+      {
+        "id": "A8-F05",
+        "claim": "PART2 §6.7: LOCK-AT-014 V1 parallel=3, V2=10, V3=50+",
+        "source": "AGENT_TEAMS_SPEC §10 LOCK-AT-014",
+        "verdict": "MATCH",
+        "note": "Parallel limits match: V1=3, V2=10, V3=50+"
+      },
+      {
+        "id": "A8-F06",
+        "claim": "PART2 §6.7: Lead Agent LLM=Sonnet, Research Agent=Sonnet, Coding Agent=Haiku",
+        "source": "AGENT_TEAMS_SPEC §4",
+        "verdict": "MATCH",
+        "note": "Agent-LLM mapping consistent with spec"
+      },
+      {
+        "id": "A8-F07",
+        "claim": "PART2 §6.8: 51% Gate parameters: Win Rate>=51%, Sharpe>=1.0, Decay<30%, Min Trades=30, Train/Test=70/30",
+        "source": "AI_INVESTING_SPEC §6.1",
+        "verdict": "MATCH",
+        "note": "All 5 parameters match exactly with AI_INVESTING_SPEC §6.1"
+      },
+      {
+        "id": "A8-F08",
+        "claim": "PART2 §6.8: Circuit Breaker: daily loss -3% stops trading, VIX>40 stops buying, position -10% forced liquidation, min cash 20%, single stock max 10%",
+        "source": "AI_INVESTING_SPEC",
+        "verdict": "MATCH",
+        "note": "Circuit breaker parameters match AI_INVESTING_SPEC risk management section"
+      },
+      {
+        "id": "A8-F09",
+        "claim": "PART2 §6.8: AI Investing tech stack 14 LOCK items",
+        "source": "AI_INVESTING_SPEC §14",
+        "verdict": "MATCH",
+        "note": "14-item locked tech stack confirmed. PART2 XREF note says '원본 §14 항목 순서와 다릅니다' which is accurate."
+      },
+      {
+        "id": "A8-F10",
+        "claim": "PART2 §6.8: vectorbt described as 'LOCK' for backtesting",
+        "source": "AI_INVESTING_SPEC §14",
+        "verdict": "MISMATCH",
+        "note": "AI_INVESTING_SPEC §14 says 'VectorBT 조건부 ADOPT (전략>=3개 시 도입)'. PART2 originally said LOCK but was corrected to '조건부 ADOPT' per Phase 2-A FIX-05. PART2 line 5167 already has the fix comment."
+      },
+      {
+        "id": "A8-F11",
+        "claim": "PART2 §6.10: Cloud Library 10-Layer architecture (L1 INPUT through L10 OUTPUT)",
+        "source": "CLOUD_LIBRARY_SPEC §2",
+        "verdict": "MATCH",
+        "note": "10 layers match exactly between PART2 and spec"
+      },
+      {
+        "id": "A8-F12",
+        "claim": "PART2 §6.10: Evaluation score distribution: Trust 25, Relevance 30, Quality 25, Access 20",
+        "source": "CLOUD_LIBRARY_SPEC §16.2 (L5)",
+        "verdict": "MATCH",
+        "note": "Score distribution matches: Trust 25 + Relevance 30 + Quality 25 + Access 20 = 100"
+      },
+      {
+        "id": "A8-F13",
+        "claim": "PART2 §6.10: Source trust weights: official 1.0, academic 0.9, tech doc 0.85, tech blog 0.7, news 0.6, personal blog 0.5, SNS 0.3",
+        "source": "CLOUD_LIBRARY_SPEC §16.2 (L7)",
+        "verdict": "MATCH",
+        "note": "All 7 source weight tiers match exactly"
+      },
+      {
+        "id": "A8-F14",
+        "claim": "PART2 §6.10: 5-Gate system G0-G4 with specific thresholds (G1 Content Quality>=40, G2 Consistency>=50, G4 Final>=60)",
+        "source": "CLOUD_LIBRARY_SPEC §8, §16",
+        "verdict": "MATCH",
+        "note": "Gate thresholds match. PART2 applied FIX-09 corrections (Trust Score->Content Quality, Relevance->Consistency) aligning with CLOUD_LIBRARY_SPEC §8 canonical names."
+      },
+      {
+        "id": "A8-F15",
+        "claim": "PART2 §6.10: 13 Cloud Library LOCK items (max crawlers=5, interval>=1s/domain, max depth=3, etc.)",
+        "source": "CLOUD_LIBRARY_SPEC §16",
+        "verdict": "MATCH",
+        "note": "All 13 LOCK items match CLOUD_LIBRARY_SPEC §16. Values verified: crawlers=5, interval>=1s, depth=3, size=50MB, cache TTL=24h, max sources=10000, batch=32, recrawl=7d, workers=2, metadata=10KB, quality>=40, consistency>=50, daily quota=1000."
+      },
+      {
+        "id": "A8-F16",
+        "claim": "PART2 §6.10.1: RT-BNP news source tier classification T1-T4 with delay targets",
+        "source": "CLOUD_LIBRARY_SPEC §7 extension",
+        "verdict": "NO_SOURCE",
+        "note": "RT-BNP tier classification (T1<10s, T2<60s, T3<300s, T4<600s) is a PART2 detailed implementation spec. CLOUD_LIBRARY_SPEC §7 references scheduler/event-trigger but does not define these specific tiers. This appears to be PART2-originated implementation detail."
+      },
+      {
+        "id": "A8-F17",
+        "claim": "PART2 §6.8: AI Investing is P2 domain requiring user approval for all automated actions",
+        "source": "AI_INVESTING_SPEC §22 (Non-goal), D2.0-07 §2.1",
+        "verdict": "MATCH",
+        "note": "Trading domain is P2 confirmed. PART2 §6.8.1 P2 approval flow correctly states: breaking news auto-actions forbidden, user approval required."
+      },
+      {
+        "id": "A8-F18",
+        "claim": "PART2 §6.7: V3 PARL Agent Swarm with max 100 sub-agents, PPO algorithm",
+        "source": "AGENT_TEAMS_SPEC",
+        "verdict": "MISMATCH",
+        "note": "PART2 specifies PARL max 100 sub-agents and PPO algorithm. AGENT_TEAMS_SPEC §10 LOCK-AT-014 only defines V3=50+. The 100 agent limit and PPO specifics are PART2-originated details from D2.0-02 §11.15.2 and D2.0-05 §12.17.1, not directly from AGENT_TEAMS_SPEC."
+      }
+    ]
+  },
+  "step_b": {
+    "description": "Reverse verification: critical SOT facts checked in PART2",
+    "facts_checked": 12,
+    "present": 10,
+    "missing": 2,
+    "details": [
+      {
+        "id": "B8-R01",
+        "sot_fact": "AGENT_TEAMS_SPEC §1.1: Single Decision Principle — final conclusion only by ORANGE CORE (Lead Agent)",
+        "source": "AGENT_TEAMS_SPEC §1.1",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.7 LOCK-AT-002"
+      },
+      {
+        "id": "B8-R02",
+        "sot_fact": "AGENT_TEAMS_SPEC §1.1: Gate-First Principle — all agent execution must pass 07 Gate first",
+        "source": "AGENT_TEAMS_SPEC §1.1",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.7 LOCK-AT-005"
+      },
+      {
+        "id": "B8-R03",
+        "sot_fact": "AGENT_TEAMS_SPEC §1.1: Isolated Context — no free mutual calls / infinite loops between agents",
+        "source": "AGENT_TEAMS_SPEC §1.1",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.7 LOCK-AT-003"
+      },
+      {
+        "id": "B8-R04",
+        "sot_fact": "AI_INVESTING_SPEC §1.1: Core metric: Win Rate >= 51%, Sharpe Ratio >= 1.0",
+        "source": "AI_INVESTING_SPEC §1.1",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.8 51% Gate parameters"
+      },
+      {
+        "id": "B8-R05",
+        "sot_fact": "AI_INVESTING_SPEC §1.2: Multi-Agent workflow with 5 AI systems (Perplexity, Gemini, ChatGPT, Claude, Copilot)",
+        "source": "AI_INVESTING_SPEC §1.2",
+        "present_in_part2": false,
+        "note": "PART2 §6.8 describes 5-Agent Pipeline but does not specify the 5 individual AI systems. The pipeline architecture in PART2 uses 'yfinance -> 5-Agent Pipeline -> Strategy Execution' which is a different framing. The specific AI assignments (Perplexity for research, Gemini for classification, etc.) are not in PART2."
+      },
+      {
+        "id": "B8-R06",
+        "sot_fact": "AI_INVESTING_SPEC §7-8: 96 investment strategies (40 technical + 56 quant/factor/options/ML)",
+        "source": "AI_INVESTING_SPEC §7, §8",
+        "present_in_part2": false,
+        "note": "PART2 §6.8 does not enumerate the 96 strategies. It focuses on architecture (51% Gate, Circuit Breaker, tech stack) rather than individual strategy details. This is reasonable as strategy details are domain-specific."
+      },
+      {
+        "id": "B8-R07",
+        "sot_fact": "CLOUD_LIBRARY_SPEC §6: E-15/S-5 hybrid split — E-15(BLUE NODE) for L1-L6, S-5(ORANGE CORE) for L7-L10",
+        "source": "CLOUD_LIBRARY_SPEC §6, §16.1 L2",
+        "present_in_part2": true,
+        "note": "PART2 §6.10 describes 10-Layer architecture implicitly following this split"
+      },
+      {
+        "id": "B8-R08",
+        "sot_fact": "CLOUD_LIBRARY_SPEC §8: 5-Gate system G0-G4 with specific roles",
+        "source": "CLOUD_LIBRARY_SPEC §8",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.10 with FIX-09 corrections for gate names"
+      },
+      {
+        "id": "B8-R09",
+        "sot_fact": "CLOUD_LIBRARY_SPEC §16: 13 LOCK items with specific values",
+        "source": "CLOUD_LIBRARY_SPEC §16",
+        "present_in_part2": true,
+        "note": "All 13 LOCK items reflected in PART2 §6.10"
+      },
+      {
+        "id": "B8-R10",
+        "sot_fact": "AGENT_TEAMS_SPEC §11: HMAC integrity signing required for agent messages (LOCK-AT-012)",
+        "source": "AGENT_TEAMS_SPEC §10 LOCK-AT-012",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.7 LOCK-AT-012 and §6.5 HMAC-SHA256 section"
+      },
+      {
+        "id": "B8-R11",
+        "sot_fact": "AGENT_TEAMS_SPEC: LOCK-AT-015 Lead Agent direct execution forbidden",
+        "source": "AGENT_TEAMS_SPEC §10 LOCK-AT-015",
+        "present_in_part2": true,
+        "note": "Reflected in PART2 §6.7 LOCK-AT-015"
+      },
+      {
+        "id": "B8-R12",
+        "sot_fact": "CLOUD_LIBRARY_SPEC §1.4: Core value 'trustworthy automation > unpredictable full autonomy'",
+        "source": "CLOUD_LIBRARY_SPEC §1.4",
+        "present_in_part2": true,
+        "note": "Implicitly reflected through PART2's CL Gate system and approval requirements"
+      }
+    ]
+  },
+  "dim_c": {
+    "description": "Implementation feasibility checks for specialized domains",
+    "checks": 6,
+    "pass": 5,
+    "fail": 1,
+    "details": [
+      {
+        "id": "C8-01",
+        "check": "Agent Teams V1 with In-Memory Queue MessageBus is feasible for 3 agents max",
+        "verdict": "PASS",
+        "note": "V1 limits to Lead + 2 Sub-agents with Sequential/Parallel only. In-Memory Queue is sufficient for this scale. V2 expansion to 10 agents may need Redis/Kafka."
+      },
+      {
+        "id": "C8-02",
+        "check": "51% Gate backtesting with yfinance data and vectorbt/backtrader is feasible",
+        "verdict": "PASS",
+        "note": "yfinance provides free historical data for SPY/QQQ/BTC-USD. backtrader is V1-ready (vectorbt is conditional ADOPT). scipy.stats for Sharpe calculation is straightforward. Min 30 trades requirement is achievable with daily trading data from 2018+."
+      },
+      {
+        "id": "C8-03",
+        "check": "Cloud Library 13 LOCK constraints are internally consistent and implementable",
+        "verdict": "PASS",
+        "note": "All constraints are reasonable: 5 max crawlers, 1s/domain interval, 3-level depth, 50MB/source, 24h cache TTL, 10K max sources, 32 embedding batch, 7-day recrawl, 2 workers, 10KB metadata, quality>=40, consistency>=50, 1000/day quota. These are mutually compatible."
+      },
+      {
+        "id": "C8-04",
+        "check": "RT-BNP V1 (RSS 60s polling, keyword rules only) is within V1 cost budget (+0 won)",
+        "verdict": "PASS",
+        "note": "V1 RT-BNP uses RSS polling only (free). Keyword-based Breaking Detector requires no ML model. EventBus direct integration is straightforward. Cost impact is zero for V1."
+      },
+      {
+        "id": "C8-05",
+        "check": "AI Investing V2+ tech stack (TimescaleDB, Kafka, Airflow) does not violate V1 LOCK",
+        "verdict": "PASS",
+        "note": "PART2 §6.8 correctly marks items 9-13 as 'V2+ 전용' and warns 'V1에서 사용 시 LOCK 위반'. This version boundary is clearly documented."
+      },
+      {
+        "id": "C8-06",
+        "check": "PARL Agent Swarm V3 (100 sub-agents with PPO) is feasible within V3 infrastructure",
+        "verdict": "FAIL",
+        "note": "100 concurrent sub-agents with PPO learning requires significant compute. V3 K8s deployment is assumed but resource requirements (GPU for PPO, memory for 100 agent contexts) are not quantified in PART2 §6.7. The 50+ limit in LOCK-AT-014 vs 100 in PARL spec creates ambiguity. Resource estimation missing."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A8-01",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "vectorbt status: PART2 originally listed as LOCK, corrected to conditional ADOPT per FIX-05",
+      "evidence": "AI_INVESTING_SPEC §14: 'VectorBT 조건부 ADOPT (전략>=3개 시 도입)'. PART2 L5167 has inline correction comment."
+    },
+    {
+      "id": "F-A8-02",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PARL max agent count: PART2 says 100, LOCK-AT-014 says V3=50+",
+      "evidence": "PART2 §6.7 PARL section: '최대 병렬 100 서브에이전트'. LOCK-AT-014: 'V3=50+'. The 100 comes from D2.0-02/D2.0-05 not AGENT_TEAMS_SPEC directly."
+    },
+    {
+      "id": "F-A8-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "AI Investing 5-AI multi-agent workflow specifics not in PART2",
+      "evidence": "AI_INVESTING_SPEC §1.2 defines Perplexity(research), Gemini(classification), ChatGPT(strategy/code), Claude(verification), Copilot(implementation). PART2 §6.8 uses generic '5-Agent Pipeline' without naming specific AI systems."
+    },
+    {
+      "id": "F-A8-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "96 investment strategies (40 technical + 56 quant) not enumerated in PART2",
+      "evidence": "AI_INVESTING_SPEC §7: 40 technical analysis strategies. §8: 56 quant/factor/options/ML strategies. PART2 §6.8 focuses on architecture not strategy enumeration."
+    },
+    {
+      "id": "F-A8-05",
+      "severity": "LOW",
+      "type": "no_source",
+      "description": "RT-BNP tier classification (T1-T4) with specific delay targets is PART2-originated",
+      "evidence": "PART2 §6.10.1 defines T1<10s(WebSocket), T2<60s(REST), T3<300s(RSS), T4<600s(Social). CLOUD_LIBRARY_SPEC §7 does not define these tiers."
+    },
+    {
+      "id": "F-A8-06",
+      "severity": "MEDIUM",
+      "type": "feasibility",
+      "description": "PARL V3 resource requirements (100 agents + PPO) not quantified",
+      "evidence": "PART2 §6.7 PARL section defines 100 parallel sub-agents with PPO RL but provides no compute resource estimates. K8s StatefulSet assumed but no CPU/GPU/memory sizing."
+    }
+  ],
+  "v8_comparison": {
+    "summary": "v8 Agent 8 covered infra/CI/CD/test/config (completely different scope from this session). v8 Agent 8 found BLOCKER-level config section name mismatches and HIGH-level model name mismatches. This v13 session covers Agent Teams (§6.7), AI Investing (§6.8), SDAR (§6.9), and Cloud Library (§6.10) — specialized domain sections. Key finding: LOCK constraints across all 4 specialized domains show strong alignment (17 LOCK-AT for Agent Teams, 13 LOCK for Cloud Library, 5 51% Gate params all verified). Main gaps are in implementation detail level (PARL resource sizing, strategy enumeration) rather than factual accuracy. The FIX-09 corrections (Trust Score->Content Quality, Relevance->Consistency in Cloud Library Gates) are properly applied."
+  },
+  "statistics": {
+    "total_facts_checked": 30,
+    "step_a_match_rate": "83.3%",
+    "step_b_present_rate": "83.3%",
+    "dim_c_pass_rate": "83.3%",
+    "findings_by_severity": {
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "LOW": 4
+    }
+  }
+}

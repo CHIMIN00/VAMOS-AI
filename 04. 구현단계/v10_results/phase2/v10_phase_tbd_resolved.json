@@ -1,0 +1,2030 @@
+{
+  "resolved_count": 253,
+  "escalated_count": 102,
+  "items": [
+    {
+      "feature_id": "AINV-023",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-028",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-056",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "BASE-005",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "BGNR-007",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "BGNR-010",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase4",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase4에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-013",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-075",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-031",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-039",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-040",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-041",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-059",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-062",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-064",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-120",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-131",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-008",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-082",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-111",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-066",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-077",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-102",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-119",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-143",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-162",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-012",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-025",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase4",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase4에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-045",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-057",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-064",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-028",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-037",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-038",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-039",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D206-065",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-066",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-088",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-099",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-100",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-107",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-115",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-116",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-117",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-119",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-124",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-125",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-132",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-134",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-142",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-143",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-178",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-179",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-180",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-187",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_8_AIInvest에서 키워드 발견, V1 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-191",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-192",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-193",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-194",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-198",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-199",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-200",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-201",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-204",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-205",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-209",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-217",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-218",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-220",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-222",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-226",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-232",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-007",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-008",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-020",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-027",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-031",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-039",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-040",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-045",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-051",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-052",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-065",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-077",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-086",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-090",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-091",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-100",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-3 → §6_11_Event에서 키워드 발견, V2 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-112",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-113",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-114",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-127",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-129",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-131",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-132",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-142",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_8_AIInvest에서 키워드 발견, V1 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-144",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-146",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-151",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_8_AIInvest에서 키워드 발견, V1 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-152",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_8_AIInvest에서 키워드 발견, V1 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-155",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-156",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase6",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase6에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-157",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-160",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-164",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-169",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-170",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-175",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-178",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-179",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-196",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "P30-072",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "SDAR-041",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=2)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "SDAR-055",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "SDAR-057",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-012",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-014",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-034",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-035",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-074",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase3에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-091",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-025",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-052",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-064",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase6",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase6에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-070",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-076",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-080",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-4 → §6_7_Agent에서 키워드 발견, V3 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-108",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-136",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "AINV-141",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_8_AIInvest에서 키워드 발견, V1 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "AINV-143",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLAUDE-188",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLAUDE-203",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "CLIB-057",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-058",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-077",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-084",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "CLIB-111",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-029",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D202-117",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-032",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-067",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-070",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-110",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D203-113",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-030",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-031",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-080",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-105",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-118",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-142",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D204-151",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-154",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-160",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-001",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-022",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-073",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D205-138",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-008",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "b",
+      "resolution_detail": "agent=M-2 → §6_3_Test에서 키워드 발견, V3 기본 Phase 배정",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-014",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-063",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-064",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-091",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-092",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-098",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-159",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-165",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-208",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-233",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-234",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-236",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D206-237",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-032",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-048",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-067",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase3에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-084",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-094",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-107",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-116",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-136",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-176",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-195",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D207-199",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "D208-090",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "DA1-010",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "DA1-012",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "DD4-011",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "DD7-019",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "DQ1-007",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "IRGD-008",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "MSTR-007",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "P30-049",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "P30-085",
+      "original_suggested_phase": "§5 V3 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "PB2-006",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "PB7-001",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "PB7-013",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "SDAR-093",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-010",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase3에서 발견 (score=2)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-017",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-020",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-021",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-023",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "TEAM-089",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "UPPER_MODULE"
+    },
+    {
+      "feature_id": "BGNR-006",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase4",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase4에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "BGNR-021",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "CLAUDE-063",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase3에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "CLAUDE-077",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "CLAUDE-135",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "CLAUDE-136",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D202-053",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D202-097",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase3에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D202-108",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D202-115",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D203-083",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase6",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase6에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-060",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-067",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D204-075",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase3에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-081",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-083",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D204-095",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase1에서 발견 (score=2)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D204-117",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D204-123",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=2)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D204-125",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-028",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-126",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-127",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-128",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-130",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-133",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-134",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-136",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-139",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-140",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase2에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-142",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-144",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-145",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D205-161",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D206-024",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D206-025",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D206-083",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D206-155",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=3)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "D206-202",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D206-210",
+      "original_suggested_phase": "§4 V2 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D207-001",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase3에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D207-028",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D207-180",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D208-052",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D208-053",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D208-054",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase3",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase3에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "D208-067",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§4_V2_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §4_V2_Phase2에서 발견 (score=2)",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "DA1-009",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§5_V3_Phase2",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §5_V3_Phase2에서 발견 (score=4)",
+      "final_classification": "EXACT_MATCH"
+    },
+    {
+      "feature_id": "P30-073",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "ESCALATED",
+      "resolution_method": "c",
+      "resolution_detail": "Phase TBD 방법 a/b로 확정 불가",
+      "final_classification": "RECLASSIFIED"
+    },
+    {
+      "feature_id": "P30-088",
+      "original_suggested_phase": "§3 V1 (Phase TBD)",
+      "resolved_phase": "§3_V1_Phase1",
+      "resolution_method": "a",
+      "resolution_detail": "feature_name 키워드가 §3_V1_Phase1에서 발견 (score=1)",
+      "final_classification": "RECLASSIFIED"
+    }
+  ]
+}

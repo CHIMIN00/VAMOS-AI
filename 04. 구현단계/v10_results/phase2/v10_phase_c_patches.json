@@ -1,0 +1,1618 @@
+{
+  "total_patched": 200,
+  "total_lines_inserted": 201,
+  "version_bump": "v22.0.0 → v23.0.0",
+  "patches_by_phase": {
+    "V3_P3": 4,
+    "V3_P2": 18,
+    "V2_P3": 15,
+    "V2_P2": 106,
+    "V1_P6": 3,
+    "V1_P5": 3,
+    "V1_P4": 3,
+    "V1_P3": 44,
+    "V1_P2": 4
+  },
+  "patches": [
+    {
+      "feature_id": "CLIB-058",
+      "feature_name": "진화 제어 정책 설정 (변경 유형별 자동/알림/승인 규칙)",
+      "severity": "MEDIUM",
+      "target_section": "V1_P2",
+      "insert_after_line": 1503,
+      "row_number": 10
+    },
+    {
+      "feature_id": "D206-064",
+      "feature_name": "한국어 불용어 처리",
+      "severity": "MEDIUM",
+      "target_section": "V1_P2",
+      "insert_after_line": 1503,
+      "row_number": 11
+    },
+    {
+      "feature_id": "MSTR-007",
+      "feature_name": "3종 TemplateSet 구현 (TS_CORE/TS_WEB_RESEARCH/TS_CODE)",
+      "severity": "MEDIUM",
+      "target_section": "V1_P2",
+      "insert_after_line": 1503,
+      "row_number": 12
+    },
+    {
+      "feature_id": "S7FI-056",
+      "feature_name": "알림 규칙",
+      "severity": "MEDIUM",
+      "target_section": "V1_P2",
+      "insert_after_line": 1503,
+      "row_number": 13
+    },
+    {
+      "feature_id": "D205-025",
+      "feature_name": "중앙 프롬프트 라이브러리",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 16
+    },
+    {
+      "feature_id": "D206-039",
+      "feature_name": "작업 중단 복원 (task_checkpoint)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 17
+    },
+    {
+      "feature_id": "D206-198",
+      "feature_name": "M-027 연구 노트 관리 (논문/인용)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 18
+    },
+    {
+      "feature_id": "D206-199",
+      "feature_name": "M-029 코드 스니펫 라이브러리",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 19
+    },
+    {
+      "feature_id": "D206-200",
+      "feature_name": "M-031 아이디어 캡처 (성숙도 추적)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 20
+    },
+    {
+      "feature_id": "D206-217",
+      "feature_name": "M-045 지식 기반 의사결정 지원 (SWOT)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 21
+    },
+    {
+      "feature_id": "D206-218",
+      "feature_name": "M-046 지식 기반 글쓰기 지원",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 22
+    },
+    {
+      "feature_id": "D207-175",
+      "feature_name": "스트레스 관리 (호흡/그라운딩/명상)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 23
+    },
+    {
+      "feature_id": "D207-178",
+      "feature_name": "CBT 셀프케어 (사고기록+인지왜곡)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 24
+    },
+    {
+      "feature_id": "D207-179",
+      "feature_name": "번아웃 예방 (과도업무감지→중단)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 25
+    },
+    {
+      "feature_id": "S7AE-549",
+      "feature_name": "알림 규칙 엔진",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 26
+    },
+    {
+      "feature_id": "S7FI-283",
+      "feature_name": "소셜 미디어 분석",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 27
+    },
+    {
+      "feature_id": "S7FI-304",
+      "feature_name": "블랙-리터만 모델",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 28
+    },
+    {
+      "feature_id": "S7FI-306",
+      "feature_name": "팩터 투자",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 29
+    },
+    {
+      "feature_id": "S7FI-307",
+      "feature_name": "리밸런싱 엔진",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 30
+    },
+    {
+      "feature_id": "S7JM-030",
+      "feature_name": "음성 품질 최적화",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 31
+    },
+    {
+      "feature_id": "S7JM-189",
+      "feature_name": "성능 프로파일링",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 32
+    },
+    {
+      "feature_id": "S7JM-201",
+      "feature_name": "데이터베이스 관리 도구",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 33
+    },
+    {
+      "feature_id": "S7JM-243",
+      "feature_name": "폴더/노트북 구조",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 34
+    },
+    {
+      "feature_id": "S7JM-244",
+      "feature_name": "Zettelkasten 방법론 구현",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 35
+    },
+    {
+      "feature_id": "S7JM-247",
+      "feature_name": "지식 성숙도 추적",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 36
+    },
+    {
+      "feature_id": "S7JM-257",
+      "feature_name": "스마트 리마인더",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 37
+    },
+    {
+      "feature_id": "S7JM-275",
+      "feature_name": "지식 기반 의사결정 지원",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 38
+    },
+    {
+      "feature_id": "S7JM-276",
+      "feature_name": "지식 기반 글쓰기 지원",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 39
+    },
+    {
+      "feature_id": "S7NP-017",
+      "feature_name": "폼 자동 입력",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 40
+    },
+    {
+      "feature_id": "S7NP-047",
+      "feature_name": "플래시카드 자동 생성",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 41
+    },
+    {
+      "feature_id": "S7NP-048",
+      "feature_name": "간격 반복 (Spaced Repetition)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 42
+    },
+    {
+      "feature_id": "S7NP-049",
+      "feature_name": "퀴즈 자동 생성",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 43
+    },
+    {
+      "feature_id": "S7NP-050",
+      "feature_name": "학습 진도 추적",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 44
+    },
+    {
+      "feature_id": "S7NP-052",
+      "feature_name": "소크라테스식 대화",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 45
+    },
+    {
+      "feature_id": "S7NP-061",
+      "feature_name": "독서 관리",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 46
+    },
+    {
+      "feature_id": "S7NP-062",
+      "feature_name": "학습 목표 관리",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 47
+    },
+    {
+      "feature_id": "S7NP-063",
+      "feature_name": "마이크로러닝",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 48
+    },
+    {
+      "feature_id": "S7NP-064",
+      "feature_name": "학습 동기 부여",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 49
+    },
+    {
+      "feature_id": "S7NP-083",
+      "feature_name": "스트레스 관리 도우미",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 50
+    },
+    {
+      "feature_id": "S7NP-088",
+      "feature_name": "습관 추적기",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 51
+    },
+    {
+      "feature_id": "S7NP-089",
+      "feature_name": "일기 작성 도우미",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 52
+    },
+    {
+      "feature_id": "S7NP-093",
+      "feature_name": "긍정 심리 코칭",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 53
+    },
+    {
+      "feature_id": "S7NP-094",
+      "feature_name": "목표 설정/추적",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 54
+    },
+    {
+      "feature_id": "S7NP-096",
+      "feature_name": "집중 모드 (포모도로)",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 55
+    },
+    {
+      "feature_id": "S7NP-105",
+      "feature_name": "웰니스 알림",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 56
+    },
+    {
+      "feature_id": "S7NP-109",
+      "feature_name": "번아웃 예방",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 57
+    },
+    {
+      "feature_id": "S7NP-142",
+      "feature_name": "대화 분기 관리",
+      "severity": "HIGH",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 58
+    },
+    {
+      "feature_id": "D207-176",
+      "feature_name": "공감 대화 엔진 (Carl Rogers)",
+      "severity": "MEDIUM",
+      "target_section": "V1_P3",
+      "insert_after_line": 1595,
+      "row_number": 59
+    },
+    {
+      "feature_id": "S7JM-058",
+      "feature_name": "마인드맵 자동 생성",
+      "severity": "LOW",
+      "target_section": "V1_P4",
+      "insert_after_line": 1645,
+      "row_number": 17
+    },
+    {
+      "feature_id": "S7JM-217",
+      "feature_name": "온보딩 마법사",
+      "severity": "LOW",
+      "target_section": "V1_P4",
+      "insert_after_line": 1645,
+      "row_number": 18
+    },
+    {
+      "feature_id": "S7NP-151",
+      "feature_name": "키보드 내비게이션",
+      "severity": "LOW",
+      "target_section": "V1_P4",
+      "insert_after_line": 1645,
+      "row_number": 19
+    },
+    {
+      "feature_id": "TEAM-091",
+      "feature_name": "FileOwnership 모델 구현 (writable/readonly/forbidden 경로 제한)",
+      "severity": "HIGH",
+      "target_section": "V1_P5",
+      "insert_after_line": 1685,
+      "row_number": 13
+    },
+    {
+      "feature_id": "S7AE-366",
+      "feature_name": "그레이스풀 셧다운",
+      "severity": "MEDIUM",
+      "target_section": "V1_P5",
+      "insert_after_line": 1685,
+      "row_number": 14
+    },
+    {
+      "feature_id": "S7AE-389",
+      "feature_name": "커넥션 풀링",
+      "severity": "MEDIUM",
+      "target_section": "V1_P5",
+      "insert_after_line": 1685,
+      "row_number": 15
+    },
+    {
+      "feature_id": "S7NP-057",
+      "feature_name": "투자 교육 특화",
+      "severity": "LOW",
+      "target_section": "V1_P6",
+      "insert_after_line": 1720,
+      "row_number": 9
+    },
+    {
+      "feature_id": "S7NP-108",
+      "feature_name": "투자 심리 분석",
+      "severity": "LOW",
+      "target_section": "V1_P6",
+      "insert_after_line": 1720,
+      "row_number": 10
+    },
+    {
+      "feature_id": "S7NP-110",
+      "feature_name": "감정적 투자 방지",
+      "severity": "LOW",
+      "target_section": "V1_P6",
+      "insert_after_line": 1720,
+      "row_number": 11
+    },
+    {
+      "feature_id": "AINV-056",
+      "feature_name": "SHAP/LIME Explainability 모듈 (explainer.py)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 11
+    },
+    {
+      "feature_id": "D202-059",
+      "feature_name": "배치 처리 구현 (S7B-030)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 12
+    },
+    {
+      "feature_id": "D203-111",
+      "feature_name": "시간 여행 디버깅 (Time-Travel Debugging) 구현",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 13
+    },
+    {
+      "feature_id": "D204-162",
+      "feature_name": "모델 A/B 테스팅 고급 (1000건/7일, 자동 승격/롤백)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 14
+    },
+    {
+      "feature_id": "D206-038",
+      "feature_name": "작업 패턴 프로파일",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 15
+    },
+    {
+      "feature_id": "D206-115",
+      "feature_name": "개인 멀티미디어 라이브러리",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 16
+    },
+    {
+      "feature_id": "D206-117",
+      "feature_name": "MemGPT/Letta 패턴 통합",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 17
+    },
+    {
+      "feature_id": "D206-125",
+      "feature_name": "Cognee 통합 (AI KG 자동 구축)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 18
+    },
+    {
+      "feature_id": "D206-179",
+      "feature_name": "지식 신선도 관리",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 19
+    },
+    {
+      "feature_id": "D206-180",
+      "feature_name": "지식 충돌 자동 감지",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 20
+    },
+    {
+      "feature_id": "D206-209",
+      "feature_name": "M-020 지식 임포트/익스포트 확장 (Notion/Obsidian)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 21
+    },
+    {
+      "feature_id": "D206-222",
+      "feature_name": "M-004 스크린 캡처 지식화 (Microsoft Recall 로컬 버전)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 22
+    },
+    {
+      "feature_id": "D206-226",
+      "feature_name": "M-016 시간 기반 지식 관리 (타임라인뷰+주월간리뷰)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 23
+    },
+    {
+      "feature_id": "D206-232",
+      "feature_name": "M-043 예측적 지식 서핑 (행동예측→관련지식 미리 로드)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 24
+    },
+    {
+      "feature_id": "D207-114",
+      "feature_name": "개인 감정 패턴 학습 (예측적 지원)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 25
+    },
+    {
+      "feature_id": "D207-129",
+      "feature_name": "편향 감사 엔진 (확증/최신/생존/섹터)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 26
+    },
+    {
+      "feature_id": "S7AE-344",
+      "feature_name": "B-026 국제화",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 27
+    },
+    {
+      "feature_id": "S7AE-345",
+      "feature_name": "B-030 접근성",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 28
+    },
+    {
+      "feature_id": "S7AE-346",
+      "feature_name": "B-032 버전 관리",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 29
+    },
+    {
+      "feature_id": "S7AE-361",
+      "feature_name": "분산 트레이싱",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 30
+    },
+    {
+      "feature_id": "S7AE-369",
+      "feature_name": "백프레셔",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 31
+    },
+    {
+      "feature_id": "S7AE-384",
+      "feature_name": "CQRS 패턴",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 32
+    },
+    {
+      "feature_id": "S7AE-386",
+      "feature_name": "사가 패턴",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 33
+    },
+    {
+      "feature_id": "S7AE-388",
+      "feature_name": "읽기 복제본",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 34
+    },
+    {
+      "feature_id": "S7AE-561",
+      "feature_name": "E-024 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 35
+    },
+    {
+      "feature_id": "S7AE-562",
+      "feature_name": "E-025 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 36
+    },
+    {
+      "feature_id": "S7AE-563",
+      "feature_name": "E-026 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 37
+    },
+    {
+      "feature_id": "S7AE-564",
+      "feature_name": "E-027 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 38
+    },
+    {
+      "feature_id": "S7AE-565",
+      "feature_name": "E-028 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 39
+    },
+    {
+      "feature_id": "S7AE-566",
+      "feature_name": "E-029 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 40
+    },
+    {
+      "feature_id": "S7AE-567",
+      "feature_name": "E-030 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 41
+    },
+    {
+      "feature_id": "S7AE-571",
+      "feature_name": "E-034 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 42
+    },
+    {
+      "feature_id": "S7AE-572",
+      "feature_name": "E-035 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 43
+    },
+    {
+      "feature_id": "S7AE-573",
+      "feature_name": "E-036 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 44
+    },
+    {
+      "feature_id": "S7AE-574",
+      "feature_name": "E-037 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 45
+    },
+    {
+      "feature_id": "S7AE-575",
+      "feature_name": "E-038 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 46
+    },
+    {
+      "feature_id": "S7AE-576",
+      "feature_name": "E-039 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 47
+    },
+    {
+      "feature_id": "S7AE-577",
+      "feature_name": "E-040 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 48
+    },
+    {
+      "feature_id": "S7AE-580",
+      "feature_name": "E-043 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 49
+    },
+    {
+      "feature_id": "S7AE-581",
+      "feature_name": "E-044 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 50
+    },
+    {
+      "feature_id": "S7AE-582",
+      "feature_name": "E-045 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 51
+    },
+    {
+      "feature_id": "S7AE-583",
+      "feature_name": "E-046 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 52
+    },
+    {
+      "feature_id": "S7AE-584",
+      "feature_name": "E-047 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 53
+    },
+    {
+      "feature_id": "S7AE-585",
+      "feature_name": "E-048 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 54
+    },
+    {
+      "feature_id": "S7AE-586",
+      "feature_name": "E-049 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 55
+    },
+    {
+      "feature_id": "S7AE-587",
+      "feature_name": "E-050 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 56
+    },
+    {
+      "feature_id": "S7AE-606",
+      "feature_name": "E-069 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 57
+    },
+    {
+      "feature_id": "S7AE-607",
+      "feature_name": "E-070 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 58
+    },
+    {
+      "feature_id": "S7AE-608",
+      "feature_name": "E-071 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 59
+    },
+    {
+      "feature_id": "S7AE-609",
+      "feature_name": "E-072 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 60
+    },
+    {
+      "feature_id": "S7AE-612",
+      "feature_name": "E-075 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 61
+    },
+    {
+      "feature_id": "S7AE-613",
+      "feature_name": "E-076 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 62
+    },
+    {
+      "feature_id": "S7AE-618",
+      "feature_name": "E-081 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 63
+    },
+    {
+      "feature_id": "S7AE-619",
+      "feature_name": "E-082 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 64
+    },
+    {
+      "feature_id": "S7AE-620",
+      "feature_name": "E-083 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 65
+    },
+    {
+      "feature_id": "S7AE-621",
+      "feature_name": "E-084 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 66
+    },
+    {
+      "feature_id": "S7AE-623",
+      "feature_name": "E-086 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 67
+    },
+    {
+      "feature_id": "S7AE-624",
+      "feature_name": "E-087 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 68
+    },
+    {
+      "feature_id": "S7AE-625",
+      "feature_name": "E-088 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 69
+    },
+    {
+      "feature_id": "S7AE-626",
+      "feature_name": "E-089 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 70
+    },
+    {
+      "feature_id": "S7AE-627",
+      "feature_name": "E-090 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 71
+    },
+    {
+      "feature_id": "S7AE-628",
+      "feature_name": "E-091 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 72
+    },
+    {
+      "feature_id": "S7AE-629",
+      "feature_name": "E-092 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 73
+    },
+    {
+      "feature_id": "S7FI-024",
+      "feature_name": "작업 큐 서버",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 74
+    },
+    {
+      "feature_id": "S7FI-026",
+      "feature_name": "검색 엔진 서버",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 75
+    },
+    {
+      "feature_id": "S7FI-030",
+      "feature_name": "알림 서버",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 76
+    },
+    {
+      "feature_id": "S7FI-072",
+      "feature_name": "피처 스토어",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 77
+    },
+    {
+      "feature_id": "S7FI-080",
+      "feature_name": "CDN 구성",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 78
+    },
+    {
+      "feature_id": "S7FI-087",
+      "feature_name": "다중 리전 복제",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 79
+    },
+    {
+      "feature_id": "S7JM-014",
+      "feature_name": "스타일 트랜스퍼",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 80
+    },
+    {
+      "feature_id": "S7JM-016",
+      "feature_name": "로고/아이콘 생성",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 81
+    },
+    {
+      "feature_id": "S7JM-023",
+      "feature_name": "화자 분리 (Speaker Diarization)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 82
+    },
+    {
+      "feature_id": "S7JM-047",
+      "feature_name": "양식/폼 자동 생성",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 83
+    },
+    {
+      "feature_id": "S7JM-062",
+      "feature_name": "크로스모달 검색",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 84
+    },
+    {
+      "feature_id": "S7JM-123",
+      "feature_name": "CrewAI 역할 패턴 참조",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 85
+    },
+    {
+      "feature_id": "S7JM-181",
+      "feature_name": "코드 변환 (언어 간)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 86
+    },
+    {
+      "feature_id": "S7JM-267",
+      "feature_name": "개인 위키",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 87
+    },
+    {
+      "feature_id": "S7JM-273",
+      "feature_name": "예측적 지식 서핑",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 88
+    },
+    {
+      "feature_id": "S7JM-274",
+      "feature_name": "지식 기반 개인 어시스턴트",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 89
+    },
+    {
+      "feature_id": "S7NP-031",
+      "feature_name": "Notion/Obsidian 통합",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 90
+    },
+    {
+      "feature_id": "S7NP-045",
+      "feature_name": "개인화 학습 경로",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 91
+    },
+    {
+      "feature_id": "S7NP-059",
+      "feature_name": "시험 준비 도우미",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 92
+    },
+    {
+      "feature_id": "S7NP-072",
+      "feature_name": "교육 컨텐츠 생성",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 93
+    },
+    {
+      "feature_id": "S7NP-073",
+      "feature_name": "교육 평가 도구",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 94
+    },
+    {
+      "feature_id": "S7NP-085",
+      "feature_name": "수면 개선 도우미",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 95
+    },
+    {
+      "feature_id": "S7NP-086",
+      "feature_name": "운동/피트니스 트래커",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 96
+    },
+    {
+      "feature_id": "S7NP-087",
+      "feature_name": "식단/영양 관리",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 97
+    },
+    {
+      "feature_id": "S7NP-090",
+      "feature_name": "감정 일지 분석",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 98
+    },
+    {
+      "feature_id": "S7NP-098",
+      "feature_name": "사회적 관계 관리",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 99
+    },
+    {
+      "feature_id": "S7NP-104",
+      "feature_name": "개인화 건강 인사이트",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 100
+    },
+    {
+      "feature_id": "S7NP-106",
+      "feature_name": "감정 기반 음악 추천",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 101
+    },
+    {
+      "feature_id": "S7NP-128",
+      "feature_name": "Qwen 3 한중일 특화",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 102
+    },
+    {
+      "feature_id": "S7NP-190",
+      "feature_name": "FinGPT 활용",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 103
+    },
+    {
+      "feature_id": "S7NP-198",
+      "feature_name": "Ambient Intelligence (앰비언트 인텔리전스)",
+      "severity": "HIGH",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 104
+    },
+    {
+      "feature_id": "CLIB-057",
+      "feature_name": "S5 피드백 학습 모듈 (성과 측정, 롤백, 패턴 강화)",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 105
+    },
+    {
+      "feature_id": "CLIB-077",
+      "feature_name": "C3 규칙 제안 (패턴→규칙 제안→인간 승인)",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 106
+    },
+    {
+      "feature_id": "D206-063",
+      "feature_name": "형태소 분석 기반 토큰화 (Mecab-ko V1/Kiwi V2)",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 107
+    },
+    {
+      "feature_id": "D206-208",
+      "feature_name": "M-014 Zettelkasten 방법론 심화",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 108
+    },
+    {
+      "feature_id": "S7JM-057",
+      "feature_name": "인포그래픽 자동 생성",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 109
+    },
+    {
+      "feature_id": "S7NP-016",
+      "feature_name": "ETL 도구",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 110
+    },
+    {
+      "feature_id": "S7NP-027",
+      "feature_name": "Zapier/Make 호환 패턴",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 111
+    },
+    {
+      "feature_id": "S7NP-033",
+      "feature_name": "JIRA/Linear 통합",
+      "severity": "MEDIUM",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 112
+    },
+    {
+      "feature_id": "S7JM-219",
+      "feature_name": "대화형 튜토리얼",
+      "severity": "LOW",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 113
+    },
+    {
+      "feature_id": "S7NP-051",
+      "feature_name": "학습 분석 대시보드",
+      "severity": "LOW",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 114
+    },
+    {
+      "feature_id": "S7NP-056",
+      "feature_name": "언어 학습 특화",
+      "severity": "LOW",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 115
+    },
+    {
+      "feature_id": "S7NP-091",
+      "feature_name": "웰빙 대시보드",
+      "severity": "LOW",
+      "target_section": "V2_P2",
+      "insert_after_line": 1951,
+      "row_number": 116
+    },
+    {
+      "feature_id": "D207-040",
+      "feature_name": "OAuth2 + MFA (TOTP/WebAuthn)",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 9
+    },
+    {
+      "feature_id": "S7AE-591",
+      "feature_name": "E-054 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 10
+    },
+    {
+      "feature_id": "S7AE-592",
+      "feature_name": "E-055 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 11
+    },
+    {
+      "feature_id": "S7AE-593",
+      "feature_name": "E-056 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 12
+    },
+    {
+      "feature_id": "S7AE-594",
+      "feature_name": "E-057 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 13
+    },
+    {
+      "feature_id": "S7AE-595",
+      "feature_name": "E-058 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 14
+    },
+    {
+      "feature_id": "S7AE-596",
+      "feature_name": "E-059 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 15
+    },
+    {
+      "feature_id": "S7AE-597",
+      "feature_name": "E-060 운영",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 16
+    },
+    {
+      "feature_id": "S7FI-083",
+      "feature_name": "방화벽 규칙",
+      "severity": "HIGH",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 17
+    },
+    {
+      "feature_id": "S7AE-600",
+      "feature_name": "E-063 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 18
+    },
+    {
+      "feature_id": "S7AE-601",
+      "feature_name": "E-064 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 19
+    },
+    {
+      "feature_id": "S7AE-602",
+      "feature_name": "E-065 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 20
+    },
+    {
+      "feature_id": "S7AE-603",
+      "feature_name": "E-066 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 21
+    },
+    {
+      "feature_id": "S7AE-604",
+      "feature_name": "E-067 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 22
+    },
+    {
+      "feature_id": "S7AE-605",
+      "feature_name": "E-068 운영",
+      "severity": "MEDIUM",
+      "target_section": "V2_P3",
+      "insert_after_line": 2130,
+      "row_number": 23
+    },
+    {
+      "feature_id": "AINV-076",
+      "feature_name": "LSTM 가격 예측 모듈 (lstm_predictor.py)",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 17
+    },
+    {
+      "feature_id": "AINV-080",
+      "feature_name": "실전 거래 소액 시작 모드 (Real Trading)",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 18
+    },
+    {
+      "feature_id": "D204-160",
+      "feature_name": "Muon 옵티마이저 (MoE 학습 특화)",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 19
+    },
+    {
+      "feature_id": "D205-138",
+      "feature_name": "학습 커뮤니티 (스터디 그룹/공유/토론/멘토-멘티)",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 20
+    },
+    {
+      "feature_id": "D207-084",
+      "feature_name": "국가별 규제 적응",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 21
+    },
+    {
+      "feature_id": "D207-116",
+      "feature_name": "웰니스 커뮤니티 (V3 익명 참여)",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 22
+    },
+    {
+      "feature_id": "S7FI-034",
+      "feature_name": "관리자 콘솔",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 23
+    },
+    {
+      "feature_id": "S7FI-084",
+      "feature_name": "VPN 구성",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 24
+    },
+    {
+      "feature_id": "S7FI-180",
+      "feature_name": "장기 평가 추적",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 25
+    },
+    {
+      "feature_id": "S7FI-239",
+      "feature_name": "글로벌 확장 전략",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 26
+    },
+    {
+      "feature_id": "S7FI-247",
+      "feature_name": "확장 시장 진입",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 27
+    },
+    {
+      "feature_id": "S7FI-248",
+      "feature_name": "M&A 전략",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 28
+    },
+    {
+      "feature_id": "S7FI-262",
+      "feature_name": "장기 재무 예측",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 29
+    },
+    {
+      "feature_id": "S7NP-034",
+      "feature_name": "CRM 통합",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 30
+    },
+    {
+      "feature_id": "S7NP-055",
+      "feature_name": "동료 학습 매칭",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 31
+    },
+    {
+      "feature_id": "S7NP-065",
+      "feature_name": "학습 커뮤니티",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 32
+    },
+    {
+      "feature_id": "S7NP-121",
+      "feature_name": "웰니스 커뮤니티",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 33
+    },
+    {
+      "feature_id": "S7NP-185",
+      "feature_name": "B2B 컨설팅 모델",
+      "severity": "MEDIUM",
+      "target_section": "V3_P2",
+      "insert_after_line": 2453,
+      "row_number": 34
+    },
+    {
+      "feature_id": "D204-077",
+      "feature_name": "알림 중복 방지 debounce (5분 내 동일 지표 억제)",
+      "severity": "HIGH",
+      "target_section": "V3_P3",
+      "insert_after_line": 2731,
+      "row_number": 11
+    },
+    {
+      "feature_id": "D206-220",
+      "feature_name": "M-044 지식 기반 개인 어시스턴트 (V3 심화)",
+      "severity": "HIGH",
+      "target_section": "V3_P3",
+      "insert_after_line": 2731,
+      "row_number": 12
+    },
+    {
+      "feature_id": "S7JM-259",
+      "feature_name": "지식 버전 관리",
+      "severity": "HIGH",
+      "target_section": "V3_P3",
+      "insert_after_line": 2731,
+      "row_number": 13
+    },
+    {
+      "feature_id": "D203-110",
+      "feature_name": "앰비언트 인텔리전스 (Ambient Intelligence) 구현",
+      "severity": "MEDIUM",
+      "target_section": "V3_P3",
+      "insert_after_line": 2731,
+      "row_number": 14
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "script": "IMP-E",
+  "name": "Module Activation Matrix",
+  "matrix": {
+    "V0": {
+      "series_values": [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "declared_sum": 5,
+      "line": 41
+    },
+    "V1": {
+      "series_values": [
+        17,
+        6,
+        1,
+        2,
+        1,
+        3,
+        2,
+        0
+      ],
+      "declared_sum": 32,
+      "line": 42
+    },
+    "V2": {
+      "series_values": [
+        22,
+        10,
+        1,
+        3,
+        1,
+        3,
+        2,
+        0
+      ],
+      "declared_sum": 42,
+      "line": 43
+    },
+    "V3": {
+      "series_values": [
+        25,
+        16,
+        8,
+        7,
+        6,
+        7,
+        6,
+        6
+      ],
+      "declared_sum": 81,
+      "line": 44
+    }
+  },
+  "expected": {
+    "V0": 5,
+    "V1": 32,
+    "V2": 42,
+    "V3": 81
+  },
+  "row_sum_errors": [],
+  "cumulative_errors": [],
+  "errors": [],
+  "total_errors": 0,
+  "verdict": "PASS"
+}

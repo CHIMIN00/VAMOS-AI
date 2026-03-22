@@ -1,0 +1,107 @@
+{
+  "script": "0-B",
+  "name": "Arithmetic Sums",
+  "errors": [
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 1,
+      "expected_sum": 416,
+      "actual_sum": 212,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 2,
+      "expected_sum": 28,
+      "actual_sum": 14,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 399,
+      "line": 407,
+      "column": 3,
+      "expected_sum": 168,
+      "actual_sum": 84,
+      "tolerance": "±1"
+    },
+    {
+      "file": "PART1",
+      "table_start": 535,
+      "line": 541,
+      "column": 2,
+      "expected_sum": 144190000,
+      "actual_sum": 266000,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 422,
+      "line": 432,
+      "column": 2,
+      "expected_sum": 384,
+      "actual_sum": 19,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 422,
+      "line": 432,
+      "column": 3,
+      "expected_sum": 2,
+      "actual_sum": 120,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 503,
+      "line": 509,
+      "column": 0,
+      "expected_sum": 724,
+      "actual_sum": 43,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 696,
+      "line": 702,
+      "column": 1,
+      "expected_sum": 1946,
+      "actual_sum": 27,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 751,
+      "line": 762,
+      "column": 0,
+      "expected_sum": 45,
+      "actual_sum": 10,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 751,
+      "line": 762,
+      "column": 3,
+      "expected_sum": 664,
+      "actual_sum": 1415434435,
+      "tolerance": "±1"
+    },
+    {
+      "file": "RPT",
+      "table_start": 779,
+      "line": 786,
+      "column": 2,
+      "expected_sum": 353,
+      "actual_sum": 35378,
+      "tolerance": "±1"
+    }
+  ],
+  "total_errors": 11,
+  "verdict": "FAIL"
+}

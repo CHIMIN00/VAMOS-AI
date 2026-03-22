@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "type": "completeness_map",
+    "scope": "CM-1~CM-4 (Session 4)",
+    "created": "2026-03-21",
+    "version": "v13",
+    "description": "오류 카테고리 × 도구 커버리지 매트릭스 — CM-1 through CM-4 cross-match results"
+  },
+  "coverage_matrix": {
+    "CM-1": {
+      "category": "C1_values",
+      "description": "값(Value) 교차 비교",
+      "total": 1036,
+      "consistent": 4,
+      "inconsistent": 0,
+      "source_conflict": 9,
+      "single_source": 1023,
+      "severity": {
+        "CRITICAL": 9,
+        "WARNING": 0,
+        "INFO": 1027
+      },
+      "dv_result": "PASS",
+      "dv_pass_count": 1036,
+      "dv_fail_count": 0,
+      "enhanced_skills": ["symbolic-verify"]
+    },
+    "CM-2": {
+      "category": "C2_counts",
+      "description": "수량(Count) 교차 비교",
+      "total": 519,
+      "consistent": 10,
+      "inconsistent": 10,
+      "source_conflict": 1,
+      "single_source": 498,
+      "severity": {
+        "CRITICAL": 1,
+        "WARNING": 10,
+        "INFO": 508
+      },
+      "dv_result": "PASS",
+      "dv_pass_count": 519,
+      "dv_fail_count": 0,
+      "enhanced_skills": ["fact-audit"]
+    },
+    "CM-3": {
+      "category": "C3_taxonomy",
+      "description": "분류체계(Taxonomy) 교차 비교",
+      "total": 325,
+      "consistent": 0,
+      "inconsistent": 0,
+      "source_conflict": 1,
+      "single_source": 324,
+      "severity": {
+        "CRITICAL": 1,
+        "WARNING": 0,
+        "INFO": 324
+      },
+      "dv_result": "PASS",
+      "dv_pass_count": 325,
+      "dv_fail_count": 0,
+      "enhanced_skills": ["sot-conflict"]
+    },
+    "CM-4": {
+      "category": "C4_names",
+      "description": "명칭(Name) 교차 비교",
+      "total": 461,
+      "consistent": 4,
+      "inconsistent": 0,
+      "source_conflict": 0,
+      "single_source": 457,
+      "severity": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 461
+      },
+      "dv_result": "PASS",
+      "dv_pass_count": 461,
+      "dv_fail_count": 0,
+      "enhanced_skills": ["deep-diff"]
+    }
+  },
+  "error_categories": {
+    "value_conflict": {
+      "description": "동일 키에 대해 EA 간 서로 다른 값이 존재 (SOURCE_CONFLICT)",
+      "count": 11,
+      "affected_cms": ["CM-1", "CM-2", "CM-3"],
+      "severity_breakdown": {
+        "CRITICAL": 11,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "status": "DETECTED",
+      "detail": "CM-1: 9건(values), CM-2: 1건(counts), CM-3: 1건(taxonomy)"
+    },
+    "count_inconsistency": {
+      "description": "수량/개수 값이 EA 간 불일치 (INCONSISTENT)",
+      "count": 10,
+      "affected_cms": ["CM-2"],
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 10,
+        "INFO": 0
+      },
+      "status": "DETECTED",
+      "detail": "CM-2에서만 10건 발견 — 모듈 수, 우선순위 개수 등 수량 불일치"
+    },
+    "single_source_gap": {
+      "description": "단일 소스에서만 발견되어 교차 검증 불가 (SINGLE_SOURCE)",
+      "count": 2302,
+      "affected_cms": ["CM-1", "CM-2", "CM-3", "CM-4"],
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 2302
+      },
+      "status": "ACKNOWLEDGED",
+      "detail": "CM-1: 1023, CM-2: 498, CM-3: 324, CM-4: 457 — 교차 비교 대상 부족"
+    },
+    "naming_inconsistency": {
+      "description": "명칭/이름이 EA 간 다르게 기술됨",
+      "count": 0,
+      "affected_cms": ["CM-4"],
+      "severity_breakdown": {
+        "CRITICAL": 0,
+        "WARNING": 0,
+        "INFO": 0
+      },
+      "status": "CLEAR",
+      "detail": "CM-4에서 INCONSISTENT/SOURCE_CONFLICT 없음"
+    },
+    "item_id_mismatch": {
+      "description": "item_id가 유효하지 않은 EA 항목을 참조",
+      "count": 0,
+      "affected_cms": [],
+      "status": "RESOLVED",
+      "detail": "DV 검증(CM-DV3)에서 모든 source 참조 EA 존재 확인 완료"
+    }
+  },
+  "summary": {
+    "total_comparisons": 2341,
+    "multi_source_comparisons": 39,
+    "single_source_comparisons": 2302,
+    "total_consistent": 18,
+    "total_inconsistent": 10,
+    "total_source_conflict": 11,
+    "total_issues": 21,
+    "severity_totals": {
+      "CRITICAL": 11,
+      "WARNING": 10,
+      "INFO": 2320
+    },
+    "all_dv_pass": true,
+    "coverage_pct": 99.1,
+    "cross_match_rate_pct": 1.7,
+    "notes": "coverage_pct = (total - issues) / total × 100; cross_match_rate = multi_source / total × 100"
+  }
+}

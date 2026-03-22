@@ -1,0 +1,173 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA01_claude_md.json",
+    "total_items_checked": 184,
+    "pass_count": 166,
+    "fail_count": 18,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_015",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_037",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_038",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_043",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_044",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_100",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_101",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_115",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_118",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-01_119",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_094",
+      "severity": "WARNING",
+      "message": "비표준 키 'AINV_5AGENT_STRUCTURE'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "AINV_5AGENT_STRUCTURE"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_095",
+      "severity": "WARNING",
+      "message": "비표준 키 'SDAR_5LAYER'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "SDAR_5LAYER"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_001~EA-01_014",
+      "severity": "WARNING",
+      "message": "동일 키 'TOTAL_MODULE_COUNT'가 3회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "3 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_025~EA-01_087",
+      "severity": "WARNING",
+      "message": "동일 키 'API_ENDPOINT_COUNT'가 3회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "3 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_032~EA-01_147",
+      "severity": "WARNING",
+      "message": "동일 키 'STAGE_GATE_COUNT'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_045~EA-01_049",
+      "severity": "WARNING",
+      "message": "동일 키 'COST_CEILING_MONTHLY'가 3회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "3 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_046~EA-01_050",
+      "severity": "WARNING",
+      "message": "동일 키 'COST_CEILING_DAILY'가 3회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "3 distinct values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-01_053~EA-01_070",
+      "severity": "WARNING",
+      "message": "동일 키 'MODULE_TIER_SYSTEM'가 2회 등장하며 값이 다름",
+      "expected": "unique value per key",
+      "actual": "2 distinct values"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 18,
+    "INFO": 0
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

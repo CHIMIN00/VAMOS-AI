@@ -1,0 +1,24 @@
+{
+  "verdict": "INVALIDATED",
+  "invalidated_at": "2026-03-21T18:00:00+09:00",
+  "invalidation_reason": "기준 자체가 변경됨 (criteria_hash 불일치) — stamp 무효화 조건 4 해당",
+  "previous_verdict": "PLAN-VERIFIED",
+  "previous_timestamp": "2026-03-21T12:00:00+09:00",
+  "changes_since_previous": {
+    "skill_md_updates": [
+      "Step 0-2: 전체 체계 단위 역질문 추가 (모든 모드)",
+      "Step 0-4d: 목록 헤더 '예시' 명시 + 독립 실행 보장",
+      "Step 0-4d: stamp factual_claim_verification 필드 강제",
+      "Step 0: 깊이 예산/수확 체감 중단점 추가 (모든 모드)",
+      "모드 E: FR-E19 (외부 사실 주장 검증) 신규 추가",
+      "모드 F: 기준 소스 신뢰성 검증 (0-4d-F) 신규 추가",
+      "사후 발견 → SKILL.md 환류 트리거 추가"
+    ],
+    "criteria_before": "FR-E01~E18 + FR-D15~D20",
+    "criteria_after": "FR-E01~E19 + FR-D15~D20 + Step 0-2 전체체계 + 깊이예산 + 0-4d 독립실행 + 환류트리거",
+    "skill_md_lines_before": 1878,
+    "skill_md_lines_after": 2039
+  },
+  "action_required": "Step 0부터 재실행 필요 — /final-review plan",
+  "history_file": "v13_enhanced_plan_final_review_stamp_history.json"
+}

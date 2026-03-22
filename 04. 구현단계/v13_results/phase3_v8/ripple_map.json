@@ -1,0 +1,332 @@
+{
+  "session": "session_22",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T21:00:00+09:00",
+  "description": "Ripple map showing how Phase 3 findings propagate across phases and downstream artifacts",
+  "ripples": [
+    {
+      "finding_id": "F-A5-01",
+      "severity": "HIGH",
+      "title": "CostGate threshold contradiction in V0-STEP-4 AI prompt",
+      "source_sot": "D2.0-07 §4.2 (LOCK: 80%/100% 2-stage)",
+      "part2_location": "L1097 (V0-STEP-4 AI prompt: 70/85/95)",
+      "correct_location": "L1009 (description section: 80/100), L2453 (V1-Phase 5: 80/100)",
+      "affected_part2_sections": [
+        "§3.4 V0-STEP-4 (AI prompt text, L1097)",
+        "§6.5 CostGate implementation guidance",
+        "§3.6 V0-STEP-6 checklist (should verify CostGate values)"
+      ],
+      "downstream_impact": [
+        {
+          "type": "code_generation",
+          "description": "AI-generated code from V0-STEP-4 prompt would implement 3-tier (70/85/95) instead of 2-tier (80/100) CostGate",
+          "affected_files": ["backend/vamos_core/safety/cost_gate.py", "config/config.v1.toml cost thresholds"],
+          "severity": "HIGH"
+        },
+        {
+          "type": "test_specification",
+          "description": "PHASE_B5 test cases T-U-SAFE-003 (CostGate) would test against wrong thresholds if generated from V0-STEP-4 prompt",
+          "affected_files": ["tests/unit/safety/test_cost_gate.py"],
+          "severity": "HIGH"
+        },
+        {
+          "type": "cross_phase",
+          "description": "Phase 1 (v6) and Phase 2 (v7) adversarial reviews may not have caught this because they focused on different SOT documents",
+          "severity": "MEDIUM"
+        }
+      ],
+      "ripple_depth": 3,
+      "fix_action": "Replace L1097 CostGate values with '80% warn, 100% block (D2.0-07 §4.2 LOCK 2단계)'"
+    },
+    {
+      "finding_id": "F-A2-02",
+      "severity": "MEDIUM",
+      "title": "V2 Guardrails 4-Layer vs 3-Layer internal inconsistency",
+      "source_sot": "CLAUDE.md §11 (V2=3-Layer), D2.0-07 §3 (4-Layer Guardrails)",
+      "part2_location": "L675 (V2-Phase 3 table: 4-Layer) vs L1339 (V2 config: 3-Layer)",
+      "affected_part2_sections": [
+        "§4.3 V2-Phase 3 table (L675 — stale, says 4-Layer)",
+        "§5.2 V2 config section (L1339 — correct, says 3-Layer)",
+        "§4.3 V2 checklist (L687 — may reference 4-Layer)"
+      ],
+      "downstream_impact": [
+        {
+          "type": "implementation_guidance",
+          "description": "V2 implementer reading Phase 3 table would add L4(PostAudit) prematurely. L1339 correctly defers L4 to V3.",
+          "affected_files": ["backend/vamos_core/safety/guardrails.py", "config/guardrails.v2.toml"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "test_specification",
+          "description": "V2 integration tests may over-specify by testing 4 guardrail layers instead of 3",
+          "affected_files": ["tests/integration/test_guardrails_v2.py"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 2,
+      "fix_action": "Update L675 V2-Phase 3 table to say '3-Layer(+L3 LlamaGuard)'"
+    },
+    {
+      "finding_id": "F-A6-05",
+      "severity": "MEDIUM",
+      "title": "QoD < 0.4 storage restriction missing from PART2",
+      "source_sot": "D2.0-06 §2.5.2 (QoD < 0.4: L2/L3 storage forbidden)",
+      "part2_location": "V1-Phase 2 storage implementation (no QoD threshold check)",
+      "affected_part2_sections": [
+        "§4.2 V1-Phase 2 (storage admission logic)",
+        "§6.4 Memory layer management",
+        "§3.5 V0-STEP-5 (memory flow AI prompt)"
+      ],
+      "downstream_impact": [
+        {
+          "type": "data_quality",
+          "description": "Without QoD threshold, L2/L3 memory layers could accumulate low-quality data (QoD < 0.4), degrading RAG retrieval quality over time",
+          "affected_files": ["backend/vamos_core/storage/memory_manager.py", "backend/vamos_core/storage/qod_evaluator.py"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "api_specification",
+          "description": "Memory store IPC command (vamos:memory:store) should include QoD check before L2/L3 admission",
+          "affected_files": ["src-tauri/src/commands/memory.rs"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "test_specification",
+          "description": "Test cases for memory storage should include QoD < 0.4 rejection scenario",
+          "affected_files": ["tests/unit/storage/test_memory_record.py"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 3,
+      "fix_action": "Add QoD threshold check (< 0.4 = reject for L2/L3) to V1-Phase 2 storage admission logic"
+    },
+    {
+      "finding_id": "F-A2-05",
+      "severity": "MEDIUM",
+      "title": "V2 Lead Agent model upgrade to Opus not stated",
+      "source_sot": "VAMOS_AGENT_TEAMS_SPEC §9.2 (Lead=Opus)",
+      "part2_location": "V2 section (agents added but Lead model not specified)",
+      "affected_part2_sections": [
+        "§4.3 V2 overview and agent configuration",
+        "§6.7 Agent Teams section",
+        "§5.2 V2 config llm section"
+      ],
+      "downstream_impact": [
+        {
+          "type": "implementation_guidance",
+          "description": "V2 implementer may not upgrade Lead Agent from default model to Opus, reducing multi-agent orchestration quality",
+          "affected_files": ["config/agent_teams.v2.toml", "backend/vamos_core/agent/lead_agent.py"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "cost_impact",
+          "description": "Opus model has different pricing; V2 cost budget (₩93K/month) needs to account for Opus usage in Lead Agent role",
+          "affected_files": ["config/cost.v2.toml"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 2,
+      "fix_action": "Add 'Lead Agent: Opus (AGENT_TEAMS_SPEC §9.2)' to V2 section"
+    },
+    {
+      "finding_id": "F-A4-01",
+      "severity": "MEDIUM",
+      "title": "L4_SELF_EVOLVING autonomy level undefined in any SOT",
+      "source_sot": "D2.0-07 §3.2 (defines L0-L3 only)",
+      "part2_location": "L108 (L4_SELF_EVOLVING for V3)",
+      "affected_part2_sections": [
+        "§2.1 Version-level autonomy progression table (L108)",
+        "§6.9 Self-evolution section (V3 architecture)"
+      ],
+      "downstream_impact": [
+        {
+          "type": "sot_gap",
+          "description": "PART2 introduces a concept not backed by any SOT document. This creates a precedent where implementation guide defines architecture-level concepts.",
+          "affected_files": ["D2.0-07 (needs L4 definition added)"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "implementation_guidance",
+          "description": "V3 implementer has no SOT specification for L4 autonomy level boundaries, permissions, or safety constraints",
+          "affected_files": ["backend/vamos_core/safety/autonomy.py"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 2,
+      "fix_action": "Either add L4 definition to D2.0-07, or annotate PART2 L108 as 'PART2-originated extension, pending SOT definition'"
+    },
+    {
+      "finding_id": "F-A7-04_adj",
+      "severity": "MEDIUM",
+      "title": "React hook name mismatch between PART2 and PHASE_B2",
+      "source_sot": "PHASE_B2 §3.1 (canonical: useApproval, useConfig)",
+      "part2_location": "§6.1.3 (uses: useAutonomy, useLog)",
+      "affected_part2_sections": [
+        "§6.1.3 React hook definitions",
+        "§4.2 V1-Phase 4 UI implementation prompts"
+      ],
+      "downstream_impact": [
+        {
+          "type": "code_generation",
+          "description": "AI-generated React code from PART2 would use useAutonomy/useLog, while PHASE_B2 canonical names are useApproval/useConfig. Developer confusion during code review.",
+          "affected_files": ["src/hooks/useAutonomy.ts vs useApproval.ts", "src/hooks/useLog.ts vs useConfig.ts"],
+          "severity": "LOW"
+        },
+        {
+          "type": "api_consistency",
+          "description": "Two naming conventions for the same hooks would create inconsistency in the codebase if both PART2 and B2 are followed",
+          "affected_files": ["shared/types/hooks.d.ts"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 2,
+      "fix_action": "Align PART2 §6.1.3 hook names with PHASE_B2 §3.1 canonical names"
+    },
+    {
+      "finding_id": "F-A10-02",
+      "severity": "MEDIUM",
+      "title": "Matryoshka embedding dimension conflict (256 vs 512)",
+      "source_sot": "PHASE_B4 §3.4 (matryoshka_dim = 512), D2.0-06 DEC-005",
+      "part2_location": "Config section (matryoshka_dim = 256)",
+      "affected_part2_sections": [
+        "§5.1 config.v1.toml embedding section",
+        "§4.2 V1-Phase 2 vector DB setup",
+        "§3.5 V0-STEP-5 memory/embedding AI prompt"
+      ],
+      "downstream_impact": [
+        {
+          "type": "implementation_guidance",
+          "description": "Implementer following PART2 would configure 256-dim embeddings, while B4 canonical is 512-dim. This affects vector DB index dimensionality and search quality.",
+          "affected_files": ["config/config.v1.toml [embedding] matryoshka_dim", "backend/vamos_core/storage/vector_store.py"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "data_migration",
+          "description": "If V1 is built with 256-dim and later corrected to 512-dim, all stored embeddings need re-indexing",
+          "affected_files": ["scripts/migrate_embeddings.py"],
+          "severity": "MEDIUM"
+        },
+        {
+          "type": "test_specification",
+          "description": "Embedding dimension assertions in tests would use wrong value",
+          "affected_files": ["tests/unit/storage/test_vector_store.py"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 3,
+      "fix_action": "Resolve matryoshka_dim SOT conflict by checking D2.0-06 DEC-005 for authoritative value, then update PART2 or B4 accordingly"
+    },
+    {
+      "finding_id": "F-A6-01_adj",
+      "severity": "MEDIUM",
+      "title": "L0 Session Memory TTL confusion from CLAUDE.md 7-day value",
+      "source_sot": "D2.0-06 §2.1 (max 30 days), §2.5.3 (session end immediate), CLAUDE.md §15 (7 days max 30)",
+      "part2_location": "L1907 (composite: session_end OR created_at + 30d, whichever first — LOCK)",
+      "affected_part2_sections": [
+        "§6.4 Memory layer management (L1907)",
+        "§5.1 config.v1.toml memory_ttl section"
+      ],
+      "downstream_impact": [
+        {
+          "type": "implementation_guidance",
+          "description": "PART2 composite rule is correct and defensible. CLAUDE.md 7-day value creates confusion for implementers who read both documents.",
+          "affected_files": ["CLAUDE.md §15 (needs update)"],
+          "severity": "LOW"
+        },
+        {
+          "type": "configuration",
+          "description": "Default TTL in config could be set to 7 days (per CLAUDE.md) or 30 days (per D2.0-06/PART2). Implementer must choose.",
+          "affected_files": ["config/config.v1.toml [storage.memory_ttl] L0"],
+          "severity": "LOW"
+        }
+      ],
+      "ripple_depth": 2,
+      "fix_action": "Update CLAUDE.md §15 L0 TTL to match PART2 composite rule (session_end OR 30d)"
+    }
+  ],
+  "cross_cutting_patterns": [
+    {
+      "pattern_id": "XCP-01",
+      "name": "SOT-PART2 Numeric Value Divergence",
+      "description": "Multiple findings involve PART2 using different numeric values than SOT documents (CostGate 70/85/95 vs 80/100, matryoshka 256 vs 512, MemoryRecord 20 vs 18, SourceQoD 8 vs 7). This pattern suggests PART2 has independent numeric assumptions that diverge from SOT specs.",
+      "affected_findings": ["F-A5-01", "F-A10-02", "F-A6-02", "F-A6-03"],
+      "affected_sot_files": ["D2.0-07", "PHASE_B4", "D2.1-D6"],
+      "affected_part2_sections": ["§3.4 V0-STEP-4", "§5.1 config", "§6.4 schemas"],
+      "severity": "HIGH",
+      "recommendation": "Systematic audit of all numeric values in PART2 against their SOT sources. Create a numeric value reconciliation table."
+    },
+    {
+      "pattern_id": "XCP-02",
+      "name": "V2/V3 Scope Items Reported as Current Gaps",
+      "description": "Multiple agents reported V2/V3 future-scope items as defects in PART2 (L4_SELF_EVOLVING, SDAR AR-L4 details, Enterprise compliance, Agent lifecycle states, PARL resources). These are not true defects — PART2 V2/V3 sections are intentionally overview-level.",
+      "affected_findings": ["F-A4-01", "F-A4-02", "F-A4-03", "F-A4-08", "F-A3-03", "F-A3-06", "F-A8-06"],
+      "affected_sot_files": ["D2.0-07", "SDAR_SPEC", "AGENT_TEAMS_SPEC"],
+      "affected_part2_sections": ["§4.3 V2 overview", "§4.4 V3 overview", "§6.9 Self-evolution"],
+      "severity": "LOW",
+      "recommendation": "Mark V2/V3 sections explicitly as 'overview-level, detailed implementation guide to follow' to prevent future false positives."
+    },
+    {
+      "pattern_id": "XCP-03",
+      "name": "Naming Convention Divergence Between PART2 and SOT",
+      "description": "Multiple naming inconsistencies between PART2 and SOT documents (hook names useAutonomy/useLog vs useApproval/useConfig, I-25 SDAR naming variants, L3_AUTONOMOUS vs FULL_AUTO). PART2 sometimes uses simplified or alternative names.",
+      "affected_findings": ["F-A7-04_adj", "F-A3-05", "F-A7-05", "F-A1-06"],
+      "affected_sot_files": ["PHASE_B2", "SDAR_SPEC", "D2.0-07"],
+      "affected_part2_sections": ["§6.1.3 React hooks", "§6.9 SDAR", "§6.5 Autonomy"],
+      "severity": "MEDIUM",
+      "recommendation": "Create a canonical naming glossary that maps PART2 names to SOT canonical names. Apply PHASE_B2 > PART2 naming precedence rule."
+    },
+    {
+      "pattern_id": "XCP-04",
+      "name": "AI Prompt Content Not Verified Against LOCK Values",
+      "description": "The CostGate HIGH finding (F-A5-01) reveals that AI prompt text within PART2 can contain LOCK-violating values that pass structural checks but would generate incorrect code. This is a systematic risk for all 15+ AI prompts in PART2.",
+      "affected_findings": ["F-A5-01", "F-A10-01", "F-A9-01"],
+      "affected_sot_files": ["D2.0-07", "PHASE_B4"],
+      "affected_part2_sections": ["§3.4-3.6 V0-STEP AI prompts", "§4.2 V1-Phase AI prompts"],
+      "severity": "HIGH",
+      "recommendation": "Dedicated LOCK-value audit of all AI prompt text in PART2. Agent 10 checked 25 LOCK values (88% consistent), but the 12% gap includes the CostGate critical error."
+    },
+    {
+      "pattern_id": "XCP-05",
+      "name": "Cross-Agent Duplicate Finding Clusters",
+      "description": "10 duplicate clusters found across agents, with the same issue reported by 2-4 agents independently. Largest clusters: CostGate (4 agents), S7E-011 (3 agents), VamosError/Runnable (2 agents each). This indicates agent scope overlap and lack of real-time deduplication.",
+      "affected_findings": ["F-A5-01/F-A5-08/F-A9-01/F-A10-01", "F-A2-03/F-A7-01/F-A10-03", "F-A5-02/F-A1-04", "F-A1-03/F-A5-04"],
+      "affected_sot_files": [],
+      "affected_part2_sections": [],
+      "severity": "INFO",
+      "recommendation": "Future pipeline runs should include inter-agent finding deduplication before adversarial review. Consider a shared finding registry during agent execution."
+    }
+  ],
+  "phase_propagation": {
+    "description": "How Phase 3 findings relate to Phase 1 (v6) and Phase 2 (v7) findings",
+    "phase1_v6_overlap": [
+      "V2 Guardrails layer count inconsistency (F-A2-02) was first detected in Phase 2 (v7) adversarial review, persists in Phase 3",
+      "DecisionSchema 18 vs 16 was first detected in Phase 1 (v6), reduced severity across phases",
+      "S7E-011 instruction hierarchy was first detected in Phase 2 (v7), downgraded to LOW in Phase 3"
+    ],
+    "phase2_v7_overlap": [
+      "V2 Lead Agent Opus (F-A2-05) confirmed SUSTAINED at MEDIUM across Phase 2 and Phase 3",
+      "Performance benchmarks false positive resolved differently — Phase 2 may not have detected §7.5.3 presence"
+    ],
+    "phase3_unique": [
+      "CostGate threshold (F-A5-01) — new HIGH finding unique to Phase 3 v8 evaluation",
+      "Matryoshka dimension conflict (F-A10-02) — new finding from prompt verification agent",
+      "QoD < 0.4 storage restriction (F-A6-05) — new finding from storage/memory agent"
+    ]
+  },
+  "total_ripples": 8,
+  "max_depth": 3,
+  "summary": {
+    "high_severity_ripples": 1,
+    "medium_severity_ripples": 7,
+    "total_downstream_impacts": 22,
+    "most_impactful_finding": "F-A5-01 (CostGate threshold) — affects code generation, test specs, and cross-phase verification with depth 3",
+    "most_cross_cutting_pattern": "XCP-01 (SOT-PART2 Numeric Value Divergence) — 4 findings, multiple SOT files, systematic issue",
+    "recommended_priority_fixes": [
+      "1. F-A5-01: Fix CostGate L1097 prompt immediately (HIGH, depth 3)",
+      "2. F-A10-02: Resolve matryoshka_dim SOT conflict (MEDIUM, depth 3, data migration risk)",
+      "3. F-A6-05: Add QoD threshold to storage admission (MEDIUM, depth 3, data quality risk)",
+      "4. F-A2-02: Fix V2 Guardrails layer count at L675 (MEDIUM, depth 2, persistent since Phase 2)",
+      "5. XCP-04: Systematic LOCK-value audit of all AI prompts (cross-cutting HIGH pattern)"
+    ]
+  }
+}

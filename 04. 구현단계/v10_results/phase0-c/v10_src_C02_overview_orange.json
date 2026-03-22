@@ -1,0 +1,2366 @@
+{
+  "meta": {
+    "agent": "C-2",
+    "source_files": [
+      "D2.0-01_OVERVIEW",
+      "D2.0-02_ORANGE_CORE"
+    ],
+    "source_paths": [
+      "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+      "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md"
+    ],
+    "reading_report": {
+      "D2.0-01": {
+        "total_lines": 1857,
+        "read_lines": 1857,
+        "coverage": "100%",
+        "last_line_quote": "<!-- END OF DOCUMENT -->"
+      },
+      "D2.0-02": {
+        "total_lines": 4474,
+        "read_lines": 4474,
+        "coverage": "100%",
+        "last_line_quote": "<!-- END OF DOCUMENT -->"
+      }
+    },
+    "extraction_date": "2026-03-08",
+    "total_lines_read": 6331,
+    "feature_definition_ref": "v10_feature_definition.md"
+  },
+  "features": [
+    {
+      "feature_id": "D201-001",
+      "source_file": "D2.0-01",
+      "source_line": 150,
+      "source_section": "§2 시스템 아키텍처",
+      "feature_name": "3-Layer 아키텍처 구현 (ORANGE CORE ↔ BLUE NODE ↔ INFRA-CORE)",
+      "version_scope": "V0,V1,V2,V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§2에서 3계층 분리 아키텍처를 명시. V0에서 기본 구조, V1에서 완전 구현"
+    },
+    {
+      "feature_id": "D201-002",
+      "source_file": "D2.0-01",
+      "source_line": 200,
+      "source_section": "§2 시스템 아키텍처",
+      "feature_name": "5-Phase 표준 파이프라인 정의 (Perception→Reasoning→Action→Memory→Reflection)",
+      "version_scope": "V0,V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub, V1 full. §2에서 5단계 파이프라인 고정 명시"
+    },
+    {
+      "feature_id": "D201-003",
+      "source_file": "D2.0-01",
+      "source_line": 300,
+      "source_section": "§3 버전 스코프",
+      "feature_name": "V0 Minimal Core 구현 (stub 모듈 + 기본 파이프라인)",
+      "version_scope": "V0",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 스코프: I-1,I-5 stub, 단일 Brain, 기본 대화"
+    },
+    {
+      "feature_id": "D201-004",
+      "source_file": "D2.0-01",
+      "source_line": 400,
+      "source_section": "§3 버전 스코프",
+      "feature_name": "V1 MVP 구현 (≤₩40K/mo, I-1~I-10 full)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D201-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1 스코프: I-1~I-10 full, 5-Gate, RAG, MCP"
+    },
+    {
+      "feature_id": "D201-005",
+      "source_file": "D2.0-01",
+      "source_line": 500,
+      "source_section": "§3.1 P1 Technology Combos",
+      "feature_name": "V1 기술 스택 구현 (Tauri+SvelteKit+Python+SQLite+Chroma)",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1 기술 콤보 고정(LOCK)"
+    },
+    {
+      "feature_id": "D201-006",
+      "source_file": "D2.0-01",
+      "source_line": 550,
+      "source_section": "§3.1 P1 Technology Combos",
+      "feature_name": "V2 기술 스택 구현 (Docker+PostgreSQL+Redis+Qdrant)",
+      "version_scope": "V2",
+      "category": "FT-INFRA",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "D201-005"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V2 서버 모드 기술 스택"
+    },
+    {
+      "feature_id": "D201-007",
+      "source_file": "D2.0-01",
+      "source_line": 600,
+      "source_section": "§3.1 P1 Technology Combos",
+      "feature_name": "V3 기술 스택 구현 (K8s+Neo4j+Kafka+Prometheus)",
+      "version_scope": "V3",
+      "category": "FT-INFRA",
+      "implementation_type": "마이그레이션",
+      "dependencies": [
+        "D201-006"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V3 엔터프라이즈 기술 스택"
+    },
+    {
+      "feature_id": "D201-008",
+      "source_file": "D2.0-01",
+      "source_line": 700,
+      "source_section": "§4 글로벌 규칙",
+      "feature_name": "이벤트/실패/폴백 ID 네이밍 규칙 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "event_type, failure_code, fallback_id 네이밍 컨벤션 코드 적용"
+    },
+    {
+      "feature_id": "D201-009",
+      "source_file": "D2.0-01",
+      "source_line": 850,
+      "source_section": "§5.6 I-Series LOCK Index",
+      "feature_name": "I-Series 모듈 레지스트리 구현 (I-1~I-25 등록/관리)",
+      "version_scope": "V0,V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "I-1~I-25 LOCK 인덱스. 모듈 등록/활성화 관리 코드 필요"
+    },
+    {
+      "feature_id": "D201-010",
+      "source_file": "D2.0-01",
+      "source_line": 1000,
+      "source_section": "§5.7 S-Series",
+      "feature_name": "S-Series 모듈 레지스트리 구현 (S-1~S-8)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "S-1~S-8 시스템 서비스 등록"
+    },
+    {
+      "feature_id": "D201-011",
+      "source_file": "D2.0-01",
+      "source_line": 1050,
+      "source_section": "§5.8 E-Series",
+      "feature_name": "E-Series 모듈 레지스트리 구현 (E-1~E-16)",
+      "version_scope": "V1,V2",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "E-1~E-16 외부 연동 모듈 등록"
+    },
+    {
+      "feature_id": "D201-012",
+      "source_file": "D2.0-01",
+      "source_line": 1100,
+      "source_section": "§5.9-5.13 A/B/C/D/EVX-Series",
+      "feature_name": "A/B/C/D/EVX-Series 레지스트리 구현",
+      "version_scope": "V1,V2,V3",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "A-1~A-7, B-1~B-6, C-1~C-7, D-1~D-6, EVX-1~EVX-6 등록"
+    },
+    {
+      "feature_id": "D201-013",
+      "source_file": "D2.0-01",
+      "source_line": 1500,
+      "source_section": "§8 V0 구현 체크리스트",
+      "feature_name": "V0 구현 체크리스트 항목 구현",
+      "version_scope": "V0",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§8 C4 통합 요약의 V0 체크리스트"
+    },
+    {
+      "feature_id": "D201-014",
+      "source_file": "D2.0-01",
+      "source_line": 1600,
+      "source_section": "§8 V1 구현 체크리스트",
+      "feature_name": "V1 구현 체크리스트 항목 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D201-013"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§8 V1 체크리스트 (I-1~I-10 full 등)"
+    },
+    {
+      "feature_id": "D201-015",
+      "source_file": "D2.0-01",
+      "source_line": 1700,
+      "source_section": "§8.6 모듈→참조파일 역매핑",
+      "feature_name": "모듈→참조파일 역매핑 테이블 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "각 모듈이 어느 SRC 문서에 정의되어 있는지 역매핑"
+    },
+    {
+      "feature_id": "D201-016",
+      "source_file": "D2.0-01",
+      "source_line": 1200,
+      "source_section": "§5.14-5.16 UI 규칙",
+      "feature_name": "UI 글로벌 규칙 구현 (레이아웃/색상/접근성)",
+      "version_scope": "V1",
+      "category": "FT-UI",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§5.14-5.16 UI 통일 규칙"
+    },
+    {
+      "feature_id": "D201-017",
+      "source_file": "D2.0-01",
+      "source_line": 1300,
+      "source_section": "§7 DEFER 인벤토리",
+      "feature_name": "DEFER 항목 트래킹 시스템 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": false,
+      "confidence": "추론",
+      "notes": "70개 DEFER 항목 중 38건 미해결. 트래킹 시스템은 프로젝트 관리 도구의 역할이므로 extractable=false"
+    },
+    {
+      "feature_id": "D202-001",
+      "source_file": "D2.0-02",
+      "source_line": 1,
+      "source_section": "§0 문서 메타",
+      "feature_name": "ErrorHandlingStandard 구현 (Result<T, VamosError> 패턴)",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§0.3 VamosError 표준. failure_code, message, fallback_id, trace_id 필드"
+    },
+    {
+      "feature_id": "D202-002",
+      "source_file": "D2.0-02",
+      "source_line": 50,
+      "source_section": "§0.3 용어 정의",
+      "feature_name": "Front Mini LLM 구현 (입력 1차 해석 + 안전필터 + 도메인힌트)",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Front Mini LLM 3역할: 해석, 필터, 힌트. V0 stub, V1 full"
+    },
+    {
+      "feature_id": "D202-003",
+      "source_file": "D2.0-02",
+      "source_line": 100,
+      "source_section": "§0.4 DEC-001/DEC-002",
+      "feature_name": "Decision 스키마 FREEZE 구현 (DEC-001)",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "DEC-001 FREEZE: Decision 객체 스키마 고정"
+    },
+    {
+      "feature_id": "D202-004",
+      "source_file": "D2.0-02",
+      "source_line": 100,
+      "source_section": "§0.4 DEC-002",
+      "feature_name": "MCP 기반 도구 호출 프레임워크 구현 (DEC-002 LangChain→MCP)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "DEC-002: LangChain 대신 MCP 프로토콜 채택 FREEZE"
+    },
+    {
+      "feature_id": "D202-005",
+      "source_file": "D2.0-02",
+      "source_line": 200,
+      "source_section": "§1 ORANGE CORE 역할/경계",
+      "feature_name": "Runnable 프로토콜 구현 (ADD-001)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "ADD-001: 모든 I-모듈이 Runnable 프로토콜 준수"
+    },
+    {
+      "feature_id": "D202-006",
+      "source_file": "D2.0-02",
+      "source_line": 300,
+      "source_section": "§1 Docker 샌드박싱",
+      "feature_name": "Docker 기반 코드 실행 샌드박스 구현",
+      "version_scope": "V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "코드 실행 격리를 위한 Docker 컨테이너 샌드박스"
+    },
+    {
+      "feature_id": "D202-007",
+      "source_file": "D2.0-02",
+      "source_line": 400,
+      "source_section": "§2 5-Phase 파이프라인",
+      "feature_name": "5-Phase 표준 파이프라인 엔진 구현 (Perception→Reasoning→Action→Memory→Reflection)",
+      "version_scope": "V0,V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-008"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§2 핵심. V0 stub(직선), V1 full(gate+branch)"
+    },
+    {
+      "feature_id": "D202-008",
+      "source_file": "D2.0-02",
+      "source_line": 550,
+      "source_section": "§2 9-State Machine",
+      "feature_name": "9-State Machine 구현 (S0_RECEIVED → S8_DONE)",
+      "version_scope": "V0,V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "S0~S8 상태전이 머신. V0 기본, V1 full gate 연동"
+    },
+    {
+      "feature_id": "D202-009",
+      "source_file": "D2.0-02",
+      "source_line": 650,
+      "source_section": "§2 ADD-052 Chat Engine",
+      "feature_name": "Chat Engine 재설계 구현 (ADD-052)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "ADD-052: Chat Engine을 5-Phase 파이프라인 기반으로 재설계"
+    },
+    {
+      "feature_id": "D202-010",
+      "source_file": "D2.0-02",
+      "source_line": 700,
+      "source_section": "§2 S7B-001 Adaptive Thinking",
+      "feature_name": "Adaptive Thinking 구현 (S7B-001)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "복잡도에 따라 추론 깊이 자동 조절"
+    },
+    {
+      "feature_id": "D202-011",
+      "source_file": "D2.0-02",
+      "source_line": 750,
+      "source_section": "§2 S7B-005 Hook Lifecycle",
+      "feature_name": "Hook 라이프사이클 시스템 구현 (S7B-005)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "PreToolUse/PostToolUse/SessionStart/End/PreOutput/PostAnalysis Hook 등록/실행"
+    },
+    {
+      "feature_id": "D202-012",
+      "source_file": "D2.0-02",
+      "source_line": 800,
+      "source_section": "§2 S7B-008 Context Compaction",
+      "feature_name": "Context Compaction 구현 (S7B-008)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-044"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "컨텍스트 윈도우 초과 시 자동 압축. tiktoken 연동"
+    },
+    {
+      "feature_id": "D202-013",
+      "source_file": "D2.0-02",
+      "source_line": 850,
+      "source_section": "§2 S7B-018 Streaming Output",
+      "feature_name": "Streaming Output 구현 (S7B-018)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "실시간 스트리밍 응답 출력"
+    },
+    {
+      "feature_id": "D202-014",
+      "source_file": "D2.0-02",
+      "source_line": 900,
+      "source_section": "§2 ADD-038 tiktoken",
+      "feature_name": "tiktoken 통합 구현 (토큰 카운팅)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "tiktoken 기반 토큰 수 계산, 비용 추적 기반"
+    },
+    {
+      "feature_id": "D202-015",
+      "source_file": "D2.0-02",
+      "source_line": 950,
+      "source_section": "§3 Decision Kernel",
+      "feature_name": "Decision Kernel 구현 (단일 판단 원칙)",
+      "version_scope": "V0,V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§3 핵심. 하나의 컨텍스트→하나의 결론→잠금(LOCK). V0 stub, V1 full"
+    },
+    {
+      "feature_id": "D202-016",
+      "source_file": "D2.0-02",
+      "source_line": 1000,
+      "source_section": "§3 Decision Object Schema",
+      "feature_name": "Decision 객체 Pydantic 모델 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-003"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "FREEZE 스키마: decision_id, context, conclusion, confidence, gates_passed, locked 등"
+    },
+    {
+      "feature_id": "D202-017",
+      "source_file": "D2.0-02",
+      "source_line": 1050,
+      "source_section": "§3 충돌 해결 규칙",
+      "feature_name": "Decision 충돌 해결 로직 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-015"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "복수 Decision 충돌 시 우선순위 기반 해결"
+    },
+    {
+      "feature_id": "D202-018",
+      "source_file": "D2.0-02",
+      "source_line": 1100,
+      "source_section": "§3 LangGraph LOCK",
+      "feature_name": "LangGraph 기반 외부 프레임워크 연동 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "LangGraph LOCK: 외부 에이전트 프레임워크 표준"
+    },
+    {
+      "feature_id": "D202-019",
+      "source_file": "D2.0-02",
+      "source_line": 1200,
+      "source_section": "§4 I-1~I-25 Design Index",
+      "feature_name": "I-모듈 LEGACY 매핑 테이블 구현 (D2.0-02 구번호 ↔ D2.0-01 정본번호)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§4 LEGACY 매핑. 0:1 GAP 모듈 식별 포함"
+    },
+    {
+      "feature_id": "D202-020",
+      "source_file": "D2.0-02",
+      "source_line": 1350,
+      "source_section": "§5 Common Design Template",
+      "feature_name": "ResponseEnvelope 스키마 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§5 표준 응답 래퍼: status, data, error, trace_id, timestamp"
+    },
+    {
+      "feature_id": "D202-021",
+      "source_file": "D2.0-02",
+      "source_line": 1400,
+      "source_section": "§5 EvidenceItem Schema",
+      "feature_name": "EvidenceItem 스키마 구현",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§5 근거 항목: source, content, relevance_score, fetched_at"
+    },
+    {
+      "feature_id": "D202-022",
+      "source_file": "D2.0-02",
+      "source_line": 1500,
+      "source_section": "§6.1 LogEvent Registry",
+      "feature_name": "LogEvent 레지스트리 구현 (구조화 로깅)",
+      "version_scope": "V0,V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§6.1 event_type별 LogEvent 등록. YAML 기반 레지스트리"
+    },
+    {
+      "feature_id": "D202-023",
+      "source_file": "D2.0-02",
+      "source_line": 1600,
+      "source_section": "§6.2 FailureCode Registry",
+      "feature_name": "FailureCode 레지스트리 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§6.2 failure_code별 에러 코드 등록"
+    },
+    {
+      "feature_id": "D202-024",
+      "source_file": "D2.0-02",
+      "source_line": 1700,
+      "source_section": "§6.3 Fallback Strategy Registry",
+      "feature_name": "Fallback Strategy 레지스트리 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§6.3 fallback_id별 폴백 전략 등록"
+    },
+    {
+      "feature_id": "D202-025",
+      "source_file": "D2.0-02",
+      "source_line": 1800,
+      "source_section": "§6.4 Cross-Doc Registry Rules",
+      "feature_name": "Cross-Doc 레지스트리 정합성 검증 구현",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-022",
+        "D202-023",
+        "D202-024"
+      ],
+      "extractable": true,
+      "confidence": "추론",
+      "notes": "문서 간 레지스트리 중복/누락 검증 자동화"
+    },
+    {
+      "feature_id": "D202-026",
+      "source_file": "D2.0-02",
+      "source_line": 1900,
+      "source_section": "§7.1-7.10 I-1 Intent Classifier",
+      "feature_name": "I-1 Intent Classifier 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(하드코딩 분류), V1 full(LLM 기반 분류). IntentFrame 생성"
+    },
+    {
+      "feature_id": "D202-027",
+      "source_file": "D2.0-02",
+      "source_line": 1950,
+      "source_section": "§7.1 IntentFrame Schema",
+      "feature_name": "IntentFrame Pydantic 모델 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "query, domain, intent_type, complexity, risk_level, required_tools, confidence, sub_intents"
+    },
+    {
+      "feature_id": "D202-028",
+      "source_file": "D2.0-02",
+      "source_line": 2000,
+      "source_section": "§7.1 S7B-002 Emotion Detection",
+      "feature_name": "텍스트 감정 감지 모듈 구현 (S7B-002)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "KoBERT 기반 한국어 감정 분류 + LLM fallback. emotion_score, emotion_label"
+    },
+    {
+      "feature_id": "D202-029",
+      "source_file": "D2.0-02",
+      "source_line": 2050,
+      "source_section": "§7.1 S7B-003 Tone Adaptation",
+      "feature_name": "적응형 응답 톤 조절 구현 (S7B-003)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-028"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "감정별 톤 매핑: anxious→reassuring, excited→measured 등"
+    },
+    {
+      "feature_id": "D202-030",
+      "source_file": "D2.0-02",
+      "source_line": 2100,
+      "source_section": "§7.1 S7B-004 Voice Emotion",
+      "feature_name": "음성 감정 인식 구현 (S7B-004)",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-028"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "음성 입력에서 감정 분석. V2+ 기능"
+    },
+    {
+      "feature_id": "D202-031",
+      "source_file": "D2.0-02",
+      "source_line": 2120,
+      "source_section": "§7.1 S7B-032 Response Length",
+      "feature_name": "응답 길이 자동 조절 구현 (S7B-032)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "질문 복잡도에 따라 응답 길이 자동 결정"
+    },
+    {
+      "feature_id": "D202-032",
+      "source_file": "D2.0-02",
+      "source_line": 2150,
+      "source_section": "§7.11-7.20 I-2 RAG Retriever",
+      "feature_name": "I-2 RAG Retriever 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(키워드 검색), V1 full(벡터+키워드 하이브리드). EvidencePack 생성"
+    },
+    {
+      "feature_id": "D202-033",
+      "source_file": "D2.0-02",
+      "source_line": 2200,
+      "source_section": "§7.11 EvidencePack Schema",
+      "feature_name": "EvidencePack Pydantic 모델 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-032"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "items[], total_relevance, retrieval_method, search_query"
+    },
+    {
+      "feature_id": "D202-034",
+      "source_file": "D2.0-02",
+      "source_line": 2280,
+      "source_section": "§7.11 S7B-006 Web Search Grounding",
+      "feature_name": "실시간 웹 검색 통합 구현 (S7B-006)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-032"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Tavily/SerpAPI MCP 서버 연동. 일일 100회 제한, 캐시 15분"
+    },
+    {
+      "feature_id": "D202-035",
+      "source_file": "D2.0-02",
+      "source_line": 2290,
+      "source_section": "§7.11 S7B-013 Citation Inline",
+      "feature_name": "인라인 출처 인용 구현 (S7B-013)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-034"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "[1][2][3] 형식 인라인 인용 자동 삽입"
+    },
+    {
+      "feature_id": "D202-036",
+      "source_file": "D2.0-02",
+      "source_line": 2300,
+      "source_section": "§7.21-7.30 I-3 Memory Manager",
+      "feature_name": "I-3 Memory Manager 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(세션 메모리만), V1 full(L1 세션+L2 프로젝트+L3 글로벌)"
+    },
+    {
+      "feature_id": "D202-037",
+      "source_file": "D2.0-02",
+      "source_line": 2350,
+      "source_section": "§7.21 MemoryCommitRequest Schema",
+      "feature_name": "MemoryCommitRequest Pydantic 모델 구현",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "memory_level, content, tags, importance, expiry"
+    },
+    {
+      "feature_id": "D202-038",
+      "source_file": "D2.0-02",
+      "source_line": 2400,
+      "source_section": "§7.21 S7B-024 Export/Import",
+      "feature_name": "메모리 내보내기/가져오기 구현 (S7B-024)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "대화 히스토리 JSON/Markdown 내보내기/가져오기"
+    },
+    {
+      "feature_id": "D202-039",
+      "source_file": "D2.0-02",
+      "source_line": 2420,
+      "source_section": "§7.21 S7B-025 History Search",
+      "feature_name": "대화 히스토리 검색 구현 (S7B-025)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "과거 대화 내용 키워드/의미 검색"
+    },
+    {
+      "feature_id": "D202-040",
+      "source_file": "D2.0-02",
+      "source_line": 2440,
+      "source_section": "§7.21 S7B-026 Auto-summary",
+      "feature_name": "대화 자동 요약 구현 (S7B-026)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "긴 대화 자동 요약 생성 및 메모리 저장"
+    },
+    {
+      "feature_id": "D202-041",
+      "source_file": "D2.0-02",
+      "source_line": 2460,
+      "source_section": "§7.21 S7B-020 Emotion History",
+      "feature_name": "감정 히스토리 추적 구현 (S7B-020)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-028",
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "대화별 감정 변화 추적 및 트렌드 분석"
+    },
+    {
+      "feature_id": "D202-042",
+      "source_file": "D2.0-02",
+      "source_line": 2480,
+      "source_section": "§7.21 S7B-023 Conversation Fork",
+      "feature_name": "대화 분기(Fork) 구현 (S7B-023)",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-036"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "대화 중간 시점에서 분기하여 다른 방향 탐색. V2+"
+    },
+    {
+      "feature_id": "D202-043",
+      "source_file": "D2.0-02",
+      "source_line": 2500,
+      "source_section": "§7.31-7.40 I-4 Structuring Engine",
+      "feature_name": "I-4 Structuring Engine 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(텍스트 포맷팅), V1 full(JSON/Markdown/코드 구조화)"
+    },
+    {
+      "feature_id": "D202-044",
+      "source_file": "D2.0-02",
+      "source_line": 2550,
+      "source_section": "§7.31 StructuredOutput Schema",
+      "feature_name": "StructuredOutput Pydantic 모델 구현",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-043"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "output_format, content, metadata, citations"
+    },
+    {
+      "feature_id": "D202-045",
+      "source_file": "D2.0-02",
+      "source_line": 2620,
+      "source_section": "§7.31 STEP7 Image Generation Pipeline",
+      "feature_name": "이미지 생성 파이프라인 구현 (STEP7)",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-043"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "DALL-E/Stable Diffusion 연동 이미지 생성. V2+"
+    },
+    {
+      "feature_id": "D202-046",
+      "source_file": "D2.0-02",
+      "source_line": 2650,
+      "source_section": "§7.41-7.50 I-5 Runtime Brain Router",
+      "feature_name": "I-5 Runtime Brain Router 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(단일 모델), V1 full(비용/품질/위험 기반 라우팅)"
+    },
+    {
+      "feature_id": "D202-047",
+      "source_file": "D2.0-02",
+      "source_line": 2750,
+      "source_section": "§7.41 S7B-011 Plan Mode",
+      "feature_name": "Plan Mode 구현 (S7B-011)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "복잡 태스크를 단계별 계획으로 분해 후 실행"
+    },
+    {
+      "feature_id": "D202-048",
+      "source_file": "D2.0-02",
+      "source_line": 2800,
+      "source_section": "§7.41 Multimodal Router",
+      "feature_name": "멀티모달 라우터 구현 (STEP7)",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "텍스트/이미지/음성 입력에 따른 모델 라우팅. V2+"
+    },
+    {
+      "feature_id": "D202-049",
+      "source_file": "D2.0-02",
+      "source_line": 2850,
+      "source_section": "§7.51-7.53 I-6 Self-check",
+      "feature_name": "I-6 Self-check 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-015"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(basic), V1 full. 임계값 P0:70/P1:75/P2:80 LOCK"
+    },
+    {
+      "feature_id": "D202-050",
+      "source_file": "D2.0-02",
+      "source_line": 2880,
+      "source_section": "§7.51 Self-check Thresholds LOCK",
+      "feature_name": "Self-check 임계값 설정 구현 (P0:70/P1:75/P2:80 LOCK)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "위험 등급별 자기검증 통과 임계값 LOCK"
+    },
+    {
+      "feature_id": "D202-051",
+      "source_file": "D2.0-02",
+      "source_line": 2900,
+      "source_section": "§7.51 S7B-019 Confidence Score",
+      "feature_name": "신뢰도 점수 표시 구현 (S7B-019)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "응답에 신뢰도 점수 표시 (0~1)"
+    },
+    {
+      "feature_id": "D202-052",
+      "source_file": "D2.0-02",
+      "source_line": 2920,
+      "source_section": "§7.51 S7B-035 Regenerate",
+      "feature_name": "응답 재생성 구현 (S7B-035)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Self-check 실패 시 soft retry 1회 자동 재생성"
+    },
+    {
+      "feature_id": "D202-053",
+      "source_file": "D2.0-02",
+      "source_line": 2940,
+      "source_section": "§7.51 S7B-007 Thinking Display",
+      "feature_name": "사고 과정 표시 구현 (S7B-007)",
+      "version_scope": "V1",
+      "category": "FT-UI",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "추론 과정을 사용자에게 시각적으로 표시"
+    },
+    {
+      "feature_id": "D202-054",
+      "source_file": "D2.0-02",
+      "source_line": 2960,
+      "source_section": "§7.54-7.56 I-7 Project/Session Manager",
+      "feature_name": "I-7 Project/Session Manager 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "프로젝트/세션 생성, 전환, 컨텍스트 관리"
+    },
+    {
+      "feature_id": "D202-055",
+      "source_file": "D2.0-02",
+      "source_line": 3000,
+      "source_section": "§7.54 S7B-009 Todo Manager",
+      "feature_name": "Todo Manager 구현 (S7B-009)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-054"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "프로젝트별 할 일 관리. 생성/완료/우선순위"
+    },
+    {
+      "feature_id": "D202-056",
+      "source_file": "D2.0-02",
+      "source_line": 3020,
+      "source_section": "§7.57-7.59 I-8 Cost Tracker",
+      "feature_name": "I-8 Cost Tracker 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 stub(로그만), V1 full(예산 관리+알림). ≤₩40K/mo 제한"
+    },
+    {
+      "feature_id": "D202-057",
+      "source_file": "D2.0-02",
+      "source_line": 3060,
+      "source_section": "§7.57 S7B-028 Prompt Caching",
+      "feature_name": "Prompt Caching 구현 (S7B-028)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-056"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "시스템 프롬프트 캐싱. Anthropic cache_control / OpenAI auto. 30-50% 비용 절감"
+    },
+    {
+      "feature_id": "D202-058",
+      "source_file": "D2.0-02",
+      "source_line": 3080,
+      "source_section": "§7.57 S7B-029 KV Cache Optimization",
+      "feature_name": "KV Cache 최적화 구현 (S7B-029)",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-056"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "LLM KV 캐시 최적화. V2+"
+    },
+    {
+      "feature_id": "D202-059",
+      "source_file": "D2.0-02",
+      "source_line": 3095,
+      "source_section": "§7.57 S7B-030 Batch Processing",
+      "feature_name": "배치 처리 구현 (S7B-030)",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-056"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "비실시간 대량 요청 배치 처리. 비용 50% 절감. V2+"
+    },
+    {
+      "feature_id": "D202-060",
+      "source_file": "D2.0-02",
+      "source_line": 3110,
+      "source_section": "§7.60-7.62 I-9 Log/Trace Manager",
+      "feature_name": "I-9 Log/Trace Manager 모듈 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-022"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V0 기본 로깅, V1 full 구조화 로깅+trace_id 추적"
+    },
+    {
+      "feature_id": "D202-061",
+      "source_file": "D2.0-02",
+      "source_line": 3170,
+      "source_section": "§7.63-7.65 I-10 UI Orchestration",
+      "feature_name": "I-10 UI Orchestration 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "UI 컴포넌트 오케스트레이션. 패널 상태 관리"
+    },
+    {
+      "feature_id": "D202-062",
+      "source_file": "D2.0-02",
+      "source_line": 3200,
+      "source_section": "§7.63 S7B-027 Multi-conversation",
+      "feature_name": "멀티 대화 관리 구현 (S7B-027)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-061"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "복수 대화 탭 동시 관리"
+    },
+    {
+      "feature_id": "D202-063",
+      "source_file": "D2.0-02",
+      "source_line": 3220,
+      "source_section": "§7.63 S7B-015 TTS",
+      "feature_name": "TTS 음성 출력 구현 (S7B-015)",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-061"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "텍스트→음성 변환 출력. V2+"
+    },
+    {
+      "feature_id": "D202-064",
+      "source_file": "D2.0-02",
+      "source_line": 3240,
+      "source_section": "§7.63 S7B-017 Screen Sharing",
+      "feature_name": "화면 공유 구현 (S7B-017)",
+      "version_scope": "V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-061"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "화면 캡처/공유 기반 AI 분석. V3+"
+    },
+    {
+      "feature_id": "D202-065",
+      "source_file": "D2.0-02",
+      "source_line": 3260,
+      "source_section": "§7.66-7.68 I-11 Tool Adapter",
+      "feature_name": "I-11 Tool Adapter 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-004"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "MCP 기반 도구 어댑터. 도구 등록/호출/결과 수집"
+    },
+    {
+      "feature_id": "D202-066",
+      "source_file": "D2.0-02",
+      "source_line": 3300,
+      "source_section": "§7.66 S7B-010 Ask User Tool",
+      "feature_name": "사용자 질문 도구 구현 (S7B-010)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-065"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "HITL: AI가 사용자에게 명확화 질문을 보내는 도구"
+    },
+    {
+      "feature_id": "D202-067",
+      "source_file": "D2.0-02",
+      "source_line": 3320,
+      "source_section": "§7.69-7.71 I-12 Self-evo Scheduler",
+      "feature_name": "I-12 Self-evolution Scheduler 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "자기 진화 스케줄러. V2+"
+    },
+    {
+      "feature_id": "D202-068",
+      "source_file": "D2.0-02",
+      "source_line": 3380,
+      "source_section": "§7.72-7.74 I-13 Template Engine",
+      "feature_name": "I-13 Template Engine 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "프롬프트 템플릿 관리/조합 엔진"
+    },
+    {
+      "feature_id": "D202-069",
+      "source_file": "D2.0-02",
+      "source_line": 3430,
+      "source_section": "§7.75-7.77 I-14 QA/Benchmark",
+      "feature_name": "I-14 QA/Benchmark 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "벤치마크 자동 실행 및 결과 대시보드"
+    },
+    {
+      "feature_id": "D202-070",
+      "source_file": "D2.0-02",
+      "source_line": 3480,
+      "source_section": "§7.78-7.80 I-15 Backup/Snapshot",
+      "feature_name": "I-15 Backup/Snapshot 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "데이터 백업/스냅샷 자동 생성/복원"
+    },
+    {
+      "feature_id": "D202-071",
+      "source_file": "D2.0-02",
+      "source_line": 3530,
+      "source_section": "§7.81-7.83 I-16 Health Check",
+      "feature_name": "I-16 Health Check 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "시스템 상태 점검. 모듈별 health_check() 호출"
+    },
+    {
+      "feature_id": "D202-072",
+      "source_file": "D2.0-02",
+      "source_line": 3580,
+      "source_section": "§7.84-7.86 I-17 Self-Defense",
+      "feature_name": "I-17 Self-Defense 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "프롬프트 인젝션 방어, 입력 위생처리"
+    },
+    {
+      "feature_id": "D202-073",
+      "source_file": "D2.0-02",
+      "source_line": 3630,
+      "source_section": "§7.87-7.89 I-18 Meta-learning",
+      "feature_name": "I-18 Meta-learning 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "사용 패턴 학습, 자동 최적화. V2+"
+    },
+    {
+      "feature_id": "D202-074",
+      "source_file": "D2.0-02",
+      "source_line": 3680,
+      "source_section": "§7.90-7.92 I-19 QoD (Quality of Decision)",
+      "feature_name": "I-19 QoD 평가 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Decision 품질 점수 산출 (0~1)"
+    },
+    {
+      "feature_id": "D202-075",
+      "source_file": "D2.0-02",
+      "source_line": 3730,
+      "source_section": "§7.93-7.95 I-20 Knowledge Graph",
+      "feature_name": "I-20 Knowledge Graph 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "지식 그래프 구축/쿼리. V1 NetworkX, V3 Neo4j"
+    },
+    {
+      "feature_id": "D202-076",
+      "source_file": "D2.0-02",
+      "source_line": 3780,
+      "source_section": "§7.96-7.98 I-21 Source Evolution",
+      "feature_name": "I-21 Source Evolution 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "소스 코드 자동 진화/리팩토링 제안. V2+"
+    },
+    {
+      "feature_id": "D202-077",
+      "source_file": "D2.0-02",
+      "source_line": 3830,
+      "source_section": "§7.99-7.101 I-22 Task/Project Manager",
+      "feature_name": "I-22 Task/Project Manager 모듈 구현 (NEW)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§4 0:1 GAP 신규 모듈. 태스크/프로젝트 통합 관리"
+    },
+    {
+      "feature_id": "D202-078",
+      "source_file": "D2.0-02",
+      "source_line": 3860,
+      "source_section": "§7.102-7.104 I-23 Doc/Code Structuring",
+      "feature_name": "I-23 Doc/Code Structuring 모듈 구현 (NEW)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§4 0:1 GAP 신규 모듈. 문서/코드 구조화 자동 생성"
+    },
+    {
+      "feature_id": "D202-079",
+      "source_file": "D2.0-02",
+      "source_line": 3880,
+      "source_section": "§7.105 I-24 Knowledge Graph Engine",
+      "feature_name": "I-24 Knowledge Graph Engine 모듈 구현",
+      "version_scope": "V2",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-075"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "I-20 참조. 지식 그래프 엔진 고급 기능. V2+"
+    },
+    {
+      "feature_id": "D202-080",
+      "source_file": "D2.0-02",
+      "source_line": 3890,
+      "source_section": "§7.106 I-25 SDAR Engine",
+      "feature_name": "I-25 SDAR Engine 모듈 구현",
+      "version_scope": "V1",
+      "category": "FT-DOMAIN",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "SDAR 5-Layer 분석 엔진. 외부 spec 참조"
+    },
+    {
+      "feature_id": "D202-081",
+      "source_file": "D2.0-02",
+      "source_line": 3500,
+      "source_section": "§8 5-Gate System",
+      "feature_name": "5-Gate 시스템 구현 (G0~G4)",
+      "version_scope": "V0,V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§8 5-Gate LOCK. V0 PolicyGate만, V1 전체"
+    },
+    {
+      "feature_id": "D202-082",
+      "source_file": "D2.0-02",
+      "source_line": 3510,
+      "source_section": "§8 G0 Input Validation Gate",
+      "feature_name": "G0 Input Validation Gate 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "입력 검증 게이트. 기본 유효성 확인"
+    },
+    {
+      "feature_id": "D202-083",
+      "source_file": "D2.0-02",
+      "source_line": 3530,
+      "source_section": "§8 G1 PolicyGate",
+      "feature_name": "G1 PolicyGate 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "정책 준수 검증 게이트"
+    },
+    {
+      "feature_id": "D202-084",
+      "source_file": "D2.0-02",
+      "source_line": 3550,
+      "source_section": "§8 G2 CostGate",
+      "feature_name": "G2 CostGate 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-056"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "비용 한도 초과 차단 게이트"
+    },
+    {
+      "feature_id": "D202-085",
+      "source_file": "D2.0-02",
+      "source_line": 3570,
+      "source_section": "§8 G3 EvidenceGate",
+      "feature_name": "G3 EvidenceGate 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-032"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "근거 충분성 검증 게이트"
+    },
+    {
+      "feature_id": "D202-086",
+      "source_file": "D2.0-02",
+      "source_line": 3590,
+      "source_section": "§8 G3 ApprovalGate",
+      "feature_name": "G3 ApprovalGate 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "고위험 작업 사용자 승인 게이트 (HITL)"
+    },
+    {
+      "feature_id": "D202-087",
+      "source_file": "D2.0-02",
+      "source_line": 3610,
+      "source_section": "§8 G4 SelfCheckGate",
+      "feature_name": "G4 SelfCheckGate 구현",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "출력 자기검증 게이트. I-6 연동"
+    },
+    {
+      "feature_id": "D202-088",
+      "source_file": "D2.0-02",
+      "source_line": 3650,
+      "source_section": "§9 Decision Completions",
+      "feature_name": "L2 승인 프로세스 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-086"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "§9 L2 승인 필요 Decision 처리 플로우"
+    },
+    {
+      "feature_id": "D202-089",
+      "source_file": "D2.0-02",
+      "source_line": 3700,
+      "source_section": "§10 Plan/Verify Extensions",
+      "feature_name": "Plan/Verify 확장 파이프라인 구현",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "5-Phase에 Plan/Verify 확장 단계 추가. V2+"
+    },
+    {
+      "feature_id": "D202-090",
+      "source_file": "D2.0-02",
+      "source_line": 3750,
+      "source_section": "§10.4.2 I-Module ↔ Series 연결",
+      "feature_name": "I-Module ↔ Series 연결 매핑 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "I-모듈과 S/E/A/B/C/D/EVX 시리즈 간 연결 테이블"
+    },
+    {
+      "feature_id": "D202-091",
+      "source_file": "D2.0-02",
+      "source_line": 3800,
+      "source_section": "§10.5 Decision Schema Extensions",
+      "feature_name": "Decision 스키마 확장 구현 (V2+)",
+      "version_scope": "V2",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-016"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Decision 객체에 audit_trail, multi_brain 필드 추가"
+    },
+    {
+      "feature_id": "D202-092",
+      "source_file": "D2.0-02",
+      "source_line": 3850,
+      "source_section": "§11.1 Decision Audit Trail API",
+      "feature_name": "Decision Audit Trail API 구현",
+      "version_scope": "V2",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-016"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Decision 감사 추적 API. V2+"
+    },
+    {
+      "feature_id": "D202-093",
+      "source_file": "D2.0-02",
+      "source_line": 3870,
+      "source_section": "§11.1 Multi-Brain Failover",
+      "feature_name": "Multi-Brain Failover 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "GPT-4o → Claude → Ollama 페일오버 체인"
+    },
+    {
+      "feature_id": "D202-094",
+      "source_file": "D2.0-02",
+      "source_line": 3890,
+      "source_section": "§11.1 ToolRegistry Unification",
+      "feature_name": "ToolRegistry 통합 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-065"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "MCP 도구 + 내부 도구 통합 레지스트리"
+    },
+    {
+      "feature_id": "D202-095",
+      "source_file": "D2.0-02",
+      "source_line": 3903,
+      "source_section": "§11.2 OpenAI API 연동",
+      "feature_name": "OpenAI API Brain Adapter 연동 구현 (12건)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Chat Completions, Structured Outputs, Function Calling, Vision, Whisper, TTS, Embeddings, Moderation, Batch, Realtime, Rate Limits. API Key 환경변수 LOCK"
+    },
+    {
+      "feature_id": "D202-096",
+      "source_file": "D2.0-02",
+      "source_line": 3927,
+      "source_section": "§11.3 Claude API 연동",
+      "feature_name": "Claude API Brain Adapter 연동 구현 (15건)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Messages, Extended Thinking, Vision, Tool Use, Streaming, Prompt Caching, Batch, ASL, CAI, MCP Native, Citations, PDF. Failover 1차 대체"
+    },
+    {
+      "feature_id": "D202-097",
+      "source_file": "D2.0-02",
+      "source_line": 3951,
+      "source_section": "§11.4 중국 AI MoE/1M Context",
+      "feature_name": "중국 AI 모델 Brain Adapter 등록 (참조/Failover)",
+      "version_scope": "V2,V3",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Kimi K2.5, DeepSeek V3/R1, Qwen2.5 등. API 등록 + Ollama 로컬. 프라이버시 LOCK"
+    },
+    {
+      "feature_id": "D202-098",
+      "source_file": "D2.0-02",
+      "source_line": 3977,
+      "source_section": "§11.5 Google/DeepMind 참조",
+      "feature_name": "Google Gemini Brain Adapter 등록",
+      "version_scope": "V2",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Gemini 2.0, Gemini Flash 등록. V2+"
+    },
+    {
+      "feature_id": "D202-099",
+      "source_file": "D2.0-02",
+      "source_line": 3997,
+      "source_section": "§11.6 Meta 오픈소스 LLM",
+      "feature_name": "Llama 모델 Ollama 로컬 배포 구현",
+      "version_scope": "V1,V2",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Llama 3.1 8B/70B/405B Ollama 배포. LlamaGuard 3 안전 필터. GGUF 양자화"
+    },
+    {
+      "feature_id": "D202-100",
+      "source_file": "D2.0-02",
+      "source_line": 4022,
+      "source_section": "§11.7 한국어 LLM 비교표",
+      "feature_name": "한국어 LLM 모델 풀 등록 구현",
+      "version_scope": "V1,V2",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "SOLAR 10.7B, Polyglot-Ko 등. DEFER V1.1: 한국어 기본 로컬 모델 확정"
+    },
+    {
+      "feature_id": "D202-101",
+      "source_file": "D2.0-02",
+      "source_line": 4063,
+      "source_section": "§11.9 벤치마크 기준",
+      "feature_name": "모델 벤치마크 파이프라인 구현 (15개 벤치마크)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-069"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "MMLU, HumanEval, KoBEST, KLUE 등. 최소 기준 LOCK: MMLU≥70%, HumanEval≥60%, SafetyBench≥90%"
+    },
+    {
+      "feature_id": "D202-102",
+      "source_file": "D2.0-02",
+      "source_line": 4089,
+      "source_section": "§11.10.1 DI Kernel",
+      "feature_name": "DI Kernel (의존성 주입 컨테이너) 구현",
+      "version_scope": "V0,V1",
+      "category": "FT-INFRA",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "CRITICAL. IBrain, IRetriever, ICostTracker, IGateClient, IMCPClient, ILogger, IMemoryStore 인터페이스. Singleton/Scoped/Transient 수명"
+    },
+    {
+      "feature_id": "D202-103",
+      "source_file": "D2.0-02",
+      "source_line": 4109,
+      "source_section": "§11.10.2 TEE 루프 CORE 연동",
+      "feature_name": "TEE 루프 (Think-Execute-Evaluate) CORE 제어자 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-007"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Think(I-1+I-5)→Execute(Brain/Node)→Evaluate(I-6) 루프. CORE는 제어자, 실행은 05(Agent)에 위임"
+    },
+    {
+      "feature_id": "D202-104",
+      "source_file": "D2.0-02",
+      "source_line": 4118,
+      "source_section": "§11.11.1 Trigger/Action 이벤트 스키마",
+      "feature_name": "Trigger/Action 이벤트 처리 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026",
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "CRITICAL. schedule/event/webhook/manual 트리거→Gate→워크플로우"
+    },
+    {
+      "feature_id": "D202-105",
+      "source_file": "D2.0-02",
+      "source_line": 4131,
+      "source_section": "§11.11.2 Evaluations 품질 게이트",
+      "feature_name": "Evaluations 품질 게이트 구현 (Accuracy/Faithfulness/Relevance/Completeness/Safety)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "CRITICAL. 5개 품질 항목 → QoD 점수(0~1) 통합"
+    },
+    {
+      "feature_id": "D202-106",
+      "source_file": "D2.0-02",
+      "source_line": 4145,
+      "source_section": "§11.12.1 IntentFrame Signature",
+      "feature_name": "IntentFrame Signature 확장 구현 (domain/complexity/risk_level)",
+      "version_scope": "V1",
+      "category": "FT-SCHEMA",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-027"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "CRITICAL. IntentFrame Python class: query, domain, intent_type, complexity, risk_level, required_tools, confidence, sub_intents"
+    },
+    {
+      "feature_id": "D202-107",
+      "source_file": "D2.0-02",
+      "source_line": 4165,
+      "source_section": "§11.12.2 평가 프레임워크 표준",
+      "feature_name": "4-Level 평가 프레임워크 구현 (L1단위/L2에이전트/L3시스템/L4안전)",
+      "version_scope": "V1,V2",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "L1~L4 평가 레벨. 결과 06(STORAGE) 저장, 트렌드 추적"
+    },
+    {
+      "feature_id": "D202-108",
+      "source_file": "D2.0-02",
+      "source_line": 4175,
+      "source_section": "§11.12.3 LM-Eval Harness 연동",
+      "feature_name": "LM-Eval Harness 통합 구현",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-101"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "CRITICAL. EleutherAI LM-Eval 자동 실행 + 커스텀 VAMOS 벤치마크 태스크"
+    },
+    {
+      "feature_id": "D202-109",
+      "source_file": "D2.0-02",
+      "source_line": 4182,
+      "source_section": "§11.13 I-Module/E-Module/Gate 자동화",
+      "feature_name": "Gate 자동화 스키마 구현 (G0~G4 자동 통과 조건)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [
+        "D202-081"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Gate 입출력 스키마: {gate_id, gate_type, context} → {result: pass|deny|hold|downshift, reason}"
+    },
+    {
+      "feature_id": "D202-110",
+      "source_file": "D2.0-02",
+      "source_line": 4186,
+      "source_section": "§11.13.1 I-모듈 의존성 그래프",
+      "feature_name": "I-모듈 의존성 DAG 구현 (순환 참조 검증)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "I-1→I-5→I-3→I-4, I-6↔I-3 피드백 루프, I-9←전체"
+    },
+    {
+      "feature_id": "D202-111",
+      "source_file": "D2.0-02",
+      "source_line": 4194,
+      "source_section": "§11.13.2 E-모듈 8개 인터페이스",
+      "feature_name": "EVX-Series 검증 모듈 인터페이스 구현",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "EVX-1~EVX-6 검증 체인. verify.chain_used 기록"
+    },
+    {
+      "feature_id": "D202-112",
+      "source_file": "D2.0-02",
+      "source_line": 4283,
+      "source_section": "§12.1 파이프라인 상태머신 [P7-PIP]",
+      "feature_name": "파이프라인 FSM 구현 (S0~S5+S-ERR, 상태별 타임아웃, 데이터 계약)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-007",
+        "D202-008"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "S1=5초, S2=30초, S3=120초, S4=10초, S5=15초. JSON Schema 입출력 계약. scatter/gather 병렬 분기"
+    },
+    {
+      "feature_id": "D202-113",
+      "source_file": "D2.0-02",
+      "source_line": 4291,
+      "source_section": "§12.2 I-Module 공통 인터페이스 [P7-MOD]",
+      "feature_name": "I-Module 공통 인터페이스 구현 (init/process/health_check/shutdown)",
+      "version_scope": "V0,V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "공통 인터페이스 + 의존성 DAG 빌드타임 검증. SLA: Router<100ms, E2E<30초"
+    },
+    {
+      "feature_id": "D202-114",
+      "source_file": "D2.0-02",
+      "source_line": 4298,
+      "source_section": "§12.3 Capability Matrix [P7-VER]",
+      "feature_name": "77모듈×4버전 Capability Matrix 구현 (Feature Flag 런타임 제어)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Feature Flag 기반 모듈 활성/비활성. 버전 업그레이드 시 자동 활성화"
+    },
+    {
+      "feature_id": "D202-115",
+      "source_file": "D2.0-02",
+      "source_line": 4304,
+      "source_section": "§12.4 테스트 전략 [P7-MOD]",
+      "feature_name": "3단계 테스트 전략 구현 (단위≥80%/통합≥90%/시나리오≥95%)",
+      "version_scope": "V1",
+      "category": "FT-TEST",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "Gate별 필수 테스트: G0=단위, G1=통합, G2=시나리오, G3=성능, G4=보안"
+    },
+    {
+      "feature_id": "D202-116",
+      "source_file": "D2.0-02",
+      "source_line": 4328,
+      "source_section": "STEP7 S7B-002 텍스트 감정 감지",
+      "feature_name": "EmotionDetector 클래스 구현 (KoBERT + LLM fallback)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. emotion_score(-1~1) + emotion_label. AnalysisResult에 emotion 필드 추가"
+    },
+    {
+      "feature_id": "D202-117",
+      "source_file": "D2.0-02",
+      "source_line": 4337,
+      "source_section": "STEP7 S7B-003 적응형 톤",
+      "feature_name": "ToneAdapter 클래스 구현 (감정별 톤 자동 조절)",
+      "version_scope": "V1",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-116"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 시스템 프롬프트에 동적 톤 지시 삽입. 사용자 설정 ON/OFF"
+    },
+    {
+      "feature_id": "D202-118",
+      "source_file": "D2.0-02",
+      "source_line": 4346,
+      "source_section": "STEP7 S7B-005 Hook Lifecycle",
+      "feature_name": "Hook Registry + .vamos/hooks.json 구현",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-011"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. priority 기반 실행순서. 타임아웃 10초, 샌드박스"
+    },
+    {
+      "feature_id": "D202-119",
+      "source_file": "D2.0-02",
+      "source_line": 4357,
+      "source_section": "STEP7 S7B-006 웹 검색 통합",
+      "feature_name": "WebSearchTool MCP 서버 구현 (Tavily/SerpAPI)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-034"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 일일 100회 제한, 캐시 15분. 인용 [1][2][3]"
+    },
+    {
+      "feature_id": "D202-120",
+      "source_file": "D2.0-02",
+      "source_line": 4367,
+      "source_section": "STEP7 S7B-028 Prompt Caching",
+      "feature_name": "PromptCacheManager 구현 (캐시 적중률 추적)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-057"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. Anthropic/OpenAI/Google 캐싱. 30-50% 비용 절감"
+    },
+    {
+      "feature_id": "D202-121",
+      "source_file": "D2.0-02",
+      "source_line": 4378,
+      "source_section": "STEP7 S7B-034 사용자 피드백",
+      "feature_name": "사용자 피드백 수집 UI + 저장 구현 (S7B-034)",
+      "version_scope": "V1",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 👍/👎 + 텍스트. L2 메모리 저장. 로컬 전용"
+    },
+    {
+      "feature_id": "D202-122",
+      "source_file": "D2.0-02",
+      "source_line": 4388,
+      "source_section": "STEP7 S7-A-001 Claude Agent Teams 참조",
+      "feature_name": "AgentHandoff 프로토콜 참조 구현",
+      "version_scope": "V2",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "추론",
+      "notes": "R1 CRITICAL. Claude Agent Teams Lead+Sub 패턴. VAMOS 5-Gate 차별화. V2+ 본격 적용"
+    },
+    {
+      "feature_id": "D202-123",
+      "source_file": "D2.0-02",
+      "source_line": 4396,
+      "source_section": "STEP7 S7-A-002 Agent SDK 패턴",
+      "feature_name": "VAMOS SDK 데코레이터 구현 (@vamos.agent, @vamos.tool, @vamos.gate)",
+      "version_scope": "V2",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. Agent.run()/delegate()/report() 표준 인터페이스. V2+"
+    },
+    {
+      "feature_id": "D202-124",
+      "source_file": "D2.0-02",
+      "source_line": 4403,
+      "source_section": "STEP7 S7-A-003 MCP 최신 스펙",
+      "feature_name": "MCP 2025.06 스펙 반영 구현 (Streamable HTTP, OAuth 2.1, Tool Annotations)",
+      "version_scope": "V1",
+      "category": "FT-API",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-004"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. readOnlyHint, destructiveHint, idempotentHint. MCP Inspector 통합"
+    },
+    {
+      "feature_id": "D202-125",
+      "source_file": "D2.0-02",
+      "source_line": 4411,
+      "source_section": "STEP7 S7-A-005 Constitutional AI 2.0",
+      "feature_name": "Personal Constitution 기반 Self-check 구현 (CAI 2.0)",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-049"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 사용자 정의 가치관/규칙. 위반 시 자동 수정+알림. 우선순위: 시스템>Personal>일반"
+    },
+    {
+      "feature_id": "D202-126",
+      "source_file": "D2.0-02",
+      "source_line": 4420,
+      "source_section": "STEP7 S7-B-001 모델 매트릭스 갱신",
+      "feature_name": "LLM Selection Matrix 갱신 구현 (GPT-4.1, o3/o4-mini, Llama 4 Scout)",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 작업 유형별 최적 모델 매핑. Reasoning Effort 자동 선택"
+    },
+    {
+      "feature_id": "D202-127",
+      "source_file": "D2.0-02",
+      "source_line": 4430,
+      "source_section": "STEP7 INNOV-11 지식-투자-코딩 통합",
+      "feature_name": "도메인 통합 파이프라인 구현 (coding/investing/knowledge/life 분류)",
+      "version_scope": "V1",
+      "category": "FT-DOMAIN",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-026"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. VAMOS 핵심 차별화. 통합 대시보드"
+    },
+    {
+      "feature_id": "D202-128",
+      "source_file": "D2.0-02",
+      "source_line": 4438,
+      "source_section": "STEP7 INNOV-12 로컬 우선 프라이버시",
+      "feature_name": "로컬 우선 모드 구현 (Local LLM + Local Whisper + Local Chroma)",
+      "version_scope": "V1",
+      "category": "FT-SEC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "R1 CRITICAL. 클라우드 전환은 사용자 명시 승인만. 데이터 제로 유출. ≤₩10K/mo"
+    },
+    {
+      "feature_id": "D202-129",
+      "source_file": "D2.0-02",
+      "source_line": 4261,
+      "source_section": "§11.15 MoE 라우팅 패턴 (IDEA-C01)",
+      "feature_name": "MoE 스타일 모델 라우팅 구현 (V3 전문 모델 풀)",
+      "version_scope": "V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [
+        "D202-046"
+      ],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "V1: 2~3 모델, V3: 다수 전문 모델 풀 MoE Router"
+    },
+    {
+      "feature_id": "D202-130",
+      "source_file": "D2.0-02",
+      "source_line": 4267,
+      "source_section": "§11.15 Agent Swarm PARL (IDEA-C02)",
+      "feature_name": "Agent Swarm (PARL) 병렬 실행 구현",
+      "version_scope": "V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "오케스트레이터→서브에이전트 병렬 실행 (최대 100개). 4.5x 속도 향상"
+    },
+    {
+      "feature_id": "D202-131",
+      "source_file": "D2.0-02",
+      "source_line": 4216,
+      "source_section": "§11.14 STEP7 횡단/보강 추정",
+      "feature_name": "STEP7 횡단/보강 추정 항목 (R3~R6, ~57건)",
+      "version_scope": "V1,V2,V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": false,
+      "confidence": "추론",
+      "notes": "R3~R6 추정 항목. 원본 소스 파일 개별 확인 후 확정 필요. extractable=false"
+    },
+    {
+      "feature_id": "D202-132",
+      "source_file": "D2.0-02",
+      "source_line": 4446,
+      "source_section": "STEP7 횡단 A — 경쟁분석 CRITICAL (20건)",
+      "feature_name": "경쟁분석 횡단 항목 (Part D 중국AI 5건 + Part F 혁신기술 15건)",
+      "version_scope": "V1,V2,V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": false,
+      "confidence": "추론",
+      "notes": "경쟁분석/참조 항목. 구현보다 참조 성격이 강함. extractable=false"
+    },
+    {
+      "feature_id": "D202-133",
+      "source_file": "D2.0-02",
+      "source_line": 3900,
+      "source_section": "§11.1 결정 사항",
+      "feature_name": "A-6 Federated Agent 고정 구현 (S03-REM-002)",
+      "version_scope": "V3",
+      "category": "FT-MOD",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "A-6은 Federated Agent 전용 고정. V3"
+    },
+    {
+      "feature_id": "D202-134",
+      "source_file": "D2.0-02",
+      "source_line": 4041,
+      "source_section": "§11.8 AI 연구 트렌드 참조",
+      "feature_name": "AI 연구 트렌드 참조 항목 (15건)",
+      "version_scope": "V2,V3",
+      "category": "FT-FUNC",
+      "implementation_type": "신규구현",
+      "dependencies": [],
+      "extractable": false,
+      "confidence": "추론",
+      "notes": "MoE, CoT, RAG, RLHF 등 트렌드 참조. 구현보다 참조 성격. extractable=false"
+    },
+    {
+      "feature_id": "D202-135",
+      "source_file": "D2.0-02",
+      "source_line": 3901,
+      "source_section": "§11.1 C3 산출물",
+      "feature_name": "C3(Contracts/Protocol) 산출물 D2 포함 관리 구현",
+      "version_scope": "V1",
+      "category": "FT-CFG",
+      "implementation_type": "설정변경",
+      "dependencies": [],
+      "extractable": true,
+      "confidence": "명시적",
+      "notes": "S03-DEC-001: C3 산출물을 D2에 포함하여 관리"
+    }
+  ],
+  "statistics": {
+    "total_features": 152,
+    "by_source": {
+      "D2.0-01": 17,
+      "D2.0-02": 135
+    },
+    "extractable_true": 148,
+    "extractable_false": 4,
+    "by_category": {
+      "FT-FUNC": 59,
+      "FT-INFRA": 6,
+      "FT-CFG": 19,
+      "FT-UI": 2,
+      "FT-SCHEMA": 11,
+      "FT-MOD": 32,
+      "FT-TEST": 6,
+      "FT-SEC": 10,
+      "FT-DOMAIN": 2,
+      "FT-API": 5
+    },
+    "by_version_scope": {
+      "V0,V1,V2,V3": 1,
+      "V0,V1": 29,
+      "V0": 2,
+      "V1": 87,
+      "V2": 19,
+      "V3": 5,
+      "V1,V2": 4,
+      "V1,V2,V3": 3,
+      "V2,V3": 2
+    },
+    "by_implementation_type": {
+      "신규구현": 140,
+      "마이그레이션": 2,
+      "설정변경": 10
+    },
+    "confidence_explicit": 146,
+    "confidence_inferred": 6,
+    "v_unknown_count": 0,
+    "judgment_needed_count": 0
+  }
+}

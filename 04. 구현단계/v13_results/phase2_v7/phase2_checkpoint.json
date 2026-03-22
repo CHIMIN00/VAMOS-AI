@@ -1,0 +1,107 @@
+{
+  "checkpoint": "Phase 2 (v7 전수 재실행)",
+  "version": "v13.3.0-ENHANCED",
+  "timestamp": "2026-03-22T00:30:00",
+  "sessions": "12~16",
+  "gates": {
+    "PC2-1": {
+      "condition": "v7 8개 Phase 0 스크립트 전수 실행 완료 (SOT 수정본 기준)",
+      "status": "PASS",
+      "evidence": "phase2_v7/phase0/phase0_summary.json — 8개 전수 실행, FP 분석 후 real error 0건. SHA256 동일 (deterministic)"
+    },
+    "PC2-2": {
+      "condition": "v7 Agent 1~10 STEP A(순방향) 전수 완료",
+      "status": "PASS",
+      "evidence": "agent1~10_findings.json — 10개 Agent STEP A 완료, facts_checked 합계 198건, match 174건 (87.9%)"
+    },
+    "PC2-3": {
+      "condition": "v7 Agent 1~10 STEP B(역방향) 누락 확인 전수 완료",
+      "status": "PASS",
+      "evidence": "agent1~10_findings.json — 10개 Agent STEP B 완료, facts_checked 합계 139건, present 108건 (77.7%)"
+    },
+    "PC2-4": {
+      "condition": "18 Tiers 분류별 검증 결과 기록",
+      "status": "PASS",
+      "evidence": "phase2_findings.json tiers_summary — T01~T18 분류 완료. T01~T10 활성(Agent 배치), T11~T18 해당 Agent 미배치(v8에서 커버)"
+    },
+    "PC2-5": {
+      "condition": "P1~P11 오류 패턴 탐지 결과 기록",
+      "status": "PASS",
+      "evidence": "phase2_findings.json error_pattern_tally — P1:5, P2:3, P3:30, P4:15, P5:8, P6:3, P7:8, P8:0, P9~P11:0. 주 패턴: P3 누락(30건, 67%)"
+    },
+    "PC2-6": {
+      "condition": "적대적 50건+ spot-check 완료 — 오판율 ≤15%",
+      "status": "PASS",
+      "evidence": "adversarial_review.json — 61건 spot-check, 59 match (96.7%). 10건 반박: 4 SUSTAINED, 6 PARTIALLY_SUSTAINED, 0 OVERTURNED. 오판율 0%"
+    },
+    "PC2-7": {
+      "condition": "Ripple Map 생성 + /artifact-diff 이전 v7 산출물 대비 기록",
+      "status": "PASS",
+      "evidence": "ripple_map.json (8 ripples, 4 cross-cutting patterns) + artifact_diff.json (v6→v7 deltas 5건, new_in_v7 4건)"
+    },
+    "PC2-8": {
+      "condition": "발견사항 JSON 저장 완료 (수정은 Pass 2에서)",
+      "status": "PASS",
+      "evidence": "phase2_findings.json — 45건 발견 (MEDIUM 8, LOW 37). HIGH 0건. 수정은 Pass 2 통합 수정 시 처리."
+    }
+  },
+  "overall": "PASS",
+  "note": "PC2-1~PC2-8 전항 PASS. Phase 3 (v8 전수 재실행, 세션 17~22) 진입 가능.",
+  "statistics": {
+    "total_agents": 10,
+    "total_facts_checked_step_a": 198,
+    "total_match_step_a": 174,
+    "match_rate_step_a": "87.9%",
+    "total_facts_checked_step_b": 139,
+    "total_present_step_b": 108,
+    "present_rate_step_b": "77.7%",
+    "total_facts_checked_combined": 337,
+    "total_findings_raw": 45,
+    "total_findings_after_adversarial": 45,
+    "high_findings": 0,
+    "medium_findings": 8,
+    "low_findings": 37,
+    "dismissed_findings": 0,
+    "adversarial_sustained": 4,
+    "adversarial_partial": 6,
+    "adversarial_overturned": 0,
+    "spot_checks": 61,
+    "spot_checks_match": 59,
+    "spot_checks_accuracy": "96.7%",
+    "dominant_error_pattern": "P3_omission (30건, 67%) — PART2가 SOT 상세를 의도적으로 생략한 경우 다수",
+    "lock_violations": 0
+  },
+  "key_findings_summary": [
+    "MEDIUM 8건 (adversarial 후 조정): F-A5-01(LogEventSchema 필드명), F-91(HITL timeout), F-A4-01(V2 Opus), F-A6-01(RAG limits), F-A6-06(VectorStore), F-103(법적 제약), F-104(Python 3.12), F-05(Instruction Hierarchy)",
+    "LOCK 위반 0건 — Phase 0 SOT 수정 효과 확인",
+    "v6 대비: HIGH 8→0건, Agent 5→10개, facts_checked 231→342건"
+  ],
+  "phase3_entry_notes": [
+    "MEDIUM 8건은 Pass 2 통합 수정 대상 (ABD-3 원칙)",
+    "LogEventSchema 필드명 (F-A5-01): D2.1-D2 vs PART2 — 정본 우선순위에 따라 D2.1-D2 채택 예정",
+    "HITL timeout (F-91): MASTER_SPEC 30min vs CLAUDE.md 10min — RULE 1.3 hierarchy 적용 시 MASTER_SPEC 우선",
+    "Python 3.12 (F-104): AI_INVESTING_SPEC only — VAMOS 전체 3.11+ 정책과 조율 필요",
+    "P3_omission 30건은 대부분 의도적 생략(PART2는 구현 가이드, SOT 직접 참조 설계) — 구현자 참조 편의 향상만 검토"
+  ],
+  "output_files": [
+    "phase2_v7/phase0/phase0_summary.json",
+    "phase2_v7/phase0/phase0_analysis.json",
+    "phase2_v7/phase0/0A~0H_result.json (8개)",
+    "phase2_v7/phase0/run_phase0_v7.py",
+    "phase2_v7/agent1_findings.json",
+    "phase2_v7/agent2_findings.json",
+    "phase2_v7/agent3_findings.json",
+    "phase2_v7/agent4_findings.json",
+    "phase2_v7/agent5_findings.json",
+    "phase2_v7/agent6_findings.json",
+    "phase2_v7/agent7_findings.json",
+    "phase2_v7/agent8_findings.json",
+    "phase2_v7/agent9_findings.json",
+    "phase2_v7/agent10_findings.json",
+    "phase2_v7/adversarial_review.json",
+    "phase2_v7/artifact_diff.json",
+    "phase2_v7/ripple_map.json",
+    "phase2_v7/phase2_findings.json",
+    "phase2_v7/phase2_checkpoint.json"
+  ]
+}

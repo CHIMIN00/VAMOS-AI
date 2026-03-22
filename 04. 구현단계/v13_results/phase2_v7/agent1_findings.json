@@ -1,0 +1,133 @@
+{
+  "agent": "Agent 1",
+  "scope": "PART2 §2 Core Architecture Verification — V0 구현 및 ORANGE CORE 파이프라인",
+  "session": "session_13",
+  "timestamp": "2026-03-21T10:00:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 20,
+    "matches": 17,
+    "mismatches": [
+      {
+        "id": "A1-M01",
+        "fact": "DecisionSchema 18필드 (14 required + 4 optional)",
+        "part2_ref": "PART2 L434, L521, L582",
+        "sot_ref": "VAMOS_MASTER_SPECIFICATION §4.4",
+        "match": false,
+        "detail": "PART2 states DecisionSchema has 18 fields (14 req + 4 optional, citing D2.1-D2 §4.1). MASTER_SPEC §4.4 states 16 fields FREEZE. PART2 cites D2.1-D2 as SOT which is higher authority than MASTER_SPEC (which is a summary). The actual field count in MASTER_SPEC §4.4 code block shows 16 named fields (decision_id through s_module_hints). PART2's 18 likely includes sub-fields or the D2.1-D2 version is different. Known discrepancy — PART2 includes a CLAUDE.md comment noting H-7: 16→18 수정 at L434."
+      },
+      {
+        "id": "A1-M02",
+        "fact": "PART2 I-5 Gate 실행 순서: Policy → Approval → Cost → Evidence → SelfCheck",
+        "part2_ref": "PART2 L866",
+        "sot_ref": "VAMOS_MASTER_SPECIFICATION §4.6, D2.0-02 §7.41-7.50",
+        "match": false,
+        "detail": "PART2 L866 lists gate order as Policy→Approval→Cost→Evidence→SelfCheck (citing CLAUDE.md §7.2). But MASTER_SPEC §4.1 I-5 section lists gate priority as 1.PolicyGate 2.CostGate 3.EvidenceGate — no Approval or SelfCheck in that order. D2.0-02 §0.4 also lists Policy→Cost→Approval→Evidence per original design. The gate ordering differs between sources — PART2 added M-14 SelfCheck booster. This is a known reconciled position documented in PART2 notes."
+      },
+      {
+        "id": "A1-M03",
+        "fact": "PART2 V0 활성 모듈: I-1, I-2, I-3, I-5, I-19 (5개)",
+        "part2_ref": "PART2 L59, L816",
+        "sot_ref": "D2.0-01 §5.6 LOCK",
+        "match": false,
+        "detail": "PART2 L59 says V0 active modules are I-1, I-2, I-3(L0 Session Memory), I-5, I-19 (5개). It explicitly notes I-4 미포함, citing READINESS_GUIDE §2.7. D2.0-01 I-Series table (SOT) does not define a V0 column — only V1/V2/V3. V0 module selection is PART2's own determination based on READINESS_GUIDE, so no SOT conflict per se, but the I-4 exclusion from 'I-1~I-5' range should be noted."
+      }
+    ],
+    "match_details": [
+      {"fact": "아키텍처: Front Mini LLM → ORANGE CORE → BLUE NODE → OTHER BRAINS → Main LLM", "part2_ref": "PART2 L27-34 (로드맵)", "sot_ref": "MASTER_SPEC §2.1, D2.0-01 §2", "match": true, "detail": "Architecture flow matches exactly"},
+      {"fact": "5-Phase Pipeline: intake→plan→execute→verify→deliver", "part2_ref": "PART2 L123 (config pipeline_stages LOCK)", "sot_ref": "MASTER_SPEC §4.1, D2.0-02 §0.4", "match": true, "detail": "Pipeline stages match. MASTER_SPEC maps Perception/Reasoning/Action/Memory/Reflection"},
+      {"fact": "상태 머신 S0~S8: S0_RECEIVED → S1_INTENT_PARSED → ... → S8_DONE", "part2_ref": "PART2 L896", "sot_ref": "MASTER_SPEC §4.5", "match": true, "detail": "9-state machine S0-S8 matches exactly"},
+      {"fact": "상태별 타임아웃: S1=5s, S2=30s, S3=120s, S4=10s, S5=15s", "part2_ref": "PART2 references CLAUDE.md §12", "sot_ref": "MASTER_SPEC §4.5", "match": true, "detail": "Timeout values match exactly"},
+      {"fact": "Self-check 임계값 LOCK: P0=70, P1=75, P2=80", "part2_ref": "PART2 L345-347 (config.v1.toml)", "sot_ref": "MASTER_SPEC §4.6", "match": true, "detail": "Self-check thresholds match exactly"},
+      {"fact": "soft_loop_max = 1 (자동 1회만)", "part2_ref": "PART2 L348", "sot_ref": "MASTER_SPEC §4.6 SelfCheckGate", "match": true, "detail": "Soft loop max 1 matches"},
+      {"fact": "승인 타임아웃 = 600초 (10분)", "part2_ref": "PART2 L351", "sot_ref": "D2.0-07 §4.3.2, MASTER_SPEC §4.6", "match": true, "detail": "Approval timeout 600s/10min matches"},
+      {"fact": "embedding model = bge-m3, dimension = 1024", "part2_ref": "PART2 L134-135", "sot_ref": "MASTER_SPEC §15 Tech Stack, D2.0-01", "match": true, "detail": "Embedding model and dimension match"},
+      {"fact": "vector_db backend = chroma (V1), V2=qdrant", "part2_ref": "PART2 L139", "sot_ref": "MASTER_SPEC §15, CLAUDE.md §11", "match": true, "detail": "Vector DB backend matches"},
+      {"fact": "cost daily_limit = 1300 KRW, monthly_limit = 40000 KRW", "part2_ref": "PART2 L163-164", "sot_ref": "MASTER_SPEC §9, CLAUDE.md §7.3", "match": true, "detail": "Cost limits match exactly"},
+      {"fact": "mcp.transport = streamable_http (LOCK)", "part2_ref": "PART2 L180", "sot_ref": "MASTER_SPEC §5.5 DEC-017 LOCK", "match": true, "detail": "MCP transport matches"},
+      {"fact": "semantic_cache similarity_threshold = 0.95 (LOCK)", "part2_ref": "PART2 L193", "sot_ref": "MASTER_SPEC §17, CLAUDE.md §7.4", "match": true, "detail": "Semantic cache threshold matches"},
+      {"fact": "I-1 상태 전이: I1_S0_RAW → I1_S1_PARSING → I1_S3_READY → I1_S4_EMITTED (V0: S2 skip)", "part2_ref": "PART2 L772, L830", "sot_ref": "MASTER_SPEC §4.1 I-1 상태 전이", "match": true, "detail": "MASTER_SPEC shows I1_S0→I1_S1→(I1_S2_AMBIGUOUS|I1_S3_READY)→I1_S4_EMITTED. PART2 skips S2 for V0 only, which is correctly noted as V1+ 전용"},
+      {"fact": "LangGraph as workflow framework (LOCK)", "part2_ref": "PART2 L801-810", "sot_ref": "D2.0-02 §0.6-A DEC-001 FREEZE", "match": true, "detail": "LangGraph as workflow framework matches. DEC-002 allows LangGraph specifically"},
+      {"fact": "LangChain import 금지 (패턴만 참조)", "part2_ref": "PART2 implied in CLAUDE.md reference", "sot_ref": "D2.0-02 §0.7-A DEC-002 FREEZE", "match": true, "detail": "LangChain import prohibition matches"},
+      {"fact": "Runnable 프로토콜: run/get_metadata/health_check", "part2_ref": "PART2 references D2.0-02", "sot_ref": "D2.0-02 §1.2-A", "match": true, "detail": "Runnable protocol interface matches"},
+      {"fact": "Docker 샌드박스: 네트워크 차단, 30초 제한", "part2_ref": "PART2 L2588", "sot_ref": "D2.0-02 §1.3-A", "match": true, "detail": "Docker sandbox 30s timeout, network blocked matches"}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 15,
+    "present": 12,
+    "missing": [
+      {
+        "id": "B1-M01",
+        "sot_fact": "MASTER_SPEC §4.4 Decision 스키마 policy_gate values: deny/restrict/allow",
+        "sot_ref": "MASTER_SPEC §4.4",
+        "part2_present": "partial",
+        "detail": "PART2 L779 uses 'block/require_approval/mask/allow' for PolicyGate (from CLAUDE.md), while MASTER_SPEC §4.4 Decision schema has 'deny/restrict/allow'. These are different enum sets — PART2 describes the Gate behavior, MASTER_SPEC the stored value. Semantic overlap but literal mismatch."
+      },
+      {
+        "id": "B1-M02",
+        "sot_fact": "D2.0-02 §1.4 Front Mini LLM 4가지 책임: 입력 메타데이터 추출, 1차 안전 검사, 초기 요약/전처리, 도메인 힌트 생성",
+        "sot_ref": "D2.0-02 §1.4",
+        "part2_present": "partial",
+        "detail": "PART2 mentions Front Mini LLM = I-1 내부 서브컴포넌트 (L7 in CLAUDE.md) but does not explicitly list all 4 responsibilities from D2.0-02 §1.4 in the implementation guide."
+      },
+      {
+        "id": "B1-M03",
+        "sot_fact": "D2.0-02 ErrorHandlingStandard: Result<T, VamosError> (예외 throw 금지), VamosError fields: failure_code, message, fallback_id, trace_id",
+        "sot_ref": "D2.0-02 §0.3",
+        "part2_present": false,
+        "detail": "PART2 does not explicitly mention the VamosError structure or the Result<T, VamosError> pattern mandated in D2.0-02 §0.3. The error handling standard is a critical implementation requirement missing from PART2."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "모듈 시스템 81개 (I25+E16+S8+A7+B6+C7+D6+EVX6)", "sot_ref": "MASTER_SPEC §2.3, CLAUDE.md §6", "part2_present": true, "detail": "PART2 L44 shows V3=81 합계 in version module count table"},
+      {"sot_fact": "정본 우선순위: RULE 1.3 > PLAN 3.0 > DESIGN LOCK > DESIGN 본문 > 스키마", "sot_ref": "MASTER_SPEC §3.1, D2.0-01 §0.3", "part2_present": true, "detail": "PART2 L6 explicitly states this hierarchy"},
+      {"sot_fact": "네이밍 규칙: event_type=lower.dot, failure_code=UPPER_SNAKE, fallback=FB_UPPER_SNAKE", "sot_ref": "MASTER_SPEC §3.2", "part2_present": true, "detail": "PART2 references these naming conventions in registry sections"},
+      {"sot_fact": "변경관리: 삭제 금지, 창작 금지, Major는 07 Approval", "sot_ref": "MASTER_SPEC §3.3, D2.0-01 §0.5", "part2_present": true, "detail": "PART2 follows these rules consistently"},
+      {"sot_fact": "I-2 실패 코드: OC_I2_RAG_NO_SOURCE → FB_RAG_RETRY_EXPAND", "sot_ref": "MASTER_SPEC §4.1 I-2", "part2_present": true, "detail": "PART2 mentions I-2 stub returning empty EvidencePack for V0, full RAG in V1"},
+      {"sot_fact": "I-3 Memory Orchestration: 4계층(L0~L3) 결정, MemoryCommitRequest", "sot_ref": "MASTER_SPEC §4.1 I-3", "part2_present": true, "detail": "PART2 L946 implements L0 Session Memory as V0 minimum"},
+      {"sot_fact": "I-4 Output Structuring: StructuredOutput 4필드", "sot_ref": "MASTER_SPEC §4.1 I-4", "part2_present": true, "detail": "PART2 L437 lists StructuredOutput with 4 fields from D2.0-02 §7.4"},
+      {"sot_fact": "EvidencePack 6필드: evidence_pack_id, trace_id, timestamp, items, coverage, citations_ready", "sot_ref": "MASTER_SPEC §4.3", "part2_present": true, "detail": "PART2 L432 references EvidencePack with 6 fields from D2.0-02 §7.2"},
+      {"sot_fact": "ResponseEnvelope 5필드 LOCK: answer, evidence, self_check, decision_ref, audit", "sot_ref": "MASTER_SPEC §4.7", "part2_present": true, "detail": "PART2 L436 references ResponseEnvelope 5 fields LOCK from CLAUDE.md §12"},
+      {"sot_fact": "Performance benchmarks: 단순응답 ≤2s, 복합응답 ≤10s, Self-check ≤1s", "sot_ref": "MASTER_SPEC §4.8", "part2_present": false, "detail": "PART2 does not explicitly include performance benchmark targets from MASTER_SPEC §4.8"},
+      {"sot_fact": "P0/P1/P2 도메인 분류 및 BLUE NODE 제약 LOCK", "sot_ref": "MASTER_SPEC §5.1-5.2", "part2_present": true, "detail": "PART2 references P0/P1/P2 throughout (e.g., L781 P2→hold, L860 priority level check)"},
+      {"sot_fact": "MCP 재시도 최대 2회 (D2.0-03)", "sot_ref": "MASTER_SPEC §5.5", "part2_present": "partial", "detail": "PART2 L183 config sets mcp.max_retries=3, but MASTER_SPEC §5.5 says max 2 retries. PART2 cites PHASE_B4 as source. Discrepancy between B4 (3) and D2.0-03 (2)"}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "Decision 스키마 필드 수 불일치: PART2 says 18필드(D2.1-D2 §4.1), MASTER_SPEC says 16필드. PART2 notes H-7: 16→18 수정, meaning this was an intentional correction based on D2.1-D2 schema spec. D2.1-D2 is higher authority for schema details.",
+      "evidence": "PART2 L434: 'DecisionSchema | 18 (FREEZE)' vs MASTER_SPEC §4.4: 'Decision 스키마 (16필드, FREEZE)'"
+    },
+    {
+      "id": "F-02",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "MCP max_retries: PART2 config sets 3 (PHASE_B4), but MASTER_SPEC §5.5 says max 2 retries (from D2.0-03). Config value and design spec differ.",
+      "evidence": "PART2 L183: 'max_retries = 3' vs MASTER_SPEC §5.5: '재시도: 일시적 실패 최대 2회'"
+    },
+    {
+      "id": "F-03",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "VamosError 구조 (Result<T, VamosError>) 및 ErrorHandlingStandard가 PART2 구현 가이드에 명시적으로 포함되지 않음. D2.0-02 §0.3에서 정의된 핵심 에러 처리 패턴.",
+      "evidence": "D2.0-02 §0.3 defines VamosError with failure_code, message, fallback_id, trace_id — PART2 has no explicit mention"
+    },
+    {
+      "id": "F-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "성능 벤치마크 목표가 PART2에 누락됨. MASTER_SPEC §4.8에서 정의된 단순응답 ≤2s, 복합응답 ≤10s, Self-check ≤1s 등이 구현 가이드에 반영 필요.",
+      "evidence": "MASTER_SPEC §4.8 defines 5 performance benchmarks not mentioned in PART2"
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "82.9%",
+    "findings_count": 4
+  }
+}

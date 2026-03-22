@@ -1,0 +1,17 @@
+{
+  "fix_id": "FIX-015",
+  "fg": "FG-L01",
+  "tier": 2,
+  "order": 15,
+  "severity": "HIGH",
+  "description": "변경이력 v17.0.0 항목을 올바른 시간순 위치로 이동 (v24.0.0 뒤→v16.0.0 뒤)",
+  "changes": [
+    {
+      "line": 4665,
+      "section": "변경이력",
+      "action": "v17.0.0 행을 v16.0.0 뒤(v18.0.0 앞)로 이동"
+    }
+  ],
+  "ripple_expected": [],
+  "applied_at": "2026-03-13"
+}

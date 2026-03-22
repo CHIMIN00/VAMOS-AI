@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "version": "v13-enhanced",
+    "session": 7,
+    "created": "2026-03-21",
+    "pipeline": "v13 Enhanced Pipeline (52-skill)",
+    "total_corrections": 14,
+    "affected_files": [
+      "PHASE_B4_CONFIG_SPEC.md",
+      "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+      "PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+      "VAMOS_MASTER_SPECIFICATION.md",
+      "CLAUDE.md",
+      "VAMOS_SDAR_DESIGN_SPECIFICATION.md"
+    ],
+    "severity_breakdown": {
+      "CRITICAL_fixes": 2,
+      "MAJOR_fixes": 4,
+      "MINOR_fixes": 8
+    },
+    "integrity_hashes": {
+      "PHASE_B4_CONFIG_SPEC.md": {
+        "before": "461879abb9062bf82a8085ff5f975e47e10bc00056cac1c00c48bd9ac5b12fad",
+        "after": "7b05dbacfe3b14fe68884365a6154a798b51bf5e83fa0c9124704e920337e808"
+      },
+      "D2.0-04_INFRA_CORE.md": {
+        "before": "e35a7ad77ff7fa355dc427230d0110cefd5e42dfff75bc19bf062db422df068f",
+        "after": "2460abe456b879f4bd3a5b5ce2c230321a72155c6a739ec07011d14cb87d1c75"
+      },
+      "PLAN-3.0.md": {
+        "before": "f4d831aaf8112eb0ec8023828ec5bbb513ac4c6d949e0d2509b436a5ac70d96d",
+        "after": "3014d30b89a85fc509eb37a7d7c7e7dbddbbea522a6febd630b2e91fdfd8c68c"
+      },
+      "VAMOS_MASTER_SPECIFICATION.md": {
+        "before": "6aca4a2d47823d3ec20b5fc2537f8b9ea75274270ba3d522f3577f39e437033d",
+        "after": "73bdf47bbd4cb65d96e84fc84504cbfaffaf53484890cf4b30058d8ac53ba2df"
+      },
+      "CLAUDE.md": {
+        "before": "414215c23f960732414c26190d8400fac1c029de8aeb7d2e12d2025eceb8e47d",
+        "after": "3256cf110a60c6019f6bb05baee4ffeb0ac70660dd9275e15b90789bce7416e7"
+      },
+      "VAMOS_SDAR_DESIGN_SPECIFICATION.md": {
+        "before": "b5f4232b849f10ef439ba85da846ef1f665213c216b5f2ee1e08b1f5d672a5ec",
+        "after": "e5868ffca253a5009d09fa5bf5c8bd08bd2c40e1a3d004dd0889544a45fe6877"
+      }
+    }
+  },
+  "deltas": [
+    {
+      "delta_id": "DELTA-E001a",
+      "fix_id": "FIX-E001",
+      "file": "PHASE_B4_CONFIG_SPEC.md",
+      "line": 359,
+      "before": "| `max_retries` | `integer` | `3` | `3` | `3` |",
+      "after": "| `max_retries` | `integer` | `2` | `2` | `3` |",
+      "affected_keys": ["MCP_MAX_RETRIES"]
+    },
+    {
+      "delta_id": "DELTA-E001b",
+      "fix_id": "FIX-E001",
+      "file": "PHASE_B4_CONFIG_SPEC.md",
+      "line": 638,
+      "before": "max_retries = 3",
+      "after": "max_retries = 2    # D2.0-03/MASTER_SPEC 정본 (V1/V2=2, V3=3)",
+      "affected_keys": ["MCP_MAX_RETRIES"]
+    },
+    {
+      "delta_id": "DELTA-E001c",
+      "fix_id": "FIX-E001",
+      "file": "PHASE_B4_CONFIG_SPEC.md",
+      "line": 754,
+      "before": "max_retries = 3",
+      "after": "max_retries = 2    # D2.0-03/MASTER_SPEC 정본",
+      "affected_keys": ["MCP_MAX_RETRIES"]
+    },
+    {
+      "delta_id": "DELTA-E001d",
+      "fix_id": "FIX-E001",
+      "file": "PHASE_B4_CONFIG_SPEC.md",
+      "line": 1117,
+      "before": "max_retries: int = Field(default=3, ge=0, le=10)",
+      "after": "max_retries: int = Field(default=2, ge=0, le=10)  # D2.0-03/MASTER_SPEC 정본",
+      "affected_keys": ["MCP_MAX_RETRIES"]
+    },
+    {
+      "delta_id": "DELTA-E002",
+      "fix_id": "FIX-E002",
+      "file": "D2.0-04_INFRA_CORE.md",
+      "line": 1088,
+      "before": "Token Rate Limit: V1 일일 100K 토큰 (약 3,000원)",
+      "after": "Token Rate Limit: V1 일일 100K 토큰 (약 ₩3,000 상당, 실제는 비용 상한 ₩1,300/일(BASE-1.3 §4 LOCK)에 의해 ~43K에서 차단됨. 100K는 API 처리량 보호용 상한)",
+      "affected_keys": ["V1_TOKEN_LIMIT_VS_COST_CEILING"]
+    },
+    {
+      "delta_id": "DELTA-E003",
+      "fix_id": "FIX-E003",
+      "file": "PLAN-3.0.md",
+      "line": 248,
+      "before": "QoD < 0.70: 출력 보류, 사용자에게 재질의 요청",
+      "after": "QoD < 0.70: 출력 보류 + QoD < 0.40: L2 벡터 메모리 삽입 금지 추가",
+      "affected_keys": ["QOD_THRESHOLD_L2_VECTOR"]
+    },
+    {
+      "delta_id": "DELTA-E004",
+      "fix_id": "FIX-E004",
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "line": 170,
+      "before": "### I-Series (I-1~I-25) 내부 기능",
+      "after": "### I-Series (I-1~I-25) 내부 기능 + B/C/D/EVX 확장 시리즈 참조 추가",
+      "affected_keys": ["BCDEVX_SERIES_SOT_GAP"]
+    },
+    {
+      "delta_id": "DELTA-E005",
+      "fix_id": "FIX-E005",
+      "file": "CLAUDE.md",
+      "line": 423,
+      "before": "CI/CD 설정 완료 (GitHub Actions 8-stage)",
+      "after": "CI/CD 설정 완료 (GitHub Actions 8-stage: lint→test→build→security-scan→deploy-staging→e2e→deploy-prod→monitor, B3 참조)",
+      "affected_keys": ["STAGE_GATE_CI_COUNT"]
+    },
+    {
+      "delta_id": "DELTA-E006",
+      "fix_id": "FIX-E006",
+      "file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+      "line": 619,
+      "before": "max_retries: int = 1  # 액션 자체의 최대 재시도 횟수",
+      "after": "max_retries: int = 1  # 액션 자체 재시도 (MCP 레벨 max_retries=2와 별개) 명시",
+      "affected_keys": ["SDAR_MAX_RETRIES_CONTEXT"]
+    },
+    {
+      "delta_id": "DELTA-E007",
+      "fix_id": "FIX-E007",
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "line": 1450,
+      "before": "## V0 — 최소 구현 (\"돌아가는 코어\")",
+      "after": "## V0 — ... cf. PLAN-3.0 §3.1 교차 참조 추가",
+      "affected_keys": ["VERSION_SCOPE_V0"]
+    },
+    {
+      "delta_id": "DELTA-E008a",
+      "fix_id": "FIX-E008a",
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "line": 1458,
+      "before": "## V1 — 초기 제품화 (\"운영 가능한 설계\")",
+      "after": "## V1 — ... cf. PLAN-3.0 §1 교차 참조 추가",
+      "affected_keys": ["VERSION_SCOPE_V1"]
+    },
+    {
+      "delta_id": "DELTA-E008b",
+      "fix_id": "FIX-E008b",
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "line": 1467,
+      "before": "## V2 — 확장/팀용 서버",
+      "after": "## V2 — ... cf. PLAN-3.0 §1 교차 참조 추가",
+      "affected_keys": ["VERSION_SCOPE_V2"]
+    },
+    {
+      "delta_id": "DELTA-E008c",
+      "fix_id": "FIX-E008c",
+      "file": "VAMOS_MASTER_SPECIFICATION.md",
+      "line": 1474,
+      "before": "## V3 — 엔터프라이즈/고도화",
+      "after": "## V3 — ... cf. PLAN-3.0 §1 교차 참조 추가",
+      "affected_keys": ["VERSION_SCOPE_V3"]
+    },
+    {
+      "delta_id": "DELTA-E011",
+      "fix_id": "FIX-E011",
+      "file": "PLAN-3.0.md",
+      "line": 1323,
+      "before": "3.1 V0: 기초 구조 (Foundation Stage – 전체 골격 준비 단계)",
+      "after": "3.1 V0: ... cf. MASTER_SPEC §16 교차 참조 추가",
+      "affected_keys": ["VERSION_SCOPE_CROSS_REFERENCE"]
+    }
+  ]
+}

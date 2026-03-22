@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "task": "0-I-D",
+    "source": "VAMOS_구현가이드_PART2_구현단계.md",
+    "created": "2026-03-15",
+    "total_prompts": 18,
+    "by_version": {
+      "V0": 6,
+      "V1": 6,
+      "V2": 3,
+      "V3": 3
+    },
+    "expected_total": 18,
+    "actual_total": 18,
+    "discrepancy": "none",
+    "prompt_format": "````text ... ```` blocks under '#### AI 프롬프트' headings",
+    "notes": [
+      "All prompts are in ````text code blocks following '#### AI 프롬프트' headings",
+      "V0 prompts: STEP-1 through STEP-6 (scaffolding through CI)",
+      "V1 prompts: Phase 1 through Phase 6 (ORANGE CORE through AI Investing)",
+      "V2 prompts: Phase 1 through Phase 3 (infra migration through security)",
+      "V3 prompts: Phase 1 through Phase 3 (K8s scale-up through enterprise)",
+      "All prompts reference §1.3 R1~R11 common rules"
+    ]
+  },
+  "prompts": [
+    {
+      "prompt_id": "P-V0-01",
+      "version_phase": "V0",
+      "line_start": 342,
+      "line_end": 551,
+      "section_heading_line": 193,
+      "title": "V0-STEP-1: 프로젝트 스캐폴딩",
+      "summary": "Tauri 2.0 + React 18 + Python 3.11 monorepo 초기화, PHASE_B2 디렉토리 구조, config.v1.toml 생성",
+      "covered_tasks": [
+        "monorepo 디렉토리 구조 생성 (PHASE_B2)",
+        "Python/Rust/Node 의존성 초기화",
+        "config.v1.toml 생성 (PHASE_B4 LOCK 값)",
+        "기본 파일 생성 (App.tsx, main.rs 등)",
+        "Schema Seed 파일 생성 (Method B)"
+      ]
+    },
+    {
+      "prompt_id": "P-V0-02",
+      "version_phase": "V0",
+      "line_start": 649,
+      "line_end": 809,
+      "section_heading_line": 570,
+      "title": "V0-STEP-2: 스키마 정의",
+      "summary": "25개 Pydantic v2 핵심 모델, 5개 레지스트리, 공유 타입 생성 스크립트, schema_registry.toml",
+      "covered_tasks": [
+        "Pydantic v2 핵심 모델 25개 정의 (contracts.py)",
+        "레지스트리 5개 정의 (registries.py)",
+        "공유 타입 생성 스크립트 (generate_types.py)",
+        "FREEZE/LOCK 스키마 인라인 참조 (Method C)",
+        "schema_registry.toml 생성"
+      ]
+    },
+    {
+      "prompt_id": "P-V0-03",
+      "version_phase": "V0",
+      "line_start": 881,
+      "line_end": 975,
+      "section_heading_line": 829,
+      "title": "V0-STEP-3: IPC 통신 레이어",
+      "summary": "React-Rust-Python 3계층 JSON-RPC 통신 구조 구현, 13개 메서드 스텁",
+      "covered_tasks": [
+        "Python JSON-RPC 서버 (stdin/stdout, 13개 메서드 스텁)",
+        "Rust Python 프로세스 관리 (python_manager.rs)",
+        "Rust Tauri IPC 명령 (commands.rs)",
+        "React IPC 클라이언트 (useVamosIPC hook)"
+      ]
+    },
+    {
+      "prompt_id": "P-V0-04",
+      "version_phase": "V0",
+      "line_start": 1067,
+      "line_end": 1181,
+      "section_heading_line": 994,
+      "title": "V0-STEP-4: ORANGE CORE 최소 파이프라인",
+      "summary": "I-1/I-2/I-5 핵심 모듈 + I-8/I-9/I-19/I-20 stub, LangGraph 5-Phase 최소 파이프라인",
+      "covered_tasks": [
+        "I-1 Intent Detector 최소 구현",
+        "I-2 Context Builder 스텁 구현",
+        "I-5 Decision Engine 4-Gate 최소 구현",
+        "I-8 Policy/I-9 Cost/I-19 Approval/I-20 Failure stub",
+        "LangGraph StateGraph 5-Phase 최소 파이프라인"
+      ]
+    },
+    {
+      "prompt_id": "P-V0-05",
+      "version_phase": "V0",
+      "line_start": 1229,
+      "line_end": 1353,
+      "section_heading_line": 1205,
+      "title": "V0-STEP-5: 기본 저장소 + 로깅",
+      "summary": "L0 Session Memory (SQLite), JSONL 구조화 로깅, config.v1.toml 로더 구현",
+      "covered_tasks": [
+        "L0 Session Memory (SQLite, aiosqlite)",
+        "JSONL 구조화 로깅 (structlog)",
+        "config.v1.toml 로더 (tomllib)",
+        "Chroma Vector DB 초기화"
+      ]
+    },
+    {
+      "prompt_id": "P-V0-06",
+      "version_phase": "V0",
+      "line_start": 1400,
+      "line_end": 1549,
+      "section_heading_line": 1374,
+      "title": "V0-STEP-6: CI 스켈레톤 + 테스트",
+      "summary": "GitHub Actions CI 워크플로우, V0 범위 기본 테스트(pytest), E2E 스모크 테스트",
+      "covered_tasks": [
+        "GitHub Actions 워크플로우 (quality-python.yml, quality-rust.yml 등)",
+        "Python 단위 테스트 (pytest, 10-15개)",
+        "Rust 테스트 (cargo test)",
+        "E2E 스모크 테스트 (전체 파이프라인 1회 실행)"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-01",
+      "version_phase": "V1",
+      "line_start": 1616,
+      "line_end": 1777,
+      "section_heading_line": 1600,
+      "title": "V1-Phase 1: ORANGE CORE 완성",
+      "summary": "I-Series 17개 모듈 구현, 9-State 상태 머신, 5-Gate 평가, Self-check 루프",
+      "covered_tasks": [
+        "I-1~I-5 핵심 모듈 완성 (Week 1-2)",
+        "I-6~I-10 인프라 모듈 (Week 2-3)",
+        "I-19/I-20 안전 모듈 (Week 3-4)",
+        "9-State 상태 머신 (S0~S8) 전이",
+        "5-Gate 평가 (Policy→Approval→Cost→Evidence→SelfCheck)"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-02",
+      "version_phase": "V1",
+      "line_start": 1896,
+      "line_end": 1977,
+      "section_heading_line": 1875,
+      "title": "V1-Phase 2: Storage/Memory/RAG",
+      "summary": "SQLite L0/L1, Chroma VectorDB, JSON GraphRAG, Semantic Cache, PII 마스킹, B-3 Decay",
+      "covered_tasks": [
+        "L0 Session Memory + L1 Project Memory (SQLite)",
+        "Chroma Vector DB (BGE-M3, Hybrid Search)",
+        "JSON GraphRAG (NetworkX)",
+        "Semantic Cache + PII 마스킹",
+        "B-3 Memory Decay 구현"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-03",
+      "version_phase": "V1",
+      "line_start": 2086,
+      "line_end": 2170,
+      "section_heading_line": 2070,
+      "title": "V1-Phase 3: Workflow/Agent",
+      "summary": "LangGraph StateGraph 5-Phase, Gate 통합, Circuit Breaker, MultiBrain, Agent Teams V1",
+      "covered_tasks": [
+        "LangGraph StateGraph 5-Phase 완성",
+        "Gate 통합 노드 + Soft/Hard Loop",
+        "Circuit Breaker (3-State)",
+        "A-1 MultiBrain Adapter",
+        "Agent Teams V1 (Lead+2 Sub)",
+        "E-Series Blue Node (E-1~E-6)",
+        "C/D-Series 모듈"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-04",
+      "version_phase": "V1",
+      "line_start": 2283,
+      "line_end": 2361,
+      "section_heading_line": 2269,
+      "title": "V1-Phase 4: UI/UX",
+      "summary": "Tauri+React 3-Column Layout, Builder/Hologram View, 44개 컴포넌트, Hook/Store, i18n",
+      "covered_tasks": [
+        "3-Column Fluid Layout (Builder/Hologram View)",
+        "7개 페이지 구현",
+        "~44개 React 컴포넌트",
+        "8개 Custom Hook + 7개 Zustand Store",
+        "i18n + 디자인 시스템 + CLI Interface"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-05",
+      "version_phase": "V1",
+      "line_start": 2423,
+      "line_end": 2494,
+      "section_heading_line": 2408,
+      "title": "V1-Phase 5: Integration + Test",
+      "summary": "E2E 파이프라인 테스트, IPC 통합, 5-Gate 전경로 검증, ~85개 테스트, CI/CD, 커버리지 80%+",
+      "covered_tasks": [
+        "E2E 파이프라인 테스트 (S0→S8)",
+        "IPC 브릿지 통합 테스트",
+        "5-Gate 전경로 검증",
+        "Python/Rust/React 단위 테스트 (~85개)",
+        "CI/CD 파이프라인 완성 (14개 워크플로우)",
+        "커버리지 80%+ 달성 + 보안 감사"
+      ]
+    },
+    {
+      "prompt_id": "P-V1-06",
+      "version_phase": "V1",
+      "line_start": 2551,
+      "line_end": 2622,
+      "section_heading_line": 2536,
+      "title": "V1-Phase 6: AI Investing MVP + MCP",
+      "summary": "Paper Trading MVP, RSI_BB 전략, 5-Agent Pipeline, MCP Bridge/Server/Client 7개",
+      "covered_tasks": [
+        "Paper Trading MVP (시뮬레이션 트레이딩)",
+        "RSI_BB 전략 구현",
+        "5-Agent Pipeline (Perplexity→Gemini→ChatGPT→Claude→Copilot)",
+        "법적 컴플라이언스 (Wash Sale, PDT, Uptick Rule)",
+        "MCP Bridge/Server/Client 7개",
+        "S-1 Self-check Engine",
+        "E-15 Cloud Collector V1"
+      ]
+    },
+    {
+      "prompt_id": "P-V2-01",
+      "version_phase": "V2",
+      "line_start": 2751,
+      "line_end": 2831,
+      "section_heading_line": 2686,
+      "title": "V2-Phase 1: 인프라 마이그레이션",
+      "summary": "V1→V2 인프라 전환: SQLite→PostgreSQL, Chroma→Qdrant, Docker Compose 배포",
+      "covered_tasks": [
+        "SQLite → PostgreSQL 마이그레이션 (Alembic)",
+        "JSONL → PostgreSQL 마이그레이션",
+        "Chroma → Qdrant 마이그레이션 (4-Phase)",
+        "JSON GraphRAG → Neo4j 마이그레이션",
+        "Docker Compose 배포 구성",
+        "config.v2.toml 생성"
+      ]
+    },
+    {
+      "prompt_id": "P-V2-02",
+      "version_phase": "V2",
+      "line_start": 3005,
+      "line_end": 3247,
+      "section_heading_line": 2852,
+      "title": "V2-Phase 2: COND 모듈 활성화",
+      "summary": "COND 모듈 116개 구현 (원본 10개 상세 + v10 확장 106개 그룹 단위), Module Catalog 표준",
+      "covered_tasks": [
+        "I-7 Project/Session Manager",
+        "I-12 Workflow Builder",
+        "I-22 Task/Project Manager",
+        "I-23 Progress/Report Tracker",
+        "E-7~E-10 외부 통합 모듈",
+        "A-3 Style Adaptation",
+        "SDAR AR-L2~L3 활성화",
+        "Cloud Library V2 (E-15 확장)",
+        "v10 확장 COND 모듈 106개 (7 카테고리 그룹)"
+      ]
+    },
+    {
+      "prompt_id": "P-V2-03",
+      "version_phase": "V2",
+      "line_start": 3328,
+      "line_end": 3425,
+      "section_heading_line": 3279,
+      "title": "V2-Phase 3: Agent Teams V2 + 보안 강화",
+      "summary": "Agent Teams V2 (Redis MessageBus, 10 에이전트, 6패턴), 3-Layer Guardrails, HMAC, GDPR",
+      "covered_tasks": [
+        "Redis MessageBus (Pub/Sub + Streams)",
+        "6가지 협업 패턴 (Sequential/Parallel/Debate/Supervisor/Handoff/Hybrid)",
+        "Lead + 9 Sub-Agent 확장 (max 10)",
+        "3-Layer Guardrails",
+        "HMAC-SHA256 메시지 인증",
+        "GDPR 4기능 (열람/이동/제한/삭제)"
+      ]
+    },
+    {
+      "prompt_id": "P-V3-01",
+      "version_phase": "V3",
+      "line_start": 3509,
+      "line_end": 3618,
+      "section_heading_line": 3471,
+      "title": "V3-Phase 1: 인프라 스케일업",
+      "summary": "K8s Helm 배포, vLLM 셀프호스팅, 관리형 DB 전환, Blue-Green 배포, Observability",
+      "covered_tasks": [
+        "Kubernetes Helm 차트 (Blue-Green 배포)",
+        "vLLM 셀프호스팅 (GPU nodeSelector)",
+        "관리형 DB 전환 (RDS/Cloud SQL)",
+        "config.v3.toml 생성",
+        "Observability 스택 (Prometheus/Grafana/Loki)",
+        "HPA (CPU 70%, min 2, max 10)"
+      ]
+    },
+    {
+      "prompt_id": "P-V3-02",
+      "version_phase": "V3",
+      "line_start": 3700,
+      "line_end": 3947,
+      "section_heading_line": 3637,
+      "title": "V3-Phase 2: EXP 모듈 전체 활성화",
+      "summary": "EXP 모듈 22개 항목 (Core 16그룹 + v23 6건), Self-evo Engine, Knowledge Graph, 전체 81개 모듈",
+      "covered_tasks": [
+        "I-18 Self-evo Engine",
+        "I-21 Source Evolution Engine",
+        "I-24 Knowledge Graph Engine (Neo4j)",
+        "I-25 Intelligence Dashboard",
+        "A-4~A-7 고급 AI 모듈",
+        "B-4~B-6 학습 모듈",
+        "S-2~S-8 시스템 모듈",
+        "D-3~D-6 생성 모듈",
+        "EVX 1~6 실험 모듈",
+        "v23 핵심 기술 6건"
+      ]
+    },
+    {
+      "prompt_id": "P-V3-03",
+      "version_phase": "V3",
+      "line_start": 4031,
+      "line_end": 4142,
+      "section_heading_line": 3970,
+      "title": "V3-Phase 3: 고급 기능 + 최종 통합",
+      "summary": "Agent Marketplace, 50+ Agent Mesh, Self-evo Governance, SDAR AR-L4, 최종 벤치마크",
+      "covered_tasks": [
+        "Agent Marketplace (등록/검색/설치/평가)",
+        "50+ Agent Mesh (K8s HPA 연동)",
+        "Self-evo Governance (안전장치)",
+        "SDAR AR-L4 Full (Critical 자동 수리)",
+        "Cloud Library V3 (자율 수집)",
+        "A2A 프로토콜",
+        "멀티모달 고급 (이미지/음성/비디오)",
+        "최종 벤치마크 + Enterprise 완성"
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "prompt_id": "P-V0-01",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 210
+    },
+    {
+      "prompt_id": "P-V0-02",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 161
+    },
+    {
+      "prompt_id": "P-V0-03",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 95
+    },
+    {
+      "prompt_id": "P-V0-04",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 115
+    },
+    {
+      "prompt_id": "P-V0-05",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 125
+    },
+    {
+      "prompt_id": "P-V0-06",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 150
+    },
+    {
+      "prompt_id": "P-V1-01",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 162
+    },
+    {
+      "prompt_id": "P-V1-02",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 82
+    },
+    {
+      "prompt_id": "P-V1-03",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 85
+    },
+    {
+      "prompt_id": "P-V1-04",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 79
+    },
+    {
+      "prompt_id": "P-V1-05",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 72
+    },
+    {
+      "prompt_id": "P-V1-06",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 72
+    },
+    {
+      "prompt_id": "P-V2-01",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 81
+    },
+    {
+      "prompt_id": "P-V2-02",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 243
+    },
+    {
+      "prompt_id": "P-V2-03",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 98
+    },
+    {
+      "prompt_id": "P-V3-01",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 110
+    },
+    {
+      "prompt_id": "P-V3-02",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 248
+    },
+    {
+      "prompt_id": "P-V3-03",
+      "start_marker_valid": true,
+      "end_marker_valid": true,
+      "prompt_lines": 112
+    }
+  ]
+}

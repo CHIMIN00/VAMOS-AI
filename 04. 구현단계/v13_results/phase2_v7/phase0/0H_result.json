@@ -1,0 +1,48 @@
+{
+  "script": "0-H",
+  "name": "Header Count vs Row Count",
+  "errors": [
+    {
+      "file": "PART1",
+      "line": 432,
+      "heading": "B.1.2 소프트웨어 설치 (7건)",
+      "expected": 7,
+      "actual": 3,
+      "diff": -4
+    },
+    {
+      "file": "PART1",
+      "line": 730,
+      "heading": "C.4 LOCK 확정 사항 — 변경 불가 (핵심 57항목)",
+      "expected": 57,
+      "actual": 6,
+      "diff": -51
+    },
+    {
+      "file": "PART1",
+      "line": 1158,
+      "heading": "E.2.6 극고(極高) 위험 2건 — 해결 완료",
+      "expected": 2,
+      "actual": 6,
+      "diff": 4
+    },
+    {
+      "file": "PART2",
+      "line": 2489,
+      "heading": "6.2.1 Tauri IPC 커맨드 핸들러 (72개) <!-- SOURCE_CONFLICT: PHASE_B1 §5.1=47개 vs CLAUDE.md/B1 changelog=72개.",
+      "expected": 72,
+      "actual": 5,
+      "diff": -67
+    },
+    {
+      "file": "PART2",
+      "line": 2611,
+      "heading": "MCP 외부 서버 카탈로그 (M-22: V1=7개, V2+=3개, V3=1개, 합계 11개)",
+      "expected": 7,
+      "actual": 11,
+      "diff": 4
+    }
+  ],
+  "total_errors": 5,
+  "verdict": "WARN"
+}

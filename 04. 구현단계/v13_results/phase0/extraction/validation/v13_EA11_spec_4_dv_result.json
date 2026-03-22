@@ -1,0 +1,2185 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_EA11_spec_4.json",
+    "total_items_checked": 214,
+    "pass_count": -59,
+    "fail_count": 273,
+    "result": "WARN",
+    "validator": "deterministic_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_166",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_168",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_171",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_173",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_174",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_175",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: float",
+      "expected": "number|string|list|boolean",
+      "actual": "float"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_176",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_177",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_180",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: integer",
+      "expected": "number|string|list|boolean",
+      "actual": "integer"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_182",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_183",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_184",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_185",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_188",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_194",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_195",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_196",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_197",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: formula/LOCK",
+      "expected": "number|string|list|boolean",
+      "actual": "formula/LOCK"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_199",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_210",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_211",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_212",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_213",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: count+list",
+      "expected": "number|string|list|boolean",
+      "actual": "count+list"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_214",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_215",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_216",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_219",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_220",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_223",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_225",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_226",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_227",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-1",
+      "item_id": "EA-11_231",
+      "severity": "WARNING",
+      "message": "유효하지 않은 value_type: numeric",
+      "expected": "number|string|list|boolean",
+      "actual": "numeric"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-11_038",
+      "severity": "INFO",
+      "message": "source_text 키워드가 ±3줄이 아닌 ±10줄에서 발견 (행 번호 오차 가능)",
+      "expected": "line 275 ±3",
+      "actual": "found in ±10"
+    },
+    {
+      "rule": "DV-4",
+      "item_id": "EA-11_068",
+      "severity": "INFO",
+      "message": "source_text 키워드가 ±3줄이 아닌 ±10줄에서 발견 (행 번호 오차 가능)",
+      "expected": "line 93 ±3",
+      "actual": "found in ±10"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 64~64"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 79~79"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 83~83"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 88~89"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 92~92"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 97~97"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 130~130"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 159~159"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 161~161"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 186~186"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 198~198"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 201~201"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 204~205"
+    },
+    {
+      "rule": "DV-5",
+      "item_id": "EA-11",
+      "severity": "INFO",
+      "message": "번호 건너뜀: 221~222"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_077",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_078",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_080",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_082",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_084",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_085",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_086",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_087",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_090",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-6",
+      "item_id": "EA-11_091",
+      "severity": "WARNING",
+      "message": "value_type 'list' vs 실제 타입 'dict' 불일치",
+      "expected": "list",
+      "actual": "dict"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_001",
+      "severity": "WARNING",
+      "message": "비표준 키 'gate_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "gate_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_002",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_delegation_depth'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_delegation_depth"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_003",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_parallel_agents_v1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_parallel_agents_v1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_004",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_parallel_agents_v2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_parallel_agents_v2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_005",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_parallel_agents_v3'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_parallel_agents_v3"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_006",
+      "severity": "WARNING",
+      "message": "비표준 키 'delegation_timeout_p0'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "delegation_timeout_p0"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_007",
+      "severity": "WARNING",
+      "message": "비표준 키 'delegation_timeout_p1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "delegation_timeout_p1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_008",
+      "severity": "WARNING",
+      "message": "비표준 키 'delegation_timeout_p2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "delegation_timeout_p2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_009",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_budget_ratio'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_budget_ratio"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_010",
+      "severity": "WARNING",
+      "message": "비표준 키 'lead_agent_budget_ratio'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "lead_agent_budget_ratio"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_011",
+      "severity": "WARNING",
+      "message": "비표준 키 'match_score_skill_weight'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "match_score_skill_weight"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_012",
+      "severity": "WARNING",
+      "message": "비표준 키 'match_score_tool_weight'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "match_score_tool_weight"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_013",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_conversation_turns_p0'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_conversation_turns_p0"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_014",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_conversation_turns_p1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_conversation_turns_p1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_015",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_conversation_turns_p2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_conversation_turns_p2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_016",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_tee_iterations_p0'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_tee_iterations_p0"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_017",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_tee_iterations_p1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_tee_iterations_p1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_018",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_tee_iterations_p2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_tee_iterations_p2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_019",
+      "severity": "WARNING",
+      "message": "비표준 키 'v1_daily_cost_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v1_daily_cost_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_020",
+      "severity": "WARNING",
+      "message": "비표준 키 'v1_monthly_cost_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v1_monthly_cost_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_021",
+      "severity": "WARNING",
+      "message": "비표준 키 'v2_daily_cost_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v2_daily_cost_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_022",
+      "severity": "WARNING",
+      "message": "비표준 키 'v3_daily_cost_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v3_daily_cost_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_023",
+      "severity": "WARNING",
+      "message": "비표준 키 'opus_input_price'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "opus_input_price"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_024",
+      "severity": "WARNING",
+      "message": "비표준 키 'opus_output_price'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "opus_output_price"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_025",
+      "severity": "WARNING",
+      "message": "비표준 키 'min_win_rate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "min_win_rate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_026",
+      "severity": "WARNING",
+      "message": "비표준 키 'min_sharpe_ratio'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "min_sharpe_ratio"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_027",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_decay_rate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_decay_rate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_028",
+      "severity": "WARNING",
+      "message": "비표준 키 'min_trades'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "min_trades"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_029",
+      "severity": "WARNING",
+      "message": "비표준 키 'train_test_split'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "train_test_split"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_030",
+      "severity": "WARNING",
+      "message": "비표준 키 'daily_loss_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "daily_loss_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_031",
+      "severity": "WARNING",
+      "message": "비표준 키 'vix_threshold'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "vix_threshold"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_032",
+      "severity": "WARNING",
+      "message": "비표준 키 'position_stop_loss'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "position_stop_loss"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_033",
+      "severity": "WARNING",
+      "message": "비표준 키 'min_cash_ratio'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "min_cash_ratio"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_034",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_position_size'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_position_size"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_035",
+      "severity": "WARNING",
+      "message": "비표준 키 'rsi_bb_parameter_combinations'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rsi_bb_parameter_combinations"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_036",
+      "severity": "WARNING",
+      "message": "비표준 키 'annualization_factor_1d'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "annualization_factor_1d"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_037",
+      "severity": "WARNING",
+      "message": "비표준 키 'ai_investing_market_cagr'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "ai_investing_market_cagr"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_038",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_eval_trust_max'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_eval_trust_max"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_039",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_eval_relevance_max'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_eval_relevance_max"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_040",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_eval_quality_max'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_eval_quality_max"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_041",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_eval_access_max'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_eval_access_max"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_042",
+      "severity": "WARNING",
+      "message": "비표준 키 'daily_version_increase_limit'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "daily_version_increase_limit"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_043",
+      "severity": "WARNING",
+      "message": "비표준 키 'cb4_implementation_feasibility'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cb4_implementation_feasibility"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_044",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_auto_repairs_per_hour'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_auto_repairs_per_hour"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_045",
+      "severity": "WARNING",
+      "message": "비표준 키 'observation_period_s'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "observation_period_s"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_046",
+      "severity": "WARNING",
+      "message": "비표준 키 'snapshot_retention_hours'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "snapshot_retention_hours"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_047",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_concurrent_sdar_instances'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_concurrent_sdar_instances"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_048",
+      "severity": "WARNING",
+      "message": "비표준 키 'max_concurrent_repairs'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "max_concurrent_repairs"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_049",
+      "severity": "WARNING",
+      "message": "비표준 키 'approval_timeout_minutes'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "approval_timeout_minutes"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_050",
+      "severity": "WARNING",
+      "message": "비표준 키 'cooldown_between_repairs'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cooldown_between_repairs"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_051",
+      "severity": "WARNING",
+      "message": "비표준 키 'health_check_interval'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "health_check_interval"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_052",
+      "severity": "WARNING",
+      "message": "비표준 키 'disk_warning_threshold'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "disk_warning_threshold"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_053",
+      "severity": "WARNING",
+      "message": "비표준 키 'sub_agent_types'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sub_agent_types"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_054",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_type_enum_values'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_type_enum_values"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_055",
+      "severity": "WARNING",
+      "message": "비표준 키 'message_types'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "message_types"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_056",
+      "severity": "WARNING",
+      "message": "비표준 키 'collaboration_patterns'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "collaboration_patterns"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_057",
+      "severity": "WARNING",
+      "message": "비표준 키 'lock_decisions_agent_teams'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "lock_decisions_agent_teams"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_058",
+      "severity": "WARNING",
+      "message": "비표준 키 'data_sources_total'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "data_sources_total"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_059",
+      "severity": "WARNING",
+      "message": "비표준 키 'technical_analysis_strategies'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "technical_analysis_strategies"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_060",
+      "severity": "WARNING",
+      "message": "비표준 키 'quant_factor_option_ml_strategies'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "quant_factor_option_ml_strategies"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_061",
+      "severity": "WARNING",
+      "message": "비표준 키 'total_strategies_excluding_rsiBB'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "total_strategies_excluding_rsiBB"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_062",
+      "severity": "WARNING",
+      "message": "비표준 키 'locked_tech_stack_items'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "locked_tech_stack_items"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_063",
+      "severity": "WARNING",
+      "message": "비표준 키 'reference_platforms'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "reference_platforms"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_065",
+      "severity": "WARNING",
+      "message": "비표준 키 'discovery_pipeline_stages'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "discovery_pipeline_stages"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_066",
+      "severity": "WARNING",
+      "message": "비표준 키 'e15_functions'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "e15_functions"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_067",
+      "severity": "WARNING",
+      "message": "비표준 키 's5_functions'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "s5_functions"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_068",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_pipeline_layers'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_pipeline_layers"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_069",
+      "severity": "WARNING",
+      "message": "비표준 키 'error_categories'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "error_categories"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_070",
+      "severity": "WARNING",
+      "message": "비표준 키 'repair_actions_total'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "repair_actions_total"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_071",
+      "severity": "WARNING",
+      "message": "비표준 키 'never_auto_actions'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "never_auto_actions"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_072",
+      "severity": "WARNING",
+      "message": "비표준 키 'immutable_zones'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "immutable_zones"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_073",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_state_machine_states'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_state_machine_states"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_074",
+      "severity": "WARNING",
+      "message": "비표준 키 'never_auto_targets_total'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "never_auto_targets_total"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_075",
+      "severity": "WARNING",
+      "message": "비표준 키 'defects_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "defects_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_076",
+      "severity": "WARNING",
+      "message": "비표준 키 'contracts_py_issues'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "contracts_py_issues"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_077",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_priority_classification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_priority_classification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_078",
+      "severity": "WARNING",
+      "message": "비표준 키 'model_tier_classification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "model_tier_classification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_080",
+      "severity": "WARNING",
+      "message": "비표준 키 'data_source_priority'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "data_source_priority"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_081",
+      "severity": "WARNING",
+      "message": "비표준 키 'event_type_literals'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "event_type_literals"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_082",
+      "severity": "WARNING",
+      "message": "비표준 키 'approval_gate_thresholds'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "approval_gate_thresholds"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_084",
+      "severity": "WARNING",
+      "message": "비표준 키 'gate_pass_thresholds'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "gate_pass_thresholds"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_085",
+      "severity": "WARNING",
+      "message": "비표준 키 'ar_level_classification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "ar_level_classification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_086",
+      "severity": "WARNING",
+      "message": "비표준 키 'category_ar_level_matrix'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "category_ar_level_matrix"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_087",
+      "severity": "WARNING",
+      "message": "비표준 키 'autonomy_to_ar_level_mapping'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "autonomy_to_ar_level_mapping"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_090",
+      "severity": "WARNING",
+      "message": "비표준 키 'e15_s5_layer_split'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "e15_s5_layer_split"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_091",
+      "severity": "WARNING",
+      "message": "비표준 키 'repair_action_risk_levels'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "repair_action_risk_levels"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_093",
+      "severity": "WARNING",
+      "message": "비표준 키 'document_id_agent_teams'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "document_id_agent_teams"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_094",
+      "severity": "WARNING",
+      "message": "비표준 키 'lead_agent_module'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "lead_agent_module"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_095",
+      "severity": "WARNING",
+      "message": "비표준 키 'sub_agent_module'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sub_agent_module"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_096",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_agent_node_id'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_agent_node_id"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_098",
+      "severity": "WARNING",
+      "message": "비표준 키 'rsi_bb_adapter_class'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rsi_bb_adapter_class"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_099",
+      "severity": "WARNING",
+      "message": "비표준 키 'data_contract_file'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "data_contract_file"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_100",
+      "severity": "WARNING",
+      "message": "비표준 키 'document_id_cloud_library'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "document_id_cloud_library"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_101",
+      "severity": "WARNING",
+      "message": "비표준 키 'e15_module_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "e15_module_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_102",
+      "severity": "WARNING",
+      "message": "비표준 키 's5_module_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "s5_module_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_103",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_module_id'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_module_id"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_104",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_related_modules'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_related_modules"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_105",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_default_ar_level'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_default_ar_level"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_106",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_name'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_name"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_107",
+      "severity": "WARNING",
+      "message": "비표준 키 'handoff_packet_schema'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "handoff_packet_schema"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_108",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_message_schema'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_message_schema"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_109",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_evaluation_schema'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_evaluation_schema"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_110",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_diagnosis_schema'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_diagnosis_schema"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_111",
+      "severity": "WARNING",
+      "message": "비표준 키 'lead_agent_scope_exclusion'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "lead_agent_scope_exclusion"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_112",
+      "severity": "WARNING",
+      "message": "비표준 키 'v1_communication_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v1_communication_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_113",
+      "severity": "WARNING",
+      "message": "비표준 키 'trading_mode_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "trading_mode_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_114",
+      "severity": "WARNING",
+      "message": "비표준 키 'base_layer_immutability'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "base_layer_immutability"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_115",
+      "severity": "WARNING",
+      "message": "비표준 키 'v1_cloud_library_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v1_cloud_library_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_116",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_v1_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_v1_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_117",
+      "severity": "WARNING",
+      "message": "비표준 키 'category_e_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "category_e_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_118",
+      "severity": "WARNING",
+      "message": "비표준 키 'p2_repair_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "p2_repair_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_119",
+      "severity": "WARNING",
+      "message": "비표준 키 'coding_agent_file_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "coding_agent_file_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_120",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_cost_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_cost_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_121",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_spec_version'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_spec_version"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_122",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_v1_config'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_v1_config"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_123",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_v2_config'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_v2_config"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_124",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_v3_config'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_v3_config"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_125",
+      "severity": "WARNING",
+      "message": "비표준 키 'ai_investing_spec_version'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "ai_investing_spec_version"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_126",
+      "severity": "WARNING",
+      "message": "비표준 키 'ai_investing_roadmap'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "ai_investing_roadmap"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_127",
+      "severity": "WARNING",
+      "message": "비표준 키 'cloud_library_spec_version'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cloud_library_spec_version"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_128",
+      "severity": "WARNING",
+      "message": "비표준 키 'cloud_library_cb1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cloud_library_cb1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_129",
+      "severity": "WARNING",
+      "message": "비표준 키 'cloud_library_cb4'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cloud_library_cb4"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_131",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_v1_roadmap'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_v1_roadmap"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_132",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_v2_roadmap'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_v2_roadmap"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_133",
+      "severity": "WARNING",
+      "message": "비표준 키 'sharpe_ratio_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sharpe_ratio_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_134",
+      "severity": "WARNING",
+      "message": "비표준 키 'wilder_rsi_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "wilder_rsi_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_135",
+      "severity": "WARNING",
+      "message": "비표준 키 'bollinger_bands_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "bollinger_bands_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_136",
+      "severity": "WARNING",
+      "message": "비표준 키 'decay_rate_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "decay_rate_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_137",
+      "severity": "WARNING",
+      "message": "비표준 키 'risk_free_rate_conversion'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "risk_free_rate_conversion"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_138",
+      "severity": "WARNING",
+      "message": "비표준 키 'kelly_criterion_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "kelly_criterion_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_139",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-AT-001'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-AT-001"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_140",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-AT-002'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-AT-002"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_141",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-AT-003'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-AT-003"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_142",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-AT-016'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-AT-016"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_143",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-CL-L1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-CL-L1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_144",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-CL-L2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-CL-L2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_145",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-CL-L5'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-CL-L5"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_146",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-CL-L12'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-CL-L12"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_147",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-SDAR-NEVER_AUTO'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-SDAR-NEVER_AUTO"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_148",
+      "severity": "WARNING",
+      "message": "비표준 키 'LOCK-SDAR-GATE'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "LOCK-SDAR-GATE"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_149",
+      "severity": "WARNING",
+      "message": "비표준 키 'site_scoring_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "site_scoring_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_150",
+      "severity": "WARNING",
+      "message": "비표준 키 'risk_parity_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "risk_parity_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_151",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_source_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_source_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_152",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_sources'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_sources"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_153",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_module_integration'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_module_integration"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_154",
+      "severity": "WARNING",
+      "message": "비표준 키 'v1_lock_tech_stack_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "v1_lock_tech_stack_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_155",
+      "severity": "WARNING",
+      "message": "비표준 키 'module_id_correction_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "module_id_correction_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_156",
+      "severity": "WARNING",
+      "message": "비표준 키 'cost_budget_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cost_budget_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_157",
+      "severity": "WARNING",
+      "message": "비표준 키 'cloud_library_source_docs'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cloud_library_source_docs"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_158",
+      "severity": "WARNING",
+      "message": "비표준 키 'e15_module_references'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "e15_module_references"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_160",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_source_docs'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_source_docs"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_162",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_logevent_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_logevent_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_163",
+      "severity": "WARNING",
+      "message": "비표준 키 'sdar_selfevo_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sdar_selfevo_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_164",
+      "severity": "WARNING",
+      "message": "비표준 키 'cloud_library_vamos_rule_ref'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cloud_library_vamos_rule_ref"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_165",
+      "severity": "WARNING",
+      "message": "비표준 키 'agent_teams_lock_basis'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "agent_teams_lock_basis"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_166",
+      "severity": "WARNING",
+      "message": "비표준 키 'investing_review_total_findings'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "investing_review_total_findings"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_167",
+      "severity": "WARNING",
+      "message": "비표준 키 'category_D_contracts_py_severity'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "category_D_contracts_py_severity"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_168",
+      "severity": "WARNING",
+      "message": "비표준 키 'category_D_contracts_py_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "category_D_contracts_py_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_169",
+      "severity": "WARNING",
+      "message": "비표준 키 'math_sharpe_ratio_verified'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "math_sharpe_ratio_verified"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_170",
+      "severity": "WARNING",
+      "message": "비표준 키 'math_wilder_RSI_verified'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "math_wilder_RSI_verified"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_171",
+      "severity": "WARNING",
+      "message": "비표준 키 'annualization_factor_daily'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "annualization_factor_daily"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_172",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_definition'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_definition"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_173",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_v36_win_rate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_v36_win_rate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_174",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_v36_profit_factor'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_v36_profit_factor"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_175",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_v36_MDD'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_v36_MDD"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_176",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_strategy_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_strategy_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_177",
+      "severity": "WARNING",
+      "message": "비표준 키 'strategy_MDD_threshold'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "strategy_MDD_threshold"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_178",
+      "severity": "WARNING",
+      "message": "비표준 키 'strategy_decision_types'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "strategy_decision_types"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_179",
+      "severity": "WARNING",
+      "message": "비표준 키 'P0_blocker_contracts_alignment'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "P0_blocker_contracts_alignment"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_180",
+      "severity": "WARNING",
+      "message": "비표준 키 'total_action_items'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "total_action_items"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_181",
+      "severity": "WARNING",
+      "message": "비표준 키 'review_scope'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "review_scope"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_182",
+      "severity": "WARNING",
+      "message": "비표준 키 'review_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "review_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_183",
+      "severity": "WARNING",
+      "message": "비표준 키 'review_1_2_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "review_1_2_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_184",
+      "severity": "WARNING",
+      "message": "비표준 키 'review_3_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "review_3_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_185",
+      "severity": "WARNING",
+      "message": "비표준 키 'review_4_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "review_4_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_187",
+      "severity": "WARNING",
+      "message": "비표준 키 'blocker_status'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "blocker_status"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_188",
+      "severity": "WARNING",
+      "message": "비표준 키 'cat_D_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "cat_D_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_189",
+      "severity": "WARNING",
+      "message": "비표준 키 'D1_issue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "D1_issue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_190",
+      "severity": "WARNING",
+      "message": "비표준 키 'D2_issue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "D2_issue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_191",
+      "severity": "WARNING",
+      "message": "비표준 키 'D6_issue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "D6_issue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_192",
+      "severity": "WARNING",
+      "message": "비표준 키 'D8_issue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "D8_issue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_193",
+      "severity": "WARNING",
+      "message": "비표준 키 'D12_issue'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "D12_issue"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_194",
+      "severity": "WARNING",
+      "message": "비표준 키 'sharpe_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sharpe_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_195",
+      "severity": "WARNING",
+      "message": "비표준 키 'rsi_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "rsi_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_196",
+      "severity": "WARNING",
+      "message": "비표준 키 'bb_formula'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "bb_formula"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_197",
+      "severity": "WARNING",
+      "message": "비표준 키 'annualize_factor'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "annualize_factor"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_199",
+      "severity": "WARNING",
+      "message": "비표준 키 'P0_action_count'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "P0_action_count"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_200",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_def'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_def"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_202",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_A'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_A"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_203",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_B'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_B"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_206",
+      "severity": "WARNING",
+      "message": "비표준 키 'timeframe_15m'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "timeframe_15m"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_207",
+      "severity": "WARNING",
+      "message": "비표준 키 'timeframe_1h'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "timeframe_1h"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_208",
+      "severity": "WARNING",
+      "message": "비표준 키 'timeframe_1d'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "timeframe_1d"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_209",
+      "severity": "WARNING",
+      "message": "비표준 키 'timeframe_1w'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "timeframe_1w"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_210",
+      "severity": "WARNING",
+      "message": "비표준 키 'strategy_winrate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "strategy_winrate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_211",
+      "severity": "WARNING",
+      "message": "비표준 키 'strategy_PF'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "strategy_PF"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_212",
+      "severity": "WARNING",
+      "message": "비표준 키 'strategy_MDD'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "strategy_MDD"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_213",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_symbols'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_symbols"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_214",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_strategies'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_strategies"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_215",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_perf_winrate'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_perf_winrate"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_216",
+      "severity": "WARNING",
+      "message": "비표준 키 'zsession_strategy_max'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "zsession_strategy_max"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_217",
+      "severity": "WARNING",
+      "message": "비표준 키 'file_contracts'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "file_contracts"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_218",
+      "severity": "WARNING",
+      "message": "비표준 키 'file_dag_factory'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "file_dag_factory"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_219",
+      "severity": "WARNING",
+      "message": "비표준 키 'datasource_classification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "datasource_classification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_220",
+      "severity": "WARNING",
+      "message": "비표준 키 'RSI_BB_combos'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "RSI_BB_combos"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_223",
+      "severity": "WARNING",
+      "message": "비표준 키 'contracts_gap'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "contracts_gap"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_224",
+      "severity": "WARNING",
+      "message": "비표준 키 'poc_items'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "poc_items"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_225",
+      "severity": "WARNING",
+      "message": "비표준 키 'checklist_P0'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "checklist_P0"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_226",
+      "severity": "WARNING",
+      "message": "비표준 키 'checklist_P1'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "checklist_P1"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_227",
+      "severity": "WARNING",
+      "message": "비표준 키 'checklist_P2'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "checklist_P2"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_228",
+      "severity": "WARNING",
+      "message": "비표준 키 'sharpe_ratio_verification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "sharpe_ratio_verification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_229",
+      "severity": "WARNING",
+      "message": "비표준 키 'wilder_rsi_verification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "wilder_rsi_verification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_230",
+      "severity": "WARNING",
+      "message": "비표준 키 'bollinger_bands_verification'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "bollinger_bands_verification"
+    },
+    {
+      "rule": "DV-8",
+      "item_id": "EA-11_231",
+      "severity": "WARNING",
+      "message": "비표준 키 'z_session_v36_performance'가 네이밍 규칙 미준수 (UPPER_SNAKE_CASE 필요)",
+      "expected": "CATEGORY_TARGET_ATTRIBUTE",
+      "actual": "z_session_v36_performance"
+    }
+  ],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 257,
+    "INFO": 16
+  },
+  "rules_applied": [
+    "DV-1: JSON 스키마 무결성",
+    "DV-2: 메타데이터 카운트 정합성",
+    "DV-3: source_line 범위 확인",
+    "DV-4: source_text 원본 매칭",
+    "DV-5: item_id 연속성",
+    "DV-6: value_type vs value 타입 일치",
+    "DV-7: COUNT↔LIST 교차 검증",
+    "DV-8: 표준 키 목록 대조 (약점 G 대응)",
+    "DV-9: source_file_hash 변경 감지 (약점 I 대응)",
+    "DV-10: 후반부 커버리지 검증 (약점 E 대응)"
+  ]
+}

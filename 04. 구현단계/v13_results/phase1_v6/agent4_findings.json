@@ -1,0 +1,154 @@
+{
+  "agent": "Agent 4",
+  "scope": "UI+메모리+스키마상세",
+  "timestamp": "2026-03-21T23:16:00",
+  "files_read": [
+    {"name": "D2.0-06 STORAGE_MEMORY", "lines_read": "full"},
+    {"name": "D2.0-08 UI_UX", "lines_read": "full"},
+    {"name": "D2.1-D1 SCHEMA_GLOSSARY", "lines_read": "full"},
+    {"name": "D2.1-D2 SCHEMA_ORANGE_CORE", "lines_read": "full"},
+    {"name": "D2.1-D3 SCHEMA_BLUE_NODES", "lines_read": "full"},
+    {"name": "D2.1-D4 SCHEMA_INFRA_CORE", "lines_read": "full"},
+    {"name": "D2.1-D6 SCHEMA_STORAGE_MEMORY", "lines_read": "full"},
+    {"name": "D2.1-D8 SCHEMA_UI_UX", "lines_read": "full"},
+    {"name": "D2.1-Q1 AUDIT_REPORT", "lines_read": "full"},
+    {"name": "CLAUDE.md (§12, §15)", "lines_read": "partial"}
+  ],
+  "statistics": {
+    "facts_checked": 28,
+    "MATCH": 16,
+    "MISMATCH": 5,
+    "NO_SOURCE": 1,
+    "MISSING": 3,
+    "SOURCE_CONFLICT": 3
+  },
+  "critical_checks": {
+    "memory_L0_L3": "MATCH — D2.0-06 §2.1 LOCK 완전 일치",
+    "QoD_040": "PARTIAL_MATCH — 0.40 임계값 일치, 'v13 승격' 표현 근거 불명확",
+    "UI_3panel_2view": "MATCH — D2.0-08 §2.1/§2.2/§3 LOCK 완전 일치",
+    "DecisionSchema_18fields": "MATCH — D2.1-D2 §4.1 수치 일치 (단 target_layer L3 누락)",
+    "ResponseEnvelope_5fields": "MATCH_WITH_CONCERN — CLAUDE.md §12 LOCK 일치, D2.1 미등록",
+    "vector_dim_1024": "MATCH — D2.1-D6 §4.3/§7-A.1 BGE-M3=1024 확인"
+  },
+  "findings": {
+    "MISMATCH": [
+      {
+        "id": "A4-MM-001",
+        "severity": "HIGH",
+        "part_file": "CLAUDE.md(SOT)",
+        "part_section": "§15 L0 TTL",
+        "part_value": "7일(최대 30일)",
+        "sot_value": "세션 종료 즉시 (D2.0-06 §2.1 LOCK)",
+        "sot_source": "D2.0-06 §2.1",
+        "detail": "D2.0-06이 정본. PLAN-3.0 §5.3.4는 '기본 7일' 근거 제공하나 세 문서 간 불일치"
+      },
+      {
+        "id": "A4-MM-002",
+        "severity": "HIGH",
+        "part_file": "D2.1-D2(SOT)",
+        "part_section": "§4.1 memory_plan.target_layer",
+        "part_value": "L0|L1|L2 (L3 누락)",
+        "sot_value": "4계층 L0~L3 LOCK",
+        "sot_source": "D2.0-06 §2.1 LOCK",
+        "detail": "LOCK 위반 — PART1 이슈 #63(MS-01) FIX 지시됐으나 D2.1-D2 v3.0.0 미반영"
+      },
+      {
+        "id": "A4-MM-003",
+        "severity": "MEDIUM",
+        "part_file": "PART2",
+        "part_section": "MemoryRecord 필드 수",
+        "part_value": "20필드 표기",
+        "sot_value": "D2.1-D6 실제와 수치 일치",
+        "sot_source": "D2.1-D6",
+        "detail": "L3 확장필드 포함 여부 PART2에서 불명확"
+      },
+      {
+        "id": "A4-MM-004",
+        "severity": "MEDIUM",
+        "part_file": "PART2",
+        "part_section": "§6.10.2 DCL QoD 임계값",
+        "part_value": "≥0.5 → RAG 삽입",
+        "sot_value": "정본 LOCK <0.4 금지",
+        "sot_source": "D2.0-06, PLAN-3.0",
+        "detail": "DCL 전용 0.5 기준의 SOT 근거 없음"
+      },
+      {
+        "id": "A4-MM-005",
+        "severity": "MEDIUM",
+        "part_file": "CLAUDE.md(SOT)",
+        "part_section": "§16 EventTypeRegistry",
+        "part_value": "53+",
+        "sot_value": "123 (D2.1-D2 SOT count)",
+        "sot_source": "D2.1-D2",
+        "detail": "구버전 미갱신"
+      }
+    ],
+    "NO_SOURCE": [
+      {
+        "id": "A4-NS-001",
+        "severity": "MEDIUM",
+        "part_file": "v13 Phase 0 verdict",
+        "part_value": "QoD < 0.40 → L2 이관 — v13에서 PLAN-3.0에 승격",
+        "searched": "PLAN-3.0, D2.0-06, CLAUDE.md",
+        "detail": "기존 정책(<0.40 금지) 자체는 모든 SOT에서 일관. 'v13 승격' 표현의 직접 근거 불확인"
+      }
+    ],
+    "MISSING": [
+      {
+        "id": "A4-MIS-001",
+        "severity": "HIGH",
+        "sot_source": "CLAUDE.md §12 LOCK",
+        "missing_in": "D2.1-D1~D8 전체",
+        "detail": "ResponseEnvelope 5필드 FREEZE 스키마가 D2.1 SOT에 미등록. PART1 이슈 #19(D2-02) FIX 지시 미이행"
+      },
+      {
+        "id": "A4-MIS-002",
+        "severity": "MEDIUM",
+        "sot_source": "D2.1-D2",
+        "missing_in": "PART2",
+        "detail": "FallbackRegistry 수(23) 일치 확인. 구버전(13개) 잔존 주의"
+      },
+      {
+        "id": "A4-MIS-003",
+        "severity": "LOW",
+        "sot_source": "D2.0-08 LOCK",
+        "missing_in": "PART2",
+        "detail": "PART2 '4 레이아웃' 표현 — SOT 공식 LOCK은 '2-View + 3단 패널'. CLI는 Layout이 아님"
+      }
+    ],
+    "SOURCE_CONFLICT": [
+      {
+        "id": "A4-SC-001",
+        "severity": "HIGH",
+        "source_a": "V1=Chroma LOCK",
+        "source_b": "V2+=Qdrant",
+        "detail": "자체 충돌 아님(V1/V2 경계). 혼동 주의"
+      },
+      {
+        "id": "A4-SC-002",
+        "severity": "MEDIUM",
+        "source_a": "STEP7 J-M L1/L2 TTL 역전",
+        "source_b": "정본: L1=90일, L2=무기한",
+        "detail": "PART1 ST-01 FIX 지시됨"
+      },
+      {
+        "id": "A4-SC-003",
+        "severity": "MEDIUM",
+        "source_a": "CLAUDE.md §16 EventTypeRegistry '53+'",
+        "source_b": "D2.1-D2 count=123",
+        "detail": "A4-MM-005 중복"
+      }
+    ]
+  },
+  "error_patterns": {
+    "P2_field_count": 1,
+    "P3_wrong_source": 0
+  },
+  "verdict": "CONDITIONAL_PASS",
+  "verdict_detail": "핵심 LOCK (3-Panel+2-View, DecisionSchema 18필드, BGE-M3 1024, QoD<0.40, ResponseEnvelope 5필드) SOT 대비 정확. HIGH 이슈 3건: D2.1-D2 target_layer L3 추가, ResponseEnvelope D2.1 등록, L0 TTL 불일치 해소 필요",
+  "required_actions": [
+    "D2.1-D2 §4.1 memory_plan.target_layer → L0|L1|L2|L3 수정",
+    "ResponseEnvelope 5필드 FREEZE 스키마 D2.1-D2/D5에 등록",
+    "CLAUDE.md §16 EventTypeRegistry 53+ → 123 갱신"
+  ]
+}

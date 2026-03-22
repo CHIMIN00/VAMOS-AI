@@ -1,0 +1,584 @@
+{
+  "session": "session_16",
+  "phase": "phase2_v7",
+  "timestamp": "2026-03-21T23:42:43.426474",
+  "total_findings_raw": 45,
+  "total_findings_after_adversarial": 45,
+  "by_adjusted_severity": {
+    "HIGH": 0,
+    "MEDIUM": 8,
+    "LOW": 37,
+    "DISMISSED": 0
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "Decision 스키마 필드 수 불일치: PART2 says 18필드(D2.1-D2 §4.1), MASTER_SPEC says 16필드. PART2 notes H-7: 16→18 수정, meaning this was an intentional correction based on D2.1-D2 schema spec. D2.1-D2 is higher authority for schema details.",
+      "evidence": "PART2 L434: 'DecisionSchema | 18 (FREEZE)' vs MASTER_SPEC §4.4: 'Decision 스키마 (16필드, FREEZE)'",
+      "source_agent": 1,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-02",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "MCP max_retries: PART2 config sets 3 (PHASE_B4), but MASTER_SPEC §5.5 says max 2 retries (from D2.0-03). Config value and design spec differ.",
+      "evidence": "PART2 L183: 'max_retries = 3' vs MASTER_SPEC §5.5: '재시도: 일시적 실패 최대 2회'",
+      "source_agent": 1,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-03",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "VamosError 구조 (Result<T, VamosError>) 및 ErrorHandlingStandard가 PART2 구현 가이드에 명시적으로 포함되지 않음. D2.0-02 §0.3에서 정의된 핵심 에러 처리 패턴.",
+      "evidence": "D2.0-02 §0.3 defines VamosError with failure_code, message, fallback_id, trace_id — PART2 has no explicit mention",
+      "source_agent": 1,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "성능 벤치마크 목표가 PART2에 누락됨. MASTER_SPEC §4.8에서 정의된 단순응답 ≤2s, 복합응답 ≤10s, Self-check ≤1s 등이 구현 가이드에 반영 필요.",
+      "evidence": "MASTER_SPEC §4.8 defines 5 performance benchmarks not mentioned in PART2",
+      "source_agent": 1,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-05",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "S7E-011 Instruction Hierarchy (5-level prompt priority L0~L4) is CRITICAL V1 item in D2.0-07 but not reflected in PART2. This is essential for prompt injection defense.",
+      "evidence": "D2.0-07 S7E-011: L0(Core Constitution) > L1(System Prompt) > L2(User) > L3(Tool/Doc) > L4(History) — not in PART2",
+      "source_agent": 2,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-06",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "Guardrails L2 역할 표현 차이: PART2 '출력 검증' vs D2.0-07 '처리 단계 검증'. L2는 처리 중(during processing) 검증이 핵심이나, PART2는 출력 검증으로 축약.",
+      "evidence": "PART2 L2582: 'Guardrails AI (L2) | 출력 검증' vs D2.0-07 §1.1: '2층 — 처리 방어: Guardrails AI'",
+      "source_agent": 2,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-07",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "멀티에이전트 비용 15배 경고 규칙 누락. D2.0-07 §4.3.2에서 싱글 대비 3배 초과 시 자동 경고 발생 규칙이 PART2에 반영되지 않음.",
+      "evidence": "D2.0-07 §4.3.2: 'I-9 Cost Gate에서 멀티 에이전트 태스크의 비용을 싱글 대비 모니터링하고, 3배 초과 시 자동 경고'",
+      "source_agent": 2,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-08",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "커뮤니티 스킬 보안 검증 4단계 프로세스가 PART2에 누락됨.",
+      "evidence": "D2.0-07: 소스확인→코드스캔→샌드박스실행→권한선언 4단계 — not in PART2",
+      "source_agent": 2,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-09",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "SDAR State Machine 상태명 차이: PART2는 간소화된 이름(IDLE, DETECTING 등)을 사용하고, SDAR_SPEC은 정식 이름(SDAR_S0_MONITORING 등)을 사용. PART2가 XREF 주석으로 인지하고 있는 차이.",
+      "evidence": "PART2 L2832: 'IDLE → DETECTING → ...' vs SDAR_SPEC §7.1: 'SDAR_S0_MONITORING → SDAR_S1_DETECTED → ...'",
+      "source_agent": 3,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-10",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR Layer 1 Channel B/C 세부 감지 규칙(빈도 임계값, 이상탐지 baseline)이 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §2.2: Channel B 빈도(5분내 3회), 연쇄(60초), Channel C 응답시간 200%, QoD<0.5 3회 등",
+      "source_agent": 3,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-11",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR AR-Level ↔ Autonomy Level 매핑 및 RBAC-AR 권한 매트릭스가 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §3.2: L0→AR-L0, L1→AR-L2(기본값), L2→AR-L3, L3→AR-L4. §3.4: OWNER=AR-L4까지, ADMIN=AR-L3까지",
+      "source_agent": 3,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-12",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR Failure Code 13개 및 Fallback 4개가 PART2 §6.9에 열거되지 않음. 구현 시 SDAR_SPEC 직접 참조 필요.",
+      "evidence": "SDAR_SPEC §6.4: 13 failure codes (SDAR_DETECTION_TIMEOUT~SDAR_KILL_SWITCH_ACTIVE) + 4 fallbacks",
+      "source_agent": 3,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-13",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "SDAR sdar/ 디렉토리 구조(detection/, diagnosis/, prescription/, repair/, verification/)가 PART2에 누락됨.",
+      "evidence": "SDAR_SPEC §6.5 defines full sdar/ subdirectory with 6 subpackages and specific file names",
+      "source_agent": 3,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A4-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "PART2 §6.7 V2 section does not explicitly state V2 Lead Agent model upgrades to Opus. SOT AGENT_TEAMS_SPEC §9.2 and §11.2.1 clearly specify V2 Lead=Opus.",
+      "evidence": "PART2 V2 table only lists Sub-agent models. SOT §9.2: 'Lead=Opus, Sub=Sonnet/Haiku 차등'. SOT §11.2.1: 'V2 Lead=Opus'.",
+      "source_agent": 4,
+      "adversarial_verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-A4-02",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Per-task budget information not included in PART2. SOT §11.2.1 specifies V1=500/task, V2=2000/task, V3=5000/task.",
+      "evidence": "SOT §11.2.1 cost table includes 'per-task budget' column. PART2 only mentions daily/monthly limits.",
+      "source_agent": 4,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A4-03",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent lifecycle states (created->initialized->active->suspended->terminated->archived) from SOT §2.4.1 not described in PART2 §6.7.",
+      "evidence": "SOT §2.4 provides detailed lifecycle with LogEvent mappings. PART2 omits this.",
+      "source_agent": 4,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A4-04",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "SOT agent events (AgentEvent enum, 17+ events) poorly covered in PART2. Only 3 agent events listed in §6.11 vs 17+ in SOT §2.3.2.",
+      "evidence": "PART2 §6.11: 'agent.task.started/completed/failed'. SOT §2.3.2: team.created/started/completed/aborted, delegation.sent/accepted/rejected/timeout, agent.spawned/active/suspended/terminated, handoff.initiated/completed, etc.",
+      "source_agent": 4,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A4-05",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent isolation policies (context, file, tool, network, code sandbox isolation) from SOT §11.1.3 not documented in PART2 §6.7.",
+      "evidence": "SOT §11.1.3 AgentIsolationPolicy class with 5 isolation dimensions. PART2 has general security in §6.5 but no agent-specific isolation.",
+      "source_agent": 4,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A5-01",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "PART2 LogEventSchema field names (trace_id, timestamp, level, module, event_type, message, data) do not match SOT D2.1-D2 §4.2 field names (event_type, producer, when, payload, severity, sinks, links). Count is same (7) but field naming is different.",
+      "evidence": "PART2 L435 comment: '7필드(trace_id,timestamp,level,module,event_type,message,data)'. D2.1-D2 §4.2: event_type, producer, when, payload, severity + sinks, links.",
+      "source_agent": 5,
+      "adversarial_verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-A5-02",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 claims MemoryRecord has 20 fields. D2.1-D6 §4.1 MemoryRecordSchema has 19 fields (7 required + 5 optional common + 7 L3/B-2 extension). Off by 1.",
+      "evidence": "D6 §4.1 field count: record_id, project_id, scope, memory_type, content_summary, created_at, policy_decision (7R) + ttl, tags, source_refs, masked, activation_state, version (6O) + procedure_id, target_scope, trigger_conditions, steps, required_tools, safety_notes, provenance (7 L3 ext) = 20 total. Actually 20 if 'version' counted separately. Re-verified: 7+6+7=20. Match after recount.",
+      "source_agent": 5,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A5-03",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "PART2 V0 schema table (25 schemas) does not include D5 Phase-A additions: CircuitBreakerSchema, GatePipelineMappingSchema, HITLRequestSchema, ResponseEnvelopeSchema (as D5 owned).",
+      "evidence": "D2.1-D5 §0 lists 9 schemas total (including Phase A additions). PART2 only lists WorkflowStage(4), WorkflowOutput(3), FailureReport(4) from D5, plus ResponseEnvelope referencing CLAUDE.md not D5.",
+      "source_agent": 5,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A5-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "PART2 V0 schema table does not include D3 CloudLibrary schemas (7 schemas) or D4 additional schemas (PromptCacheManager, RateLimitConfig, BackupConfig). These may be V2+ but exist in SOT.",
+      "evidence": "D3 §5.6-5.12: 7 CloudLibrary schemas. D4 §4.4-4.6: 3 additional schemas. All absent from PART2 25-schema table.",
+      "source_agent": 5,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A5-05",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "PART2 references ResponseEnvelope SOT as CLAUDE.md §12, but D2.1-D5 §4.9 defines ResponseEnvelopeSchema as D5-owned SOT. The authoritative source attribution is incorrect.",
+      "evidence": "PART2 L436: 'ResponseEnvelope | 5 (LOCK) | CLAUDE.md §12'. D2.1-D5 §4.9: ResponseEnvelopeSchema with owner_doc=D5.",
+      "source_agent": 5,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A6-01",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "RAG operation limits (15 documents / 30 chunks) from SOT D2.0-06 §1.1 not mentioned in PART2 Phase 2 section.",
+      "evidence": "SOT §1.1: '운영 한계: 문서 15개 / 청크 30개'. PART2 V1-Phase 2 lists RAG pipeline stages but omits these operational limits.",
+      "source_agent": 6,
+      "adversarial_verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-A6-02",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Memory search result limits (per-layer 5, total 20 -> reranker -> top 5) from SOT S7D-042 not specified in PART2.",
+      "evidence": "SOT S7D-042: '레이어당 5개, 총 20개 후보 → reranker → top 5'. PART2 omits this.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A6-03",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "Memory export format: SOT S7D-008 says JSON/SQLite, PART2 says JSON/Markdown. Minor format discrepancy.",
+      "evidence": "SOT S7D-008: 'JSON/SQLite 형식으로 전체 메모리 내보내기'. PART2 L1347: 'JSON/Markdown export'.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A6-04",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "L0 session buffer management parameters (80% context, 70% auto-summarize) from SOT S7D-035 not detailed in PART2.",
+      "evidence": "SOT S7D-035: 'LLM context 80%, 70% 초과 시 자동 요약'. PART2 only mentions 'SQLite, TTL=session_end' for L0.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A6-05",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Memory promotion scoring formula (access_count*0.4 + recency*0.3 + confidence*0.3) from SOT S7D-040 not documented in PART2.",
+      "evidence": "SOT S7D-040 defines promotion_score formula. PART2 does not include implementation details for memory promotion scoring.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-A6-06",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "VectorStore adapter interface contract (upsert, search with top_k defaults, delete, get_by_id) from SOT D2.0-06 §2.2-A not documented in PART2 Phase 2.",
+      "evidence": "SOT §2.2-A defines minimum adapter contract with 4 methods and specific defaults. PART2 mentions Chroma but not the adapter interface.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-A6-07",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "DCL QoD threshold (0.5) in PART2 differs from general memory QoD floor (0.4) in SOT. The relationship between these thresholds is not clarified.",
+      "evidence": "PART2 L3134: 'DCL QoD >= 0.5 → RAG 삽입'. SOT §2.5.2: 'QoD < 0.4: L2/L3 저장 금지'. Different contexts but threshold relationship unclear.",
+      "source_agent": 6,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-71",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "LOCK-AT 근거 참조에서 SOT의 '고정N' 접미사가 PART2에서 누락",
+      "evidence": "SOT LOCK-AT-003='D2.0-05 §7.3 고정3', PART2='D2.0-05 §7.3'. 추적성 약간 저하.",
+      "source_agent": 7,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-72",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "Agent Lifecycle 5-state LOCK (IDLE→ASSIGNED→EXECUTING→REPORTING→TERMINATED)가 PART2 §6.7에 없음",
+      "evidence": "AGENT_TEAMS_SPEC §2.4.1 정의된 필수 생명주기 상태가 PART2 구현 가이드에 미포함.",
+      "source_agent": 7,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-73",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Agent 메시지 포맷 상세 필드(msg_id, from_agent, to_agent 등)가 PART2에 미기재",
+      "evidence": "AGENT_TEAMS_SPEC §2.3.1의 LOCK 메시지 스키마 8개 필드가 PART2에서 HMAC만 언급.",
+      "source_agent": 7,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-81",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 CI/CD를 14개 개별 workflow로 분리 표기하나 PHASE_B6/B2 정본은 ci.yml 단일 통합 워크플로우",
+      "evidence": "PART2 L2556 NOTE (XREF-V0-19)에서 인지 중이며 구현 시 B6 통합 구조를 따르라고 안내. 실질 위험 낮음.",
+      "source_agent": 8,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-82",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Branch strategy (main/develop/feature/hotfix/release)가 PART2에 미포함",
+      "evidence": "PHASE_B6 §1.3 정본에 5개 브랜치 전략 명시. PART2 구현 가이드에서 누락.",
+      "source_agent": 8,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-83",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Docker 서비스명 3개 (vamos-orange-core, vamos-blue-nodes, vamos-api-gateway)가 PART2에 미기재",
+      "evidence": "PHASE_B6 §4.3 matrix에 3개 서비스 정의. V2 구현 시 참조 필요.",
+      "source_agent": 8,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-91",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "HITL 타임아웃 불일치: PART2는 '10분 auto-deny' (CLAUDE.md §7.3), MASTER_SPEC §7.9는 '기본 30분, P2 무제한'",
+      "evidence": "PART2 L3368 '승인 타임아웃 10분 auto-deny' vs MASTER_SPEC §7.9 L856 '기본 30분, P2는 무제한'. 이 두 값은 서로 다른 컨텍스트(일반 승인 vs HITL 개입)일 수 있으나 명시적 구분이 없어 구현 시 혼동 가능.",
+      "source_agent": 9,
+      "adversarial_verdict": "SUSTAINED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-92",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "V0 스키마 수: PART2=25개 vs CLAUDE.md=24개",
+      "evidence": "PART2 L3261 '25개 스키마' vs CLAUDE.md §10 '24개 스키마'. v15.0.0에서 AutonomyLevelSchema 추가로 25개가 됐으나 CLAUDE.md는 미갱신 상태.",
+      "source_agent": 9,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-93",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "V0 모듈 스켈레톤: PART2='I-1~I-3,I-5,I-19 (5개)' vs CLAUDE.md='I-1~I-5+I-19 (6개, I-4 포함)'",
+      "evidence": "PART2 L3262 explicitly excludes I-4 citing READINESS §2.7. CLAUDE.md §10 includes I-4. 구현 시 I-4 포함 여부 혼동 가능.",
+      "source_agent": 9,
+      "adversarial_verdict": "PARTIALLY_SUSTAINED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-94",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "워크플로우 패턴 카탈로그 12건이 PART2 §7 크로스컷 검토에 미포함",
+      "evidence": "MASTER_SPEC §7.14 defines 12 workflow patterns. Not referenced in PART2 review section.",
+      "source_agent": 9,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-101",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "83개 데이터 소스 상세 분류(P0/P1/S0/KB)가 PART2 §6.8에 미포함",
+      "evidence": "AI_INVESTING_SPEC §3 defines detailed tier classification. PART2 only mentions 'yfinance' in architecture diagram.",
+      "source_agent": 10,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-102",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "96개 전략 카탈로그(기술적 40+퀀트 56)가 PART2에 미포함",
+      "evidence": "AI_INVESTING_SPEC §7-8 lists 96 strategies. PART2 §6.8 only references generic '5-Agent Pipeline'.",
+      "source_agent": 10,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    },
+    {
+      "id": "F-103",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "법적 제약 시스템(Wash Sale Rule, PDT Rule, Uptick Rule)이 PART2 §6.8에 미포함",
+      "evidence": "AI_INVESTING_SPEC §10.1 defines 3 legal rules with automatic order blocking. Critical for P2 domain compliance.",
+      "source_agent": 10,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-104",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "Python 버전 불일치: AI_INVESTING_SPEC D-S5-01='Python 3.12 확정' vs VAMOS 전체='Python 3.11+'",
+      "evidence": "AI_INVESTING_SPEC §14.2 L455 states 'D-S5-01: Python 3.11 vs 3.12 → 3.12 확정'. PART2/CLAUDE.md specify Python 3.11+. AI Investing 모듈에서 3.12 전용 기능 사용 시 충돌 가능.",
+      "source_agent": 10,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "MEDIUM"
+    },
+    {
+      "id": "F-105",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 기술스택 14항목 테이블이 SOT §14 원본과 카테고리/순서가 다르게 재구성됨",
+      "evidence": "PART2 L2726 NOTE (XREF-S6-06)에서 자체 인지. SOT §14는 인프라/도구 중심 14개, PART2는 기능 카테고리별 재구성. yfinance/Alpha Vantage 등은 SOT §14에 없는 항목.",
+      "source_agent": 10,
+      "adversarial_verdict": "NOT_CHALLENGED",
+      "adjusted_severity": "LOW"
+    }
+  ],
+  "error_pattern_tally": {
+    "P1_numeric_mismatch": 5,
+    "P2_terminology_mismatch": 3,
+    "P3_omission": 30,
+    "P4_scope_conflict": 15,
+    "P5_version_mismatch": 8,
+    "P6_citation_error": 3,
+    "P7_schema_mismatch": 8,
+    "P8_lock_violation": 0,
+    "P9_order_mismatch": 0,
+    "P10_format_mismatch": 0,
+    "P11_duplicate_definition": 0
+  },
+  "tiers_summary": {
+    "T01_Core_Architecture": {
+      "agents": [
+        1
+      ],
+      "findings": 4
+    },
+    "T02_Security_Safety": {
+      "agents": [
+        2
+      ],
+      "findings": 4
+    },
+    "T03_SDAR": {
+      "agents": [
+        3
+      ],
+      "findings": 5
+    },
+    "T04_Agent_Teams": {
+      "agents": [
+        4
+      ],
+      "findings": 5
+    },
+    "T05_Schema": {
+      "agents": [
+        5
+      ],
+      "findings": 5
+    },
+    "T06_Memory_RAG": {
+      "agents": [
+        6
+      ],
+      "findings": 7
+    },
+    "T07_UI_UX": {
+      "agents": [
+        7
+      ],
+      "findings": 3
+    },
+    "T08_CICD_Infra": {
+      "agents": [
+        8
+      ],
+      "findings": 3
+    },
+    "T09_Decision_Governance": {
+      "agents": [
+        9
+      ],
+      "findings": 4
+    },
+    "T10_AI_Investing": {
+      "agents": [
+        10
+      ],
+      "findings": 5
+    },
+    "T11_MCP_Integration": {
+      "agents": [
+        4
+      ],
+      "findings": 0
+    },
+    "T12_Cloud_Library": {
+      "agents": [],
+      "findings": 0
+    },
+    "T13_Test_Strategy": {
+      "agents": [],
+      "findings": 0
+    },
+    "T14_Config_Spec": {
+      "agents": [],
+      "findings": 0
+    },
+    "T15_API_Contract": {
+      "agents": [],
+      "findings": 0
+    },
+    "T16_Migration": {
+      "agents": [],
+      "findings": 0
+    },
+    "T17_Dependencies": {
+      "agents": [],
+      "findings": 0
+    },
+    "T18_Project_Structure": {
+      "agents": [],
+      "findings": 0
+    }
+  },
+  "adversarial_new_findings": [
+    {
+      "id": "SC-NEW-01",
+      "severity": "LOW",
+      "description": "policy_gate enum inconsistency: CLAUDE.md/PART2 Gate table uses 4 values (block|require_approval|mask|allow) while MASTER_SPEC Decision schema uses 3 values (deny|restrict|allow). Different enum vocabularies for the same concept.",
+      "part2_ref": "CLAUDE.md §5",
+      "sot_ref": "MASTER_SPEC L432"
+    }
+  ],
+  "note": "Pass 1 발견만 기록. 수정은 Pass 2 통합 수정 시 처리 (ABD-3 원칙)."
+}

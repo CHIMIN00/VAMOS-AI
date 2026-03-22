@@ -1,0 +1,60 @@
+{
+  "verdict": "PASS",
+  "errors": [],
+  "warnings": [],
+  "total_features": 2647,
+  "extractable_true": 2595,
+  "extractable_false": 52,
+  "by_version": {
+    "V0": 210,
+    "V1": 1585,
+    "V2": 563,
+    "V3": 88,
+    "multi": 201
+  },
+  "by_category": {
+    "orange_core": 282,
+    "blue_nodes": 317,
+    "storage": 251,
+    "safety": 289,
+    "agent": 384,
+    "infra": 452,
+    "mcp": 76,
+    "schemas": 170,
+    "ui": 254,
+    "benchmark": 99,
+    "business": 73
+  },
+  "vs_v10": {
+    "v10_total": 3940,
+    "v12_total": 2647,
+    "new": 2389,
+    "removed": 3691,
+    "changed": 249
+  },
+  "file_sizes": {
+    "v12_src_C01a.json": 73550,
+    "v12_src_C01b.json": 70243,
+    "v12_src_C02.json": 80989,
+    "v12_src_C03.json": 122656,
+    "v12_src_C04.json": 65764,
+    "v12_src_C05.json": 72727,
+    "v12_src_C06.json": 66364,
+    "v12_src_C07.json": 54648,
+    "v12_src_C08.json": 70480,
+    "v12_src_C09a.json": 78063,
+    "v12_src_C09b.json": 448899,
+    "v12_src_C10.json": 62906,
+    "v12_src_C11.json": 150388,
+    "v12_src_C12.json": 179837,
+    "v12_src_C13.json": 61770,
+    "v12_merged_features.json": 1712130,
+    "v12_v10_delta.json": 1627429,
+    "v12_feature_registry_final.json": 1711413,
+    "v12_section_map.json": 38886,
+    "v12_reference_map.json": 455001,
+    "v12_numeric_registry.json": 618000,
+    "v12_prompt_inventory.json": 15308,
+    "v12_s6_mapping.json": 104874
+  }
+}

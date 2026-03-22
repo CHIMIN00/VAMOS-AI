@@ -1,0 +1,24 @@
+{
+  "validation_metadata": {
+    "target_file": "v13_CM02_counts.json",
+    "total_comparisons_checked": 519,
+    "pass_count": 519,
+    "fail_count": 0,
+    "result": "PASS",
+    "validator": "cm_validator.py (Layer A — NO AI judgment)"
+  },
+  "findings": [],
+  "summary": {
+    "CRITICAL": 0,
+    "WARNING": 0,
+    "INFO": 0
+  },
+  "rules_applied": [
+    "CM-DV1: JSON 스키마 무결성",
+    "CM-DV2: 메타데이터 카운트 정합성",
+    "CM-DV3: source 참조 EA 존재 확인",
+    "CM-DV4: source_text SOT 원본 대조",
+    "CM-DV5: result/severity 유효성",
+    "CM-DV6: 중복 비교 탐지"
+  ]
+}

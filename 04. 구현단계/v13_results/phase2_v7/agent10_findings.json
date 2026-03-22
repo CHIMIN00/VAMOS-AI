@@ -1,0 +1,139 @@
+{
+  "agent": "Agent 10",
+  "scope": "PART2 §6.8 AI Investing 상세 구현 검증 (vs VAMOS_AI_INVESTING_SPEC)",
+  "session": "session_15",
+  "timestamp": "2026-03-21T14:30:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 20,
+    "matches": 18,
+    "mismatches": [
+      {
+        "id": "A10-M1",
+        "fact": "PART2 기술스택 항목 1: 데이터 소스 = yfinance + Alpha Vantage",
+        "part2_ref": "PART2 L2730",
+        "sot_ref": "AI_INVESTING_SPEC §14",
+        "match": false,
+        "detail": "SOT §14 14-Item Locked table does not list 'yfinance + Alpha Vantage' as an item. SOT §14 lists infrastructure components (Airflow, Kafka, TimescaleDB, etc.). PART2 NOTE (XREF-S6-06) acknowledges this is a category-based reorganization. The SOT §15.1 data source priority lists yfinance as #1 and Alpha Vantage as #2, but these are not part of the 14-LOCK items."
+      },
+      {
+        "id": "A10-M2",
+        "fact": "PART2 기술스택 항목 7: ML Pipeline = scikit-learn + XGBoost",
+        "part2_ref": "PART2 L2736",
+        "sot_ref": "AI_INVESTING_SPEC §15",
+        "match": false,
+        "detail": "SOT §15 lists scikit-learn + XGBoost + LightGBM separately. PART2 groups into 'ML Pipeline' category. Not a value error but a restructuring. SOT §14 does not include these as LOCK items."
+      }
+    ],
+    "match_details": [
+      {"fact": "51% Gate: Win Rate >= 51%", "part2_ref": "PART2 L2707", "sot_ref": "AI_INVESTING_SPEC §6.1 L244", "match": true, "detail": "SOT §6.1: '승률 >= 51%'. Exact match."},
+      {"fact": "51% Gate: Sharpe Ratio >= 1.0", "part2_ref": "PART2 L2708", "sot_ref": "AI_INVESTING_SPEC §6.1 L244", "match": true, "detail": "SOT: 'Sharpe >= 1.0'. Exact match."},
+      {"fact": "51% Gate: Decay < 30%", "part2_ref": "PART2 L2709", "sot_ref": "AI_INVESTING_SPEC §6.1 L244", "match": true, "detail": "SOT: 'Decay < 30%'. Exact match."},
+      {"fact": "51% Gate: Min Trades = 30", "part2_ref": "PART2 L2710", "sot_ref": "AI_INVESTING_SPEC §6.1 L244", "match": true, "detail": "SOT: '최소 거래 >= 30건'. Exact match."},
+      {"fact": "51% Gate: Train/Test Split = 70/30", "part2_ref": "PART2 L2711", "sot_ref": "AI_INVESTING_SPEC §6.1 L244", "match": true, "detail": "SOT: 'Train 70% / Test 30%'. Exact match."},
+      {"fact": "Circuit Breaker: 일일 손실 -3% 거래 중지", "part2_ref": "PART2 L2717", "sot_ref": "AI_INVESTING_SPEC §10.2 L366", "match": true, "detail": "SOT: '일일 손실 -3% 중단'. Match."},
+      {"fact": "Circuit Breaker: VIX > 40 매수 중지", "part2_ref": "PART2 L2718", "sot_ref": "AI_INVESTING_SPEC §10.2 L366", "match": true, "detail": "SOT: 'VIX>40 매수 중단'. Match."},
+      {"fact": "Circuit Breaker: 포지션 -10% 강제 청산", "part2_ref": "PART2 L2719", "sot_ref": "AI_INVESTING_SPEC §10.2 L366", "match": true, "detail": "SOT: '포지션 -10% 강제 청산'. Match."},
+      {"fact": "Circuit Breaker: 현금 비율 최소 20%", "part2_ref": "PART2 L2720", "sot_ref": "AI_INVESTING_SPEC §10.2 L366", "match": true, "detail": "SOT: '현금 20% 최소'. Match."},
+      {"fact": "Circuit Breaker: 단일 종목 최대 10%", "part2_ref": "PART2 L2721", "sot_ref": "AI_INVESTING_SPEC §10.2 L366", "match": true, "detail": "SOT: '단일종목 10% 한도'. Match."},
+      {"fact": "핵심 아키텍처: Data Sources (yfinance) → 5-Agent Pipeline → Strategy Execution → 51% Gate → Paper Trading", "part2_ref": "PART2 L2700", "sot_ref": "AI_INVESTING_SPEC §1.2", "match": true, "detail": "SOT §1.2 describes 5-Agent workflow: Perplexity→Gemini→ChatGPT→Claude→Copilot. Architecture flow matches."},
+      {"fact": "14-LOCK 항목 9: TimescaleDB (시계열 DB)", "part2_ref": "PART2 L2738", "sot_ref": "AI_INVESTING_SPEC §14 L429", "match": true, "detail": "SOT §14 item 4: TimescaleDB >= 2.13. Match on component."},
+      {"fact": "14-LOCK 항목 10: Kafka (메시지 큐)", "part2_ref": "PART2 L2739", "sot_ref": "AI_INVESTING_SPEC §14 L428", "match": true, "detail": "SOT §14 item 3: Kafka >= 3.6. Match."},
+      {"fact": "14-LOCK 항목 11: Airflow (워크플로우)", "part2_ref": "PART2 L2740", "sot_ref": "AI_INVESTING_SPEC §14 L426", "match": true, "detail": "SOT §14 item 1: Apache Airflow >= 2.8.0. Match."},
+      {"fact": "14-LOCK 항목 12: S3/MinIO (오브젝트 스토리지)", "part2_ref": "PART2 L2741", "sot_ref": "AI_INVESTING_SPEC §14 L432", "match": true, "detail": "SOT §14 item 7: S3/MinIO latest. Match."},
+      {"fact": "14-LOCK 항목 13: Prometheus + Grafana (모니터링)", "part2_ref": "PART2 L2742", "sot_ref": "AI_INVESTING_SPEC §14 L433", "match": true, "detail": "SOT §14 item 8: Grafana >= 10.0. Match. Note: PART2 adds Prometheus which SOT §14 doesn't explicitly list, but §11 mentions monitoring panels."},
+      {"fact": "VectorBT 조건부 ADOPT (전략 >=3개 시 도입)", "part2_ref": "PART2 L2731", "sot_ref": "AI_INVESTING_SPEC §14.1 D-S3-05 L449", "match": true, "detail": "SOT D-S3-05: 'VectorBT 조건부 ADOPT (전략 3개 이상 시 도입)'. Exact match."},
+      {"fact": "감성 분석: FinBERT (Hugging Face)", "part2_ref": "PART2 L2737", "sot_ref": "AI_INVESTING_SPEC §15 L469", "match": true, "detail": "SOT §15: 'Hugging Face Transformers: FinBERT (ProsusAI/finbert)'. Match."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 15,
+    "present": 11,
+    "missing": [
+      {
+        "id": "B10-M1",
+        "sot_fact": "83개 데이터 소스 상세 (P0=16, P1=9, S0/S1=17+, KB=41+)",
+        "sot_ref": "AI_INVESTING_SPEC §3",
+        "part2_present": false,
+        "detail": "PART2 §6.8 mentions 'Data Sources (yfinance)' in architecture but does not enumerate the 83 data sources or their tier classification."
+      },
+      {
+        "id": "B10-M2",
+        "sot_fact": "96개 전략 카탈로그 (기술적 40 + 퀀트/팩터/옵션/ML 56)",
+        "sot_ref": "AI_INVESTING_SPEC §7, §8",
+        "part2_present": false,
+        "detail": "PART2 §6.8 does not reference the 96 strategy catalog breakdown. Only mentions '5-Agent Pipeline → Strategy Execution' generically."
+      },
+      {
+        "id": "B10-M3",
+        "sot_fact": "7-Layer 데이터 아키텍처 (Collection→Processing→Storage→Strategy→Execution→Monitoring→VAMOS Core)",
+        "sot_ref": "AI_INVESTING_SPEC §2",
+        "part2_present": false,
+        "detail": "PART2 §6.8 uses simplified architecture ('Data Sources → 5-Agent Pipeline → Strategy Execution → 51% Gate → Paper Trading'). The 7-Layer data architecture from SOT is not referenced."
+      },
+      {
+        "id": "B10-M4",
+        "sot_fact": "법적 제약: Wash Sale Rule (30일), PDT Rule ($25K), Uptick Rule (한국 공매도)",
+        "sot_ref": "AI_INVESTING_SPEC §10.1",
+        "part2_present": false,
+        "detail": "PART2 §6.8 does not include legal constraint rules. These are critical for P2 domain implementation."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "51% Gate 5 파라미터 (Win Rate, Sharpe, Decay, Min Trades, Split)", "sot_ref": "AI_INVESTING_SPEC §6.1", "part2_present": true, "detail": "PART2 L2703-2711 has all 5 parameters."},
+      {"sot_fact": "Circuit Breaker 5 조건", "sot_ref": "AI_INVESTING_SPEC §10.2", "part2_present": true, "detail": "PART2 L2713-2721 has all 5 conditions."},
+      {"sot_fact": "14-Item Locked 기술 스택", "sot_ref": "AI_INVESTING_SPEC §14", "part2_present": true, "detail": "PART2 L2723-2744 covers all 14 items, though reorganized by category."},
+      {"sot_fact": "EngineConfig: fee_rate=0.0, slippage_rate=0.0, risk_free_rate=0.05, frequency=1d", "sot_ref": "AI_INVESTING_SPEC §6.2", "part2_present": false, "detail": "PART2 does not include backtest engine configuration details."},
+      {"sot_fact": "5-Agent 구조: Perplexity→Gemini→ChatGPT→Claude→Copilot", "sot_ref": "AI_INVESTING_SPEC §1.2", "part2_present": "partial", "detail": "PART2 L2700 mentions '5-Agent Pipeline' but does not list the 5 specific AI agents."},
+      {"sot_fact": "RSI_BB 전략 구현 상세 (27 파라미터 조합)", "sot_ref": "AI_INVESTING_SPEC §9", "part2_present": false, "detail": "PART2 does not reference RSI_BB specifics."},
+      {"sot_fact": "Grafana 모니터링 패널 목록", "sot_ref": "AI_INVESTING_SPEC §11", "part2_present": false, "detail": "PART2 does not reference Grafana panel details."},
+      {"sot_fact": "Airflow DAG 스케줄링 (06:00 UTC 일일 배치)", "sot_ref": "AI_INVESTING_SPEC §12", "part2_present": false, "detail": "PART2 §6.8 does not include DAG scheduling details."},
+      {"sot_fact": "실시간 Stream Gateway 아키텍처 (WebSocket→Kafka→Consumer→TimescaleDB)", "sot_ref": "AI_INVESTING_SPEC §13", "part2_present": true, "detail": "PART2 §6.8.1 covers RT-BNP integration with Kafka and consumer pattern."},
+      {"sot_fact": "Non-goal 강제: 실거래 절대 금지", "sot_ref": "AI_INVESTING_SPEC §22", "part2_present": true, "detail": "PART2 P2 승인 흐름 (L2808) confirms '사용자 승인 필수' and Paper Trading only."},
+      {"sot_fact": "D-S5-01: Python 3.12 확정 (AI Investing 전용)", "sot_ref": "AI_INVESTING_SPEC §14.2 L455", "part2_present": false, "detail": "SOT specifies Python 3.12 for AI Investing but PART2/VAMOS uses Python 3.11+. Potential version conflict not surfaced in PART2."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-101",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "83개 데이터 소스 상세 분류(P0/P1/S0/KB)가 PART2 §6.8에 미포함",
+      "evidence": "AI_INVESTING_SPEC §3 defines detailed tier classification. PART2 only mentions 'yfinance' in architecture diagram."
+    },
+    {
+      "id": "F-102",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "96개 전략 카탈로그(기술적 40+퀀트 56)가 PART2에 미포함",
+      "evidence": "AI_INVESTING_SPEC §7-8 lists 96 strategies. PART2 §6.8 only references generic '5-Agent Pipeline'."
+    },
+    {
+      "id": "F-103",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "법적 제약 시스템(Wash Sale Rule, PDT Rule, Uptick Rule)이 PART2 §6.8에 미포함",
+      "evidence": "AI_INVESTING_SPEC §10.1 defines 3 legal rules with automatic order blocking. Critical for P2 domain compliance."
+    },
+    {
+      "id": "F-104",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "Python 버전 불일치: AI_INVESTING_SPEC D-S5-01='Python 3.12 확정' vs VAMOS 전체='Python 3.11+'",
+      "evidence": "AI_INVESTING_SPEC §14.2 L455 states 'D-S5-01: Python 3.11 vs 3.12 → 3.12 확정'. PART2/CLAUDE.md specify Python 3.11+. AI Investing 모듈에서 3.12 전용 기능 사용 시 충돌 가능."
+    },
+    {
+      "id": "F-105",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 기술스택 14항목 테이블이 SOT §14 원본과 카테고리/순서가 다르게 재구성됨",
+      "evidence": "PART2 L2726 NOTE (XREF-S6-06)에서 자체 인지. SOT §14는 인프라/도구 중심 14개, PART2는 기능 카테고리별 재구성. yfinance/Alpha Vantage 등은 SOT §14에 없는 항목."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 35,
+    "match_rate": "82.9%",
+    "findings_count": 5
+  }
+}

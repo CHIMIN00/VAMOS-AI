@@ -1,0 +1,17 @@
+{
+  "fix_id": "FIX-019",
+  "fg": "FG-H13",
+  "tier": 3,
+  "order": 19,
+  "severity": "HIGH",
+  "description": "테스트 커버리지 보강: VAL-003/005, SDAR, HMAC, LlamaGuard, GDPR, AC매핑, 아키텍처 테스트 상세 명세 추가",
+  "changes": [
+    {
+      "line": 3604,
+      "section": "§6.3 AC 매핑 뒤, §6.4 앞",
+      "action": "상세 테스트 케이스 명세 서브섹션 삽입 (8개 테스트 그룹, 각 테스트 ID/입력/기대결과/검증기준)"
+    }
+  ],
+  "ripple_expected": ["§6.13 테스트 수 합계", "§7.3 V2 체크리스트", "변경이력"],
+  "applied_at": "2026-03-13"
+}

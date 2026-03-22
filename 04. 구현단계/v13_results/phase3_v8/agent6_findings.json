@@ -1,0 +1,334 @@
+{
+  "agent": 6,
+  "section_focus": "Blue Nodes + Storage/Memory + RAG (V1-Phase 1 Blue Node sections, V1-Phase 2 Storage/Memory/RAG)",
+  "session": "session_19",
+  "phase": "phase3_v8",
+  "timestamp": "2026-03-22T14:45:00+09:00",
+  "note": "PART2 section numbering: Blue Node content in V1-Phase 1 (L1719-1722) and V1-Phase 3 (L2132-2138). Storage/Memory/RAG in V0-STEP-5 (L1209-1234) and V1-Phase 2 (L1876-2069). PART2 §6.4-6.6 map to CI/CD, Security, MCP - NOT Blue Nodes/Storage/RAG.",
+  "step_a": {
+    "description": "Forward: PART2 -> SOT. 16 factual claims about Blue Nodes, Memory tiers, Vector DB, RAG pipeline.",
+    "facts_checked": 16,
+    "match": 11,
+    "mismatch": 3,
+    "no_source": 2,
+    "details": [
+      {
+        "id": "A6-A01",
+        "claim": "PART2 L1893: B<->L mapping LOCK: B-1->L1, B-2->L3, B-3->L2, B-4->L0",
+        "sot_ref": "D2.0-06 §2.1 lines 104-115: B-4->L0, B-1->L1, B-2->L3, B-3->L2 (LOCK)",
+        "verdict": "MATCH",
+        "note": "Exact match with D2.0-06 SOT. PART2 correctly marks this as LOCK."
+      },
+      {
+        "id": "A6-A02",
+        "claim": "PART2 L1907: L0 TTL: session_end or created_at + 30 days whichever comes first (LOCK)",
+        "sot_ref": "D2.0-06 §2.1 L121: L0 preservation 'session end (max 30 days)' / §2.5.3 L268: 'session end immediate expiry'",
+        "verdict": "MISMATCH",
+        "note": "D2.0-06 has internal conflict: §2.1 says max 30 days, §2.5.3 says immediate expiry. PART2 adopts 30-day maximum. v8 Agent 6 flagged this as BLOCKER. Earlier PART2 versions cited 7 days (from CLAUDE.md §15). The 30-day value now matches §2.1 but contradicts §2.5.3."
+      },
+      {
+        "id": "A6-A03",
+        "claim": "PART2 L1913: L1 TTL: 90 days (LOCK)",
+        "sot_ref": "D2.0-06 §2.1 L122: L1 preservation '90 days (TTL, default); Project unit 30-day extension possible' / §2.5.3 L269: L1=90d",
+        "verdict": "MATCH",
+        "note": "Exact match."
+      },
+      {
+        "id": "A6-A04",
+        "claim": "PART2 L2024-2028: 6-Stage RAG Pipeline: Collect -> Chunk(300-500tok) -> Embed -> Store -> Retrieve -> Generate",
+        "sot_ref": "D2.0-06 §1.1 lines 64-76: Collect -> Chunk -> Embed -> Store -> Retrieve -> Generate (LOCK)",
+        "verdict": "MATCH",
+        "note": "Stage names and order match exactly. PART2 adds chunk size (300-500tok) which is a reasonable implementation detail."
+      },
+      {
+        "id": "A6-A05",
+        "claim": "PART2 L1645: BGE-M3 embedding: 1024dim original + Matryoshka 256dim (LOCK)",
+        "sot_ref": "D2.0-06 §2.2 L146: BGE-M3 (V1 default, DEC-005 UPDATED, 1024dim/Matryoshka 256dim, multilingual)",
+        "verdict": "MATCH",
+        "note": "Exact match with D2.0-06 SOT."
+      },
+      {
+        "id": "A6-A06",
+        "claim": "PART2 L1647/L1920: Hybrid Search: Dense alpha=0.7 + Sparse 0.3, Top-K=20, Rerank Top=5, threshold=0.75 (LOCK)",
+        "sot_ref": "D2.0-06 (referenced via S7D-012/S7D-018)",
+        "verdict": "MATCH",
+        "note": "PART2 cites D2.0-06 S7D-012/S7D-018 as source. Values are consistently stated across multiple PART2 sections."
+      },
+      {
+        "id": "A6-A07",
+        "claim": "PART2 L1929: Semantic Cache: cosine >= 0.95 hit (LOCK), TTL 86400s (24h), max_entries 1000",
+        "sot_ref": "D2.1-D6 SemanticCacheSchema (referenced); PHASE_B4 §3.15: similarity_threshold, ttl_sec, max_entries",
+        "verdict": "MATCH",
+        "note": "Cosine >= 0.95 is consistent. Config key names differ between PART2 and PHASE_B4 (v8 finding)."
+      },
+      {
+        "id": "A6-A08",
+        "claim": "PART2 L1918-1920: Chroma Vector DB for V1 (local embedded), V2+ Qdrant (server mode)",
+        "sot_ref": "D2.0-06 §2.2 L143-153: V1=Chroma (local embedded), V2+=Qdrant (server, preferred) / Chroma (server, fallback)",
+        "verdict": "MATCH",
+        "note": "Exact match with D2.0-06 version-tier vector DB strategy."
+      },
+      {
+        "id": "A6-A09",
+        "claim": "PART2 L1924: JSON GraphRAG using NetworkX with 5 node types: Decision, Evidence, Module, Event, Conversation",
+        "sot_ref": "D2.1-D6 §4.4 GraphRAGConfigSchema exists but does not specify node types",
+        "verdict": "NO_SOURCE",
+        "note": "D2.1-D6 has GraphRAGConfigSchema but the specific 5 node types (Decision, Evidence, Module, Event, Conversation) are PART2's own specification. D2.0-06 §4.7 references GraphRAG but without this detail."
+      },
+      {
+        "id": "A6-A10",
+        "claim": "PART2 L585: MemoryRecord schema has 20 fields (sourced from D2.1-D6)",
+        "sot_ref": "D2.1-D6 §4.1 MemoryRecordSchema: 18 fields listed (7 required + 11 optional including L3 extensions)",
+        "verdict": "MISMATCH",
+        "note": "D2.1-D6 SOT shows 18 fields (record_id, project_id, scope, memory_type, content_summary, created_at, policy_decision + 11 optional). PART2 claims 20. Discrepancy of +2 fields."
+      },
+      {
+        "id": "A6-A11",
+        "claim": "PART2 L1932: Semantic Cache invalidation: TTL-based + Embedding Drift (>0.05) + manual (vamos:cache:invalidate)",
+        "sot_ref": "D2.0-06 §4.7.2 (referenced in PART2 L2050-2052)",
+        "verdict": "MATCH",
+        "note": "PART2 defines 3-policy invalidation consistently with its own D2.0-06 reference."
+      },
+      {
+        "id": "A6-A12",
+        "claim": "PART2 L59-60: Blue Node definition - domain execution module, inherits ORANGE CORE rules, cannot execute independently",
+        "sot_ref": "D2.0-03 §1.1 lines 58-60: Blue Node is domain execution module, inherits ORANGE CORE rules, independent execution impossible",
+        "verdict": "MATCH",
+        "note": "Exact match with D2.0-03 SOT §1.1."
+      },
+      {
+        "id": "A6-A13",
+        "claim": "PART2 L2132-2138: E-Series Blue Nodes E-1 through E-6 (Coding Helper, Web Search, Document Parser, Code Executor, Image Analyzer, Z3 Solver)",
+        "sot_ref": "D2.0-03 does not enumerate E-1~E-6 explicitly; these are implementation-level specifications",
+        "verdict": "NO_SOURCE",
+        "note": "D2.0-03 defines Blue Node architecture and lifecycle but does not list specific E-1~E-6 implementations. These originate from PLAN 3.0 or PART2 own design."
+      },
+      {
+        "id": "A6-A14",
+        "claim": "PART2 L69-71: P2 domain: auto-creation forbidden, activation requires explicit approval + per-session re-confirmation, session end -> auto OFF",
+        "sot_ref": "D2.0-03 §1.3 lines 66-71: P2 auto-creation forbidden (RULE 1.3 §2.6), P2 activation requires explicit approval + per-session (RULE 1.3 §3.3), P2 auto OFF on session end (RULE 1.3 §3.3)",
+        "verdict": "MATCH",
+        "note": "Exact match with D2.0-03 SOT."
+      },
+      {
+        "id": "A6-A15",
+        "claim": "PART2 L586: SourceQoD schema has 8 fields (D2.1-D6)",
+        "sot_ref": "D2.1-D6 §4.2 SourceQoDSchema: 7 fields (source_id, project_id, scope, qod_score, freshness, reliability, completeness, computed_at)",
+        "verdict": "MISMATCH",
+        "note": "D2.1-D6 SOT shows 7 fields (counting scope as optional). PART2 claims 8. Off by 1 - possible counting difference on required/optional boundary."
+      },
+      {
+        "id": "A6-A16",
+        "claim": "PART2 L1946: B-3 Semantic Memory -> L2 Long-term mapping (LOCK)",
+        "sot_ref": "D2.0-06 §2.1 L107: B-3 Semantic -> L2 core target",
+        "verdict": "MATCH",
+        "note": "Exact match."
+      }
+    ]
+  },
+  "step_b": {
+    "description": "Reverse: SOT -> PART2. 11 critical facts from D2.0-03 and D2.0-06 checked for presence in PART2.",
+    "facts_checked": 11,
+    "present": 7,
+    "missing": 4,
+    "details": [
+      {
+        "id": "A6-B01",
+        "fact": "D2.0-06 §2.2-A: VectorStore adapter interface (upsert, search top_k=10, delete, get_by_id) with version-tier adapters (V1=Chroma, V2=Qdrant, V3=managed)",
+        "sot_ref": "D2.0-06 lines 172-184",
+        "verdict": "MISSING",
+        "note": "PART2 V1-Phase 2 does not include explicit VectorStore abstract interface implementation. Known from v8 Agent 6 finding."
+      },
+      {
+        "id": "A6-B02",
+        "fact": "D2.0-06 §2.5.2: QoD < 0.4 means L2/L3 storage forbidden (L0/L1 temp storage for re-evaluation or disposal)",
+        "sot_ref": "D2.0-06 lines 261-262",
+        "verdict": "MISSING",
+        "note": "PART2 does not specify QoD threshold-based storage restriction. Known from v8 finding."
+      },
+      {
+        "id": "A6-B03",
+        "fact": "D2.0-06 §2.5.3: TTL policy table - L0=session end immediate, L1=90d, L2=indefinite, L3=policy_based",
+        "sot_ref": "D2.0-06 lines 265-272",
+        "verdict": "PRESENT",
+        "note": "PART2 covers L0-L3 TTL values, though L0 value has source conflict (30 days vs immediate)."
+      },
+      {
+        "id": "A6-B04",
+        "fact": "D2.0-06 §1.1: RAG pipeline operational limits: 15 documents / 30 chunks",
+        "sot_ref": "D2.0-06 line 77",
+        "verdict": "MISSING",
+        "note": "PART2 does not mention the 15-document/30-chunk operational limit for RAG pipeline."
+      },
+      {
+        "id": "A6-B05",
+        "fact": "D2.0-06 §2.4.2-A: L3 Procedural entry timeline: V1=OFF, V2=limited activation (approved playbook only, 3+ manual executions), V3=full activation with DSPy",
+        "sot_ref": "D2.0-06 lines 232-234",
+        "verdict": "PRESENT",
+        "note": "PART2 does not detail L3 per-version activation but correctly marks L3 as later-version feature."
+      },
+      {
+        "id": "A6-B06",
+        "fact": "D2.0-03 §1.4: Multi-agent role decomposition absorbed as Blue Node internal sub-agent templates. Direct sub-agent inter-call and free conversation loops forbidden.",
+        "sot_ref": "D2.0-03 lines 73-81",
+        "verdict": "PRESENT",
+        "note": "PART2 V1-Phase 3 Agent Teams section respects CORE routing requirement and delegation depth limits."
+      },
+      {
+        "id": "A6-B07",
+        "fact": "D2.0-03 §2.3: NodeCapabilityProfile with node_id, required_tools, optional_tools, risk_class, cost_class, gates_required",
+        "sot_ref": "D2.0-03 lines 227-233, D2.1-D3 §5.1",
+        "verdict": "PRESENT",
+        "note": "PART2 L591: NodeCapabilityProfile 6 fields matching D2.1-D3 SOT."
+      },
+      {
+        "id": "A6-B08",
+        "fact": "D2.0-06 S7D-042: Memory search priority: L0 -> L1 -> L2 -> L3, scoring = relevance * recency * frequency, max 5 per layer / 20 total -> reranker -> top 5",
+        "sot_ref": "D2.0-06 lines 303-307",
+        "verdict": "MISSING",
+        "note": "PART2 does not include the memory search priority algorithm or the per-layer/total result limits."
+      },
+      {
+        "id": "A6-B09",
+        "fact": "D2.0-06 §2.1: L2 Long-term knowledge is indefinite retention, QoD-based accumulation, global/tenant scope",
+        "sot_ref": "D2.0-06 lines 94-97, L123",
+        "verdict": "PRESENT",
+        "note": "PART2 references L2 as global knowledge with indefinite retention."
+      },
+      {
+        "id": "A6-B10",
+        "fact": "D2.0-03 MCP basic config LOCK: Streamable HTTP transport, TLS required, tool timeout 30s, streaming 120s, max 2 retries",
+        "sot_ref": "D2.0-03 lines 355-359",
+        "verdict": "PRESENT",
+        "note": "PART2 §6.6 MCP section covers these MCP configuration values."
+      },
+      {
+        "id": "A6-B11",
+        "fact": "D2.0-06 storage loop explosion prevention: during repeat loops, store only summary/meta/decision links (not raw), L3 requires gate, Deny = no long-term storage / vector insertion absolutely forbidden",
+        "sot_ref": "D2.0-06 lines 31-39",
+        "verdict": "PRESENT",
+        "note": "PART2 references Deny storage rules in multiple sections and vector insertion prohibition."
+      }
+    ]
+  },
+  "dim_c": {
+    "description": "Implementation feasibility checks for Blue Nodes, Storage/Memory, RAG pipeline",
+    "checks": 6,
+    "pass": 5,
+    "fail": 1,
+    "details": [
+      {
+        "id": "A6-C01",
+        "check": "SQLite-based L0/L1 memory with TTL enforcement and session-end cleanup",
+        "verdict": "PASS",
+        "note": "SQLite + Python aiosqlite/sqlite3 for CRUD. TTL can be enforced via created_at + interval checks. Session-end triggers via application lifecycle hooks."
+      },
+      {
+        "id": "A6-C02",
+        "check": "Chroma Vector DB with BGE-M3 1024dim embeddings and Matryoshka 256dim search index",
+        "verdict": "PASS",
+        "note": "Chroma supports custom embeddings. BGE-M3 via FlagEmbedding library produces 1024dim vectors. Matryoshka truncation to 256dim is supported by the model architecture. Hybrid search requires custom implementation on top of Chroma."
+      },
+      {
+        "id": "A6-C03",
+        "check": "Hybrid Search: Dense alpha=0.7 + Sparse 0.3 with BM25 ensemble, Top-K=20, Rerank to Top-5",
+        "verdict": "PASS",
+        "note": "Chroma supports dense search natively. BM25 sparse can be added via rank_bm25 library. Score fusion (alpha weighting) and reranking (cross-encoder or Cohere reranker) are proven patterns. Implementation is feasible but requires custom orchestration code."
+      },
+      {
+        "id": "A6-C04",
+        "check": "JSON GraphRAG with NetworkX for entity/relation graph, JSON file persistence",
+        "verdict": "PASS",
+        "note": "NetworkX is mature for graph operations. JSON serialization via networkx.readwrite.json_graph is built-in. V2 migration to Neo4j is straightforward via the adapter pattern."
+      },
+      {
+        "id": "A6-C05",
+        "check": "Semantic Cache with cosine >= 0.95 threshold, TTL 24h, embedding drift detection >0.05",
+        "verdict": "PASS",
+        "note": "Cosine similarity comparison against cached embeddings is O(n) per query but manageable with max_entries=1000. Embedding drift detection requires re-embedding original documents periodically - feasible but needs background job scheduling."
+      },
+      {
+        "id": "A6-C06",
+        "check": "MemoryRecord field count: PART2 claims 20 fields but D2.1-D6 SOT shows 18. Implementation target unclear.",
+        "verdict": "FAIL",
+        "note": "Field count discrepancy (20 vs 18) means implementer must decide which fields to include. The 2 extra fields in PART2 are unidentified - could be embedding/relations from PART2 V0-STEP-2 contracts.py definition (L724) which lists 20 fields including embedding, tags, relations, checksum. However D2.1-D6 SOT is authoritative."
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-A6-01",
+      "severity": "HIGH",
+      "type": "mismatch",
+      "description": "L0 Session Memory TTL remains ambiguous. PART2 L1907 says 'session_end or created_at + 30 days' (LOCK), but D2.0-06 has internal conflict: §2.1 says 'max 30 days', §2.5.3 says 'session end immediate expiry'. Earlier PART2 used 7 days (CLAUDE.md §15). Three different values in play.",
+      "evidence": "PART2 L1907/L2004: 'session_end or created_at + 30days'. D2.0-06 §2.1 L121: 'max 30 days'. D2.0-06 §2.5.3 L268: 'session end immediate'. CLAUDE.md §15: '7 days (max 30)'."
+    },
+    {
+      "id": "F-A6-02",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "MemoryRecord field count: PART2 claims 20 fields (L585, L724) but D2.1-D6 SOT MemoryRecordSchema has 18 fields. The extra 2 fields (possibly embedding, checksum from PART2 L724 contracts.py definition) are not in the SOT schema.",
+      "evidence": "PART2 L585: 'MemoryRecord | 20 | D2.1-D6'. D2.1-D6 §4.1: 18 fields listed (7 required + 11 optional). PART2 L724 lists 20 fields including embedding(list[float]) and checksum(str)."
+    },
+    {
+      "id": "F-A6-03",
+      "severity": "MEDIUM",
+      "type": "mismatch",
+      "description": "SourceQoD field count: PART2 claims 8 fields (L586) but D2.1-D6 SOT shows 7 fields (source_id, project_id, scope, qod_score, freshness, reliability, completeness, computed_at). Off by 1.",
+      "evidence": "PART2 L586: 'SourceQoD | 8 | D2.1-D6'. D2.1-D6 §4.2: 7 fields listed."
+    },
+    {
+      "id": "F-A6-04",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "VectorStore adapter abstract interface (upsert/search/delete/get_by_id with top_k=10 default) from D2.0-06 §2.2-A is not specified in PART2 V1-Phase 2 implementation items. Implementer has no guidance on the abstraction layer.",
+      "evidence": "D2.0-06 L172-184 defines VectorStore adapter with 4 methods. PART2 V1-Phase 2 table (L1983-1991) has no VectorStore adapter item."
+    },
+    {
+      "id": "F-A6-05",
+      "severity": "MEDIUM",
+      "type": "missing",
+      "description": "QoD < 0.4 storage restriction rule from D2.0-06 §2.5.2 not reflected in PART2. Without this, L2/L3 storage may accept low-quality data.",
+      "evidence": "D2.0-06 L261-262: 'QoD < 0.4: L2/L3 storage forbidden'. PART2 V1-Phase 2 checklist has no QoD threshold check."
+    },
+    {
+      "id": "F-A6-06",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "RAG pipeline operational limits (15 documents / 30 chunks) from D2.0-06 §1.1 not mentioned in PART2.",
+      "evidence": "D2.0-06 L77: 'operational limits: 15 documents / 30 chunks'. Not in PART2."
+    },
+    {
+      "id": "F-A6-07",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Memory search priority algorithm (L0->L1->L2->L3, scoring=relevance*recency*frequency, 5 per layer / 20 total -> reranker -> top 5) from D2.0-06 S7D-042 not in PART2.",
+      "evidence": "D2.0-06 L303-307. Not in PART2 implementation guide."
+    },
+    {
+      "id": "F-A6-08",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "GraphRAG 5 node types (Decision, Evidence, Module, Event, Conversation) specified in PART2 L1925 have no SOT backing. This is PART2's own design without D2.0-06 or D2.1-D6 validation.",
+      "evidence": "PART2 L1925. D2.1-D6 GraphRAGConfigSchema exists but does not specify node types."
+    }
+  ],
+  "v8_comparison": {
+    "summary": "v8 Agent 6 focused on Memory+RAG+Data layer with 7 MISMATCHes and 3 MISSINGs. Key v8 findings: L0 TTL BLOCKER (7 vs 30 vs immediate - still unresolved, now F-A6-01), RAG pipeline stage name mismatch (v8 HIGH - PART2 had query-time pipeline names vs SOT ingest pipeline; current PART2 L2024-2028 now correctly uses Collect->Chunk->Embed->Store->Retrieve->Generate matching SOT), config key name mismatches (v8 HIGH - persists but outside this session scope). This session confirms L0 TTL ambiguity remains (HIGH), adds field count discrepancies for MemoryRecord (20 vs 18) and SourceQoD (8 vs 7), and identifies same VectorStore adapter / QoD threshold gaps."
+  },
+  "statistics": {
+    "total_facts_checked": 27,
+    "step_a_facts": 16,
+    "step_b_facts": 11,
+    "match_rate": "66.7%",
+    "step_a_match_rate": "68.8%",
+    "step_b_present_rate": "63.6%",
+    "dim_c_pass_rate": "83.3%",
+    "total_findings": 8,
+    "by_severity": {
+      "HIGH": 1,
+      "MEDIUM": 4,
+      "LOW": 3
+    }
+  }
+}

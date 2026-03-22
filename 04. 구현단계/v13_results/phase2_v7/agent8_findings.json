@@ -1,0 +1,115 @@
+{
+  "agent": "Agent 8",
+  "scope": "PART2 §6.4 CI/CD + §6.11 이벤트/로깅 시스템 검증 (vs PHASE_B6_CICD_PIPELINE, PHASE_B2_PROJECT_STRUCTURE)",
+  "session": "session_15",
+  "timestamp": "2026-03-21T14:10:00Z",
+  "step_a": {
+    "direction": "PART2 → SOT",
+    "facts_checked": 18,
+    "matches": 15,
+    "mismatches": [
+      {
+        "id": "A8-M1",
+        "fact": "PART2 lists CI/CD as separate workflow files (quality-python.yml, quality-rust.yml, etc.)",
+        "part2_ref": "PART2 L2556-2573",
+        "sot_ref": "PHASE_B6 §2 L50",
+        "match": false,
+        "detail": "PART2 lists 14 separate workflow YML files. PHASE_B6 §2 L50 defines 'ci.yml' as a single unified workflow per B2. PART2 has NOTE (XREF-V0-19) explaining this is for readability, but the actual file structure differs. The PART2 comment correctly notes this discrepancy."
+      },
+      {
+        "id": "A8-M2",
+        "fact": "PART2 CI/CD count: ~14개 항목",
+        "part2_ref": "PART2 L2554",
+        "sot_ref": "PHASE_B6 overall structure",
+        "match": false,
+        "detail": "PART2 lists 14 workflow entries. PHASE_B6 defines ci.yml (unified) + release.yml + build-docker.yml + deploy-v2.yml + deploy-v3.yml + security scan (inline) + build-python.yml. The count differs due to PART2 splitting by role vs B6's unified structure."
+      },
+      {
+        "id": "A8-M3",
+        "fact": "deploy-v2.yml: Docker Compose SSH 배포",
+        "part2_ref": "PART2 L2572",
+        "sot_ref": "PHASE_B6 §6.1",
+        "match": true,
+        "detail": "PHASE_B6 §6.1 confirms Docker Compose deployment for V2. Method matches (SSH + docker compose pull)."
+      }
+    ],
+    "match_details": [
+      {"fact": "quality-python.yml: ruff lint + mypy", "part2_ref": "PART2 L2560", "sot_ref": "PHASE_B6 §2.1", "match": true, "detail": "SOT §2.1 confirms ruff (lint+format) + mypy (type check). Match."},
+      {"fact": "quality-rust.yml: cargo fmt + clippy", "part2_ref": "PART2 L2561", "sot_ref": "PHASE_B6 §2.2", "match": true, "detail": "SOT §2.2 confirms rustfmt + clippy. Match."},
+      {"fact": "quality-react.yml: eslint + tsc", "part2_ref": "PART2 L2562", "sot_ref": "PHASE_B6 §2.3", "match": true, "detail": "SOT §2.3 confirms eslint + tsc + prettier. Match."},
+      {"fact": "quality-schema.yml: Pydantic 모델 검증", "part2_ref": "PART2 L2563", "sot_ref": "PHASE_B6 §2.4", "match": true, "detail": "SOT §2.4 confirms Pydantic v2 model import test. Match."},
+      {"fact": "test-python.yml: pytest + coverage", "part2_ref": "PART2 L2564", "sot_ref": "PHASE_B6 §3.1", "match": true, "detail": "SOT §3.1 confirms pytest + pytest-cov. Match."},
+      {"fact": "test-rust.yml: cargo test + tarpaulin", "part2_ref": "PART2 L2565", "sot_ref": "PHASE_B6 §3.2", "match": true, "detail": "SOT §3.2 confirms cargo test + tarpaulin coverage. Match."},
+      {"fact": "test-react.yml: vitest + v8 coverage", "part2_ref": "PART2 L2566", "sot_ref": "PHASE_B6 §3.3", "match": true, "detail": "SOT §3.3 confirms vitest + v8 coverage. Match."},
+      {"fact": "build-tauri.yml: 크로스 플랫폼 빌드 (Win/Mac/Linux)", "part2_ref": "PART2 L2568", "sot_ref": "PHASE_B6 §4.1", "match": true, "detail": "SOT §4.1 has matrix: ubuntu-22.04, windows-latest, macos-latest (arm64+x64). Match."},
+      {"fact": "build-docker.yml: Docker 이미지 빌드 (V2)", "part2_ref": "PART2 L2571", "sot_ref": "PHASE_B6 §4.3", "match": true, "detail": "SOT §4.3 confirms V2+ Docker build with 3 services. Match."},
+      {"fact": "deploy-v3.yml: K8s Helm Blue-Green 배포 (V3)", "part2_ref": "PART2 L2573", "sot_ref": "PHASE_B6 implied V3 section", "match": true, "detail": "SOT V3 strategy (§1.1 table) confirms K8s auto deployment with ArgoCD."},
+      {"fact": "security.yml: pip-audit, cargo-audit, npm audit", "part2_ref": "PART2 L2570", "sot_ref": "PHASE_B6 §1.2 pipeline flow", "match": true, "detail": "SOT §1.2 shows security scan running in parallel. Match on concept."},
+      {"fact": "release.yml: 전체 릴리스 파이프라인", "part2_ref": "PART2 L2569", "sot_ref": "PHASE_B6 §5", "match": true, "detail": "SOT §5 defines release pipeline with SemVer + Changelog + GitHub Release. Match."},
+      {"fact": "EventTypeRegistry 123 항목 (D2.1-D2 SOT)", "part2_ref": "PART2 L3151", "sot_ref": "D2.1-D2 §5.1", "match": true, "detail": "PART2 inline comment lists breakdown: oc.*33 + wf.*4 + ui.builder.*14 + ui.frontmini.*7 + ui.core.*7 + ui.gate.*9 + ui.node.*2 + ui.main.*12 + ui.tool.*6 + ui.memory.*5 + ui.cli.*10 + mem.*2 + storage.*5 + agent.*3 + sdar.*3 = ~122-123. Reasonable match."},
+      {"fact": "FailureCodeRegistry 36 항목", "part2_ref": "PART2 L3183", "sot_ref": "D2.1-D2 §5.2", "match": true, "detail": "PART2 lists 36 failure codes. Count matches D2.1-D2 SOT."},
+      {"fact": "FallbackRegistry 23 항목", "part2_ref": "PART2 L3198", "sot_ref": "D2.1-D2 §5.3", "match": true, "detail": "PART2 lists 23 fallback entries. Count matches D2.1-D2 SOT."}
+    ]
+  },
+  "step_b": {
+    "direction": "SOT → PART2",
+    "facts_checked": 12,
+    "present": 10,
+    "missing": [
+      {
+        "id": "B8-M1",
+        "sot_fact": "PHASE_B6 defines ci.yml as a single unified workflow file",
+        "sot_ref": "PHASE_B2 §2 L50 (ci.yml entry)",
+        "part2_present": "partial",
+        "detail": "PART2 splits into 14 separate files for readability. HTML comment (XREF-V0-19) acknowledges B6 unified structure, but implementer may be confused by the split."
+      },
+      {
+        "id": "B8-M2",
+        "sot_fact": "Ruff line-length = 100, select includes 13 rule codes (E,F,W,I,N,UP,S,B,A,C4,DTZ,T20,ICN)",
+        "sot_ref": "PHASE_B6 §2.1 L97-98",
+        "part2_present": false,
+        "detail": "PART2 §6.4 table only summarizes 'ruff lint + mypy'. The specific ruff config (line-length=100, 13 select codes) is not in PART2 §6.4 but was added to AI prompts in v14.0.0 changelog."
+      }
+    ],
+    "check_details": [
+      {"sot_fact": "GitHub Actions as CI/CD platform", "sot_ref": "PHASE_B6 §1.1", "part2_present": true, "detail": "PART2 §7.2 L3285 references 'GitHub Actions 8-stage'."},
+      {"sot_fact": "Branch strategy: main/develop/feature/hotfix/release", "sot_ref": "PHASE_B6 §1.3", "part2_present": false, "detail": "PART2 does not include branch strategy details. This is implementation-level detail omitted."},
+      {"sot_fact": "Conventional Commits: feat/fix/BREAKING CHANGE convention", "sot_ref": "PHASE_B6 §5.1", "part2_present": false, "detail": "PART2 does not mention commit message convention. Expected to be handled at implementation time."},
+      {"sot_fact": "git-cliff for changelog generation", "sot_ref": "PHASE_B6 §5.2", "part2_present": false, "detail": "Not mentioned in PART2. Tool-specific detail."},
+      {"sot_fact": "Tauri build matrix: 4 targets (linux-x64, windows-x64, macos-arm64, macos-x64)", "sot_ref": "PHASE_B6 §4.1", "part2_present": true, "detail": "PART2 L2568 states '크로스 플랫폼 빌드 (Win/Mac/Linux)'. Implicitly covers this."},
+      {"sot_fact": "Docker services: vamos-orange-core, vamos-blue-nodes, vamos-api-gateway", "sot_ref": "PHASE_B6 §4.3 L685-693", "part2_present": false, "detail": "PART2 does not list specific Docker service names."},
+      {"sot_fact": "V2 deployment: Docker Compose + SSH", "sot_ref": "PHASE_B6 §6.1", "part2_present": true, "detail": "PART2 L2572 states 'Docker Compose SSH 배포'. Match."},
+      {"sot_fact": "Python build workflow (wheel+sdist)", "sot_ref": "PHASE_B6 §4.2", "part2_present": false, "detail": "PART2 does not list build-python.yml. Not critical since it is a standard step."},
+      {"sot_fact": "Coverage report merging (3 languages)", "sot_ref": "PHASE_B6 §3.4", "part2_present": true, "detail": "PART2 L2567 lists 'coverage-report.yml: 3개 언어 커버리지 병합'. Match."},
+      {"sot_fact": "SemVer versioning (MAJOR.MINOR.PATCH)", "sot_ref": "PHASE_B6 §5.1", "part2_present": false, "detail": "Not explicitly in PART2 CI/CD section. Standard practice expected."}
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-81",
+      "severity": "LOW",
+      "type": "mismatch",
+      "description": "PART2 CI/CD를 14개 개별 workflow로 분리 표기하나 PHASE_B6/B2 정본은 ci.yml 단일 통합 워크플로우",
+      "evidence": "PART2 L2556 NOTE (XREF-V0-19)에서 인지 중이며 구현 시 B6 통합 구조를 따르라고 안내. 실질 위험 낮음."
+    },
+    {
+      "id": "F-82",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Branch strategy (main/develop/feature/hotfix/release)가 PART2에 미포함",
+      "evidence": "PHASE_B6 §1.3 정본에 5개 브랜치 전략 명시. PART2 구현 가이드에서 누락."
+    },
+    {
+      "id": "F-83",
+      "severity": "LOW",
+      "type": "missing",
+      "description": "Docker 서비스명 3개 (vamos-orange-core, vamos-blue-nodes, vamos-api-gateway)가 PART2에 미기재",
+      "evidence": "PHASE_B6 §4.3 matrix에 3개 서비스 정의. V2 구현 시 참조 필요."
+    }
+  ],
+  "statistics": {
+    "facts_checked": 30,
+    "match_rate": "83.3%",
+    "findings_count": 3
+  }
+}

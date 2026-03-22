@@ -1,0 +1,11 @@
+{
+  "fix_id": "FIX-005",
+  "fg": "FG-B07",
+  "tier": 1,
+  "order": 5,
+  "severity": "BLOCKER",
+  "description": "v10 대량 추가 후 Phase별 모듈 수 대비 기간 과부하 해소. V1-PH2/3 각 2주→4주, V2-PH2 3주→6주. 후속 Phase 일정 연쇄 조정.",
+  "changes_summary": "12개 위치 수정: 목차(L13-14), 타임라인(L25), V1 기간(L1460), V1-PH2~6 헤더, V2 기간(L1895), V2-PH2~3 헤더",
+  "ripple_expected": ["§1 로드맵 타임라인", "§6.13 작업량", "§7.2 V1 체크리스트", "§7.3 V2 체크리스트", "변경이력"],
+  "applied_at": "2026-03-12"
+}
