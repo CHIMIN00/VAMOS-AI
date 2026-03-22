@@ -2546,7 +2546,7 @@ Python/Rust/React 단위 테스트(~85개), CI/CD 파이프라인 완성,
 > **AI 프롬프트 요약**: "V1-Phase 6 AI Investing MVP + MCP를 구현하세요. §6.8 AI Investing(포트폴리오, Circuit Breaker), §6.6 MCP 서버/클라이언트 7개, E-15 Cloud Collector를 구현합니다. Phase 4-5와 병렬 진행."
 >
 > **참조 SOT 문서** (MUST 로드):
-> - `D2.0-01` §5.9 (AI Investing 정본)
+> - `D2.0-03` §1+§3.3 (BLUE NODE P2 라이프사이클) + `VAMOS_AI_INVESTING_SPEC` (AI Investing 정본) <!-- CORRECTED 2026-03-22: 기존 D2.0-01 §5.9 → D2.0-03 §1+§3.3 -->
 > - `§6.8` (본 문서) — AI Investing 상세
 > - `§6.6` (본 문서) — MCP 서버/클라이언트 목록
 > - `VAMOS_CLOUD_LIBRARY_SPEC` — E-15, RT-BNP V1
@@ -2564,7 +2564,7 @@ MCP Bridge/Server/Client, S-1 Self-check Engine을 구현합니다.
 Phase 4-5와 병렬 진행됩니다.
 
 ■ MUST 로드 SOT
-- D2.0-01 §5.9 — AI Investing 정본
+- D2.0-03 §1+§3.3 — BLUE NODE P2 라이프사이클 + VAMOS_AI_INVESTING_SPEC — AI Investing 정본 <!-- CORRECTED 2026-03-22: 기존 D2.0-01 §5.9 → D2.0-03 §1+§3.3 -->
 - PART2 §6.8 — AI Investing 상세
 - PART2 §6.6 — MCP 서버/클라이언트 7개 목록
 - VAMOS_CLOUD_LIBRARY_SPEC — E-15, RT-BNP V1
@@ -5129,6 +5129,9 @@ Agent Specialization 라이프사이클:
 ---
 
 ## 6.8 AI Investing 상세 구현
+
+> **구현 정본**: AI Investing 구현 상세는 sot 2/Ai-investing-detail/이 Single Source of Truth입니다.
+> 본 섹션은 When(Phase)+Where(코드 위치)만 기술합니다.
 
 ### 핵심 아키텍처
 

@@ -622,6 +622,9 @@ class CircuitBreaker:
 
 ## 18. 4-Phase 로드맵
 
+> **HISTORICAL**: 이 로드맵은 초기 계획 기록입니다. 현행 Phase 일정은
+> PART2 §6.8이 정본입니다. 아래 내용은 역사적 참조용으로만 보존합니다.
+
 ### 18.1 전체 타임라인
 
 ```
@@ -1344,6 +1347,9 @@ Z_session_project_v3_6/
 | PoC 실행 검증 | 미착수 | 환경 미구축 | Phase A 2주차 | Docker 환경 + contracts.py 정렬 완료 후 PoC 5건(OHLCV 수집, DQ 검증, RSI_BB 백테스트, Grafana 대시보드, 51% Gate) 순차 실행 |
 
 ### B.3 다음 단계
+
+> **HISTORICAL**: 아래 일정은 초기 계획 시점의 기록입니다.
+> 현행 일정은 PART2 §6.8을 참조하세요.
 
 ```
 즉시 (1-2주):
