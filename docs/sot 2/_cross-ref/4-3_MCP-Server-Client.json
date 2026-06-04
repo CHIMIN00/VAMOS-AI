@@ -1,0 +1,12 @@
+{
+  "domain": "4-3_MCP-Server-Client",
+  "scan_date": "2026-06-04T23:45:08",
+  "results": {
+    "references": 0,
+    "broken": 0,
+    "external": 0,
+    "lock_ids": 13,
+    "open_conflicts": 0
+  },
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

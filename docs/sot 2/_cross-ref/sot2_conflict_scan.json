@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "scan_type": "sot2-vs-sot",
+    "sot_files": 68,
+    "sot2_files": 2654,
+    "concepts_checked": 7,
+    "MISMATCH": 0,
+    "verdict": "CLEAN",
+    "method": "Anchored cross-cutting LOCK constants: each concept matched only when its keyword anchor co-occurs with the number on the same line, so only identical concepts are compared (no free-number noise). MISMATCH = a non-canonical value appears for that concept.",
+    "timestamp": "2026-06-04T23:45:05",
+    "input_hash": "f906517483d8d817e555ca9d1ea40151538d603b58b3d31187b453889aeca216",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+  },
+  "concepts": [
+    {
+      "concept": "QOD_L2_BAN",
+      "canonical": [
+        0.4
+      ],
+      "note": "QoD < 0.4 → L2 벡터 삽입 금지 (0.40 표기 동일)",
+      "sot_values": {
+        "0.4": 4
+      },
+      "sot2_values": {
+        "0.4": 18
+      },
+      "sot_occurrences": 4,
+      "sot2_occurrences": 18,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "HYBRID_ALPHA",
+      "canonical": [
+        0.3,
+        0.7
+      ],
+      "note": "Hybrid 가중치 쌍 α=0.3(BM25)/vector=0.7 — LOCK-AX-06",
+      "sot_values": {},
+      "sot2_values": {
+        "0.7": 48,
+        "0.3": 20
+      },
+      "sot_occurrences": 0,
+      "sot2_occurrences": 68,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "HYBRID_BETA",
+      "canonical": [
+        0.3,
+        0.7
+      ],
+      "note": "Hybrid 가중치 쌍 (β=0.3 / 보완 0.7)",
+      "sot_values": {},
+      "sot2_values": {
+        "0.3": 4
+      },
+      "sot_occurrences": 0,
+      "sot2_occurrences": 4,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "CONF_HIGH",
+      "canonical": [
+        0.85
+      ],
+      "note": "confidence HIGH 0.85",
+      "sot_values": {
+        "0.85": 3
+      },
+      "sot2_values": {
+        "0.85": 72
+      },
+      "sot_occurrences": 3,
+      "sot2_occurrences": 72,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "CONF_LOW",
+      "canonical": [
+        0.3
+      ],
+      "note": "confidence REFUSE 0.30",
+      "sot_values": {
+        "0.3": 1
+      },
+      "sot2_values": {
+        "0.3": 16
+      },
+      "sot_occurrences": 1,
+      "sot2_occurrences": 16,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "COST_MONTHLY",
+      "canonical": [
+        40.0
+      ],
+      "note": "비용 상한 ₩40,000/월 (V1)",
+      "sot_values": {
+        "40.0": 9
+      },
+      "sot2_values": {
+        "40.0": 16
+      },
+      "sot_occurrences": 9,
+      "sot2_occurrences": 16,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    },
+    {
+      "concept": "COST_GATE",
+      "canonical": [
+        80.0
+      ],
+      "note": "CostGate 80%/100%",
+      "sot_values": {},
+      "sot2_values": {},
+      "sot_occurrences": 0,
+      "sot2_occurrences": 0,
+      "noncanonical_values": [],
+      "noncanonical_examples": [],
+      "status": "CONSISTENT"
+    }
+  ]
+}

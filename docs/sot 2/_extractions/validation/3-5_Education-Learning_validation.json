@@ -1,0 +1,37 @@
+{
+  "domain": "3-5_Education-Learning",
+  "SDV-1_structure": {
+    "status": "PASS",
+    "missing": [],
+    "has_plan": true,
+    "has_spec": true
+  },
+  "SDV-2_category_sum": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent — no extraction inputs"
+  },
+  "SDV-3_source_line": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent"
+  },
+  "SDV-4_lock": {
+    "status": "PASS",
+    "open_conflicts": 0
+  },
+  "SDV-5_schema_types": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) + Pydantic models absent"
+  },
+  "SDV-6_canonical_owner": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent"
+  },
+  "SDV-7_part2_lineref": {
+    "status": "PASS",
+    "out_of_range": [],
+    "part2_lines": 6454
+  },
+  "verdict": "PASS",
+  "timestamp": "2026-06-04T23:45:08",
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

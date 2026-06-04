@@ -1,0 +1,12 @@
+{
+  "domain": "3-2_Multimodal-Processing",
+  "scan_date": "2026-06-04T23:45:08",
+  "results": {
+    "references": 153,
+    "broken": 0,
+    "external": 1,
+    "lock_ids": 12,
+    "open_conflicts": 0
+  },
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

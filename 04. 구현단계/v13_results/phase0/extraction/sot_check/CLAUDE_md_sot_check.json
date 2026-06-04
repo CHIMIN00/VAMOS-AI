@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "mode": "method-c",
+    "target": "CLAUDE.md",
+    "claude_md_source": "docs\\sot\\CLAUDE.md",
+    "canonical_facts_checked": 12,
+    "present": 10,
+    "gap_count": 2,
+    "note": "방식 C 요약 파일이 별도 존재하지 않으므로, method-c의 목적(Phase 2-1 CLAUDE.md 보강 GAP 도출)에 맞춰 현 CLAUDE.md(docs/sot/CLAUDE.md) ↔ Part2 정본 + 핵심 LOCK 상수 대조로 GAP을 산출. GAP은 D1 PASS를 차단하지 않으며 Phase 2-1 입력이다.",
+    "timestamp": "2026-06-04T23:42:54",
+    "input_hash": "b9c6d5d676cd643e6ade101d05d6e6cef3cd228ac5044434d6236ae41ecd7603",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+  },
+  "facts": [
+    {
+      "fact_id": "QOD_L2_BAN",
+      "desc": "QoD < 0.4 → L2 벡터 삽입 금지",
+      "in_claude_md": true,
+      "in_part2": false,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "QOD_HOLD",
+      "desc": "QoD < 0.7 → 출력 보류",
+      "in_claude_md": true,
+      "in_part2": false,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "HYBRID_RATIO",
+      "desc": "Hybrid Search α=0.3(BM25)/vector=0.7",
+      "in_claude_md": false,
+      "in_part2": true,
+      "status": "GAP"
+    },
+    {
+      "fact_id": "CONF_THRESH",
+      "desc": "confidence 임계값 0.85/0.60/0.30",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "COST_MONTHLY",
+      "desc": "비용 상한 ₩40,000/월 (V1)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "COST_GATE",
+      "desc": "CostGate 80%/100% 2단",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "FIVE_GATE",
+      "desc": "5-Gate 실행 순서 (Policy→Approval→Cost→Evidence→SelfCheck)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "NEVER_AUTO",
+      "desc": "NEVER_AUTO 10개 (자동 금지 영역)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "MEMORY_L0L3",
+      "desc": "메모리 L0~L3 계층",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "MAX_RETRIES",
+      "desc": "MCP max_retries (V1/V2=2, V3=3)",
+      "in_claude_md": false,
+      "in_part2": true,
+      "status": "GAP"
+    },
+    {
+      "fact_id": "STATE_MACHINE",
+      "desc": "S0~S8 상태 머신 (LangGraph DAG)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "FIVE_FIELDS",
+      "desc": "ResponseEnvelope 5필드 LOCK",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    }
+  ],
+  "claude_md_gaps": [
+    {
+      "fact_id": "HYBRID_RATIO",
+      "desc": "Hybrid Search α=0.3(BM25)/vector=0.7",
+      "in_part2": true,
+      "recommendation": "Phase 2-1 CLAUDE.md 보강 시 반드시 포함"
+    },
+    {
+      "fact_id": "MAX_RETRIES",
+      "desc": "MCP max_retries (V1/V2=2, V3=3)",
+      "in_part2": true,
+      "recommendation": "Phase 2-1 CLAUDE.md 보강 시 반드시 포함"
+    }
+  ]
+}

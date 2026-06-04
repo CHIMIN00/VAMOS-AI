@@ -1,0 +1,54 @@
+# VAMOS 진행 상태
+
+> 최종 갱신: 2026-06-04 (Phase 1 완료 — D1 PASS_CONDITIONAL)
+
+## 현재 Phase
+**Phase 1 완료 (D1 PASS_CONDITIONAL)** → 다음: Phase 2-0 (외부 의존성 재확인)
+
+## Phase 1 — D1 검증 결과 (2026-06-04)
+- **판정: D1 PASS (CONDITIONAL)** — 값 게이트 5/5 통과, 이연 5항목 전수 등록(누락 0), 자동 정본 변경 0
+- 인덱스: `04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md` + 머신 판정서 `D1_VERDICT.json`
+- Must 게이트:
+  - 1-2 SOT 내부 정합: CONFLICT active 0 (14건 발견·전부 RESOLVED, v13 verdict) — `sot_conflict_report.json`
+  - 1-3 SOT↔SOT2 교차: MISMATCH 0 — `docs/sot 2/_cross-ref/sot2_conflict_scan.json`(+alias `sot2_crossref_report.json`)
+  - 1-4 SOT2 내부 교차: LOCK MISMATCH 0 · BROKEN(설계) 1(사소 네비, 이연) — `cross_ref_matrix.md`/`lock_consistency.md`/`broken_references.md`/`sot2_internal_report.json`/`{도메인}.json×36`
+  - 1-5 구조+LOCK: SDV-1 critical 0 FAIL(36/36) · SDV-4 LOCK WARN 2(5-3,6-5 비차단 이연) · SDV-7 0 — `_sot2_validate_summary.json`(+alias `sot2_validate_report.json`)/`{도메인}_validation.json×36`
+  - 1-9 기준선: `integrity/integrity_snapshot.json` (2,654 파일 SHA-256, D2 기준선) + `integrity/v13_integrity_check_*.json`(SOT68 67 OK/1 CHANGED)
+- Should (비차단, 후속 입력):
+  - 1-6 CLAUDE.md GAP 2건(HYBRID_RATIO, MAX_RETRIES) → Phase 2-1 입력 — `extraction/sot_check/claude_md_gap_report.json`
+  - 1-7 Obsidian 미참조 1 도메인 → Phase 2-3 입력 — `extraction/sot_check/obsidian_gap_report.json`
+  - 1-8 PART1 BLOCKER 14건 baseline · 변경 0 — `extraction/sot_check/blocker_log.json`
+- 이연 대장(자동 정본 변경 0): D-1 5-3 C-04~C-08 / D-2 6-5 W-CB / D-3 2-2 네비링크 / D-4 INDEX 부재 6도메인 / D-5 readiness 문서 변경 — D1_RESULTS_INDEX.md §3
+- git tag: `phase1-d1-pass`
+
+## 완료 항목
+- Phase 0 (2026-04-04): 자산 인벤토리 + 매트릭스 v1.1 + 리스크 15건 + 0-V 전항목 PASS + git tag phase0-complete
+  - P0-2 CLAUDE.md 구조 명세 / Obsidian-매트릭스 매핑 / 설계 자산 맵
+  - P0-4 5개 계획서 목차 / STRATEGY_09 하네스 역참조 / phase0_retro.md
+- Phase 1 SOT 2 콘텐츠 (2026-06-03): 30/30 도메인 Phase 0~4 전 단계 genuine 완료 (`SOT2_MASTER_INDEX.md` ALL_PHASES_ALL_DOMAINS_COMPLETE)
+- Phase 1 D1 검증 (2026-06-04): 위 결과 — **D1 PASS_CONDITIONAL**
+
+## Phase 1 검증 결과 (1-V)
+- ☑ CONFLICT 0건 (active) — /sot-conflict scan (14 RESOLVED)
+- ☑ MISMATCH 0건 — /sot-conflict sot2-vs-sot
+- ☑ SOT 2 교차참조 무결 (LOCK MISMATCH 0; BROKEN 1 사소·이연)
+- ☑ integrity_snapshot.json 저장 완료 (2,654 파일)
+- ☑ 재현성 메타데이터(timestamp, input_hash, skill_version) 전 산출물 기록
+- ⚠️ SDV-4 LOCK WARN 2 (5-3, 6-5) — 비차단 이연 등록(D1_RESULTS_INDEX §3)
+
+## 다음 작업
+Phase 2-0: 외부 의존성 재확인 (PART1 E.1+E.3+B.1, 2026-03-02 이후 변경 여부) — **Must**
+→ 이후 2-1 CLAUDE.md 보강(1-6 GAP 입력) / 2-4~2-5 린터·CI
+→ Phase 2 진입 시 참조: PROGRESS.md + 보강전략 + D1_RESULTS_INDEX.md(이연 5항목)
+
+## 참조 파일
+- 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)
+- 04. 구현단계/v13_results/phase0/D1_VERDICT.json (머신 판정서)
+- VAMOS_최종_로드맵.md Phase 1~2 섹션
+- STRATEGY_11_ASSET_INVENTORY.md / STRATEGY_08_ENGINEERING_MATRIX.md v1.1
+- decisions/phase1_retro.md (Phase 1 회고)
+
+## 리스크 메모
+- 이연 5항목(D-1~D-5)은 LOCK 값 충돌 아님·비차단. 5-3 C-04~C-08 / 6-5 W-CB 는 Phase 2/3 협의 시 정본 우선순위로 해소 예정 (자동 변경 금지).
+- SOT 1건(readiness review 문서) 2026-03-27 baseline 대비 변경 — 신규 snapshot이 새 D2 기준선.
+- hooks/skills 수 변동 → Phase 4 전 건강 검진 필요 (R14).

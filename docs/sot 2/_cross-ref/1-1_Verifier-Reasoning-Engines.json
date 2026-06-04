@@ -1,0 +1,12 @@
+{
+  "domain": "1-1_Verifier-Reasoning-Engines",
+  "scan_date": "2026-06-04T23:45:08",
+  "results": {
+    "references": 65,
+    "broken": 0,
+    "external": 0,
+    "lock_ids": 16,
+    "open_conflicts": 0
+  },
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

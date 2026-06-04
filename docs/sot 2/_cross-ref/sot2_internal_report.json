@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "skill": "sot2-cross-ref all",
+    "domains": 36,
+    "BROKEN": 1,
+    "EXTERNAL": 6,
+    "LOCK_MISMATCH": 0,
+    "total_md_links": 1117,
+    "verdict": "ISSUES",
+    "timestamp": "2026-06-04T23:45:02",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
+    "components": [
+      "cross_ref_matrix.md/.json",
+      "lock_consistency.md/.json",
+      "broken_references.md/.json",
+      "{domain}.json x36"
+    ]
+  },
+  "broken": [
+    {
+      "source": "2-2_COND-Modules-Detail\\04_cat-d-media\\_index.md",
+      "line_target": "../_index.md",
+      "domain": "2-2_COND-Modules-Detail"
+    }
+  ],
+  "lock_consistency": [
+    {
+      "concept": "QOD_L2_BAN",
+      "allowed": [
+        0.4
+      ],
+      "values": {
+        "0.4": 18
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "QoD < 0.4 → L2 벡터 삽입 금지 (0.40 표기 동일)"
+    },
+    {
+      "concept": "HYBRID_ALPHA",
+      "allowed": [
+        0.3,
+        0.7
+      ],
+      "values": {
+        "0.7": 44,
+        "0.3": 14
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "Hybrid 가중치 쌍 α=0.3(BM25)/vector=0.7 — LOCK-AX-06"
+    },
+    {
+      "concept": "HYBRID_BETA",
+      "allowed": [
+        0.3,
+        0.7
+      ],
+      "values": {
+        "0.3": 3
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "Hybrid 가중치 쌍 (β=0.3 / 보완 0.7)"
+    },
+    {
+      "concept": "CONF_HIGH",
+      "allowed": [
+        0.85
+      ],
+      "values": {
+        "0.85": 63
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "confidence HIGH 0.85"
+    },
+    {
+      "concept": "CONF_LOW",
+      "allowed": [
+        0.3
+      ],
+      "values": {
+        "0.3": 12
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "confidence REFUSE 0.30"
+    },
+    {
+      "concept": "COST_MONTHLY",
+      "allowed": [
+        40.0
+      ],
+      "values": {
+        "40.0": 8
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "비용 상한 ₩40,000/월 (V1)"
+    },
+    {
+      "concept": "COST_GATE",
+      "allowed": [
+        80.0
+      ],
+      "values": {},
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "CostGate 80%/100%"
+    }
+  ]
+}

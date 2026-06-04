@@ -1,0 +1,39 @@
+{
+  "domain": "5-3_v12-Additions-Detail",
+  "SDV-1_structure": {
+    "status": "WARN",
+    "missing": [
+      "INDEX.md"
+    ],
+    "has_plan": true,
+    "has_spec": true
+  },
+  "SDV-2_category_sum": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent — no extraction inputs"
+  },
+  "SDV-3_source_line": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent"
+  },
+  "SDV-4_lock": {
+    "status": "WARN",
+    "open_conflicts": 4
+  },
+  "SDV-5_schema_types": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) + Pydantic models absent"
+  },
+  "SDV-6_canonical_owner": {
+    "status": "N/A",
+    "reason": "_extractions/ (SC JSON) absent"
+  },
+  "SDV-7_part2_lineref": {
+    "status": "PASS",
+    "out_of_range": [],
+    "part2_lines": 6454
+  },
+  "verdict": "ATTENTION",
+  "timestamp": "2026-06-04T23:45:08",
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

@@ -1,0 +1,107 @@
+{
+  "domains": [
+    "0-0_Governance-Rules-Meta",
+    "1-1_Verifier-Reasoning-Engines",
+    "1-2_Auxiliary-Modules",
+    "2-1_Blue-Node-Architecture",
+    "2-2_COND-Modules-Detail",
+    "3-10_Agent-Protocol-Interoperability",
+    "3-2_Multimodal-Processing",
+    "3-3_PKM-Knowledge-Management",
+    "3-4_Workflow-RPA",
+    "3-5_Education-Learning",
+    "3-6_Health-Wellness-EmotionAI",
+    "3-7_Developer-Tools-API-SDK",
+    "3-8_Conversation-A2A",
+    "3-9_Business-Model-Strategy",
+    "4-1_Rust-Tauri-Infrastructure",
+    "4-2_CICD-Pipeline",
+    "4-3_MCP-Server-Client",
+    "4-4_MLOps-LLMOps",
+    "5-1_Benchmark-Evaluation",
+    "5-2_File-Context",
+    "5-3_v12-Additions-Detail",
+    "5-4_v23-Extension-Items",
+    "6-10_EXP-Modules-Detail",
+    "6-11_Hologram-Main-LLM",
+    "6-12_Event-Logging",
+    "6-13_Operations",
+    "6-1_UI-UX-System",
+    "6-2_Security-Governance",
+    "6-3_Agent-Teams-PARL",
+    "6-4_Memory-RAG-Storage",
+    "6-5_SDAR-System",
+    "6-6_Self-Evolution-System",
+    "6-7_RT-BNP-DCL",
+    "6-8_Cloud-Library",
+    "6-9_Brain-Adapter-HAL",
+    "Ai-investing-detail"
+  ],
+  "matrix": {
+    "0-0_Governance-Rules-Meta": {},
+    "1-1_Verifier-Reasoning-Engines": {
+      "1-1_verifier-reasoning-engines": 65
+    },
+    "1-2_Auxiliary-Modules": {
+      "1-2_auxiliary-modules": 292
+    },
+    "2-1_Blue-Node-Architecture": {},
+    "2-2_COND-Modules-Detail": {
+      "2-2_cond-modules-detail": 146
+    },
+    "3-10_Agent-Protocol-Interoperability": {},
+    "3-2_Multimodal-Processing": {
+      "3-2_multimodal-processing": 152
+    },
+    "3-3_PKM-Knowledge-Management": {
+      "3-3_pkm-knowledge-management": 49,
+      "3-2_multimodal-processing": 4
+    },
+    "3-4_Workflow-RPA": {
+      "3-4_workflow-rpa": 6
+    },
+    "3-5_Education-Learning": {},
+    "3-6_Health-Wellness-EmotionAI": {},
+    "3-7_Developer-Tools-API-SDK": {},
+    "3-8_Conversation-A2A": {},
+    "3-9_Business-Model-Strategy": {},
+    "4-1_Rust-Tauri-Infrastructure": {
+      "4-1_rust-tauri-infrastructure": 6
+    },
+    "4-2_CICD-Pipeline": {},
+    "4-3_MCP-Server-Client": {},
+    "4-4_MLOps-LLMOps": {},
+    "5-1_Benchmark-Evaluation": {},
+    "5-2_File-Context": {
+      "5-2_file-context": 163
+    },
+    "5-3_v12-Additions-Detail": {},
+    "5-4_v23-Extension-Items": {},
+    "6-10_EXP-Modules-Detail": {},
+    "6-11_Hologram-Main-LLM": {},
+    "6-12_Event-Logging": {
+      "6-12_event-logging": 1
+    },
+    "6-13_Operations": {},
+    "6-1_UI-UX-System": {},
+    "6-2_Security-Governance": {},
+    "6-3_Agent-Teams-PARL": {},
+    "6-4_Memory-RAG-Storage": {},
+    "6-5_SDAR-System": {},
+    "6-6_Self-Evolution-System": {
+      "6-6_self-evolution-system": 15
+    },
+    "6-7_RT-BNP-DCL": {
+      "6-7_rt-bnp-dcl": 2
+    },
+    "6-8_Cloud-Library": {},
+    "6-9_Brain-Adapter-HAL": {},
+    "Ai-investing-detail": {
+      "ai-investing-detail": 204
+    }
+  },
+  "total_ref_links": 1117,
+  "timestamp": "2026-06-04T23:45:08",
+  "input_hash": "1bfba3bbf113ae06b51ad9f308c12cd7858b4ba39276640fd622faf5a5fbe3f6",
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

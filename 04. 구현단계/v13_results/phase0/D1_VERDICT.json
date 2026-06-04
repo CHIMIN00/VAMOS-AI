@@ -1,0 +1,184 @@
+{
+  "d1_verdict": "PASS_CONDITIONAL",
+  "verdict_note": "5개 값 게이트(1-2 CONFLICT·1-3 MISMATCH·1-4 LOCK MISMATCH·1-5 SDV-1 critical/SDV-4 lock value·1-9 snapshot) 전수 통과. SDV-4 WARN 2건 + BROKEN 1건은 모두 LOCK 값 충돌이 아닌 사전 존재·소유자 문서화 비차단 이연 항목으로 아래 이연대장에 전수 등록(누락 0). 사용자 지시(안전·무누락·무오류)에 따라 자동 정본 변경 없이 전 항목 추적.",
+  "gates": {
+    "1-2_sot_conflict_scan": {
+      "metric": "active CONFLICT",
+      "value": 0,
+      "target": 0,
+      "pass": true,
+      "detail": "14 found, all RESOLVED (v13 verdict)"
+    },
+    "1-3_sot2_vs_sot": {
+      "metric": "MISMATCH",
+      "value": 0,
+      "target": 0,
+      "pass": true
+    },
+    "1-4_lock_mismatch": {
+      "metric": "LOCK MISMATCH",
+      "value": 0,
+      "target": 0,
+      "pass": true
+    },
+    "1-4_broken_refs": {
+      "metric": "BROKEN (design content)",
+      "value": 1,
+      "target": 0,
+      "pass": false,
+      "external_excluded": 6
+    },
+    "1-5_sdv1_structure": {
+      "metric": "SDV-1 critical FAIL",
+      "value": 0,
+      "target": 0,
+      "pass": true,
+      "index_warn": 6
+    },
+    "1-5_sdv4_lock": {
+      "metric": "SDV-4 LOCK WARN/FAIL",
+      "value": 2,
+      "target": 0,
+      "pass": false
+    },
+    "1-5_sdv7_part2ref": {
+      "metric": "SDV-7 out-of-range",
+      "value": 0,
+      "target": 0,
+      "pass": true
+    },
+    "1-9_integrity_snapshot": {
+      "metric": "snapshot saved",
+      "value": 2654,
+      "target": ">0",
+      "pass": true
+    }
+  },
+  "value_gates_pass": true,
+  "strict_all_pass": false,
+  "deferral_register": [
+    {
+      "ref": "5-3 C-04~C-08",
+      "type": "LOCK 매핑/출처 불일치 (5건)",
+      "status": "OPEN (owner-documented non-blocking, since 2026-04-03, '게이트 영향 없음/4-2 선례')",
+      "blocking": false,
+      "lock_value_conflict": false,
+      "owner_phase": "Phase 2/3 협의",
+      "evidence": "docs/sot 2/5-3_v12-Additions-Detail/CONFLICT_LOG.md C-04..C-08"
+    },
+    {
+      "ref": "6-5 W-CB",
+      "type": "Circuit Breaker 소유권 미확정 (1건)",
+      "status": "OPEN (DEFERRED_TO_PHASE3 OBSERVE_ONLY marker)",
+      "blocking": false,
+      "lock_value_conflict": false,
+      "owner_phase": "Phase 3 (6-2 Security 협의)",
+      "evidence": "docs/sot 2/6-5_SDAR-System/CONFLICT_LOG.md W-CB"
+    },
+    {
+      "ref": "2-2 04_cat-d-media/_index.md -> ../_index.md",
+      "type": "깨진 네비게이션 링크 (1건)",
+      "status": "BROKEN (domain-root _index.md 부재, cosmetic nav only)",
+      "blocking": false,
+      "lock_value_conflict": false,
+      "owner_phase": "Phase 2 (문서 보강)",
+      "evidence": "broken_references.json"
+    },
+    {
+      "ref": "INDEX.md 부재 6개 도메인 (0-0/5-3/5-4/6-4/6-10/6-13)",
+      "type": "보조 INDEX 파일 부재",
+      "status": "WARN (AUTHORITY_CHAIN+CONFLICT_LOG 전수 존재, 전역 SOT2_MASTER_INDEX 보유)",
+      "blocking": false,
+      "lock_value_conflict": false,
+      "owner_phase": "Phase 2 (선택)",
+      "evidence": "_sot2_validate_summary.json SDV-1_index_warn_domains"
+    },
+    {
+      "ref": "VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+      "type": "SOT 1건 변경 (vs 2026-03-27 baseline)",
+      "status": "CHANGED (review 문서, 핵심 D2.0 spec 아님). 신규 snapshot이 새 D2 baseline",
+      "blocking": false,
+      "lock_value_conflict": false,
+      "owner_phase": "기록만",
+      "evidence": "v13_integrity_check_*.json"
+    }
+  ],
+  "open_conflict_register": [
+    {
+      "domain": "5-3_v12-Additions-Detail",
+      "id": "C-04",
+      "line": 16,
+      "excerpt": "| C-04 | 2026-04-03 | OPEN | **LOCK-V12-05 상속 매핑 불일치** — §A.4에서 LOCK-V12-05(CBT 15가지 인지 왜곡 유형)의 상속 원본을 \"LOCK-HW-09 (7원칙 내 관련)\"으로 매핑. 그러나 LOCK-HW-09의 실제 값은 \"감정 AI 7원칙(비진단/프라이버시/투명성/전문가연결/비조작/자율성/기능끄기)\"이며 CBT 15유형 내용을 포함하지"
+    },
+    {
+      "domain": "5-3_v12-Additions-Detail",
+      "id": "C-05",
+      "line": 17,
+      "excerpt": "| C-05 | 2026-04-03 | OPEN | **LOCK-V12-09 Zettelkasten 링크 타입 개수·명칭 불일치** — V12 문서(§3.4, §A.4, AUTHORITY_CHAIN)는 \"4종 링크 타입\"으로 기재하고 AUTHORITY_CHAIN에 (RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES) 4종을 나열. 그러나 #6 PKM 부록 §A"
+    },
+    {
+      "domain": "5-3_v12-Additions-Detail",
+      "id": "C-06",
+      "line": 18,
+      "excerpt": "| C-06 | 2026-04-03 | OPEN | **LOCK-V12-08 AUTHORITY_CHAIN 현금 비중 불일치** — AUTHORITY_CHAIN.md의 LOCK-V12-08에 \"현금 비중 최소: 5%\"가 기재되어 있으나, §3.4와 §A.4에는 현금 비중 미기재(단일 종목 10%, 단일 섹터 30%만 정의). 도메인 portfolio_optimization.md에는 MIN_CA"
+    },
+    {
+      "domain": "5-3_v12-Additions-Detail",
+      "id": "C-08",
+      "line": 20,
+      "excerpt": "| C-08 | 2026-04-03 | OPEN | **LOCK-V12-03 도메인 내부 tau 값 불일치 (참고)** — LOCK-V12-03의 \"tau=0.025\"는 Ai-investing top_down_allocation.md 기본값(0.025)과 일치하나, 같은 도메인 portfolio_optimization.md E9 LOCK에는 \"τ=0.05\"로 기재. 도메인 LOCK 범위는 \""
+    },
+    {
+      "domain": "6-5_SDAR-System",
+      "id": "W-CB",
+      "line": 35,
+      "excerpt": "| W-CB | Circuit Breaker 소유권 | L16 P2 수리 제한에서 \"Circuit Breaker OPEN 시 자동 복구 금지\" 참조 — 소유 도메인 미확인 (6-2 Security? 3-5 AI-Investing?) | Phase 1 경계 협의 시 확정 필요 | OPEN |"
+    },
+    {
+      "domain": "6-5_SDAR-System",
+      "id": "W-CB",
+      "line": 152,
+      "excerpt": "| W-CB | OPEN | OPEN (DEFERRED_TO_PHASE3 OBSERVE_ONLY 마커 추가) | Phase 1 경계 협의 잔여, Phase 3 시점 6-2 Security 도메인과 최종 협의 |"
+    }
+  ],
+  "should_checks": {
+    "1-6_claude_md_gap": {
+      "gap_count": 2,
+      "gaps": [
+        "HYBRID_RATIO",
+        "MAX_RETRIES"
+      ],
+      "blocks_d1": false,
+      "feeds": "Phase 2-1"
+    },
+    "1-7_obsidian_gap": {
+      "unreferenced_domains": 1,
+      "blocks_d1": false,
+      "feeds": "Phase 2-3"
+    },
+    "1-8_blocker_log": {
+      "blocker_count": 14,
+      "change_detected": false,
+      "blocks_d1": false
+    }
+  },
+  "integrity": {
+    "sot68_unchanged": 67,
+    "sot68_changed": 1,
+    "snapshot_files": 2654,
+    "snapshot_manifest_sha256": "26ff46ba0f1e3b78639022410b3997b0bb2ba2293ca44a53b1b502a724f9e574"
+  },
+  "reproducibility": {
+    "timestamp": "2026-06-04T23:44:34",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
+    "deterministic": "1-2..1-5,1-9 동일 입력=동일 출력 (스크립트 _d1/)",
+    "scripts": [
+      "d1_common.py",
+      "d1_runner.py",
+      "d1_runner2.py",
+      "d1_integrity.py",
+      "d1_aux.py",
+      "d1_verdict.py"
+    ]
+  }
+}

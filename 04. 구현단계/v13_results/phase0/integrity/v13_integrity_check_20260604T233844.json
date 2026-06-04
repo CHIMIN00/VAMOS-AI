@@ -1,0 +1,673 @@
+{
+  "check_timestamp": "2026-06-04T23:38:44",
+  "sot_total": 68,
+  "changed": 1,
+  "unchanged": 67,
+  "no_recorded_hash": 0,
+  "verdict": "CHANGED_DETECTED",
+  "baseline_used": "docs\\sot 2\\_cross-ref\\integrity_baseline.json",
+  "note": "Compares current SOT-68 SHA-256 against hashes recorded at v13 extraction time (EA01..15 source_file hashes + _cross-ref/integrity_baseline.json 2026-03-27). CHANGED = file edited since extraction (e.g. v13e fix backups). NO_RECORDED_HASH = no recorded reference for that file.",
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
+  "details": [
+    {
+      "sot_file": "BASE-1.3_VAMOS_RULE_1.3_BASE.md",
+      "status": "OK",
+      "hash_current": "297e1df31fbfab71e22ae5d18ad7554352d52d5bb4192dc728d21158625dc02c",
+      "hash_recorded": [
+        "297e1df31fbfab71e22ae5d18ad7554352d52d5bb4192dc728d21158625dc02c"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "CLAUDE.md",
+      "status": "OK",
+      "hash_current": "b9c6d5d676cd643e6ade101d05d6e6cef3cd228ac5044434d6236ae41ecd7603",
+      "hash_recorded": [
+        "414215c23f960732414c26190d8400fac1c029de8aeb7d2e12d2025eceb8e47d",
+        "b9c6d5d676cd643e6ade101d05d6e6cef3cd228ac5044434d6236ae41ecd7603"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+      "status": "OK",
+      "hash_current": "999999869061bfad138a7a4a83a533bef2e55ff0793c1a32342e35f3f09d1d4e",
+      "hash_recorded": [
+        "999999869061bfad138a7a4a83a533bef2e55ff0793c1a32342e35f3f09d1d4e"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+      "status": "OK",
+      "hash_current": "884790153fa476092d3937c6dd545d95e26a1054098a0cafbecfab76b297a62a",
+      "hash_recorded": [
+        "884790153fa476092d3937c6dd545d95e26a1054098a0cafbecfab76b297a62a"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+      "status": "OK",
+      "hash_current": "2739b7aa16b19fa729440de6d45da24adfe16f93ec25802a583ef7f48dae8958",
+      "hash_recorded": [
+        "2739b7aa16b19fa729440de6d45da24adfe16f93ec25802a583ef7f48dae8958",
+        "eb8b066b1dd5aa6e6f89b161c86f0ab61d2496e3438436521addf7529b06eef2"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+      "status": "OK",
+      "hash_current": "2460abe456b879f4bd3a5b5ce2c230321a72155c6a739ec07011d14cb87d1c75",
+      "hash_recorded": [
+        "2460abe456b879f4bd3a5b5ce2c230321a72155c6a739ec07011d14cb87d1c75",
+        "8b2e7cdfc9126e623b3bed5d03c1365919cbe20769575142f283f204459695bb"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+      "status": "OK",
+      "hash_current": "d0f00f4c696c89b7cb908e92bcec8b793977180a2a04d70e56ffe3e7e0b0566e",
+      "hash_recorded": [
+        "a0aea94489f5119ee6bd6514f5eee6c05afc9eedb2d7d824a07e09c440ce9fef",
+        "d0f00f4c696c89b7cb908e92bcec8b793977180a2a04d70e56ffe3e7e0b0566e"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+      "status": "OK",
+      "hash_current": "1e7c479d8114370c6d563ead36db885dac29a9f8f9f3874a7065326129e040fc",
+      "hash_recorded": [
+        "1e7c479d8114370c6d563ead36db885dac29a9f8f9f3874a7065326129e040fc",
+        "9fafc56e0d467be44ec1ea591f271b1eef9a36580e4755ddf3f0c096ec9021b3"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+      "status": "OK",
+      "hash_current": "59d0c289730e12a61159a275a6f1c36113f15ee859fb6984683d78789b69801a",
+      "hash_recorded": [
+        "59d0c289730e12a61159a275a6f1c36113f15ee859fb6984683d78789b69801a"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md",
+      "status": "OK",
+      "hash_current": "297d17822ada9c59e84ae41bf84c51ef98b1f6ef02b46377b271d46f69f9b041",
+      "hash_recorded": [
+        "297d17822ada9c59e84ae41bf84c51ef98b1f6ef02b46377b271d46f69f9b041"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-A1_A1_TECH_STACK.md",
+      "status": "OK",
+      "hash_current": "f8f02f8a19db3866e2d9401ab36eda3d2c5238d5428d5b59992a9faf3ae72da6",
+      "hash_recorded": [
+        "01f55fa5c89bfeda76ce6e3b8d199451b73072a6dc9e19c840cbd64a69b6fc97",
+        "f8f02f8a19db3866e2d9401ab36eda3d2c5238d5428d5b59992a9faf3ae72da6"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+      "status": "OK",
+      "hash_current": "65310d8638d66fe132fd4000ace1eae0e5c90e1b2dbd153dc613e49d9264d8de",
+      "hash_recorded": [
+        "65310d8638d66fe132fd4000ace1eae0e5c90e1b2dbd153dc613e49d9264d8de"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D2_D2_SCHEMA_ORANGE_CORE.md",
+      "status": "OK",
+      "hash_current": "3ca4e6d79ced73ab3325b1da96453045065e4203497dd3bacda69327a3a9f835",
+      "hash_recorded": [
+        "3ca4e6d79ced73ab3325b1da96453045065e4203497dd3bacda69327a3a9f835"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+      "status": "OK",
+      "hash_current": "2771b4132e33ef32c87dbe6601023843d50f7cd9dff7e5fca5f5dc6916923714",
+      "hash_recorded": [
+        "2771b4132e33ef32c87dbe6601023843d50f7cd9dff7e5fca5f5dc6916923714"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D4_D4_SCHEMA_INFRA_CORE.md",
+      "status": "OK",
+      "hash_current": "accf0c2bb55c5c1020ab96882aa51bd287b826cda366c5fc42b87f539deb482a",
+      "hash_recorded": [
+        "accf0c2bb55c5c1020ab96882aa51bd287b826cda366c5fc42b87f539deb482a",
+        "e93a18b8d32caaa0643970600e0fb086ffa2a0bc44d84365de7e90b41d2db9f3"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D5_D5_SCHEMA_AGENT_WORKFLOW.md",
+      "status": "OK",
+      "hash_current": "e0dd69640f4f46ae5460b38cb3abd644b2d152eccf84ef36bc790d735177a2f9",
+      "hash_recorded": [
+        "e0dd69640f4f46ae5460b38cb3abd644b2d152eccf84ef36bc790d735177a2f9"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md",
+      "status": "OK",
+      "hash_current": "73d24bed5aaccd5f123a017af6d895886d1ce2180280f5943b987f91477dbb0d",
+      "hash_recorded": [
+        "73d24bed5aaccd5f123a017af6d895886d1ce2180280f5943b987f91477dbb0d"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+      "status": "OK",
+      "hash_current": "fe4f6b67d07be0daf3cc4568794bb87bdac11a0ab06b7a64ecc6b1c7d279f7ce",
+      "hash_recorded": [
+        "fe4f6b67d07be0daf3cc4568794bb87bdac11a0ab06b7a64ecc6b1c7d279f7ce"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-D8_D8_SCHEMA_UI_UX.md",
+      "status": "OK",
+      "hash_current": "27bc49e225074992c538f3e13e26f1192109093132a7ef8c123fc77f7d0ae177",
+      "hash_recorded": [
+        "27bc49e225074992c538f3e13e26f1192109093132a7ef8c123fc77f7d0ae177"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "D2.1-Q1_Q1_AUDIT_REPORT.md",
+      "status": "OK",
+      "hash_current": "6119f9cf7037637456c5cb1044b401364150675f90e803b88acfc7f9bd77cb83",
+      "hash_recorded": [
+        "6119f9cf7037637456c5cb1044b401364150675f90e803b88acfc7f9bd77cb83"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B1_API_CONTRACT.md",
+      "status": "OK",
+      "hash_current": "452a6a740e9ffef891544b861156141386b8a67e80d5fcc78c6865f6727d3d5f",
+      "hash_recorded": [
+        "3a8d3c88ac35e532f857c062eed29c63e75013a2afaaac747d1d83dfd251218c",
+        "452a6a740e9ffef891544b861156141386b8a67e80d5fcc78c6865f6727d3d5f"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B2_PROJECT_STRUCTURE.md",
+      "status": "OK",
+      "hash_current": "dcb047ba3e8913a4e375cf61cbb008709dcc4eb595b8ca1d4aaf74745b6c3ba5",
+      "hash_recorded": [
+        "4a64b1f594d9d307722d27f28df994e6fd1261be78a595e9e49b64fa47504875",
+        "dcb047ba3e8913a4e375cf61cbb008709dcc4eb595b8ca1d4aaf74745b6c3ba5"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B3_DEPENDENCIES.md",
+      "status": "OK",
+      "hash_current": "14feebe05e4f945bb119e830efaaee5a0ea3312f23f3d991370c572cc672e736",
+      "hash_recorded": [
+        "14feebe05e4f945bb119e830efaaee5a0ea3312f23f3d991370c572cc672e736",
+        "27e71559eba1b4fa097b42e20ba07cf9b350aec19f074a6d7b77c0a33fac6c42"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B4_CONFIG_SPEC.md",
+      "status": "OK",
+      "hash_current": "7b05dbacfe3b14fe68884365a6154a798b51bf5e83fa0c9124704e920337e808",
+      "hash_recorded": [
+        "461879abb9062bf82a8085ff5f975e47e10bc00056cac1c00c48bd9ac5b12fad",
+        "7b05dbacfe3b14fe68884365a6154a798b51bf5e83fa0c9124704e920337e808"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B5_TEST_STRATEGY.md",
+      "status": "OK",
+      "hash_current": "9efcae3f5664957705c93380fa09aa762a512fddab3370016416b215bc7d7a2a",
+      "hash_recorded": [
+        "9efcae3f5664957705c93380fa09aa762a512fddab3370016416b215bc7d7a2a"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B6_CICD_PIPELINE.md",
+      "status": "OK",
+      "hash_current": "9b8f60885ce4c7753e1f9a081725346ea8ba5d7cbae5229dbb1806c1801a4eb5",
+      "hash_recorded": [
+        "9b8f60885ce4c7753e1f9a081725346ea8ba5d7cbae5229dbb1806c1801a4eb5"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PHASE_B7_MIGRATION_STRATEGY.md",
+      "status": "OK",
+      "hash_current": "5a092b8372e4ba29bf1ec95409fb6f9ca9c9712466d33a9fd4aa2dfeb2dc8265",
+      "hash_recorded": [
+        "5a092b8372e4ba29bf1ec95409fb6f9ca9c9712466d33a9fd4aa2dfeb2dc8265"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PLAN-2.0_VAMOS_PLAN_2.0_.md",
+      "status": "OK",
+      "hash_current": "b9e94c82de0f9c4f183f1bc7eb69c00de7796a7fb32f24dde6c14798ce2570c7",
+      "hash_recorded": [
+        "b9e94c82de0f9c4f183f1bc7eb69c00de7796a7fb32f24dde6c14798ce2570c7",
+        "beec98579a7f82d23ef3afc967b91f61cee08b016f6e234b9135881301a7204f"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+      "status": "OK",
+      "hash_current": "3014d30b89a85fc509eb37a7d7c7e7dbddbbea522a6febd630b2e91fdfd8c68c",
+      "hash_recorded": [
+        "3014d30b89a85fc509eb37a7d7c7e7dbddbbea522a6febd630b2e91fdfd8c68c"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-B_대화프로세스_작업가이드.md",
+      "status": "OK",
+      "hash_current": "41af58c5885ca730b55e7598abf43c625f6df01bc5b25620445124e8168e293d",
+      "hash_recorded": [
+        "41af58c5885ca730b55e7598abf43c625f6df01bc5b25620445124e8168e293d",
+        "b0ef6dd71f7c02fc67b2b5ce79d8e8d139d992066fc2c8fb436696ef18bae524"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-C_UI_UX_전수비교_작업가이드.md",
+      "status": "OK",
+      "hash_current": "9c7b4ea26c2d1d1d6cf32eaa8089e41ee5a16ce913c6f3cb4eed1e1b0f11f709",
+      "hash_recorded": [
+        "08d805e6445413efa2e915166c9db4582c2386ec7c6503828769dabe1ff71f83",
+        "9c7b4ea26c2d1d1d6cf32eaa8089e41ee5a16ce913c6f3cb4eed1e1b0f11f709"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-D_메모리_저장소_아키텍처_작업가이드.md",
+      "status": "OK",
+      "hash_current": "f08a526db7939792fdaf31cd6d615dad187678cb2c29f25a7648bdab71ef54bf",
+      "hash_recorded": [
+        "2625cfe7207544fb8b8d172e8c6fcf995db6f0e36123db325e2448c9c40af2bb",
+        "f08a526db7939792fdaf31cd6d615dad187678cb2c29f25a7648bdab71ef54bf"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-E_보안_안전_거버넌스_작업가이드.md",
+      "status": "OK",
+      "hash_current": "6d1b9ab153b4d4bf2f769f13e158d7ba60da4161e79d2b887bbaea8be6e8ce1e",
+      "hash_recorded": [
+        "6d1b9ab153b4d4bf2f769f13e158d7ba60da4161e79d2b887bbaea8be6e8ce1e",
+        "ce3021b783e3bfc2fe2821886a3c14654bd555ee7553877cd15b3d4c52b0934a"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-F_인프라_배포_MLOps_작업가이드.md",
+      "status": "OK",
+      "hash_current": "91ce88c0b5348c8b8def78914785cf79d738d9832635f359989fb942a844b782",
+      "hash_recorded": [
+        "91ce88c0b5348c8b8def78914785cf79d738d9832635f359989fb942a844b782",
+        "dbfd0133543e70e0d046670a5b91c15fc6695a945213dd16ad1940db194a8074"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+      "status": "OK",
+      "hash_current": "07ddf6c0f374a367a56a0c4445b7b4ab8f6fff0af0861c7ff601e1b906c8b277",
+      "hash_recorded": [
+        "07ddf6c0f374a367a56a0c4445b7b4ab8f6fff0af0861c7ff601e1b906c8b277",
+        "0e3909271097bc29cc305f3b4a4818ff88eea52bee4bcea851f2c0358969444f"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+      "status": "OK",
+      "hash_current": "40312cd0e2df728cdce0aa3252e090c4d40a6de52eb6894711c5bc424b1bc782",
+      "hash_recorded": [
+        "40312cd0e2df728cdce0aa3252e090c4d40a6de52eb6894711c5bc424b1bc782",
+        "4cb2523f8e85c17159dda6925ec2e8da9ed62bb25d0be1fc0f106fa10e1f88cf"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-I_AI_Investing_보강_작업가이드.md",
+      "status": "OK",
+      "hash_current": "966f82ffa91a25c90de1203836c9c3a9741e463964ad9a4b8ff3c6729a7e3505",
+      "hash_recorded": [
+        "82415d3bf554e53a06cfdb881b1ab934f7b77157239071c45ee421a13edbb327",
+        "966f82ffa91a25c90de1203836c9c3a9741e463964ad9a4b8ff3c6729a7e3505"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-J_멀티모달_생성처리_작업가이드.md",
+      "status": "OK",
+      "hash_current": "a0574453455abecc26aa1af03993767bf867b831716637bb9d626d04de091955",
+      "hash_recorded": [
+        "0a5f423541ec4bd06b5d78e61b74c63c5822a27f9514686640ab85068190f2bc",
+        "a0574453455abecc26aa1af03993767bf867b831716637bb9d626d04de091955"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-K_에이전트프로토콜_상호운용성_작업가이드.md",
+      "status": "OK",
+      "hash_current": "150720a3496f557d359a421dcbf0922ebe5b1e4fbaa06611eff40e0865177539",
+      "hash_recorded": [
+        "150720a3496f557d359a421dcbf0922ebe5b1e4fbaa06611eff40e0865177539",
+        "d6df65099fa3f7949244782ef43e0142c6a2a3c86a60e49d9fab59b16618e03c"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-L_개발자도구_API_SDK_작업가이드.md",
+      "status": "OK",
+      "hash_current": "3771c7c47b177d0f73d49dc0dfdf391c6f1554f64d65948591d398334bc75789",
+      "hash_recorded": [
+        "3771c7c47b177d0f73d49dc0dfdf391c6f1554f64d65948591d398334bc75789",
+        "4bfe642869a36a27b75199951e9bd6aaf19d218296b7d9ec3f23bb66dfb5e82f"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-M_PKM_지식관리_작업가이드.md",
+      "status": "OK",
+      "hash_current": "0669a8edd16f97e6b4d014bbea13e2ccf8c0c3f981ca552a501bbaa90b6e2b67",
+      "hash_recorded": [
+        "0669a8edd16f97e6b4d014bbea13e2ccf8c0c3f981ca552a501bbaa90b6e2b67",
+        "7240a2577ab36880fabd67bad881bb7c230845fb8a13ff15032cca9f2b309fcb"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+      "status": "OK",
+      "hash_current": "573927de816fb3833456af807424af381dcc2fbb0afb859073ddb91fb4aa2565",
+      "hash_recorded": [
+        "573927de816fb3833456af807424af381dcc2fbb0afb859073ddb91fb4aa2565",
+        "bebacd0f1d6661267d2f6b8cc91e9fefecf1981ac22265bbf4acde07655d6cc0"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-O_교육_학습_자기개발_작업가이드.md",
+      "status": "OK",
+      "hash_current": "8d83aeca310496fd7e4174d8b7056b7aee064cda1171d330e89f3e8e0df89d83",
+      "hash_recorded": [
+        "8d83aeca310496fd7e4174d8b7056b7aee064cda1171d330e89f3e8e0df89d83",
+        "f9e7868cba1a3fcc1956e844579784bb1c33de3ba3c030586def6fd46b81e4ae"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7-P_건강_웰니스_감성AI_작업가이드.md",
+      "status": "OK",
+      "hash_current": "e755ace9acf1a0728cb3c4cd030bc365ec755fb0ac328888ef8d6558091fc464",
+      "hash_recorded": [
+        "b6a60efdbb445a0f72903ae74562a2906b1c31201bdf21baf4b12c5f8537b915",
+        "e755ace9acf1a0728cb3c4cd030bc365ec755fb0ac328888ef8d6558091fc464"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_A-I_보강_추가항목_통합.md",
+      "status": "OK",
+      "hash_current": "809da5a0b758a30bc768a721a6b89f139368d6cb07f2d0337bd6d91bb1fc7859",
+      "hash_recorded": [
+        "809da5a0b758a30bc768a721a6b89f139368d6cb07f2d0337bd6d91bb1fc7859",
+        "b2342ffc949dec64451119e178b2c003cf18d74c74890ac491abe6b5e148104f"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_PHASE7_최종검증보고서.md",
+      "status": "OK",
+      "hash_current": "c5849b729ad4d9c0fcc6bff400ff52bc165c9695c5f1bd1caf3e1b4a5f9ed738",
+      "hash_recorded": [
+        "374058ef4186f2eda0e394b4ce87b3bd7dbf6e3c6b99bd842bd34ec2155f1c24",
+        "c5849b729ad4d9c0fcc6bff400ff52bc165c9695c5f1bd1caf3e1b4a5f9ed738"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R1_V1_CRITICAL.md",
+      "status": "OK",
+      "hash_current": "5e9e8d79e26231616f125b2d3cdd1bdf0da244fa92f80da9b35bda1532a13cea",
+      "hash_recorded": [
+        "39fafb0401d0ab52afb309c76094a92391ab9c8cd9c1bdbb20ac42382b67e1be",
+        "5e9e8d79e26231616f125b2d3cdd1bdf0da244fa92f80da9b35bda1532a13cea"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R2_V1_HIGH.md",
+      "status": "OK",
+      "hash_current": "28a75f9baf4b0c2eca6907bd89b3054b21b147964b0472dc3b116b504e5b8839",
+      "hash_recorded": [
+        "28a75f9baf4b0c2eca6907bd89b3054b21b147964b0472dc3b116b504e5b8839",
+        "7ccecd75d4bc3cf3f27eb0516b7761f553b21488886e5aa6bd8655bb9bd99bfc"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R3_V1_MEDIUM_LOW.md",
+      "status": "OK",
+      "hash_current": "d90edd46adf5d531a610ec6265a6c5f8d861cb85ed8e72fb731d083c0acfddd0",
+      "hash_recorded": [
+        "d90edd46adf5d531a610ec6265a6c5f8d861cb85ed8e72fb731d083c0acfddd0",
+        "ffba5e4856c3ddada028dcc0bac6f7c536d15bbc87344e4ce3c4a8f4cf15734b"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R4_V2_CRITICAL_HIGH.md",
+      "status": "OK",
+      "hash_current": "8de7e22fb64ed1b458587f13c00c283c6afee9f93fb6cdb8b2ec4613e45077ec",
+      "hash_recorded": [
+        "45095637a58d1039668b4bccc0b65b3e3d32579c5f5522bc146f37673bd2b654",
+        "8de7e22fb64ed1b458587f13c00c283c6afee9f93fb6cdb8b2ec4613e45077ec"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R5_V2_MEDIUM_LOW.md",
+      "status": "OK",
+      "hash_current": "99ed801fccaf5e0fc6cdbacebc34c191b4d84d9a95f27dff9d90c456498286fa",
+      "hash_recorded": [
+        "6a0ca1ab3fc0813f237aea375358c94c615615afce62d44705c32f43a31fd909",
+        "99ed801fccaf5e0fc6cdbacebc34c191b4d84d9a95f27dff9d90c456498286fa"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_R6_V3_ALL.md",
+      "status": "OK",
+      "hash_current": "9661c3c41c4a025502a4ff5fcab4d14c817161ab198064735e2d6ff2a28a51a9",
+      "hash_recorded": [
+        "9661c3c41c4a025502a4ff5fcab4d14c817161ab198064735e2d6ff2a28a51a9",
+        "9872037ac55b60a3a41c988bb5d61087a858656080b9ed22459cbe17de8af2bf"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_STEP6통합_마스터인덱스.md",
+      "status": "OK",
+      "hash_current": "bde441e4f05db4f37f081ffb9ca707ac29fea83c0353e9036949d0d60c5c84b0",
+      "hash_recorded": [
+        "9bfcac31a8706e3f4991a787dd490f094dce896923fd47325ddb6ed1cb4b9911",
+        "bde441e4f05db4f37f081ffb9ca707ac29fea83c0353e9036949d0d60c5c84b0"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "STEP7_작업가이드.md",
+      "status": "OK",
+      "hash_current": "35554e4a2bbb4ba8449967ac6174c2bb9c925ea446b58d9c02a1e0e20ec75608",
+      "hash_recorded": [
+        "35554e4a2bbb4ba8449967ac6174c2bb9c925ea446b58d9c02a1e0e20ec75608",
+        "d668cf6fc4090b072e1ef63731d868ae43a0526c5322596460c50bfab2c60fdb"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_AGENT_TEAMS_SPEC.md",
+      "status": "OK",
+      "hash_current": "1220cc1113c9f11ff3c03d559cce7b37022e787a3dc61e1de89a1afbd0035ef6",
+      "hash_recorded": [
+        "1220cc1113c9f11ff3c03d559cce7b37022e787a3dc61e1de89a1afbd0035ef6"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_AI_INVESTING_SPEC.md",
+      "status": "OK",
+      "hash_current": "be7cc43530ec111e84c2c0b5b5fa14d4896de37341cf0eb0967de50cba6bb1a8",
+      "hash_recorded": [
+        "219f34b361ec33b00e24b0d3ebaf789b160ee90941955a612eba3befeffef4a4",
+        "be7cc43530ec111e84c2c0b5b5fa14d4896de37341cf0eb0967de50cba6bb1a8"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_BEGINNER_GUIDE.md",
+      "status": "OK",
+      "hash_current": "45c14f933936aa8a6a9c9b35afb9bb73b8815ecdffb9611aa33e24ed31daeef6",
+      "hash_recorded": [
+        "45c14f933936aa8a6a9c9b35afb9bb73b8815ecdffb9611aa33e24ed31daeef6"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_CLOUD_LIBRARY_SPEC.md",
+      "status": "OK",
+      "hash_current": "9c001301c08dc393b9e51947857698bd0c1b9ebea1c70ea0368d202010e3093c",
+      "hash_recorded": [
+        "893efd2da5b6277674f0dd22268322ba063472c1844573e38ad5616e7106a8a9",
+        "9c001301c08dc393b9e51947857698bd0c1b9ebea1c70ea0368d202010e3093c"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+      "status": "OK",
+      "hash_current": "806e7b0fdbfade21523a1d6d1cc92df7c599ac9f3c71ecf5aefb0d52b2614994",
+      "hash_recorded": [
+        "806e7b0fdbfade21523a1d6d1cc92df7c599ac9f3c71ecf5aefb0d52b2614994"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+      "status": "CHANGED",
+      "hash_current": "a64550b44523337de50c036025032197848ad1aaf4f99c0f796edcd97b32db46",
+      "hash_recorded": [
+        "1e8814310e016684b210da577edcd392f4fad314af37e10f7029ddc53f5d7681",
+        "85dc10199aa954e6eed2b64509922e2fdb962f0dad9a489134402b8f3e419efa"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+      "status": "OK",
+      "hash_current": "73bdf47bbd4cb65d96e84fc84504cbfaffaf53484890cf4b30058d8ac53ba2df",
+      "hash_recorded": [
+        "73bdf47bbd4cb65d96e84fc84504cbfaffaf53484890cf4b30058d8ac53ba2df",
+        "fe30bc6a3bcf0b8ef4a3d22b676e5d1f8e49a173a9dc80bf6c235e15bed72ea2"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+      "status": "OK",
+      "hash_current": "e5868ffca253a5009d09fa5bf5c8bd08bd2c40e1a3d004dd0889544a45fe6877",
+      "hash_recorded": [
+        "693f83e039c4df08232bf21cb559b21380c329ad5373e4a98e5beb1b480ca6b2",
+        "e5868ffca253a5009d09fa5bf5c8bd08bd2c40e1a3d004dd0889544a45fe6877"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_STEP7_A-E_상세명세서.md",
+      "status": "OK",
+      "hash_current": "fca971f7b5c0f0be88e4eae10fdb7839937344fdbefe1c354395ed52ecd05b62",
+      "hash_recorded": [
+        "24a8ca6f8abeb0f78e7211c0c591439df3a64f7d07e19e435412b52f62e23b36",
+        "fca971f7b5c0f0be88e4eae10fdb7839937344fdbefe1c354395ed52ecd05b62"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_STEP7_F-I_상세명세서.md",
+      "status": "OK",
+      "hash_current": "a2c77c93f20a1ee418dc498512c345f6eca8b2dc6208ae33bf61bf2ac635f2ea",
+      "hash_recorded": [
+        "a2c77c93f20a1ee418dc498512c345f6eca8b2dc6208ae33bf61bf2ac635f2ea",
+        "d61b872083d398edc8b41836356e048aabfb57380f4bf6cf80d03de4d7980625"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_STEP7_J-M_상세명세서.md",
+      "status": "OK",
+      "hash_current": "56bfcd9a50b8ca8e810bee1e65a24f335964b1100e2ce1cbb6180a0702b4b49d",
+      "hash_recorded": [
+        "56bfcd9a50b8ca8e810bee1e65a24f335964b1100e2ce1cbb6180a0702b4b49d",
+        "ed6c9f85c60399d9fb6236dee8526ad4a5f1ab32d4446903cc3c62e224a22e72"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_STEP7_N-P_보강_상세명세서.md",
+      "status": "OK",
+      "hash_current": "2157915ef1a03d2ebe59de20e6e3406be5df200f8d77334f156e4888bf21b77f",
+      "hash_recorded": [
+        "2157915ef1a03d2ebe59de20e6e3406be5df200f8d77334f156e4888bf21b77f",
+        "c9ca79c183d78ae10114665cd92b47e798096453c60f21e69d33e2abf2e86f86"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_STEP7_보강_통합명세서.md",
+      "status": "OK",
+      "hash_current": "0a0457045c875b8aba7dafc7ce7ce3f2810a89ee797de8214e50c8669db675da",
+      "hash_recorded": [
+        "0a0457045c875b8aba7dafc7ce7ce3f2810a89ee797de8214e50c8669db675da",
+        "63ff905e78b749b75e6195d01ed18d1d8f0937563a701d132cdbcb4037685581"
+      ],
+      "in_baseline": true
+    },
+    {
+      "sot_file": "VAMOS_V0_READINESS_FINAL_REVIEW.md",
+      "status": "OK",
+      "hash_current": "3fc25af2089dad494da111972fd4e811fd8bccfd651ff49c63fd2b37c33f8275",
+      "hash_recorded": [
+        "3fc25af2089dad494da111972fd4e811fd8bccfd651ff49c63fd2b37c33f8275",
+        "b2a0826909ce590a5f5e8d66276d1e9a9b7754e0f58169ecc7d9c51e5ab8519e"
+      ],
+      "in_baseline": true
+    }
+  ]
+}

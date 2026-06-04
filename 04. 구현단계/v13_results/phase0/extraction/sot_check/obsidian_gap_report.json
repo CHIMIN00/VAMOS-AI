@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "obsidian_strategy": "VAMOS HOME\\OBSIDIAN-STRATEGY-v3.md",
+    "obsidian_exists": true,
+    "sot2_domains_total": 36,
+    "sot2_impl_domains": 32,
+    "domains_referenced_in_obsidian": 35,
+    "domains_not_referenced": 1,
+    "domain_counts_mentioned": [
+      "36",
+      "36"
+    ],
+    "module_counts_mentioned": [
+      "187",
+      "187",
+      "187"
+    ],
+    "note": "Obsidian 전략(설계 시점)은 SOT2 30개 도메인 다단계 확장 이전 작성 → 도메인/모듈 수 차이는 예상된 GAP(Phase 2-3 Obsidian 노트 생성 입력). D1 PASS 차단 안 함.",
+    "timestamp": "2026-06-04T23:42:54",
+    "input_hash": "a2ca463f5f87b29908ee52e2f7923301208389c142f074a12937ce06ecee77b2",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+  },
+  "referenced_domains": [
+    "0-0_Governance-Rules-Meta",
+    "1-1_Verifier-Reasoning-Engines",
+    "1-2_Auxiliary-Modules",
+    "2-1_Blue-Node-Architecture",
+    "2-2_COND-Modules-Detail",
+    "3-10_Agent-Protocol-Interoperability",
+    "3-2_Multimodal-Processing",
+    "3-3_PKM-Knowledge-Management",
+    "3-4_Workflow-RPA",
+    "3-5_Education-Learning",
+    "3-6_Health-Wellness-EmotionAI",
+    "3-8_Conversation-A2A",
+    "3-9_Business-Model-Strategy",
+    "4-1_Rust-Tauri-Infrastructure",
+    "4-2_CICD-Pipeline",
+    "4-3_MCP-Server-Client",
+    "4-4_MLOps-LLMOps",
+    "5-1_Benchmark-Evaluation",
+    "5-2_File-Context",
+    "5-3_v12-Additions-Detail",
+    "5-4_v23-Extension-Items",
+    "6-10_EXP-Modules-Detail",
+    "6-11_Hologram-Main-LLM",
+    "6-12_Event-Logging",
+    "6-13_Operations",
+    "6-1_UI-UX-System",
+    "6-2_Security-Governance",
+    "6-3_Agent-Teams-PARL",
+    "6-4_Memory-RAG-Storage",
+    "6-5_SDAR-System",
+    "6-6_Self-Evolution-System",
+    "6-7_RT-BNP-DCL",
+    "6-8_Cloud-Library",
+    "6-9_Brain-Adapter-HAL",
+    "Ai-investing-detail"
+  ],
+  "unreferenced_domains": [
+    "3-7_Developer-Tools-API-SDK"
+  ]
+}

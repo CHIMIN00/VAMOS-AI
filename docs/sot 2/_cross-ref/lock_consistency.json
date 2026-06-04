@@ -1,0 +1,130 @@
+{
+  "mismatch": 0,
+  "concepts": [
+    {
+      "concept": "QOD_L2_BAN",
+      "allowed": [
+        0.4
+      ],
+      "values": {
+        "0.4": 18
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "QoD < 0.4 → L2 벡터 삽입 금지 (0.40 표기 동일)"
+    },
+    {
+      "concept": "HYBRID_ALPHA",
+      "allowed": [
+        0.3,
+        0.7
+      ],
+      "values": {
+        "0.7": 44,
+        "0.3": 14
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "Hybrid 가중치 쌍 α=0.3(BM25)/vector=0.7 — LOCK-AX-06"
+    },
+    {
+      "concept": "HYBRID_BETA",
+      "allowed": [
+        0.3,
+        0.7
+      ],
+      "values": {
+        "0.3": 3
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "Hybrid 가중치 쌍 (β=0.3 / 보완 0.7)"
+    },
+    {
+      "concept": "CONF_HIGH",
+      "allowed": [
+        0.85
+      ],
+      "values": {
+        "0.85": 63
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "confidence HIGH 0.85"
+    },
+    {
+      "concept": "CONF_LOW",
+      "allowed": [
+        0.3
+      ],
+      "values": {
+        "0.3": 12
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "confidence REFUSE 0.30"
+    },
+    {
+      "concept": "COST_MONTHLY",
+      "allowed": [
+        40.0
+      ],
+      "values": {
+        "40.0": 8
+      },
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "비용 상한 ₩40,000/월 (V1)"
+    },
+    {
+      "concept": "COST_GATE",
+      "allowed": [
+        80.0
+      ],
+      "values": {},
+      "noncanonical": [],
+      "status": "CONSISTENT",
+      "note": "CostGate 80%/100%"
+    }
+  ],
+  "domain_lock_ids": {
+    "0-0_Governance-Rules-Meta": 0,
+    "1-1_Verifier-Reasoning-Engines": 16,
+    "1-2_Auxiliary-Modules": 16,
+    "2-1_Blue-Node-Architecture": 19,
+    "2-2_COND-Modules-Detail": 14,
+    "3-10_Agent-Protocol-Interoperability": 13,
+    "3-2_Multimodal-Processing": 12,
+    "3-3_PKM-Knowledge-Management": 13,
+    "3-4_Workflow-RPA": 10,
+    "3-5_Education-Learning": 16,
+    "3-6_Health-Wellness-EmotionAI": 19,
+    "3-7_Developer-Tools-API-SDK": 11,
+    "3-8_Conversation-A2A": 14,
+    "3-9_Business-Model-Strategy": 10,
+    "4-1_Rust-Tauri-Infrastructure": 18,
+    "4-2_CICD-Pipeline": 15,
+    "4-3_MCP-Server-Client": 13,
+    "4-4_MLOps-LLMOps": 16,
+    "5-1_Benchmark-Evaluation": 15,
+    "5-2_File-Context": 1,
+    "5-3_v12-Additions-Detail": 12,
+    "5-4_v23-Extension-Items": 8,
+    "6-10_EXP-Modules-Detail": 8,
+    "6-11_Hologram-Main-LLM": 14,
+    "6-12_Event-Logging": 11,
+    "6-13_Operations": 14,
+    "6-1_UI-UX-System": 0,
+    "6-2_Security-Governance": 1,
+    "6-3_Agent-Teams-PARL": 20,
+    "6-4_Memory-RAG-Storage": 19,
+    "6-5_SDAR-System": 0,
+    "6-6_Self-Evolution-System": 2,
+    "6-7_RT-BNP-DCL": 0,
+    "6-8_Cloud-Library": 0,
+    "6-9_Brain-Adapter-HAL": 13,
+    "Ai-investing-detail": 1
+  },
+  "timestamp": "2026-06-04T23:45:08",
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

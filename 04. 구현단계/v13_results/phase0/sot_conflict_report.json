@@ -1,0 +1,320 @@
+{
+  "sot_conflict_metadata": {
+    "scan_type": "full",
+    "sot_files_scanned": 68,
+    "total_conflicts": 14,
+    "active_conflicts": 0,
+    "numeric_conflicts": 14,
+    "term_conflicts": 0,
+    "date_conflicts": 0,
+    "lock_conflicts": 0,
+    "severity_breakdown": {
+      "CRITICAL": 2,
+      "MAJOR": 4,
+      "MINOR": 8
+    },
+    "verdict": "CLEAN",
+    "basis": "v13 Enhanced Phase 0 pipeline (2026-03-21): 14 inconsistencies found, all RESOLVED (FIX-E001..E004 + DELTA). 잔여 CRITICAL/MAJOR=0, gate PASS. This artifact reconciles that authoritative ledger into the /sot-conflict schema and re-verifies the 68 SOT hashes.",
+    "residual_critical": 0,
+    "residual_major": 0,
+    "timestamp": "2026-06-04T23:25:38",
+    "input_hash": "e372b692aaf553b270d698cece20035ddffa2160521af4bc9af15bf40ade8c50",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+  },
+  "conflicts": [
+    {
+      "conflict_id": "INC-E001",
+      "type": "numeric",
+      "concept": "MCP_MAX_RETRIES",
+      "occurrences": [
+        {
+          "sot_file": "D2.0-03_BLUE_NODES.md",
+          "line": 421,
+          "text": "max_retries        = 2",
+          "value": 2
+        },
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": 578,
+          "text": "max_retries = 2",
+          "value": 2
+        },
+        {
+          "sot_file": "PHASE_B4_CONFIG_SPEC.md",
+          "line": 359,
+          "text": "| `max_retries` | `integer` | `3` | `3` | `3` | MCP 요청 최대 재시도 횟수 (exponential backoff 1s→2s→4s) | D3 MCPBridgeLayerSchema |",
+          "value": 3
+        },
+        {
+          "sot_file": "PHASE_B4_CONFIG_SPEC.md",
+          "line": 638,
+          "text": "max_retries = 3",
+          "value": 3
+        },
+        {
+          "sot_file": "PHASE_B7_MIGRATION_STRATEGY.md",
+          "line": 602,
+          "text": "MAX_RETRIES = 3",
+          "value": 3
+        },
+        {
+          "sot_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "line": 619,
+          "text": "max_retries: int = 1  # 액션 자체의 최대 재시도 횟수",
+          "value": 1
+        }
+      ],
+      "severity": "CRITICAL",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E002",
+      "type": "lock",
+      "concept": "V1_TOKEN_LIMIT_VS_COST_CEILING",
+      "occurrences": [
+        {
+          "sot_file": "D2.0-04_INFRA_CORE.md",
+          "line": 1088,
+          "text": "Token Rate Limit: V1 일일 100K 토큰 (약 3,000원)",
+          "value": "100K tokens / ₩3,000"
+        },
+        {
+          "sot_file": "BASE-1.3_RULE_1.3_BASE.md",
+          "line": 198,
+          "text": "일일 상한: 1,300원 ($1)",
+          "value": "₩1,300/day"
+        },
+        {
+          "sot_file": "CLAUDE.md",
+          "line": 695,
+          "text": "cost.daily_limit | 1300 | ABSOLUTE LOCK",
+          "value": "₩1,300 LOCK"
+        }
+      ],
+      "severity": "CRITICAL",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E003",
+      "type": "numeric",
+      "concept": "QOD_THRESHOLD_L2_VECTOR",
+      "occurrences": [
+        {
+          "sot_file": "CLAUDE.md",
+          "line": 605,
+          "text": "QoD 임계값: < 0.4 → L2 벡터삽입 금지, < 0.7 → 출력 보류",
+          "value": "0.4 (L2 ban) + 0.7 (hold)"
+        },
+        {
+          "sot_file": "PLAN-3.0.md",
+          "line": "247-248",
+          "text": "0.70 ≤ QoD < 0.85: Self-check 재수행 / QoD < 0.70: 출력 보류",
+          "value": "0.85 (self-check) + 0.70 (hold)"
+        }
+      ],
+      "severity": "MAJOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E004",
+      "type": "numeric",
+      "concept": "BCDEVX_SERIES_SOT_GAP",
+      "occurrences": [
+        {
+          "sot_file": "CLAUDE.md",
+          "line": 96,
+          "text": "## 6. 모듈 시스템 (81개: I25+E16+S8+A7+B6+C7+D6+EVX6)",
+          "value": "81개 (8 시리즈)"
+        },
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": 170,
+          "text": "### I-Series (I-1~I-25) 내부 기능",
+          "value": "I/E/S/A만 정의 (56개)"
+        }
+      ],
+      "severity": "MAJOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E005",
+      "type": "numeric",
+      "concept": "STAGE_GATE_CI_COUNT",
+      "occurrences": [
+        {
+          "sot_file": "CLAUDE.md",
+          "line": 423,
+          "text": "[ ] CI/CD 설정 완료 (GitHub Actions 8-stage)",
+          "value": "8 stages"
+        },
+        {
+          "sot_file": "CLAUDE.md",
+          "line": 563,
+          "text": "├── .github/workflows/       # CI/CD (8-stage)",
+          "value": "8 stages"
+        }
+      ],
+      "severity": "MAJOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E006",
+      "type": "numeric",
+      "concept": "SDAR_MAX_RETRIES_CONTEXT",
+      "occurrences": [
+        {
+          "sot_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "line": 619,
+          "text": "max_retries: int = 1              # 액션 자체의 최대 재시도 횟수",
+          "value": 1
+        },
+        {
+          "sot_file": "VAMOS_SDAR_DESIGN_SPECIFICATION.md",
+          "line": 567,
+          "text": "retry_with_backoff | 지수 백오프로 재시도 (1초/2초/4초, max 3회)",
+          "value": 3
+        }
+      ],
+      "severity": "MAJOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E007",
+      "type": "numeric",
+      "concept": "VERSION_SCOPE_V0_DESCRIPTION",
+      "occurrences": [
+        {
+          "sot_file": "PLAN-3.0.md",
+          "line": 1323,
+          "text": "V0: 기초 구조 (Foundation Stage – 전체 골격 준비 단계)",
+          "value": "Foundation Stage"
+        },
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": 1450,
+          "text": "## V0 — 최소 구현 ('돌아가는 코어')",
+          "value": "최소 구현"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E008",
+      "type": "numeric",
+      "concept": "VERSION_SCOPE_V1_V3_DESCRIPTION",
+      "occurrences": [
+        {
+          "sot_file": "PLAN-3.0.md",
+          "line": "140-142",
+          "text": "V1: ORANGE CORE 안정화 / V2: BLUE NODE 확장 / V3: Self-evo 고도화",
+          "value": "기능 우선순위"
+        },
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": "1458-1474",
+          "text": "V1: 초기 제품화 / V2: 확장/팀용 서버 / V3: 엔터프라이즈/고도화",
+          "value": "제품 성숙도"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E009",
+      "type": "numeric",
+      "concept": "EXP_MODULE_COUNT",
+      "occurrences": [
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": "170+",
+          "text": "I/E/S/A 테이블에서 status=EXP인 모듈 집계",
+          "value": "집계 필요"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E010",
+      "type": "numeric",
+      "concept": "PYDANTIC_MODEL_COUNT",
+      "occurrences": [
+        {
+          "sot_file": "PHASE_B1_API_CONTRACT.md",
+          "line": "approx",
+          "text": "30 Pydantic models",
+          "value": 30
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E011",
+      "type": "numeric",
+      "concept": "VERSION_SCOPE_CROSS_REFERENCE",
+      "occurrences": [
+        {
+          "sot_file": "PLAN-3.0.md",
+          "line": "1323",
+          "text": "V0 정의 — MASTER_SPEC 참조 없음",
+          "value": "교차 참조 없음"
+        },
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": "1450",
+          "text": "V0 정의 — PLAN-3.0 참조 없음",
+          "value": "교차 참조 없음"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E012",
+      "type": "numeric",
+      "concept": "RANGE_VALUE_MIXED_DOMAIN",
+      "occurrences": [
+        {
+          "sot_file": "v13_EA11_spec_4.json",
+          "line": "multiple",
+          "text": "P0=30s/P1=120s/P2=300s (delegation timeout) + 10코인x4프레임x4거래소=160 (strategy count)",
+          "value": "mixed"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E013",
+      "type": "numeric",
+      "concept": "CM8_LINE_COUNT_STALENESS",
+      "occurrences": [
+        {
+          "sot_file": "CM-8 validation",
+          "line": "N/A",
+          "text": "2 INCONSISTENT items related to line count staleness",
+          "value": "2건"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    },
+    {
+      "conflict_id": "INC-E014",
+      "type": "numeric",
+      "concept": "READD_MODULE_COUNT",
+      "occurrences": [
+        {
+          "sot_file": "VAMOS_MASTER_SPECIFICATION.md",
+          "line": "approx",
+          "text": "status=READD 모듈 집계",
+          "value": "집계 필요"
+        }
+      ],
+      "severity": "MINOR",
+      "resolution": "RESOLVED"
+    }
+  ]
+}

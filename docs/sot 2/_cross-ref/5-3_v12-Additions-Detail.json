@@ -1,0 +1,12 @@
+{
+  "domain": "5-3_v12-Additions-Detail",
+  "scan_date": "2026-06-04T23:45:08",
+  "results": {
+    "references": 0,
+    "broken": 0,
+    "external": 0,
+    "lock_ids": 12,
+    "open_conflicts": 4
+  },
+  "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
+}

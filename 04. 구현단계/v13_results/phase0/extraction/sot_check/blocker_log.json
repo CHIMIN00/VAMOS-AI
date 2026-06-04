@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "source": "docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+    "blocker_count": 14,
+    "resolved_count": 8,
+    "baseline_note": "최초 blocker_log baseline. 향후 PART1 해시 변경 시 1-2~1-5 영향범위 재실행 트리거.",
+    "timestamp": "2026-06-04T23:43:21",
+    "input_hash": "fb54eecf549ca96c4fccdad39b4f8f6cee7351fdc1cef3214d6641ae6b845214",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
+    "change_detected": false
+  },
+  "blockers": [
+    {
+      "id": "BLOCKER-1",
+      "title": "PLAN 3.0 I-모듈 번호 완전 불일치",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-2",
+      "title": "P0 활성 도메인 리스트 순환 참조",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-3",
+      "title": "Storage 이벤트 코드 미등록",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-4",
+      "title": "다운시프트 임계값 자기 모순",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-5",
+      "title": "Node.js vs Python 아키텍처 충돌",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-6",
+      "title": "디렉토리 구조 충돌",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-7",
+      "title": "Config 파일 포맷 (YAML vs TOML)",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-8",
+      "title": "스키마 버전 불일치",
+      "resolved_in_E2": true
+    },
+    {
+      "id": "BLOCKER-9",
+      "title": "CLAUDE.md 모듈 카탈로그 대규모 오류",
+      "resolved_in_E2": null
+    },
+    {
+      "id": "BLOCKER-10",
+      "title": "D2.0-07 RBAC 역할 3중 충돌",
+      "resolved_in_E2": null
+    },
+    {
+      "id": "BLOCKER-11",
+      "title": "D2.0-07 비용 경고 임계값 문서 내 6중 모순",
+      "resolved_in_E2": null
+    },
+    {
+      "id": "BLOCKER-12",
+      "title": "CLAUDE.md I-4~I-21 모듈 역할명 D2.0-02와 체계적 불일치",
+      "resolved_in_E2": null
+    },
+    {
+      "id": "BLOCKER-13",
+      "title": "D2.0-01 ↔ D2.0-02 I-모듈명 체계적 불일치 (D2.0-01 vs D2.0-02)",
+      "resolved_in_E2": null
+    },
+    {
+      "id": "BLOCKER-14",
+      "title": "STEP7 전문서 + D2.0-07 3-Gate 체계 (정본 5-Gate 위반)",
+      "resolved_in_E2": null
+    }
+  ]
+}
