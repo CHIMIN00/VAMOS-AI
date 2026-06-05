@@ -1,6 +1,6 @@
 # SOT 2 LOCK 일관성 (lock_consistency)
 
-> 생성: 2026-06-04T23:45:08 · MISMATCH=0
+> 생성: 2026-06-05T19:38:52 · MISMATCH=0
 
 | 개념 | 허용값 | 관측값 | 상태 |
 |---|---|---|---|
@@ -36,7 +36,7 @@
 | 4-4_MLOps-LLMOps | 16 | 0 |
 | 5-1_Benchmark-Evaluation | 15 | 0 |
 | 5-2_File-Context | 1 | 0 |
-| 5-3_v12-Additions-Detail | 12 | 4 |
+| 5-3_v12-Additions-Detail | 12 | 5 |
 | 5-4_v23-Extension-Items | 8 | 0 |
 | 6-10_EXP-Modules-Detail | 8 | 0 |
 | 6-11_Hologram-Main-LLM | 14 | 0 |
@@ -46,7 +46,7 @@
 | 6-2_Security-Governance | 1 | 0 |
 | 6-3_Agent-Teams-PARL | 20 | 0 |
 | 6-4_Memory-RAG-Storage | 19 | 0 |
-| 6-5_SDAR-System | 0 | 2 |
+| 6-5_SDAR-System | 0 | 0 |
 | 6-6_Self-Evolution-System | 2 | 0 |
 | 6-7_RT-BNP-DCL | 0 | 0 |
 | 6-8_Cloud-Library | 0 | 0 |

@@ -15,8 +15,8 @@
     "reason": "_extractions/ (SC JSON) absent"
   },
   "SDV-4_lock": {
-    "status": "WARN",
-    "open_conflicts": 2
+    "status": "PASS",
+    "open_conflicts": 0
   },
   "SDV-5_schema_types": {
     "status": "N/A",
@@ -31,7 +31,7 @@
     "out_of_range": [],
     "part2_lines": 6454
   },
-  "verdict": "ATTENTION",
-  "timestamp": "2026-06-04T23:45:08",
+  "verdict": "PASS",
+  "timestamp": "2026-06-05T19:28:42",
   "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
 }

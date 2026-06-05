@@ -1,10 +1,10 @@
 {
   "domain": "3-2_Multimodal-Processing",
-  "scan_date": "2026-06-04T23:45:08",
+  "scan_date": "2026-06-05T19:38:52",
   "results": {
     "references": 153,
     "broken": 0,
-    "external": 1,
+    "external": 0,
     "lock_ids": 12,
     "open_conflicts": 0
   },

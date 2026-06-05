@@ -52,14 +52,10 @@ def main():
     strict_all_pass = all(g["pass"] for g in gates.values())
 
     deferrals = [
-        {"ref": "5-3 C-04~C-08", "type": "LOCK 매핑/출처 불일치 (5건)",
+        {"ref": "5-3 C-04~C-08", "type": "LOCK 매핑/출처 불일치 (5건: C-04,C-05,C-06,C-07,C-08)",
          "status": "OPEN (owner-documented non-blocking, since 2026-04-03, '게이트 영향 없음/4-2 선례')",
          "blocking": False, "lock_value_conflict": False, "owner_phase": "Phase 2/3 협의",
-         "evidence": "docs/sot 2/5-3_v12-Additions-Detail/CONFLICT_LOG.md C-04..C-08"},
-        {"ref": "6-5 W-CB", "type": "Circuit Breaker 소유권 미확정 (1건)",
-         "status": "OPEN (DEFERRED_TO_PHASE3 OBSERVE_ONLY marker)",
-         "blocking": False, "lock_value_conflict": False, "owner_phase": "Phase 3 (6-2 Security 협의)",
-         "evidence": "docs/sot 2/6-5_SDAR-System/CONFLICT_LOG.md W-CB"},
+         "evidence": "docs/sot 2/5-3_v12-Additions-Detail/CONFLICT_LOG.md C-04~C-08 (전수 status=OPEN)"},
         {"ref": "2-2 04_cat-d-media/_index.md -> ../_index.md", "type": "깨진 네비게이션 링크 (1건)",
          "status": "BROKEN (domain-root _index.md 부재, cosmetic nav only)",
          "blocking": False, "lock_value_conflict": False, "owner_phase": "Phase 2 (문서 보강)",
@@ -77,10 +73,22 @@ def main():
     verdict = "PASS" if strict_all_pass else ("PASS_CONDITIONAL" if value_gates_pass else "FAIL")
     out = {
         "d1_verdict": verdict,
-        "verdict_note": "5개 값 게이트(1-2 CONFLICT·1-3 MISMATCH·1-4 LOCK MISMATCH·1-5 SDV-1 critical/SDV-4 lock value·"
-                        "1-9 snapshot) 전수 통과. SDV-4 WARN 2건 + BROKEN 1건은 모두 LOCK 값 충돌이 아닌 "
-                        "사전 존재·소유자 문서화 비차단 이연 항목으로 아래 이연대장에 전수 등록(누락 0). "
-                        "사용자 지시(안전·무누락·무오류)에 따라 자동 정본 변경 없이 전 항목 추적.",
+        "verdict_note": "5개 값 게이트(1-2 CONFLICT active 0·1-3 MISMATCH 0·1-4 LOCK MISMATCH 0·1-5 SDV-1 critical 0/"
+                        "SDV-4 lock value 0·1-9 snapshot) 전수 통과. SDV-4 WARN 1건(5-3) + BROKEN 1건은 LOCK 값 "
+                        "충돌이 아닌 사전 존재·소유자 문서화 비차단 이연으로 이연대장에 전수 등록(누락 0). "
+                        "진짜 현행 OPEN 충돌은 5건(전부 5-3 C-04~C-08)·6-5는 v1.3에서 RESOLVED(OPEN 0). "
+                        "자동 정본 변경 없이 전 항목 추적.",
+        "audit_corrections_2026_06_05": {
+            "note": "1차 D1(2026-06-04)의 감사 카운트 오류를 read-only 재검증으로 정정 (게이트 판정 불변).",
+            "open_conflicts": "6 → 5 (5-3 C-07 false-negative 복구 + 6-5 W-CB stale OPEN 제거)",
+            "6-5_W-CB": "OPEN(이연 D-2) → RESOLVED. CONFLICT_LOG v1.3(2026-05-19) §8.1 'OPEN 0건', Option C 양 도메인 분담.",
+            "sdv4_warn": "2 → 1 (5-3만 WARN; 6-5 PASS)",
+            "external_count": "6 → 4 (실존하는 내부링크 2건 오분류 제거)",
+            "1-2_resolution": "전건 RESOLVED → RESOLVED 11/NO_FIX_ACCEPTED 1(E009)/DEFERRED 2(E013,E014)",
+            "engine_fixes": ["count_open_conflicts: status-cell 한정 + id dedupe + 전환인식",
+                             "check_1_2: active를 fix-proposal에서 산출(하드코딩 제거)",
+                             "EXTERNAL_TGT: 디스크 해소 우선(내부링크 오분류 제거)"],
+        },
         "gates": gates,
         "value_gates_pass": value_gates_pass, "strict_all_pass": strict_all_pass,
         "deferral_register": deferrals,

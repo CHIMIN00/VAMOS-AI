@@ -1,10 +1,10 @@
 {
   "domain": "Ai-investing-detail",
-  "scan_date": "2026-06-04T23:45:08",
+  "scan_date": "2026-06-05T19:38:52",
   "results": {
     "references": 205,
     "broken": 0,
-    "external": 1,
+    "external": 0,
     "lock_ids": 1,
     "open_conflicts": 0
   },

@@ -1,6 +1,6 @@
 {
   "broken_count": 1,
-  "external_count": 6,
+  "external_count": 4,
   "total_md_links": 1117,
   "design_md_files": 1735,
   "broken": [
@@ -30,20 +30,10 @@
       "source": "2-1_Blue-Node-Architecture\\07_mcp-bridge\\_index.md",
       "target": "memory/feedback_sot_crosscheck.md",
       "domain": "2-1_Blue-Node-Architecture"
-    },
-    {
-      "source": "3-2_Multimodal-Processing\\06_multimodal-dialog\\feedback_composition_v2.md",
-      "target": "./feedback_composition.md",
-      "domain": "3-2_Multimodal-Processing"
-    },
-    {
-      "source": "Ai-investing-detail\\01_realtime-adaptive\\_index.md",
-      "target": "user_communication.md",
-      "domain": "Ai-investing-detail"
     }
   ],
   "scope_note": "Design content only; scaffolding dirs (_automation/_verification/_archive/...) excluded; %-encoding decoded; out-of-SOT2 targets (memory/project_*_status) classified EXTERNAL, not BROKEN.",
-  "timestamp": "2026-06-04T23:45:08",
+  "timestamp": "2026-06-05T19:38:52",
   "input_hash": "1bfba3bbf113ae06b51ad9f308c12cd7858b4ba39276640fd622faf5a5fbe3f6",
   "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
 }

@@ -8,11 +8,15 @@ from d1_common import *  # noqa
 SUMMARY = {}
 MD_LINK = re.compile(r"\]\(([^)\s]+?\.md)(?:#[^)]*)?\)")
 OPEN_CELL = re.compile(r"^\*{0,2}OPEN\*{0,2}$")
+# A status-valued cell STARTS with a status keyword (handles "RESOLVED (Option C ...)" / "OPEN 유지 (DEFERRED)").
+STATUS_CELL = re.compile(r"^\*{0,2}\s*(OPEN|RESOLVED|WONTFIX|CLOSED)\b", re.I)
 LOCK_ID = re.compile(r"LOCK-[A-Z0-9]{2,5}-\d+")
 # A genuine conflict row's first cell is a conflict ID (CONF-/CFL-/CF-/CL-/XREF-/W-CB/W-n/C-n/ISS-/SC-/#n ...)
 CONFLICT_ID = re.compile(r"^\*{0,2}(W-CB|#\d+|[A-Z]{1,6}-[A-Z0-9]{0,8}-?\d+|[A-Z]{1,4}-\d+)\*{0,2}$")
 HEADER_WORDS = {"구분", "ID", "상태", "유형", "충돌 유형", "OPEN", "RESOLVED", "WONTFIX", "합계", "필드", "설명"}
-# Targets that point at the external memory system / outside SOT2 (not intra-SOT2 design links)
+# Targets that point at the external memory system / clearly outside SOT2 (NOT intra-SOT2 design links).
+# Note: a bare 'feedback_*'/'user_*' filename can be a legit intra-SOT2 file, so existence on disk is
+# checked FIRST (see check_1_4); EXTERNAL is only assigned to UNRESOLVED targets matching this pattern.
 EXTERNAL_TGT = re.compile(r"(^|/)(memory/|project_[\w-]+_status\.md|feedback_|user_|reference_)", re.I)
 # Lines that intentionally demonstrate a broken link (link-checker test fixtures) — not real refs.
 NEG_LINK = re.compile(r"깨진|broken|lychee|nope|존재하지\s*않|invalid\s*link|❌\s*\[")
@@ -26,27 +30,48 @@ def domain_of(path):
 # 1-4  /sot2-cross-ref all
 # ---------------------------------------------------------------------
 def count_open_conflicts(conflict_log_path):
-    """Count genuine OPEN conflict rows: a data row whose FIRST cell is a conflict ID
-    (not a header/legend/stat row) and which has an OPEN status cell."""
+    """Count genuine, CURRENTLY-open conflicts by conflict ID (deduped, transition-aware).
+
+    Robust against the two prior bugs:
+      (a) cross-row false-negative: RESOLVED/WONTFIX is judged ONLY on a row's *status cell*
+          (a cell that STARTS with the status keyword), never on description cells that merely
+          *cite* another conflict's resolution (e.g. 5-3 C-07 text "... W-05 RESOLVED ...").
+      (b) stale/duplicate over-count: results are aggregated PER conflict id across all its rows;
+          an id is OPEN only if it has >=1 OPEN status cell and 0 RESOLVED/WONTFIX/CLOSED status
+          cell anywhere (so a later transition row "W-CB | OPEN | RESOLVED (Option C)" resolves it).
+    Returns (distinct_open_count, [{id, line, row}, ...])."""
     if not os.path.exists(conflict_log_path):
         return 0, []
-    opens = []
+    per_id = {}  # id -> {"has_open": bool, "has_resolved": bool, "first_open_line": int, "row": str}
+    order = []
     for ln, line in enumerate(read_text(conflict_log_path).splitlines(), 1):
         if not line.lstrip().startswith("|"):
             continue
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
         if not cells:
             continue
-        first = cells[0]
-        if first in HEADER_WORDS or not CONFLICT_ID.match(first):
-            continue  # skip header / legend / stat rows like "| OPEN | 0 |", "| 구분 | OPEN |"
-        if not any(OPEN_CELL.match(c) for c in cells[1:]):
+        cid = cells[0].strip("* ")
+        if cells[0] in HEADER_WORDS or not CONFLICT_ID.match(cells[0]):
+            continue  # skip header / legend / stat rows
+        status_cells = [c for c in cells[1:] if STATUS_CELL.match(c)]
+        if not status_cells:
             continue
-        # exclude resolved-transition rows: "XREF-01 | OPEN | **RESOLVED** | ... 교정 완료"
-        rest = " ".join(cells[1:])
-        if re.search(r"RESOLVED|WONTFIX|교정\s*(반영\s*)?완료|해소\s*완료", rest):
-            continue
-        opens.append({"line": ln, "id": first.strip("*"), "row": line.strip()[:220]})
+        is_open = any(re.match(r"^\*{0,2}\s*OPEN\b", c, re.I) for c in status_cells)
+        is_res = any(re.match(r"^\*{0,2}\s*(RESOLVED|WONTFIX|CLOSED)\b", c, re.I) for c in status_cells)
+        if cid not in per_id:
+            per_id[cid] = {"has_open": False, "has_resolved": False, "first_open_line": None, "row": None}
+            order.append(cid)
+        rec = per_id[cid]
+        if is_res:
+            rec["has_resolved"] = True
+        if is_open:
+            rec["has_open"] = True
+            if rec["first_open_line"] is None:
+                rec["first_open_line"] = ln
+                rec["row"] = line.strip()[:220]
+    opens = [{"id": cid, "line": per_id[cid]["first_open_line"], "row": per_id[cid]["row"]}
+             for cid in order
+             if per_id[cid]["has_open"] and not per_id[cid]["has_resolved"]]
     return len(opens), opens
 
 def check_1_4():
@@ -79,12 +104,8 @@ def check_1_4():
             ref_links += 1
             if src_dom in per_domain:
                 per_domain[src_dom]["references"] += 1
-            # external memory-system / outside-SOT2 references are not intra-SOT2 links
-            if EXTERNAL_TGT.search(target.replace("\\", "/")):
-                external.append({"source": os.path.relpath(path, SOT2_DIR), "target": target, "domain": src_dom})
-                if src_dom in per_domain:
-                    per_domain[src_dom]["external"] += 1
-                continue
+            # --- resolve disk existence FIRST (a 'feedback_*'/'user_*' filename can be a valid
+            #     intra-SOT2 file; only UNRESOLVED targets are classified external/broken) ---
             cand = os.path.normcase(os.path.abspath(os.path.join(base, target)))
             ok = cand in existing
             if not ok:
@@ -92,12 +113,15 @@ def check_1_4():
                     c2 = os.path.normcase(os.path.abspath(os.path.join(root_try, target)))
                     if c2 in existing:
                         ok = True; cand = c2; break
-            # target resolving outside SOT2 tree = external, not broken
-            if not ok and not os.path.abspath(os.path.join(base, target)).lower().startswith(SOT2_ABS.lower()):
-                external.append({"source": os.path.relpath(path, SOT2_DIR), "target": target, "domain": src_dom})
-                if src_dom in per_domain:
-                    per_domain[src_dom]["external"] += 1
-                continue
+            if not ok:
+                # UNRESOLVED: external if it points at the memory system / clearly outside SOT2,
+                # otherwise a genuine broken design reference.
+                outside = not os.path.abspath(os.path.join(base, target)).lower().startswith(SOT2_ABS.lower())
+                if EXTERNAL_TGT.search(target.replace("\\", "/")) or outside:
+                    external.append({"source": os.path.relpath(path, SOT2_DIR), "target": target, "domain": src_dom})
+                    if src_dom in per_domain:
+                        per_domain[src_dom]["external"] += 1
+                    continue
             if ok:
                 dst_dom = domain_of(cand) if cand.startswith(SOT2_ABS) else None
                 if src_dom and dst_dom and dst_dom != src_dom:

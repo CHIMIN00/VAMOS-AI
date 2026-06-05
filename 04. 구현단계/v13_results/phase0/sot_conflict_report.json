@@ -4,6 +4,12 @@
     "sot_files_scanned": 68,
     "total_conflicts": 14,
     "active_conflicts": 0,
+    "minor_unresolved": 3,
+    "resolution_breakdown": {
+      "RESOLVED": 11,
+      "NO_FIX_ACCEPTED": 1,
+      "DEFERRED": 2
+    },
     "numeric_conflicts": 14,
     "term_conflicts": 0,
     "date_conflicts": 0,
@@ -14,11 +20,11 @@
       "MINOR": 8
     },
     "verdict": "CLEAN",
-    "basis": "v13 Enhanced Phase 0 pipeline (2026-03-21): 14 inconsistencies found, all RESOLVED (FIX-E001..E004 + DELTA). 잔여 CRITICAL/MAJOR=0, gate PASS. This artifact reconciles that authoritative ledger into the /sot-conflict schema and re-verifies the 68 SOT hashes.",
-    "residual_critical": 0,
-    "residual_major": 0,
-    "timestamp": "2026-06-04T23:25:38",
-    "input_hash": "e372b692aaf553b270d698cece20035ddffa2160521af4bc9af15bf40ade8c50",
+    "basis": "v13 Enhanced Phase 0 (2026-03-21): 14 inconsistencies. Per-item resolution derived from v13_sot_fix_proposals.json (FIXED=11 / NO_FIX_ACCEPTED=1 [E009] / DEFERRED=2 [E013,E014]). active_conflicts counts only CRITICAL/MAJOR not FIXED (=0, all 6 fixed). MINOR unresolved are non-blocking (NO_FIX/이관). Independently corroborated by verdict prose. 68 SOT re-hashed.",
+    "verdict_residual_critical": 0,
+    "verdict_residual_major": 0,
+    "timestamp": "2026-06-05T19:28:37",
+    "input_hash": "9bc04ac96f19a561f9fcff619acdf9b3ee430a33ba19de93016677daab221d62",
     "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
   },
   "conflicts": [
@@ -65,7 +71,8 @@
         }
       ],
       "severity": "CRITICAL",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (FIX_VALUE)"
     },
     {
       "conflict_id": "INC-E002",
@@ -92,7 +99,8 @@
         }
       ],
       "severity": "CRITICAL",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E003",
@@ -113,7 +121,8 @@
         }
       ],
       "severity": "MAJOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E004",
@@ -134,7 +143,8 @@
         }
       ],
       "severity": "MAJOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E005",
@@ -155,7 +165,8 @@
         }
       ],
       "severity": "MAJOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E006",
@@ -176,7 +187,8 @@
         }
       ],
       "severity": "MAJOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E007",
@@ -197,7 +209,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CROSS_REFERENCE)"
     },
     {
       "conflict_id": "INC-E008",
@@ -218,7 +231,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CROSS_REFERENCE)"
     },
     {
       "conflict_id": "INC-E009",
@@ -233,7 +247,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "NO_FIX_ACCEPTED",
+      "resolution_note": "검토 후 수정 불요로 수용 (FALSE_POSITIVE/정합)"
     },
     {
       "conflict_id": "INC-E010",
@@ -248,7 +263,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E011",
@@ -269,7 +285,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E012",
@@ -284,7 +301,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "RESOLVED",
+      "resolution_note": "수정 적용 (ADD_CLARIFICATION)"
     },
     {
       "conflict_id": "INC-E013",
@@ -299,7 +317,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "DEFERRED",
+      "resolution_note": "이관 (수정 제안 부재 — Phase 1 이관)"
     },
     {
       "conflict_id": "INC-E014",
@@ -314,7 +333,8 @@
         }
       ],
       "severity": "MINOR",
-      "resolution": "RESOLVED"
+      "resolution": "DEFERRED",
+      "resolution_note": "이관 (수정 제안 부재 — Phase 1 이관)"
     }
   ]
 }

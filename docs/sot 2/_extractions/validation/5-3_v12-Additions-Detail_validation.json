@@ -18,7 +18,7 @@
   },
   "SDV-4_lock": {
     "status": "WARN",
-    "open_conflicts": 4
+    "open_conflicts": 5
   },
   "SDV-5_schema_types": {
     "status": "N/A",
@@ -34,6 +34,6 @@
     "part2_lines": 6454
   },
   "verdict": "ATTENTION",
-  "timestamp": "2026-06-04T23:45:08",
+  "timestamp": "2026-06-05T19:28:42",
   "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
 }

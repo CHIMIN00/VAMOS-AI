@@ -3,17 +3,17 @@
     "domains": 36,
     "part2_lines": 6454,
     "verdict_breakdown": {
-      "PASS": 34,
-      "ATTENTION": 2
+      "PASS": 35,
+      "ATTENTION": 1
     },
     "sdv_breakdown": {
       "SDV-1_structure:WARN": 6,
-      "SDV-4_lock:PASS": 34,
+      "SDV-4_lock:PASS": 35,
       "SDV-7_part2_lineref:PASS": 36,
       "SDV-1_structure:PASS": 30,
-      "SDV-4_lock:WARN": 2
+      "SDV-4_lock:WARN": 1
     },
-    "SDV-4_lock_warn_fail": 2,
+    "SDV-4_lock_warn_fail": 1,
     "SDV-1_critical_fail": 0,
     "SDV-1_index_warn_domains": [
       "0-0_Governance-Rules-Meta",
@@ -26,7 +26,7 @@
     "structural_critical_pass": 36,
     "structural_pass": 30,
     "note": "SDV-2/5/6 are N/A: the SOT2 SC-JSON extraction layer (_extractions/) does not exist, so extraction-count/schema-type/canonical-owner checks have no input. SDV-1/4/7 run directly on the .md domain files. SDV-4 (LOCK gate) PASS == CONFLICT OPEN 0.",
-    "timestamp": "2026-06-04T23:45:08",
+    "timestamp": "2026-06-05T19:28:42",
     "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
   },
   "domains": {
@@ -60,7 +60,7 @@
     "6-2_Security-Governance": "PASS",
     "6-3_Agent-Teams-PARL": "PASS",
     "6-4_Memory-RAG-Storage": "PASS",
-    "6-5_SDAR-System": "ATTENTION",
+    "6-5_SDAR-System": "PASS",
     "6-6_Self-Evolution-System": "PASS",
     "6-7_RT-BNP-DCL": "PASS",
     "6-8_Cloud-Library": "PASS",

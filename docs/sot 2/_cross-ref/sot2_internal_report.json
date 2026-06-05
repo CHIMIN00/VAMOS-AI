@@ -3,18 +3,12 @@
     "skill": "sot2-cross-ref all",
     "domains": 36,
     "BROKEN": 1,
-    "EXTERNAL": 6,
+    "EXTERNAL": 4,
     "LOCK_MISMATCH": 0,
     "total_md_links": 1117,
     "verdict": "ISSUES",
-    "timestamp": "2026-06-04T23:45:02",
-    "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
-    "components": [
-      "cross_ref_matrix.md/.json",
-      "lock_consistency.md/.json",
-      "broken_references.md/.json",
-      "{domain}.json x36"
-    ]
+    "timestamp": "2026-06-05T19:30:00",
+    "skill_version": "D1-deterministic-v1.0 (2026-06-04)"
   },
   "broken": [
     {

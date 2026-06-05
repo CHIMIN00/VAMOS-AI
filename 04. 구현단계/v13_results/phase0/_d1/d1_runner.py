@@ -18,55 +18,86 @@ def check_1_2():
     ledger = json.load(open(ledger_path, encoding="utf-8"))
     verdict_path = os.path.join(PHASE0, "v13_phase0_verdict.md")
     verdict_txt = read_text(verdict_path)
-    # Resolved state is authoritative: verdict shows 잔여 CRITICAL 0 / MAJOR 0, gate PASS.
-    residual_critical = 0 if "잔여 CRITICAL: 0건" in verdict_txt else None
-    residual_major    = 0 if "잔여 MAJOR: 0건" in verdict_txt else None
+
+    # --- Derive per-inconsistency resolution from the v13 fix-proposal ledger (no hardcode) ---
+    # action map: INC -> action (FIX_VALUE/ADD_CLARIFICATION/ADD_CROSS_REFERENCE => FIXED; NO_FIX;
+    #             absent from proposals => DEFERRED/이관). E008 appears multiple times (multi-location).
+    fp_path = os.path.join(PHASE0, "v13_sot_fix_proposals.json")
+    action_of = {}
+    try:
+        fp = json.load(open(fp_path, encoding="utf-8"))
+        for p in fp.get("proposals", []):
+            iid = p.get("inconsistency_id") or p.get("inc_id") or p.get("id")
+            act = p.get("action") or p.get("fix_type") or p.get("type")
+            if iid:
+                action_of.setdefault(iid, act)
+    except Exception:
+        pass
+
+    def resolution_for(iid):
+        act = action_of.get(iid)
+        if act is None:
+            return "DEFERRED", "이관 (수정 제안 부재 — Phase 1 이관)"
+        if str(act).upper() == "NO_FIX":
+            return "NO_FIX_ACCEPTED", "검토 후 수정 불요로 수용 (FALSE_POSITIVE/정합)"
+        return "RESOLVED", f"수정 적용 ({act})"
 
     incs = ledger.get("inconsistencies", [])
     conflicts = []
     sev_count = collections.Counter()
+    res_count = collections.Counter()
+    active = 0          # blocking = CRITICAL/MAJOR not actually FIXED
+    minor_unresolved = 0
     for i in incs:
         sev = i.get("severity", "INFO")
         sev_count[sev] += 1
-        occ = []
-        for s in i.get("sources", []):
-            occ.append({
-                "sot_file": s.get("source_file"),
-                "line": s.get("source_line"),
-                "text": s.get("source_text"),
-                "value": s.get("value"),
-            })
+        iid = i.get("inconsistency_id")
+        res, res_note = resolution_for(iid)
+        res_count[res] += 1
+        if res != "RESOLVED":
+            if sev in ("CRITICAL", "MAJOR"):
+                active += 1
+            else:
+                minor_unresolved += 1
+        occ = [{"sot_file": s.get("source_file"), "line": s.get("source_line"),
+                "text": s.get("source_text"), "value": s.get("value")} for s in i.get("sources", [])]
         conflicts.append({
-            "conflict_id": i.get("inconsistency_id"),
+            "conflict_id": iid,
             "type": {"C1": "numeric", "C7": "lock"}.get(i.get("type"), "numeric"),
             "concept": i.get("key"),
             "occurrences": occ,
             "severity": sev,
-            "resolution": "RESOLVED",  # per v13 verdict (FIX-E001..E004 + delta), 잔여 CRITICAL/MAJOR 0
+            "resolution": res,            # RESOLVED / NO_FIX_ACCEPTED / DEFERRED (honest, per fix-proposal)
+            "resolution_note": res_note,
         })
-    # Active (unresolved) conflicts after v13 remediation = 0 (verdict PASS, residual CRITICAL/MAJOR 0)
-    active = 0
+    # cross-check against verdict prose (independent corroboration, not the gate source)
+    verdict_residual_crit = 0 if "잔여 CRITICAL: 0건" in verdict_txt else None
+    verdict_residual_major = 0 if "잔여 MAJOR: 0건" in verdict_txt else None
     out = {
         "sot_conflict_metadata": {
             "scan_type": "full",
             "sot_files_scanned": len(sot_files),
             "total_conflicts": len(conflicts),
-            "active_conflicts": active,
+            "active_conflicts": active,                       # blocking unresolved (CRITICAL/MAJOR) — derived
+            "minor_unresolved": minor_unresolved,             # NO_FIX/이관 (MINOR, non-blocking)
+            "resolution_breakdown": dict(res_count),          # {RESOLVED:11, NO_FIX_ACCEPTED:1, DEFERRED:2}
             "numeric_conflicts": sev_count.get("CRITICAL", 0) + sev_count.get("MAJOR", 0) + sev_count.get("MINOR", 0),
             "term_conflicts": 0, "date_conflicts": 0, "lock_conflicts": 0,
             "severity_breakdown": dict(sev_count),
             "verdict": "CLEAN" if active == 0 else "CONFLICTS_FOUND",
-            "basis": "v13 Enhanced Phase 0 pipeline (2026-03-21): 14 inconsistencies found, all RESOLVED "
-                     "(FIX-E001..E004 + DELTA). 잔여 CRITICAL/MAJOR=0, gate PASS. This artifact reconciles "
-                     "that authoritative ledger into the /sot-conflict schema and re-verifies the 68 SOT hashes.",
-            "residual_critical": residual_critical, "residual_major": residual_major,
+            "basis": "v13 Enhanced Phase 0 (2026-03-21): 14 inconsistencies. Per-item resolution derived from "
+                     "v13_sot_fix_proposals.json (FIXED=11 / NO_FIX_ACCEPTED=1 [E009] / DEFERRED=2 [E013,E014]). "
+                     "active_conflicts counts only CRITICAL/MAJOR not FIXED (=0, all 6 fixed). MINOR unresolved "
+                     "are non-blocking (NO_FIX/이관). Independently corroborated by verdict prose. 68 SOT re-hashed.",
+            "verdict_residual_critical": verdict_residual_crit, "verdict_residual_major": verdict_residual_major,
             "timestamp": now_iso(), "input_hash": combined, "skill_version": SKILL_VERSION,
         },
         "conflicts": conflicts,
     }
     p = write_json(os.path.join(PHASE0, "sot_conflict_report.json"), out)
     SUMMARY["1-2"] = {"path": p, "verdict": out["sot_conflict_metadata"]["verdict"],
-                      "total": len(conflicts), "active": active}
+                      "total": len(conflicts), "active": active,
+                      "resolution_breakdown": dict(res_count), "minor_unresolved": minor_unresolved}
     return out
 
 

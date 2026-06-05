@@ -1,6 +1,19 @@
 {
   "d1_verdict": "PASS_CONDITIONAL",
-  "verdict_note": "5개 값 게이트(1-2 CONFLICT·1-3 MISMATCH·1-4 LOCK MISMATCH·1-5 SDV-1 critical/SDV-4 lock value·1-9 snapshot) 전수 통과. SDV-4 WARN 2건 + BROKEN 1건은 모두 LOCK 값 충돌이 아닌 사전 존재·소유자 문서화 비차단 이연 항목으로 아래 이연대장에 전수 등록(누락 0). 사용자 지시(안전·무누락·무오류)에 따라 자동 정본 변경 없이 전 항목 추적.",
+  "verdict_note": "5개 값 게이트(1-2 CONFLICT active 0·1-3 MISMATCH 0·1-4 LOCK MISMATCH 0·1-5 SDV-1 critical 0/SDV-4 lock value 0·1-9 snapshot) 전수 통과. SDV-4 WARN 1건(5-3) + BROKEN 1건은 LOCK 값 충돌이 아닌 사전 존재·소유자 문서화 비차단 이연으로 이연대장에 전수 등록(누락 0). 진짜 현행 OPEN 충돌은 5건(전부 5-3 C-04~C-08)·6-5는 v1.3에서 RESOLVED(OPEN 0). 자동 정본 변경 없이 전 항목 추적.",
+  "audit_corrections_2026_06_05": {
+    "note": "1차 D1(2026-06-04)의 감사 카운트 오류를 read-only 재검증으로 정정 (게이트 판정 불변).",
+    "open_conflicts": "6 → 5 (5-3 C-07 false-negative 복구 + 6-5 W-CB stale OPEN 제거)",
+    "6-5_W-CB": "OPEN(이연 D-2) → RESOLVED. CONFLICT_LOG v1.3(2026-05-19) §8.1 'OPEN 0건', Option C 양 도메인 분담.",
+    "sdv4_warn": "2 → 1 (5-3만 WARN; 6-5 PASS)",
+    "external_count": "6 → 4 (실존하는 내부링크 2건 오분류 제거)",
+    "1-2_resolution": "전건 RESOLVED → RESOLVED 11/NO_FIX_ACCEPTED 1(E009)/DEFERRED 2(E013,E014)",
+    "engine_fixes": [
+      "count_open_conflicts: status-cell 한정 + id dedupe + 전환인식",
+      "check_1_2: active를 fix-proposal에서 산출(하드코딩 제거)",
+      "EXTERNAL_TGT: 디스크 해소 우선(내부링크 오분류 제거)"
+    ]
+  },
   "gates": {
     "1-2_sot_conflict_scan": {
       "metric": "active CONFLICT",
@@ -26,7 +39,7 @@
       "value": 1,
       "target": 0,
       "pass": false,
-      "external_excluded": 6
+      "external_excluded": 4
     },
     "1-5_sdv1_structure": {
       "metric": "SDV-1 critical FAIL",
@@ -37,7 +50,7 @@
     },
     "1-5_sdv4_lock": {
       "metric": "SDV-4 LOCK WARN/FAIL",
-      "value": 2,
+      "value": 1,
       "target": 0,
       "pass": false
     },
@@ -59,21 +72,12 @@
   "deferral_register": [
     {
       "ref": "5-3 C-04~C-08",
-      "type": "LOCK 매핑/출처 불일치 (5건)",
+      "type": "LOCK 매핑/출처 불일치 (5건: C-04,C-05,C-06,C-07,C-08)",
       "status": "OPEN (owner-documented non-blocking, since 2026-04-03, '게이트 영향 없음/4-2 선례')",
       "blocking": false,
       "lock_value_conflict": false,
       "owner_phase": "Phase 2/3 협의",
-      "evidence": "docs/sot 2/5-3_v12-Additions-Detail/CONFLICT_LOG.md C-04..C-08"
-    },
-    {
-      "ref": "6-5 W-CB",
-      "type": "Circuit Breaker 소유권 미확정 (1건)",
-      "status": "OPEN (DEFERRED_TO_PHASE3 OBSERVE_ONLY marker)",
-      "blocking": false,
-      "lock_value_conflict": false,
-      "owner_phase": "Phase 3 (6-2 Security 협의)",
-      "evidence": "docs/sot 2/6-5_SDAR-System/CONFLICT_LOG.md W-CB"
+      "evidence": "docs/sot 2/5-3_v12-Additions-Detail/CONFLICT_LOG.md C-04~C-08 (전수 status=OPEN)"
     },
     {
       "ref": "2-2 04_cat-d-media/_index.md -> ../_index.md",
@@ -124,21 +128,15 @@
     },
     {
       "domain": "5-3_v12-Additions-Detail",
+      "id": "C-07",
+      "line": 19,
+      "excerpt": "| C-07 | 2026-04-03 | OPEN | **LOCK-V12-07 TS 3종 전용 LOCK 부재** — LOCK-V12-07이 상속한다고 선언한 \"TS_CORE, TS_WEB_RESEARCH, TS_CODE 3종 구성\"에 대해 #11 A2A(LOCK-A2A-01~10)와 #17 MLOps(LOCK-ML-01~12) 어느 쪽에도 TS 3종 전용 LOCK 항목이 없음. TS 디렉토리 "
+    },
+    {
+      "domain": "5-3_v12-Additions-Detail",
       "id": "C-08",
       "line": 20,
       "excerpt": "| C-08 | 2026-04-03 | OPEN | **LOCK-V12-03 도메인 내부 tau 값 불일치 (참고)** — LOCK-V12-03의 \"tau=0.025\"는 Ai-investing top_down_allocation.md 기본값(0.025)과 일치하나, 같은 도메인 portfolio_optimization.md E9 LOCK에는 \"τ=0.05\"로 기재. 도메인 LOCK 범위는 \""
-    },
-    {
-      "domain": "6-5_SDAR-System",
-      "id": "W-CB",
-      "line": 35,
-      "excerpt": "| W-CB | Circuit Breaker 소유권 | L16 P2 수리 제한에서 \"Circuit Breaker OPEN 시 자동 복구 금지\" 참조 — 소유 도메인 미확인 (6-2 Security? 3-5 AI-Investing?) | Phase 1 경계 협의 시 확정 필요 | OPEN |"
-    },
-    {
-      "domain": "6-5_SDAR-System",
-      "id": "W-CB",
-      "line": 152,
-      "excerpt": "| W-CB | OPEN | OPEN (DEFERRED_TO_PHASE3 OBSERVE_ONLY 마커 추가) | Phase 1 경계 협의 잔여, Phase 3 시점 6-2 Security 도메인과 최종 협의 |"
     }
   ],
   "should_checks": {
@@ -169,7 +167,7 @@
     "snapshot_manifest_sha256": "26ff46ba0f1e3b78639022410b3997b0bb2ba2293ca44a53b1b502a724f9e574"
   },
   "reproducibility": {
-    "timestamp": "2026-06-04T23:44:34",
+    "timestamp": "2026-06-05T19:30:00",
     "skill_version": "D1-deterministic-v1.0 (2026-06-04)",
     "deterministic": "1-2..1-5,1-9 동일 입력=동일 출력 (스크립트 _d1/)",
     "scripts": [
