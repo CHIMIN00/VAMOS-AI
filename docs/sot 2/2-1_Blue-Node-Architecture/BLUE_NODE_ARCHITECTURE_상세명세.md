@@ -1,8 +1,8 @@
 # 2-1. Blue Node Architecture 상세명세
 
 > **Tier**: 2 - Domain Execution (Blue Node 계층)
-> **Part2 상태**: GAP (SOT D2.0-03 SS4~SS6에 정의되어 있으나 Part2에 미구현)
-> **SOT 근거**: D2.0-03 SS3.2, SS4.1~4.2, SS5.2, SS6; D2.0-01 S4; STEP7 K-010, K-029, K-041, K-049
+> **Part2 상태**: GAP (SOT D2.0-03 §1~§6에 정의되어 있으나 Part2에 미구현)
+> **SOT 근거**: D2.0-03 §3.2~§3.3, §4.1~§4.2, §5.2, §6; D2.0-01 S4; STEP7 K-010, K-029, K-041, K-049
 > **Part2 위치**: V2-Phase 1~2 (Blue Node 관련 섹션)
 
 ---
@@ -11,7 +11,7 @@
 
 Blue Node는 VAMOS의 도메인 실행 계층으로, ORANGE CORE로부터 위임받은 작업을 도메인 특화 방식으로 처리한다. Part2에는 Blue Node의 기본 구조(이름, 역할)만 존재하며, 권한 매트릭스·인터페이스 계약·템플릿 주입·라이프사이클·메모리 공유·정책 오버라이드·MCP 브리지 등 7개 핵심 아키텍처 요소가 누락되어 있다.
 
-본 문서는 SOT D2.0-03 SS4~SS6에 정의된 Blue Node 아키텍처의 상세 명세를 제공한다.
+본 문서는 SOT D2.0-03 §1~§6에 정의된 Blue Node 아키텍처의 상세 명세를 제공한다.
 
 ---
 
@@ -19,18 +19,20 @@ Blue Node는 VAMOS의 도메인 실행 계층으로, ORANGE CORE로부터 위임
 
 ### SOT 근거
 - STEP7 K-041: Blue Node별 레벨 기반 권한 제어
-- D2.0-03 SS6.1: 보안 및 접근 제어 정책
+- D2.0-03 §6.1: Event Registry (⚠️ 원문은 이벤트 레지스트리, "보안 및 접근 제어 정책" 직접 해당 아님 — 접근 제어는 D2.0-03 §1 P0/P1/P2 제약 + D2.0-07 참조)
 
 ### 1.1 권한 레벨 정의
 
 | Level | 이름 | 설명 | 허용 범위 |
 |-------|------|------|-----------|
-| 0 | `NONE` | 접근 불가 | 모든 리소스 차단 |
-| 1 | `READ_ONLY` | 읽기 전용 | 자기 도메인 데이터 읽기 |
-| 2 | `EXECUTE` | 실행 허용 | 자기 도메인 내 작업 실행 |
-| 3 | `WRITE` | 쓰기 허용 | 자기 도메인 데이터 변경 |
-| 4 | `CROSS_DOMAIN` | 교차 도메인 | 타 Blue Node 리소스 접근 |
-| 5 | `ADMIN` | 관리자 | 권한 부여/회수, 노드 관리 |
+| 0 | `READ` (읽기전용) | 정보 조회·검색만 허용 | 데이터 열람, 검색 쿼리 |
+| 1 | `CREATE` (생성) | 새 리소스 생성 허용 | 파일 생성, 코드 생성 |
+| 2 | `MODIFY` (수정) | 기존 리소스 변경 허용 | 파일 수정, 설정 변경 |
+| 3 | `EXECUTE` (실행) | 코드·API 실행 허용 | 코드 실행, API 호출 |
+| 4 | `EXTERNAL` (외부통신) | 외부 시스템 통신 허용 | 이메일 발송, PR 생성 (노드별 Ask) |
+| 5 | `FINANCIAL` (금융) | 금융 거래 허용 (항상 사용자 확인 필수) | 주문 실행, 결제 |
+
+> **LOCK-BN-02 정본**: Level 정의는 01_permission-matrix/_index.md §1 (D2.0-03 §4 K-041) 정본을 따른다. 본 표는 정본을 참조하며 재정의하지 않는다.
 
 ### 1.2 입출력 스키마
 
@@ -71,16 +73,16 @@ class DynamicPermissionAdjuster:
     async def adjust(self, node_id: str, context: RuntimeContext) -> int:
         base_level = await self.get_base_level(node_id)
 
-        # 조건별 조정
+        # 조건별 조정 — 하향만 허용 (LOCK-BN-17 "Only Stricter"). 상향은 절대 불가;
+        # 권한 상향은 ORANGE CORE 매트릭스 재설정(07 Gate 승인)으로만 가능 (01 §5.2/§8.2).
         adjustments = []
         if context.error_rate > 0.1:
             adjustments.append(-1)          # 에러율 높으면 레벨 하향
-        if context.trust_score > 0.9:
-            adjustments.append(+1)          # 신뢰도 높으면 레벨 상향
         if context.is_peak_hours:
             adjustments.append(-1)          # 피크 시간 보수적 운영
 
-        effective = max(0, min(5, base_level + sum(adjustments)))
+        # 하향만 반영: 양수 합산은 무시 (min(0, ...))
+        effective = max(0, base_level + min(0, sum(adjustments)))
 
         await self.audit_log(node_id, base_level, effective, adjustments)
         return effective
@@ -97,7 +99,7 @@ class DynamicPermissionAdjuster:
 | BN-Health | 2 | 2 | 3 | 2 | 1 |
 
 ### 1.5 의존성
-- **상위**: ORANGE CORE 정책 엔진 (I-19 ApprovalManager)
+- **상위**: ORANGE CORE 정책 엔진 (D2.0-07 §4.3.2/S7E-050 ApprovalManager)
 - **하위**: 모든 Blue Node 실행 시 권한 체크 선행
 - **연관**: K-029 Memory Sharing Protocol (메모리 접근 권한)
 
@@ -366,12 +368,13 @@ class TemplateInjector:
 
 ### 3.4 버전 확장 전략
 
-| 단계 | 기간 | 추가 템플릿 셋 | 설명 |
+> ⚠️ 아래는 구현 범위(scope) 정의만 기술. Phase 일정은 Part2 정본 참조 (R6 준수).
+
+| 단계 | 범위 | 추가 템플릿 셋 | 설명 |
 |------|------|----------------|------|
-| Phase 1 | MVP | TS_CORE, TS_WEB_RESEARCH, TS_CODE | 3대 핵심 셋 |
-| Phase 2 | +3개월 | TS_PKM, TS_EDUCATION, TS_HEALTH | 도메인 확장 |
-| Phase 3 | +6개월 | TS_MEDIA, TS_FINANCE, TS_INTEGRATION | 고급 도메인 |
-| Phase 4 | +12개월 | TS_CUSTOM (사용자 정의) | 사용자가 직접 생성 |
+| V1 | MVP | TS_CORE, TS_WEB_RESEARCH, TS_CODE | 3대 핵심 셋 |
+| V2 | P1 확장 | TS_PKM, TS_EDUCATION, TS_HEALTH, TS_MEDIA, TS_FINANCE, TS_INTEGRATION | 도메인 확장 |
+| V3 | P2 확장 | TS_CUSTOM (사용자 정의) | 사용자가 직접 생성 |
 
 ### 3.5 의존성
 - **상위**: K-049 VamosMessage (template_set_id 전달)
@@ -444,8 +447,8 @@ class TemplateInjector:
 ```python
 class CandidateNodeCap(BaseModel):
     """Blue Node 후보 등록 제한"""
-    max_candidates: int = 20         # 최대 후보 수
-    max_active: int = 5              # 동시 활성 노드 수
+    max_candidates: int = 5          # 최대 후보 수 (LOCK-BN-13 V1=5; V2=20, V3=100)
+    max_active: int = 3              # 동시 활성 노드 수 (LOCK-BN-12 V1=3; V2=10, V3=50)
     max_per_domain: int = 2          # 도메인별 최대 활성 노드
 
 class NodeCapManager:
@@ -786,7 +789,7 @@ overrides:
 
 ### SOT 근거
 - STEP7 K-010: MCP(Model Context Protocol) 통합
-- D2.0-03 SS6.2: 외부 시스템 연동 인터페이스
+- D2.0-03 §6.4~§6.7: MCP 표준 채택/서버 카탈로그/Claude Tool Use/SDK 통합 (⚠️ 기존 "SS6.2" 참조는 §6.2 Failure/Fallback Registry와 불일치 — 실제 MCP 관련 근거는 §6.4~§6.7)
 
 ### 7.1 아키텍처 개요
 
@@ -1004,13 +1007,13 @@ class MCPAuthGateway:
 
 | 항목 | 관련 키워드 | SOT 참조 | 의존 관계 |
 |------|-------------|----------|-----------|
-| Permission Matrix | K-041 | D2.0-03 SS6.1 | → Memory, Lifecycle, MCP Bridge |
-| Interface Contract | K-049, SS5.2 | D2.0-03 SS5.2 | → Template, Permission |
-| Template Set | SS4.2 | D2.0-03 SS4.2 | → Interface Contract, Policy |
-| Lifecycle State Machine | SS3.2 | D2.0-03 SS3.2 | → Permission, MCP Bridge |
-| Memory Sharing | K-029 | D2.0-03 SS5.3 | → Permission Matrix |
-| Policy Overrides | SS4.1 | D2.0-03 SS4.1 | → Template Set, Permission |
-| MCP Bridge | K-010 | D2.0-03 SS6.2 | → Permission, Lifecycle, Interface Contract |
+| Permission Matrix | K-041 | D2.0-03 §1 (P0/P1/P2 제약) + §6.1 (Event Registry) | → Memory, Lifecycle, MCP Bridge |
+| Interface Contract | K-049 | D2.0-03 §5.2 | → Template, Permission |
+| Template Set | — | D2.0-03 §4.2 | → Interface Contract, Policy |
+| Lifecycle State Machine | — | D2.0-03 §3.2, §3.3 | → Permission, MCP Bridge |
+| Memory Sharing | K-029 | D2.0-03 §5.3 | → Permission Matrix |
+| Policy Overrides | — | D2.0-03 §4.1 | → Template Set, Permission |
+| MCP Bridge | K-010 | D2.0-03 §6.4~§6.7 | → Permission, Lifecycle, Interface Contract |
 
 ---
 

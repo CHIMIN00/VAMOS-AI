@@ -79,7 +79,7 @@ VAMOS의 모든 설계 자산을 유형별로 분류하고, 각 자산이 매트
 
 관련 P0-2 산출물:
 - `P0-2_CLAUDE_MD_STRUCTURE_SPEC.md` — CLAUDE.md §1~§28 구조 명세
-- `P0-2_OBSIDIAN_MATRIX_MAPPING.md` — Obsidian 17폴더 × 매트릭스 22셀 매핑
+- `P0-2_OBSIDIAN_MATRIX_MAPPING.md` — Obsidian 17폴더 × 매트릭스 20셀 매핑
 - `P0-2_DESIGN_ASSET_MAP.md` — 설계 자산 전체 맵
 
 ---
@@ -143,7 +143,7 @@ VAMOS의 모든 설계 자산을 유형별로 분류하고, 각 자산이 매트
 │ "전체를" │                  │                          │                  │ 프로토콜         │
 └──────────┴──────────────────┴──────────────────────────┴──────────────────┴──────────────────┘
 
-셀 수: 16 (4행 × 4열) | B2/R2 하위 분할 포함 실질 단위: 22
+셀 수: 16 (4행 × 4열) | B2/R2 하위 분할 포함 실질 단위: 20
 ```
 
 ---
@@ -159,14 +159,14 @@ VAMOS의 모든 설계 자산을 유형별로 분류하고, 각 자산이 매트
 │ D1: 설계 정합성 확보                                         │
 ├──────────┬──────────────────────────────────────────────────┤
 │ 입력     │ SOT 68개 파일 (docs/sot/)                        │
-│          │ SOT 2 648개 파일 (docs/sot 2/)                    │
+│          │ SOT 2 2,654개 파일 (docs/sot 2/)                  │
 │          │ LOCK-DECISION-REGISTRY 469+ 항목                  │
 │          │ PART1 BLOCKER 14건 목록                           │
 ├──────────┼──────────────────────────────────────────────────┤
 │ 프로세스 │ ① /sot-conflict scan                              │
 │          │   → SOT 68개 내부 수치/정의/LOCK 모순 탐지         │
 │          │ ② /sot-conflict sot2-vs-sot                       │
-│          │   → SOT 2(648개) ↔ SOT(68개) 교차 검증            │
+│          │   → SOT 2(2,654개) ↔ SOT(68개) 교차 검증          │
 │          │ ③ /sot2-cross-ref all                              │
 │          │   → SOT 2 내부 36개 도메인 간 교차 참조 무결성     │
 │          │ ④ /validate sot2-all                               │
@@ -179,7 +179,7 @@ VAMOS의 모든 설계 자산을 유형별로 분류하고, 각 자산이 매트
 │          │ ⑦ CLAUDE.md ↔ SOT/SOT 2 정합 검증 (v1.1 추가)     │
 │          │   → §1~§28 구조가 SOT 정본과 일치하는지 확인        │
 │          │ ⑧ Obsidian(VAMOS HOME) ↔ 전략 정합 확인 (v1.1 추가)│
-│          │   → 17폴더 × 22셀 매핑(P0-2) 기준 정합 점검        │
+│          │   → 17폴더 × 20셀 매핑(P0-2) 기준 정합 점검        │
 ├──────────┼──────────────────────────────────────────────────┤
 │ 출력     │ sot_conflict_report.json       → B1, R1, X1에 전달│
 │          │ sot2_crossref_report.json      → D2에 기준선 전달 │
@@ -1039,7 +1039,7 @@ B2a에서 SOT 모순 발견
 
 ```
 ┌─ V0 Scope ──────────────────────────────────────────────────────────────┐
-│  D1: SOT 68개 + SOT2 648개 정합성 (전체)                                │
+│  D1: SOT 68개 + SOT2 2,654개 정합성 (전체)                              │
 │  B1: pyproject.toml + ruff + CI + vamos_lint                           │
 │  B2: 스켈레톤 코드 생산                                                 │
 │  R1: 핵심 아키텍처 결정 7개 LOCK                                        │
@@ -1324,7 +1324,7 @@ V0 완료 → V1 입력으로 전달
 | 8 | UX/프론트엔드 | **R2c** | 런타임 기능 구현 |
 | *하네스 엔지니어링* | **D1 + B1 + B2a + B2b + B3** | D행 일부 + B행 전체 |
 
-**9개 영역 = 22개 셀 단위에 빠짐없이 매핑됨**
+**9개 영역 = 20개 셀 단위에 빠짐없이 매핑됨**
 
 ---
 
@@ -1362,7 +1362,7 @@ V0 완료 → V1 입력으로 전달
 > - `D:\VAMOS\CLAUDE 보강전략 V1.0.md` — CLAUDE.md 보강 + 8단계 검증 스킬 (미연동 해소: **보강전략**)
 > - `D:\VAMOS\docs\guides\VAMOS_구현가이드_PART2_구현단계.md` — 구현 순서 + 린터/CI/테스트 설정
 > - `D:\VAMOS\docs\sot\` — SOT 정본 68개 파일
-> - `D:\VAMOS\docs\sot 2\` — SOT 2 상세 710개 파일
+> - `D:\VAMOS\docs\sot 2\` — SOT 2 상세 2,654개 파일
 > - `D:\VAMOS\CLAUDE.md` — AI 컨텍스트 (현재 697줄)
 > - `D:\VAMOS\.claude\skills\` — 기존 55개 스킬
 > - `D:\VAMOS\VAMOS HOME\` — Obsidian Knowledge Graph (미연동 해소: **Obsidian**)
@@ -1383,5 +1383,5 @@ V0 완료 → V1 입력으로 전달
 >
 > *P0-2 산출물:*
 > - `D:\VAMOS\VAMOS Engineering\P0-2_CLAUDE_MD_STRUCTURE_SPEC.md` — CLAUDE.md §1~§28 구조 명세
-> - `D:\VAMOS\VAMOS Engineering\P0-2_OBSIDIAN_MATRIX_MAPPING.md` — Obsidian 17폴더 × 매트릭스 22셀 매핑
+> - `D:\VAMOS\VAMOS Engineering\P0-2_OBSIDIAN_MATRIX_MAPPING.md` — Obsidian 17폴더 × 매트릭스 20셀 매핑
 > - `D:\VAMOS\VAMOS Engineering\P0-2_DESIGN_ASSET_MAP.md` — 설계 자산 전체 맵

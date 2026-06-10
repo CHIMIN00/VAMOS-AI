@@ -76,21 +76,20 @@ class WorkflowEngine:
 
 ```typescript
 // workflow_node_types.ts
+// LOCK-WF-01 (AUTHORITY_CHAIN §2): 12 타입 — 제거·재정의 불가, 추가만 허용
 type NodeType =
-  | "llm_call"           // LLM API 호출 (프롬프트 실행)
-  | "api_request"        // 외부 REST/GraphQL API 호출
-  | "data_transform"     // 데이터 변환/매핑
-  | "condition"          // 조건 분기 (if/else)
-  | "loop"               // 반복 (for each)
-  | "parallel"           // 병렬 실행
-  | "wait"               // 대기 (시간/이벤트)
-  | "human_approval"     // 사람 승인 대기
-  | "browser_action"     // Playwright 브라우저 자동화
-  | "desktop_rpa"        // 데스크톱 RPA 액션
-  | "notification"       // 알림 (이메일/슬랙/텔레그램)
-  | "file_operation"     // 파일 읽기/쓰기/변환
-  | "database_query"     // DB 쿼리 실행
-  | "code_execute";      // 사용자 정의 Python/JS 코드
+  | "LLMNode"            // LLM API 호출 (프롬프트 실행)
+  | "APINode"            // 외부 REST/GraphQL API 호출
+  | "ConditionNode"      // 조건 분기 (if/else)
+  | "ParallelNode"       // 병렬 실행
+  | "HumanApprovalNode"  // 사람 승인 대기
+  | "TransformNode"      // 데이터 변환/매핑/필터
+  | "NotificationNode"   // 알림 (이메일/슬랙/텔레그램)
+  | "LoopNode"           // 반복 (for each / while)
+  | "SubworkflowNode"    // 다른 워크플로우 호출
+  | "ErrorHandlerNode"   // 에러 처리 (catch/retry)
+  | "DelayNode"          // 지연/대기
+  | "CodeNode";          // 사용자 정의 Python/JS 코드 (브라우저/데스크톱 RPA는 CodeNode 프리셋)
 
 interface WorkflowNode {
   id: string;
@@ -125,7 +124,7 @@ class WorkflowState(TypedDict):
     workflow_id: str
     execution_id: str
     current_node: str
-    status: str                     # "running" | "paused" | "completed" | "failed"
+    status: str                     # LOCK-WF-09: "PENDING" | "RUNNING" | "SUCCESS" | "FAILED" | "CANCELLED" | "TIMEOUT"
     node_results: dict[str, Any]    # {node_id: result}
     variables: dict[str, Any]       # 공유 변수
     error_stack: list[str]
@@ -180,6 +179,8 @@ class WorkflowErrorHandler:
             return ErrorAction(type="retry", delay_ms=delay)
         elif policy.get("then") == "human_approval":
             return ErrorAction(type="pause", reason=str(error), notify=True)
+        elif policy.get("then") == "skip_with_default":
+            return ErrorAction(type="skip", reason=str(error), default_output=self._get_default_output(error))
         else:
             return ErrorAction(type="fail", reason=str(error))
 ```

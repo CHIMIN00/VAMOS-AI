@@ -56,9 +56,9 @@
   2. 그래도 해소 불가 → 해당 도메인을 Phase 1 범위에서 제외
   3. V1 D1'에서 재검증
 
-실패 조건 B: SOT 2 완성 불가 (648개 중 일부 미완)
+실패 조건 B: SOT 2 완성 불가 (2,654개 중 일부 미완)
 복구 방법:
-  1. 핵심 12개 도메인(T0~T2) 완성 여부 확인
+  1. 핵심 5개 도메인(T0~T2) 완성 여부 확인
   2. 12개 완성 → D1 부분 실행 가능
   3. 나머지는 Phase 2와 병행 완성
 ```
@@ -135,7 +135,7 @@
 
 ```
 Git으로 백업되는 것:
-  ✓ SOT 68개 + SOT 2 648개
+  ✓ SOT 68개 + SOT 2 2,654개
   ✓ CLAUDE.md + 보강전략
   ✓ VAMOS Engineering 문서들
   ✓ VAMOS HOME 노트
@@ -177,7 +177,7 @@ Git으로 백업 안 되는 것:
 | # | 위험 | 확률 | 영향 | Phase | 대응책 |
 |---|------|------|------|-------|--------|
 | R01 | SOT 내부 불일치 다수 발견 | MEDIUM | HIGH | Phase 1 | 정본 우선순위로 해소 + 범위 축소 |
-| R02 | SOT 2 ↔ SOT 불일치 다수 | HIGH | HIGH | Phase 1 | 핵심 12개 도메인 우선 해소 |
+| R02 | SOT 2 ↔ SOT 불일치 다수 | HIGH | HIGH | Phase 1 | 핵심 5개 도메인 우선 해소 |
 | R03 | PART2 참조 SOT가 구버전 | MEDIUM | MEDIUM | Phase 1 | /sot-check method-c로 탐지 + 갱신 |
 | R04 | CLAUDE.md 보강 후 REJECT | LOW | MEDIUM | Phase 2 | 범위 축소 → BRONZE 허용 |
 | R05 | 린터 오탐(false positive) | MEDIUM | LOW | Phase 2 | 초기 warn 모드 → 안정화 후 error |

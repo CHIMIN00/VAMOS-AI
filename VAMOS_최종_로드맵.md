@@ -25,10 +25,10 @@
 
 SOT 2(설계 정본 체계)는 자체 다단계 라이프사이클로 진행되었으며 전부 종결:
 
-- **SOT 2 콘텐츠 완성**: 7 Tier / 36 대분류 / 30 구현 도메인, **36개 전부 APPROVED** + ALL-A VERIFIED (2026-03-27~28) · LOCK 469~484건 · CONFLICT OPEN 0
+- **SOT 2 콘텐츠 완성**: 7 Tier / 36 대분류 / 30 구현 도메인, **36개 전부 APPROVED** + ALL-A VERIFIED (2026-03-27~28) · LOCK 469~484건 · CONFLICT active(차단) 0 · 비차단 이연 OPEN 5건(5-3 C-04~C-08)
 - **구현 Phase 추적 (도메인별 §7)**: Phase 0(추출) → 1 → 2 → 3(V3 설계) → **4(V3 정본 승격)** 전 단계 완료
 - **Phase 4 정본 승격**: 30/30 도메인 (pre-complete 5 + RECOVERY 25/25 = 116/116 P4 task) **genuine production write 완결** (`[RECOVERY_COMPLETE: 2026-06-03]`)
-  - 불변식 전 도메인 유지: **CONFLICT OPEN 0 / LOCK 재정의 0 / abort NOT FIRED / FABRICATION 0**
+  - 불변식 전 도메인 유지: **CONFLICT active 0(비차단 이연 OPEN 5: 5-3 C-04~C-08) / LOCK 재정의 0 / abort NOT FIRED / FABRICATION 0**
   - 추적 정합: 종합계획서 §7 ↔ `PHASE4_ORCHESTRATION/PROGRESS.md` ↔ `SOT2_MASTER_INDEX.md` ↔ RECOVERY_PLAN v1.1 상호 일치
   - **RECOVERY 경위**: Phase 4 1차 승격 시 일부 도메인이 promotion report만 생성하고 V3 정본을 디스크에 쓰지 않은 verify-only 착시(보고서 ✅ ≠ 산출물 존재)가 발견되어, Wave1~3 25개 도메인 회수(genuine write)로 116/116 task를 완결했다. 재발 방지는 리스크 R16 참조.
 
@@ -184,7 +184,7 @@ Must 5개 완성 → D1 부분 실행 가능
 
 | # | 작업 | 상세 | 우선순위 | 병렬 | 산출물 |
 |---|------|------|---------|------|--------|
-| 1-1 | SOT 2 상세화 완료 | 710개 파일 상세화 마무리 (당초 648 → 710 실측) | **Must** (핵심5개) | Phase 0과 병렬 | SOT 2 완성본 |
+| 1-1 | SOT 2 상세화 완료 | 상세화 마무리 (당초 상세화 대상 648→710 → Phase4 확장 후 현행 2,654 실측) | **Must** (핵심5개) | Phase 0과 병렬 | SOT 2 완성본 |
 | 1-2 | D1: SOT 내부 정합 | /sot-conflict scan | **Must** | 1-1 후 | sot_conflict_report.json |
 | 1-3 | D1: SOT↔SOT 2 교차 | /sot-conflict sot2-vs-sot | **Must** | 순차 | sot2_crossref_report.json |
 | 1-4 | D1: SOT 2 내부 교차 | /sot2-cross-ref all | **Must** | 순차 | sot2_internal_report.json |
@@ -593,7 +593,7 @@ Phase 3                Phase 4·5          Phase 6      ┃
 | 안전/윤리 | `VAMOS Engineering\STRATEGY_05_SAFETY_AND_ETHICS.md` | A16+A21+A22+A25 상세 |
 | 통합/배포 | `VAMOS Engineering\STRATEGY_06_INTEGRATION_AND_DEPLOY.md` | A20+A23+A24 상세 |
 | 학습/품질 | `VAMOS Engineering\STRATEGY_07_LEARNING_AND_QUALITY.md` | A11+A17 상세 |
-| 매트릭스 | `VAMOS Engineering\STRATEGY_08_ENGINEERING_MATRIX.md` | 전체 작업 분류 (22셀) |
+| 매트릭스 | `VAMOS Engineering\STRATEGY_08_ENGINEERING_MATRIX.md` | 전체 작업 분류 (20셀) |
 | 하네스 | `VAMOS Engineering\STRATEGY_09_HARNESS_ENGINEERING.md` | AI 코드 품질 보장 |
 | 검증 체계 | `VAMOS Engineering\STRATEGY_10_VERIFICATION_SYSTEM.md` | 교차 참조 + 24건 갭 |
 | 자산 인벤토리 | `VAMOS Engineering\STRATEGY_11_ASSET_INVENTORY.md` | 전체 파일/도구 역할 |

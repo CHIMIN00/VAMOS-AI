@@ -26,7 +26,7 @@ D:\VAMOS\
 │
 ├── [설계 자산 — 원본]
 │   ├── docs/sot/                    68개 파일   89,413줄   SOT 정본
-│   ├── docs/sot 2/                  38폴더 710개 273,650줄  SOT 2 상세 (작업 중)
+│   ├── docs/sot 2/                  42폴더 2,654개 SOT 2 상세 (Phase4 확장 후 실측; 검증대상 1,979)
 │   └── docs/guides/                 4+34개      37,904줄   구현가이드 PART1/PART2/초보자
 │
 ├── [설계 자산 — 요약/접근]
@@ -48,7 +48,7 @@ D:\VAMOS\
 │
 ├── [작업 산출물]
 │   ├── 04. 구현단계/                696개 파일               v8~v13 추출/검증 결과
-│   ├── benchmark_results/           5개 파일                 벤치마크 실행 결과
+│   ├── benchmark_results/           4개 파일                 벤치마크 실행 결과
 │   └── benchmarks/golden_set/       14개 파일                골든 셋 테스트
 │
 ├── [자동화 스크립트]
@@ -95,11 +95,11 @@ D:\VAMOS\
 | STEP7 (5개) | ~9,019 | AI 기술 보강 상세 | R2b |
 | READINESS_GUIDE.md | 1,256 | GO/NO-GO 62건 | Phase 4완료, Phase 6완료 |
 
-## 2.2 docs/sot 2/ — SOT 2 상세 (648개, 작업 중)
+## 2.2 docs/sot 2/ — SOT 2 상세 (2,654개 / 검증대상 1,979, _automation 제외 — Phase4 확장 후 실측)
 
 | 역할 | SOT를 도메인별로 상세화한 확장 문서 |
 |------|----------------------------------|
-| 구조 | 38개 폴더 (36 도메인 + FILE CONTEXT + _cross-ref), 710개 파일 |
+| 구조 | 42개 폴더 (36 도메인 + FILE CONTEXT + PHASE3/4_ORCHESTRATION + _automation/_cross-ref/_extractions), 2,654개 파일 |
 | 사용 시점 | D1(교차 검증), B2b(컨텍스트 로딩), Obsidian 노트 원본 |
 | 매트릭스 셀 | D1, D2, B2b |
 
@@ -176,7 +176,7 @@ D:\VAMOS\
 | 파일 | 줄 수 | 역할 | 매트릭스 셀 |
 |------|------|------|-----------|
 | STRATEGY_01~07 (7개) | 각 ~5,000~8,000 | 25건 관점별 전략 (실패/범위/세션/도구/안전/통합/학습) | 전체 |
-| STRATEGY_08_ENGINEERING_MATRIX.md | ~1,500 | 전체 작업 분류 (22개 셀) **v1.1** — 미연동 8건 해소, A13/A16/A21/A22/A25 반영, 참조 25개 | 전체 |
+| STRATEGY_08_ENGINEERING_MATRIX.md | ~1,500 | 전체 작업 분류 (20개 셀) **v1.1** — 미연동 8건 해소, A13/A16/A21/A22/A25 반영, 참조 25개 | 전체 |
 | STRATEGY_09_HARNESS_ENGINEERING.md | ~1,200 | AI 코드 생산 품질 보장 | D1, B1, B2a, B2b, B3 |
 | STRATEGY_10_VERIFICATION_SYSTEM.md | ~600 | 검증 체계 (24건 갭 해소) | 전체 |
 | STRATEGY_11_ASSET_INVENTORY.md | 본 문서 | 자산 인벤토리 | Phase 0-0 |
@@ -420,7 +420,7 @@ D:\VAMOS\
 |------|---------|------|-------|
 | tests/ | 3개 (.py) | 테스트 프레임워크 스캐폴드 | Phase 4 (B2a) |
 | benchmarks/golden_set/ | 14개 | 골든 벤치마크 테스트 | Phase 5 (B3) |
-| benchmark_results/ | 5개 | MMLU, HumanEval 등 실행 결과 | Phase 5 (B3) |
+| benchmark_results/ | 4개 | MMLU, HumanEval 등 실행 결과 | Phase 5 (B3) |
 
 ---
 
@@ -431,7 +431,7 @@ D:\VAMOS\
 ```
 필요 파일:
   docs/sot/ (68개) ← 검증 대상
-  docs/sot 2/ (648개) ← 검증 대상
+  docs/sot 2/ (2,654개; 검증대상 1,979) ← 검증 대상
   .claude/skills/sot-conflict/ ← /sot-conflict scan
   .claude/skills/sot-check/ ← /sot-check all
   .claude/skills/sot2-cross-ref/ ← /sot2-cross-ref all
@@ -551,7 +551,7 @@ D:\VAMOS\
 # 6. 자산 간 의존 관계
 
 ```
-SOT 68개 ────→ SOT 2 710개 ────→ CLAUDE.md (요약)
+SOT 68개 ────→ SOT 2 2,654개 ────→ CLAUDE.md (요약)
     │               │                  │
     │               │                  ↓
     │               └──────────→ Obsidian 120+ 노트

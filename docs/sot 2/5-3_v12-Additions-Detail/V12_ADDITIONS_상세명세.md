@@ -35,8 +35,9 @@ interface BreathingGuideProps {
 interface BreathingPattern {
   name: string;
   inhale_seconds: number;          // 들숨 (예: 4)
-  hold_seconds: number;            // 멈춤 (예: 7)
+  hold_seconds: number;            // 멈춤 (날숨 전, 예: 7)
   exhale_seconds: number;          // 날숨 (예: 8)
+  hold2_seconds: number;           // 2차 멈춤 (날숨 후, Box 4-4-4-4 지원; 기본 0)
   cycles: number;                  // 반복 횟수
 }
 
@@ -173,7 +174,7 @@ interface SM2Result {
 
 // SM2 공식:
 // quality >= 3: interval = previous * ease_factor
-// quality < 3: interval = 1 (리셋)
+// quality < 3: interval = 1, new_repetition = 0 (반복 카운터 리셋)
 // ease_factor = EF + (0.1 - (5-q) * (0.08 + (5-q) * 0.02))
 
 interface ReviewDashboardProps {

@@ -361,11 +361,14 @@ interface MethodDescriptor {
 class MessageSerializer:
     """에이전트 메시지 다중 포맷 직렬화/역직렬화"""
 
+    def _v3_deferred(*_a, **_k):
+        raise NotImplementedError("V3")          # serialization.md §6 Protobuf/CBOR V3 이관
+
     SERIALIZERS = {
         "json": (json.dumps, json.loads),
         "msgpack": (msgpack.packb, msgpack.unpackb),
-        "protobuf": (proto_serialize, proto_deserialize),
-        "cbor": (cbor2.dumps, cbor2.loads),
+        "protobuf": (_v3_deferred, _v3_deferred),  # V3 이관
+        "cbor": (_v3_deferred, _v3_deferred),       # V3 이관 (K-038 연계)
     }
 
     def serialize(self, msg: AgentMessage, encoding: str = "json") -> bytes:
@@ -401,7 +404,7 @@ schema_versioning:
     algorithm: |
       1. 연결 시 지원 버전 목록 교환
       2. 양쪽 모두 지원하는 최신 버전 선택
-      3. 합의 실패 시 JSON 기본 포맷으로 폴백
+      3. 공통 버전 없음 시 version_mismatch 이벤트 발행 후 연결 종료 (message_format.md §7.2)
 ```
 
 ---
@@ -439,13 +442,13 @@ agent_container_spec:
 
   health_probes:
     liveness:
-      path: "/health/live"
+      path: "/healthz/liveness"
       period_seconds: 10
     readiness:
-      path: "/health/ready"
+      path: "/healthz/readiness"
       period_seconds: 5
     startup:
-      path: "/health/startup"
+      path: "/healthz/startup"
       failure_threshold: 30
 ```
 
@@ -557,6 +560,29 @@ interface EvolutionTrigger {
 }
 ```
 
+#### 6.1.1 Self-Evolution 권장 기본값
+
+| 파라미터 | 기본값 | 범위 | 사용 시나리오 |
+|---------|--------|------|-------------|
+| `learning_rate` | 0.05 | [0.01, 0.2] | 0.01: 안정적 환경(프로덕션), 0.1: 빠른 적응(스테이징), 0.2: 실험(개발) |
+| `evaluation_window` | 100 (작업 수) | [50, 500] | 50: 빈번한 피드백 루프, 100: 표준, 500: 장기 트렌드 분석 |
+| `max_strategy_drift` | 0.15 (15%) | [0.05, 0.30] | 전략 변경 최대 허용치. 초과 시 HITL 승인 필요 |
+| `metrics_tracked` | ["success_rate", "avg_response_time", "tool_selection_accuracy", "user_satisfaction"] | — | 최소 4개 메트릭 추적 필수 |
+
+**Evolution 트리거 기본 설정**:
+```typescript
+const DEFAULT_TRIGGERS: EvolutionTrigger[] = [
+  { condition: "performance_drop", threshold: -0.1, action: "fine_tune_prompt" },
+  { condition: "scheduled", threshold: 14, action: "request_review" },
+  { condition: "new_pattern_detected", threshold: 0.15, action: "adjust_parameters" }
+];
+```
+
+**Safety Bounds 기본 설정**:
+- `max_strategy_drift`: 15% — 초과 시 자동 L0 복귀 + HITL 알림
+- `require_human_approval`: L2 이상 전략 변경 시 true
+- `rollback_on_degradation`: true — evaluation_window 내 성능 하락 10%+ 시 이전 전략으로 자동 복귀
+
 ### 6.2 멀티 브레인 패턴
 
 ```
@@ -623,6 +649,26 @@ interface VAMOSProtocolExtensions {
 | L2 | Supervised | 에이전트가 실행, 인간이 모니터링 | 이상 시 개입 |
 | L3 | Conditional | 범위 내 자율, 범위 외 승인 요청 | 경계 초과 시 |
 | L4 | Autonomous | 완전 자율 실행, 사후 보고 | 사후 감사 |
+
+#### L3→L4 전환 운영 상세
+
+**전환 조건 (AND)**:
+- 90일 **연속** L3 운영 (중단 기준: 24시간 이상 L3 미만 복귀 시 카운터 리셋)
+- 에러율 < 1% (롤링 30일 윈도우, 일별 집계, 최소 1,000 작업 샘플)
+- HITL 개입률 < 3% (자율 판단의 97%+ 가 사후 감사에서 적절 판정)
+- 보안 위반 0건 (전 기간)
+
+**HITL 승인 프로토콜**:
+- 승인 요청 → 지정 관리자에게 알림 (Slack + 이메일)
+- 응답 SLA: 24시간 이내 (미응답 시 자동 에스컬레이션 → 상위 관리자)
+- 승인 쿼럼: 2인 이상 (1인 승인 + 1인 확인)
+- 거부 시: 감점 사유 기록, 30일 후 재신청 가능
+
+**L4 롤백 조건**:
+- 에러율 > 2% (롤링 7일) → 자동 L3 복귀
+- 보안 위반 감지 → 즉시 L0 복귀 (LOCK-AP-02 — permission_matrix §5.5)
+- 사용자 불만 > 5% → L3 복귀 + 원인 분석
+- 분기 감사 불합격 → L2 복귀 + 재자격 심사
 
 ### 7.2 안전 가드레일 스키마
 

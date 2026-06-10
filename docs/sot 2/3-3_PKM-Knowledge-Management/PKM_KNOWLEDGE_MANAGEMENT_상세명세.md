@@ -44,7 +44,7 @@ VAMOS PKM(Personal Knowledge Management) 모듈은 사용자의 지식을 체계
 class WebClipper:
     """브라우저 확장 → API → 지식 노트 변환"""
 
-    async def clip(self, request: ClipRequest) -> KnowledgeNote:
+    async def clip(self, request: ClipRequest) -> list[KnowledgeNote]:
         # 1. URL에서 본문 추출 (Readability.js 알고리즘)
         article = await self._extract_article(request.url)
 
@@ -388,10 +388,21 @@ interface FlashCard {
 ```python
 # freshness_manager.py
 FRESHNESS_POLICIES = {
-    "technology": {
-        "half_life_days": 180,       # 6개월 후 50% 감소
+    "reference": {
+        "half_life_days": 365,       # 1년 (문서 링크/API 레퍼런스)
+        "min_freshness": 0.2,
+    },
+    "opinion": {
+        "half_life_days": 180,       # 6개월 (의견은 맥락 변화에 민감)
         "min_freshness": 0.1,
-        "auto_flag_threshold": 0.3,
+    },
+    "code_snippet": {
+        "half_life_days": 120,       # 4개월 (의존성 변화에 민감)
+        "min_freshness": 0.1,
+    },
+    "bookmark": {
+        "half_life_days": 180,       # 6개월 (북마크/즐겨찾기)
+        "min_freshness": 0.1,
     },
     "fact": {
         "half_life_days": 365,       # 1년 후 50% 감소
@@ -415,7 +426,7 @@ def calculate_freshness(note: KnowledgeNote) -> float:
     """지수 감쇠 모델: freshness = exp(-lambda * age_days)"""
     policy = FRESHNESS_POLICIES.get(note.category, FRESHNESS_POLICIES["fact"])
     lambda_val = math.log(2) / policy["half_life_days"]
-    age_days = (datetime.now() - note.updated_at).days
+    age_days = (datetime.now(timezone.utc) - note.updated_at).days
     freshness = math.exp(-lambda_val * age_days)
     return max(policy["min_freshness"], freshness)
 ```
@@ -488,6 +499,8 @@ class NotionSync:
         },
         "sync_direction": "bidirectional",     # "to_notion" | "from_notion" | "bidirectional"
         "excluded_databases": [],
+        # 프라이버시 가드: private/sensitive 노트는 외부 Notion 동기화에서 제외 (schema privacy_level)
+        "excluded_privacy_levels": ["private", "sensitive"],
     }
 ```
 

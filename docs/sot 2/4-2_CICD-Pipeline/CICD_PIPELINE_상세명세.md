@@ -93,7 +93,7 @@ strategy:
 | `coverage-report` | coverage 합산, Codecov 업로드 | 5분 |
 
 ### 커버리지 게이트
-- **최소 라인 커버리지**: 80% (전체), 90% (core 모듈)
+- **최소 라인 커버리지**: Python ≥ 75 %, Rust ≥ 80 %, React ≥ 80 % (LOCK-CI-03)
 - **PR 커버리지 하락**: -2% 이상 하락 시 실패
 - **리포트**: Codecov PR 코멘트 자동 생성
 
@@ -145,7 +145,7 @@ strategy:
 
 ### 코드 서명
 - **macOS**: Apple Developer ID (시크릿: `APPLE_CERTIFICATE`, `APPLE_CERTIFICATE_PASSWORD`, `APPLE_ID`, `APPLE_TEAM_ID`)
-- **Windows**: EV 코드 서명 (시크릿: `WINDOWS_CERTIFICATE`, `WINDOWS_CERTIFICATE_PASSWORD`)
+- **Windows**: EV 코드 서명 (시크릿: `WINDOWS_PFX`, `WINDOWS_PFX_PASSWORD`)
 - **Linux**: GPG 서명 (`GPG_PRIVATE_KEY`)
 
 ---
@@ -367,8 +367,9 @@ on:
 | `APPLE_CERTIFICATE_PASSWORD` | build-tauri.yml | 인증서 비밀번호 |
 | `APPLE_ID` | build-tauri.yml | Apple ID |
 | `APPLE_TEAM_ID` | build-tauri.yml | Apple 팀 ID |
-| `WINDOWS_CERTIFICATE` | build-tauri.yml | Windows 코드 서명 |
-| `WINDOWS_CERTIFICATE_PASSWORD` | build-tauri.yml | 인증서 비밀번호 |
+| `APPLE_INSTALLER_CERT` | build-tauri.yml | macOS Installer 코드 서명 (Base64) |
+| `WINDOWS_PFX` | build-tauri.yml | Windows 코드 서명 |
+| `WINDOWS_PFX_PASSWORD` | build-tauri.yml | 인증서 비밀번호 |
 | `GPG_PRIVATE_KEY` | build-tauri.yml | Linux GPG 서명 |
 | `SLACK_WEBHOOK_URL` | 다수 | Slack 알림 |
 | `AWS_ACCESS_KEY_ID` | deploy-*.yml | S3 업로드 |
@@ -389,7 +390,7 @@ on:
 | 워크플로우 | 목표 시간 | 비고 |
 |-----------|----------|------|
 | ci.yml (PR) | < 10분 | 캐시 적중 시 |
-| build-tauri.yml | < 20분 | 3-platform 병렬 |
+| build-tauri.yml | < 20분 | 4-platform 병렬 (Linux x64, Windows x64, macOS ARM64, macOS x64; LOCK-CI-06) |
 | e2e-test.yml | < 30분 | - |
 | nightly.yml | < 60분 | 전체 포함 |
 
@@ -399,3 +400,89 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true  # 동일 브랜치 중복 실행 취소
 ```
+
+---
+
+## F. 배포 게이트 명세
+
+### F-1 스테이징 배포 게이트
+| 조건 | 유형 | 실패 시 행동 |
+|------|------|-----------|
+| 전 테스트 통과 (unit + integration) | 자동 | 배포 차단 |
+| 보안 스캔 Critical/High 0건 | 자동 | 배포 차단 |
+| 커버리지 게이트 충족 (LOCK-CI-03) | 자동 | 배포 차단 |
+| 벤치마크 회귀 < 10% | 자동 | 경고 + 수동 승인 요구 |
+
+### F-2 프로덕션 배포 게이트
+| 조건 | 유형 | 실패 시 행동 |
+|------|------|-----------|
+| 스테이징 E2E 전부 통과 | 자동 | 배포 차단 |
+| 2인 승인 (GitHub Environment Protection) | 수동 | 48시간 대기 → 자동 취소 |
+| 카나리 메트릭 정상 (QoD ≥ 0.85, 에러율 < 2%) | 자동 | 자동 롤백 |
+| 스모크 테스트 통과 (5개 핵심 엔드포인트) | 자동 | 즉시 롤백 |
+
+### F-3 롤백 결정 트리
+1. 스모크 테스트 실패 → **즉시 롤백** (자동, < 2분)
+2. 카나리 에러율 > 2% → **자동 롤백** (5분 이내)
+3. 사용자 불만 급증 (> 5건/시간) → **수동 롤백** (on-call 엔지니어 판단)
+4. 성능 회귀 > 20% → **수동 롤백** + 원인 분석
+
+---
+
+## G. 코드 서명 플레이북
+
+### G-1 인증서 관리
+| 플랫폼 | 인증서 유형 | 저장 위치 | 갱신 주기 |
+|--------|-----------|----------|----------|
+| macOS | Apple Developer ID (Application) | `APPLE_CERTIFICATE` secret (Base64) | 연간 |
+| macOS | Apple Developer ID (Installer) | `APPLE_INSTALLER_CERT` secret | 연간 |
+| Windows | EV Code Signing (DigiCert) | `WINDOWS_PFX` secret (Base64) | 1년 |
+| Linux | GPG Signing Key | `GPG_PRIVATE_KEY` secret | 2년 |
+
+### G-2 CI 환경 서명 프로세스
+**macOS**:
+```yaml
+- name: Import Certificate
+  env:
+    CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+    CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+  run: |
+    echo "$CERTIFICATE" | base64 --decode > certificate.p12
+    security create-keychain -p "" build.keychain
+    security import certificate.p12 -k build.keychain -P "$CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+    security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+```
+
+**Windows**:
+```yaml
+- name: Sign Windows Binary
+  env:
+    PFX: ${{ secrets.WINDOWS_PFX }}
+    PFX_PASSWORD: ${{ secrets.WINDOWS_PFX_PASSWORD }}
+  run: |
+    echo "$PFX" | base64 --decode > certificate.pfx
+    signtool sign /f certificate.pfx /p "$PFX_PASSWORD" /tr http://timestamp.digicert.com /td sha256 target/release/*.exe
+```
+
+### G-3 서명 실패 복구
+1. 인증서 만료 → 빌드 실패 + on-call 알림 → 인증서 갱신 SOP 실행
+2. Keychain 접근 오류 (macOS) → 런너 캐시 삭제 + Keychain 재생성
+3. Timestamp 서버 장애 → 대체 서버(`http://timestamp.sectigo.com`) 자동 전환
+
+---
+
+## H. 캐시 전략 상세
+
+### H-1 키 생성 규칙
+| 대상 | 기본 키 | 복원 키 | 해시 대상 |
+|------|---------|---------|----------|
+| Python | `python-${{ runner.os }}-${{ hashFiles('pyproject.toml', 'uv.lock') }}` | `python-${{ runner.os }}-` | pyproject.toml + uv.lock |
+| Rust | `rust-${{ runner.os }}-${{ hashFiles('Cargo.lock') }}` | `rust-${{ runner.os }}-` | Cargo.lock |
+| Node | `node-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}` | `node-${{ runner.os }}-` | pnpm-lock.yaml |
+| Tauri | `tauri-target-${{ runner.os }}-${{ matrix.target }}-${{ hashFiles('Cargo.lock') }}` | `tauri-target-${{ runner.os }}-${{ matrix.target }}-` | Cargo.lock (플랫폼+아키텍처별 분리) |
+
+### H-2 캐시 정책
+- **TTL**: 7일 (GitHub Actions 기본)
+- **최대 크기**: 10GB (저장소당 GitHub 제한)
+- **퍼지 주기**: 매주 일요일 nightly 빌드에서 전체 캐시 삭제 + 워밍
+- **부분 매칭**: restore-keys 패턴으로 이전 버전 캐시 활용 (Cargo.lock 일부 변경 시)

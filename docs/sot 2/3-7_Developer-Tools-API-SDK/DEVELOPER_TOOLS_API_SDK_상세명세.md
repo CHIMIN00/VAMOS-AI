@@ -8,12 +8,16 @@
 | **최종 갱신** | 2026-03-22 |
 | **상태** | DRAFT v1.0 |
 
+> ⚠️ DEPRECATED — 위 테이블 "SOT 근거" 행의 "82 items" 표기는 P0-1 정정에 의해 실제 L-ID = 56건으로 확정. "82" 산출 근거 부재. CONFLICT_LOG CFL-001 참조
+
 ---
 
 ## 1. 개요 및 범위
 
 VAMOS 프로젝트의 개발자 도구 생태계는 AI 기반 코딩 지원, 플러그인 확장, IDE 통합을 포괄한다.
 본 명세는 STEP7-L의 82개 항목을 6개 서브도메인으로 구조화하여 기술한다.
+
+> ⚠️ DEPRECATED — "82개 항목" 표기는 P0-1 정정에 의해 56 L-ID로 확정. CONFLICT_LOG CFL-001 참조
 
 ### 1.1 서브도메인 구성
 
@@ -25,6 +29,8 @@ VAMOS 프로젝트의 개발자 도구 생태계는 AI 기반 코딩 지원, 플
 | D | 자동 테스트 생성 | 15 | P1 |
 | E | Plugin SDK | 13 | P1 |
 | F | VS Code 확장 | 10 | P2 |
+
+> ⚠️ DEPRECATED — F-VS Code 확장 "P2" 분류는 STEP7-L L-043~L-050 (DX 항목 8개) V1 배정과 불일치. STEP7-L V 배정이 정본. CONFLICT_LOG CFL-010 참조
 
 ### 1.2 기술 스택
 
@@ -85,8 +91,8 @@ pipeline_stages:
     max_examples: 3
 
   - stage: llm_inference
-    primary_model: "vamos-coder-32b"
-    fallback_models: ["gpt-4o", "claude-sonnet"]
+    primary_model: "vamos-coder-32b"  # ⚠️ DEPRECATED — "vamos-coder-32b"은 STEP7-L 미등장 모델명. CFL-002/CFL-008 참조
+    fallback_models: ["qwen-2.5-coder-7b", "gpt-4o", "claude-sonnet"]  # LOCK-DT-04 chain: Qwen 2.5 Coder 7B (로컬) → gpt-4o → claude-sonnet (CFL-003 RESOLVED)
     timeout_ms: 15000
     streaming: true
 
@@ -144,11 +150,11 @@ def select_model(context: CodingContext, task: TaskType) -> ModelConfig:
     latency_budget = get_latency_budget(task)
 
     if complexity < 0.3 and latency_budget < 500:
-        return ModelConfig("vamos-coder-7b", quantization="q4")
+        return ModelConfig("vamos-coder-7b", quantization="q4")  # ⚠️ DEPRECATED — "vamos-coder-7b"은 STEP7-L 미등장. STEP7-L L-002 정본: Qwen 2.5 Coder 7B. CFL-002 참조
     elif complexity < 0.7:
-        return ModelConfig("vamos-coder-32b", quantization="fp16")
+        return ModelConfig("vamos-coder-32b", quantization="fp16")  # ⚠️ DEPRECATED — CFL-002/CFL-008 참조
     else:
-        return ModelConfig("vamos-coder-32b", quantization="fp16",
+        return ModelConfig("vamos-coder-32b", quantization="fp16",  # ⚠️ DEPRECATED — CFL-002/CFL-008 참조
                           chain_of_thought=True,
                           verifier_enabled=True)
 ```
@@ -370,9 +376,11 @@ def detect_edge_cases(func_ast: FunctionAST) -> list[EdgeCase]:
 ```
 ┌──────────────────────────────────────────────┐
 │            VAMOS Plugin Host Runtime          │
-├──────────────┬──────────────┬────────────────┤
-│  WASM Sandbox│  Node.js VM  │  Python Subprocess│
-├──────────────┴──────────────┴────────────────┤
+├──────────────────────────────────────────────┤
+│  WASM Sandbox (LOCK-DT-05: WASM 격리 단일 정본 런타임)        │
+│  (Node.js VM / Python Subprocess: 레거시 호환 한정 —          │
+│   wasm_sandbox.md §7, CFL-005 RESOLVED 'WASM 격리 우선')      │
+├──────────────────────────────────────────────┤
 │              Plugin SDK API Layer             │
 ├──────────────────────────────────────────────┤
 │  Core APIs:                                   │
@@ -383,6 +391,8 @@ def detect_edge_cases(func_ast: FunctionAST) -> list[EdgeCase]:
 │  - vamos.*     (VAMOS 전용 기능)               │
 └──────────────────────────────────────────────┘
 ```
+
+> ⚠️ DEPRECATED — 위 다이어그램의 "Node.js VM", "Python Subprocess" 런타임은 LOCK-DT-05 ("WASM 격리, 선언된 권한만 허용")와 불일치. Node.js VM/Python Subprocess의 WASM 격리 수준 충족 여부 불명확. CONFLICT_LOG CFL-005 참조
 
 ### 6.2 API Surface 테이블
 
@@ -502,8 +512,8 @@ interface VAMOSLSPExtensions {
 
 ```json
 {
-  "vamos.model.primary": "vamos-coder-32b",
-  "vamos.model.fallback": "gpt-4o",
+  "vamos.model.primary": "vamos-coder-32b",  // ⚠️ DEPRECATED — STEP7-L 미등장 모델명. CFL-002/CFL-008 참조
+  "vamos.model.fallback": "gpt-4o",  // ⚠️ DEPRECATED — LOCK-DT-04: 3단계 chain (Qwen 2.5 Coder 7B → gpt-4o → claude-sonnet). 단일 fallback 미반영. CFL-007 참조
   "vamos.completion.enabled": true,
   "vamos.completion.debounceMs": 150,
   "vamos.completion.maxTokens": 128,
@@ -521,26 +531,58 @@ interface VAMOSLSPExtensions {
 
 ## 8. 버전 로드맵
 
-| 버전 | 시기 | 핵심 기능 |
-|------|------|----------|
-| v0.1-alpha | Q2 2026 | FIM 자동완성 기본 동작, VS Code 확장 프로토타입 |
-| v0.2-beta | Q3 2026 | Dev Node 엔진 통합, 리팩토링 패턴 10종 |
-| v0.3-beta | Q4 2026 | Plugin SDK 공개, 자동 테스트 생성 MVP |
-| v1.0 | Q1 2027 | VADD Marketplace 런칭, 전체 기능 GA |
-| v1.5 | Q3 2027 | 멀티 IDE 지원 (JetBrains, Neovim), 고급 리팩토링 |
+| 버전 | 시기 | 핵심 기능 | 기술 의존성 | 성공 지표 |
+|------|------|----------|-----------|----------|
+| v0.1 (MVP) | V1 Phase 1-2 | DevNode 코딩 엔진 기본, FIM 인라인 완성 | vamos-coder-7b, Tree-sitter | FIM 응답 < 200ms, HumanEval ≥ 70% |
+| v0.2 (Enhancement) | V1 Phase 3-4 | 리팩토링 패턴 10종, 자동 테스트 생성 | AST 파이프라인, coverage.py | 리팩토링 안전 등급 GREEN ≥ 80%, 커버리지 + 15% |
+| v0.3 (Plugin) | V2 Phase 1 | Plugin SDK + VADD 마켓플레이스 | WASM 런타임, Plugin Registry | 플러그인 3+ 개 검증 통과, SDK API 10개 안정 |
+| v0.4 (Scale) | V2 Phase 2-3 | vamos-coder-32b 전환, 멀티모달 코드 분석 | GPU 인프라 (LOCK-DT-01) | HumanEval ≥ 85%, MBPP ≥ 75% |
+| v1.0 (GA) | V3 Phase 3 | 전 기능 GA, LSP 확장 안정화, CI/CD 통합 | 전 의존성 GA | 외부 벤치마크 상위 10%, NPS ≥ 50 |
+
+> ⚠️ DEPRECATED — 위 로드맵 테이블 관련 2건:
+> 1. v0.1 행 "vamos-coder-7b" 및 v0.4 행 "vamos-coder-32b"는 STEP7-L 미등장 모델명. CFL-002/CFL-008 참조
+> 2. v0.4 행 "(LOCK-DT-01)"은 잘못된 LOCK 참조. LOCK-DT-01 = API 버저닝 규칙이며 GPU 인프라와 무관. CFL-006 참조
+
+### 8.1 버전 간 하위 호환성 정책
+- **PATCH**: 하위 호환 100% — 버그 수정만
+- **MINOR**: 하위 호환 유지 — 신규 API 추가, 기존 API deprecated 주석만 (삭제 금지)
+- **MAJOR**: 마이그레이션 가이드 필수 — 최소 1 MINOR 버전 deprecated 경고 후 삭제
+- **Plugin SDK**: SemVer 독립 — 플러그인 매니페스트에 `min_sdk_version` 명시
 
 ---
 
 ## 9. 의존성 매트릭스
 
-| 의존 대상 | 도메인 | 의존 유형 |
-|-----------|--------|----------|
-| Verifier/Reasoning Engine | TIER1-01 | LLM 추론 결과 검증 |
-| MCP Server/Client | TIER4-03 | 도구 호출 프로토콜 |
-| Agent Protocol | TIER3-10 | 에이전트 간 코드 리뷰 위임 |
-| PKM/Knowledge | TIER3-03 | 프로젝트 지식 그래프 참조 |
-| CI/CD Pipeline | TIER4-02 | 테스트 실행 및 배포 통합 |
+### 9.1 외부 의존성
+| 의존성 | 버전 | 용도 | 대체 전략 | 리스크 |
+|--------|------|------|----------|--------|
+| Tree-sitter | ≥ 0.22 | AST 파싱 (리팩토링, 코드 분석) | 없음 (핵심 의존성) | LOW — 활발한 오픈소스 |
+| vamos-coder-7b | v0.1+ | FIM 인라인 완성, 코드 생성 | Claude/GPT 폴백 체인 (LOCK-DT-04) | HIGH — 자체 모델 미출시 |
+| vamos-coder-32b | v0.2+ | 고급 코드 분석, 멀티파일 리팩토링 | vamos-coder-7b 폴백 | HIGH — 로드맵 의존 |
+
+> ⚠️ DEPRECATED — "vamos-coder-7b", "vamos-coder-32b" 모델명은 STEP7-L에 미등장. STEP7-L L-002 정본: Qwen 2.5 Coder 7B, DeepSeek Coder V2, StarCoder 2, CodeLlama, Claude 4.6 Sonnet, GPT-4o, Gemini 2.5 Flash. CONFLICT_LOG CFL-008 참조
+| coverage.py | ≥ 7.0 | Python 커버리지 측정 | pytest-cov 호환 | LOW |
+| VS Code Extension API | ≥ 1.85 | LSP 통합, InlineSuggestion | — | LOW — 후방 호환 |
+| WASM Runtime (Wasmtime) | ≥ 15.0 | 플러그인 샌드박스 | WasmEdge 대체 가능 | MEDIUM |
+
+### 9.2 내부 의존성 (SOT 2 도메인 간)
+| 소스 도메인 | 제공 인터페이스 | 사용 목적 |
+|------------|--------------|----------|
+| 1-1 Verifier | 검증 파이프라인 API | 코드 생성 결과 검증 |
+| 1-2 Auxiliary | RAG 파이프라인 | 코드 컨텍스트 검색 |
+| 4-1 Rust-Tauri | IPC 커맨드 (A-5~A-6) | Tool 실행 인터페이스 |
+| 4-2 CI/CD | 워크플로우 트리거 | 자동 테스트 실행 |
+| 4-3 MCP | 도구 등록 API | Plugin→MCP Tool 브릿지 |
+| 5-1 Benchmark | VBS-13 코드 벤치마크 | HumanEval/MBPP 측정 |
+
+### 9.3 의존성 건강 관리
+- **CVE 스캔**: 주간 자동 (pip-audit, cargo-audit)
+- **버전 고정**: pyproject.toml + Cargo.lock 의무화
+- **EOL 모니터링**: 분기별 의존성 수명 확인
+- **폴백 체인 테스트**: 월간 — 외부 모델 전환 E2E 검증
 
 ---
 
 *본 문서는 STEP7-L SOT 82개 항목을 기반으로 작성되었으며, 구현 진행에 따라 갱신된다.*
+
+> ⚠️ DEPRECATED — "82개 항목" 표기는 P0-1 정정에 의해 56 L-ID로 확정. CONFLICT_LOG CFL-001 참조

@@ -378,10 +378,10 @@ revenue_projection:
       pro: 3000
       enterprise_seats: 200
     revenue:
-      subscription: "$648K"      # 3000×$15×12 + 200×$35×12
+      subscription: "$624K"      # 3000×$15×12($540K) + 200×$35×12($84K)
       api_usage: "$120K"
       marketplace: "$32K"
-      total: "$800K"
+      total: "$776K"
 
   year_2:  # 2028
     users:
@@ -477,7 +477,7 @@ const costs: CostStructure[] = [
 
 BEP 조건:
   - 유료 사용자 8,500명 (Pro 7,000 + Enterprise 1,500 seats)
-  - 월간 수익 ≈ $185K
+  - 월간 수익 ≈ $157.5K (Pro 7,000×$15 $105K + Enterprise 1,500×$35 $52.5K = $157,500; LOCK-BM-07/08)
   - 월간 비용 ≈ $185K (팀 15명 + 인프라)
   - 예상 달성: 런칭 후 18개월
 ```

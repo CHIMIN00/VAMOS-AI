@@ -61,7 +61,7 @@
 
 **§2 산출물 경로** — CRITICAL 수정
 - 오류 경로 `D:\VAMOS\00. 통합\...` → `D:\VAMOS\docs\sot\` (68개, 89,413줄)
-- SOT 2 경로 추가: `D:\VAMOS\docs\sot 2\` (710개, 273,650줄, 38폴더)
+- SOT 2 경로 추가: `D:\VAMOS\docs\sot 2\` (2,654개, 42폴더 — Phase4 확장 후 실측)
 - Guides/구현단계 경로 추가
 - 검증 상태 추가: ALL-A VERIFIED (2026-03-27, Phase 11)
 - "총 39개" → "핵심 39개 (전체 68개)" 정정

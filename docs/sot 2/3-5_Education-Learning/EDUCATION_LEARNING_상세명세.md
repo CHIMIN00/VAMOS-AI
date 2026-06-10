@@ -96,8 +96,8 @@ class SocraticEngine:
 
 ```python
 # difficulty_adjuster.py
-class DifficultyAdjuster:
-    """IRT(Item Response Theory) 기반 난이도 조절"""
+class HeuristicDifficultyAdjuster:
+    """휴리스틱(연속/정답률) 기반 난이도 조절 — IRT(θ 추정/2PL/EAP)는 difficulty_adjustment.md §3~§5 정본 참조 (본 레거시 명세는 MVP 휴리스틱)"""
 
     DIFFICULTY_LEVELS = {
         1: "입문 (기초 개념)",
@@ -234,7 +234,7 @@ interface SkillLevel {
 class EducationSM2(SM2Algorithm):
     """교육 도메인 특화 SM-2 확장 (T3-PKM SM-2 상속)"""
 
-    def calculate_next_review(self, card: EducationFlashCard, quality: int) -> ReviewSchedule:
+    async def calculate_next_review(self, card: EducationFlashCard, quality: int) -> ReviewSchedule:
         # 기본 SM-2 계산
         schedule = super().calculate_next_review(card, quality)
 
@@ -377,6 +377,8 @@ class HintSystem:
         4: "부분 코드 제공 (핵심 함수 시그니처 + 주석)",
         5: "전체 풀이 (최후 수단, 학습 효과 최소)",
     }
+
+    HINT_LEVELS_PENALTY = {1: 0.0, 2: 0.1, 3: 0.2, 4: 0.25, 5: 0.3}
 
     async def get_hint(self, problem_id: str, attempt: CodeAttempt, level: int) -> HintResponse:
         """
