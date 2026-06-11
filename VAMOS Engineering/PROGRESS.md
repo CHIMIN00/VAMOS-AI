@@ -1,9 +1,22 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-04 (Phase 1 완료 — D1 PASS_CONDITIONAL)
+> 최종 갱신: 2026-06-11 (Phase 2 진행 중 — 2-0 완료)
 
 ## 현재 Phase
-**Phase 1 완료 (D1 PASS_CONDITIONAL)** → 다음: Phase 2-0 (외부 의존성 재확인)
+**Phase 2 진행 중** — 2-0 완료(환경 28/28 PASS + 골든셋 v2 실데이터 162문항) → 다음: 2-1 CLAUDE.md 보강
+
+## Phase 2 체크포인트 (2026-06-11)
+- [x] **2-0A** 외부 의존성 재확인: E.1(9)+E.3(8)+B.1(11) = **28/28 PASS** — `_targets/PHASE2_환경리포트.md` (변경 2 비차단: pydantic 2.12.5·디스크 / WARN 1: poetry 미설치→2-4 처리)
+- [x] **2-0B** 골든셋 실데이터 재구축(D14): v1 합성 170 → **v2 실데이터 162** (MMLU 50/HumanEval 20/MBPP 50/LogicKor 42 전수[편차 기록 — 명세 50은 합성 가정치]). 라이선스 4종 검증(MIT/MIT/CC BY 4.0/CC BY-SA 4.0). verify ALL PASS + 재현성 PASS. data_status=REAL_DATA → **LOCK-BE-01/02 유효화**. v1 백업 `_targets/_integ/backup_phase2/golden_set_v1/`
+- [x] **2-0C** OpenAI 구키 revoke: 사용자 통보 미수신 — 기록만(현행 키 HTTP 200 유효). 환경리포트 §5
+- [ ] 2-1 CLAUDE.md 보강 (§21~§28 + GAP 2건[HYBRID_RATIO/MAX_RETRIES] + PART1 §D.0) ← **다음**
+- [ ] 2-2 CLAUDE.md 검증 (스킬 8종 생성 + 8단계 + SILVER+ 판정 + /sot-check 회귀)
+- [ ] 2-3 Obsidian 노트 120+ (OBSIDIAN-STRATEGY-v3 §3~§6 + 3-7 도메인 포함 + A16 태깅)
+- [ ] 2-4 린터/CI (pyproject.toml + ci.yml 단일 통합 + conftest + Hook 2종 + D17 결정)
+- [ ] 2-5 vamos_lint VL-001~005 + commitlint
+- [ ] 2-6 CPS 템플릿(Could) / 2-7 로딩 맵(Could)
+- [ ] 2-8 인벤토리 갱신 + 정리(D-2 재실측 종결·D-3 처분·유산 폴더·5-4 SHELL 87 판정)
+- [ ] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조)
 
 ## Phase 1 — D1 검증 결과 (2026-06-04)
 - **판정: D1 PASS (CONDITIONAL)** — 값 게이트 5/5 통과, 이연 4항목 전수 등록(누락 0), 자동 정본 변경 0
