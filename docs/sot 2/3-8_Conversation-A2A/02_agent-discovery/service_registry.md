@@ -160,7 +160,7 @@ class AgentCapability(str, Enum):
 
 ### 3.2 mDNS TXT `caps` 필드 매핑 (LOCK-A2A-04 정합)
 
-mdns_dns_sd.md §4 TXT 레코드 필드 `caps` 는 **쉼표 구분 문자열**이며, 값 집합은 **본 §3 AgentCapability 열거형 5값에 한정**한다. 미등록 값 발견 시 레지스트리 등록 실패 (`-32006 Capability unknown`).
+mdns_dns_sd.md §4 TXT 레코드 필드 `caps` 는 **쉼표 구분 문자열**이며, 값 집합은 **본 §3 AgentCapability 열거형 5값에 한정**한다. 미등록 값 발견 시 레지스트리 등록 실패 (`-32020 Capability unknown`).
 
 | TXT caps 값 | AgentCapability | 용도 V2 |
 |-------------|-----------------|---------|
@@ -399,7 +399,7 @@ X-Client-Cert: <mTLS fingerprint>
 | 10 | REG-10 | 캐시 미존재 + 레지스트리 장애 | mDNS 단일 노드 폴백 |
 | 11 | REG-11 | `priority=0` (시스템) vs `priority=80` | 정렬 우선순위 역전 0이 먼저 |
 | 12 | REG-12 | mTLS 인증서 만료 `PUT /heartbeat` | 인증 에러, CB 열리지 않음 (인증 영역 분리) |
-| 13 | REG-13 | 등록 `caps=streaming,invalid_cap` | `-32006 Capability unknown` 반환 |
+| 13 | REG-13 | 등록 `caps=streaming,invalid_cap` | `-32020 Capability unknown` 반환 |
 
 > 목표 10건 대비 **13건 = 130%** (산출물 품질 필수 구조 #5 준수)
 

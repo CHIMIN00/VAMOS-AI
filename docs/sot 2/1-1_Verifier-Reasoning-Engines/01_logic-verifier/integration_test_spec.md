@@ -214,7 +214,7 @@ C-1 미해당: VR-08(C-2 token 계측) / VR-15(C-3 sandbox).
 
 **Then**:
 - D-1 가 새 `ReasoningResult(confidence=0.85, verdict="PASS")` 반환
-- I-20 가 결과를 C-1 호출자에게 returnsleeting (escalation_flow §3.1)
+- I-20 가 결과를 C-1 호출자에게 반환 (escalation_flow §3.1)
 - 원래 FAIL 결과 → **D-1 결과로 대체**
 - trace_id "trace-001" 유지 (orange_core_integration §3.2).
 
