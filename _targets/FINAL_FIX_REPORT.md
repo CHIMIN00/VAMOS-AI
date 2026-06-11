@@ -34,6 +34,8 @@
 ## 7. 미확인 적용(present 미검출, 재확인 권장) 2
 - 6-13_Operations i=2 (docs\sot 2\6-13_Operations\03_backup-recovery\_index.md)
 - Ai-investing-detail unconfirmed[3] (docs\sot 2\Ai-investing-detail\04_performance-attribution\attribution_reporting.md)
+
+> ✅ 해소 (2026-06-11 세션3~4 재감사): 위 2건은 **실제 적용되어 있음** — probe 거짓음성(인접 fix 간섭 + 혼합 EOL)이 원인. 창2 라이브 재검 + 세션3 교차검증 P1로 확정. 따라서 실효 적용은 696/696이며, 본 보고서의 694는 probe 측정치였음. (apply_eol.py (domain,ref) 키충돌로 6-12 i0 1건이 검증 집계에서 무기록 탈락한 사실도 세션3 P4에서 확인 — 적용 자체는 정상.)
 ## 8. (F6) git 백업 — 완료
 - 브랜치 `phase01-targeted-fixes` 커밋 `c1549de` (452 files) → **origin push 완료**. PR: https://github.com/CHIMIN00/VAMOS-AI/pull/new/phase01-targeted-fixes
 - 백업 태그 **phase0-complete · phase1-d1-pass → 원격 push 완료** (UNMET-01 해소).
