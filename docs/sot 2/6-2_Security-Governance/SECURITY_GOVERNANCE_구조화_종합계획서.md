@@ -1919,6 +1919,8 @@ RULE 1.3
 ## 12. FINAL REVIEW 결과
 
 > 첫 작성 시점. Phase 0 완료 후 판정.
+>
+> **미실행 사실 명기 (2026-06-11 실측)**: 본 §12 FINAL REVIEW는 현재까지 미실행 상태이며(아래 표 ⬜ 미검증 / ⬜ 미판정 유지), 루트 `FINAL_REVIEW_REPORT.md`도 부재. 이는 §13.X-1 선언("6-2는 ⬜ PENDING 인지 유지 specialty, Phase 3 완료 후 별도 /validate → /audit → /final-review 트랙")과 정합하며, 보고서 생성·판정 실행은 별도 트랙 과업으로 등재한다.
 
 | 항목 | 결과 |
 |------|------|

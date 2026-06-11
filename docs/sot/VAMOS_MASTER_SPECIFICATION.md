@@ -69,10 +69,10 @@
 | 32 | VAMOS_STEP7_J-M_상세명세서.md | STEP7 | STEP7 J~M 카테고리 상세명세 | 1822 | 참고 | 참고 | 필수 | 필수 | 놓치지 말 것, AI기술보강 |
 | 33 | VAMOS_STEP7_N-P_보강_상세명세서.md | STEP7 | STEP7 N~P + 보강 상세명세 | 1807 | 참고 | 참고 | 필수 | 필수 | 놓치지 말 것, AI기술보강 |
 | 34 | VAMOS_STEP7_보강_통합명세서.md | STEP7 | TITLE_ONLY 448건 상세 확장 | 1523 | - | 참고 | 필수 | 필수 | TITLE_ONLY 항목 보강 |
-| 35 | VAMOS_AI_INVESTING_SPEC.md | SPEC | AI 투자 도메인 통합 명세 | 1372 | - | - | 필수 | 필수 | P1 투자 도메인 |
+| 35 | VAMOS_AI_INVESTING_SPEC.md | SPEC | AI 투자 도메인 통합 명세 | 1415 | - | - | 필수 | 필수 | P1 투자 도메인 |
 | 36 | VAMOS_CLOUD_LIBRARY_SPEC.md | SPEC | Cloud Library System 통합 상세 명세 | 1439 | - | - | 필수 | 필수 | E-15/S-5 클라우드 라이브러리 |
 | 37 | VAMOS_AGENT_TEAMS_SPEC.md | SPEC | Agent Teams 통합 설계 명세 (에이전트 팀 위임) | 2192 | - | - | 필수 | 필수 | 멀티에이전트 아키텍처 |
-| 38 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC | I-25 SDAR 자율추론 설계 명세 | 1647 | - | - | 참고 | 필수 | Self-Directed Adaptive Reasoning |
+| 38 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC | I-25 SDAR 자가진단·자동복구 설계 명세 | 1647 | - | - | 참고 | 필수 | Self-Diagnosis & Auto-Repair |
 | 39 | VAMOS_BEGINNER_GUIDE.md | GUIDE | 초보자 온보딩/사용자 가이드 | 1853 | - | 참고 | 참고 | 참고 | 비개발자 대상 안내 문서 |
 
 > **분류 범례**: RULE=절대규칙, PLAN=로드맵/계획, DESIGN=아키텍처/모듈설계(01~08), SCHEMA=JSON Schema/타입(D1~D8/A1/Q1), PHASE=구현직접가이드(B1~B7), SPEC=통합명세, STEP7=AI기술보강 상세, GUIDE=사용자안내

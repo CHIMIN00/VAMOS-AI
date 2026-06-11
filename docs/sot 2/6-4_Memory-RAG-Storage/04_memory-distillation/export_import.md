@@ -6,7 +6,7 @@
 > **LOCK 준수**: LOCK-MR-016 (L3 활성 게이트), LOCK-MR-017 (project_id 격리), LOCK-MR-018 (저장 전 사용자 확인), LOCK-MR-015 (Deny 벡터 삽입 금지 — 간접)
 > **이슈 전환**: 해당 없음 (§6 이슈 —)
 > **정본**: D2.0-06 §2.4 마이그레이션 원칙 + S7D-008, D6 MemoryRecordSchema v3.0.0, Part2 V1-Phase 2 항목6
-> **교차 참조**: P0-1 MemoryRecordSchema, P1-1 L0_session_memory_crud, P1-2 L1_project_memory_crud, P1-4 json_graphrag, P1-7 pii_masking (미완 — 인터페이스만 참조)
+> **교차 참조**: P0-1 MemoryRecordSchema, P1-1 L0_session_memory_crud, P1-2 L1_project_memory_crud, P1-4 json_graphrag, P1-7 pii_masking (✅ 완료 2026-04-13 COMPLETE — 작성 시점 '미완' 표기 stale, 2026-06-11 정정)
 > **권한 체인**: RULE 1.3 > PLAN 3.0 > D2.0-06 (LOCK) > D6 (Schema SOT) > Part2 V1-P2 (구현가이드) > 본 문서 (IMPL-DETAIL)
 >
 > **LOCK 준수 상세**:
@@ -660,7 +660,7 @@ def _validate_cross_project(
 
 ## 8. PII 마스킹 연동 (P1-7)
 
-> **P1-7 미완 상태**: P1-7 (PII 마스킹)은 현재 미완성이므로, 본 문서에서는 **인터페이스 계약만 정의**하고 구현은 P1-7 완료 후 통합한다.
+> **P1-7 상태 정정 (2026-06-11)**: P1-7 (PII 마스킹)은 2026-04-13 완료(pii_masking.md v1.1, 상태: COMPLETE) — 본 문서 작성 시점의 '미완성' 전제가 stale. 본 절의 **인터페이스 계약** 정의는 유지하며, P1-7 정본과의 구현 통합 여부는 별도 검증 대상.
 
 ### 8.1 Export 시 PII 확인
 
@@ -1148,7 +1148,7 @@ def _log(self, level: str, operation: str, project_id: str,
 |-----------|---------------|----------|
 | `invalidate_by_source(source_ref, project_id)` | Import 후 관련 캐시 무효화 (IT-EI-05) | OK — source_refs 기반 |
 
-### 18.5 P1-7 (PII 마스킹) 연동 — 미완
+### 18.5 P1-7 (PII 마스킹) 연동 — P1-7 완료 (2026-04-13, 구 '미완' 표기 2026-06-11 정정; 통합 검증은 PENDING 유지)
 
 | 인터페이스 | P1-6 사용 방식 | 정합 상태 |
 |-----------|---------------|----------|
@@ -1194,7 +1194,7 @@ def _log(self, level: str, operation: str, project_id: str,
 | REF-P12-L1CRUD | P1-2 L1_project_memory_crud.md | L1 CRUD 인터페이스 (Import INSERT 연동) |
 | REF-P14-GRAPH | P1-4 json_graphrag.md | KG 노드/엣지 Import 연동 |
 | REF-P15-CACHE | P1-5 semantic_cache.md | Import 후 캐시 무효화 연동 |
-| REF-P17-PII | P1-7 pii_masking.md (미완) | PII 탐지/마스킹 인터페이스 계약 |
+| REF-P17-PII | P1-7 pii_masking.md (완료 2026-04-13 — 구 '미완' 표기 2026-06-11 정정) | PII 탐지/마스킹 인터페이스 계약 |
 
 ### 20.3 D2.0-06 §2.4 마이그레이션 원칙 정합 확인
 

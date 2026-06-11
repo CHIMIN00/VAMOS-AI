@@ -866,13 +866,13 @@
 </details>
 
 ### 5-3. v12 Additions Detail (횡단) ✅ APPROVED · Phase 5 FINAL PASS · **Content: A-** (S10-3)
-> 📍 **구현 현황**: `Phase 1` ✅ 완료 (1/1, 2026-04-12) — P1-1 24건 파일 수준 전수 검증 VALID 23건(95.8%), 게이트 PASS | **Phase 2 진입 가능** | 이월: B-2 CONDITIONAL 1건(Phase 2 귀속 확정 시 처리), LOCK C-04~C-08 OPEN 5건
+> 📍 **구현 현황**: `Phase 1` ✅ 완료 (1/1, 2026-04-12) — P1-1 24건 파일 수준 전수 검증 VALID 23건(95.8%), 게이트 PASS | **구현 Phase 영구 제외** (`permanently_excluded_design_decision` 메타 허브 — SOT2_SESSION_EXECUTION_PROMPTS.md "제외 도메인 (5개)" 기록) | 이월: B-2 CONDITIONAL 1건(Phase 2 귀속 확정 시 처리), LOCK C-04~C-08 **RESOLVED (2026-06-11 D1~D5, 실효 OPEN 0)**
 
 - **폴더**: `5-3_v12-Additions-Detail/`
 - **계획서**: `V12_ADDITIONS_DETAIL_구조화_종합계획서.md` (14+1 섹션, §A Domain Mapping, ~700줄)
 - **기존 명세**: `V12_ADDITIONS_상세명세.md` (535줄)
 - **AUTHORITY_CHAIN.md**: ✅ 작성 완료 (10개 LOCK 항목, 2 자체정의 + 8 상속) — P0-3 검증 이력 기록 (2026-04-03)
-- **CONFLICT_LOG.md**: ✅ 3건 RESOLVED + 5건 OPEN(C-04~C-08 LOCK 불일치, P0-3 발견) + 5건 WATCH-LIST RESOLVED
+- **CONFLICT_LOG.md**: ✅ 3건 RESOLVED + 5건 RESOLVED(C-04~C-08 LOCK 불일치, P0-3 발견 → 2026-06-11 D1~D5 전건 RESOLVED, 실효 OPEN 0) + 5건 WATCH-LIST RESOLVED
 - **서브폴더 (6개)**:
   - `01_wellness-ui/` — 7 컴포넌트 (Breathing/Grounding/Meditation 등), 도메인→#9 (_index.md ✅)
   - `02_learning-tools/` — 3 컴포넌트 (Flashcard/SM2/ReviewDashboard), SM-2 소유권 프로토콜 (_index.md ✅)

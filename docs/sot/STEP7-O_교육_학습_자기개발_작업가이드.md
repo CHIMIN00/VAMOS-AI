@@ -1,7 +1,7 @@
 # STEP7-O: 교육/학습/자기개발 AI 기술 보강 작업가이드
 
 > **목적**: VAMOS AI의 개인 학습/교육/자기개발 역량 완전 보강
-> **총 항목**: 68개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)
+> **총 항목**: 36개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)
 > **참고**: Khanmigo, Duolingo Max, Anki, Coursera, Perplexity, NotebookLM, Socratic by Google 등 2024-2026 최신 교육 AI 전수 반영
 
 ---

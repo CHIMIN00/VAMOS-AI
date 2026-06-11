@@ -1188,11 +1188,11 @@ RULE 1.3
 3. LOCK-WF-10 (RPA 보안) 준수 — 샌드박스 격리, 자격증명 암호화 저장, 권한 최소화
 4. desktop_automation.md 작성: OS별 자동화 API, UI 요소 탐지, 액션 시퀀스, 에러 복구, 보안 격리
 
-**검증**:
-- [x] desktop_automation.md — N-017 SOT 필수 항목 전수 반영
-- [x] LOCK-WF-08, LOCK-WF-10 위반 없음
-- [x] Phase 1 rpa_security_sandbox.md와 보안 정책 정합성 유지
-- [x] /validate PASS
+**검증** (⚠️ 2026-06-11 실측 정정 — 세션 2-5는 [GATE_BLOCKED:V1_MISSING]으로 미실행: desktop_automation.md 실파일 부재·Phase 3 이월. 본 계획서 #2b 누계 L1021/L1024 + AUTHORITY_CHAIN §8(L185) + INDEX §3(L48-49) 기록과 정합. 아래 체크박스는 실행 전 템플릿으로 정정):
+- [ ] desktop_automation.md — N-017 SOT 필수 항목 전수 반영
+- [ ] LOCK-WF-08, LOCK-WF-10 위반 없음
+- [ ] Phase 1 rpa_security_sandbox.md와 보안 정책 정합성 유지
+- [ ] /validate PASS
 
 **산출물**:
 - `D:\VAMOS\docs\sot 2\3-4_Workflow-RPA\06_desktop-rpa\desktop_automation.md` (N-017 V2 L3)

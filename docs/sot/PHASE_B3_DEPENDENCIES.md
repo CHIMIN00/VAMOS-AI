@@ -1,4 +1,4 @@
-# PHASE_B3_DEPENDENCIES (v1.0.0)
+# PHASE_B3_DEPENDENCIES (v1.0.1)
 
 ## 0. 문서 메타
 
@@ -6,7 +6,7 @@
 |------|------|
 | 문서 ID | B3 |
 | 문서명 | PHASE_B3_DEPENDENCIES |
-| 버전 | 1.0.0 |
+| 버전 | 1.0.1 |
 | 작성일 | 2026-02-22 |
 | 역할 | VAMOS AI 에이전트 플랫폼 의존성 목록 (Frontend / Rust / Python) |
 | 상위 참조 | A1_TECH_STACK (COMBO-V1/V2/V3 LOCK), B2_PROJECT_STRUCTURE |

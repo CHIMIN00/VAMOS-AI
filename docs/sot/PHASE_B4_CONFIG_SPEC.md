@@ -1,4 +1,4 @@
-# PHASE_B4_CONFIG_SPEC (v1.0.0)
+# PHASE_B4_CONFIG_SPEC (v1.0.1)
 
 ## 0. 문서 메타
 
@@ -6,7 +6,7 @@
 |------|-----|
 | 문서 ID | B4 |
 | 문서명 | PHASE_B4_CONFIG_SPEC |
-| 버전 | 1.0.0 |
+| 버전 | 1.0.1 |
 | 역할 | 환경 설정 파일 스펙 (Config Specification) |
 | 상위 정본 | BASE 1.3 > PLAN 3.0 > DESIGN 2.0 > D2.1 Schema > A1 Tech Stack |
 | 생성 일자 | 2026-02-22 |
@@ -901,13 +901,14 @@ CREATE TABLE IF NOT EXISTS runtime_config (
 
 | config_key | 변경 가능 범위 | 최소 역할 | 설명 |
 |-----------|--------------|----------|------|
-| `cost.daily_limit` | V2+ | ADMIN | 일일 비용 상한 동적 조정 |
 | `cost.warn_threshold` | V2+ | ADMIN | 경고 임계값 동적 조정 |
 | `rate_limit.targets.*` | V2+ | ADMIN | Rate Limit 규칙 동적 조정 |
 | `guardrails.layer3_enabled` | V2+ | OWNER | L3 Guardrails 온/오프 |
 | `core.autonomy_level` | V2+ | OWNER | 기본 자율성 수준 변경 |
 | `semantic_cache.max_entries` | V2+ | ADMIN | 캐시 크기 동적 조정 |
 | `logging.level` | V2+ | OPERATOR | 로그 레벨 동적 변경 |
+
+> **[LOCK 거버넌스 — 정본: BASE-1.3 §5]** 비용 상한(`cost.daily_limit` 1,300/3,100/8,900원, `cost.monthly_limit` 40,000/93,000/266,000원)은 BASE-1.3 "비용 상한·정체성·Non-goal·법·승인 구조는 절대 변경 불가" 규칙에 따른 ABSOLUTE LOCK으로, 런타임 동적 조정 대상에서 제외한다(값 변경은 BASE/PLAN 개정 절차로만 가능). ADMIN 런타임 동적 조정은 `cost.warn_threshold` 등 상한 값이 아닌 운영 파라미터에 한정한다.
 
 ### 5.3 변경 이력 추적
 

@@ -1534,7 +1534,7 @@ SOT 2 도메인 계획서 작성 — Phase 6, 세션 S6-3
     → §6.5.3 (L4928): STRIDE 위협 모델 매핑
     → §6.5.4 (L4941): OWASP LLM Top 10 (2025) 매핑
 
-■ 작업 ���차:
+■ 작업 절차:
   1. SOT 출처 + Part2 §6.5 전체 + 가이드 읽기
   2. 폴더 생성: D:/VAMOS/docs/sot 2/6-2_Security-Governance/
   3. 계획서 14+α 섹션 작성:

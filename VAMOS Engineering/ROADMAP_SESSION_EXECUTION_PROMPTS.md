@@ -121,15 +121,15 @@ VAMOS 로드맵 Phase 0, 세션 P0-2 — CLAUDE.md + Obsidian 구조 확정
        → 매트릭스 위치, PROGRESS.md 참조, Phase별 컨텍스트 테이블 (STRATEGY_03 §4.2)
      - 산출물: "CLAUDE.md 구조 명세" (§1~§28 목차 + 각 섹션 역할 + 줄 수 예상)
   2. Obsidian 전략과 매트릭스 연결:
-     - Strategy v3.0 §3 (15개 폴더 구조) → 매트릭스 셀 매핑:
+     - Strategy v3.0 §3 (17개 폴더 구조) → 매트릭스 셀 매핑:
        00_HUB → 전체 참조 / 01_GOVERNANCE → D1(T0) / 12_IMPLEMENTATION → 매트릭스 노트 / 14_AUDIT → D1/D3 검증
-     - 산출물: "Obsidian-매트릭스 매핑" (15개 폴더 × 해당 매트릭스 셀)
+     - 산출물: "Obsidian-매트릭스 매핑" (17개 폴더 × 해당 매트릭스 셀)
   3. 설계 자산 전체 맵 문서화:
      - [원본] SOT + SOT 2 → D행 / [요약] CLAUDE.md → B1, B2b / [KG] Obsidian → X1 / [엔지니어링] STRATEGY → 전체
 
 ■ STEP 3: 산출물 검증 (더 이상 수정 없을 때까지 반복)
   a. CLAUDE.md §1~§28 구조가 빠짐없는지?
-  b. Obsidian 15개 폴더가 전부 매트릭스 셀에 매핑되었는지?
+  b. Obsidian 17개 폴더가 전부 매트릭스 셀에 매핑되었는지?
   c. 설계 자산 전체 맵에서 누락된 자산이 없는지?
   d. 미세한 부분까지 확인 → 수정 필요 시 수정 → 재검증
   e. "산출물 최종 확정" 선언
@@ -579,7 +579,7 @@ VAMOS 로드맵 Phase 2, 세션 P2-3 — Obsidian 노트 생성
   D:\VAMOS\docs\sot 2\ — 도메인 노트 내용 원본
 
 ■ STEP 1: 프롬프트 자체 검증
-  a. 노트 생성 범위가 Strategy v3.0 §3과 일치하는지 (15개 폴더 + 120+ 노트)
+  a. 노트 생성 범위가 Strategy v3.0 §3과 일치하는지 (17개 폴더 + 120+ 노트)
   b. 태깅 규칙이 Strategy v3.0 §4와 일치하는지
   c. 템플릿이 Strategy v3.0 §5~§6과 일치하는지
   d. "프롬프트 최종 확정"

@@ -30,7 +30,7 @@ X행(횡��):  X1(전략 수립) | X2(횡단 실행) | X3(횡단 운영) | XF
 | LOCK-DECISION-REGISTRY.md | D1 | D3 | 469+ LOCK — 설계 정합 + 코드 대조 |
 | MODULE-MAP.md | D1 | R2b | 187개 모듈 전체 — 설계 + 도메인 구현 참조 |
 | 39-FILE-MASTER-INDEX.md | D1 | B2b | SOT 39파일 계층 — 정합 + 컨텍스트 |
-| SOT2-STRUCTURE-MAP.md | D1 | B2b | SOT 2 38폴더 구조 — 정합 + 라우팅 |
+| SOT2-STRUCTURE-MAP.md | D1 | B2b | SOT 2 42폴더 구조 — 정합 + 라우팅 |
 
 **요약**: 00_HUB는 **D1(설계 정합성)**을 1차 기능으로, **B2b(컨텍스트 관리)**를 2차 기능으로 수행.
 

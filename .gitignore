@@ -89,3 +89,9 @@ benchmark_results/benchmark_store.db
 .claude-pre-commit/
 .claude/plugins/claude-code-plugins-plus-skills/
 .claude/plugins/claude-code-skills/
+
+# ── 의도적 미추적 코퍼스 (C-8/C-10, 2026-06-11) ──
+# stale 백업/테스트 격리 사본 — "git add ." 유입 방지
+# 실측: docs/backup 83MB 4,721파일 + docs/test_iso_p2 41MB, git 추적 0건
+docs/backup/
+docs/test_iso_p2/

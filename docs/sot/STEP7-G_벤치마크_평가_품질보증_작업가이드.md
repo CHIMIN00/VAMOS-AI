@@ -1,6 +1,6 @@
 # STEP7-G: 벤치마크 / 평가 / 품질보증 심화 작업가이드
 
-> **최종 업데이트**: 2025-02-22
+> **최종 업데이트**: 2026-02-22
 > **목적**: VAMOS AI의 품질을 정량적으로 측정·평가·보증하는 체계를 수립. 표준 벤치마크, Agent 평가, RAG 평가, 사용자 경험 평가, VAMOS 고유 벤치마크까지 전수 정리
 > **대상 비교**: ChatGPT, Claude, Gemini, Perplexity, Grok, Mistral, DeepSeek, Meta AI, Open-source 모델
 > **총 항목**: 88건 (Part 1~11)

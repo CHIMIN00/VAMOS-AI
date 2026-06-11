@@ -59,6 +59,7 @@ Could:  있으면 좋지만 없어도 제품 동작에 영향 없음. 시간 여
 
 | 작업 | 우선순위 | 이유 |
 |------|---------|------|
+| 2-0 외부 의존성 재확인 | **Must** | PART1 E.1+E.3+B.1 재확인(A4) — Phase 2 선행 |
 | 2-1 CLAUDE.md 보강 | **Must** | AI 컨텍스트 없으면 Phase 4 품질 저하 |
 | 2-4 린터/CI | **Must** | 하네스 기반 없으면 Phase 4 불가 |
 | 2-5 vamos_lint | **Must** | VAMOS 고유 규칙 강제 |
@@ -143,13 +144,13 @@ Phase 0: 0-0(인벤토리) → 0-3(매트릭스)
   ↓
 Phase 1: 1-1(SOT2 핵심5개) → 1-2~1-5(D1 검증) → 1-9(기준선)
   ↓
-Phase 2: 2-1(CLAUDE.md 보강) → 2-4(린터) → 2-5(vamos_lint)
+Phase 2: 2-0(외부 의존성) → 2-1(CLAUDE.md 보강) → 2-4(린터) → 2-5(vamos_lint)
   ↓
-Phase 3: 3-1~3-7(R1 7개 LOCK)
+Phase 3: 3-1~3-7c(R1 7개 + A21·A22·A25 3개 = 10개 결정 LOCK)
   ↓
 Phase 4: 4-1(타입동기화) → 4-2(ORANGE CORE) → 4-4~4-6(Registry+config+BLUE NODE)
   ↓
-Phase 5: 5-3~5-6(D3 정합) → 5-8(GO/NO-GO)
+Phase 5: 5-3~5-6(D3 정합) → 5-7a(배포 무결성, A24) → 5-8(GO/NO-GO)
   ↓
 V0 완료
 

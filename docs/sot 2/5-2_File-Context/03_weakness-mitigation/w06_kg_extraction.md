@@ -1,7 +1,7 @@
 # W6 LLM-Augmented KG — 2단계 KG 추출 파이프라인 (V2)
 
 > **V단계**: V2-Phase 2 (W6 V2→V3 단계, 본 파일은 V2 단계 = KG 추출 파이프라인)
-> **Status**: Phase 2 IN-PROGRESS (세션 P2-4, STAGE 9 5-2 STEP_B chain s9_43_c_2)
+> **Status**: APPROVED (세션 P2-4 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])
 > **작성일**: 2026-05-12
 > **DEFINED-HERE**: AUTHORITY_CHAIN §3.2 W6 (W-series 12건 중 1건)
 > **카테고리**: 약점 보완 (KG / Cross-Document)
@@ -289,7 +289,7 @@ def merge_with_voting(samples: list[ExtractionResult]) -> tuple[list[Entity], li
 ★ H9 Proposition / G-1 영구 학습 시너지 명시 ✅
 ★ V3 확장 지점 (Engine 활성화 + GraphRAG 커뮤니티 + Hybrid 검색) 명시 (P3-2) ✅
 ★ V1 inheritance: W6 V1 미존재 (단계적 V2 신규) ✅
-★ L3 판정: PENDING (C-3 STEP_C 일괄)
+★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)
 
 ---
 

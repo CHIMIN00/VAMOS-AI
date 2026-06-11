@@ -163,7 +163,7 @@ D:\VAMOS\
 | DEPENDENCY-GRAPH.md | 112개 의존성 엣지 |
 | LOCK-DECISION-REGISTRY.md | 469+ LOCK 항목 |
 | 39-FILE-MASTER-INDEX.md | SOT 39개 파일 계층 |
-| SOT2-STRUCTURE-MAP.md | SOT 2 38개 폴더 구조 |
+| SOT2-STRUCTURE-MAP.md | SOT 2 42개 폴더 구조 |
 
 **전략 문서:**
 

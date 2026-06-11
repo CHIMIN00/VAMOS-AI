@@ -809,6 +809,8 @@ tests/                              # 루트 레벨 통합 테스트
 
 ## 8. 설정 / 환경 파일 구조
 
+> **[정합 주석 — config 정본: PHASE_B4_CONFIG_SPEC]** 본 §8의 멀티파일 config 트리 및 §8.1 `.env` 키 목록은 PHASE_B4_CONFIG_SPEC에서 단일 `config/config.toml` + 버전별 프리셋(`config/config.v1.toml`/`config.v2.toml`/`config.v3.toml`) + `.env`(B4 §2) 구조로 통합되었다(정본=B4). 본 절은 히스토리 참조용이다.
+
 ```
 config/
 ├── default.toml                    # 기본 설정 (모든 환경 공통)
@@ -867,7 +869,7 @@ SQLITE_DB_PATH=./data/vamos.db          # SQLite 경로 [V1]
 CHROMA_PERSIST_DIR=./data/chroma        # Chroma 데이터 경로 [V1]
 
 # 비용 상한
-VAMOS_COST_LIMIT_USD=30                  # V1 월 비용 상한 ($30 = 40K KRW)
+VAMOS_COST_LIMIT_USD=30                  # V1 월 비용 상한 ($30 = 40K KRW) — 참조용(비정본). 정본 채널: B4 config.toml [cost] monthly_limit=40000 (₩ 기준, BASE-1.3 ABSOLUTE LOCK)
 
 # MCP
 MCP_SERVER_URL=http://localhost:8080     # MCP 서버 URL

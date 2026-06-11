@@ -1,6 +1,6 @@
 # STEP7-F: 인프라 / 배포 / MLOps 심화 작업가이드
 
-> **최종 업데이트**: 2025-02-22
+> **최종 업데이트**: 2026-02-22
 > **목적**: VAMOS AI의 V1/V2/V3 인프라 설계·배포·운영·MLOps 파이프라인을 경쟁 AI 서비스 대비 전수비교하고, 실현 가능한 기술 스택·비용·구현 가이드 제공
 > **대상 비교**: OpenAI Infra, Anthropic Infra, Google Cloud AI, xAI, Mistral, Meta AI, Ollama/LocalAI 생태계
 > **총 항목**: 96건 (Part 1~12)

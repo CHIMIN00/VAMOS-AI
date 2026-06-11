@@ -7,6 +7,7 @@
 > **Tier**: 5 — Quality/Cross-cutting (횡단 허브)
 > **SOT 출처**: Part2 §6.1, §6.7, §6.8, §6.10, V2-Phase 3, V3-Phase 2/3
 > **Part2 상태**: PARTIAL (1줄 설명만 산재)
+> **구현 Phase 상태**: 영구 제외 — `permanently_excluded_design_decision` (메타 허브; 정본 기록: SOT2_SESSION_EXECUTION_PROMPTS.md "제외 도메인 (5개)" + SOT2_MASTER_INDEX.md "범위 외(Phase 4 비대상) 11폴더" — 2026-06-11 폴더 내 명기)
 
 ---
 

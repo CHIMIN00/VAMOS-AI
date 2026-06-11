@@ -1,7 +1,7 @@
 # STEP7-N: 워크플로우 자동화/RPA AI 기술 보강 작업가이드
 
 > **목적**: VAMOS AI의 개인/업무 워크플로우 자동화 역량 완전 보강
-> **총 항목**: 72개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)
+> **총 항목**: 44개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)
 > **참고**: n8n, Make.com, Zapier AI, UiPath, Automation Anywhere, Browserbase, Playwright, OpenAI Operator 등 2024-2026 최신 자동화 도구 전수 반영
 
 ---

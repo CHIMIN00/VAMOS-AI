@@ -229,7 +229,7 @@ W5는 정확도가 아닌 **속도** 최적화 기술이다. 벤치마크 메트
 ## V2 — Speculative Decoding + Medusa Head (V2 갱신, 2026-05-12 세션 P2-5)
 
 > **V단계**: V2-Phase 2 (W5 HIGH/V1→V2, V1 본문 byte EXACT 보존 + V2 섹션 append-only)
-> **Status**: Phase 2 IN-PROGRESS (세션 P2-5, STAGE 9 5-2 STEP_B chain s9_43_c_2)
+> **Status**: APPROVED (세션 P2-5 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])
 > **작성일**: 2026-05-12
 > **종합계획서 §**: §7 Phase 2 P2-5 (L1173 명시 의도 — "w05_speculative_decoding.md (V2 갱신)" = V1 파일 append-only)
 > **외부 SoT**: EAGLE-2/3 (Speculative Decoding) / Medusa Head (Multi-head parallel prediction, 2024)
@@ -392,7 +392,7 @@ async def speculative_decode_v2(
 ★ L9 QoD ≥ 0.6 / L17 Batch 독립 LOCK 정합 ✅
 ★ V1 본문 inheritance 100% (read-only flag 임시 해제 후 append-only, V1 본문 mismatch 0) ✅
 ★ V2.6 4 cross_domain_deps (6-4 - + 5-1 △ + 6-11 ◯ + 1-1 ◯ CRITICAL) inline cross-ref ✅
-★ L3 판정: PENDING (C-3 STEP_C 일괄)
+★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)
 
 ---
 

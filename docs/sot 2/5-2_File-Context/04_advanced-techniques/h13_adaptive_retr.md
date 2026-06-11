@@ -1,7 +1,7 @@
 # H13 Adaptive Retrieval — TARG 게이팅 (V2)
 
 > **V단계**: V2-Phase 2
-> **Status**: Phase 2 IN-PROGRESS (세션 P2-1, STAGE 9 5-2 STEP_B chain s9_43_c_2)
+> **Status**: APPROVED (세션 P2-1 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])
 > **작성일**: 2026-05-12
 > **DEFINED-HERE**: AUTHORITY_CHAIN §3.3 H13 (H-series 17건 중 1건)
 > **카테고리**: 고급 검색/인덱싱 (Adaptive Retrieval Gating)
@@ -284,7 +284,7 @@ def should_retrieve_for_flare(
 ★ H5 FLARE 시너지 + A7 패턴 학습 명시 ✅
 ★ V3 확장 지점 (Learned Classifier + Domain Policy + Multi-Modal) 명시 ✅
 ★ V1 본문 inheritance 영향 0 (H13는 NEW V2 파일) ✅
-★ L3 판정: PENDING (C-3 STEP_C 일괄)
+★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)
 
 ---
 

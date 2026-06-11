@@ -1,4 +1,4 @@
-# PHASE_B6_CICD_PIPELINE (v1.0.0)
+# PHASE_B6_CICD_PIPELINE (v1.0.2)
 
 ---
 
@@ -7,7 +7,7 @@
 | 항목 | 값 |
 |------|-----|
 | **문서 ID** | PHASE_B6 |
-| **버전** | v1.0.0 |
+| **버전** | v1.0.2 |
 | **작성일** | 2026-02-22 |
 | **상태** | ACTIVE |
 | **의존 문서** | D2.1-A1 (Tech Stack), D2.0-04 (Infra Core), PLAN-3.0 |
