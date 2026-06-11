@@ -1,0 +1,1185 @@
+{
+  "summary": "Draft exact edit specs for decision-independent objective residual defects (C-5/C-6/C-9 leftovers)",
+  "agentCount": 7,
+  "logs": [
+    "스펙 완료: 7/7 클러스터, fixes 168, registered 34"
+  ],
+  "result": {
+    "clusters": [
+      {
+        "cluster": "C5A",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "## 0. 문서 메타\n\n### 0.1 문서 목적",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n### 0.1 문서 목적",
+            "note": "①L3-5 실측. 버전 2.0.0=D2.0-01 §0.7 L144(02=v2.0)+01 §0.1 자기표기 2.0.0 컨벤션 도출. 상태 Active Canon=01 L5 '본 문서(01~08)가 Active Canon' 도출. 최종 수정=본 편집 적용일(②의 01 헤더 갱신과 동일 기준)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+            "old": "## 0. 문서 메타\n- 문서 목적: VAMOS의 BLUE NODE(도메인 실행 모듈) 정의, 계층 구조, 라이프사이클, CORE↔NODE 계약, 레지스트리 기준을 명세한다.",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n- 문서 목적: VAMOS의 BLUE NODE(도메인 실행 모듈) 정의, 계층 구조, 라이프사이클, CORE↔NODE 계약, 레지스트리 기준을 명세한다.",
+            "note": "①L41-42 실측. 버전=01 §0.7 L145(03=v2.0) 도출"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+            "old": "## 0. 문서 메타\n- 목적: “OTHER BRAINS(모델/HW/실행자원)”를 교체 가능하게 추상화하고, 비용/위험/품질 기준으로 런타임 라우팅하는 INFRA-CORE 원칙을 고정한다.",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n- 목적: “OTHER BRAINS(모델/HW/실행자원)”를 교체 가능하게 추상화하고, 비용/위험/품질 기준으로 런타임 라우팅하는 INFRA-CORE 원칙을 고정한다.",
+            "note": "①L33-34 실측. 버전=01 §0.7 L146(04=v2.0) 도출. 목적 행의 따옴표는 curly quote(원문 그대로)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+            "old": "## 0. 문서 메타\n- 목적: VAMOS의 Agent 실행 흐름(분해/우선순위/병렬/재시도/복구)과 로그/리포트 연결을 명세한다.",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n- 목적: VAMOS의 Agent 실행 흐름(분해/우선순위/병렬/재시도/복구)과 로그/리포트 연결을 명세한다.",
+            "note": "①L47-48 실측. 버전=01 §0.7 L147(05=v2.0) 도출"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+            "old": "## 0. 문서 메타\n- 목적: VAMOS의 저장/메모리 원칙(4계층(L0~L3), 프로젝트 네임스페이스, 민감정보 저장 금지/확인)을 “설계 레벨”로 고정한다.",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n- 목적: VAMOS의 저장/메모리 원칙(4계층(L0~L3), 프로젝트 네임스페이스, 민감정보 저장 금지/확인)을 “설계 레벨”로 고정한다.",
+            "note": "①L44-45 실측. 버전=01 §0.7 L148(06=v2.0) 도출"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "## 0. 문서 메타\n- 목적: VAMOS의 안전/비용/승인/정책 체크(게이트)를 RULE 1.3 기반으로 설계 레벨로 고정한다.",
+            "new": "## 0. 문서 메타\n\n| 항목 | 값 |\n|------|-----|\n| 버전 | 2.0.0 |\n| 상태 | Active Canon |\n| 최종 수정 | 2026-06-11 |\n\n- 목적: VAMOS의 안전/비용/승인/정책 체크(게이트)를 RULE 1.3 기반으로 설계 레벨로 고정한다.",
+            "note": "①L67-68 실측. 버전=01 §0.7 L149(07=v2.0) 도출"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "old": "| D1~D8 | (Schema Set) | v2.1.0 (또는 실제 스키마 표기 버전) |",
+            "new": "| D1~D8 | (Schema Set) | v3.0.0~v3.0.1 (D1~D4·D8: v3.0.1, D5~D7: v3.0.0) |",
+            "note": "②§0.7 L151. 실측: D1 이력 L360=3.0.1, D2 L543=3.0.1, D3 L736=3.0.1, D4 L486=3.0.1, D8 L179=3.0.1 / D5·D6·D7 이력 최종=3.0.0(PART1 BLOCKER-8)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "old": "| A1 | TECH_STACK | v2.1.0 |",
+            "new": "| A1 | TECH_STACK | v2.3.0 |",
+            "note": "②§0.7 L152. 실측: D2.1-A1 A1-0 메타 '버전: 2.3.0' + 문서 이력 2.3.0(2026-02-22 Phase A)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "old": "| 최종 수정 | 2026-01-04 |",
+            "new": "| 최종 수정 | 2026-06-11 |",
+            "note": "②§0.1 L55 동결 헤더 갱신(§0.7 정정에 따른 본 편집 적용일)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "> - “승인 스키마 원본 정본(SOT)”은 D7이다. (ApprovalSchema: [REF:D7:approval-schema:Schema:*:v2.1.0])",
+            "new": "> - “승인 스키마 원본 정본(SOT)”은 D7이다. (ApprovalSchema: [REF:D7:approval-schema:Schema:*:v3.0.0])",
+            "note": "④L435. D2.1-D7 _meta ref_locked 실측 v3.0.0. LOCK 내용(SOT=D7)은 불변, 버전 핀만 승격"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "> - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v2.1.0]\n> - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v2.1.0]\n> - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v2.1.0]",
+            "new": "> - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v3.0.0]\n> - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v3.0.0]\n> - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v3.0.0]",
+            "note": "④L448-450 연속 3핀 일괄 승격"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "    - 스키마 정본(REF-only): DownshiftSchema — [REF:D7:downshift-schema:Schema:*:v2.1.0]",
+            "new": "    - 스키마 정본(REF-only): DownshiftSchema — [REF:D7:downshift-schema:Schema:*:v3.0.0]",
+            "note": "④L669"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "- **연결**: ApprovalSchema [REF:D7:approval-schema:Schema:*:v2.1.0], 08 UI 참조",
+            "new": "- **연결**: ApprovalSchema [REF:D7:approval-schema:Schema:*:v3.0.0], 08 UI 참조",
+            "note": "④L749"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "- SOT: D7(07_SAFETY_COST_APPROVAL 스키마 문서)\n  - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v2.1.0]\n  - ApprovalSchema: [REF:D7:approval-schema:Schema:*:v2.1.0]\n  - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v2.1.0]\n  - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v2.1.0]\n  - BlockSchema: [REF:D7:block-schema:Schema:*:v2.1.0]",
+            "new": "- SOT: D7(07_SAFETY_COST_APPROVAL 스키마 문서)\n  - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v3.0.0]\n  - ApprovalSchema: [REF:D7:approval-schema:Schema:*:v3.0.0]\n  - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v3.0.0]\n  - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v3.0.0]\n  - BlockSchema: 별도 스키마 없음 — PolicyCheckSchema.decision=deny로 흡수 (DN-D7-004 해소) → [REF:D7:policy-check-schema:Schema:*:v3.0.0]",
+            "note": "③L1090+④L1086-1089(§6.1 블록). DN-D7-004 실측(D2.1-D7 L538-543: 'A 채택, PolicyCheckSchema.decision=deny로 흡수'). block-schema REF ID는 D2.1-D7에 실존하지 않음(dangling) 확인. L1191-1195 동형 블록과 구분 위해 L1085 앵커 포함"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+            "old": "- 본 문서(07) §6.2~§6.4는 “derived view(설계 요약)”이며, 값/필드 정의 충돌 시 D7이 우선한다.\n  - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v2.1.0]\n  - ApprovalSchema: [REF:D7:approval-schema:Schema:*:v2.1.0]\n  - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v2.1.0]\n  - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v2.1.0]\n  - BlockSchema: [REF:D7:block-schema:Schema:*:v2.1.0]",
+            "new": "- 본 문서(07) §6.2~§6.4는 “derived view(설계 요약)”이며, 값/필드 정의 충돌 시 D7이 우선한다.\n  - PolicyCheckSchema: [REF:D7:policy-check-schema:Schema:*:v3.0.0]\n  - ApprovalSchema: [REF:D7:approval-schema:Schema:*:v3.0.0]\n  - CostBudgetSchema: [REF:D7:cost-budget-schema:Schema:*:v3.0.0]\n  - DownshiftSchema: [REF:D7:downshift-schema:Schema:*:v3.0.0]\n  - BlockSchema: 별도 스키마 없음 — PolicyCheckSchema.decision=deny로 흡수 (DN-D7-004 해소) → [REF:D7:policy-check-schema:Schema:*:v3.0.0]",
+            "note": "③L1195+④L1191-1194(§9 결정요약 블록). L1190 앵커 행(curly quote 원문)으로 §6.1 동형 블록과 구분"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+            "old": "- Storage/Memory 스키마의 \"원본 정본(SOT)\"은 D6에 존재한다.\n  - MemoryRecordSchema: [REF:D6:memory-record-schema:Schema:*:v2.2.0]\n  - SourceQoDSchema: [REF:D6:source-qod-schema:Schema:*:v2.2.0]",
+            "new": "- Storage/Memory 스키마의 \"원본 정본(SOT)\"은 D6에 존재한다.\n  - MemoryRecordSchema: [REF:D6:memory-record-schema:Schema:*:v3.0.0]\n  - SourceQoDSchema: [REF:D6:source-qod-schema:Schema:*:v3.0.0]",
+            "note": "④L1311-1313(§7.1). D2.1-D6 _meta ref_locked 실측 v3.0.0(L62/L103). L1435-1436 동형 쌍과 구분 위해 L1311 앵커(직선 따옴표 원문) 포함"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+            "old": "- 결정 완료: Storage/Memory 스키마의 “원본 정본(SOT)”은 D6에 존재한다(REF-only).\n  - MemoryRecordSchema: [REF:D6:memory-record-schema:Schema:*:v2.2.0]\n  - SourceQoDSchema: [REF:D6:source-qod-schema:Schema:*:v2.2.0]",
+            "new": "- 결정 완료: Storage/Memory 스키마의 “원본 정본(SOT)”은 D6에 존재한다(REF-only).\n  - MemoryRecordSchema: [REF:D6:memory-record-schema:Schema:*:v3.0.0]\n  - SourceQoDSchema: [REF:D6:source-qod-schema:Schema:*:v3.0.0]",
+            "note": "④L1434-1436(§9 결정요약). L1434 앵커(curly quote 원문)로 §7.1 쌍과 구분"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+            "old": "## 5.6 CloudLibraryCollectionRequestSchema (SOT) — Cloud Library E-15 수집 요청",
+            "new": "### 5.6 CloudLibraryCollectionRequestSchema (SOT) — Cloud Library E-15 수집 요청",
+            "note": "⑤L240. §5.1~5.5/§5.7~5.12 전부 h3(###) 실측 — 5.6만 h2 이탈"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D2_D2_SCHEMA_ORANGE_CORE.md",
+            "old": "  - DESIGN 근거: 02__VAMOS_DESIGN_2_0_ORANGE_CORE.md §3.2, §6.1~6.3, §10.5",
+            "new": "  - DESIGN 근거: D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md §3.2, §6.1~6.3, §10.5",
+            "note": "⑥L15. '02__VAMOS_DESIGN_2_0_ORANGE_CORE.md'는 디스크에 실존하지 않음 — 현존 파일명 Glob 확인(D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D8_D8_SCHEMA_UI_UX.md",
+            "old": "  - DESIGN 근거: 08__VAMOS_DESIGN_2_0_UI_UX.md §4, §6, §7, §10",
+            "new": "  - DESIGN 근거: D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md §4, §6, §7, §10",
+            "note": "⑥L10. 현존 파일명 Glob 확인(D2.0-08_08. VAMOS_DESIGN_2.0_UI_UX.md, '2.0' 표기·OVERVIEW만 '2_0')"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D4_D4_SCHEMA_INFRA_CORE.md",
+            "old": "    vector_dim: int = Field(..., description=\"임베딩 벡터 차원 (예: 1536)\")",
+            "new": "    vector_dim: int = Field(..., description=\"임베딩 벡터 차원 (예: 1024)\")",
+            "note": "⑦L428(§8-A.5 KBEmbeddingRecord). 정본 실측: D2.1-D6 L336 'V1 LOCK: BGE-M3 1024dim, D6-01 반영' + D2.0-06 S7D-027(BGE-M3 1024차원, DEC-005 UPDATED로 1536 대체 완료). LOCK 정본값(1024)으로 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+            "old": "<!-- VERSION_TRACKING: D1 v3.0.0 | 소스 DESIGN: D2.0-01~08 v2.3.0+ | PLAN-3.0 | BASE 1.3 | CLib: CLOUD_LIBRARY_SPEC v1.0 -->",
+            "new": "<!-- VERSION_TRACKING: D1 v3.0.1 | 소스 DESIGN: D2.0-01~08 v2.3.0+ | PLAN-3.0 | BASE 1.3 | CLib: CLOUD_LIBRARY_SPEC v1.0 -->",
+            "note": "⑧L1. 이력 L360 최종 3.0.1 실측 — 주석 버전을 이력과 정합"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D2_D2_SCHEMA_ORANGE_CORE.md",
+            "old": "<!-- VERSION_TRACKING: D2 v3.0.0 | 소스 DESIGN: D2.0-02 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->",
+            "new": "<!-- VERSION_TRACKING: D2 v3.0.1 | 소스 DESIGN: D2.0-02 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->",
+            "note": "⑧L1. 이력 L543 최종 3.0.1 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+            "old": "<!-- VERSION_TRACKING: D3 v3.0.0 | 소스 DESIGN: D2.0-03 v2.3.0+ | PLAN-3.0 | BASE 1.3 | CLib: CLOUD_LIBRARY_SPEC v1.0, HYBRID_ROADMAP v1.0 -->",
+            "new": "<!-- VERSION_TRACKING: D3 v3.0.1 | 소스 DESIGN: D2.0-03 v2.3.0+ | PLAN-3.0 | BASE 1.3 | CLib: CLOUD_LIBRARY_SPEC v1.0, HYBRID_ROADMAP v1.0 -->",
+            "note": "⑧L1. 이력 L736 최종 3.0.1 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D4_D4_SCHEMA_INFRA_CORE.md",
+            "old": "<!-- VERSION_TRACKING: D4 v3.0.0 | 소스 DESIGN: D2.0-04 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->",
+            "new": "<!-- VERSION_TRACKING: D4 v3.0.1 | 소스 DESIGN: D2.0-04 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->",
+            "note": "⑧L1. 이력 L486 최종 3.0.1 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D5_D5_SCHEMA_AGENT_WORKFLOW.md",
+            "old": "# D5_SCHEMA_AGENT_WORKFLOW (v3.0.0)",
+            "new": "<!-- VERSION_TRACKING: D5 v3.0.0 | 소스 DESIGN: D2.0-05 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->\n# D5_SCHEMA_AGENT_WORKFLOW (v3.0.0)",
+            "note": "⑧SC-L01 주석 부재(L1=제목 실측). D2/D4 형식 미러. 이력 최종 3.0.0(L639) 실측 → v3.0.0"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md",
+            "old": "# D6_SCHEMA_STORAGE_MEMORY (v3.0.0)",
+            "new": "<!-- VERSION_TRACKING: D6 v3.0.0 | 소스 DESIGN: D2.0-06 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->\n# D6_SCHEMA_STORAGE_MEMORY (v3.0.0)",
+            "note": "⑧SC-L01 주석 부재. 이력 최종 3.0.0(L361) 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+            "old": "# D7_SCHEMA_SAFETY_COST_APPROVAL (v3.0.0)",
+            "new": "<!-- VERSION_TRACKING: D7 v3.0.0 | 소스 DESIGN: D2.0-07 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->\n# D7_SCHEMA_SAFETY_COST_APPROVAL (v3.0.0)",
+            "note": "⑧SC-L01 주석 부재. 이력 최종 3.0.0(L509) 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D8_D8_SCHEMA_UI_UX.md",
+            "old": "# D8_SCHEMA_UI_UX (v3.0.0)",
+            "new": "<!-- VERSION_TRACKING: D8 v3.0.1 | 소스 DESIGN: D2.0-08 v2.3.0+ | PLAN-3.0 | BASE 1.3 -->\n# D8_SCHEMA_UI_UX (v3.0.1)",
+            "note": "⑧SC-L01 주석 부재 + D8 이력 최종 3.0.1(L179, 2026-03-02 D8-M11) 실측 — 주석 v3.0.1, 제목 괄호 버전도 이력과 정합(주석<이력 신규 발생 방지). 단 §0 메타 '버전: 3.0.0' 행은 registered 참조"
+          }
+        ],
+        "registered": [
+          {
+            "item": "D2.1-D1~D4 §0 메타 '- 버전: 3.0.0' 및 D2~D4 제목 괄호 '(v3.0.0)', D8 §0 메타 '- 버전: 3.0.0' vs 문서 이력 최종 3.0.1 불일치",
+            "disposition": "지금 못 고침: 메타/제목 버전 승격은 이력 행 추가 없이 단독 변경 시 새 drift를 만들고, 3.0.1 승격을 '메타 정합 패치'로 기록할지(이력 +1행 3.0.2) 여부가 문서 버전 정책 판단 사항. C5-A 명시 범위(⑧=SC-L01 주석)에 없음 → 세션5 후속 결정 큐에 등재 (D8 제목만은 본 스펙 ⑧fix에 포함 — 신규 삽입 주석과 같은 행 블록이라 주석<이력 재발 방지 목적)"
+          },
+          {
+            "item": "D2.1 VERSION_TRACKING '소스 DESIGN: D2.0-0X v2.3.0+' vs D2.0-01 §0.7 '01~08 = v2.0' — DESIGN 2.0 문서군 자체의 버전 카운터(2.0 vs 2.3.0+) 정의 충돌",
+            "disposition": "지금 못 고침: 어느 쪽이 정본인지 판단 필요(본문 우선이면 §0.7 v2.0이 정본이나, D1~D4 기존 주석 4건의 v2.3.0+ 일괄 수정은 대형 작업+이력 기록 필요). ①의 신규 메타는 §0.7(v2.0→2.0.0) 기준으로 작성했고, ⑧의 신규 주석은 기존 D1~D4 형식을 byte-미러(v2.3.0+ 유지)함 — 카운터 통일은 DESIGN 버전 정책 결정 항목으로 등재"
+          },
+          {
+            "item": "D2.0-06 L1314 / D2.0-07 L1091 '> **검증 필요**: D7/D6 스키마 파일에서 위 REF ID가 실제 존재하는지 PHASE 1에서 확인할 것' 스테일 노트",
+            "disposition": "본 스펙 실측으로 REF ID 실존 확인 완료(D2.1-D7 L64-65, D2.1-D6 L61-62/L102-103) — 노트 제거/해소 표기는 문구 삭제 판단(스타일 침범 가능)이라 fix 제외, 해소 확인 기록으로 등재"
+          },
+          {
+            "item": "D2.0-01 §0.7 01~08 행(v2.0)과 ①신규 메타(2.0.0)의 향후 동기 갱신 의무",
+            "disposition": "현재 상호 정합(v2.0≡2.0.0, 01 §0.1/§0.2 컨벤션). DESIGN 문서 버전 승격 시 §0.7 테이블과 02~07 신규 메타 표를 함께 갱신해야 함 — 유지보수 규칙으로 등재"
+          }
+        ],
+        "summary": "C5-A 8건 전수 실측 완료, fix 29건 산출(전 old 문자열 grep -cF로 count==1 유일성 검증). ①D2.0-02~07 §0 메타 3행(버전 2.0.0=01 §0.7 도출/상태 Active Canon=01 L5 도출/최종 수정 2026-06-11) 테이블 삽입 6건. ②D2.0-01 §0.7 D1~D8 행 v2.1.0→v3.0.0~v3.0.1(이력 실측: D1~D4·D8=3.0.1, D5~D7=3.0.0), A1 행 v2.1.0→v2.3.0, 헤더 최종 수정 2026-01-04→2026-06-11 (3건). ③D2.0-07 L1090/L1195 BlockSchema dangling REF(block-schema는 D2.1-D7에 미존재 확인)를 DN-D7-004 해소결정(PolicyCheckSchema.decision=deny 흡수, D2.1-D7 L538-543 실측)대로 교정 — ④와 결합해 동형 5행 블록 2개를 앵커 행 포함 멀티라인 fix로 처리. ④D2.0-07 REF v2.1.0 핀 14곳+D2.0-06 v2.2.0 핀 4곳 전수(총 18곳, L435/448-450/669/749/1086-1090/1191-1195, 06 L1311-1313/1434-1436)를 D2.1 _meta ref_locked 실측값 v3.0.0으로 승격(8 fix). ⑤D2.1-D3 L240 §5.6 h2→h3(§5.1~5.12 중 유일 이탈 실측). ⑥D2.1-D2 L15/D2.1-D8 L10 레거시 파일명(02__/08__*)을 Glob 실측 현존명(D2.0-02_02./D2.0-08_08.)으로 교정 2건. ⑦D2.1-D4 L428 vector_dim 예시 1536→1024(BGE-M3 V1 LOCK, D2.1-D6 L336+D2.0-06 S7D-027 정본 실측). ⑧D1~D4 SC-L01 주석 v3.0.0→v3.0.1(각 이력 최종 3.0.1 실측) 4건 + D5~D8 주석 신규 4건(D5~D7 v3.0.0, D8 v3.0.1, 기존 D2/D4 형식 byte-미러). registered 4건: D1~D4·D8 §0 메타 버전 3.0.0 vs 이력 3.0.1(버전 정책 판단), DESIGN 버전 카운터 v2.0 vs v2.3.0+ 충돌(정본 판단), 스테일 '검증 필요' 노트 2곳(해소 확인됨, 삭제는 판단), §0.7↔신규 메타 동기 갱신 규칙. LOCK 값 변경 0건(버전 핀·dangling REF·LOCK 위반 예시값 1536만 정본값으로 교정). 세션5 D1~D19 결정과 모순 없음."
+      },
+      {
+        "cluster": "C5B",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "old": "| `cost.daily_limit` | V2+ | ADMIN | 일일 비용 상한 동적 조정 |\n| `cost.warn_threshold` | V2+ | ADMIN | 경고 임계값 동적 조정 |",
+            "new": "| `cost.warn_threshold` | V2+ | ADMIN | 경고 임계값 동적 조정 |",
+            "note": "①a §5.2(L904-905): BASE-1.3 L218 '비용 상한 절대 변경 불가'(ABSOLUTE LOCK, CLAUDE.md §20·READINESS_GUIDE L352 교차확인)와 직접 충돌하는 cost.daily_limit ADMIN 런타임 조정 행 제거. LOCK 값 자체 무변경."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "old": "| `logging.level` | V2+ | OPERATOR | 로그 레벨 동적 변경 |\n\n### 5.3 변경 이력 추적",
+            "new": "| `logging.level` | V2+ | OPERATOR | 로그 레벨 동적 변경 |\n\n> **[LOCK 거버넌스 — 정본: BASE-1.3 §5]** 비용 상한(`cost.daily_limit` 1,300/3,100/8,900원, `cost.monthly_limit` 40,000/93,000/266,000원)은 BASE-1.3 \"비용 상한·정체성·Non-goal·법·승인 구조는 절대 변경 불가\" 규칙에 따른 ABSOLUTE LOCK으로, 런타임 동적 조정 대상에서 제외한다(값 변경은 BASE/PLAN 개정 절차로만 가능). ADMIN 런타임 동적 조정은 `cost.warn_threshold` 등 상한 값이 아닌 운영 파라미터에 한정한다.\n\n### 5.3 변경 이력 추적",
+            "note": "①b §5.2 표 직후(L910-912) LOCK 거버넌스 명문화 주석 삽입. BASE-1.3(상위)이 정본임을 명시, ₩40K/93K/266K LOCK 값 무변경."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B2_PROJECT_STRUCTURE.md",
+            "old": "## 8. 설정 / 환경 파일 구조",
+            "new": "## 8. 설정 / 환경 파일 구조\n\n> **[정합 주석 — config 정본: PHASE_B4_CONFIG_SPEC]** 본 §8의 멀티파일 config 트리 및 §8.1 `.env` 키 목록은 PHASE_B4_CONFIG_SPEC에서 단일 `config/config.toml` + 버전별 프리셋(`config/config.v1.toml`/`config.v2.toml`/`config.v3.toml`) + `.env`(B4 §2) 구조로 통합되었다(정본=B4). 본 절은 히스토리 참조용이다.",
+            "note": "②a §8(L810): B2 멀티파일 트리 ↔ B4 단일 config.toml 충돌 미기록 해소 — B4 정본 통합 주석. 헤딩 grep count=1 유일."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B2_PROJECT_STRUCTURE.md",
+            "old": "VAMOS_COST_LIMIT_USD=30                  # V1 월 비용 상한 ($30 = 40K KRW)",
+            "new": "VAMOS_COST_LIMIT_USD=30                  # V1 월 비용 상한 ($30 = 40K KRW) — 참조용(비정본). 정본 채널: B4 config.toml [cost] monthly_limit=40000 (₩ 기준, BASE-1.3 ABSOLUTE LOCK)",
+            "note": "②b §8.1(L870): 비용 상한 3중 채널(B2 .env USD / B4 config.toml ₩ / B4 런타임 DB) 중 정본 채널=₩ 기준 B4 [cost] 명시 주석. 값($30=40K KRW)은 BASE-1.3 L199와 정합하므로 무변경."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B3_DEPENDENCIES.md",
+            "old": "# PHASE_B3_DEPENDENCIES (v1.0.0)",
+            "new": "# PHASE_B3_DEPENDENCIES (v1.0.1)",
+            "note": "③a 제목(L1) ↔ §7 문서 이력 최신 1.0.1(L365, 2026-03-01 B3-01) 동기화."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B3_DEPENDENCIES.md",
+            "old": "| 버전 | 1.0.0 |",
+            "new": "| 버전 | 1.0.1 |",
+            "note": "③b §0 문서 메타(L9) 버전 동기화. B3 내 grep count=1 유일(이력표 행은 '| 1.0.0 | 2026-02-22 |' 형식이라 비매칭)."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "old": "# PHASE_B4_CONFIG_SPEC (v1.0.0)",
+            "new": "# PHASE_B4_CONFIG_SPEC (v1.0.1)",
+            "note": "③c 제목(L1) ↔ §7 문서 이력 최신 1.0.1(L1236, 2026-03-01 PB-01) 동기화."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "old": "| 버전 | 1.0.0 |",
+            "new": "| 버전 | 1.0.1 |",
+            "note": "③d §0 문서 메타(L9) 버전 동기화. B4 내 grep count=1 유일 확인."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B6_CICD_PIPELINE.md",
+            "old": "# PHASE_B6_CICD_PIPELINE (v1.0.0)",
+            "new": "# PHASE_B6_CICD_PIPELINE (v1.0.2)",
+            "note": "③e 제목(L1) ↔ §9 문서 이력 최신 v1.0.2(L1753, 2026-03-01 PH-11/PH-10) 동기화."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B6_CICD_PIPELINE.md",
+            "old": "| **버전** | v1.0.0 |",
+            "new": "| **버전** | v1.0.2 |",
+            "note": "③f §0 문서 메타(L10) 버전 동기화. grep count=1 유일 확인."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+            "old": "------------------------------------------------------------\n## 0. 서문(문서 목적 & 규칙)",
+            "new": "# VAMOS PLAN 3.0 — 최종완성본 (v3.0)\n\n------------------------------------------------------------\n## 0. 서문(문서 목적 & 규칙)",
+            "note": "③g 상단 버전태그 부재 실측 확인(L1=60개 대시, 제목 행 없음) — 문서 자기선언(§0.2 'VAMOS PLAN 3.0의 최상위 계획 문서')·파일명 기준 객관 확정값 v3.0 제목 추가. '## 0. 서문(문서 목적 & 규칙)' grep count=1로 old 유일."
+          }
+        ],
+        "registered": [
+          {
+            "item": "MASTER_SPEC(VAMOS_MASTER_SPECIFICATION.md) 버전 메타 비동기 주장 — 실측 결과 제목 'v1.0.0'(L3) 단일이며 문서 이력 섹션 자체가 부재(grep '문서 이력' 0건, 다른 1.0.x 문자열 0건)",
+            "disposition": "제목 vs 이력 비동기가 성립하지 않아 '이력 최신값 동기화' fix 불가(동기화 대상 부재). 문서 이력 섹션 신설 + 세션5 D1~D19 반영분(config LOCK 20, V0=₩0, [SYNTHETIC] 등)에 대한 버전 범프 값 결정은 거버넌스 판단 필요 → 차기 메타정비 클러스터로 등재"
+          },
+          {
+            "item": "PHASE_B4 §5.2 잔여 행 LOCK 정합 — config LOCK 20 목록(docs/sot/CLAUDE.md §20)에 cost.warn_threshold=80 LOCK, cost.block_threshold=100 LOCK 등재되어 있으나 §5.2는 warn_threshold ADMIN 런타임 조정을 허용",
+            "disposition": "ABSOLUTE LOCK(BASE-1.3 상한)과 plain LOCK(D-결정 기본값)의 런타임 변경 허용 범위 구분은 거버넌스 판단 필요(본 클러스터 지시는 warn_threshold를 운영 파라미터로 전제). fix ①b 주석은 '상한 값이 아닌 운영 파라미터'로 중립 표현하여 충돌 비확대 — plain LOCK 키 런타임 정책 확정은 등재"
+          },
+          {
+            "item": "PHASE_B4 §3.7 표(L274-275)의 cost.daily_limit/monthly_limit 행에 ABSOLUTE LOCK 표기 부재 — CLAUDE.md §20과 VAMOS_IMPLEMENTATION_READINESS_GUIDE.md L352는 ABSOLUTE LOCK으로 등재",
+            "disposition": "표기 추가 시 'B4 §3 LOCK 표기 10개' 집계(config LOCK 20 = §3 표기 10 ∪ BASE/DESIGN 12, 중복 2 제외)가 변동되어 연쇄 reconcile 필요 → 집계 영향 판단과 함께 등재"
+          },
+          {
+            "item": "본 클러스터 fix 적용 후 B2/B4 문서 이력 신규 행 및 추가 범프(B2 1.0.0→1.0.1, B4 1.0.1→1.0.2 등) 기록 여부",
+            "disposition": "③ fix는 '현 이력 최신값으로 제목 동기화'까지만 객관 확정 가능. 신규 편집분의 이력 행 추가·범프는 적용 주체의 일괄 이력 기록 정책(여러 클러스터 동시 적용 가능성) 판단 사항 → 적용 단계 처리로 등재"
+          }
+        ],
+        "summary": "C5B 거버넌스·config 충돌 3건 전수 실측 완료, fix 11건 산출(파일 무수정·스펙만). ①B4 §5.2 cost.daily_limit ADMIN 런타임 조정 행이 BASE-1.3 L218 '비용 상한 절대 변경 불가'와 직접 충돌(CLAUDE.md §20·READINESS_GUIDE L352의 ABSOLUTE LOCK 등재로 교차확인) → 행 제거+BASE-1.3 정본 LOCK 거버넌스 주석 명문화(₩40K/93K/266K 값 무변경). ②B2 §8 멀티파일 config 트리(L810-849)·§8.1 .env에 B4 단일 config.toml 정본 통합 주석+USD 비용 변수(L870) 3중 채널 중 ₩ 기준 B4 [cost]가 정본 채널임을 명시. ③버전 메타 동기화: B3 v1.0.0→v1.0.1(이력 L365), B4 v1.0.0→v1.0.1(이력 L1236), B6 v1.0.0→v1.0.2(이력 L1753) 각 제목+메타표 2개소, PLAN-3.0 상단 제목/버전태그 신설(v3.0). MASTER_SPEC은 이력 섹션 부재로 비동기 미성립 → registered 4건(MASTER_SPEC 이력 신설, warn_threshold plain LOCK 런타임 정책, B4 §3.7 ABSOLUTE LOCK 표기·집계 연쇄, 적용 후 이력 범프). 모든 old 문자열 grep -cF count=1 유일성 검증, LF 개행 확인."
+      },
+      {
+        "cluster": "C5C",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "## 목적: STEP6 1,556건 + STEP7 1,545건 = 총 3,101건 통합 관리",
+            "new": "## 목적: STEP6 1,556건 + STEP7 1,485건 = 총 3,041건 통합 관리",
+            "note": "L4. K/L/M 유령 ID 60건 제외 재계산(1,545→1,485, 3,101→3,041). ※지시서 파일명 'STEP7_작업지시서_마스터인덱스.md'는 부재 — 저장소 유일 마스터인덱스인 본 파일로 실측 확정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| 총 항목 | 1,556건 | 1,545건 | **3,101건** |",
+            "new": "| 총 항목 | 1,556건 | 1,485건 | **3,041건** |",
+            "note": "L12. 통합 통계 총계 재계산"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| 미적용 | 0건 | 1,545건 | 1,545건 |",
+            "new": "| 미적용 | 0건 | 1,485건 | 1,485건 |",
+            "note": "L14. 미적용 행 재계산"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| **합계** | **~670** | **~610** | **~248** | **1,545** |",
+            "new": "| **합계** | **~670** | **~610** | **~248** | **1,545** |\n\n> ⚠️ 실측 불일치(2026-06-11): K/L/M 유령 ID 60건 정정으로 STEP7 실총계는 1,485건. 본 표의 V1/V2/V3·우선순위 분포(~)는 정정 전 추정치이며 60건의 버전/우선순위 귀속은 실측 불가 — 재배분 미반영.",
+            "note": "L24. 분포 재배분은 실측 곤란 → 주석 fix + registered(R2)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| 미분류 | 범위/참조 항목 | ~17건 | 1,545 |",
+            "new": "| 미분류 | 범위/참조 항목 | ~17건 | 1,545 |\n\n> ⚠️ 실측 불일치(2026-06-11): 위 누적치는 정정 전 총계(1,545) 기준. K/L/M 유령 ID 60건 정정 반영 시 최종 누적은 1,485건이나 라운드별 귀속은 실측 불가 — 재배분 미반영.",
+            "note": "L36. 라운드 누적 재배분 실측 곤란 → 주석 fix + registered(R2)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| K (에이전트프로토콜) | 86 | D2.0-03 BLUE NODES | Ch6 |",
+            "new": "| K (에이전트프로토콜) | 76 | D2.0-03 BLUE NODES | Ch6 |",
+            "note": "L56. 소스 실측 K-001~K-076 (STEP7-K L1415 자체 선언 'K-001 ~ K-076' 일치)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| L (개발자도구) | 82 | D2.0-04 + D2.0-03 | Ch7,6 |",
+            "new": "| L (개발자도구) | 56 | D2.0-04 + D2.0-03 | Ch7,6 |",
+            "note": "L57. 소스 실측 L-001~L-056"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| M (PKM/지식관리) | 78 | D2.0-06 + PLAN-3.0 | Ch9,3 |",
+            "new": "| M (PKM/지식관리) | 54 | D2.0-06 + PLAN-3.0 | Ch9,3 |",
+            "note": "L58. 소스 실측 M-001~M-054"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "| **합계** | **~1,556** | **~1,545** | **~3,101** | |",
+            "new": "| **합계** | **~1,556** | **~1,485** | **~3,041** | |",
+            "note": "L84. §3 챕터표 총계 재계산(챕터별 ~추정치 행 재배분은 registered R2)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "### 4-J~M. STEP7-J~M (344건 요약)",
+            "new": "### 4-J~M. STEP7-J~M (284건 요약)",
+            "note": "L522. J98+K76+L56+M54=284 재계산"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "#### K — 에이전트 프로토콜/상호운용성 (86건, K-001~086) → D2.0-03",
+            "new": "#### K — 에이전트 프로토콜/상호운용성 (76건, K-001~076) → D2.0-03",
+            "note": "L532. 유령 ID K-077~086 (소스 최대 K-076)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "#### L — 개발자도구/API/SDK (82건, L-001~082) → D2.0-04 + D2.0-03",
+            "new": "#### L — 개발자도구/API/SDK (56건, L-001~056) → D2.0-04 + D2.0-03",
+            "note": "L538. 유령 ID L-057~082 (소스 최대 L-056)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "#### M — PKM/지식관리 (78건, M-001~078) → D2.0-06 + PLAN-3.0",
+            "new": "#### M — PKM/지식관리 (54건, M-001~054) → D2.0-06 + PLAN-3.0",
+            "note": "L544. 유령 ID M-055~078 (소스 최대 M-054)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "- LOW 5건: 학술, 출판",
+            "new": "- LOW 5건: 학술, 출판\n\n> ⚠️ 실측 불일치(2026-06-11): K/L/M 우선순위별 세부 건수 합(86/82/78)은 정정 전 수치 — 실측 ID 총계(76/56/54) 기준 재배분 미반영.",
+            "note": "L548(M 마지막 bullet). K/L/M sub-bullet 우선순위 재배분 실측 곤란 → 주석 fix + registered(R2)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+            "old": "*생성일: 2026-02-22. STEP7 AI기술보강 1,545건 + STEP6 1,556건 = 총 3,101건 통합 관리.*",
+            "new": "*생성일: 2026-02-22. STEP7 AI기술보강 1,485건 + STEP6 1,556건 = 총 3,041건 통합 관리.*",
+            "note": "L828. 푸터 총계 재계산"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+            "old": "> **총 항목**: 72개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "new": "> **총 항목**: 44개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "note": "L4. N 소스 헤더 과대(72) → 실측 N-001~N-044=44 (마스터인덱스 N행 44건과 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-O_교육_학습_자기개발_작업가이드.md",
+            "old": "> **총 항목**: 68개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "new": "> **총 항목**: 36개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "note": "L4. O 소스 헤더 과대(68) → 실측 O-001~O-036=36"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-P_건강_웰니스_감성AI_작업가이드.md",
+            "old": "> **총 항목**: 62개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "new": "> **총 항목**: 42개 | **구현 우선순위**: V1(로컬MVP) → V2(서버) → V3(엔터프라이즈)",
+            "note": "L4. P 소스 헤더 과대(62) → 실측 P-001~P-042=42"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_R4_V2_CRITICAL_HIGH.md",
+            "old": "## 대상: V2 서버 버전 (≤₩40K/월) CRITICAL + HIGH 우선순위",
+            "new": "## 대상: V2 서버 버전 (≤₩93K/월) CRITICAL + HIGH 우선순위",
+            "note": "L4. 구버전 비용 라벨 → 정본 V2 ₩93K"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_R5_V2_MEDIUM_LOW.md",
+            "old": "## 대상: V2 서버 버전 (≤₩40K/월) MEDIUM + LOW 우선순위",
+            "new": "## 대상: V2 서버 버전 (≤₩93K/월) MEDIUM + LOW 우선순위",
+            "note": "L4. 구버전 비용 라벨 → 정본 V2 ₩93K"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7_R6_V3_ALL.md",
+            "old": "## 대상: V3 엔터프라이즈 버전 (≤₩200K/월) 전체 우선순위",
+            "new": "## 대상: V3 엔터프라이즈 버전 (≤₩266K/월) 전체 우선순위",
+            "note": "L4. 구버전 비용 라벨 → 정본 V3 ₩266K"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-E_보안_안전_거버넌스_작업가이드.md",
+            "old": "> **최종 업데이트**: 2025-02-22",
+            "new": "> **최종 업데이트**: 2026-02-22",
+            "note": "L3. 연도 오기. 파일 내 또 다른 2025-02-22(L779)는 JSON 예시 timestamp — 본 old는 유일 매칭(검증 count=1)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-F_인프라_배포_MLOps_작업가이드.md",
+            "old": "> **최종 업데이트**: 2025-02-22",
+            "new": "> **최종 업데이트**: 2026-02-22",
+            "note": "L3. 연도 오기(파일 내 유일)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+            "old": "> **최종 업데이트**: 2025-02-22",
+            "new": "> **최종 업데이트**: 2026-02-22",
+            "note": "L3. 연도 오기(파일 내 유일)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+            "old": "> **최종 업데이트**: 2025-02-22",
+            "new": "> **최종 업데이트**: 2026-02-22",
+            "note": "L3. 연도 오기(파일 내 유일)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\STEP7-I_AI_Investing_보강_작업가이드.md",
+            "old": "> **최종 업데이트**: 2025-02-22",
+            "new": "> **최종 업데이트**: 2026-02-22",
+            "note": "L3. 연도 오기. L271의 2025-02-22는 샘플 리포트 생성일(예시) — 본 old는 유일 매칭"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+            "old": "| 38 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC | I-25 SDAR 자율추론 설계 명세 | 1647 | - | - | 참고 | 필수 | Self-Directed Adaptive Reasoning |",
+            "new": "| 38 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC | I-25 SDAR 자가진단·자동복구 설계 명세 | 1647 | - | - | 참고 | 필수 | Self-Diagnosis & Auto-Repair |",
+            "note": "L75. SDAR 정본 확장어(SDAR spec L1, 본 파일 L1676 자체 정의 일치). '자율추론'은 오확장어 파생 → 동일 결함으로 본 파일 L1898 표현(자가진단/자동복구)에 정합화. 줄수 1647은 실측 일치(무변경)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+            "old": "| 35 | VAMOS_AI_INVESTING_SPEC.md | SPEC | AI 투자 도메인 통합 명세 | 1372 | - | - | 필수 | 필수 | P1 투자 도메인 |",
+            "new": "| 35 | VAMOS_AI_INVESTING_SPEC.md | SPEC | AI 투자 도메인 통합 명세 | 1415 | - | - | 필수 | 필수 | P1 투자 도메인 |",
+            "note": "L72. 현재 실측 1,414줄 + 본 스펙의 변경이력 1행 추가(+1줄) 적용 후 최종 상태 1,415줄 기준. 변경이력 fix 미적용 시 1414로 조정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "old": "> **문서 버전**: v2.0\n> **작성일**: 2026-02-23",
+            "new": "> **문서 버전**: v2.1\n> **작성일**: 2026-02-23 | **최종 수정**: 2026-06-04\n> **변경이력**: v2.1 (2026-06-04) — 내용 이관 편집 반영(버전/이력 소급 동기화) · v2.0 (2026-02-23) — 최초 통합본",
+            "note": "L3-4. 06-04 이관 편집 미반영 메타 → v2.1 승급 + 최종수정일 + 변경이력 1행(파일 내 변경이력 섹션 부재 → 헤더 블록에 신설)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "old": "> **문서 끝** -- VAMOS AI INVESTING 통합 명세서 v2.0",
+            "new": "> **문서 끝** -- VAMOS AI INVESTING 통합 명세서 v2.1",
+            "note": "L1408. 푸터 버전 동기화(헤더 v2.1 승급과 동일 결함의 자기일관성 교정)"
+          }
+        ],
+        "registered": [
+          {
+            "item": "K/L/M·N/O/P 소스 6개 파일의 헤더·푸터 '일부 번호 묶음' 주장 검증 — K/L/M 소스 헤더(총 항목 86/82/78개) 및 6개 푸터(예: STEP7-K L1415 '총 86항목 완료 (K-001 ~ K-076, 일부 번호 묶음)', N L666 '총 72항목', O L542 '총 68항목')가 ID 실측(76/56/54/44/36/42)과 불일치",
+            "disposition": "묶음 섹션(K-069~072 등) 내부 항목 전수 계수가 필요한 판단성 대형 작업. 감사 지정 범위(인덱스 K/L/M행 + N/O/P 헤더)만 fix하고, K/L/M 소스 헤더와 6개 푸터는 묶음 주장 반증/확증 후 일괄 정정하도록 차기 세션 등재. 푸터만 선정정 시 헤더 fix와 충돌 없음"
+          },
+          {
+            "item": "마스터인덱스 유령 60건의 파생 분포 재배분 — §1 우선순위 분포표(~670/~610/~248), §1 라운드 계획 누적(1,000/1,280/1,528), §3 챕터별 STEP7 추가(~120/~100 등), §4-J~M K/L/M 우선순위 sub-bullet(12+40+28+6 등)",
+            "disposition": "유령 ID(K-077~086, L-057~082, M-055~078)는 실존하지 않아 버전/우선순위 귀속 실측 불가. '실측 불일치' 주석 3건으로 표기 완료(L24/L36/L548). 재배분은 K/L/M 소스 항목별 우선순위 전수 계수 후 별도 작업"
+          },
+          {
+            "item": "STEP7-E:779 JSON 예시 \"timestamp\": \"2025-02-22T10:30:00Z\" / STEP7-I:271 샘플 리포트 '생성일: 2025-02-22' — 본문 예시 데이터의 동일 연도 오기 가능성",
+            "disposition": "메타데이터가 아닌 예시 콘텐츠로 연도 의도 판단 필요(예시 값 변경은 최소 교정 원칙상 보류). L3 메타 정정과 분리하여 등재"
+          },
+          {
+            "item": "VAMOS_MASTER_SPECIFICATION.md L1678·L1885 'SDAR 상세 (1,643줄)' vs 실측 1,647줄(ReadAllLines) — L75 칼럼 1647과 자기모순",
+            "disposition": "객관 실측이나 클러스터 C5-C 지정 5건 범위 외 신규 발견. 타 클러스터 스펙과의 중복 편집 충돌 방지 위해 등재(정정값 1,647줄 확정)"
+          },
+          {
+            "item": "VAMOS_AI_INVESTING_SPEC.md L1410 푸터 '작성일: 2026-02-23' — 헤더에 최종 수정 2026-06-04 추가 후 푸터에는 최종수정 미표기",
+            "disposition": "원작성일 표기로서 거짓은 아님(과대/오기 아님). 푸터 메타 확장 여부는 스타일 판단 → 무처리 등재"
+          }
+        ],
+        "summary": "C5-C 5건 전수 실측 완료, fix 30건 + registered 5건. ①마스터인덱스: 지시서 파일명(STEP7_작업지시서_마스터인덱스.md)은 부재, 저장소 유일 실물은 D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md로 확정. 소스 실측 ID 범위 K-001~076/L-001~056/M-001~054(유령 정확히 60건=10+26+24) → §2 행·§4 헤더·§4-J~M(344→284) 정정, 총계 1,545→1,485 및 3,101→3,041 5개소 재계산. 우선순위분포·라운드누적·sub-bullet은 귀속 실측 불가 → '실측 불일치' 주석 3건 + registered. N/O/P는 인덱스 행이 이미 실측 일치(44/36/42)라 소스 헤더(72/68/62개)가 과대 대상 → 3 fix. ②R4/R5/R6:4 비용 라벨 ≤₩40K→≤₩93K(V2)·≤₩200K→≤₩266K(V3) 3 fix. ③STEP7-E~I:3 연도 오기 2025→2026-02-22 5 fix(E:779/I:271 예시 데이터는 유일성 무관, 등재). ④MASTER_SPEC:75 SDAR 확장어 Self-Directed Adaptive Reasoning→Self-Diagnosis & Auto-Repair(+오확장 파생 '자율추론'→'자가진단·자동복구', L1676/L1898 자체 정본 정합) + :72 1372줄→1415줄(현재 실측 1,414 + 변경이력 1행 추가 반영 최종상태). ⑤AI_INVESTING_SPEC v2.0→v2.1 승급 + 최종수정 2026-06-04 + 변경이력 1행 신설 + 푸터(L1408) 버전 동기화. 모든 old 문자열 30건 디스크 grep으로 count==1 유일성 검증 완료. LOCK 값 변경 없음(₩93K/₩266K는 정본 방향 정정)."
+      },
+      {
+        "cluster": "C6A",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_MASTER_INDEX.md",
+            "old": "> 📍 **구현 현황**: `Phase 1` ✅ 완료 (1/1, 2026-04-12) — P1-1 24건 파일 수준 전수 검증 VALID 23건(95.8%), 게이트 PASS | **Phase 2 진입 가능** | 이월: B-2 CONDITIONAL 1건(Phase 2 귀속 확정 시 처리), LOCK C-04~C-08 OPEN 5건",
+            "new": "> 📍 **구현 현황**: `Phase 1` ✅ 완료 (1/1, 2026-04-12) — P1-1 24건 파일 수준 전수 검증 VALID 23건(95.8%), 게이트 PASS | **구현 Phase 영구 제외** (`permanently_excluded_design_decision` 메타 허브 — SOT2_SESSION_EXECUTION_PROMPTS.md \"제외 도메인 (5개)\" 기록) | 이월: B-2 CONDITIONAL 1건(Phase 2 귀속 확정 시 처리), LOCK C-04~C-08 **RESOLVED (2026-06-11 D1~D5, 실효 OPEN 0)**",
+            "note": "L869. 5-3 CONFLICT_LOG.md L16-20 실측: C-04~C-08 전건 RESOLVED(2026-06-11). 'Phase 2 진입 가능' 표기는 영구 제외 결정(SOT2_SESSION_EXECUTION_PROMPTS.md L5955)으로 현행화. L13/L24의 'CONFLICT OPEN 0' 라벨은 D1~D5 이후 사실이 되어 무수정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_MASTER_INDEX.md",
+            "old": "- **CONFLICT_LOG.md**: ✅ 3건 RESOLVED + 5건 OPEN(C-04~C-08 LOCK 불일치, P0-3 발견) + 5건 WATCH-LIST RESOLVED",
+            "new": "- **CONFLICT_LOG.md**: ✅ 3건 RESOLVED + 5건 RESOLVED(C-04~C-08 LOCK 불일치, P0-3 발견 → 2026-06-11 D1~D5 전건 RESOLVED, 실효 OPEN 0) + 5건 WATCH-LIST RESOLVED",
+            "note": "L875. 5-3 CONFLICT_LOG.md 변경 이력 L77-81(D2~D5+세션4) 실측 정합"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "> **Part2 상태**: PARTIAL (1줄 설명만 산재)",
+            "new": "> **Part2 상태**: PARTIAL (1줄 설명만 산재)\n> **구현 Phase 상태**: 영구 제외 — `permanently_excluded_design_decision` (메타 허브; 정본 기록: SOT2_SESSION_EXECUTION_PROMPTS.md \"제외 도메인 (5개)\" + SOT2_MASTER_INDEX.md \"범위 외(Phase 4 비대상) 11폴더\" — 2026-06-11 폴더 내 명기)",
+            "note": "5-3 폴더에 영구 제외 결정 미기재(②). 출처 실측: SOT2_SESSION_EXECUTION_PROMPTS.md L5955·L7204, SOT2_MASTER_INDEX.md L16. 5-3 루트 _index.md 부재로 계획서 헤더에 기재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g4_split_algorithm.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-6, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-6 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])",
+            "note": "③ 5-2 16파일 헤더 stale. 승급 정본: AUTHORITY_CHAIN.md L331(sub-step 14 'L3 PENDING→PASS')+L392(Status DRAFT→APPROVED), 도메인 종료 INDEX.md L4"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g4_split_algorithm.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)",
+            "note": "푸터 L317"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g7_guide_split.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-6, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-6 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g7_guide_split.md",
+            "old": "★ L3 판정: PENDING",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)",
+            "note": "g7만 괄호 없는 변형(L227), count==1 확인"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g8_loop_limit.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-6, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-6 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g8_loop_limit.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w02_ring_attention.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-3, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-3 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w02_ring_attention.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w03_ensemble_embedding.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-4, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-4 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w03_ensemble_embedding.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w04_synthetic_data.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-5, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-5 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w04_synthetic_data.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w05_speculative_decoding.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-5, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-5 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])",
+            "note": "w05만 헤더가 L232 V2 섹션 내 위치 — 파일 내 count==1 확인"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w05_speculative_decoding.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w06_kg_extraction.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-4, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-4 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w06_kg_extraction.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w07_mdcure_multidoc.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-5, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-5 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w07_mdcure_multidoc.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w08_longrope_yarn.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-3, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-3 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w08_longrope_yarn.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w12_continuous_eval.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-4, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-4 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w12_continuous_eval.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h05_flare.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-1, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-1 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h05_flare.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h09_proposition.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-1, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-1 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h09_proposition.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h12_colpali.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-2, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-2 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h12_colpali.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h13_adaptive_retr.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-1, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-1 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h13_adaptive_retr.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h17_cov_rag.md",
+            "old": "> **Status**: Phase 2 IN-PROGRESS (세션 P2-2, STAGE 9 5-2 STEP_B chain s9_43_c_2)",
+            "new": "> **Status**: APPROVED (세션 P2-2 작성 — STAGE 9 STEP_C truly_converged_v3 s9_44_c_3 일괄 승급 2026-05-12, [PHASE4_COMPLETE_STAGE_A: 5-2 — 2026-05-31])"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h17_cov_rag.md",
+            "old": "★ L3 판정: PENDING (C-3 STEP_C 일괄)",
+            "new": "★ L3 판정: PASS (C-3 STEP_C 일괄, 2026-05-12)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+            "old": "v1.4 (2026-06-03 Phase 4 **RECOVERY genuine write ✅ COMPLETE**",
+            "new": "v1.4 (2026-06-03 등재 — 2026-06-02 Phase 4 **RECOVERY genuine write ✅ COMPLETE**",
+            "note": "④ 6-6 날짜 이중화. 정본 2026-06-02 실측: PROGRESS.md L44 + RECOVERY_PLAN L150/L170 + 6-6 계획서 L1701 + FINAL_REVIEW_REPORT L206 전부 06-02. INDEX v1.4 등재(06-03 reconcile)는 보존, 사건 일자만 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+            "old": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 6-6 — 2026-06-03] ✅ genuine** (RECOVERY genuine write, verify-only 2026-05-28 supersede) + **[RECOVERY_STAGE_AB_GENUINE_WRITE_COMPLETE: 6-6 — 2026-06-03] ✅** (3 V3 report 물리 실재 + APPROVED 등재)",
+            "new": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 6-6 — 2026-06-02] ✅ genuine** (RECOVERY genuine write, verify-only 2026-05-28 supersede) + **[RECOVERY_STAGE_AB_GENUINE_WRITE_COMPLETE: 6-6 — 2026-06-02] ✅** (3 V3 report 물리 실재 + APPROVED 등재)",
+            "note": "L7 상태 라인 마커 2건 일자 정정(06-03→06-02 정본)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+            "old": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 6-6 — 2026-06-03] ✅ genuine** (2026-05-28 verify-only supersede) + **[RECOVERY_STAGE_AB_GENUINE_WRITE_COMPLETE: 6-6 — 2026-06-03] ✅** |",
+            "new": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 6-6 — 2026-06-02] ✅ genuine** (2026-05-28 verify-only supersede) + **[RECOVERY_STAGE_AB_GENUINE_WRITE_COMPLETE: 6-6 — 2026-06-02] ✅** |",
+            "note": "L176 v1.4 변경 이력 행 내 마커 2건 일자 정정. 행 날짜 셀(2026-06-03 = INDEX 편집일)은 보존. 6-7측은 실측 결과 이중화 없음(06-03 표기 0건, 전 위치 2026-06-02 단일) — 무수정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+            "old": "**WATCHING_VERIFIED**: 2건 (W-4 + W-8, STEP_C R3 검증) | **WATCHING**: 3건 (W-5/W-6/W-7)",
+            "new": "**WATCHING_VERIFIED**: 1건 (W-8, STEP_C R3 검증) | **WATCHING**: 3건 (W-5/W-6/W-7) | **W-4**: RESOLVED (Phase 4 P4-5 2026-05-27 최종 확정 — 2026-06-11 동기화)",
+            "note": "⑤ 헤더 L8. W-4 RESOLVED 정본 실측: decision_aggregator.md §12.5 + AUTHORITY_CHAIN §15.4 + INDEX L112/L145 + _verification/phase4_v3_p4-5_promotion_report.md §6 (③ 게이트 사용자 명시 검토 경유 — 자동 RESOLVE 아님). INDEX L114 'M-2 CONFLICT_LOG W-4 entry 갱신 권고' 이행"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+            "old": "| W-4 | LOCK-AT-002(단일결정) vs Decision Aggregator(다수결) | 6-3 내부 | **WATCHING_VERIFIED** (STEP_C R3) |",
+            "new": "| W-4 | LOCK-AT-002(단일결정) vs Decision Aggregator(다수결) | 6-3 내부 | **RESOLVED** (Phase 4 P4-5 2026-05-27 — decision_aggregator.md §12.5 최종 확정, ③ 게이트 사용자 명시 검토; 2026-06-11 본 로그 동기화) |",
+            "note": "L95 W-4 행 상태 셀. W-8 행의 동일 문자열과 구분 위해 행 전체 prefix 포함(count==1 확인)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+            "old": "CFL OPEN 0 / RESOLVED 3 / WATCHING_VERIFIED 2 / WATCHING 3 통산. |",
+            "new": "CFL OPEN 0 / RESOLVED 3 / WATCHING_VERIFIED 2 / WATCHING 3 통산. |\n| 2026-06-11 | **W-4 상태 동기화**: Phase 4 P4-5 (2026-05-27) \"W-4 RESOLVED 최종 확정\"(decision_aggregator.md §12.5 + AUTHORITY_CHAIN §15.4 + INDEX §6 P4-5 row + _verification/phase4_v3_p4-5_promotion_report.md §6 — ③ 게이트 사용자 명시 검토 후 결정, 자동 RESOLVE 금지 원칙 충족)을 본 로그에 반영: W-4 WATCHING_VERIFIED → RESOLVED (INDEX.md \"M-2 CONFLICT_LOG W-4 entry 갱신 권고\" 이행). 통산: OPEN 0 / RESOLVED 3 (CFL-63-001/002/003) + W-4 / WATCHING_VERIFIED 1 (W-8) / WATCHING 3 (W-5/W-6/W-7). |",
+            "note": "변경 이력 마지막 행(L116) 뒤 append. W-5/W-6/W-7/W-8은 RESOLVE 선언 부재로 보존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-2_Security-Governance\\SECURITY_GOVERNANCE_구조화_종합계획서.md",
+            "old": "> 첫 작성 시점. Phase 0 완료 후 판정.",
+            "new": "> 첫 작성 시점. Phase 0 완료 후 판정.\n>\n> **미실행 사실 명기 (2026-06-11 실측)**: 본 §12 FINAL REVIEW는 현재까지 미실행 상태이며(아래 표 ⬜ 미검증 / ⬜ 미판정 유지), 루트 `FINAL_REVIEW_REPORT.md`도 부재. 이는 §13.X-1 선언(\"6-2는 ⬜ PENDING 인지 유지 specialty, Phase 3 완료 후 별도 /validate → /audit → /final-review 트랙\")과 정합하며, 보고서 생성·판정 실행은 별도 트랙 과업으로 등재한다.",
+            "note": "⑥ §12 L1919-1926 실측: 체크리스트 ⬜ 미검증·Gate ⬜ 미판정 + 루트 보고서 부재(ls 확인) + 계획서 L1985 ⬜ PENDING 인지 유지 선언. 보고서 생성은 registered"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\AUTHORITY_CHAIN.md",
+            "old": "| 2026-04-19 | v2.1 | **STAGE 7 STEP_C 종결 — §8.5 [PHASE3_READY v2: 3-2 — 2026-04-19] 최종 확정, §8.6 자기완결 확정, Phase 7-II 3/21 ✅ 달성 선언, 1차 R1~R3 fully_converged + 2차 fine R4~R5 fine_converged** |",
+            "new": "| 2026-04-19 | v2.1 | **STAGE 7 STEP_C 종결 — §8.5 [PHASE3_READY v2: 3-2 — 2026-04-19] 최종 확정, §8.6 자기완결 확정, Phase 7-II 3/21 ✅ 달성 선언, 1차 R1~R3 fully_converged + 2차 fine R4~R5 fine_converged** |\n| 2026-06-11 | v2.1 (사후 등재) | **Phase 4 RECOVERY 등재 보완 (메타 stale 정정)**: 2026-05-31 Phase 4 RECOVERY Stage B genuine write — 4 §V3 EXTEND(J-009/J-020/J-040/J-073) 본문 작성 + Status DRAFT→APPROVED 4/4, LOCK-MM-01~12 재정의 0. 정본: 종합계획서 §7 RECOVERY Stage B 블록 + `_verification/phase4_recovery_stage_b_report.md`. LOCK 정본 변경 없음 |",
+            "note": "⑦ 3-2 AUTHORITY 변경 이력이 2026-04-19에서 고착 — Phase 4(계획서 L1832/L2128-2146, marker 2026-05-31 genuine) 미등재 보완"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\CONFLICT_LOG.md",
+            "old": "> **버전**: v2.2",
+            "new": "> **버전**: v2.3",
+            "note": "⑦ 3-2 CONFLICT 헤더 자기모순: 헤더 L4=v2.2 vs 변경 이력에 v2.3 행(2026-04-19 STEP_C) 실존 + INDEX.md L160 'CONFLICT_LOG v2.1 → v2.2 → v2.3' 정합"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\CONFLICT_LOG.md",
+            "old": "| 2026-04-19 | v2.3 | **STAGE 7 STEP_C 종결 — R1~R5 심층 재검증 cascade (1차 R1~R3 fully_converged 26 + 2차 fine R4~R5 fine_converged 0 = 통산 26), 신규 conflict 0건, V1 135회 → 142회+ OK, LOCK 344 refs 실측 확정** |",
+            "new": "| 2026-04-19 | v2.3 | **STAGE 7 STEP_C 종결 — R1~R5 심층 재검증 cascade (1차 R1~R3 fully_converged 26 + 2차 fine R4~R5 fine_converged 0 = 통산 26), 신규 conflict 0건, V1 135회 → 142회+ OK, LOCK 344 refs 실측 확정** |\n| 2026-06-11 | v2.3 (사후 등재) | **Phase 4 RECOVERY 등재 보완**: 2026-05-31 Phase 4 RECOVERY Stage B genuine write(4 §V3 EXTEND J-009/J-020/J-040/J-073) 기간 본 로그 무변경 — 기존 5 RESOLVED 유지, 신규 등록 0건. 정본: 종합계획서 §7 RECOVERY Stage B 블록 + `_verification/phase4_recovery_stage_b_report.md` |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\INDEX.md",
+            "old": "> **버전**: v1.1 (2026-04-19, STEP_C 종결)",
+            "new": "> **버전**: v1.1 (2026-04-19, STEP_C 종결)\n> **Phase 4 등재 보완 (2026-06-11)**: Phase 4 RECOVERY Stage B genuine write ✅ COMPLETE (2026-05-31) — 4 §V3 EXTEND(J-009/J-020/J-040/J-073) DRAFT→APPROVED 4/4, `[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE:3-2 — 2026-05-31]` ✅ genuine. 정본: 종합계획서 §7 + `_verification/phase4_recovery_stage_b_report.md`",
+            "note": "⑦ 3-2 INDEX 2026-04-19 고착 — Phase 4 등재 보완(헤더 1줄)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+            "old": "> **버전**: v1.2 (STEP_C 최종 마감 truly_converged_v2 사용자 2차 재요청 반영)",
+            "new": "> **버전**: v1.3 (2026-06-03 Phase 4 RECOVERY 등재 — §9 변경 이력 v1.3 행; v1.2 = STEP_C 최종 마감 truly_converged_v2 사용자 2차 재요청 반영)",
+            "note": "⑦ 3-3 INDEX 자기모순: 헤더 v1.2 vs 변경 이력 L186에 v1.3 행 실존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+            "old": "> **작성일**: 2026-04-23 (v1.0 NEW) → 2026-04-23 (v1.1 STEP_C 갱신) → 2026-04-23 (v1.2 R5~R8 2차 수렴)",
+            "new": "> **작성일**: 2026-04-23 (v1.0 NEW) → 2026-04-23 (v1.1 STEP_C 갱신) → 2026-04-23 (v1.2 R5~R8 2차 수렴) → 2026-06-03 (v1.3 Phase 4 RECOVERY 등재)",
+            "note": "작성일 체인 v1.3 미반영 보완"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+            "old": "> **Status**: Phase 0 / Phase 1 / Phase 2 완료 ✅ — **[PHASE3_READY v2: 3-3 — 2026-04-23] 최종 확정**",
+            "new": "> **Status**: Phase 0 / Phase 1 / Phase 2 완료 ✅ — **[PHASE3_READY v2: 3-3 — 2026-04-23] 최종 확정** / Phase 4 RECOVERY genuine write ✅ — **[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 3-3 — 2026-05-31]** ✅ genuine (§9 변경 이력 v1.3 행)",
+            "note": "Status 라인 Phase 4 누락 보완. 정본 일자 2026-05-31: 계획서 L2337 + PROGRESS.md ×3 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+            "old": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 3-3 — 2026-06-03]** ✅ genuine.",
+            "new": "**[DOMAIN_PHASE_4_PRODUCTION_PROMOTION_COMPLETE: 3-3 — 2026-05-31]** ✅ genuine (마커 정본 일자 2026-05-31 — 계획서 L2337·PROGRESS 정합, 본 행 INDEX 등재일은 2026-06-03).",
+            "note": "⑦ 3-3 날짜 모순: v1.3 행(L186) 내 마커가 06-03으로 표기 — 정본(계획서 marker `3-3 — 2026-05-31` + PROGRESS 3개소 05-31)과 불일치측 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-4_Workflow-RPA\\WORKFLOW_RPA_구조화_종합계획서.md",
+            "old": "**검증**:\n- [x] desktop_automation.md — N-017 SOT 필수 항목 전수 반영\n- [x] LOCK-WF-08, LOCK-WF-10 위반 없음\n- [x] Phase 1 rpa_security_sandbox.md와 보안 정책 정합성 유지\n- [x] /validate PASS",
+            "new": "**검증** (⚠️ 2026-06-11 실측 정정 — 세션 2-5는 [GATE_BLOCKED:V1_MISSING]으로 미실행: desktop_automation.md 실파일 부재·Phase 3 이월. 본 계획서 #2b 누계 L1021/L1024 + AUTHORITY_CHAIN §8(L185) + INDEX §3(L48-49) 기록과 정합. 아래 체크박스는 실행 전 템플릿으로 정정):\n- [ ] desktop_automation.md — N-017 SOT 필수 항목 전수 반영\n- [ ] LOCK-WF-08, LOCK-WF-10 위반 없음\n- [ ] Phase 1 rpa_security_sandbox.md와 보안 정책 정합성 유지\n- [ ] /validate PASS",
+            "note": "⑦ 3-4: 세션 2-5 블록(L1191-1195)이 부재 파일 2종(desktop_automation.md, rpa_security_sandbox.md — ls 실측 부재)에 [x] 체크. 같은 파일 L1021/L1024·AUTHORITY L185·INDEX L48-49 모두 미실행/이월로 기록 — [x]가 허위측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\AUTHORITY_CHAIN.md",
+            "old": "| 2026-04-19 | v1.2 | §7 Phase 2 V2 산출물 등재 신설 (**V2 총 파일 수 = 19**, LOCK-CD 149 refs, cross-domain interface 7건, exit_gate 6/6 PASS, CF-2026-04-07 옵션 (b) 해소). STAGE 7 STEP_B 재진입 도메인 마감. 4-4 R1-1 / 2-1 R4-2 헤더 \"최종 갱신\" 동기화 교훈 적용. |",
+            "new": "| 2026-04-19 | v1.2 | §7 Phase 2 V2 산출물 등재 신설 (**V2 총 파일 수 = 19**, LOCK-CD 149 refs, cross-domain interface 7건, exit_gate 6/6 PASS, CF-2026-04-07 옵션 (b) 해소). STAGE 7 STEP_B 재진입 도메인 마감. 4-4 R1-1 / 2-1 R4-2 헤더 \"최종 갱신\" 동기화 교훈 적용. |\n| 2026-06-11 | v1.2 (사후 등재) | **Phase 4 RECOVERY Stage B 등재 보완 (메타 cascade 누락 정정)**: 2026-05-31 genuine write — 2 V3 NEW(`08_e-series-ops/e_series_overview.md` 10,280 B + `cross_ref_cat_c_e_series.md` 9,186 B 970 cells) DRAFT→APPROVED→LOCKED + RO TRUE 2/2 + CF-2026-04-08 RESOLVED. LOCK-CD 정본 변경 없음. 정본: 계획서 §7 RECOVERY Stage B 블록 + INDEX §13 + CONFLICT_LOG 2026-05-31 행 |",
+            "note": "⑧ 2-2 메타 중 AUTHORITY만 Phase 4 완전 누락(2026-05 언급 0건 실측; CONFLICT·INDEX는 05-31 반영 확인됨)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\INDEX.md",
+            "old": "> **Phase 2 완료일**: 2026-04-19 (STAGE 7 STEP_B 재진입)",
+            "new": "> **Phase 2 완료일**: 2026-04-19 (STAGE 7 STEP_B 재진입)\n> **Phase 4 완료일**: 2026-05-31 (RECOVERY Stage B genuine — 본 문서 §13 Phase 4 Production Promotion inventory 참조; 2026-06-11 헤더 보완)",
+            "note": "⑧ INDEX 본문 §13(L221)에 Phase 4 등재됐으나 헤더는 Phase 2 고착 — 헤더 1줄 보완"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+            "old": "| `l0_session_memory.md` | L0 세션 메모리 CRUD, TTL, B-4 매핑 상세 | ⬜ Phase 1 |",
+            "new": "| `L0_session_memory_crud.md` | L0 세션 메모리 CRUD, TTL, B-4 매핑 상세 | ✅ Phase 1 완료 (2026-04-13 P1-1 — 실파일명·상태 정정 2026-06-11) |",
+            "note": "⑨ 실파일 L0_session_memory_crud.md 존재(헤더 'P1-1 산출물, 2026-04-13' 실측), 스캐폴드명 l0_session_memory.md는 부재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+            "old": "| `l1_project_memory.md` | L1 프로젝트 메모리 CRUD, TTL 90일, project_id 격리 | ⬜ Phase 1 |",
+            "new": "| `L1_project_memory_crud.md` | L1 프로젝트 메모리 CRUD, TTL 90일, project_id 격리 | ✅ Phase 1 완료 (2026-04-13 P1-2 — 실파일명·상태 정정 2026-06-11) |",
+            "note": "실파일 L1_project_memory_crud.md(P1-2, 2026-04-13) 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+            "old": "| `memory_conflict_resolution.md` | 메모리 충돌 탐지·분류·해소: 충돌 유형 3종, Auto-Resolve/ADMIN Review Queue, CONFLICT_LOG #004 L4 범위 확정 | ✅ Phase 2 완료 (2026-04-14 P2-5, 2026-06-11 D16 승격 복원) |",
+            "new": "| `memory_conflict_resolution.md` | 메모리 충돌 탐지·분류·해소: 충돌 유형 3종, Auto-Resolve/ADMIN Review Queue, CONFLICT_LOG #004 L4 범위 확정 | ✅ Phase 2 완료 (2026-04-14 P2-5, 2026-06-11 D16 승격 복원) |\n| `managed_db_v3.md` | 매니지드 DB V3: PostgreSQL/MySQL Adapter + 무손실 마이그레이션 | ✅ Phase 4 완료 (2026-05-27 P4-1, APPROVED — 2026-06-11 미등재 정정) |\n| `multi_tenancy_v3.md` | 멀티테넌시 V3: tenant_id 3 계층 + cross-tenant 격리 | ✅ Phase 4 완료 (2026-05-27 P4-2, APPROVED — 2026-06-11 미등재 정정) |\n| `gdpr_soc2_v3.md` | GDPR/SOC-2 V3: LOCK-MR-005/006 vs Right to Erasure 정식 해소 | ✅ Phase 4 완료 (2026-05-27 P4-3, APPROVED — 2026-06-11 미등재 정정) |\n| `dream_mode_v3.md` | Dream Mode V3: 오프라인 정리 + L4 Archive V2+ 확장 | ✅ Phase 4 완료 (2026-05-27 P4-4, APPROVED — 2026-06-11 미등재 정정) |\n| `statistics_dashboard_v3.md` | Statistics Dashboard V3: 7+ 메트릭 + 알림 임계값 + 시각화 4종 | ✅ Phase 4 완료 (2026-05-27 P4-5, APPROVED — 2026-06-11 미등재 정정) |",
+            "new_note": "",
+            "note": "⑨ V3 5종 미등재 정정 — 각 파일 YAML 헤더 실측(status: APPROVED, created: 2026-05-27, task P4-1~P4-5). D16 승격 복원 2행(promotion_demotion·memory_conflict_resolution)은 byte 보존, 그 뒤에 append"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\_index.md",
+            "old": "| `collect_chunk.md` | Stage 1-2: 수집 소스 유형, 청킹 전략 (크기/오버랩), 한국어 처리 | ⬜ Phase 1 |\n| `embed_store.md` | Stage 3-4: BGE-M3 임베딩, VectorStore upsert, 메타데이터 구조 | ⬜ Phase 1 |\n| `retrieve_generate.md` | Stage 5-6: Hybrid Search, Rerank, 컨텍스트 주입, 생성 | ⬜ Phase 1 |\n| `graphrag.md` | GraphRAG: NetworkX(V1) → Neo4j(V2), KG 스키마, 쿼리 파이프라인 | ⬜ Phase 1 |",
+            "new": "| `rag_6stage_pipeline.md` | Stage 1-6 통합 상세 (V1): 수집/청킹/임베딩/저장/검색/생성 — 구 스캐폴드 collect_chunk·embed_store·retrieve_generate 3행 통합 정본 | ✅ Phase 1 완료 (2026-04-13 P1-10 v1.1, COMPLETE — 실파일명 정정 2026-06-11) |\n| `hybrid_search.md` | Hybrid Search 통합 상세 (V1): α=0.7 Dense + threshold 0.75 (LOCK-MR-008/009 인용) | ✅ Phase 1 완료 (2026-04-13 P1-11 v1.0, COMPLETE — 2026-06-11 미등재 정정) |\n| `dcl_basic.md` | DCL 기초 구현 (V1): Data Control Layer (LOCK-MR-015/016/017/018 인용) | ✅ Phase 1 완료 (2026-04-13 P1-9 v1.1, COMPLETE — 2026-06-11 미등재 정정) |\n| `json_graphrag.md` | GraphRAG (V1): NetworkX + JSON 영속 KG (구 스캐폴드명 graphrag.md) | ✅ Phase 1 완료 (2026-04-13 P1-4 v1.1, COMPLETE — 실파일명 정정 2026-06-11) |",
+            "note": "⑨ 02 _index 스캐폴드 4행 전부 실파일명 불일치 — 실파일 4종 헤더 실측(P1-10/P1-11/P1-9/P1-4, 전부 상태: COMPLETE 2026-04-13). neo4j_graphrag D16 행은 무변경 보존. LOCK 값 인용만, 재정의 없음"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+            "old": "| `chroma_adapter.md` | ChromaAdapter V1 구현: 컬렉션, CRUD, 필터, 백업 | ⬜ Phase 1 |",
+            "new": "| `chroma_adapter.md` | ChromaAdapter V1 구현: 컬렉션, CRUD, 필터, 백업 | ✅ Phase 1 완료 (P1-3 산출물, COMPLETE — 상태 stale 정정 2026-06-11) |\n| `chroma_collection_strategy.md` | Chroma 컬렉션 전략 확정 (P0-3 산출물, 2026-04-04) | ✅ Phase 0 완료 (2026-06-11 미등재 정정) |",
+            "note": "⑨ chroma_adapter.md 실존(헤더 'P1-3 산출물')인데 ⬜ 고착 + chroma_collection_strategy.md(P0-3, 2026-04-04) 미등재. qdrant_adapter·migration_v1_v2 D16 행 보존. embedding_strategy.md는 실파일 부재+⬜로 표기 자체는 정합 — 무수정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\_index.md",
+            "old": "| `semantic_cache.md` | Semantic Cache: cosine≥0.95, TTL, 무효화 정책, RAG 연동 | ⬜ Phase 1 |\n| `storage_policy.md` | Allow/Restrict/Deny, 루프 방지, 승인 게이트 연동 | ⬜ Phase 1 |\n| `pii_masking.md` | PII 탐지(regex→NER), 마스킹 파이프라인, 민감도 분류 | ⬜ Phase 1 |\n| `qod_ttl.md` | QoD 스코어, TTL 정책, 신선도 관리, 중복 제거 | ⬜ Phase 1 |",
+            "new": "| `semantic_cache.md` | Semantic Cache: cosine≥0.95, TTL, 무효화 정책, RAG 연동 | ✅ Phase 1 완료 (2026-04-13 P1-5 v1.1, COMPLETE — 상태 stale 정정 2026-06-11) |\n| `storage_policy.md` | Allow/Restrict/Deny, 루프 방지, 승인 게이트 연동 | ⬜ Phase 1 |\n| `pii_masking.md` | PII 탐지(regex→NER), 마스킹 파이프라인, 민감도 분류 | ✅ Phase 1 완료 (2026-04-13 P1-7 v1.1, COMPLETE — 상태 stale 정정 2026-06-11) |\n| `qod_ttl.md` | QoD 스코어, TTL 정책, 신선도 관리, 중복 제거 | ⬜ Phase 1 |\n| `export_import.md` | 대화 내보내기/가져오기 구현 상세 (V1): P1-6 | ✅ Phase 1 완료 (2026-04-13 P1-6, COMPLETE — 2026-06-11 미등재 정정) |",
+            "note": "⑨ semantic_cache(P1-5)·pii_masking(P1-7) 실존 COMPLETE인데 ⬜ 고착 + export_import.md(P1-6) 미등재. storage_policy·qod_ttl은 실파일 부재 ⬜ 정합 — 보존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+            "old": "P1-7 pii_masking (미완 — 인터페이스만 참조)",
+            "new": "P1-7 pii_masking (✅ 완료 2026-04-13 COMPLETE — 작성 시점 '미완' 표기 stale, 2026-06-11 정정)",
+            "note": "⑨ export_import.md P1-7 '미완' stale 1/4 (L9). pii_masking.md 헤더 실측: 상태 COMPLETE, v1.1, 세션 P1-7 (2026-04-13), 1,366줄"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+            "old": "> **P1-7 미완 상태**: P1-7 (PII 마스킹)은 현재 미완성이므로, 본 문서에서는 **인터페이스 계약만 정의**하고 구현은 P1-7 완료 후 통합한다.",
+            "new": "> **P1-7 상태 정정 (2026-06-11)**: P1-7 (PII 마스킹)은 2026-04-13 완료(pii_masking.md v1.1, 상태: COMPLETE) — 본 문서 작성 시점의 '미완성' 전제가 stale. 본 절의 **인터페이스 계약** 정의는 유지하며, P1-7 정본과의 구현 통합 여부는 별도 검증 대상.",
+            "note": "2/4 (L663). P1-7 자체 상태만 정정, 통합 작업 상태는 단정하지 않음"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+            "old": "### 18.5 P1-7 (PII 마스킹) 연동 — 미완",
+            "new": "### 18.5 P1-7 (PII 마스킹) 연동 — P1-7 완료 (2026-04-13, 구 '미완' 표기 2026-06-11 정정; 통합 검증은 PENDING 유지)",
+            "note": "3/4 (L1151). 표 내부 'PENDING — P1-7 완료 후 통합' 셀은 통합 작업 상태로서 보존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+            "old": "| REF-P17-PII | P1-7 pii_masking.md (미완) | PII 탐지/마스킹 인터페이스 계약 |",
+            "new": "| REF-P17-PII | P1-7 pii_masking.md (완료 2026-04-13 — 구 '미완' 표기 2026-06-11 정정) | PII 탐지/마스킹 인터페이스 계약 |",
+            "note": "4/4 (L1197)"
+          }
+        ],
+        "registered": [
+          {
+            "item": "⑥ 6-2 루트 FINAL_REVIEW_REPORT.md 생성 + §12 FINAL REVIEW(체크리스트 10항목·Gate 판정) 실제 실행",
+            "disposition": "대형 작업(별도 /validate → /audit → /final-review 트랙 — 계획서 L1985 §13.X-1이 '⬜ PENDING 인지 유지 specialty'로 명시 선언한 트랙). 본 클러스터에서는 §12에 미실행 사실 명기 1 fix로 현황만 고정. 실행 시 6-1/6-5형 FINAL_REVIEW_REPORT 양식(5-Mode+실측 게이트) 준수 필요"
+          },
+          {
+            "item": "⑧ 2-2 루트 _index.md 생성 (D-2 깨진 링크)",
+            "disposition": "실측 결과 sot 2 내 `2-2_COND-Modules-Detail/_index` 참조 링크 0건 검출(grep) — 깨진 링크 발신 좌표가 본 폴더 외부(혹은 D-2 원판정 문서)일 가능성. 링크 소스 좌표 재확인 후, 타 도메인 루트 _index 컨벤션(또는 기존 INDEX.md로의 리다이렉트 1줄형) 중 양식 결정이 필요한 생성 작업이므로 보류. 메타 캐스케이드 누락분(AUTHORITY 사후 등재 + INDEX 헤더)은 fix로 처리함"
+          },
+          {
+            "item": "⑩ 5-4 v23-Extension 추적 87건 전부 SHELL·REF 전환 0 (V23_EXTENSION_ITEMS_인덱스.md 218줄 / 계획서 L9 'Part2 상태: SHELL ~87건' · L59 P-1 실측)",
+            "disposition": "Phase 2 과업 — 87건 전수 REF 전환 프로토콜 가동은 대형. 5-4는 `permanently_excluded_part2_dependent`(2026-05-12 정식 확정, 계획서 §7.3 L843~) 상태이므로 상세화는 각 소유 도메인 측에서 진행하고 5-4는 추적 인덱스의 REF 상태만 갱신하는 방식이 정합. 전환 0건이라는 현황 자체는 인덱스에 이미 기록돼 있어 즉시 fix 불요"
+          },
+          {
+            "item": "⑨ 6-4 _index 잔여 스캐폴드 처분: 01 l2_longterm_knowledge/l3_procedural_memory, 03 embedding_strategy, 04 storage_policy/qod_ttl (실파일 부재 ⬜ 행 유지·삭제·타 파일 귀속 판단) + 미등재 실파일 추가분(01 B3_memory_decay.md·MemoryRecordSchema.md·sqlite_ddl.sql·postgresql_adapter.py, 03 vectorstore_abc.py)",
+            "disposition": "판단 필요 — 부재 ⬜ 행은 '미작성 계획'으로서 표기 자체는 허위가 아니어서 객관 결함 아님(해당 콘텐츠가 기존 파일에 흡수됐는지 매핑 판정 필요). 비-.md 산출물(.py/.sql) 등재 여부는 _index 컨벤션 결정 사안. 본 클러스터는 허위·불일치(실존 파일 ⬜/구명칭/V3 미등재)만 fix"
+          },
+          {
+            "item": "⑤ 6-3 CONFLICT_LOG 헤더 버전 v1.3 → v1.4 bump 여부",
+            "disposition": "W-4 동기화 fix(3건)는 변경 이력 append + 행 정정으로 처리. 도메인 관례상 상태 변경 시 버전 bump가 일반적이나 bump 규칙이 LOCK된 프로토콜은 아니어서(동일 파일 내 '동기화' 무 bump 선례 혼재) 판단 보류 — 적용 세션에서 6-3 관례 확인 후 v1.4 bump + 헤더 L3/L6 동기화 권장"
+          }
+        ],
+        "summary": "C6-A docs\\sot 2 메타 stale 10항목 전수 실측 완료, 63 fix + 5 registered. ① 마스터인덱스 L13/24 'CONFLICT OPEN 0'은 D1~D5(5-3 C-04~08 전건 RESOLVED, CONFLICT_LOG L16-20 실측) 이후 사실이 되어 무수정, 잔존 stale은 5-3 섹션 L869('OPEN 5건'+'Phase 2 진입 가능')·L875 — 2 fix. ② 5-3 영구 제외(permanently_excluded_design_decision, SOT2_SESSION_EXECUTION_PROMPTS.md L5955) 폴더 미기재 — 종합계획서 헤더 1줄 fix. ③ 5-2 16파일 헤더 'Phase 2 IN-PROGRESS'+푸터 'L3 PENDING' 전수 실측(각 파일 내 유일 매칭, 트레일링 공백 無, g7만 무괄호 변형) — 승급 정본은 AUTHORITY_CHAIN L331/L392('L3 PENDING→PASS', STEP_C 2026-05-12)+도메인 종료 2026-05-31, 32 fix. ④ 완료 마커 날짜 이중화는 6-6 INDEX.md(L4/L7/L176)만 06-03 표기 — 정본 2026-06-02(PROGRESS L44·RECOVERY_PLAN L150/L170·plan·FINAL_REVIEW 전부 06-02) 측으로 3 fix; 6-7은 실측 결과 이중화 없음(06-03 표기 0건). ⑤ 6-3 W-4는 P4-5(2026-05-27)에서 ③게이트 사용자 검토 경유 'RESOLVED 최종 확정'(aggregator §12.5+AUTH §15.4+promotion report §6)인데 CONFLICT_LOG가 04-30 WATCHING_VERIFIED 고착 + INDEX L114가 'M-2 갱신 권고' 자체 기록 — 동기화 3 fix(자동 RESOLVE 아님, 기결정 반영). ⑥ 6-2 §12 미실행 명기 1 fix, 보고서 생성 registered. ⑦ 3-2 메타 triad(AUTH/CONFLICT/INDEX 전부 2026-04-19 고착, 05-31 RECOVERY 미등재) 사후 등재 3 fix + CONFLICT 헤더 v2.2↔v2.3 자기모순 1 fix; 3-3 INDEX 헤더 v1.2↔v1.3 행 자기모순 + 마커 06-03↔정본 05-31(plan L2337+PROGRESS×3) 4 fix; 3-4 세션 2-5 [GATE_BLOCKED:V1_MISSING] 미실행인데 부재 파일에 [x] 체크(L1191-1195) — 블록 정정 1 fix. ⑧ 2-2는 CONFLICT/INDEX 본문은 05-31 반영 확인, AUTHORITY만 완전 누락 — 사후 등재 1 fix + INDEX 헤더 1 fix; 루트 _index 생성 registered(실측상 깨진 링크 0건 검출, 좌표 재확인 필요). ⑨ 6-4 _index 4종: 실존 파일 ⬜/구 스캐폴드명(L0/L1 CRUD, rag_6stage 등 4종, chroma_adapter, semantic_cache/pii_masking) 정정 + V3 5종(managed_db/multi_tenancy/gdpr_soc2/dream_mode/statistics_dashboard, 전부 APPROVED 2026-05-27 P4-1~5 YAML 실측) 등재 + 미등재 실존 3종(chroma_collection_strategy/export_import 등) 등재, D16 승격 5행 byte 보존 — 6 fix; export_import.md P1-7 '미완' 4곳(P1-7은 2026-04-13 COMPLETE 실측) 4 fix. ⑩ 5-4 87건 SHELL은 registered(Phase 2 과업, permanently_excluded 정합). 전 fix old 문자열 grep -cF==1 검증 완료, LOCK 값 변경 0."
+      },
+      {
+        "cluster": "C6B",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\promptfoo.yaml",
+            "old": "  - id: anthropic:messages:claude-3-5-sonnet-20241022",
+            "new": "  - id: anthropic:messages:claude-sonnet-4-6",
+            "note": "L26. claude-3-5-sonnet-20241022는 2025-10-28 retired(404) — 공식 드롭인 대체 claude-sonnet-4-6 (claude-api 스킬 Retired Model Replacements 표 확인). L23 주석(S7F-070 정본 표기)은 registered 참조. judge gpt-4-turbo는 무변경(타사 카탈로그 판단 회피)."
+          },
+          {
+            "file": "D:\\VAMOS\\promptfoo-smoke.yaml",
+            "old": "  - id: anthropic:messages:claude-3-5-sonnet-20241022",
+            "new": "  - id: anthropic:messages:claude-sonnet-4-6",
+            "note": "L37. 동일 retired 모델 ID → 드롭인 대체. CI 첫 실행 404 파손 위험 해소(오류리스트 L154)."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\promptfoo_phase1a_config.yaml",
+            "old": "  - id: \"anthropic:messages:claude-3-5-sonnet-20241022\"  # S7F-070",
+            "new": "  - id: \"anthropic:messages:claude-sonnet-4-6\"  # S7F-070 (원 모델 ID retired — 2026-06-11 현행화)",
+            "note": "L24. 오류리스트 '4곳' 중 sot2 5-1 내 1번째. seed:42 # LOCK-BE-08(L28)은 무변경 — LOCK 비침범."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\03_domain-benchmarks\\promptfoo_phase1b_config.yaml",
+            "old": "  - id: \"anthropic:messages:claude-3-5-sonnet-20241022\"  # S7F-070",
+            "new": "  - id: \"anthropic:messages:claude-sonnet-4-6\"  # S7F-070 (원 모델 ID retired — 2026-06-11 현행화)",
+            "note": "L27. '4곳' 중 sot2 5-1 내 2번째. judge_provider openai:gpt-4-turbo(L35)는 무변경."
+          },
+          {
+            "file": "D:\\VAMOS\\.claude\\CLAUDE.md",
+            "old": "## 2. Skills (11개)",
+            "new": "## 2. Skills (55개 — 아래 표는 핵심 11개)",
+            "note": "L28. 실측: D:\\VAMOS\\.claude\\skills 하위 스킬 디렉토리 55개 (Get-ChildItem -Directory Count=55). 표는 11행 그대로이므로 '핵심 11개' 한정어로 표-제목 모순 방지."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\_cross-ref\\lock_consistency.md",
+            "old": "> 생성: 2026-06-05T19:38:52 · MISMATCH=0",
+            "new": "> 생성: 2026-06-05T19:38:52 · MISMATCH=0\n>\n> ⚠️ **알려진 한계(스캐너 거짓음성 — 오류리스트 2026-06-10 L112, 주석 2026-06-11)**: ① 아래 \"도메인별 LOCK ID 수\"는 `LOCK-*` 접두 ID만 집계함 — 무접두 L-번호 LOCK 체계를 쓰는 5개 도메인(0-0, 6-1, 6-5, 6-7, 6-8)은 실제 LOCK이 존재함에도 0으로 오보고됨(예: 6-5 AUTHORITY L1~L20, 6-7 L1~L18, 6-8 L1~L22). ② 상단 개념 게이트 표는 미관측값(`{}` — 예: COST_GATE)도 CONSISTENT로 표기되며 SDV 게이트 7개 중 4개는 영구 N/A. MISMATCH=0은 전수 일치 보증이 아니므로 수치 인용 시 각 도메인 AUTHORITY_CHAIN.md를 정본으로 할 것.",
+            "note": "L3 직후 알려진-한계 주석 1건 추가. 실측: 보고서 LOCK 0 보고 5도메인(0-0/6-1/6-5/6-7/6-8) 전부 AUTHORITY_CHAIN.md에 무접두 L-번호 토큰 존재 확인. 표·집계값 자체는 무변경(스캐너 산출물 보존)."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\COND_MODULES_DETAIL_구조화_종합계획서.md",
+            "old": "| 단계 | 작업 | 산출물 | 게���트 |",
+            "new": "| 단계 | 작업 | 산출물 | 게이트 |",
+            "note": "L956. U+FFFD×3 → '이'. 원문 확보: docs\\backup·docs\\backup\\post_stage8_2026-05-07·docs\\test_iso_p2 동명 사본 3곳 모두 '| 단계 | 작업 | 산출물 | 게이트 |' 일치. 동일 파일 L1521(��환)은 사본도 손상 → registered."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_SESSION_EXECUTION_PROMPTS.md",
+            "old": "■ 작업 ���차:",
+            "new": "■ 작업 절차:",
+            "note": "L1537. U+FFFD×3 → '절'. 원문 확보: 백업 3사본 모두 '■ 작업 절차:' 일치. 동일 파일 잔여 7라인(L396/398/400/1406/1417/1917/8341)은 사본도 동일 손상 → registered."
+          }
+        ],
+        "registered": [
+          {
+            "item": "① U+FFFD baked-in 복구불가 36라인 — live 12파일: 3-2_Multimodal 계획서 L78·L159 / 2-2_COND 계획서 L1521 / 1-1_Verifier 계획서 L91·L97 / 1-1 03_code-verifier\\spec.md L584 / 3-3_PKM _verification\\phase1_verification_prompt.md L207·L219 / 3-7 06_vscode-extension\\offline_mode.md L23·L230·L240·L255·L357·L394·L400·L401·L424·L455 / 5-2 03_weakness-mitigation\\_index.md L27·L76 / 6-3_AgentTeams 계획서 L1321·L1324 / SOT2_MASTER_INDEX.md L883 / SOT2_SESSION_EXECUTION_PROMPTS.md L396·L398·L400·L1406·L1417·L1917·L8341 / 6-9_Brain-Adapter-HAL\\CONFLICT_LOG.md L52(오류리스트 C-6 기재) / Ai-investing-detail 계획서 L5·L888·L894·L899·L2276",
+            "disposition": "복구 불가 명기 — docs\\backup·docs\\backup\\post_stage8_2026-05-07·docs\\test_iso_p2 동명 사본 3곳 전수 대조 결과 전 라인 동일 손상(ALSO-CORRUPT) 또는 NO MATCH(6-9 CONFLICT_LOG L52는 docs\\backup 사본에 해당 라인 부재, 나머지 2사본 동일 손상). 백업 원문 부재이므로 객관 fix 불가. 문맥 추정 복원(예: 인���페이스→인터페이스, ���메인→도메인, ��태→상태 등 고확신 추정 다수)은 '추정 복원' 승인 판단 필요 → 차기 세션 복원 결정 레지스터로 이관. git 이력/원본 SOT(Part2 등) 역추적이 2차 복구 경로."
+          },
+          {
+            "item": "① U+FFFD _automation 내 사본 4파일 13라인 — _automation\\backup_3-7_phase2_complete_2026-04-21\\...\\offline_mode.md(10) / _automation\\archive\\test_plan_p2_4-1\\backup_post_step_c_2026-04-24\\SOT2_MASTER_INDEX.md(1) / _automation\\state\\stage8\\g8_dryrun\\SOT2_MASTER_INDEX.sandbox.dryrun_post.md(1) / SOT2_MASTER_INDEX.production.dryrun_post.md(1)",
+            "disposition": "무수정 보존 — 스냅샷/아카이브/dryrun 산출물로서 당시 상태 기록이 목적. 수정 시 기록 무결성(SHA baseline 대조 가능성) 훼손. 라이브 정본만 교정 대상이며 사본은 그대로 둠."
+          },
+          {
+            "item": "② 루트 찌꺼기 3파일 + 라이브 캐시 6디렉토리 (실측): docs\\sot 2\\workspace.code 02-workspace.code-workspace(18B 망가진 파일명; 정상 사본 workspace.code-workspace 18B는 잔존) / SOT2_MASTER_INDEX.md.pre_E8.bak(134,371B) / SOT2_SESSION_EXECUTION_PROMPTS.md.backup_phase15_inline_2026-05-13(365,305B=backup_phase15 실체) / 5-1_Benchmark-Evaluation\\benchmark_store\\__pycache__ / 5-1_Benchmark-Evaluation\\schemas\\__pycache__ / Ai-investing-detail\\.pytest_cache / Ai-investing-detail\\__pycache__ / _automation\\__pycache__ / _automation\\state\\__pycache__",
+            "disposition": "삭제 금지 원칙 → D:\\VAMOS_ARCHIVE\\sot2_cleanup\\ 이동. 명령(순서대로): New-Item -ItemType Directory -Force \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\" | Out-Null; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\workspace.code 02-workspace.code-workspace\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\workspace.code 02-workspace.code-workspace\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\SOT2_MASTER_INDEX.md.pre_E8.bak\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\SOT2_MASTER_INDEX.md.pre_E8.bak\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\SOT2_SESSION_EXECUTION_PROMPTS.md.backup_phase15_inline_2026-05-13\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\SOT2_SESSION_EXECUTION_PROMPTS.md.backup_phase15_inline_2026-05-13\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\benchmark_store\\__pycache__\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pycache__5-1_benchmark_store\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\schemas\\__pycache__\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pycache__5-1_schemas\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\.pytest_cache\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pytest_cache__Ai-investing-detail\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\__pycache__\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pycache__Ai-investing-detail\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\_automation\\__pycache__\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pycache___automation\"; Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\_automation\\state\\__pycache__\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\pycache___automation_state\". 추가 실측: 동일 캐시 미러 12개가 docs\\backup\\sot 2·docs\\backup\\post_stage8_2026-05-07\\sot 2·docs\\test_iso_p2\\sot 2 에 존재(오류리스트 '8+'의 잔여분) — 스냅샷 트리 무결성 보존 위해 이동 보류, 별도 결정."
+          },
+          {
+            "item": "③ _automation 0바이트 파일 6건 (실측 전수): ⑴ docs\\sot 2\\_automation\\{0} -f ((.Split( ← PowerShell 보간식 파편 파일명 0B ⑵ _automation\\archive\\test_plan_p2_3-8\\state_phase2_snapshot\\v1_immutability\\2026-04-22T10-12-00_phase_A_sanity_3-8.txt 0B ⑶ 동일 폴더 2026-04-22T10-12-07_preE2_final_3-8.txt 0B ⑷ _automation\\state\\phase2\\v1_immutability\\2026-04-22T10-12-00_phase_A_sanity_3-8.txt 0B ⑸ 동일 폴더 2026-04-22T10-12-07_preE2_final_3-8.txt 0B ⑹ _automation\\state\\stage8\\G2_capture_log_2026-05-07T20-41-30_dryrun.jsonl 0B",
+            "disposition": "⑴(PowerShell 파편 — 오류리스트 L114 본건)만 이동 대상: Move-Item -LiteralPath \"D:\\VAMOS\\docs\\sot 2\\_automation\\{0} -f ((.Split(\" -Destination \"D:\\VAMOS_ARCHIVE\\sot2_cleanup\\_automation__ps_fragment_0byte\" (-LiteralPath 필수 — 파일명에 중괄호·괄호 포함). ⑵~⑹은 v1_immutability 스냅샷/state/dryrun 캡처 디렉토리 내 0B 산출물로 의도적 빈 마커일 가능성 — 자동화 state 무결성 판단 필요하여 이동 보류, 차기 세션 검토."
+          },
+          {
+            "item": "⑥ 모델 ID 잔존 문서 표기 — promptfoo.yaml L23 주석('# Providers — S7F-070 정본: anthropic:messages:claude-3-5-sonnet-20241022') + sot2 5-1 .md 11곳(BENCHMARK_EVALUATION_구조화_종합계획서.md L932·L946·L970, 04_human-evaluation\\llm_as_judge.md L145(LOCK-BE-08 인용)·L384·L385, 04_human-evaluation\\self_eval.md L199, 05_test-items\\promptfoo_integration.md L65·L116, 05_test-items\\regression_automation.md L426) + docs\\test_iso_p2 미러 동수",
+            "disposition": "판단 필요로 보류 — 해당 표기는 S7F-070 정본·LOCK-BE-08 인용 문맥이므로 단순 치환 시 정본 인용 왜곡(원칙④ LOCK 비침범). 5-1 AUTHORITY/S7F-070 측 모델 ID 정본 개정 결정 후 일괄 cascade가 정도(正道). test_iso_p2 미러는 격리 사본으로 무수정. 실행 yaml 4곳은 본 클러스터 fix로 이미 현행화되어 CI 파손 위험은 해소됨."
+          },
+          {
+            "item": "⑥ 부수: scripts\\promptfoo_to_benchmark_result.py 기본값 4곳(L17 docstring, L306 --model-version default, L311 --provider default, L435 provider 문자열) + benchmark_results\\promptfoo_mmlu_result.json·promptfoo_humaneval_result.json·promptfoo_eval_latest.json 내 모델 ID",
+            "disposition": "스크립트 기본값은 yaml과 동기화가 바람직하나 과거 결과 재생성 시 재현성 영향 판단 필요 → 보류(yaml 측 ID가 우선 적용되므로 즉시 위험 없음). benchmark_results JSON은 과거 실측 기록물 — 무변경 원칙."
+          },
+          {
+            "item": "⑥ note: OpenAI judge 모델 gpt-4-turbo (promptfoo_phase1a_config.yaml L33, phase1b L35, vbs_core L482 등)",
+            "disposition": "무변경 — 타사(OpenAI) 모델 카탈로그 유효성 판단 회피(지시 명시). 기록만 남김."
+          }
+        ],
+        "summary": "C6-B 손상·위생 잔존: fix 8건 / registered 7건. ① U+FFFD 전수 재탐색 실측 16파일·51건(오류리스트와 일치, 6-9 CONFLICT_LOG 포함) — 3개 백업루트(docs\\backup·post_stage8_2026-05-07·test_iso_p2) 라인 단위 대조 결과 원문 확보 2라인만 fix(2-2 계획서 L956 '게이트', SESSION_PROMPTS L1537 '절차'), 잔여 36라인은 3사본 전부 동일 손상(baked-in)으로 복구 불가 registered, _automation 내 사본 13건은 스냅샷 보존 registered. ② 루트 찌꺼기(망가진 workspace 파일명·pre_E8.bak 134KB·backup_phase15 365KB 실체=SOT2_SESSION_EXECUTION_PROMPTS.md.backup_phase15_inline_2026-05-13·캐시 6dir)는 D:\\VAMOS_ARCHIVE\\sot2_cleanup\\ 이동 명령 전수 registered. ③ _automation 0바이트 6건 실측 — PowerShell 파편 1건 이동 명령, state 스냅샷 0B 5건 보류. ④ lock_consistency.md에 알려진-한계 주석 1 fix(L-prefix 5도메인 0 오보고 실측 확인 + SDV 게이트 4/7 N/A). ⑤ CLAUDE.md Skills 11개→실측 55개 fix. ⑥ retired 모델 ID claude-3-5-sonnet-20241022 → claude-sonnet-4-6 4곳 fix(promptfoo.yaml:26·promptfoo-smoke.yaml:37·phase1a:24·phase1b:27; claude-api 스킬 대체표로 검증), gpt-4-turbo는 note만. 모든 old 문자열 count==1 디스크 검증 완료, LOCK 값 비침범(seed 42 LOCK-BE-08 보존), 세션5 D1~D19 결정과 모순 없음."
+      },
+      {
+        "cluster": "C9",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "> **거버넌스 교차**: PART1 Section E.2 (BLOCKER 14건)",
+            "new": "> **거버넌스 교차**: PART1 Section A.1/E.2 (BLOCKER 14건)",
+            "note": "F1 — L170. PART1 실측: A.1=BLOCKER 14건 목록(L26), E.2=해소(L1094). 'E.2'→'A.1/E.2'"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| 3-1 | R1: 5-Gate 실행 순서 | PolicyGate→Approval→Cost→Evidence→SelfCheck | **Must** | ⓐ | runtime_decisions.md |",
+            "new": "| 3-0 | **미결정 게이트** | R1 착수 전 미결정·이연 항목 일괄 처리 게이트: D1 이연 대장(D1_RESULTS_INDEX §3, D-1~D-4) + 전수진단 결정 항목 확인. ✔ (2026-06-11) D-1(5-3 C-04~C-08) RESOLVED·결정 D1~D19 기적용 — 잔여·신규 미결정은 본 게이트에서 확정 후 R1 진행 | **Must** | 선행 | 결정 기록(decisions/) |\n| 3-1 | R1: 5-Gate 실행 순서 | PolicyGate→Approval→Cost→Evidence→SelfCheck | **Must** | ⓐ | runtime_decisions.md |",
+            "note": "G1 — L286 앞에 3-0 게이트 행 신설. 세션5 기적용(D1~D19, 5-3 RESOLVED)과 모순 없게 '기적용 확인+잔여 처리' 프레임. 이연 대장 D-1~D-4는 PROGRESS.md:21 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| 2-1 | CLAUDE.md 보강 | 보강전략 Phase A (5세션) → §21~§28 추가. §28(엔지니어링 프레임워크)에 매트릭스/PROGRESS.md/Phase별 컨텍스트(A13) 포함 | **Must** | ⓐ | 보강된 CLAUDE.md |",
+            "new": "| 2-1 | CLAUDE.md 보강 | 보강전략 Phase A (5세션) → §21~§28 추가. §28(엔지니어링 프레임워크)에 매트릭스/PROGRESS.md/Phase별 컨텍스트(A13) 포함. 입력: PART1 §D.0(CLAUDE.md 필수 수정) + claude_md_gap_report 2건(D1 산출) 반영 | **Must** | ⓐ | 보강된 CLAUDE.md |",
+            "note": "G2 — L239. claude_md_gap_report.json 실측 gap_count=2. §D.0은 카운트 미기재(레지스터 '9건'은 실측 5건과 불일치 — registered 참조)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| 2-8 | **자산 인벤토리 갱신** | Phase 2 생성 파일을 STRATEGY_11에 반영 | Should | 전체후 | STRATEGY_11 갱신 |",
+            "new": "| 2-8 | **자산 인벤토리 갱신** | Phase 2 생성 파일을 STRATEGY_11에 반영. 정리작업 포함: D-2 네비링크 보수 · D-3 INDEX 부재 6도메인 보완(D1 이연 대장) · 유산 폴더 정리 | Should | 전체후 | STRATEGY_11 갱신 |",
+            "note": "G3 — L246. 정리작업 3종 열거(레지스터 G3 정의: D-2 네비링크·D-3 INDEX 6도메인·유산폴더, PROGRESS.md:21 이연 대장 실측 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| LOCK Registry | `VAMOS HOME\\00_HUB\\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |",
+            "new": "| LOCK Registry | `VAMOS HOME\\00_HUB\\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |\n| 세션 실행 프롬프트 | `VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md` | Phase별 세션 실행 프롬프트 |\n| D1 결과 인덱스 | `04. 구현단계\\v13_results\\phase0\\D1_RESULTS_INDEX.md` | D1 검증 산출물 인덱스 + 이연 대장(D-1~D-4) |",
+            "note": "G4 — L605 참조맵 끝에 2행 추가. 두 파일 모두 디스크 실존 확인"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| 2-4 | 린터/CI 환경 세팅 | 하네스 §7 → pyproject.toml + ruff + CI yaml + conftest.py | **Must** | ⓒ | 린터/CI 파일 |",
+            "new": "| 2-4 | 린터/CI 환경 세팅 | 하네스 §7 → pyproject.toml + ruff + CI yaml + conftest.py. ✔ (2026-06-11 기집행) 구 .claude-pre-commit 처분 완료 — pre-commit 훅 블록 제거(D17, `repos: []` 보존)·gitlink 언트래킹(D18, 디스크 보존); 훅 재도입 여부는 본 작업에서 결정 | **Must** | ⓒ | 린터/CI 파일 |",
+            "note": "G5 — L242. DECISION_REGISTER.md 집행 결과 실측(D17 훅 통과 확인·D18 gitlink 3 언트래킹) 반영, 처분 '결정'이 아닌 '기집행 사실' 표기"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| 6-9 | **V1 GO/NO-GO** | READINESS V1 21건 + PART1 B.2(12건) | **Must** |",
+            "new": "| 6-9 | **V1 GO/NO-GO** | READINESS V1 21건 + PART1 B.2(12건) | **Must** |\n\n> ※ **Phase 6 ↔ PART2 V1-Phase 매핑**: V1 구현 순서의 정본은 PART2의 V1-Phase 1~6(Week 1~16)이다. 본 표에 직접 행이 없는 **AI Investing MVP·MCP(PART2 §6.6 서버/클라이언트 7개)·Circuit Breaker**는 PART2 **V1-Phase 6**(AI Investing MVP + MCP — Phase 4-5와 병렬, Week 13-16; Circuit Breaker 자체 구현은 V1-Phase 3 Workflow+Agent)에 배정되어 있다 — V1 착수 시 PART2 기준으로 스코프에 포함한다.",
+            "note": "G6 — L500 표 직후 노트 삽입. PART2 실측: L2546 'V1-Phase 6: AI Investing MVP + MCP(Week 13-16, Phase 4-5와 병렬)', L2078 V1-Phase 3 Circuit Breaker"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "채택하려면 LOCK_CHANGE_NEEDED 게이트 + DEC 재번호가 선행되어야 한다.",
+            "new": "채택하려면 LOCK_CHANGE_NEEDED 게이트 + DEC 재번호가 선행되어야 한다.\n\n> ※ **스코프 선언 — V2/V3·한국어 LLM [D12, 2026-06-11]**: V2/V3 GO 조건(25건)과 한국어 LLM 도입은 본 로드맵(Phase 0~6 = V0·V1)의 범위 밖이며, **차기 로드맵으로 명시 이연**한다.",
+            "note": "G7 — L607(파일 말미, D15 sot3=DRAFT 선언) 텍스트 무변경 보존 + 직후 V2/V3·한국어LLM 스코프 선언 추가(D12 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "Phase 완료 시: git tag phase{N}-complete → git push --tags",
+            "new": "Phase 완료 시: git tag phase{N}-complete → git push --tags → git push origin main (push 확인)",
+            "note": "G9-a — L109 A2 백업 규칙에 push 확인 단계 추가"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "  Phase 6 완료 → git tag v1-release\n```",
+            "new": "  Phase 6 완료 → git tag v1-release\n```\n\n> ✔ **push 확인 완료 (2026-06-11)**: `git push origin main` 및 태그 push(phase0-complete·phase1-d1-pass 포함 4종) 확인.",
+            "note": "G9-b — L113-114 A2 블록 직후 완료 표기(main push 2026-06-11 완료·태그 4종 push 기확인)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+            "old": "| 2-1 CLAUDE.md 보강 | **Must** | AI 컨텍스트 없으면 Phase 4 품질 저하 |",
+            "new": "| 2-0 외부 의존성 재확인 | **Must** | PART1 E.1+E.3+B.1 재확인(A4) — Phase 2 선행 |\n| 2-1 CLAUDE.md 보강 | **Must** | AI 컨텍스트 없으면 Phase 4 품질 저하 |",
+            "note": "XREF-01 — L62 Phase 2 우선순위 표에 2-0 행 추가('2-0' 문자열 파일 내 0건 실측). 로드맵 2-0 Must 정합"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+            "old": "Phase 2: 2-1(CLAUDE.md 보강) → 2-4(린터) → 2-5(vamos_lint)",
+            "new": "Phase 2: 2-0(외부 의존성) → 2-1(CLAUDE.md 보강) → 2-4(린터) → 2-5(vamos_lint)",
+            "note": "XREF-01 — L146 Critical Path에 2-0 추가(로드맵 L125 E17 정정본과 일치)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+            "old": "Phase 3: 3-1~3-7(R1 7개 LOCK)",
+            "new": "Phase 3: 3-1~3-7c(R1 7개 + A21·A22·A25 3개 = 10개 결정 LOCK)",
+            "note": "XREF-01 — L148 Critical Path에 3-7a~c 반영(로드맵 L125 '3-1~3-7c'·3-V '7개+3개=10개 결정'과 일치)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+            "old": "Phase 5: 5-3~5-6(D3 정합) → 5-8(GO/NO-GO)",
+            "new": "Phase 5: 5-3~5-6(D3 정합) → 5-7a(배포 무결성, A24) → 5-8(GO/NO-GO)",
+            "note": "XREF-01 — L152 Critical Path에 5-7a 반영(로드맵 L125·5-7a Must와 일치. §4.2 L167 '5-7(X3)' 제외 표기는 5-7=Should라 유효 유지)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_10_VERIFICATION_SYSTEM.md",
+            "old": "  □ 커버리지: 최소 기본 테스트 존재 (V0는 80% 목표 아님, 기본 PASS만)",
+            "new": "  □ 커버리지: 80%+ (로드맵 3-9 테스트 전략 기준으로 단일화, 2026-06-11)",
+            "note": "F7 — L355. 로드맵:297 '커버리지 80%+' 기준으로 STRATEGY_10 측 분기 제거(지시: 로드맵 기준 정정)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+            "old": "     - Strategy v3.0 §3 (15개 폴더 구조) → 매트릭스 셀 매핑:",
+            "new": "     - Strategy v3.0 §3 (17개 폴더 구조) → 매트릭스 셀 매핑:",
+            "note": "G8 — L124. 실측: OBSIDIAN-STRATEGY-v3.md §3 열거=17(00~15 16개+99_RAW), 디스크 VAMOS HOME 폴더=17, P0-2 열거=17. 실값 17로 단일화(P0-2:6은 이미 17 — 무수정)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+            "old": "     - 산출물: \"Obsidian-매트릭스 매핑\" (15개 폴더 × 해당 매트릭스 셀)",
+            "new": "     - 산출물: \"Obsidian-매트릭스 매핑\" (17개 폴더 × 해당 매트릭스 셀)",
+            "note": "G8 — L126 동일 stale 값(같은 과업 블록 내 단일화)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+            "old": "  b. Obsidian 15개 폴더가 전부 매트릭스 셀에 매핑되었는지?",
+            "new": "  b. Obsidian 17개 폴더가 전부 매트릭스 셀에 매핑되었는지?",
+            "note": "G8 — L132 동일 stale 값"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+            "old": "  a. 노트 생성 범위가 Strategy v3.0 §3과 일치하는지 (15개 폴더 + 120+ 노트)",
+            "new": "  a. 노트 생성 범위가 Strategy v3.0 §3과 일치하는지 (17개 폴더 + 120+ 노트)",
+            "note": "G8 — L582 동일 stale 값(파일 내 '15개 폴더' 전수 4곳 정정으로 단일화 완성)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_11_ASSET_INVENTORY.md",
+            "old": "| SOT2-STRUCTURE-MAP.md | SOT 2 38개 폴더 구조 |",
+            "new": "| SOT2-STRUCTURE-MAP.md | SOT 2 42개 폴더 구조 |",
+            "note": "38→42 — L166. 디스크 실측 docs\\sot 2 최상위 폴더 42개"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS HOME\\00_HUB\\SOT2-STRUCTURE-MAP.md",
+            "old": "description: \"SOT 2 38개 폴더 구조 + 도메인 매핑 + 완성도 현황\"",
+            "new": "description: \"SOT 2 42개 폴더 구조 + 도메인 매핑 + 완성도 현황\"",
+            "note": "38→42 — L4 frontmatter description. 디스크 실측 42"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\P0-2_OBSIDIAN_MATRIX_MAPPING.md",
+            "old": "| SOT2-STRUCTURE-MAP.md | D1 | B2b | SOT 2 38폴더 구조 — 정합 + 라우팅 |",
+            "new": "| SOT2-STRUCTURE-MAP.md | D1 | B2b | SOT 2 42폴더 구조 — 정합 + 라우팅 |",
+            "note": "38→42 추가 실측분 — P0-2:33. 스코프 2곳 외 동일 결함 전수 grep에서 발견(오류리스트 '2곳' 카운트가 과소)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS HOME\\00_HUB\\VAMOS-HOME.md",
+            "old": "- [[SOT2-STRUCTURE-MAP]] — SOT 2 38개 폴더 구조",
+            "new": "- [[SOT2-STRUCTURE-MAP]] — SOT 2 42개 폴더 구조",
+            "note": "38→42 추가 실측분 — VAMOS-HOME.md:42"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS HOME\\OBSIDIAN-STRATEGY-v3.md",
+            "old": "← SOT 2 38폴더 구조",
+            "new": "← SOT 2 42폴더 구조",
+            "note": "38→42 추가 실측분 — OBSIDIAN-STRATEGY-v3.md:205(트리도 라인, 화살표 포함 부분 문자열로 유일 매칭 — 공백 폭 보존)"
+          }
+        ],
+        "registered": [
+          {
+            "item": "SOT2-STRUCTURE-MAP.md 본문 폴더 열거 갱신(42 체계 반영)",
+            "disposition": "헤더 description만 42로 정정(본 스펙). 본문은 38 체계 열거(도메인 36+2)에 _automation·_extractions·PHASE3_ORCHESTRATION·PHASE4_ORCHESTRATION 등 미등재 + '총 파일 648개' stale(현행 2,654) — 표 재작성급 대형 작업이라 객관 1:1 치환 불가. 로드맵 Phase 2-3(Obsidian 노트 생성/갱신) 과업으로 등재"
+          },
+          {
+            "item": "전수진단 레지스터 G2 'PART1 §D.0 9건' 카운트 오류",
+            "disposition": "PART1 §D.0.1 실측 5건(BLOCKER 2+HIGH 3, L829·L833-839) — '9건'은 실측 불일치. 본 스펙의 로드맵 2-1 fix는 카운트 미기재로 회피 작성. 레지스터(VAMOS_AI_전수진단_레지스터_2026-06-10.md:49) 측 표기 정정은 진단 문서 소관이라 본 클러스터에서 미수행 — 진단 문서 정정 트랙에 등재"
+          },
+          {
+            "item": "신설 3-0 게이트의 Critical Path(로드맵 L125)·Phase 3 병렬 다이어그램(L305) 반영 여부",
+            "disposition": "3-0이 Must이므로 'Must만 연결' 원칙상 경로 포함이 논리적이나, 로드맵 L125와 STRATEGY_02 §4.1이 연쇄 동기화 대상이고 게이트가 1회성(기적용 확인) 성격이라 포함 여부는 판단 필요 — 후속 결정(Phase 3 착수 전)으로 등재"
+          },
+          {
+            "item": "로드맵 Phase 6(6-1~6-9) ↔ PART2 V1-Phase 1~6 행 단위 전체 매핑표",
+            "disposition": "본 스펙은 누락 3종(AI Investing MVP·MCP·Circuit Breaker)의 배정처를 주석 노트로 객관 반영만 수행. 6-1~6-9 전체 행 매핑은 다대다 대응 판단 필요(대형) — Phase 6 착수 시 PART2 기준 작성으로 등재"
+          },
+          {
+            "item": "F7 커버리지 기준의 최종 정본화(3-9 test_strategy.md)",
+            "disposition": "본 스펙은 STRATEGY_10:355를 로드맵 80%+ 기준으로 정합 교정만 수행. F7 본래 처분('3-9 테스트 전략에서 단일화')에 따라 V0/V1 적용 시점·예외는 Phase 3-9 산출물 작성 시 확정 — 3-9 과업으로 등재"
+          }
+        ],
+        "summary": "C-9 로드맵·전략 문서 보정 스펙 24건. 로드맵 10건(F1 A.1/E.2, G1 3-0 게이트 신설행, G2 2-1에 §D.0+gap 2건, G3 2-8 정리작업 3종 열거, G4 참조맵 2행, G5 D17/D18 기집행 반영, G6 PART2 V1-Phase 6 매핑 노트, G7 V2/V3·한국어LLM 차기 이연 선언[D15 텍스트 보존·직후 append], G9 push 확인 규칙+2026-06-11 완료 표기) + STRATEGY_02 4건(XREF-01: 2-0 행/경로, 3-7a~c, 5-7a) + STRATEGY_10 1건(커버리지 80%+ 로드맵 기준 단일화) + G8 4건(ROADMAP_SESSION_EXECUTION_PROMPTS '15개 폴더' 4곳→17, 실측: 전략§3 열거·디스크·P0-2 모두 17, P0-2:6은 기정합 무수정) + 38→42 5건(스코프 2곳: STRATEGY_11:166·SOT2-STRUCTURE-MAP:4 + 추가 실측 3곳: P0-2:33·VAMOS-HOME:42·OBSIDIAN-STRATEGY-v3:205, 디스크 실측 42). 전 old 문자열 grep -cF로 count==1 검증 완료. LOCK 값 변경 0. 세션5 D1~D19 기적용 텍스트(3-7b A안 L294, sot3 DRAFT L607) 무손상. registered 5건(SOT2-STRUCTURE-MAP 본문 대형 갱신, 레지스터 '9건' 카운트 오류, 3-0 Critical Path 반영 결정, Phase6 전체 매핑표, F7 최종 정본화)"
+      },
+      {
+        "cluster": "C8C10",
+        "fixes": [
+          {
+            "file": "D:\\VAMOS\\.gitignore",
+            "old": ".claude/plugins/claude-code-skills/",
+            "new": ".claude/plugins/claude-code-skills/\n\n# ── 의도적 미추적 코퍼스 (C-8/C-10, 2026-06-11) ──\n# stale 백업/테스트 격리 사본 — \"git add .\" 유입 방지\n# 실측: docs/backup 83MB 4,721파일 + docs/test_iso_p2 41MB, git 추적 0건\ndocs/backup/\ndocs/test_iso_p2/",
+            "note": "D18 블록 마지막 행(파일 말미, 후행 개행 없음) 앵커 — grep count=1 검증. 파일은 CRLF이므로 적용 시 CRLF 유지 권장. git ls-files 0건(미추적)·check-ignore 미적중(exit 1) 실측으로 'git add . 시 유입' 상태 확정. 이 fix 적용 후 신규 docs/backup/MANIFEST.md(registered ①)도 미추적되며 이는 의도적 미추적 정책과 정합."
+          },
+          {
+            "file": "D:\\VAMOS\\04. 구현단계\\v13_results\\phase8\\FINAL_VERDICT.json",
+            "old": "  \"meta\": {",
+            "new": "  \"_superseded\": \"SUPERSEDED by 현행 D1(2026-06-09 1c3cede) — 본 verdict=PASS는 2026-03-23(v13 Enhanced Pipeline Phase 8) 시점의 구판 판정 기록이며 현행 판정이 아님\",\n  \"meta\": {",
+            "note": "FINAL_VERDICT* 글롭 실측 1건(파일 수 확인 완료). LF JSON — 주석 불가하므로 배너를 최상위 첫 키(_superseded)로 삽입, JSON 유효성 유지. 앵커 `  \"meta\": {` grep count=1 검증(L2). meta.timestamp=2026-03-23T01:55:00+09:00 실측으로 구판(2026-03-23) 확정. verdict/f1_f10 등 기존 값은 일절 무변경."
+          },
+          {
+            "file": "D:\\VAMOS\\04. 구현단계\\v11_results\\v11_phase_status.json",
+            "old": "  \"current_phase\": \"2-C\",",
+            "new": "  \"_note\": \"STALE — 본 파일은 2026-03-28(last_updated) 시점 스냅샷. current_phase=2-C 및 S11-3a/3b/4/7/8 PENDING 등은 작성 시점 기록이며 현행 상태가 아님. 현행 판정은 D1(2026-06-09 1c3cede) 참조.\",\n  \"current_phase\": \"2-C\",",
+            "note": "실측: LF JSON(주석 불가 → 지시대로 _note 키 fix 가능 확인). 앵커 `\"current_phase\": \"2-C\"` grep count=1 검증(L2). last_updated=2026-03-28, S11-3a/3b/4/7/8 status=PENDING 실측 — 기존 키/값 일절 무변경, 최상위 첫 키로 stale 표지만 삽입."
+          }
+        ],
+        "registered": [
+          {
+            "item": "① docs\\backup\\MANIFEST.md 신규 생성 (백업 코퍼스 manifest + 검색 오염 배너)",
+            "disposition": "신규 파일 생성은 fix(old 빈 문자열) 불가 → registered. 적용: D:\\VAMOS\\docs\\backup\\MANIFEST.md를 아래 전문으로 Write 생성 후, registered ②의 RO 일괄 적용에 포함. 디렉터리 목록·파일수·크기·mtime 범위는 2026-06-11 디스크 실측값. === 파일 전문 시작 ===\n# docs/backup MANIFEST — 백업 코퍼스 안내 (2026-06-11)\n\n> ⚠️ **검색 오염 주의 (SEARCH CONTAMINATION WARNING)**\n> 본 디렉터리 이하 전체는 **시점 동결 백업 사본(stale snapshot)** 이며 현행 정본이 아니다.\n> 동명 파일이 다수 존재한다(실측: 본 트리 내 `AUTHORITY_CHAIN.md` 88본; 참고로 `docs/test_iso_p2/`에 37본 — 합계 125본의 stale 사본이 현행 외 경로에 공존).\n> 전역 grep/Glob/검색 결과에 본 경로(`docs/backup/`)가 포함되면 **반드시 제외**하라.\n> 정본 우선순위: RULE 1.3(BASE-1.3) > PLAN 3.0 > DESIGN 2.0 LOCK > 본문 > 스키마/STEP7.\n> 현행 정본 위치: `docs/sot 2/`(SOT2), `docs/sot/`(V1 SOT) 등 docs 직하 현행 트리 — 본 backup 트리 아님.\n\n## 정책\n- **쓰기 금지**: 본 트리 전 파일 Read-Only 적용 대상.\n- **git 미추적**: `.gitignore`의 `docs/backup/` 항목으로 의도적 미추적(2026-06-11, C-8/C-10).\n- 본 MANIFEST.md 외 신규 파일 추가 금지. 백업 세트 내용 수정 금지(시점 동결).\n\n## 백업 세트 목록 (실측 2026-06-11 — 총 8세트 / 4,721파일 / 약 83MB, 최상위 파일 없음)\n\n| # | 디렉터리 | 시점(내용 mtime 범위) | 범위 | 파일수 | 크기 |\n|---|---------|---------------------|------|-------:|-----:|\n| 1 | `post_stage8_2026-05-07/` | 2026-03-18 ~ 2026-05-05 (백업 2026-05-07) | Stage 8 종료 직후 `sot 2/` 전체 트리 스냅샷 | 2,451 | 39MB |\n| 2 | `sot 2/` | 2026-03-18 ~ 2026-04-26 | SOT2 전 도메인 트리 스냅샷(`*_stage7_*` 변형 디렉터리 포함) | 2,107 | 38MB |\n| 3 | `sot/` | 2026-03-07 ~ 2026-03-28 | V1 SOT 스냅샷(BASE-1.3, DESIGN 2.0/2.1 시리즈 등) | 68 | 5MB |\n| 4 | `sot2_6-2_stage7_2026-04-27/` | 2026-04-27 | 6-2 Security-Governance Stage 7 시점 | 26 | ≤1MB |\n| 5 | `sot2_6-5_stage7_2026-04-27/` | 2026-04-27 | 6-5 SDAR-System Stage 7 시점 | 20 | ≤1MB |\n| 6 | `sot2_6-6_stage7_2026-04-28/` | 2026-04-28 | 6-6 Self-Evolution Stage 7 시점 | 20 | ≤1MB |\n| 7 | `sot2_6-7_stage7_2026-04-28/` | 2026-04-28 | 6-7 RT-BNP-DCL Stage 7 시점 | 14 | ≤1MB |\n| 8 | `sot2_6-8_stage7_2026-04-29_step_c_start/` | 2026-04-29 | 6-8 Cloud-Library Stage 7 Step C 시작 시점 | 15 | ≤1MB |\n=== 파일 전문 끝 ==="
+          },
+          {
+            "item": "② docs\\backup 쓰기보호(RO) 일괄 적용 명령",
+            "disposition": "파일시스템 속성 변경 작업이라 텍스트 fix 불가 → registered. 실측 현황(2026-06-11): RO 2,083/4,721 — sot 68/68만 완전, post_stage8 1,037/2,451, sot 2 952/2,107, sot2_6-2 0/26, 6-5 8/20, 6-6 9/20, 6-7 5/14, 6-8 4/15. 적용 명령(① MANIFEST.md 생성 후 실행): [PowerShell] Get-ChildItem -LiteralPath \"D:\\VAMOS\\docs\\backup\" -Recurse -File | ForEach-Object { $_.IsReadOnly = $true }  — 공백 경로('sot 2') 때문에 -LiteralPath 필수. [대안 CMD] attrib +R \"D:\\VAMOS\\docs\\backup\\*\" /S. 검증 명령: Get-ChildItem -LiteralPath \"D:\\VAMOS\\docs\\backup\" -Recurse -File | Where-Object { -not $_.IsReadOnly } | Measure-Object  → Count 0 기대."
+          },
+          {
+            "item": "⑥ coin 워크스페이스(D:\\VAMOS\\2025_Coin_investment_Work_space) 잔여물 이동 방침",
+            "disposition": "대형 이동 작업 + 사용자 의존(키 revoke 대기) → registered. 실측(2026-06-11): 워크스페이스 잔존 14항목 — .env(181B, 2025-05-23, API키 포함·사용자 revoke 대기), Z_session_project(.git 디렉터리 실측 확인 → 중첩 git repo 확정), generated/, 백서파일/, '개돼지 예시.docx'(845KB), Pro.txt, strategy_generator(6).py 등; zip 실측 0건(2026-06-11 이동 완료 확인됨). 방침: 워크스페이스 전체를 D:\\VAMOS 외부로 통째 이동(중첩 repo는 .git 포함 그대로 이동해 히스토리 보존 — VAMOS 본 repo와 독립이므로 충돌 없음). **.env는 사용자 API키 revoke 완료 전까지 삭제 금지·보존**(이동 시 동반 이동만 허용, revoke 확인 후 처분 재결정). 이동 전까지는 VAMOS 본 repo 미추적 상태 유지(현 .gitignore의 .env 패턴이 워크스페이스 내 .env도 커버)."
+          },
+          {
+            "item": "④-보충 phase8 동시점(2026-03-23) PASS 산출물 추가 배너 여부 — f1_f10_verdict.json 등 14개 json",
+            "disposition": "지시 범위는 'FINAL_VERDICT*'이며 실측 1건이라 fix도 1건만 작성. 다만 동일 디렉터리 v13_results\\phase8\\에 f1_f10_verdict.json(meta.timestamp 2026-03-23T01:20+09, F1~F10 전항 PASS) 포함 동시점 산출물 14개 json이 공존 — 배너 확장 적용 여부는 범위 판단 필요 사항이라 registered. 확장 결정 시 fix 2와 동일 패턴(_superseded 최상위 첫 키 삽입) 적용 가능."
+          }
+        ],
+        "summary": "C-8/C-10 잔여 6건 처리: fix 3건 — ③.gitignore에 docs/backup/·docs/test_iso_p2/ 미추적 블록 추가(D18 블록 뒤 EOF 앵커, git ls-files 0건·check-ignore 미적중 실측), ④FINAL_VERDICT.json(실측 1건, 2026-03-23 구판 PASS)에 _superseded 키 배너 삽입, ⑤v11_phase_status.json(LF JSON 확인)에 _note stale 표지 삽입 — 3건 모두 old 앵커 grep count=1 검증, 기존 값 무변경. registered 4건 — ①MANIFEST.md 전문(8세트/4,721파일/83MB·AUTHORITY_CHAIN 88본 실측 기반, 신규 파일이라 fix 불가), ②RO 일괄 적용 명령(현황 2,083/4,721 실측, -LiteralPath 필수), ⑥coin 워크스페이스 이동 방침(.env는 revoke 대기 보존, Z_session_project 중첩 git repo 실측 확정, zip 0건), ④-보충 f1_f10_verdict.json 등 배너 확장 판단. LOCK 값 변경 0, D1~D19 결정과 모순 없음."
+      }
+    ],
+    "total_fixes": 168,
+    "total_registered": 34
+  }
+}

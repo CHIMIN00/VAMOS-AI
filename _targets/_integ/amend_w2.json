@@ -1,0 +1,70 @@
+{
+  "note": "세션5 심판(judge) 보완 지시 반영 오버레이 — apply_w2.py가 w2_decisions_raw.json 위에 적용",
+  "replace_new": [
+    {
+      "decision_id": "D4",
+      "edit_index": 2,
+      "new": "| 2026-04-12 | 전체 | **Phase 1 완료 검증** — P1-1 링크 검증 23/24 VALID (95.8%, 게이트 PASS). LOCK 10건 변경 0건. CONFLICT_LOG C-04~C-08 OPEN 5건 유지 (신규 등록 0건). B-2 TemplateSets CONDITIONAL 1건 잔여 | P1 Step 7 횡단 동기화 |\n| 2026-06-11 | V12-03·05·07·09 | **세션5 결정 일괄 반영** — V12-05: 정본(3-6 cbt_distortion_taxonomy.md §4.1) 15종 전사(세션4)+상속 출처 '부록 §C(LOCK 미부여)' 정정 (D1, C-04 RESOLVED). V12-09: 링크 타입 4종→5종 정본(#6 PKM 부록 §A.3) 정정 (D2, C-05 RESOLVED). V12-07: 출처 '#11+#17 공유'→'2-1 Blue-Node(D2.0-03 §4.2 LOCK + LOCK-BN-18), #11/#17은 참조' 정정 — 계층 구분: 구성 3종 LOCK 정본=D2.0-03 §4.2 / Template 원문·버전 소유=ORANGE CORE 02 I-13 / 에이전트 대화 콘텐츠 정본=3-8 (W-05 유지) (D4, C-07 RESOLVED). V12-03: 상속 원본 표기 'AI-Invest tau LOCK(미실재)'→'Ai-investing 도메인 기준값 top_down_allocation.md tau=0.025, 전용 LOCK 미등재' 정정 (D5, C-08 RESOLVED) | 세션5 결정 세션 D1~D5 |",
+      "why": "judge #3: AUTH 변경이력 단일 담당(D4) 통합 1행 — V12-05 전사·V12-09·V12-07·V12-03 일괄 기록 + judge #4 계층 분리 명문화"
+    }
+  ],
+  "add_edits": [
+    {
+      "decision_id": "D1",
+      "edits": [
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+          "old": "| LOCK-V12-05 | A-2 (CBT) | #9 Health-Wellness | LOCK-HW-09 (7원칙 내 관련) | 15가지 인지 왜곡 유형 |",
+          "new": "| LOCK-V12-05 | A-2 (CBT) | #9 Health-Wellness | 부록 §C — cbt_distortion_taxonomy.md §4.1 (LOCK 미부여; LOCK-HW-09는 감정 AI 7원칙 거버넌스 관련) | 15가지 인지 왜곡 유형 |",
+          "note": "judge #1-①: §A.4 L1250 매핑 셀 정정"
+        },
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+          "old": "| LOCK-HW-09 관련 | 전부 아니면 전무(All-or-Nothing Thinking)",
+          "new": "| 부록 §C — cbt_distortion_taxonomy.md §4.1 (LOCK 미부여; LOCK-HW-09=거버넌스 관련) | 전부 아니면 전무(All-or-Nothing Thinking)",
+          "note": "judge #1-②: AUTH L46 4번째 칼럼 상속 출처 정정"
+        },
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+          "old": "| #9 도메인에 CBT 전용 LOCK 신규 부여 요청 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | OPEN — C-04 |",
+          "new": "| #9 도메인에 CBT 전용 LOCK 신규 부여 요청 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | ✅ RESOLVED (2026-06-11, D1) — 상속 출처 '부록 §C(LOCK 미부여)' 정정 + 정본 15종 전사 완료, LOCK-HW-13 신설안 기각 (C-04) |",
+          "note": "judge #1-③: S-5 상태 플립 (D3의 S-7 패턴 동일)"
+        },
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\_index.md",
+          "old": "| 4 | A-2a | ThoughtRecord | A-2 | #9 Health-Wellness | `3-6_Health-Wellness-EmotionAI/04_stress-management/cbt_self_care.md` | LOCK-HW-09 (→ V12-05) | TODO |",
+          "new": "| 4 | A-2a | ThoughtRecord | A-2 | #9 Health-Wellness | `3-6_Health-Wellness-EmotionAI/04_stress-management/cbt_self_care.md` | 부록 §C (LOCK 미부여) (→ V12-05) | TODO |",
+          "note": "judge #1-④a: wellness _index 행4 동기화"
+        },
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\_index.md",
+          "old": "| 5 | A-2b | CognitiveDistortionDetector | A-2 | #9 Health-Wellness | `3-6_Health-Wellness-EmotionAI/06_ethics-privacy/cbt_distortion_taxonomy.md` | LOCK-HW-09 (→ V12-05) | TODO |",
+          "new": "| 5 | A-2b | CognitiveDistortionDetector | A-2 | #9 Health-Wellness | `3-6_Health-Wellness-EmotionAI/06_ethics-privacy/cbt_distortion_taxonomy.md` | 부록 §C (LOCK 미부여) (→ V12-05) | TODO |",
+          "note": "judge #1-④b: wellness _index 행5 동기화"
+        }
+      ]
+    },
+    {
+      "decision_id": "D5",
+      "edits": [
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+          "old": "| LOCK-V12-03 | Black-Litterman tau 값 | AI Investing | AI-Invest tau LOCK |",
+          "new": "| LOCK-V12-03 | Black-Litterman tau 값 | AI Investing | Ai-investing 도메인 기준값 — top_down_allocation.md tau=0.025 (1/T 범위 0.01~0.05), 전용 LOCK 미등재 |",
+          "note": "judge #5: L44 유령 출처('AI-Invest tau LOCK' 미실재) 정정 — 순환 참조 차단"
+        }
+      ]
+    },
+    {
+      "decision_id": "D4",
+      "edits": [
+        {
+          "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+          "old": "> **최종 갱신**: 2026-04-12",
+          "new": "> **최종 갱신**: 2026-06-11",
+          "note": "judge #3: AUTH 헤더 날짜 — 단일 담당(D4) 1회 갱신"
+        }
+      ]
+    }
+  ]
+}

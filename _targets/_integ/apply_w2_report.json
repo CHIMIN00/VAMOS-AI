@@ -1,0 +1,562 @@
+[
+ {
+  "edit": "D17[0]",
+  "file": "D:\\VAMOS\\.pre-commit-config.yaml",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D19[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\phase_b6_yaml_normalization.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D19[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D19[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CICD_PIPELINE_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[0]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[1]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[2]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[3]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[4]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[5]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[6]",
+  "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\general_llm_benchmarks.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\general_llm_benchmarks.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[9]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\02_custom-datasets\\golden_set_management.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[10]",
+  "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[11]",
+  "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[12]",
+  "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D14[13]",
+  "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D15[0]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D15[1]",
+  "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D16[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D16[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D16[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D16[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D6[0]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[0]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[1]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[4]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[5]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D7[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[0]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[1]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[4]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[5]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D9[7]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D10[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D10[1]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D10[2]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D10[3]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[0]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[1]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[2]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[3]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[4]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[5]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[6]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[7]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[8]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[9]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[10]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D11[11]",
+  "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[0]",
+  "file": "D:\\VAMOS\\CLAUDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[1]",
+  "file": "D:\\VAMOS\\CLAUDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\CLAUDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\CLAUDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[4]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[5]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[7]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[8]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D13[9]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[4]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D1[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[4]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D2[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D3[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D3[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D3[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D3[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[4]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D4[9]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[4]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\08_cross-asset\\cross_asset_optimization.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[9]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[10]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[11]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D5[12]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "D18[0]",
+  "file": "D:\\VAMOS\\.gitignore",
+  "status": "APPLIED"
+ }
+]

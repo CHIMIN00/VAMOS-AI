@@ -1,0 +1,842 @@
+[
+ {
+  "edit": "C5A[0]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[1]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-04_04. VAMOS_DESIGN_2.0_INFRA_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[4]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[5]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[7]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[8]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[9]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[10]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[11]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[12]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[13]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[14]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-07_07. VAMOS_DESIGN_2.0_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[15]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[16]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[17]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[18]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D2_D2_SCHEMA_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[19]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D8_D8_SCHEMA_UI_UX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[20]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D4_D4_SCHEMA_INFRA_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[21]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[22]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D2_D2_SCHEMA_ORANGE_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[23]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D3_D3_SCHEMA_BLUE_NODES.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[24]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D4_D4_SCHEMA_INFRA_CORE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[25]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D5_D5_SCHEMA_AGENT_WORKFLOW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[26]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[27]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5A[28]",
+  "file": "D:\\VAMOS\\docs\\sot\\D2.1-D8_D8_SCHEMA_UI_UX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[0]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[1]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B2_PROJECT_STRUCTURE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B2_PROJECT_STRUCTURE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[4]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B3_DEPENDENCIES.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[5]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B3_DEPENDENCIES.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[7]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[8]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B6_CICD_PIPELINE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[9]",
+  "file": "D:\\VAMOS\\docs\\sot\\PHASE_B6_CICD_PIPELINE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5B[10]",
+  "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[0]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[1]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[2]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[3]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[4]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[5]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[6]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[7]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[8]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[9]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[10]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[11]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[12]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[13]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[14]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_STEP6통합_마스터인덱스.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[15]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-N_워크플로우자동화_RPA_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[16]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-O_교육_학습_자기개발_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[17]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-P_건강_웰니스_감성AI_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[18]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_R4_V2_CRITICAL_HIGH.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[19]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_R5_V2_MEDIUM_LOW.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[20]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7_R6_V3_ALL.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[21]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-E_보안_안전_거버넌스_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[22]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-F_인프라_배포_MLOps_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[23]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-G_벤치마크_평가_품질보증_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[24]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-H_비즈니스모델_시장전략_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[25]",
+  "file": "D:\\VAMOS\\docs\\sot\\STEP7-I_AI_Investing_보강_작업가이드.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[26]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[27]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_MASTER_SPECIFICATION.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[28]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C5C[29]",
+  "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[0]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_MASTER_INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[1]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_MASTER_INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g4_split_algorithm.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[4]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g4_split_algorithm.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g7_guide_split.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g7_guide_split.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g8_loop_limit.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[8]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\02_gap-remediation\\g8_loop_limit.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[9]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w02_ring_attention.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[10]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w02_ring_attention.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[11]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w03_ensemble_embedding.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[12]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w03_ensemble_embedding.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[13]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w04_synthetic_data.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[14]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w04_synthetic_data.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[15]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w05_speculative_decoding.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[16]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w05_speculative_decoding.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[17]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w06_kg_extraction.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[18]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w06_kg_extraction.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[19]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w07_mdcure_multidoc.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[20]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w07_mdcure_multidoc.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[21]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w08_longrope_yarn.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[22]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w08_longrope_yarn.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[23]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w12_continuous_eval.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[24]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\03_weakness-mitigation\\w12_continuous_eval.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[25]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h05_flare.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[26]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h05_flare.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[27]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h09_proposition.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[28]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h09_proposition.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[29]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h12_colpali.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[30]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h12_colpali.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[31]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h13_adaptive_retr.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[32]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h13_adaptive_retr.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[33]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h17_cov_rag.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[34]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-2_File-Context\\04_advanced-techniques\\h17_cov_rag.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[35]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[36]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[37]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[38]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[39]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[40]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-3_Agent-Teams-PARL\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[41]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-2_Security-Governance\\SECURITY_GOVERNANCE_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[42]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[43]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[44]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\CONFLICT_LOG.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[45]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-2_Multimodal-Processing\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[46]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[47]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[48]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[49]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[50]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\3-4_Workflow-RPA\\WORKFLOW_RPA_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[51]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\AUTHORITY_CHAIN.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[52]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\INDEX.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[53]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[54]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[55]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[56]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[57]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[58]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\_index.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[59]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[60]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[61]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6A[62]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\04_memory-distillation\\export_import.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[0]",
+  "file": "D:\\VAMOS\\promptfoo.yaml",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[1]",
+  "file": "D:\\VAMOS\\promptfoo-smoke.yaml",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[2]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\promptfoo_phase1a_config.yaml",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[3]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\03_domain-benchmarks\\promptfoo_phase1b_config.yaml",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[4]",
+  "file": "D:\\VAMOS\\.claude\\CLAUDE.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[5]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\_cross-ref\\lock_consistency.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[6]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\2-2_COND-Modules-Detail\\COND_MODULES_DETAIL_구조화_종합계획서.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C6B[7]",
+  "file": "D:\\VAMOS\\docs\\sot 2\\SOT2_SESSION_EXECUTION_PROMPTS.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[0]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[1]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[2]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[3]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[4]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[5]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[6]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[7]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[8]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[9]",
+  "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[10]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[11]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[12]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[13]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_02_SCOPE_AND_PRIORITY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[14]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_10_VERIFICATION_SYSTEM.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[15]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[16]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[17]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[18]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\ROADMAP_SESSION_EXECUTION_PROMPTS.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[19]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_11_ASSET_INVENTORY.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[20]",
+  "file": "D:\\VAMOS\\VAMOS HOME\\00_HUB\\SOT2-STRUCTURE-MAP.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[21]",
+  "file": "D:\\VAMOS\\VAMOS Engineering\\P0-2_OBSIDIAN_MATRIX_MAPPING.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[22]",
+  "file": "D:\\VAMOS\\VAMOS HOME\\00_HUB\\VAMOS-HOME.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C9[23]",
+  "file": "D:\\VAMOS\\VAMOS HOME\\OBSIDIAN-STRATEGY-v3.md",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C8C10[0]",
+  "file": "D:\\VAMOS\\.gitignore",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C8C10[1]",
+  "file": "D:\\VAMOS\\04. 구현단계\\v13_results\\phase8\\FINAL_VERDICT.json",
+  "status": "APPLIED"
+ },
+ {
+  "edit": "C8C10[2]",
+  "file": "D:\\VAMOS\\04. 구현단계\\v11_results\\v11_phase_status.json",
+  "status": "APPLIED"
+ }
+]

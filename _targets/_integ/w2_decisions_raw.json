@@ -1,0 +1,1897 @@
+{
+  "summary": "Adjudicate all 17 pending VAMOS decisions to single conclusions with edit specs (read-only investigation)",
+  "agentCount": 18,
+  "logs": [],
+  "result": {
+    "decisions": [
+      {
+        "decision_id": "D1",
+        "question": "5-3 CONFLICT_LOG C-04(LOCK-V12-05 CBT 15유형 상속 매핑 불일치)를 — AUTHORITY_CHAIN.md L46이 2026-06-11 세션4에서 3-6 cbt_distortion_taxonomy.md §4.1 15종 정본으로 전사된 사실을 실측 확인한 뒤 — RESOLVED 처리할 수 있는가, 그리고 CONFLICT_LOG에 기록할 해소 행은 무엇인가",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "L16",
+            "quote": "| C-04 | 2026-04-03 | OPEN | **LOCK-V12-05 상속 매핑 불일치** … CBT 15유형의 별도 LOCK 신규 부여(예: LOCK-HW-13)를 #9 Health-Wellness 도메인에 요청하거나, 상속 출처를 \"부록 §C (LOCK 미부여)\" 로 정정 필요"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "L49",
+            "quote": "4. **판정**: RESOLVED로 상태 변경 + 판정 근거 기록"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "L13",
+            "quote": "| C-01 | 2026-03-24 | RESOLVED | … | **#6 PKM이 SM-2 알고리즘 정본 소유자** — …"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "line": "L46",
+            "quote": "| LOCK-V12-05 | CBT 15가지 인지 왜곡 유형 | #9 Health-Wellness | LOCK-HW-09 관련 | 전부 아니면 전무(All-or-Nothing Thinking), 과잉일반화(Overgeneralization), 정신적 필터(Mental Filter), 긍정 격하(Disqualifying the Positive), 성급한 결론 - 독심술(Mind Reading), 성급한 결론 - 점쟁이 오류(Fortune Telling), 파국화/축소화(Catastrophizing/Minimization), 감정적 추론(Emotional Reasoning), 당위 진술(Should Statements), 낙인 찍기(Labeling), 개인화(Personalization), 비난(Blaming), 공정성 오류(Fallacy of Fairness), 변화 기대(Fallacy of Change), 통제 오류(Control Fallacy) | … (파일 LastWriteTime 2026-06-11 09:48:16 실측 — §4.1 15종과 순서·명칭 완전 일치)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-6_Health-Wellness-EmotionAI\\06_ethics-privacy\\cbt_distortion_taxonomy.md",
+            "line": "L77-L97",
+            "quote": "## 4. 15개 인지왜곡 유형 (부록 §C.1 L3 변환) / ### 4.1 전수 분류 테이블 — #1 전부 아니면 전무(All-or-Nothing Thinking) ~ #15 통제 오류(Control Fallacy) 15행 전수"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\_integ\\backup_session4\\s4_04__AUTHORITY_CHAIN.md",
+            "line": "L46",
+            "quote": "… 성급한 결론(Jumping to Conclusions), 파국화(Catastrophizing), … 독심술(Mind Reading), 점쟁이 오류(Fortune Telling), 비난(Blaming), … (세션4 직전 상태: 16항목 비정합 목록 — LastWriteTime 2026-06-10 21:41:30, 전사 이벤트의 before 증거)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-6_Health-Wellness-EmotionAI\\AUTHORITY_CHAIN.md",
+            "line": "L129",
+            "quote": "| 4 | CBT 인지왜곡 유형 수 변경 | 15유형 기본 유지, 세부 하위 유형만 추가 가능 | 부록 §C 정본 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-6_Health-Wellness-EmotionAI\\AUTHORITY_CHAIN.md",
+            "line": "L165",
+            "quote": "| #19 v12-Additions | CBT 15가지 인지왜곡 (LOCK-V12-05 원본), 호흡 패턴 (LOCK-V12-06 원본) | v12 인덱스 허브 매핑 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\cognitive_distortion_detector.md",
+            "line": "L12",
+            "quote": "| LOCK 상속 | #9 Health-Wellness CBT 15유형 정본 — `06_ethics-privacy/cbt_distortion_taxonomy.md` 부록 §C (LOCK 미부여) (→ LOCK-V12-05). 주의: LOCK-HW-09는 '감정 AI 7원칙'으로 CBT 15유형과 무관 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\01_wellness-ui\\thought_record.md",
+            "line": "L12",
+            "quote": "| LOCK 상속 | #9 Health-Wellness CBT 15유형 정본 — `06_ethics-privacy/cbt_distortion_taxonomy.md` 부록 §C (LOCK 미부여) (→ LOCK-V12-05). 주의: LOCK-HW-09는 '감정 AI 7원칙'으로 CBT 15유형과 무관 |"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\_integ\\resolve_done.json",
+            "line": "~L8418",
+            "quote": "The #9 Health-Wellness domain has NO LOCK-HW-13 (its AUTHORITY_CHAIN ends at LOCK-HW-12) … Fabricating LOCK-HW-13 is not permitted. THE fix = correct the inheritance reference to … cbt_distortion_taxonomy.md 부록 §C (LOCK 미부여), matching CONFLICT_LOG C-04's resolution path"
+          }
+        ],
+        "conclusion": "C-04는 RESOLVED 처리 가능 — 확정. C-04가 제시한 두 대안 중 ② \"상속 출처를 부록 §C(LOCK 미부여)로 정정\"이 실제로 집행 완료됐음을 전 항목 실측으로 확인했다: (1) 5-3 AUTHORITY_CHAIN.md L46의 LOCK-V12-05 값이 3-6 `06_ethics-privacy/cbt_distortion_taxonomy.md` §4.1 전수 분류 테이블의 15종과 순서·명칭 완전 일치로 전사됨(세션4 직전 백업 s4_04는 16항목 비정합 목록, 라이브 파일 LastWriteTime 2026-06-11 09:48 — 전사 이벤트 before/after 증거 확보), (2) 소비자 2파일(01_wellness-ui/cognitive_distortion_detector.md L12, thought_record.md L12)의 상속 표기가 \"cbt_distortion_taxonomy.md 부록 §C (LOCK 미부여)\" + LOCK-HW-09 무관 주의문으로 정정 완료, (3) 대안 ①(LOCK-HW-13 신설)은 #9 LOCK이 HW-12에서 끝나 fabrication으로 기각됨이 기록돼 있고, (4) #9 측 AUTHORITY_CHAIN이 L129(15유형 기본 유지·부록 §C 정본)와 L165(CBT 15가지 인지왜곡 = LOCK-V12-05 원본)로 정본 소유를 양방향 인지함. CONFLICT_LOG는 append-only가 아니라 절차 L49 \"RESOLVED로 상태 변경 + 판정 근거 기록\"이 명시된 in-place 갱신+변경 이력 append 형식이므로, C-01~C-03 RESOLVED 행 형식(**볼드 결론** + 상세)에 따라 C-04 행을 in-place로 RESOLVED 전환하고 변경 이력에 2026-06-11 행을 append한다(edits 4건).",
+        "rationale": "①형식 확인: CONFLICT_LOG.md L40-50 규칙·절차가 \"RESOLVED로 상태 변경 + 판정 근거 기록\"(L49)을 명시 — append-only 선언 없음, 기존 RESOLVED 행(C-01~C-03, L13-15)도 상태칸 RESOLVED + 판정칸 볼드 결론 형식으로 in-place 기록돼 있어 동일 형식 적용이 정본 절차다. ②실측: 라이브 L46 값 칼럼 15종은 §4.1 #1~#15와 명칭(\"성급한 결론 - 독심술\", \"파국화/축소화(Catastrophizing/Minimization)\", \"당위 진술\", \"낙인 찍기\", \"통제 오류\" 등)·순서까지 동일하며, 세션4 백업(2026-06-10 21:41)의 16항목 결함 목록(성급한 결론+독심술+점쟁이 중복, 파국화 분리)과 대비되어 전사가 2026-06-11에 실제 발생했음이 입증된다. ③C-04의 본질(값 상속원 오표기로 인한 드리프트 위험)은 값 전사+소비자 출처 정정+#9 양방향 정본 인지로 모두 해소됐다. RULE 1.3 우선순위상 도메인 정본(3-6 §4.1) 우선 원칙(§9.2 1순위)과도 정합. ④잔존 \"LOCK-HW-09 관련\" 라벨(L46 4번째 칼럼)은 C-04 자체가 인정한 거버넌스 관계(\"CBT 사용 원칙\") 표시로 해석되고 값 출처 오인 위험은 소비자 파일 주의문으로 차단되었으므로 RESOLVED 차단 사유가 아니다 — 해소 행에 잔여 표기 정리 권장으로 투명 기록한다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "> **최종 갱신**: 2026-04-12",
+            "new": "> **최종 갱신**: 2026-06-11",
+            "note": "헤더 최종 갱신일 — count==1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| C-04 | 2026-04-03 | OPEN |",
+            "new": "| C-04 | 2026-04-03 | RESOLVED |",
+            "note": "상태칸 in-place 전환(절차 L49) — count==1 검증 완료(C-05~C-08은 ID가 달라 비매칭)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "**OPEN** — LOCK-HW-09은 거버넌스 관계(CBT 사용 원칙)이지 값 상속 관계가 아님. CBT 15유형의 별도 LOCK 신규 부여(예: LOCK-HW-13)를 #9 Health-Wellness 도메인에 요청하거나, 상속 출처를 \"부록 §C (LOCK 미부여)\" 로 정정 필요",
+            "new": "**RESOLVED (2026-06-11, 세션4)** — C-04 제시 대안 ② \"상속 출처 정정\" 채택·집행 완료. (1) CBT 15유형 정본 = #9 Health-Wellness `06_ethics-privacy/cbt_distortion_taxonomy.md` §4.1 전수 분류 테이블(부록 §C.1 L3 변환, 전용 LOCK 미부여 — #9 LOCK은 LOCK-HW-12까지이며 LOCK-HW-13 신설은 fabrication으로 기각). (2) 본 폴더 AUTHORITY_CHAIN.md LOCK-V12-05 값 15종을 §4.1 정본과 동일 순서·동일 명칭으로 전사 완료(2026-06-11 세션4). (3) 01_wellness-ui 소비자 2파일(cognitive_distortion_detector.md, thought_record.md)의 LOCK 상속 표기를 \"cbt_distortion_taxonomy.md 부록 §C (LOCK 미부여)\"로 정정 + LOCK-HW-09 무관 주의문 병기 완료. (4) #9 AUTHORITY_CHAIN 시나리오 #4(15유형 기본 유지, 부록 §C 정본) + 도메인 경계표(CBT 15가지 인지왜곡 = LOCK-V12-05 원본)로 양방향 정본 인지 확인. LOCK-HW-09는 '감정 AI 7원칙'(CBT 사용 거버넌스)으로 한정 — 값 상속 관계 아님 확정. 잔여: AUTHORITY_CHAIN L46 \"LOCK-HW-09 관련\" 라벨은 거버넌스 관련 표시로 존치(후속 표기 정리 권장, RESOLVED 차단 사유 아님)",
+            "note": "C-04 판정칸 — 기존 RESOLVED 행(C-01~C-03) 볼드 결론 형식 준수. 전체 old 문자열 count==1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |",
+            "new": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |\n| 2026-06-11 | 세션4 LOCK-V12-05 정본 전사 실측 확인 → C-04 OPEN→RESOLVED (정본 = 3-6 cbt_distortion_taxonomy.md §4.1 15종, 부록 §C 계열·전용 LOCK 미부여; AUTHORITY_CHAIN L46 값 전사 + 01_wellness-ui 2파일 상속 출처 정정 확인, LOCK-HW-13 신설안 기각). C-05~C-08 OPEN 4건 유지 |",
+            "note": "변경 이력 append — 마지막 행 뒤 신규 행 추가, old count==1 검증 완료"
+          }
+        ],
+        "status": "DECIDED",
+        "risk": "잔존 리스크 2건(모두 RESOLVED 차단 사유 아님, 본 결정 범위 밖 후속 권장): ① 5-3 AUTHORITY_CHAIN.md L46 4번째 칼럼 \"LOCK-HW-09 관련\" 라벨이 존치 — 거버넌스 관계 표시로 해석되나, 후속 세션에서 \"부록 §C 정본 (LOCK 미부여) / LOCK-HW-09는 거버넌스 관련\"으로 표기 교체 권장. ② 5-3 AUTHORITY_CHAIN.md 변경 이력 테이블(L112-116)에 2026-06-11 세션4 전사 행이 미기록(이력은 2026-04-12에서 멈춤) — 변경 이력 행 추가 권장. 또한 edits 적용 시 C-04 행 내 2개 edit(상태칸·판정칸)이 같은 줄을 건드리나 old 문자열이 비중첩·각 count==1이므로 순서 무관 안전."
+      },
+      {
+        "decision_id": "D2",
+        "question": "5-3 C-05: Zettelkasten 링크 타입 — V12 문서의 \"4종(RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES)\" vs #6 PKM(3-3) 정본의 \"5종(related, supports, contradicts, continues, branches)\" 중 어느 쪽이 정본인가",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "17",
+            "quote": "C-05 | 2026-04-03 | OPEN | LOCK-V12-09 Zettelkasten 링크 타입 개수·명칭 불일치 — ... SUPERSEDES는 PKM에 없고, continues/branches가 V12에서 누락 ... §9.2 우선순위 1에 따라 PKM 도메인 정본 우선"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "15",
+            "quote": "C-03 RESOLVED: #6 PKM이 Zettelkasten 정본 소유자 — PKM이 Zettelkasten 핵심 원칙...을 LOCK으로 보호. Cloud Library/v12의 D-7과 D-10은 ... UI 확장 레이어로 한정. 데이터 모델과 핵심 로직은 PKM 정본 참조"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "line": "50",
+            "quote": "| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM | PKM Zettelkasten LOCK | ... 링크 타입 4종 (RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES); ... | 원본 도메인(#6 PKM) LOCK 변경 시 자동 상속 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\PKM_KNOWLEDGE_MANAGEMENT_구조화_종합계획서.md",
+            "line": "2556-2564",
+            "quote": "### A.3 링크 타입 정의 — `related`(양방향)/`supports`(A→B)/`contradicts`(양방향)/`continues`(A→B)/`branches`(A→B) 5종 표"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\AUTHORITY_CHAIN.md",
+            "line": "49",
+            "quote": "| LOCK-PKM-10 | Zettelkasten 노트 타입 | 기존 명세 §8.1 | permanent, literature, fleeting, index, structure | ❌ 불가 | — 링크 타입 전용 LOCK은 PKM에 부재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\AUTHORITY_CHAIN.md",
+            "line": "44",
+            "quote": "| LOCK-PKM-05 | 지식그래프 엣지 타입 | 기존 명세 §4.1 | RELATED_TO, TAGGED_WITH, BELONGS_TO, SOURCED_FROM, CONTRADICTS, SUPERSEDES, SUPPORTS, MENTIONS | — V12 4종은 이 엣지 타입의 부분집합(계층 혼동의 근원, SUPERSEDES는 여기에만 존재)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\06_zettelkasten\\atomic_note_structure.md",
+            "line": "53",
+            "quote": "link_type: Literal[\"related\", \"supports\", \"contradicts\", \"continues\", \"branches\"]"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\06_zettelkasten\\atomic_note_structure.md",
+            "line": "215-222",
+            "quote": "# ZettelLink ↔ LOCK-PKM-05 매핑 — LINK_TYPE_TO_GRAPH_EDGE: \"continues\": \"RELATED_TO\" / \"branches\": \"RELATED_TO\" — Zettel 링크 5종과 그래프 엣지 8종은 별개 계층, SUPERSEDES는 Zettel 링크에 미존재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\06_zettelkasten\\_index.md",
+            "line": "25",
+            "quote": "3. **링크 타입**: related, supports, contradicts, continues, branches"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-3_PKM-Knowledge-Management\\PKM_KNOWLEDGE_MANAGEMENT_상세명세.md",
+            "line": "553",
+            "quote": "link_type: \"related\" | \"supports\" | \"contradicts\" | \"continues\" | \"branches\";"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\05_cloud-library\\zettelkasten.md",
+            "line": "12",
+            "quote": "| LOCK 상속 | #6 PKM Zettelkasten LOCK — 원자적 노트, 5종 링크 타입 (related/supports/contradicts/continues/branches) (→ LOCK-V12-09) | — 5-3 자체 하위 정본도 이미 5종"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\P1_LINK_VALIDATION_REPORT.md",
+            "line": "132",
+            "quote": "| T-03 | C-05 Zettelkasten 링크 타입 4종->5종 정정 | PKM 링크 타입 LOCK 확인 후 V12 정정 | LOCK-V12-09 값 갱신, C-05 RESOLVED |"
+          }
+        ],
+        "conclusion": "5종(related, supports, contradicts, continues, branches)이 정본이다. #6 PKM(3-3)이 Zettelkasten 정본 소유자(C-03 RESOLVED)이고 LOCK-V12-09는 PKM 자동 상속 파생 LOCK이므로, V12 측 \"4종(RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES)\" 표기 3곳(§3.4/§A.4/AUTHORITY_CHAIN)을 5종으로 정정하고 C-05를 RESOLVED로 전환한다. V12 4종은 LOCK-PKM-05 지식그래프 엣지 타입 8종의 부분집합을 Zettel 링크 타입으로 오기한 계층 혼동이다.",
+        "rationale": "①정본 소유권: 5-3 CONFLICT_LOG L15 C-03 RESOLVED가 \"#6 PKM이 Zettelkasten 정본 소유자\"를 기확정했고, 5-3 AUTHORITY_CHAIN L50의 LOCK-V12-09 자체가 \"원본 도메인(#6 PKM) LOCK 변경 시 자동 상속\"으로 선언된 파생 LOCK — V12 값은 PKM 정본을 따라야 한다. ②LOCK 존재 확인(C-05가 요구한 확인 절차 완료): PKM AUTHORITY_CHAIN 실측 결과 링크 타입 전용 LOCK은 부재 — LOCK-PKM-10(L49)은 노트 타입 5종, LOCK-PKM-05(L44)는 지식그래프 엣지 타입 8종. 따라서 5-3 §9.2 1순위(LOCK 값)는 미적용이고 3순위(도메인 정본)가 적용되어, PKM 부록 §A.3(종합계획서 L2556-2564 5종 표) + 06_zettelkasten 본문(atomic_note_structure.md L53/L83 Literal 5종, _index.md L25) + 상세명세 L553이 일관 정의한 5종이 정본이다. ③오기 메커니즘 규명: V12 4종(RELATED_TO/SUPPORTS/CONTRADICTS/SUPERSEDES)은 LOCK-PKM-05 엣지 8종의 부분집합과 정확히 일치하며, atomic_note_structure.md L215-222 LINK_TYPE_TO_GRAPH_EDGE 매핑이 두 계층의 구분(continues/branches→RELATED_TO+type 축퇴, SUPERSEDES는 Zettel 링크에 미존재)을 명시 — V12가 엣지 타입을 링크 타입으로 오기한 것. ④도메인 내 정합: 5-3 자체 하위 정본 zettelkasten.md L12·zettelkasten_extension.md L12는 이미 5종으로 기재되어 있고, P1_LINK_VALIDATION_REPORT L132 T-03이 \"4종->5종 정정, C-05 RESOLVED\"를 예정 트리거로 명시 — 메타 3곳만 정정하면 도메인 전체가 5종으로 수렴한다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "old": "링크 타입 4종 (RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES)",
+            "new": "링크 타입 5종 (related, supports, contradicts, continues, branches — 정본: #6 PKM 부록 §A.3)",
+            "note": "L50 LOCK-V12-09 값 정정. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM LOCK | Luhmann-style 원자적 노트, 4종 링크 타입 | 상세명세 D-7 참조 |",
+            "new": "| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM LOCK | Luhmann-style 원자적 노트, 5종 링크 타입 (related/supports/contradicts/continues/branches) | 상세명세 D-7 참조 |",
+            "note": "L232 §3.4 LOCK 테이블. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "     - §A.4 값: \"원자적 노트, 4종 링크 타입\"",
+            "new": "     - §A.4 값: \"원자적 노트, 5종 링크 타입\"",
+            "note": "L642 P0-3 절차의 §A.4 인용값 동기화. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| LOCK-V12-09 | D-7 (Zettel) | #6 PKM | (PKM Zettelkasten LOCK) | 원자적 노트, 4종 링크 타입 |",
+            "new": "| LOCK-V12-09 | D-7 (Zettel) | #6 PKM | (PKM Zettelkasten LOCK) | 원자적 노트, 5종 링크 타입 (related/supports/contradicts/continues/branches) |",
+            "note": "L1254 부록 §A.4 매핑 테이블. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "AUTHORITY_CHAIN 정정 | OPEN — C-05 |",
+            "new": "AUTHORITY_CHAIN 정정 | ✅ RESOLVED (2026-06-11, D2) — C-05: PKM 정본 5종 채택, §3.4/§A.4/AUTHORITY_CHAIN 정정 완료 |",
+            "note": "L1084 S-6 리스크 row 상태 전환. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| C-05 | 2026-04-03 | OPEN |",
+            "new": "| C-05 | 2026-04-03 | RESOLVED |",
+            "note": "L17 C-05 상태 전환. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "**OPEN** — §9.2 우선순위 1에 따라 PKM 도메인 정본 우선. 단, PKM 링크 타입은 LOCK-PKM-10(노트 타입)이 아닌 부록 §A.3에 기재되어 LOCK 보호 여부 불명확. PKM 도메인에 링크 타입 LOCK 존재 여부 확인 후 V12 정정 필요 | PKM LOCK-PKM-10은 \"노트 타입\"(permanent, literature 등)을 보호하며 \"링크 타입\"과 별개. 링크 타입이 LOCK 보호 대상인지 PKM 도메인 확인 필요 |",
+            "new": "**RESOLVED (2026-06-11, D2) — 5종 정본 확정** — PKM 도메인 확인 완료: 링크 타입 전용 LOCK 부재(LOCK-PKM-10=노트 타입, LOCK-PKM-05=지식그래프 엣지 타입 8종). §9.2 3순위(도메인 정본)에 따라 #6 PKM 부록 §A.3 + 06_zettelkasten 정본의 5종(related, supports, contradicts, continues, branches) 채택. V12 \"4종(RELATED_TO/SUPPORTS/CONTRADICTS/SUPERSEDES)\"은 LOCK-PKM-05 엣지 타입의 부분집합을 Zettel 링크 타입으로 오기한 계층 혼동 — §3.4/§A.4/AUTHORITY_CHAIN 5종으로 정정 | PKM atomic_note_structure.md LINK_TYPE_TO_GRAPH_EDGE 매핑이 두 계층 구분을 명시(continues/branches→RELATED_TO+type 축퇴, SUPERSEDES는 Zettel 링크에 미존재). 5-3 자체 하위 정본 zettelkasten.md/zettelkasten_extension.md도 이미 5종 기재 |",
+            "note": "L17 C-05 판정+근거 셀 동시 교체. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "핵심 원칙(원자적 노트, 4종 링크 타입, ID 체계)",
+            "new": "핵심 원칙(원자적 노트, 5종 링크 타입, ID 체계)",
+            "note": "L15 C-03 판정 텍스트 내 전파 오기 정정. count=1 검증 완료"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |",
+            "new": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |\n| 2026-06-11 | D2 판정: C-05 RESOLVED — Zettelkasten 링크 타입 5종(PKM 부록 §A.3) 정본 확정. V12 4종 표기는 LOCK-PKM-05 엣지 타입 혼동으로 판정, §3.4/§A.4/AUTHORITY_CHAIN + S-6 정정 |",
+            "note": "변경 이력 append. count=1 검증 완료"
+          }
+        ],
+        "risk": "낮음. (1) V12 AUTHORITY_CHAIN의 SUPERSEDES를 소비한 downstream 실측 0건 — 5-3 하위 정본 2건(zettelkasten.md/zettelkasten_extension.md L12)은 이미 5종 기재로 무영향, P1 검증 T-03이 본 정정을 예정 트리거로 명시. (2) CONFLICT_LOG L76 변경 이력의 \"C-04~C-08 OPEN 5건\"은 2026-04-12 시점 역사 기록이므로 무수정 유지(append-only 원칙). (3) SUPERSEDES 자체는 LOCK-PKM-05 그래프 엣지 타입으로 계속 유효 — 본 판정은 Zettel 링크 타입 계층에만 적용되며 그래프 엣지 계층은 불변. (4) C-04/C-06/C-07/C-08은 본 판정 범위 밖으로 OPEN 유지.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D3",
+        "question": "5-3 C-06 판정: 현금비중 5% vs 20% 충돌 — 어느 값이 정본인가(LOCK 여부·맥락 차이 포함), C-06 처리 방향은?",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\AUTHORITY_CHAIN.md",
+            "line": "71",
+            "quote": "| Cash Ratio | **SPEC §10.2** | PART2 §6.8 Circuit Breaker 테이블 | Min 20% |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "line": "374",
+            "quote": "일일 손실 -3% 중단, VIX>40 매수 중단, 포지션 -10% 강제 청산, 현금 20% 최소, 단일종목 10% 한도"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "line": "988",
+            "quote": "| 최소 현금 비율 | 20% | 신규 매수 차단 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "line": "632",
+            "quote": "\"min_cash_ratio\": 0.20,"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\19_liquidity-cash\\cash_allocation.md",
+            "line": "333",
+            "quote": "| Cash Ratio Min 20% | **SPEC §10.2** | CircuitBreaker CB-4와 연동. CashAllocationManager의 MIN_CASH_RATIO(5%)는 운영 목표, CB의 20%는 안전장치 임계값 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\19_liquidity-cash\\cash_allocation.md",
+            "line": "49",
+            "quote": "MIN_CASH_RATIO = 0.05          # 최소 5% 현금 유지 (기본값, 설정 가능 5~10%)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+            "line": "386",
+            "quote": "MIN_CASH: float = 0.20               # 최소 현금 비중 20%"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "line": "49",
+            "quote": "| LOCK-V12-08 | PortfolioConstraints 최대 비중 | AI Investing | AI-Invest Constraints LOCK | 단일 종목 최대 비중: 10%, 단일 섹터 최대 비중: 30% | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "231",
+            "quote": "| LOCK-V12-08 | PortfolioConstraints max 비중 | Ai-investing-detail LOCK | 단일 종목 max 10%, 단일 섹터 max 30% | 상세명세 C-2 참조 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "1253",
+            "quote": "| LOCK-V12-08 | C-2 (Portfolio) | AI Investing | (AI-Invest Constraints LOCK) | 단일 종목 max 10%, 단일 섹터 max 30% |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "18",
+            "quote": "| C-06 | 2026-04-03 | OPEN | **LOCK-V12-08 AUTHORITY_CHAIN 현금 비중 불일치** — AUTHORITY_CHAIN.md의 LOCK-V12-08에 \"현금 비중 최소: 5%\"가 기재되어 있으나, §3.4와 §A.4에는 현금 비중 미기재(단일 종목 10%, 단일 섹터 30%만 정의). 도메인 portfolio_optimization.md에는 MIN_CASH=20%로 정의. 5%는 출처 불명"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\19_liquidity-cash\\cash_allocation.md",
+            "line": "19",
+            "quote": "| 2 | **시장 상태별 현금 비중** | Bull: 현금 5%(공격적), Sideways: 15%(중립), Bear: 30%(방어적). 매크로 레짐에 연동 |"
+          }
+        ],
+        "conclusion": "충돌 아님 — 맥락 구분 + 권고 기이행으로 C-06을 RESOLVED 처리한다. ①현금 비중의 LOCK 정본은 20%다: Ai-investing-detail AUTHORITY_CHAIN.md §4 LOCK 테이블(L71)에 \"Cash Ratio | SPEC §10.2 | Min 20%\"가 LOCK 보호 값으로 등재되어 있고, 정본 출처 SPEC §10.2(L374)·§22.4(L988 \"신규 매수 차단\")·§17 D-13(L632)이 일관되게 20%를 정의하며 portfolio_optimization.md(L386 MIN_CASH=0.20)도 정합. ②5%는 별개 맥락의 운영값(LOCK 아님)이다: cash_allocation.md의 MIN_CASH_RATIO=0.05(L49, 설정 가능 5~10%)는 CashAllocationManager의 현금 복원(CASH_RESTORE) 트리거용 운영 목표이며, 도메인 스스로 E9 LOCK References(L333)에서 \"MIN_CASH_RATIO(5%)는 운영 목표, CB의 20%는 안전장치 임계값\"으로 구분을 이미 명문화했다. 메커니즘도 상이: 20%=CB-4 하향 시 신규 매수 차단, 5%=하향 시 매도로 현금 복원. ③C-06이 지적한 5-3 AUTHORITY_CHAIN의 \"현금 비중 최소: 5%\" 초과 기재는 현행 파일에 이미 부재하다(현행 L49 LOCK-V12-08 값 = 단일 종목 10%·단일 섹터 30%뿐, 파일 전체 \"현금\" 0건) — C-06의 권고(AUTHORITY_CHAIN에서 현금 비중 삭제)가 이행 완료된 상태이며 계획서 §3.4(L231)/§A.4(L1253)와 정합. 현금 비중은 LOCK-V12-08 정의 범위 밖으로 유지하고(5-3로 상속하지 않음), 잔여 조치는 기록 정리(C-06 OPEN→RESOLVED + 변경 이력 + 계획서 S-7 RESOLVED)뿐이다.",
+        "rationale": "정본 우선순위(RULE 1.3 > PLAN 3.0 > DESIGN 2.0 LOCK/AUTHORITY_CHAIN > 본문) 및 5-3 CONFLICT_LOG §9.2 1순위(LOCK 보호 값 우선) 적용: 현금 20%는 Ai-investing-detail AUTHORITY_CHAIN §4 LOCK 테이블에 SPEC §10.2 출처로 명시된 LOCK 보호 값이고, 5%는 동 도메인 19_liquidity-cash/cash_allocation.md의 본문 레벨 운영 기본값으로 LOCK 테이블에 없다. 두 값은 동일 변수의 충돌이 아니라 서로 다른 메커니즘의 임계값(20%=Circuit Breaker CB-4 신규 매수 차단 안전장치, 5%=현금 복원 트리거 운영 목표)이며, 이 구분은 도메인 정본 cash_allocation.md E9 L333에 이미 명문화되어 있어 \"충돌 아님 — 맥락 구분\"이 성립한다. 한편 C-06의 직접 지적 대상(5-3 AUTHORITY_CHAIN LOCK-V12-08의 현금 5% 초과 기재)은 실측 결과 현행 파일에서 발견되지 않아(grep \"현금\" 0건, L49는 종목 10%/섹터 30%만) C-06이 요구한 물리 정정이 이미 반영된 상태다. 따라서 신규 본문 수정 없이 충돌 기록의 상태 전환만 필요하다. S10-1_VERIFICATION_REPORT.md L80도 \"Cash Ratio Min 20% ✅ MATCH\"로 도메인 검증을 통과한 상태다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| C-06 | 2026-04-03 | OPEN |",
+            "new": "| C-06 | 2026-04-03 | RESOLVED |",
+            "note": "C-06 상태 셀 OPEN→RESOLVED (old 유일성 count==1 검증 완료)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "**OPEN** — AUTHORITY_CHAIN.md에서 \"현금 비중 최소: 5%\" 삭제 또는 도메인 값(20%)으로 정정 필요. §3.4/§A.4 LOCK 정의에 현금 비중이 없으므로 AUTHORITY_CHAIN에서도 제거하는 것이 정합적",
+            "new": "**RESOLVED (2026-06-11, D3)** — ①현행 AUTHORITY_CHAIN.md LOCK-V12-08 값은 \"단일 종목 최대 비중: 10%, 단일 섹터 최대 비중: 30%\"로 현금 비중 표기 이미 부재(§3.4/§A.4 정합, 권고 기이행 확인). ②5% vs 20%는 값 충돌 아님 — 맥락 구분: 20%=Ai-investing AUTHORITY_CHAIN §4 LOCK \"Cash Ratio Min 20%\"(SPEC §10.2 Circuit Breaker CB-4, 신규 매수 차단 안전장치), 5%=cash_allocation.md MIN_CASH_RATIO 운영 목표 기본값(설정 가능 5~10%, CASH_RESTORE 트리거, LOCK 아님). 도메인이 cash_allocation.md E9에서 구분 명문화. 현금 비중은 LOCK-V12-08 정의 범위 밖 유지",
+            "note": "C-06 판정 셀 교체 (old 유일성 count==1 검증 완료)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |",
+            "new": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |\n| 2026-06-11 | D3 판정: C-06 OPEN→RESOLVED — 현행 AUTHORITY_CHAIN L49(LOCK-V12-08)에 현금 비중 기재 부재 확인(권고 기이행) + 5%/20% 맥락 구분 판정(20%=SPEC §10.2 CB-4 LOCK 안전장치·신규 매수 차단, 5%=cash_allocation.md 운영 목표·현금 복원 트리거, cash_allocation.md E9에 구분 명문화 기존재). C-04/C-05/C-07/C-08 OPEN 유지 |",
+            "note": "변경 이력 행 append (old 유일성 count==1 검증 완료)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| OPEN — C-06 |",
+            "new": "| ✅ RESOLVED (2026-06-11) — C-06: 현행 AUTHORITY_CHAIN에 현금 비중 기재 부재(권고 기이행) + 5%/20% 맥락 구분(20%=SPEC §10.2 LOCK 안전장치, 5%=cash_allocation.md 운영 목표, LOCK-V12-08 범위 밖 유지) |",
+            "note": "계획서 §S 이슈표 S-7 행 상태 셀 (old 유일성 count==1 검증 완료, S-9/S-10의 ✅ RESOLVED 표기 컨벤션 준수)"
+          }
+        ],
+        "risk": "①C-06(2026-04-03 등록)이 인용한 \"AUTHORITY_CHAIN에 현금 비중 최소: 5% 기재\"가 현행 파일에 없는데 AUTHORITY_CHAIN 변경 이력(L114-116)에 해당 정정 기록이 없음 — 무기록 수정(silent fix) 또는 등록 당시 오인 가능성. 다만 현행 상태가 §3.4/§A.4·도메인 LOCK 20%와 모두 정합하므로 결과는 올바르며, 본 판정의 변경 이력 행이 이 사실을 명시 기록함. ②잔존 설계 긴장(본 판정 범위 밖): cash_allocation.md L19 Bull 모드 운영 목표 현금 5%는 CB-4의 20% 신규 매수 차단 임계값 아래라, 공격 모드 목표 도달 시 신규 매수가 상시 차단되는 동작 간섭 가능 — 도메인이 E9 L333에서 \"운영 목표 vs 안전장치\"로 구분했고 S10-1 검증 MATCH이므로 충돌 등록 대상은 아니나, Ai-investing-detail 도메인 설계 리뷰 시 확인 권장. ③edits는 전부 기록성(메타) 편집이며 LOCK 값·정본 본문 무변경 — 타 도메인 영향 없음.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D4",
+        "question": "5-3 C-07 판정: TemplateSets(TS_CORE/TS_WEB_RESEARCH/TS_CODE) 전용 LOCK 부재 — 원본 도메인(3-8 A2A 또는 4-4 MLOps)에 TS 전용 LOCK을 신설할 것인가?",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+            "line": "854",
+            "quote": "### 4.2 템플릿 세트 소유/주입 방식 — 결정 완료(LOCK) (I-13 연동)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+            "line": "879-882",
+            "quote": "- (LOCK) TemplateSet = 3종 / 1) TS_CORE: 일반 대화/요약/정리(기본) 2) TS_WEB_RESEARCH: 웹 리서치/근거 수집/인용 중심 3) TS_CODE: 코딩/디버깅/리팩토링 중심"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-03_03. VAMOS_DESIGN_2.0_BLUE_NODES.md",
+            "line": "866",
+            "quote": "1) BLUE NODE는 템플릿을 \"정본으로 소유하지 않는다.\""
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\AUTHORITY_CHAIN.md",
+            "line": "71",
+            "quote": "| LOCK-BN-18 | **Template 소유 = CORE(02)** | D2.0-03 결정 | 템플릿 정본은 ORANGE CORE |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\03_template-injection\\_index.md",
+            "line": "19",
+            "quote": "> LOCK (D2.0-03 §4.2 — Template Set 3종): TS_CORE / TS_WEB_RESEARCH / TS_CODE의 3종을 V1 기본 활성으로 둔다. 추가 TemplateSet은 P1 단계에서 \"07 승인 후 등록\"으로 확장한다."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\03_template-injection\\_index.md",
+            "line": "4",
+            "quote": "> **Status**: LOCKED (Phase 4 2026-05-31, was REVIEW — 18-file LOCKED inventory)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "19",
+            "quote": "| C-07 | 2026-04-03 | OPEN | **LOCK-V12-07 TS 3종 전용 LOCK 부재** — ... **OPEN** — W-05에서 TS_CORE 정본=3-8(A2A) 확인 완료. 하지만 TS 3종 \"구성 자체\"를 보호하는 전용 LOCK이 양쪽 도메인에 부재. A2A 또는 MLOps 도메인에서 TS 전용 LOCK 신규 생성 권장"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "line": "48",
+            "quote": "| LOCK-V12-07 | TemplateSets 3종 구성 | #11 Conversation-A2A + #17 MLOps | 공유 LOCK | TS_CORE (범용 대화), TS_WEB_RESEARCH (웹 검색+요약), TS_CODE (코드 생성+리뷰)..."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-8_Conversation-A2A\\AUTHORITY_CHAIN.md",
+            "line": "56-65",
+            "quote": "LOCK-A2A-01~10 전수 실측 — TS/TemplateSet 항목 없음. 도메인 폴더 전체 grep(TS_CORE|TS_WEB|TS_CODE|TemplateSet|template, -i) 0건"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-4_MLOps-LLMOps\\01_prompt-versioning\\prompt_schema_spec.md",
+            "line": "60-62",
+            "quote": "├── TS_CORE/ ... ├── TS_WEB_RESEARCH/ ... └── TS_CODE/ — 디렉토리 구조만 존재, LOCK-ML-01~12에 TS 항목 없음"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "64",
+            "quote": "**R-T5-1 적용**: 모든 충돌은 \"정본 소유자 명시\"로 해결해야 함. 공동 소유 금지 — 반드시 주 소유 도메인 1개를 지정하고, 나머지는 참조 도메인으로 분류"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "220",
+            "quote": "sot 2/5-3_v12-Additions-Detail/ 내 파일은 **자체 LOCK을 LOCK-V12-01(귀속 원칙)·LOCK-V12-10(매핑 테이블) 2건에 한해서만 정의한다** ... 그 외 모든 LOCK-worthy 값은 해당 도메인 정본 폴더의 LOCK을 참조한다."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\1-2_Auxiliary-Modules\\06_mapping\\lock_value_registry.md",
+            "line": "-",
+            "quote": "TS_CORE|TemplateSet|LOCK-BN-18|LOCK-V12-07 grep 0건 (TS 미등재 — 별도 신설 요구 근거 없음)"
+          }
+        ],
+        "conclusion": "전용 LOCK 신설 불요 — 3-8/4-4 어느 쪽에도 TS 전용 LOCK을 신설하지 않는다. TS 3종 구성을 직접 보호하는 전용 LOCK은 이미 존재한다: DESIGN 2.0 정본 D2.0-03 §4.2 \"(LOCK) TemplateSet = 3종\"(결정 완료 LOCK) + sot2 구현 레벨 2-1 Blue-Node-Architecture LOCK-BN-18(Template 정본 소유=ORANGE CORE 02) 및 03_template-injection/_index.md(Status LOCKED)의 LOCK 인용. C-07의 해결은 5-3 측 LOCK-V12-07의 상속 출처를 \"#11 A2A + #17 MLOps 공유 LOCK(실존 부재)\"에서 정본인 D2.0-03 §4.2 + 2-1 LOCK-BN-18로 정정하고 C-07을 RESOLVED 처리하는 것이다(edits 9건, 전부 5-3 도메인 내 정정 — 3-8/4-4 source 0 touch 유지).",
+        "rationale": "① C-07의 사실 판단(3-8/4-4에 TS 전용 LOCK 부재)은 실측 일치 — 3-8 AUTHORITY_CHAIN L56-65 LOCK-A2A-01~10에 TS 없음 + 3-8 도메인 전체 grep(template 포함, -i) 0건, 4-4 LOCK-ML-01~12에 TS 없음(디렉토리 구조만 prompt_schema_spec.md L60-62). 그러나 C-07의 탐색 범위가 #11/#17로 한정되어 정본 LOCK의 실존을 놓침. ② TS 3종 구성의 정본 LOCK은 DESIGN 2.0 레벨에 이미 존재: D2.0-03 §4.2(L854 \"결정 완료(LOCK)\") L879-882 \"(LOCK) TemplateSet = 3종\" — 정본 우선순위상 DESIGN 2.0 LOCK은 W-05의 \"TS_CORE 정본=3-8\"(S7-4 STEP7 레벨, 최하위)에 우선하며, W-05 판정은 실측상으로도 근거 없음(3-8에 TS 내용 0건). ③ 2-1이 이를 sot2 레벨에서 LOCK-BN-18(AUTHORITY_CHAIN L71) + 03_template-injection/_index.md L17/L19(Status LOCKED, Phase 4 2026-05-31)로 등재 완료 — \"TS 3종의 존재와 구성\"을 직접 보호하는 전용 LOCK 요건 충족. ④ 3-8/4-4에 신규 LOCK 신설은 (a) D2.0-03 §4.2 규칙1 \"BLUE NODE는 템플릿을 정본으로 소유하지 않는다\"(L866) 위반, (b) R-T5-1 공동 소유 금지 위반(이중 정본), (c) 양 도메인 Phase 4 RECOVERY 종결(\"LOCK 재정의 0\" 봉인) 훼손이므로 금지. ⑤ 5-3 계획서 L220 절대 규칙(자체 LOCK 2건 한정, 나머지는 도메인 정본 LOCK 참조)에 따라 해결 수단은 상속 출처 정정이 유일 적법 경로. lock_value_registry에도 TS 미등재로 신설 요구 근거 없음. 모든 edits old 문자열은 grep count==1 검증 완료.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "old": "| LOCK-V12-07 | TemplateSets 3종 구성 | #11 Conversation-A2A + #17 MLOps | 공유 LOCK | TS_CORE (범용 대화), TS_WEB_RESEARCH (웹 검색+요약), TS_CODE (코드 생성+리뷰). 각 세트는 system_prompt + few_shot_examples + output_format + constraints로 구성 | 원본 도메인(#11 A2A 주, #17 MLOps 참조) LOCK 변경 시 자동 상속 |",
+            "new": "| LOCK-V12-07 | TemplateSets 3종 구성 | 2-1 Blue-Node-Architecture (D2.0-03 §4.2) | LOCK-BN-18 + D2.0-03 §4.2 \"(LOCK) TemplateSet = 3종\" | TS_CORE (범용 대화), TS_WEB_RESEARCH (웹 검색+요약), TS_CODE (코드 생성+리뷰). 각 세트는 system_prompt + few_shot_examples + output_format + constraints로 구성 | 원본 정본(D2.0-03 §4.2 / 2-1 `03_template-injection/_index.md`) LOCK 변경 시 자동 상속. #11 A2A·#17 MLOps는 소비/저장 구조 참조만 — C-07 판정(2026-06-11) |",
+            "note": "상속 출처 정정: 실존하지 않는 #11+#17 공유 LOCK → 정본 D2.0-03 §4.2 + 2-1 LOCK-BN-18. 값/기준 셀 무변경"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "old": "#11 A2A + #17 MLOps (공유 LOCK)",
+            "new": "2-1 Blue-Node-Architecture — D2.0-03 §4.2 / LOCK-BN-18 (#11 A2A·#17 MLOps는 참조)",
+            "note": "상속 흐름도 L70 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "old": "| 2026-04-12 | 전체 | **Phase 1 완료 검증** — P1-1 링크 검증 23/24 VALID (95.8%, 게이트 PASS). LOCK 10건 변경 0건. CONFLICT_LOG C-04~C-08 OPEN 5건 유지 (신규 등록 0건). B-2 TemplateSets CONDITIONAL 1건 잔여 | P1 Step 7 횡단 동기화 |",
+            "new": "| 2026-04-12 | 전체 | **Phase 1 완료 검증** — P1-1 링크 검증 23/24 VALID (95.8%, 게이트 PASS). LOCK 10건 변경 0건. CONFLICT_LOG C-04~C-08 OPEN 5건 유지 (신규 등록 0건). B-2 TemplateSets CONDITIONAL 1건 잔여 | P1 Step 7 횡단 동기화 |\n| 2026-06-11 | LOCK-V12-07 | **C-07 판정(D4)** — 상속 출처 정정: \"#11 A2A + #17 MLOps 공유 LOCK\"(실존 LOCK 부재) → D2.0-03 §4.2 \"(LOCK) TemplateSet = 3종\" + 2-1 LOCK-BN-18(Template 정본 소유=ORANGE CORE 02). 3-8/4-4 TS 전용 LOCK 신설 불요(정본 LOCK 기존재). 값/기준 변경 0건 | D4 판정 |",
+            "note": "변경 이력 append"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| C-07 | 2026-04-03 | OPEN |",
+            "new": "| C-07 | 2026-04-03 | RESOLVED |",
+            "note": "C-07 상태 전환"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "**OPEN** — W-05에서 TS_CORE 정본=3-8(A2A) 확인 완료. 하지만 TS 3종 \"구성 자체\"를 보호하는 전용 LOCK이 양쪽 도메인에 부재. A2A 또는 MLOps 도메인에서 TS 전용 LOCK 신규 생성 권장",
+            "new": "**RESOLVED (2026-06-11, D4)** — 전용 LOCK 신설 불요. TS 3종 구성을 직접 보호하는 LOCK 기존재: D2.0-03 §4.2 \"(LOCK) TemplateSet = 3종\"(DESIGN 2.0 정본, L879-882) + 2-1 Blue-Node LOCK-BN-18(Template 정본 소유=ORANGE CORE 02) + 2-1 `03_template-injection/_index.md`(Status LOCKED) LOCK 인용 2건. W-05 \"정본=3-8\"은 S7-4(STEP7) 레벨 판정으로 DESIGN 2.0 LOCK에 열위 + 실측상 3-8 도메인 내 TS 관련 내용 0건. 3-8/4-4 신규 LOCK 신설은 D2.0-03 §4.2 규칙1(\"BLUE NODE는 템플릿을 정본으로 소유하지 않는다\")·R-T5-1(공동 소유 금지) 위반이라 금지. 해결 = LOCK-V12-07 상속 출처를 2-1(D2.0-03 §4.2)로 정정",
+            "note": "C-07 판정 셀 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |",
+            "new": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |\n| 2026-06-11 | D4 판정: C-07 OPEN→RESOLVED — TS 3종 전용 LOCK은 D2.0-03 §4.2 \"(LOCK) TemplateSet = 3종\" + 2-1 LOCK-BN-18로 기존재. 3-8/4-4 신규 LOCK 신설 불요. LOCK-V12-07 상속 출처를 2-1(D2.0-03 §4.2)로 정정 (AUTHORITY_CHAIN·계획서 §3.4/§A.4/S-8 동시 정정) |",
+            "note": "변경 이력 append"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| LOCK-V12-07 | TS_CORE/TS_WEB_RESEARCH/TS_CODE 3종 | #17 MLOps / #11 A2A LOCK | 3개 TemplateSet 구성 | 상세명세 B-2 참조 |",
+            "new": "| LOCK-V12-07 | TS_CORE/TS_WEB_RESEARCH/TS_CODE 3종 | D2.0-03 §4.2 LOCK + 2-1 LOCK-BN-18 | 3개 TemplateSet 구성 | 상세명세 B-2 참조. C-07 판정(2026-06-11): #11/#17은 참조만 |",
+            "note": "계획서 §3.4 LOCK 표 정정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| S-8 | LOCK-V12-07 TS 3종 도메인 전용 LOCK 부재 — A2A/MLOps 양쪽 도메인 모두 TS_CORE/TS_WEB_RESEARCH/TS_CODE 전용 LOCK 미등록 | MEDIUM | A2A 또는 MLOps 도메인에서 TS 전용 LOCK 생성 권장 | OPEN — C-07 |",
+            "new": "| S-8 | LOCK-V12-07 TS 3종 도메인 전용 LOCK 부재 — A2A/MLOps 양쪽 도메인 모두 TS_CORE/TS_WEB_RESEARCH/TS_CODE 전용 LOCK 미등록 | MEDIUM | A2A 또는 MLOps 도메인에서 TS 전용 LOCK 생성 권장 | ✅ RESOLVED (2026-06-11, D4) — 전용 LOCK은 D2.0-03 §4.2 + 2-1 LOCK-BN-18로 기존재, 신설 불요. LOCK-V12-07 상속 출처 정정으로 해결 — C-07 RESOLVED |",
+            "note": "S-8 위험 항목 상태 전환"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "old": "| LOCK-V12-07 | B-2 (TS) | #11 A2A + #17 MLOps | (공유 LOCK) | TS_CORE, TS_WEB_RESEARCH, TS_CODE |",
+            "new": "| LOCK-V12-07 | B-2 (TS) | 2-1 Blue-Node-Architecture (D2.0-03 §4.2) | LOCK-BN-18 + D2.0-03 §4.2 (LOCK) TemplateSet = 3종 | TS_CORE, TS_WEB_RESEARCH, TS_CODE |",
+            "note": "계획서 부록 §A.4 표 정정"
+          }
+        ],
+        "risk": "① 잔여 표기 불일치: 5-3 `03_agent-teams/template_sets.md` L10 \"정본 폴더 = sot 2/3-8_Conversation-A2A/\" 및 계획서 L527의 B-2 귀속 표기(#11 주 + #17 참조)는 W-05/B-2 항목 귀속(D4 범위 밖) 영역이라 본 판정에서 무변경 — 단 3-8 실측 TS 내용 0건이므로 B-2 귀속 자체의 후속 재검(별도 결정) 권장. ② LOCK-V12-07 값 셀의 \"few_shot_examples/constraints\" 필드명은 2-1 정본 스키마(examples/guardrails, 03_template-injection/_index.md L96-131)와 명칭 차이가 있으나 의미 동등으로 보존(값 변경 0 원칙) — 후속 reconcile 후보. ③ 3-8/4-4는 Phase 4 종결 도메인으로 source 0 touch 유지(본 edits는 5-3 측만) — CROSS_HANDOFF_DRIFT 비발화. ④ W-05 행(CONFLICT_LOG L34)의 \"TS_CORE 정본 = 3-8\" 기재는 이력 기록으로 보존했으나 C-07 RESOLVED 판정문이 이를 명시적으로 supersede함.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D5",
+        "question": "5-3 C-08: Black-Litterman tau 0.025 vs 0.05 충돌 — LOCK 정본 우선 원칙으로 단일 값 확정 및 불일치 지점 정정",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\AUTHORITY_CHAIN.md",
+            "line": "44",
+            "quote": "| LOCK-V12-03 | Black-Litterman tau 값 | AI Investing | AI-Invest tau LOCK | tau = 0.025 (스케일링 계수); Omega = diag(P * tau * Sigma * P^T) | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "line": "20",
+            "quote": "| C-08 | 2026-04-03 | OPEN | **LOCK-V12-03 도메인 내부 tau 값 불일치 (참고)** — LOCK-V12-03의 \"tau=0.025\"는 Ai-investing top_down_allocation.md 기본값(0.025)과 일치하나, 같은 도메인 portfolio_optimization.md E9 LOCK에는 \"τ=0.05\"로 기재. 도메인 LOCK 범위는 \"tau = 1/T (0.01~0.05)\" 범위로 선언."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\AUTHORITY_CHAIN.md",
+            "line": "84",
+            "quote": "| #19 v12-Additions | Black-Litterman tau 정본, Factor 6종 정본, Portfolio 비중 제한 정본 | 인덱스 허브 매핑, 도메인 귀속 원칙 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\AI_INVESTING_구조화_종합계획서.md",
+            "line": "274-287",
+            "quote": "§3.4 LOCK 보호 선언 테이블 12항목(Win Rate~비용 상한) 전수에 tau 항목 부재. L286: | 14-Item Tech Stack | **SPEC §14** | PART2 §6.8 기술스택 테이블 | 변경 불가 (LOCK) |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_AI_INVESTING_SPEC.md",
+            "line": "428",
+            "quote": "## 14. 14-Item Locked 기술 스택 — 문서 전문 grep 'tau' 0건: E9가 인용한 \"SPEC §14\" 출처에 tau 정의 자체가 없음(허위 인용)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\03_macro-sector-stock\\top_down_allocation.md",
+            "line": "166",
+            "quote": "self.tau: float = 0.025              # B-L tau 기본값"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\03_macro-sector-stock\\top_down_allocation.md",
+            "line": "241",
+            "quote": "| tau = 1/T (0.01~0.05) | SPEC §14, He-Litterman (1999) | B-L 균형수익률 불확실성 스케일링 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+            "line": "610",
+            "quote": "| τ (BL 스케일링) = 0.05 | SPEC §14 | Black-Litterman 불확실성 스케일 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "line": "348",
+            "quote": "| τ (tau) = 0.05 | SPEC §14 (기술스택 LOCK) | 파라미터 변경 불가 — LOCK 해제 절차 필요 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\08_cross-asset\\cross_asset_optimization.md",
+            "line": "266",
+            "quote": "tau: float = 0.05,"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\AI_INVESTING_구조화_종합계획서.md",
+            "line": "1698",
+            "quote": "| **sot 2/ ↔ LOCK/FREEZE** | LOCK이 절대 우선 | sot 2/ 즉시 수정. CONFLICT_LOG에 기록 |"
+          }
+        ],
+        "conclusion": "Black-Litterman tau 단일 정본 = 0.025 (LOCK-V12-03). 근거 계층 전수 실측 결과 RULE 1.3/PLAN 3.0/lock_value_registry에 tau 부재, DESIGN 2.0 LOCK 계층(AUTHORITY_CHAIN)에 등재된 tau 값은 5-3 AUTHORITY_CHAIN.md L44 LOCK-V12-03 \"tau = 0.025\"가 유일하므로 LOCK 정본 우선 원칙상 0.025가 확정값. 도메인 내 0.05 기재(portfolio_optimization.md, portfolio_risk.md, cross_asset_optimization.md)는 본문 계층이며, 이들이 LOCK 출처로 인용한 \"SPEC §14\"는 14-Item 기술스택 LOCK으로 tau를 정의하지 않아(전문 grep 0건) LOCK 자격이 없는 허위 인용 → 전부 0.025로 정정하고 E9 출처를 LOCK-V12-03으로 교체. top_down_allocation.md(0.025, 동적 범위 1/T 0.01~0.05)는 정합 — 무변경. C-08은 RESOLVED 전환.",
+        "rationale": "①계층 판정: BASE-1.3 우선순위(RULE 1.3 > PLAN 3.0 > DESIGN 2.0 LOCK > 본문 > 스키마/STEP7)에서 tau가 등장하는 최상위 계층은 DESIGN 2.0 LOCK(AUTHORITY_CHAIN)이고 그 유일한 값이 LOCK-V12-03=0.025. 상위 계층(RULE 1.3, PLAN 3.0, PLAN 2.0) grep 0건, lock_value_registry.md 0건 실측. ②0.05의 LOCK 주장 기각: portfolio_optimization.md L610·portfolio_risk.md L348의 \"τ=0.05 | SPEC §14\" 행은 SPEC §14(L428 \"14-Item Locked 기술 스택\")에 tau가 전혀 없고(전문 grep 0건), 도메인 계획서 §3.4 LOCK 테이블(12항목)에도 tau가 없어 LOCK 계층 자격 불성립 — 본문 계층 값에 불과. ③소유권 정합: AI-investing AUTHORITY_CHAIN L84는 tau 정본 소유를 본 도메인으로 선언하나 도메인 LOCK 테이블에 미등록 상태이므로, 등록된 유일 LOCK인 LOCK-V12-03(0.025)이 현행 구속값이며 \"원본 도메인 LOCK 변경 시 자동 상속\" 조항이 향후 도메인 측 정식 LOCK 등재 경로를 보존. ④내부 정합: 0.025는 top_down_allocation.md 기본값(L166) 및 선언 범위 1/T(0.01~0.05)와 정합하고, 5-3 측 전 문서(계획서 L226/L1248, black_litterman_model.md L12, _index.md L6, 상세명세 L344)와 일치하며 He-Litterman(1999) 표준값. ⑤정정 의무: 도메인 계획서 R9(L310) 및 L1698 \"LOCK이 절대 우선 → sot 2/ 즉시 수정 + CONFLICT_LOG 기록\"에 따라 0.05 기재 3개 파일 정정 및 C-08 RESOLVED 기록.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+            "old": "tau: float = 0.05,    # 스케일링 파라미터 (불확실성)",
+            "new": "tau: float = 0.025,    # 스케일링 파라미터 (불확실성)",
+            "note": "L99 함수 기본값 — LOCK-V12-03 정합화 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+            "old": "DEFAULT_TAU: float = 0.05            # Black-Litterman 스케일링 파라미터",
+            "new": "DEFAULT_TAU: float = 0.025            # Black-Litterman 스케일링 파라미터",
+            "note": "L388 클래스 상수 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\15_portfolio-advanced\\portfolio_optimization.md",
+            "old": "| τ (BL 스케일링) = 0.05 | SPEC §14 | Black-Litterman 불확실성 스케일 |",
+            "new": "| τ (BL 스케일링) = 0.025 | LOCK-V12-03 (5-3 AUTHORITY_CHAIN), He-Litterman (1999) | Black-Litterman 불확실성 스케일 |",
+            "note": "L610 E9 LOCK 행 — 값 정정 + 허위 출처(SPEC §14에 tau 부재) 교정 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "old": "`tau` (float64) — 불확실성 스케일링 팩터 (기본: 0.05)",
+            "new": "`tau` (float64) — 불확실성 스케일링 팩터 (기본: 0.025)",
+            "note": "L40 파라미터 설명 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "old": "tau: float = 0.05,",
+            "new": "tau: float = 0.025,",
+            "note": "L62 함수 기본값 (count==1 검증, L1757 trail_pct와 비충돌)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "old": "tau        — 스케일링 팩터 (기본 0.05)",
+            "new": "tau        — 스케일링 팩터 (기본 0.025)",
+            "note": "L81 docstring (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "old": "TAU: float = 0.05",
+            "new": "TAU: float = 0.025",
+            "note": "L204 클래스 상수 (count==1 검증, 대소문자 구분으로 L62와 비충돌)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\20_strategy-detail\\quant\\portfolio_risk.md",
+            "old": "| τ (tau) = 0.05 | SPEC §14 (기술스택 LOCK) | 파라미터 변경 불가 — LOCK 해제 절차 필요 |",
+            "new": "| τ (tau) = 0.025 | LOCK-V12-03 (5-3 AUTHORITY_CHAIN), He-Litterman (1999) | 파라미터 변경 불가 — LOCK 해제 절차 필요 |",
+            "note": "L348 E9 LOCK 행 — 값 정정 + 허위 출처 교정 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\Ai-investing-detail\\08_cross-asset\\cross_asset_optimization.md",
+            "old": "tau: float = 0.05,",
+            "new": "tau: float = 0.025,",
+            "note": "L266 BL 함수 기본값 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| C-08 | 2026-04-03 | OPEN |",
+            "new": "| C-08 | 2026-04-03 | RESOLVED |",
+            "note": "L20 상태 셀 (count==1 검증, L75 변경이력의 'C-04~C-08'과 비충돌)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "**OPEN (참고)** — V12 상속값(0.025)은 도메인 범위(0.01~0.05) 내에 있어 유효. 단, 도메인 내부에서 기본값이 0.025과 0.05로 파일별 상이. Ai-investing 도메인 내부 정합성 확인 권장",
+            "new": "**RESOLVED (D5, 2026-06-11)** — tau = 0.025 단일 정본 확정(LOCK-V12-03, DESIGN 2.0 LOCK 계층 유일 등재값; RULE 1.3/PLAN 3.0/lock_value_registry tau 부재 실측). 도메인 내 0.05 기재 3개 파일(portfolio_optimization, quant/portfolio_risk, cross_asset_optimization) 0.025로 정정. E9의 \"SPEC §14\" 출처는 허위 인용(SPEC §14=14-Item 기술스택, tau 미정의)으로 LOCK-V12-03 인용으로 교체. top_down_allocation.md 기본값 0.025 및 동적 범위 tau=1/T(0.01~0.05)는 정합 유지",
+            "note": "L20 판정 셀 — RESOLVED 판정 근거 기록 (count==1 검증)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\CONFLICT_LOG.md",
+            "old": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |",
+            "new": "| 2026-04-12 | Phase 1 완료 횡단 동기화 (Step 7): CONFLICT_CANDIDATE 0건 수집, 신규 등록 0건. C-04~C-08 OPEN 5건 상태 유지 확인 |\n| 2026-06-11 | D5 판정: C-08 RESOLVED — Black-Litterman tau=0.025 단일 정본 확정(LOCK-V12-03 우선), Ai-investing 3개 파일 0.05→0.025 정정 + E9 출처 SPEC §14→LOCK-V12-03 교정 |",
+            "note": "변경 이력 행 추가 (count==1 검증)"
+          }
+        ],
+        "risk": "①본 판정자는 읽기 전용 — 위 edits는 제안이며 적용은 별도 집행 필요. ②AI-investing 도메인의 정식 tau LOCK 미등재 상태는 잔존(권장 후속: 도메인 계획서 §3.4/AUTHORITY_CHAIN §4에 'BL tau = 0.025, He-Litterman (1999)' 정식 등재 — LOCK-V12-03의 자동 상속 조항이 이를 전제). ③C-08 출처 A/B 셀(발견 당시 기록)과 5-3 계획서 L674/P1_LINK_VALIDATION_REPORT L106의 'C-08 OPEN' 언급은 역사 기록으로 무변경 — 혼동 가능성 낮음. ④tau 0.025로의 기본값 하향은 BL 사후수익률에서 뷰 가중치를 낮추는 실질 효과가 있으나, 모든 구현이 tau를 호출 인자로 받아 동적 조정 가능(top_down의 1/T 규칙 유지)하므로 기능 영향 제한적. ⑤_archive 레거시 및 backup/test_iso 사본은 의도적으로 무변경.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D6",
+        "question": "3-7b 사용자 투명성 설계(A22): ResponseEnvelope에 reasoning_trace + evidence_sources 추가 시 SOT 5필드 LOCK과의 관계 — 선택지A(metadata dict 내부 포함, LOCK 유지) vs 선택지B(LOCK 해제, top-level 필드 추가) 미결정 건의 확정",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "294",
+            "quote": "| 3-7b | **R1: 사용자 투명성 설계 (A22)** | ResponseEnvelope에 reasoning_trace + evidence_sources 추가. ※SOT 5필드 LOCK과의 관계 확정 필요 (선택지A: metadata 내부 포함 / 선택지B: LOCK 해제) — STRATEGY_05 §4.2 참조 | **Must** | 3-7a후 | |"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_05_SAFETY_AND_ETHICS.md",
+            "line": "148-154",
+            "quote": "※ SOT 정본(D2.1-D2)에서 ResponseEnvelope는 5필드 LOCK: request_id, status, data, error, metadata … 선택지 A (LOCK 유지 — 권장):"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_05_SAFETY_AND_ETHICS.md",
+            "line": "169",
+            "quote": "→ 5필드 LOCK 위반 없음 — metadata는 dict 타입이므로 내부 자유"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS Engineering\\STRATEGY_05_SAFETY_AND_ETHICS.md",
+            "line": "171-175",
+            "quote": "선택지 B (LOCK 해제): … → Approval Gate 승인 필수 (D2.0-07 §4.3) → 5필드 → 9필드로 LOCK 재확정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "722",
+            "quote": "| 5 | ResponseEnvelope | request_id(str), status(Enum), data(Any), error(Error?), metadata(dict) — **5필드 LOCK** |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "191",
+            "quote": "| F2 | ResponseEnvelope 필드 수 | 5 | CLAUDE.md §12 LOCK |"
+          },
+          {
+            "file": "D:\\VAMOS\\CLAUDE.md",
+            "line": "521",
+            "quote": "### ResponseEnvelope (LOCK)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\1-2_Auxiliary-Modules\\06_mapping\\lock_value_registry.md",
+            "line": "30",
+            "quote": "| LOCK-AX-11 | ResponseEnvelope | answer/evidence/self_check/decision_ref/audit 필수 | D2.0-02 §5.1.1 (L717~737) | 전체 | 최상위 출력 표준 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "1870",
+            "quote": "S7B-007 … I-6 Self-check 과정에서 생성된 reasoning_trace를 사용자에게 선택적 표시. StreamEvent.event_type=\"thinking\"으로 스트리밍 중 사고 과정 실시간 전송."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\1-1_Verifier-Reasoning-Engines\\VERIFIER_REASONING_ENGINES_구조화_종합계획서.md",
+            "line": "277",
+            "quote": "| R-01-5 | D-1 Think Engine은 reasoning_trace를 반드시 반환해야 한다. 추론 과정 투명성 보장 | 설명 가능성(Explainability) | 코드 리뷰 거부 |"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "40",
+            "quote": "| D6 | 3-7b reasoning_trace 선택지 A/B | A(metadata 내부, LOCK 보존) |"
+          }
+        ],
+        "conclusion": "선택지A 채택 확정 — reasoning_trace + evidence_sources(및 confidence_score/disclaimer)는 ResponseEnvelope.metadata(dict) 내부에 포함하고, SOT 5필드 LOCK(request_id/status/data/error/metadata)은 그대로 보존한다. 선택지B(LOCK 해제, top-level 필드 추가)는 기각.",
+        "rationale": "독립 재검증 결과 창2 'A안 권고'는 타당하다. ①5필드 LOCK은 다층 정본으로 동결되어 있다(PART2 가이드 L722 '5필드 LOCK', 0-0 거버넌스 규칙서 L191 F2 필드 수 5=구조 고정, CLAUDE.md §12 ResponseEnvelope LOCK, lock_value_registry LOCK-AX-11) — 정본 우선순위상 DESIGN 2.0 LOCK 보존이 우선. ②원 설계 문서 STRATEGY_05 §4.2 자체가 '선택지 A (LOCK 유지 — 권장)'이며 L169에서 'metadata는 dict 타입이므로 내부 자유 → 5필드 LOCK 위반 없음'을 명시. ③A안은 A22 기능 요건을 완전 충족: reasoning_trace 사용자 표시는 D2.0-02 S7B-007이 StreamEvent 경유로 이미 설계했고(top-level 필드 불요), 1-1 R-01-5의 reasoning_trace 필수 계약은 엔진 결과(ThinkResult) 레벨이지 envelope top-level 요구가 아니며, 로드맵 6-5 E2E UI 표시도 metadata 읽기로 충족. ④B안은 Approval Gate 승인(D2.0-07 §4.3)·5→9필드 LOCK 재확정·A20 타입 동기화 체인(Pydantic→Rust→TS) 3개 언어 envelope 재생성을 유발하면서 A안 대비 기능적 이득이 전무. 어떤 정본도 top-level reasoning_trace를 요구하지 않음을 전수 grep으로 확인 — 반증 0건. 따라서 LOCK 보존 + metadata 내부 포함(A안)이 유일하게 정본 정합적이며 가장 보수적인 단일 결론이다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "※SOT 5필드 LOCK과의 관계 확정 필요 (선택지A: metadata 내부 포함 / 선택지B: LOCK 해제) — STRATEGY_05 §4.2 참조",
+            "new": "※SOT 5필드 LOCK과의 관계 **확정(D6, 2026-06-11): 선택지A 채택** — reasoning_trace/evidence_sources는 metadata(dict) 내부 포함, 5필드 LOCK 보존 (선택지B LOCK 해제 기각, Approval Gate 불요) — STRATEGY_05 §4.2 참조",
+            "note": "로드맵 L294 3-7b 행의 미결정 표기를 결정 표기로 전환. old 문자열은 파일 내 유일 매칭(grep count=1 실측 검증 완료). '선택지A'/'SOT 5필드 LOCK과의 관계 확정 필요' 각각 1회 출현 확인."
+          }
+        ],
+        "risk": "낮음. ①ResponseEnvelope 명칭 충돌 주의: Core 출력 표준(answer/evidence/self_check/decision_ref/audit, LOCK-AX-11/CLAUDE.md §12)과 IPC 봉투(request_id/status/data/error/metadata, D2.1-D2/PART2 L722)가 동명이체 — 본 결정(A안)은 STRATEGY_05 §4.2가 정의한 후자(metadata 보유 봉투)에 적용되며 전자는 무변경. ②Phase 4 검증 체크리스트(로드맵 L405 'reasoning_trace 필드 존재')는 metadata 내부 키 존재로 충족됨을 검증 시 해석 일치 필요. ③구현 시 metadata 내부 키 스키마(TypedDict 등)를 3-7b 산출물에서 명문화하면 dict 자유도로 인한 키 표류 위험 차단 가능.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D7",
+        "question": "스키마 개수 분모 충돌(READINESS_GUIDE '24개' vs 구현가이드 PART2 '25개' vs 실측 41~42): D2.1-D1~D8 실제 스키마 정의 수를 실측 확정하고 분모를 재정의, READINESS_GUIDE·PART2 출현 위치별 동시 정정.",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D2_D2_SCHEMA_ORANGE_CORE.md ~ D2.1-D8_D8_SCHEMA_UI_UX.md",
+            "line": "전수 grep \"schema_name\"",
+            "quote": "실측: D2=2, D3=12, D4=6, D5=9, D6=6, D7=7, D8=0 — _meta 블록 스키마 정의 합계 42개 (D1의 XxxSchema는 템플릿이라 제외)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+            "line": "216-256",
+            "quote": "§3.3 Schema 소유권 매핑 표 41행 — DecisionSchema~CloudLibrarySiteRegistryEntrySchema (KBEmbeddingRecordSchema 1건 누락으로 실측 42와 불일치)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+            "line": "300-302",
+            "quote": "### AC-D1-005: Schema 소유권 매핑 정합 — §3.3 Schema 소유권 매핑은 D2~D8 완성본(v3.0.0)과 1:1 대응해야 함 / 불일치 발견 시 → Gate FAIL (정본 문서 기준으로 수정)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D6_D6_SCHEMA_STORAGE_MEMORY.md",
+            "line": "327-332",
+            "quote": "\"_meta\": { \"schema_name\": \"KBEmbeddingRecordSchema\", \"schema_version\": \"v3.0.0\", \"owner_doc\": \"D6\", \"sec_id_slug\": \"kb-embedding-record\" } — §7-A.1 정식 v3.0.0 스키마 (문서이력 2.3.0: S13-A-007 추가)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "365",
+            "quote": "D2.1 스키마 문서의 ~40개 JSON Schema를 3개 언어로 변환:"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "373-400",
+            "quote": "필수 스키마 목록 (V0에서 생성해야 할 것) — 표 정확히 24행 (EventTypeRegistry/FailureCodeRegistry/FallbackRegistry 3종 레지스트리 + NodeRegistrySchema 포함, PART2 25개 열거표와 구성 상이)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "423, 1118",
+            "quote": "☐ D2.1 스키마 → Pydantic v2/Zod/serde 코드 생성 (24개) / | 11 | 24개 스키마 코드 생성 | §2.6 | ☐ |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "151-178",
+            "quote": "BASE-1.3의 모든 규칙이 코드에 반영되어야 한다. **총 24개 카테고리:** — §2.2 표 실측 24행. L419·L1115의 '24개 규칙'도 동일 분모(규칙 카테고리)로 스키마 분모 아님 → 정정 대상 제외"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "679-709",
+            "quote": "다음 25개 모델을 Pydantic v2로 정의하세요 — STEP-1 열거표 정확히 25행 (#1 IntentFrame ~ #25 AutonomyLevelSchema; D2.0-02 파생 3종 포함, 레지스트리는 registries.py 별도 5종)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "6436",
+            "quote": "v15.0.0 changelog: (2) AutonomyLevelSchema 추가(D2.1-D7 §4.7, 24→25개 스키마, 양쪽 테이블+7개 참조 동기화) — 25는 v15.0.0에서 의도 확정된 V0 서브셋 분모"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "575",
+            "quote": "<!-- NOTE (XREF-V0-22): V0 서브셋. PHASE_B2 정본은 33개 모델 정의. V0에서 25개 우선 구현 후 V1에서 확장 --> — 25=V0 서브셋임이 PART2 자체 주석으로 명시"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "802, 6172",
+            "quote": "전체 25개 스키마 정확도를 위해 첨부를 권장합니다 / | 11 | 25개 스키마 코드 생성 (Pydantic v2/Zod/serde) | D2.1-D1~D8 | [ ] | — '전체'·'D2.1-D1~D8' 표기가 25를 D2.1 전체 분모로 오인케 함(실측 42와 충돌)"
+          }
+        ],
+        "conclusion": "분모를 3계층으로 재정의·확정한다(실측 기준 단일 결론): ① 'D2.1 전체 스키마' 분모 = 실측 42개(D2=2, D3=12, D4=6, D5=9, D6=6, D7=7, D8=0; D1 §3.3 매핑 41은 KBEmbeddingRecordSchema 1건 누락분으로 AC-D1-005에 따라 42로 정정) ② 'V0 코드 생성' 분모 = 25개(구현가이드 PART2 STEP-1 열거표가 작업 정본 — v15.0.0 의도 확정·열거 25행·검증 게이트 전체 25 정합; READINESS_GUIDE의 '24개'는 동일 체크리스트 항목의 충돌값이므로 25로 정정하고 'V0 서브셋, 전체 42개 중'을 병기) ③ 스키마 분모로서의 '24'는 전면 폐기하되, READINESS L151/419/1115·PART2 L6169의 '24개 규칙/카테고리'는 BASE-1.3 규칙 분모(§2.2 표 실측 24행 정합)로 별개이므로 무변경 유지. PART2의 '전체 25개'(L802)·'D2.1-D1~D8'(L6172) 표기는 25를 전체 분모로 오인케 하므로 'V0 서브셋(전체 42개 중)'으로 한정 표기 정정.",
+        "rationale": "(1) 실측이 유일한 정본 산정 기준: D2.1-D2~D8에서 _meta 블록 schema_name 전수 카운트 = 42 (D8=0은 D1 문서이력 2.2.2 'D8 스키마 없음 명시'와 정합). 41은 D1 §3.3 매핑의 stale 값(D6 §7-A.1 KBEmbeddingRecordSchema v3.0.0 누락)이며, D1 자체 수용기준 AC-D1-005가 '불일치 시 정본(D2~D8) 기준 수정'을 의무화하므로 42가 확정 분모다. (2) 24 vs 25는 동일 V0 체크리스트 항목(#11)의 충돌: READINESS §2.6 표는 24행이나 레지스트리 3종+NodeRegistrySchema를 스키마로 혼산하고 IntentFrame/EvidencePack 등을 빠뜨린 구버전 구성인 반면, PART2 STEP-1 열거표는 25행 완전 열거+필드 참조표+검증 게이트(L816/L1558/L1571)까지 일관되고 v15.0.0(2026-03-03)에서 '24→25개, 양쪽 테이블+7개 참조 동기화'로 의도적으로 확정된 최신 작업 정본이다. 따라서 V0 분모는 25로 통일하고 READINESS 측을 정정한다. (3) 사용자가 증거로 든 READINESS L151/419/1115의 '24'는 §2.2 BASE-1.3 규칙 매핑 표(실측 정확히 24행)의 규칙 카테고리 수로 스키마 분모가 아님을 실측 확인 — 오정정하면 정합 파괴이므로 제외. (4) PART2의 '33개 모델'(XREF-V0-22)은 PHASE_B2 contracts.py Pydantic 모델 수로 별개 분모이며 이미 주석으로 reconcile되어 있어 본 판정 범위 외. (5) 모든 edits old 문자열은 대상 파일 내 count=1 유일성 검증 완료.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "D2.1 스키마 문서의 ~40개 JSON Schema를 3개 언어로 변환:",
+            "new": "D2.1 스키마 문서의 42개 JSON Schema(실측: D2=2, D3=12, D4=6, D5=9, D6=6, D7=7, D8=0)를 3개 언어로 변환:",
+            "note": "L365 — '~40개' 근사치를 실측 42로 확정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "**필수 스키마 목록 (V0에서 생성해야 할 것):**",
+            "new": "**필수 스키마 목록 (V0에서 생성해야 할 것):**\n\n> ⚠️ V0 코드 생성 작업 정본은 구현가이드 PART2 STEP-1의 **25개 모델 열거표**(D2.1 전체 42개 중 V0 서브셋)이다. 아래 표는 레지스트리 3종을 포함한 24행 참고 목록으로, 분모로 사용하지 않는다.",
+            "note": "L373 — §2.6 24행 표가 분모 충돌을 재생산하지 않도록 정본 포인터 주석 삽입"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "☐ D2.1 스키마 → Pydantic v2/Zod/serde 코드 생성 (24개)",
+            "new": "☐ D2.1 스키마 → Pydantic v2/Zod/serde 코드 생성 (V0 서브셋 25개 — 구현가이드 PART2 STEP-1 정본, D2.1 전체 42개 중)",
+            "note": "L423 — V0 체크리스트 분모 24→25 정정 + 전체 42 병기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "| 11 | 24개 스키마 코드 생성 | §2.6 | ☐ |",
+            "new": "| 11 | 25개 스키마 코드 생성 (V0 서브셋, D2.1 전체 42개 중) | §2.6 | ☐ |",
+            "note": "L1118 — 체크리스트 항목 #11 분모 24→25 정정 (PART2 L6172와 동일 항목 일치화)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "old": "전체 25개 스키마 정확도를 위해 첨부를 권장합니다.",
+            "new": "STEP-1 대상 25개 스키마(D2.1 전체 42개 중 V0 서브셋) 정확도를 위해 첨부를 권장합니다.",
+            "note": "L802 — '전체 25개'가 D2.1 전체 분모로 오인되는 표기를 V0 서브셋으로 한정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "old": "| 11 | 25개 스키마 코드 생성 (Pydantic v2/Zod/serde) | D2.1-D1~D8 | [ ] |",
+            "new": "| 11 | 25개 스키마 코드 생성 (Pydantic v2/Zod/serde, V0 서브셋 — D2.1 전체 42개 중) | PART2 V0 STEP-1 | [ ] |",
+            "note": "L6172 — 근거란 'D2.1-D1~D8'(전체 함의)을 실제 정본인 STEP-1 열거표로 교체"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D1_D1_SCHEMA_GLOSSARY.md",
+            "old": "| SemanticCacheSchema | D6 | [REF:D6:semantic-cache-schema:Schema:*:v3.0.0] |",
+            "new": "| SemanticCacheSchema | D6 | [REF:D6:semantic-cache-schema:Schema:*:v3.0.0] |\n| KBEmbeddingRecordSchema | D6 | [REF:D6:kb-embedding-record:Schema:*:v3.0.0] |",
+            "note": "D1 §3.3 — AC-D1-005 이행: D6 실정의 KBEmbeddingRecordSchema(slug kb-embedding-record, D6 §7-A.1) 누락분 추가로 매핑 41→42 정합화"
+          }
+        ],
+        "risk": "① 스코프 외 잔존 전파 필요: 'docs\\\\sot 2\\\\0-0_Governance-Rules-Meta\\\\GOVERNANCE_RULES_META_규칙서.md' L292와 'docs\\\\guides\\\\sections\\\\session_30.md' L567/L678에 '25개 스키마 코드 생성/완료'가 잔존(분모 표기는 25로 옳으나 'V0 서브셋, 전체 42' 병기 없음) — PART2가 sections에서 빌드된다면 L802/L6172 정정이 session 소스에도 반영돼야 회귀 방지됨. ② backup/test_iso 사본(docs\\\\backup, docs\\\\test_iso_p2)은 의도적 무변경 — 사본 비교 감사 시 diff 발생. ③ D1은 LOCK SOT 문서이나 §3.3 행 추가는 AC-D1-005가 자체 의무화한 정합 수정이며 코드값 창작이 아님(슬러그는 D6 _meta 실값 인용); 그래도 D1 문서이력(§7) 버전 행 추가가 별도 후속 필요. ④ READINESS §2.6 24행 표 본체(레지스트리 혼산 구성)는 주석으로만 격하하고 재작성하지 않음 — 표 자체를 PART2 25행으로 교체하는 작업은 별도 결정 사안. ⑤ PHASE_B2 '33개 모델'은 별개 분모(contracts.py 모델 수)로 본 판정에서 무변경 — 향후 33 실측 검증 미수행.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D9",
+        "question": "I-모듈 개수 표기 자기모순: D2.0-02 L4186 'I-1~I-24 + I-24(Self-evo Gate) = 25개'(I-24 이중계수) vs 메타 6곳(L7/15/68/112/118/161)의 'I-1~I-24'. §7/§11 실제 정의 수를 실측하여 24개 단일레이어 또는 24+1 듀얼레이어 중 단일 결론 명문화 및 L4186·§11.13.1 제목 모순 해소.",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "line": "613",
+            "quote": "## 5.6 (LOCK) I-Series 정본 인덱스 (I-1 ~ I-25)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "line": "641",
+            "quote": "| I-24 | Knowledge Graph Engine (지식 그래프 엔진) | EXP | false | V1:OFF / V2:OFF / V3:ON | D2 | true | builder | graph | 2.2.1 / GraphRAG와 연동 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "line": "642",
+            "quote": "| I-25 | SDAR Engine (Self-Directed Adaptive Reasoning) | COND | false | V1:OFF / V2:COND / V3:ON | D2 | true | builder | panel | SDAR 자율추론 엔진, VAMOS_SDAR_DESIGN_SPECIFICATION 참조 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "line": "635",
+            "quote": "| I-18 | Self-evo Engine (자기진화 엔진) | EXP | false | V1:OFF / V2:OFF / V3:ON | D2 | true | builder | panel | 2.2.1 / S-Series 중심 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-01_01. VAMOS_DESIGN_2_0_OVERVIEW.md",
+            "line": "656",
+            "quote": "| S-8 | Self-evo Governance | COND | true | V1:OFF / V2:OFF / V3:ON | D2 | I-19, I-8, I-9, I-24 | true | builder | modal | 승인/거버넌스는 팝업(Modal)로만 노출 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+            "line": "463",
+            "quote": "> ⚠️ **정본 고지**: 본 섹션의 I-모듈 번호·명칭은 DESIGN 2.0 §5.6 (D2.0-01) 정본 인덱스(I-1~I-25, 25개)를 기준으로 한다."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+            "line": "3674",
+            "quote": "7.3 VAMOS 내부 기능(I-1 ~ I-25, 25개)과의 매핑"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "616",
+            "quote": "# 4. ORANGE CORE 내부 기능(I-1~I-25) 설계 인덱스"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "618",
+            "quote": "**정본은 D2.0-01 §5.6 LOCK 인덱스(I-1~I-25, 25개)**를 참조하십시오."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "1037",
+            "quote": "# 7. I-1 ~ I-25 상세 설계"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "2485",
+            "quote": "### I-24: Knowledge Graph Engine (지식 그래프 엔진)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "2501",
+            "quote": "### I-25: SDAR Engine (Self-Directed Adaptive Reasoning)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "4186",
+            "quote": "- I-1~I-24 + I-24(Self-evo Gate) = 25개 I-모듈이 §7에서 상세 정의됨."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "line": "§7 실측 집계",
+            "quote": "grep -cE '^### I-([0-9]+):' = 22건(I-4~I-25 각 1회, I-24 단일 등장) + I-1~I-3 산문형 블록(L1041 '(I-1. 대화 이해·추론 엔진)' 외 2건) = 25개 정의, 중복 0"
+          }
+        ],
+        "conclusion": "25개 단일레이어(I-1~I-25)로 확정 명문화한다. 질문이 제시한 두 선택지(24개 단일 / 24+1 듀얼)는 모두 실측과 불일치: §7 실제 정의 수는 정확히 25개(I-1~I-25, I-24=Knowledge Graph Engine 단일 등장)이고, \"Self-evo Gate\"라는 별도 I-모듈은 존재하지 않는다(자기진화는 I-18 Self-evo Engine[I-모듈] + S-8 Self-evo Governance[S-Series 거버넌스 게이트]로 분리 존재). L4186의 총계 '25개'는 옳으나 분해식 'I-1~I-24 + I-24(Self-evo Gate)'가 허구(I-24 이중계수 + 명칭 오기)이므로 'I-1~I-25 = 25개'로 교정하고, §11.13.1 제목은 '25개(I-1~I-25, 단일 레이어)'로 명문화하며, 메타 6곳의 stale 'I-1~I-24'는 §4(L616)/§7(L1037) 실제 헤더 및 D2.0-01 §5.6 LOCK에 정합하게 'I-1~I-25'로 교정한다.",
+        "rationale": "정본 우선순위 전 계층이 만장일치로 25개 단일레이어를 지지한다. ① RULE 1.3(BASE-1.3): I-모듈 개수 언급 없음(grep 'I-2[45]|I-모듈' 0건) — 판단 비관여. ② PLAN 3.0: L463 정본 고지 \"(I-1~I-25, 25개)\", L3674/L4724/L4732 \"(I-1 ~ I-25, 25개)\", L1563 \"25개 I-모듈\" 등 일관 25개. ③ DESIGN 2.0 LOCK: D2.0-01 §5.6 헤더 자체가 \"(LOCK) I-Series 정본 인덱스 (I-1 ~ I-25)\"(L613)이고 테이블 행이 정확히 I-1~I-25 25행, I-24=Knowledge Graph Engine(L641), I-25=SDAR Engine(L642). ④ 본문 실측: D2.0-02 §7은 '### I-N:' 헤더 22건(I-4~I-25, 각 1회) + I-1~I-3 산문 블록 3건 = 25개 정의이며 I-24 중복 정의 없음. ⑤ 'Self-evo Gate'는 전 문서에서 L4186 한 곳에만 등장하는 표기로, 정본상 자기진화는 I-18 Self-evo Engine(모듈, L635)과 S-8 Self-evo Governance(게이트/거버넌스, L656)이지 I-24가 아니다. 따라서 L4186은 총계만 맞고 분해가 틀린 오기, 메타 6곳(L7/15/68/112/118/161)의 'I-1~I-24'는 I-25(SDAR) 추가 이전의 stale 표기(같은 문서 §4 L616·§7 L1037 헤더는 이미 I-25로 갱신됨)로 판정한다. §11.13.1 제목 '25개'는 수치상 정합이나 레이어 구조 미명시이므로 '(I-1~I-25, 단일 레이어)'를 명문화해 모순 재발을 차단한다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "- I-1~I-24 + I-24(Self-evo Gate) = 25개 I-모듈이 §7에서 상세 정의됨.",
+            "new": "- I-1~I-25 = 25개 I-모듈(단일 레이어)이 §7에서 상세 정의됨 (정본: D2.0-01 §5.6 LOCK 인덱스. I-24=Knowledge Graph Engine, I-25=SDAR Engine. 자기진화는 별도 게이트 모듈이 아니라 I-18 Self-evo Engine[I-모듈] + S-8 Self-evo Governance[S-Series 게이트]로 존재).",
+            "note": "L4186 본 교정: I-24 이중계수 + 'Self-evo Gate' 허구 명칭 제거, 정본 분해식으로 교체"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "#### 11.13.1 I-모듈 25개 상세 정의",
+            "new": "#### 11.13.1 I-모듈 25개(I-1~I-25, 단일 레이어) 상세 정의",
+            "note": "§11.13.1 제목(L4184) 명문화: 25개 단일레이어 구조 확정 표기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "- 내부 기능 I-1~I-24을 “설계 문서 형태”로 정리한다.",
+            "new": "- 내부 기능 I-1~I-25를 “설계 문서 형태”로 정리한다.",
+            "note": "메타 L7 stale 'I-24' 교정(§7 실측 25개 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "  - I-1~I-24 인덱스 및 상세 설계(7장)",
+            "new": "  - I-1~I-25 인덱스 및 상세 설계(7장)",
+            "note": "메타 L15 교정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "- **적용 범위**: I-1~I-24 전체, Blue Node 오케스트레이션, Tool 호출 계층.",
+            "new": "- **적용 범위**: I-1~I-25 전체, Blue Node 오케스트레이션, Tool 호출 계층.",
+            "note": "메타 L68(DEC-001) 교정"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "4. ORANGE CORE 내부 기능(I-1~I-24) 설계 인덱스",
+            "new": "4. ORANGE CORE 내부 기능(I-1~I-25) 설계 인덱스",
+            "note": "메타 L112 TOC 교정(§4 실제 헤더 L616 'I-1~I-25'와 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "7. I-1~I-24 상세 설계",
+            "new": "7. I-1~I-25 상세 설계",
+            "note": "메타 L118 TOC 교정(§7 실제 헤더 L1037 'I-1 ~ I-25'와 정합)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-02_02. VAMOS_DESIGN_2.0_ORANGE_CORE.md",
+            "old": "- **적용 범위**: I-1~I-24 전체 모듈, Blue Node, Infra Tool Adapter(04 참조).",
+            "new": "- **적용 범위**: I-1~I-25 전체 모듈, Blue Node, Infra Tool Adapter(04 참조).",
+            "note": "메타 L161(Runnable 프로토콜) 교정"
+          }
+        ],
+        "risk": "①결론(25개 단일레이어)이 질문 제시 선택지(24 / 24+1) 밖이나, 이는 정본 3계층(PLAN 3.0 L463·D2.0-01 §5.6 LOCK·D2.0-02 자체 §4/§7 헤더) 만장일치 실측 결과로 선택지 전제 자체가 stale했음. ②edits 3~8(메타 6곳)은 D9가 명시한 최소 범위(L4186+§11.13.1)를 넘는 확장이나, D9가 자기모순 구성요소로 직접 실측 지시한 라인들이며 미교정 시 '25개 단일레이어 명문화'와의 잔존 모순이 남아 포함함 — 채택 보류 시 edits 1~2만 적용해도 핵심 모순(이중계수)은 해소됨. ③전 old 문자열 grep -F 유일성(count==1) 검증 완료. ④D2.0-02 §4.0 매핑표의 '구번호 I-20 → 정본 I-24' 기능 매핑(L650)은 본 교정과 무관한 별도 레이어(구번호↔정본 매핑)로 무변경. ⑤본 판정은 읽기 전용으로 수행되었으며 파일은 수정하지 않음.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D10",
+        "question": "V0 비용 정본 단일화: 0-0 규칙서 §1.5 'V0 = ₩0(로컬)' vs §3.2 GO/NO-GO #3 'V0 비용 상한 = V1 동일' / #14 '₩40,000/월 하드코딩' vs 구현가이드 PART1 'V0 ~₩5,000' 병존 — 단일 정본 결정 및 모순 지점 edits 작성",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\BASE-1.3_VAMOS_RULE_1.3_BASE.md",
+            "line": "193",
+            "quote": "5) 비용(V1/V2/V3 상한 준수)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\BASE-1.3_VAMOS_RULE_1.3_BASE.md",
+            "line": "195-199",
+            "quote": "**[비용 상한 정의]** (PLAN 3.0 9.3 기준) … * **V1 (기본 — 저비용 모드)**: … 월 상한: 40,000원 ($30) — V0 상한 항목 자체가 부재(최상위 정본에 V0 비용 상한 개념 없음)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+            "line": "1420-1421",
+            "quote": "3) 비용 모드 골격 — V1/V2/V3 비용 상한 정책 정의 (V0는 정책을 '정의'하는 단계, 자체 상한 없음)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md",
+            "line": "1415,1418",
+            "quote": "로컬 우선 구조(서버는 확장 옵션) / V0는 단일 LLM 구조를 기본으로 사용"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\1-2_Auxiliary-Modules\\06_mapping\\lock_value_registry.md",
+            "line": "19-35",
+            "quote": "LOCK-AX-01~15 전수에 비용 LOCK 항목 부재 (₩40,000/93,000/266,000 grep 0건 실측)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "25",
+            "quote": "| **비용 절대 상한** | V1: ₩40,000/월, V2: ₩93,000/월, V3: ₩266,000/월 (ABSOLUTE LOCK) | — V0 제외"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "70",
+            "quote": "| **비용 상한** | ₩0 (로컬) | ₩40,000/월 LOCK | ₩93,000/월 LOCK | ₩266,000/월 ABSOLUTE LOCK |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "284",
+            "quote": "| 3 | V0 비용 엔진 = V1 한도(₩40,000) 사전 설정 (V0 실제 지출 ₩0 — 로컬 전용, §1.5 정본) | V0-001 | [ ] | — §3.2 #3은 이미 선행 보정 완료 상태 실측"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "295",
+            "quote": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK | [ ] | — 미보정 잔존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "416",
+            "quote": "| 1 | cost.monthly_limit | V1=40000, V2=93000, V3=266000 | config.v{N}.toml `[cost]` | V0+ | — 엔진은 V0부터 존재하되 한도값은 V1~V3만"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "line": "6164",
+            "quote": "| 3 | V0 비용 상한 = V1 동일 명시 | V0-001 | [ ] | — 규칙서 §3.2가 'Part2 §7.1 원문'으로 표방하는 출처, 미보정 원문 잔존"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "549",
+            "quote": "| V0 | 테스트용 (~₩5,000) | - | OpenAI 1개 | 없음 (로컬) | — B.5 '월 비용 상한 (LOCK)' 열에 비정본 추정치가 상한처럼 기재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "428-430",
+            "quote": "OpenAI API Key … V0 테스트 + V1 Main LLM / **V0에서는 이 키 1개만 있으면 됩니다.** 나머지는 전부 로컬입니다."
+          }
+        ],
+        "conclusion": "V0 비용 정본 = ₩0 (로컬 전용)으로 단일화한다. V0 자체의 비용 상한 LOCK은 존재하지 않으며(BASE-1.3 §5와 규칙서 §1.2 ABSOLUTE LOCK은 V1₩40K/V2₩93K/V3₩266K만 정의), '₩40,000/월 하드코딩'(GO/NO-GO #14)은 V0 스캐폴드 단계에서 비용 엔진에 V1 한도를 사전 설정하는 V1 진입 대비 구성 작업이지 V0 지출 상한·허용이 아니다. V0 중 OpenAI 연동 스모크 테스트로 발생 가능한 소액 호출(~₩5,000)은 정본 상한이 아닌 비정본 예상치로 명시하되, 사전 설정된 V1 한도(₩40,000) 엔진이 안전망으로 통제한다 — 별도 V0 API 상한 LOCK은 신설하지 않는다(최상위 정본 BASE-1.3에 V0 상한 부재가 정본 상태이므로 신규 LOCK 창설은 권한 위반).",
+        "rationale": "정본 우선순위 추적 결과 3개 층위가 일관되게 'V0 무상한·로컬'을 지지한다. (1) RULE 1.3(BASE-1.3) §5 비용 상한 정의(L195~213)는 V1/V2/V3만 정의하고 V0 항목이 없으며 L193 성공 기준도 '비용(V1/V2/V3 상한 준수)'로 V0를 제외한다. (2) PLAN 3.0 §3.1.5(L1420~1421)는 V0의 비용 골격을 'V1/V2/V3 비용 상한 정책 정의'로 한정하고 V0를 로컬 우선·단일 LLM으로 규정한다. (3) DESIGN 2.0 LOCK 레지스트리(lock_value_registry.md LOCK-AX-01~15)에 비용 LOCK이 없고, 비용 ABSOLUTE LOCK은 규칙서 §1.2 L25에서 V1~V3만 명시한다. 따라서 규칙서 §1.5 L70 'V0 = ₩0 (로컬)'이 정본이고, §3.2 #3은 이미 선행 보정(L284)으로 '엔진 사전 설정 vs 실제 지출 ₩0' 구분이 반영되어 있다. 잔존 모순은 #14(규칙서 L295·PART2 L6175)의 무주석 하드코딩 문구, PART2 L6164의 미보정 원문('V0 비용 상한 = V1 동일'), PART1 L549의 '테스트용 ~₩5,000'이 LOCK 열에 상한처럼 기재된 3곳이다. PART1의 ~₩5,000은 삭제가 아니라 비정본 예상치로 강등 보존(L428~430 V0 OpenAI 연동 테스트 전제와 양립, 가장 보수적). PART2 edits는 규칙서 §3.2가 'Part2 §7.1 원문'을 표방하므로 출처 정렬상 필수(미정렬 시 모순 원천 잔존).",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "old": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK | [ ] |",
+            "new": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 (V1 한도 사전 설정 — V0 지출 상한 아님, V0 실제 지출 ₩0 §1.5 정본) | ABSOLUTE LOCK | [ ] |",
+            "note": "§3.2 #14 (L295). #3(L284)은 선행 보정 완료로 무변경. 유일성 count=1 실측 검증."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| V0 | 테스트용 (~₩5,000) | - | OpenAI 1개 | 없음 (로컬) |",
+            "new": "| V0 | **₩0** (로컬 정본 — V0 자체 상한 LOCK 없음. API 연동 테스트 ~₩5,000은 비정본 예상치, 비용 엔진은 V1 한도 ₩40,000 사전 설정으로 통제) | - | OpenAI 1개 (연동 테스트용) | 없음 (로컬) |",
+            "note": "B.5 전체 비용 요약 (L549). '월 비용 상한 (LOCK)' 열을 정본(₩0)으로 교정하고 ~₩5,000을 비정본 예상치로 강등 보존. 유일성 count=1 실측 검증."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "old": "| 3 | V0 비용 상한 = V1 동일 명시 | V0-001 | [ ] |",
+            "new": "| 3 | V0 비용 엔진 = V1 한도(₩40,000) 사전 설정 (V0 실제 지출 ₩0 — 로컬 전용, 0-0 규칙서 §1.5 정본) | V0-001 | [ ] |",
+            "note": "§7.1 #3 (L6164). 규칙서 §3.2가 'Part2 §7.1 원문'으로 표방하는 출처의 미보정 원문 — 규칙서 L284 선행 보정문과 정렬. 유일성 count=1 실측 검증."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART2_구현단계.md",
+            "old": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK | [ ] |",
+            "new": "| 14 | 비용 엔진 ₩40,000/월 하드코딩 (V1 한도 사전 설정 — V0 지출 상한 아님, V0 실제 지출 ₩0 — 0-0 규칙서 §1.5 정본) | ABSOLUTE LOCK | [ ] |",
+            "note": "§7.1 #14 (L6175). 규칙서 #14 edit와 동일 취지의 출처 정렬. 유일성 count=1 실측 검증."
+          }
+        ],
+        "risk": "(1) 규칙서 §3.2 #3(L284)은 이미 선행 보정되어 있어 본 결정은 #14만 추가 교정 — 선행 보정과 충돌 없음을 실측 확인했으나, 만약 다른 파이프라인이 L284를 원문으로 되돌리면 재모순 발생. (2) PART2 edits 2건은 프롬프트 명시 범위(규칙서 §3.2·PART1) 밖의 출처 정렬 — 적용 제외 시 규칙서가 표방하는 'Part2 §7.1 원문'과의 불일치(모순 원천)가 잔존. (3) 규칙서 §1.5 L69 'V0 LLM=Ollama 단일'과 PART1 L428 'OpenAI Key V0 테스트' 간 LLM 구성 긴장은 비용 범위 밖으로 본 결정에서 미처리(V0 운영 LLM=Ollama, OpenAI는 V1 대비 연동 스모크 테스트로 해석 양립) — 별도 결정 필요 시 후속 항목으로 분리. (4) PART1 L630 '유료 API 비용은 월 ₩5,000 이하'는 V1 맥락 서술로 V0 정본과 무충돌 확인, 무변경.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D11",
+        "question": "구현가이드 PART1 C.2 #9~13 및 C.3 #1~5(배정 미정 항목)가 로드맵 Phase 2~6 중 어느 Phase에 속하는지 단일 배정하고 PART1에 명기",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "640",
+            "quote": "## C.2 V1 구현 중 결정 필요 (13건)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "465",
+            "quote": "## Phase 6: V1 구현 (Phase 1~5 반복) — ⬜ 미착수"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "493",
+            "quote": "| 6-3 | R2a': CORE 활성화 | 26개 CORE 실제 구현 | **Must** |"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "496",
+            "quote": "| 6-6 | R3: 운영 시작 | SQLite 모니터링 + 비용 추적(₩40K/월) + Alert | Should |"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "497",
+            "quote": "| 6-7 | B3': Eval | QoD≥0.70 + V1 벤치마크 4개 | **Must** |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "685",
+            "quote": "V1을 2~4주 운영하면서 각 계층별 디스크 사용량을 측정한 뒤, 그 데이터를 기반으로 상한을 정하는 것이 합리적입니다"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "688",
+            "quote": "V1 구현 시점에 사용자가 관심 분야를 확정하면 그에 맞는 RSS URL 리스트를 config.toml에 등록합니다"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "697",
+            "quote": "V1 구현 후 실데이터로 테스트하면서 확정하는 것이 올바른 순서입니다"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "701",
+            "quote": "## C.3 V2 이후 결정 필요 (5건)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "4",
+            "quote": "**목적**: VAMOS AI 프로젝트의 전체 진행 순서 — Phase 0~6"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "509",
+            "quote": "**Phase 6 완료 조건**: V1 MVP 동작 + QoD≥0.70 + 비용≤₩40K/월 + 배포 검증 PASS + V1 GO/NO-GO + 회고 기록 + git tag v1-release"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "277",
+            "quote": "## Phase 3: 런타임 설계 + 횡단 전략 (R1 + X1) — ◐ 부분 (설계 내용은 SOT 2에 흡수, 독립 결정문서 미생성)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "55",
+            "quote": "| **6** | V1 구현 (Phase 1~5 반복) | 선후만 정의 (병렬 트랙 미정의) | V0 완료 | ⬜ |"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "470",
+            "quote": "> **거버넌스 교차**: PART1 B.2(12건), READINESS V1 GO/NO-GO (21건)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "line": "705",
+            "quote": "| 1 | MessageBus 구현 (In-Memory vs Redis) | V2 | DEFER-AT-001 → Redis 확정 | **Redis (이미 확정)** |"
+          }
+        ],
+        "conclusion": "C.2 #9~13은 전원 Phase 6(V1 구현)에 배정한다 — #9=6-6(R3 운영 시작, 2~4주 실측 후 용량 상한 확정), #10·#11·#12=6-3(R2a' CORE 활성화, RT-BNP/DCL 구현 시 config.toml 등록·기본 세트 제공), #13=6-3 구현+6-7(B3' Eval, 실데이터 테스트로 프롬프트 확정). C.3 #1~5는 현행 로드맵 Phase 2~6 비해당(로드맵은 Phase 6=V1, git tag v1-release에서 종료)으로 확정하고, Phase 6이 정의한 \"Phase 1~5 반복\" 패턴을 준용해 차기 버전 사이클에 배정 명기한다 — #1~#3=V2 사이클(#1은 DEFER-AT-001→Redis 결정 확정으로 구현[Phase 4 상당]만 잔존), #4~#5=V3 사이클, 결정 정식화 시점은 각 사이클의 Phase 3(런타임 설계) 상당.",
+        "rationale": "①C.2는 섹션 제목 자체가 \"V1 구현 중 결정 필요\"(PART1 L640)이고 로드맵에서 V1 구현=Phase 6(로드맵 L465)이므로 #9~13의 Phase 배정은 6으로 유일하다. 세부 task 귀속은 각 항목의 상세 설명과 Phase 6 작업표의 1:1 대조로 도출: #9 \"V1을 2~4주 운영하면서 디스크 사용량 측정\"(L685)→6-6 R3 운영 시작(SQLite 모니터링, 로드맵 L496); #10 \"V1 구현 시점에 config.toml 등록\"(L688)·#11 키워드 사전·#12 DCL-TECH RSS는 RT-BNP/DCL 모듈 구현 행위이므로 6-3 R2a' CORE 활성화 \"26개 CORE 실제 구현\"(로드맵 L493)에 귀속(#11 편집 UI는 6-5 R2c' E2E UI 보조); #13 \"V1 구현 후 실데이터로 테스트하면서 확정\"(L697)→6-3 구현+6-7 B3' Eval(QoD≥0.70, 로드맵 L497). ②C.3은 \"V2 이후 결정 필요\"(L701)인데 로드맵은 Phase 0~6만 정의(L4)하고 Phase 6 완료 조건이 V1 MVP+v1-release(L509), 거버넌스 교차도 PART1 B.2/READINESS V1뿐(L470)이어서 V2/V3 항목을 Phase 6에 강제 배정하면 \"V2 이후\" DEFER 의미와 모순되고 V1 GO/NO-GO(6-9)에 허위 차단 항목을 만든다. 따라서 \"Phase 2~6 비해당\"이 정본 대조상 유일하게 정확한 단일 결론이며, 처리 시점 앵커는 로드맵이 명시한 버전 사이클 반복 패턴(\"Phase 1~5 반복\", L55·L465)을 준용해 V2 사이클(#1~3)/V3 사이클(#4~5)의 설계 단계(Phase 3 상당, L277)로 명기한다. #1은 권장안 셀에 \"Redis (이미 확정)\"(L705)이므로 결정 잔존 없음·구현만 잔존. 모든 edits의 old 문자열은 PowerShell 정규식 이스케이프 매칭으로 count==1 유일성 실측 완료, 기존 \"배정:\" 마커 0건으로 충돌 없음.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "## C.2 V1 구현 중 결정 필요 (13건)",
+            "new": "## C.2 V1 구현 중 결정 필요 (13건)\n\n> **[D11 배정 확정]** #9~13 전부 **Phase 6 (V1 구현)** 배정 — 로드맵(VAMOS_최종_로드맵.md) Phase 6 작업표 기준 #9=6-6(R3 운영 시작 실측), #10·#11·#12=6-3(R2a' CORE 활성화), #13=6-3 구현+6-7(B3' Eval) 확정. 항목별 상세는 각 행의 \"배정\" 표기 참조.",
+            "note": "C.2 섹션 헤더 직하에 D11 배정 총괄 명기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 9 | **메모리 저장 용량 한계** | 미정의 (TTL만 정의됨) | 실측 후 결정 | L0~L3 각 계층별 용량 상한 미정의. 구현 시 디스크 사용량 측정 필요 |",
+            "new": "| 9 | **메모리 저장 용량 한계** | 미정의 (TTL만 정의됨) | 실측 후 결정 | L0~L3 각 계층별 용량 상한 미정의. 구현 시 디스크 사용량 측정 필요 · **배정: Phase 6 (6-6 R3 운영 시작 — SQLite 모니터링 2~4주 실측 후 상한 확정)** |",
+            "note": "C.2 #9 → Phase 6/6-6"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 10 | **RT-BNP RSS 소스 목록** | 미정의 | V1에서 구독할 RSS 피드 URL 리스트 확정 | CLOUD_LIBRARY_SPEC §7 확장 |",
+            "new": "| 10 | **RT-BNP RSS 소스 목록** | 미정의 | V1에서 구독할 RSS 피드 URL 리스트 확정 | CLOUD_LIBRARY_SPEC §7 확장 · **배정: Phase 6 (6-3 R2a' CORE 활성화 — RT-BNP 구현 시 config.toml 등록)** |",
+            "note": "C.2 #10 → Phase 6/6-3"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 11 | **RT-BNP Breaking 키워드 사전** | 미정의 | 속보 감지 트리거 키워드 목록 확정 | 도메인별 정의 필요 (금융/지정학/기술) |",
+            "new": "| 11 | **RT-BNP Breaking 키워드 사전** | 미정의 | 속보 감지 트리거 키워드 목록 확정 | 도메인별 정의 필요 (금융/지정학/기술) · **배정: Phase 6 (6-3 R2a' CORE 활성화 — 기본 키워드 세트 제공, 편집 UI는 6-5)** |",
+            "note": "C.2 #11 → Phase 6/6-3 (UI 보조 6-5)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 12 | **DCL-TECH RSS 소스 목록** | 미정의 | AI/기술 동향 수집 RSS 피드 URL 확정 | §6.10.2 |",
+            "new": "| 12 | **DCL-TECH RSS 소스 목록** | 미정의 | AI/기술 동향 수집 RSS 피드 URL 확정 | §6.10.2 · **배정: Phase 6 (6-3 R2a' CORE 활성화 — DCL-TECH 구현 시 기본 추천 목록 등록)** |",
+            "note": "C.2 #12 → Phase 6/6-3"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 13 | **DCL 배경 요약 프롬프트** | 미정의 | I-3 L0에 주입할 \"세상 상황 요약\" 생성 프롬프트 확정 | §6.10.2 |",
+            "new": "| 13 | **DCL 배경 요약 프롬프트** | 미정의 | I-3 L0에 주입할 \"세상 상황 요약\" 생성 프롬프트 확정 | §6.10.2 · **배정: Phase 6 (6-3 구현 + 6-7 B3' Eval — 실데이터 테스트로 프롬프트 확정)** |",
+            "note": "C.2 #13 → Phase 6/6-3+6-7"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "## C.3 V2 이후 결정 필요 (5건)",
+            "new": "## C.3 V2 이후 결정 필요 (5건)\n\n> **[D11 배정 확정]** #1~5는 현행 로드맵 Phase 2~6 **비해당(로드맵 범위 밖)** — 로드맵(VAMOS_최종_로드맵.md)은 Phase 6(V1 구현, 완료=git tag v1-release)에서 종료되므로, 본 5건은 V1 출시 후 차기 버전 사이클(\"Phase 1~5 반복\" 패턴 준용)에서 처리한다: #1~#3=V2 사이클(#1은 Redis 확정으로 구현만 잔존), #4~#5=V3 사이클. 결정 정식화 시점은 각 사이클의 Phase 3(런타임 설계) 상당.",
+            "note": "C.3 섹션 헤더 직하에 D11 배정 총괄 명기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 1 | MessageBus 구현 (In-Memory vs Redis) | V2 | DEFER-AT-001 → Redis 확정 | **Redis (이미 확정)** |",
+            "new": "| 1 | MessageBus 구현 (In-Memory vs Redis) | V2 | DEFER-AT-001 → Redis 확정 | **Redis (이미 확정)** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클, 결정 확정으로 구현(Phase 4 상당)만 잔존** |",
+            "note": "C.3 #1 → V2 사이클(구현만 잔존)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 2 | GroupChat 순서 알고리즘 | V2 | DEFER-AT-002 | **Round-Robin + Priority Queue** |",
+            "new": "| 2 | GroupChat 순서 알고리즘 | V2 | DEFER-AT-002 | **Round-Robin + Priority Queue** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |",
+            "note": "C.3 #2 → V2 사이클 Phase 3 상당"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 3 | Agent Marketplace 등록 기준 | V2 | DEFER-AT-003 | **QoD ≥ 0.7 + 테스트 10회 통과 + OWNER 승인** |",
+            "new": "| 3 | Agent Marketplace 등록 기준 | V2 | DEFER-AT-003 | **QoD ≥ 0.7 + 테스트 10회 통과 + OWNER 승인** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |",
+            "note": "C.3 #3 → V2 사이클 Phase 3 상당"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 4 | Federated Agent 승인 정책 | V3 | DEFER-AT-004 | **OWNER 수동승인 + 샌드박스 72시간 검증** |",
+            "new": "| 4 | Federated Agent 승인 정책 | V3 | DEFER-AT-004 | **OWNER 수동승인 + 샌드박스 72시간 검증** · **배정: 로드맵 Phase 2~6 비해당 — V3 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |",
+            "note": "C.3 #4 → V3 사이클 Phase 3 상당"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\guides\\VAMOS_구현가이드_PART1_진입전.md",
+            "old": "| 5 | A2A 프로토콜 설계 | V3 | DEFER-AT-005 | **JSON-RPC over Streamable HTTP (MCP LOCK 통일)** |",
+            "new": "| 5 | A2A 프로토콜 설계 | V3 | DEFER-AT-005 | **JSON-RPC over Streamable HTTP (MCP LOCK 통일)** · **배정: 로드맵 Phase 2~6 비해당 — V3 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |",
+            "note": "C.3 #5 → V3 사이클 Phase 3 상당"
+          }
+        ],
+        "risk": "낮음. ①표 행 수·건수(13건/5건) 불변, 셀 내용 append만이므로 PART1 \"체크리스트 82건\" 카운트 등 외부 참조에 영향 없음. ②로드맵 task 번호(6-3/6-6/6-7/6-5)는 PART1에 기존 출현 0건이라 충돌 없으나, 로드맵 Phase 6 작업표가 추후 개편되면 task 번호 참조가 stale해질 수 있음(Phase 배정 자체는 불변). ③C.3의 \"Phase 2~6 비해당\" 판정은 로드맵이 V2/V3 사이클을 정식 Phase로 추가 정의하는 경우(D12 등 후속 결정) 그 시점에 사이클 번호로 치환 갱신 필요. ④모든 old 문자열은 count==1 실측 검증 완료(2026-06-11), 단 본 판정 이후 PART1이 수정되면 재검증 필요.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D13",
+        "question": "config.v1.toml LOCK 키 분모 12 vs 20 vs 22 불일치 — PHASE_B4 정본 실측으로 분모 확정 및 불일치 문서(CLAUDE.md §20, READINESS 2종) 정정",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "327-330",
+            "quote": "| `threshold_p0` | `integer` | `70` | P0 도메인 Self-check 통과 임계값 | LOCK | … | `soft_loop_max` | `integer` | `1` | Soft loop 자동 재시도 횟수 (이후 승인 필요) | LOCK |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "344-345",
+            "quote": "| `timeout_s` | `integer` | `600` | 승인 타임아웃 (초, 10분 미응답 시 자동 거부) | LOCK | / | `p2_timeout_s` | `integer` | `300` | P2/HITL 고위험 타임아웃 (초, 5분) | LOCK |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "357",
+            "quote": "| `transport` | `string` | `\"streamable_http\"` | … | MCP 전송 방식 (DEC-017 LOCK, stdio 제거) | D3 MCPBridgeLayerSchema (AC-D3-008) |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "507",
+            "quote": "| `active_node_cap` | `integer` | `3` | `10` | `50` | 세션당 활성 Blue Node 상한 (LOCK: D2.0-03 §4.3-B) | D3 BlueNodeSchema (LOCK-AT-014) |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "522",
+            "quote": "| `min_width` | `integer` | `1280` | `768` | `375` | 최소 화면 너비 (px) | D8 §3.1 LOCK |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "540",
+            "quote": "| `similarity_threshold` | `float` | `0.95` | `0.95` | `0.95` | 캐시 히트 유사도 임계값 (LOCK) | D6 SemanticCacheSchema (AC-D6-010) |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\PHASE_B4_CONFIG_SPEC.md",
+            "line": "1205-1213",
+            "quote": "VAL-001 `mcp.transport`는 반드시 \"streamable_http\" / VAL-006 `semantic_cache.similarity_threshold >= 0.95` (LOCK) / VAL-008 `core.single_decision_lock`은 항상 `true` / VAL-009 `logging.trace_id_required`는 항상 `true`"
+          },
+          {
+            "file": "D:\\VAMOS\\CLAUDE.md",
+            "line": "682-697",
+            "quote": "## 20. 핵심 config.v1.toml LOCK 값 — 표 12행: core.single_decision_lock ~ mcp.transport (cost.daily_limit 1300 / monthly_limit 40000 = ABSOLUTE LOCK 포함)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "339-361",
+            "quote": "§2.5 표 21행 중 **LOCK** 12행 (autonomy_level·llm 3종·vector_db.mode·storage.backend·guardrails 3종 = '-' 9행)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "line": "130",
+            "quote": "| **확정 값** | 일일 ₩1,300 / 월 ₩40,000 (BASE-1.3 §5 ABSOLUTE LOCK) | - |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "line": "255",
+            "quote": "### G. config.v1.toml 핵심 LOCK 값 (22개)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "line": "258-296",
+            "quote": "§4.1.G toml 블록 실측: 키 19개, # LOCK 주석 12개뿐 — 자칭 '22개'와 자체 모순"
+          }
+        ],
+        "conclusion": "정본 분모 = 20개. 산출: PHASE_B4_CONFIG_SPEC(config 정본) §3 LOCK 표기 전수 실측 = 10키(self_check.threshold_p0/p1/p2·soft_loop_max, approval.timeout_s·p2_timeout_s, mcp.transport, blue_nodes.active_node_cap, ui.min_width, semantic_cache.similarity_threshold) ∪ 상위정본(BASE-1.3 §5 ABSOLUTE LOCK·A1 DEC-005·AC-D6-008/009·D7 Downshift·VAL-008/009 불변규칙) 근거 12키(CLAUDE.md §20 기존 표) — 중복 2(mcp.transport, semantic_cache.similarity_threshold) 제외 = 20. '22'는 12+10 중복 미제거 합산 오류로 재현 불가(REVIEW §4.1.G 블록 자체도 19키/LOCK 주석 12개), '12'는 PHASE_B4 명시 LOCK 8키 누락. 정정: CLAUDE.md §20(루트+sot 사본) 분모 20 명기 및 누락 8행 추가, READINESS_REVIEW 22→20 3개소+§4.1.G toml 블록에 누락 4섹션 추가, READINESS_GUIDE §2.5 분모 명기+누락 8행 추가. backup\\sot 사본 2종은 백업 보존 원칙상 무수정.",
+        "rationale": "①PHASE_B4 'LOCK' 전수 grep 21회 발생 = 20행(L507만 2회: 'LOCK:'+LOCK-AT-014)이며 키 단위 LOCK 표기는 정확히 10키로 완결 실측됨. ②CLAUDE.md §20의 12키 중 PHASE_B4 §3 표에 LOCK 미표기인 10키는 모두 상위 정본이 잠금: cost.daily/monthly_limit는 RULE 1.3(BASE §5 ABSOLUTE LOCK, 최상위)이고 embedding(DEC-005)·vector_db/graph_db(AC-D6-008/009)·warn/block(D7)은 DESIGN 2.0 LOCK, single_decision_lock·trace_id_required는 PHASE_B4 자체 VAL-008/009 '항상 true' 불변규칙 — 우선순위 RULE 1.3 > DESIGN LOCK > 본문이므로 PHASE_B4 표기 누락이 이들의 LOCK 지위를 박탈하지 못함 → 12키 삭제 불가, 합집합 20이 유일 정합 분모. ③'22'는 어떤 실측 집계와도 일치하지 않음(REVIEW 블록 19키·LOCK 주석 12개, GUIDE 표 21행·LOCK 12행, PHASE_B4 10키, 합집합 20) — 12+10 단순합산(중복 2 미제거) 산술 오류로 판정. ④D13 지시 방향('CLAUDE.md §20에 누락 LOCK 키 행 추가')과도 합집합 20만 양립(분모 10 채택 시 행 삭제가 되어 지시 및 RULE 1.3과 모순). 모든 edits old 문자열은 대상 파일에서 count==1 검증 완료.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\CLAUDE.md",
+            "old": "## 20. 핵심 config.v1.toml LOCK 값",
+            "new": "## 20. 핵심 config.v1.toml LOCK 값 (20개 — 정본: PHASE_B4_CONFIG_SPEC §3 LOCK 표기 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외)",
+            "note": "분모 20 명기 (D13)"
+          },
+          {
+            "file": "D:\\VAMOS\\CLAUDE.md",
+            "old": "| mcp.transport | streamable_http | LOCK |",
+            "new": "| mcp.transport | streamable_http | LOCK |\n| self_check.threshold_p0 | 70 | LOCK |\n| self_check.threshold_p1 | 75 | LOCK |\n| self_check.threshold_p2 | 80 | LOCK |\n| self_check.soft_loop_max | 1 | LOCK |\n| approval.timeout_s | 600 | LOCK |\n| approval.p2_timeout_s | 300 | LOCK |\n| blue_nodes.active_node_cap | 3 | LOCK (V1) |\n| ui.min_width | 1280 | LOCK (V1) |",
+            "note": "PHASE_B4 §3.8a/3.8b/3.13/3.14 누락 8행 추가 → 총 20행"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\CLAUDE.md",
+            "old": "## 20. 핵심 config.v1.toml LOCK 값",
+            "new": "## 20. 핵심 config.v1.toml LOCK 값 (20개 — 정본: PHASE_B4_CONFIG_SPEC §3 LOCK 표기 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외)",
+            "note": "sot 사본 동기화 (루트와 동일 내용, L686)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\CLAUDE.md",
+            "old": "| mcp.transport | streamable_http | LOCK |",
+            "new": "| mcp.transport | streamable_http | LOCK |\n| self_check.threshold_p0 | 70 | LOCK |\n| self_check.threshold_p1 | 75 | LOCK |\n| self_check.threshold_p2 | 80 | LOCK |\n| self_check.soft_loop_max | 1 | LOCK |\n| approval.timeout_s | 600 | LOCK |\n| approval.p2_timeout_s | 300 | LOCK |\n| blue_nodes.active_node_cap | 3 | LOCK (V1) |\n| ui.min_width | 1280 | LOCK (V1) |",
+            "note": "sot 사본 동기화"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "old": "22개 LOCK 값 (§4.1.G 참조)",
+            "new": "20개 LOCK 값 (§4.1.G 참조)",
+            "note": "L251 §4.1.F 표"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "old": "### G. config.v1.toml 핵심 LOCK 값 (22개)",
+            "new": "### G. config.v1.toml 핵심 LOCK 값 (20개)",
+            "note": "L255 — 22는 12+10 중복 미제거 합산 오류"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "old": "config.v1.toml 생성 (22개 LOCK 값)",
+            "new": "config.v1.toml 생성 (20개 LOCK 값)",
+            "note": "L421 [V0-S5]"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_REVIEW.md",
+            "old": "transport = \"streamable_http\"                  # LOCK (DEC-017)",
+            "new": "transport = \"streamable_http\"                  # LOCK (DEC-017)\n\n[self_check]\nthreshold_p0 = 70                              # LOCK\nthreshold_p1 = 75                              # LOCK\nthreshold_p2 = 80                              # LOCK\nsoft_loop_max = 1                              # LOCK\n\n[approval]\ntimeout_s = 600                                # LOCK\np2_timeout_s = 300                             # LOCK\n\n[blue_nodes]\nactive_node_cap = 3                            # LOCK (V1, D2.0-03 §4.3-B)\n\n[ui]\nmin_width = 1280                               # LOCK (V1, D8 §3.1)",
+            "note": "§4.1.G toml 블록에 PHASE_B4 누락 4섹션 8키 추가 → LOCK 20개 정합 (L295 직후)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "**config.v1.toml LOCK 값:**",
+            "new": "**config.v1.toml LOCK 값 (LOCK 20개 — PHASE_B4 §3 정본):**",
+            "note": "L337 §2.5 분모 명기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md",
+            "old": "| `mcp.transport` | streamable_http | **LOCK** | DEC-017 |",
+            "new": "| `mcp.transport` | streamable_http | **LOCK** | DEC-017 |\n| `self_check.threshold_p0` | 70 | **LOCK** | PHASE_B4 §3.8a |\n| `self_check.threshold_p1` | 75 | **LOCK** | PHASE_B4 §3.8a |\n| `self_check.threshold_p2` | 80 | **LOCK** | PHASE_B4 §3.8a |\n| `self_check.soft_loop_max` | 1 | **LOCK** | PHASE_B4 §3.8a |\n| `approval.timeout_s` | 600 | **LOCK** | PHASE_B4 §3.8b |\n| `approval.p2_timeout_s` | 300 | **LOCK** | PHASE_B4 §3.8b |\n| `blue_nodes.active_node_cap` | 3 | **LOCK** (V1) | D2.0-03 §4.3-B / LOCK-AT-014 |\n| `ui.min_width` | 1280 | **LOCK** (V1) | D8 §3.1 |",
+            "note": "§2.5 표(L361 직후) 누락 8행 추가 → LOCK 20행"
+          }
+        ],
+        "risk": "①PHASE_B4 §3.1~3.7/§3.12 표 자체에는 상위정본 유래 10키의 LOCK 표기가 없음 — 분모 20은 'PHASE_B4 명시 10 ∪ 상위정본 LOCK 12' 합집합 규칙에 의존하며, 향후 감사가 'PHASE_B4 명시 표기만'으로 좁히면 10으로 읽힐 수 있어 헤딩 주석에 산출 규칙을 명기함(근본 해소는 PHASE_B4 표에 LOCK 열 추가이나 정본 수정은 D13 범위 밖). ②embedding.model/vector_db.backend/graph_db.backend/cost 한도는 V2+에서 값이 바뀌는 V1-스코프 LOCK이므로 '20개'는 config.v1.toml 기준 분모임(V2/V3 프리셋 분모 아님). ③docs\\backup\\sot 사본 2종은 '22개' 잔존(백업 보존 원칙, 의도적 무수정). ④본 판정은 읽기 전용 — edits는 미적용 제안이며 모든 old 문자열 count==1 실측 검증 완료.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D14",
+        "question": "골든셋 출처 허위(manifest.json:10 '실제 MMLU 14,042→570→50 층화 추출' vs 실데이터 합성 템플릿): ①manifest 정직 정정+실데이터 재구축 Phase 2-0 선행과업 등재 vs ②즉시 실데이터 재구축",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "line": "10",
+            "quote": "\"source\": \"MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출\","
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\mmlu\\items.json",
+            "line": "4",
+            "quote": "\"question\": \"[abstract_algebra] Golden set question 1: Which of the following statements about abstract algebra is most accurate?\" — 전 50문항이 과목명만 치환한 동일문장 템플릿, 선택지도 \"Statement A regarding ... (option 1)\" 형식"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "line": "59",
+            "quote": "\"question\": f\"[{subj}] Golden set question {idx+1}: Which of the following statements about {subj_label} is most accurate?\" — 합성 템플릿 생성기 실재, 외부 데이터셋 다운로드 코드 없음"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "line": "293",
+            "quote": "\"source\": \"MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출\", — 허위 출처 문자열을 스크립트가 직접 기록(재실행 시 허위 재생성됨)"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\SESSION3_교차검증판단_2026-06-10.md",
+            "line": "92",
+            "quote": "| S2 | ✅ | 골든셋 manifest.json:10 \"MMLU 14,042→570→50\" vs 실데이터 = 과목명만 치환한 동일문장 템플릿(mmlu)+placeholder/pass(humaneval) — **합성 확정** |"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\SESSION3_교차검증판단_2026-06-10.md",
+            "line": "132",
+            "quote": "8. 저장소 위생: ... .gitattributes 선커밋 후 LFS/CI/골든셋 커밋, 골든셋 실데이터 재구축) — 재구축은 이미 위생 시퀀스의 별도 단계로 계획됨"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\AUTHORITY_CHAIN.md",
+            "line": "31-32",
+            "quote": "| LOCK-BE-01 | MMLU 전체 목표 | STEP7-G S7G-001 | ≥ 85% (macro average) | STEP7-G 승인 | / | LOCK-BE-02 | HumanEval pass@1 목표 | STEP7-G S7G-002 | pass@1 ≥ 85% — LOCK 값 자체는 본 결정에서 불변(재정의 0)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\general_llm_benchmarks.md",
+            "line": "103-105",
+            "quote": "| score ≥ 85% | **PASS** | LOCK-BE-01 충족 | ... | score < 82% | **FAIL** | LOCK-BE-01 미충족 | — 게이트 판정표에 데이터 유효성 전제조건 부재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\02_custom-datasets\\golden_set_management.md",
+            "line": "14",
+            "quote": "- **V1 골든셋**: 170문항 (상세명세 §B.2). — 5-1 도메인 정본이 V1 170문항을 실재 골든셋으로 참조 중"
+          }
+        ],
+        "conclusion": "옵션 ① 채택 (단일 결론): manifest.json을 정직하게 정정(전 4개 벤치마크 source에 [SYNTHETIC] 명시 + data_status=SYNTHETIC_PLACEHOLDER 플래그 + change_log 등재)하고, 실데이터 재구축을 Phase 2-0 선행과업으로 next_update에 등재한다. 동시에 LOCK-BE-01/02 게이트 정의처(general_llm_benchmarks.md PASS/FAIL 판정표)에 '합성 데이터 측정치는 게이트 판정 무효' 플래그를 명문화하고, 5-1 도메인 참조(golden_set_management.md §0)와 재생성 스크립트(generate_golden_set.py의 허위 source 문자열 4건)도 동일하게 정정한다. 즉시 재구축(②)은 기각 — 외부 데이터셋 다운로드·라이선스 검증·오염검사 재수행이 필요한 별도 세션급 과업이며, 세션3 권고 8단계에도 이미 독립 단계로 시퀀싱되어 있다. LOCK-BE-01/02 값(≥85%) 자체는 재정의 0으로 불변.",
+        "rationale": "①실측 확정: mmlu/items.json 50문항 전부 과목명 치환 동일문장 템플릿, humaneval은 pass 스텁, mbpp는 string_task_N 스텁, logickor는 모범답안 placeholder — 4개 벤치마크 전체가 합성(세션3 S2는 mmlu+humaneval 확정, 본 조사로 mbpp/logickor까지 확장 실측). ②생성기 scripts/generate_golden_set.py:293/300/307/314가 허위 source 문자열 4건을 직접 기록하므로 manifest만 고치면 스크립트 재실행 시 허위가 재생성됨 — 스크립트 동시 정정 필수. ③허위 기재의 즉각적 해악은 '합성 점수로 LOCK-BE-01/02 게이트 통과' 가능성이므로, 게이트 정의처에 무효 플래그를 박는 것이 최소비용·최대효과의 정직성 회복. ④재구축은 MMLU 14,042 다운로드·570 후보 선별·층화 추출·SHA 재계산·contamination_check 재수행을 포함한 세션급 작업으로, 지금 수행하면 D14 범위를 초과하고 .gitattributes 선커밋 등 위생 시퀀스(세션3 권고 8)와 순서 충돌. ⑤LOCK 값은 건드리지 않으므로(데이터 유효성 전제조건 추가일 뿐) LOCK-BE-01~15 재정의 0 원칙 유지.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "  \"created_by\": \"F-04 골든셋 v1 구축\",\n  \"seed\": 42,",
+            "new": "  \"created_by\": \"F-04 골든셋 v1 구축 (scripts/generate_golden_set.py — 합성 템플릿 생성)\",\n  \"data_status\": \"SYNTHETIC_PLACEHOLDER — 4개 벤치마크(mmlu/humaneval/mbpp/logickor) 전체가 합성 템플릿 (세션3 S2 확정 2026-06-10, D14). 실제 원본 데이터셋 미사용. 합성 데이터 측정치는 LOCK-BE-01/02/03 게이트 판정에 무효(INVALID_FOR_GATES). 실데이터 재구축 = Phase 2-0 선행과업\",\n  \"seed\": 42,",
+            "note": "data_status 플래그 신설 — 기계가독 무효 표시"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "      \"source\": \"MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출\",",
+            "new": "      \"source\": \"[SYNTHETIC] 합성 템플릿 50문항 (과목명 치환 동일문장, 실제 MMLU 미사용) — 원계획: MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출 (미수행, Phase 2-0 재구축 대상)\",",
+            "note": "D14 직접 대상 라인(manifest.json:10)"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "      \"source\": \"HumanEval 164 → 20 난이도 분포 대표\",",
+            "new": "      \"source\": \"[SYNTHETIC] 합성 placeholder 20문항 (canonical_solution/test 전부 pass 스텁) — 원계획: HumanEval 164 → 20 난이도 분포 대표 (미수행, Phase 2-0 재구축 대상)\",",
+            "note": "동일 허위 패턴 — humaneval"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "      \"source\": \"MBPP 427 sanitized → 50 난이도 분포 대표\",",
+            "new": "      \"source\": \"[SYNTHETIC] 합성 placeholder 50문항 (string_task_N 스텁) — 원계획: MBPP 427 sanitized → 50 난이도 분포 대표 (미수행, Phase 2-0 재구축 대상)\",",
+            "note": "동일 허위 패턴 — mbpp"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "      \"source\": \"LogicKor 50 전수 (전체가 골든)\",",
+            "new": "      \"source\": \"[SYNTHETIC] 합성 템플릿 50문항 (모범답안 placeholder) — 원계획: LogicKor 50 전수 (미수행, Phase 2-0 재구축 대상)\",",
+            "note": "동일 허위 패턴 — logickor"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "  \"next_update\": \"Phase 2 — ARC-AGI 30문항 추가 + 분기별 교체\",",
+            "new": "  \"next_update\": \"Phase 2-0 (선행과업, D14): 실제 MMLU/HumanEval/MBPP/LogicKor 다운로드·라이선스 검증·층화 추출로 합성 placeholder 전량 교체 + items/metadata SHA 재계산 + contamination_check 재수행 → 이후 Phase 2 — ARC-AGI 30문항 추가 + 분기별 교체\",",
+            "note": "재구축을 Phase 2-0 선행과업으로 등재"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmarks\\golden_set\\manifest.json",
+            "old": "      \"description\": \"MMLU 50 + HumanEval 20 + MBPP 50 + LogicKor 50\"\n    }\n  ]",
+            "new": "      \"description\": \"MMLU 50 + HumanEval 20 + MBPP 50 + LogicKor 50\"\n    },\n    {\n      \"version\": \"v1.0.1\",\n      \"date\": \"2026-06-11\",\n      \"action\": \"출처 정정 (D14)\",\n      \"items_added\": 0,\n      \"items_removed\": 0,\n      \"description\": \"세션3 S2 확정: 전 항목 합성 템플릿(scripts/generate_golden_set.py). source 4건 [SYNTHETIC] 정정 + data_status 추가 + 실데이터 재구축 Phase 2-0 선행과업 등재. 문항 데이터 자체는 무변경(items_sha256 유효 유지)\"\n    }\n  ]",
+            "note": "change_log append-only 등재"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\general_llm_benchmarks.md",
+            "old": "| score < 82% | **FAIL** | LOCK-BE-01 미충족 |",
+            "new": "| score < 82% | **FAIL** | LOCK-BE-01 미충족 |\n\n> ⚠️ **데이터 유효성 플래그 (D14, 2026-06-11)**: 현행 `benchmarks/golden_set/mmlu/`는 합성 템플릿 placeholder(세션3 S2 확정, manifest.json data_status=SYNTHETIC_PLACEHOLDER). **합성 데이터로 측정한 점수는 본 게이트 판정에 무효** — 실제 MMLU 층화 추출 재구축(Phase 2-0) 완료 후에만 LOCK-BE-01 판정 유효. LOCK 값(≥ 85%) 자체는 불변(재정의 0).",
+            "note": "LOCK-BE-01 게이트 무효 플래그 — LOCK 값 불변, 판정표 아래 append"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\general_llm_benchmarks.md",
+            "old": "| pass@1 < 82% | **FAIL** | LOCK-BE-02 미충족 |",
+            "new": "| pass@1 < 82% | **FAIL** | LOCK-BE-02 미충족 |\n\n> ⚠️ **데이터 유효성 플래그 (D14, 2026-06-11)**: 현행 `benchmarks/golden_set/humaneval/`은 합성 placeholder(세션3 S2 확정, manifest.json data_status=SYNTHETIC_PLACEHOLDER). **합성 데이터로 측정한 pass@1은 본 게이트 판정에 무효** — 실제 HumanEval 재구축(Phase 2-0) 완료 후에만 LOCK-BE-02 판정 유효. LOCK 값(pass@1 ≥ 85%) 자체는 불변(재정의 0).",
+            "note": "LOCK-BE-02 게이트 무효 플래그"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\02_custom-datasets\\golden_set_management.md",
+            "old": "- **V1 골든셋**: 170문항 (상세명세 §B.2). **V2 목표**: 500+ 문항으로 확장 + 분기별 20% 교체.",
+            "new": "- **V1 골든셋**: 170문항 (상세명세 §B.2). **V2 목표**: 500+ 문항으로 확장 + 분기별 20% 교체.\n- ⚠️ **D14 (2026-06-11)**: 물리 구현체 `benchmarks/golden_set/` 170문항은 합성 템플릿 placeholder(세션3 S2 확정, manifest.json data_status 참조) — LOCK-BE 게이트 측정 무효. 실데이터 재구축 = Phase 2-0 선행과업.",
+            "note": "5-1 도메인 참조 정정 — 한 줄 append, V1 본문 재정의 없음"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "old": "            \"source\": \"MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출\",",
+            "new": "            \"source\": \"[SYNTHETIC] 합성 템플릿 50문항 (실제 MMLU 미사용) — 원계획: MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출 (미수행)\",",
+            "note": "스크립트 재실행 시 허위 재생성 차단 (L293)"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "old": "            \"source\": \"HumanEval 164 → 20 난이도 분포 대표\",",
+            "new": "            \"source\": \"[SYNTHETIC] 합성 placeholder 20문항 — 원계획: HumanEval 164 → 20 난이도 분포 대표 (미수행)\",",
+            "note": "L300"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "old": "            \"source\": \"MBPP 427 sanitized → 50 난이도 분포 대표\",",
+            "new": "            \"source\": \"[SYNTHETIC] 합성 placeholder 50문항 — 원계획: MBPP 427 sanitized → 50 난이도 분포 대표 (미수행)\",",
+            "note": "L307"
+          },
+          {
+            "file": "D:\\VAMOS\\scripts\\generate_golden_set.py",
+            "old": "            \"source\": \"LogicKor 50 전수 (전체가 골든)\",",
+            "new": "            \"source\": \"[SYNTHETIC] 합성 템플릿 50문항 — 원계획: LogicKor 50 전수 (미수행)\",",
+            "note": "L314"
+          }
+        ],
+        "risk": "①5-1 SOT 2개 파일(general_llm_benchmarks.md, golden_set_management.md)의 byte/SHA 감사 기준선이 변경되므로 차기 무결성 스냅샷에서 재계산 필요 — 단 LOCK-BE 값 재정의 0이므로 AUTHORITY_CHAIN 불변. ②contamination_check.json(13,602B)도 합성 데이터 기반이라 신뢰 불가 — Phase 2-0 재구축 시 재수행 필요(본 edits 범위 외, 기록). ③smoke_subset.json/smoke/ 파생물도 동일 합성이므로 Phase 2-0에서 함께 교체 대상. ④manifest의 items_sha256은 데이터 무변경이므로 유효 유지되나, manifest 자체 SHA를 참조하는 외부 문서가 있다면 stale 가능. ⑤change_log에 v1.0.1 추가는 semantic versioning(PATCH=오류 수정) 관례에 부합.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D15",
+        "question": "docs\\sot 3(Living System Graph) 문서군의 위상 판정 — 채택/보류 스코프: 정본인가 제안서인가, 6-12 LOCK-EL 충돌의 효력은?",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-12_Event-Logging\\AUTHORITY_CHAIN.md",
+            "line": "35",
+            "quote": "| L2 | LOCK-EL-02 | EventTypeRegistry 항목 수 | 134항목 (123+11) | D2.1-D2 + Part2 §6.11 | 01 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-12_Event-Logging\\AUTHORITY_CHAIN.md",
+            "line": "42",
+            "quote": "| L9 | LOCK-EL-09 | 이벤트 네임스페이스 | oc.* / cl.rt.* / agent.* / sdar.* / storage.* / mem.* / wf.* / ui.* | Part2 §6.11 | 01 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\03_LAYER2_AUTO_GRAPH_ENGINE.md",
+            "line": "459",
+            "quote": "**총 신규 이벤트**: 78개 (V1 HIGH 우선순위만 32개)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\02_LAYER1_UNIFIED_GRAPH_STORE.md",
+            "line": "429",
+            "quote": "이벤트 132+ (54 기존 + 78 신규)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\06_MODULE_MAPPING.md",
+            "line": "417",
+            "quote": "결론: 132+ 이벤트(54 기존 + 78 신규) 통합에도 LOCK 충돌 0건"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+            "line": "8",
+            "quote": "> **sot 2 영향**: **0건** — 모든 통합은 비파괴 (이벤트 발행만 추가)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+            "line": "309-314",
+            "quote": "sot 2 수정 줄 수: 0 … - sot 2 각 도메인이 자체 publish() 함수로 신규 이벤트 발행"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\12_FINAL_VISION.md",
+            "line": "385-389",
+            "quote": "sot 2 수정: 0줄 … 추가되는 것: sot 2 도메인이 자체 publish() 함수로 신규 이벤트 발행"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\06_MODULE_MAPPING.md",
+            "line": "311",
+            "quote": "| 6-12 Event | topology.* 이벤트 6개 | 이벤트 정의 ~30줄 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\06_MODULE_MAPPING.md",
+            "line": "272",
+            "quote": "│  - 제안: DEC-018 \"I-24 Knowledge Graph Engine V1 CORE 승격\"│"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.0-05_05. VAMOS_DESIGN_2.0_AGENT_WORKFLOW.md",
+            "line": "1146",
+            "quote": "- DEC-018 연동: 전략 ≥3이면 VectorBT, <3이면 backtrader"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot\\D2.1-D7_D7_SCHEMA_SAFETY_COST_APPROVAL.md",
+            "line": "560",
+            "quote": "- engine_type: \"backtrader\" | \"vectorbt\" (DEC-018 기준: 전략 ≥3이면 vectorbt)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\06_MODULE_MAPPING.md",
+            "line": "41",
+            "quote": "│    - MODE 4: Evolution (진화 뷰)                          │"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\04_LAYER3_SYSTEM_TOPOLOGY_VIEW.md",
+            "line": "539",
+            "quote": "| **MODE 4: Knowledge Pipeline View** (6-8 10-Layer + G0~G4 Gate Funnel) | [08 §4](08_CLOUD_LIBRARY_INTEGRATION.md) | V2 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+            "line": "6",
+            "quote": "> **상위 문서**: OBSIDIAN-STRATEGY-v3.md, CLAUDE 보강전략 V1.0.md"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+            "line": "348",
+            "quote": "  □ DEC-018 승인"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "line": "585-606",
+            "quote": "## 참조 문서 맵 — (grep 실측: 'sot 3'/'Living System Graph'/'LIVING-SYSTEM-GRAPH' 0건, Phase 0~6 및 참조 문서 맵 어디에도 미등재)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot",
+            "line": "(전체 grep)",
+            "quote": "docs\\sot 정본 전체에서 'sot 3'/'LIVING-SYSTEM-GRAPH' 매칭 0건 (docs\\sot 2의 'SOT 3' 히트는 전부 'SOT 3-layer' 가드레일 문자열로 무관)"
+          }
+        ],
+        "conclusion": "sot 3(docs\\sot 3\\LIVING-SYSTEM-GRAPH 00~12)는 정본이 아닌 DRAFT 제안 계층으로 확정한다. 근거: ①정본 체인(RULE/PLAN/DESIGN LOCK/SOT 2) 및 로드맵(VAMOS_최종_로드맵.md) 어디에도 미등재 ②자체 헤더가 상위 문서를 전략 문서(OBSIDIAN-STRATEGY-v3, 보강전략 V1.0)로 명시하고 Status/APPROVED 마커 부재 ③자체 GO 조건 \"□ DEC-018 승인\"이 미체크 상태(승인 미수행). 따라서 sot 3 내 LSG 이벤트 78개가 6-12 LOCK-EL-02(EventTypeRegistry 134항목)·LOCK-EL-09(최상위 네임스페이스 8종: oc./cl.rt./agent./sdar./storage./mem./wf./ui.)와 일으키는 충돌, DEC-018 ID 충돌(정본 DEC-018=백테스트 엔진 선택은 D2.0-05 L1146·D2.1-D7 L560에 이미 점유), '0줄 수정 보장' vs 'publish() 추가' 자기모순 4곳(00 L8/L309-314, 06 L311↔L383-398, 12 L385-389), MODE 4 명칭 충돌(06 L41 'Evolution' vs 04 L539/12 L66 'Knowledge Pipeline View')은 모두 채택 결정 전까지 효력 없음 — 충돌 항목의 정본은 6-12 AUTHORITY_CHAIN(LOCK-EL-02 134항목, LOCK-EL-09 8종)이다. 조치: 로드맵 참조 문서 맵 말미에 스코프 선언 1곳 추가 + sot 3 루트 00_MASTER_INDEX 헤더에 DRAFT 배너 1곳 추가(edits 참조). 향후 채택 시에는 LOCK_CHANGE_NEEDED 게이트(LOCK-EL-02/09 변경 검토)와 DEC 재번호(DEC-018→신규 번호)가 선행되어야 한다.",
+        "rationale": "위상 판정의 3중 실측: (1) 등재 부재 — VAMOS_최종_로드맵.md 전문 grep에서 sot 3/LSG 0건이며 참조 문서 맵(L585-606)에도 없음; docs\\sot 정본 grep 0건; docs\\sot 2의 'SOT 3' 히트 8파일은 전수 확인 결과 'SOT 3-layer'(가드레일 계층 수) 문자열로 LSG와 무관. (2) 자기 선언 — 00_MASTER_INDEX 헤더(L3-8)는 버전 v2.0·상위 문서=전략 문서 계열만 명시, SOT 2 도메인 정본 양식(Status: APPROVED, AUTHORITY_CHAIN, LOCK 등록)을 전혀 갖추지 않음. (3) 승인 미수행 — V1 GO 조건 1번이 '□ DEC-018 승인'(00 L348, 미체크)이고 Day 1 작업이 'DEC-018 승인 + 13개 문서 검토'(00 L421)로, 문서 스스로 채택 전 제안서임을 전제. 충돌 실측: LOCK-EL-02는 134항목 고정(AUTHORITY_CHAIN L35, 134→135 변경조차 LOCK_CHANGE_NEEDED 게이트 필요 — 동 파일 L176 CFL-EL-001), LOCK-EL-09는 8종 고정(L42)인데 sot 3는 신규 78개 이벤트와 parl./hal./mcp./topology./rtbnp./dcl./mlops./bench./sec./ops./a2a./obsidian./claude./github./ext./chat./gmail./gcal./hf. 등 8종 외 신규 네임스페이스를 도입하며, 기존 이벤트 수를 54로 가정(02 L429)해 정본 134와도 불일치. sot 3 내부에 'LOCK-EL' 문자열 0건(grep) — 즉 06 L417의 'LOCK 충돌 0건' 결론은 LOCK-EL-02/09를 검사하지 않은 채 내린 것. DEC-018은 D2.0-05 L1146·D2.1-D7 L560에서 이미 점유. 자기모순: publish() 호출 추가와 신규 이벤트 등록(06 L311 '이벤트 정의 ~30줄')은 6-12 EventTypeRegistry(LOCK-EL-02) 변경을 수반하므로 'sot 2 수정 0줄/0건' 보장과 양립 불가. 결론적으로 sot 3를 정본으로 인정할 근거가 전무하고, 충돌은 sot 3 측 무효 처리(정본=6-12)가 정본 우선순위(RULE>PLAN>DESIGN LOCK>본문) 원칙상 유일한 해소다. 가장 보수적 조치로 기존 정본·sot 3 본문 내용은 일체 불변경하고 위상 선언 2곳(로드맵 1+00 헤더 배너 1)만 추가한다.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\VAMOS_최종_로드맵.md",
+            "old": "| LOCK Registry | `VAMOS HOME\\00_HUB\\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |",
+            "new": "| LOCK Registry | `VAMOS HOME\\00_HUB\\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |\n\n> ※ **문서 위상 선언 — `docs\\sot 3` (Living System Graph) [D15, 2026-06-11]**: `docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00~12`는 **DRAFT 제안 계층**이며 정본(SOT/SOT 2)이 아니다. 본 로드맵 Phase 0~6 및 참조 문서 맵에 미등재이고, 자체 GO 조건인 DEC-018 승인도 미수행 상태다. 알려진 정본 충돌(신규 이벤트 78개 ↔ 6-12 LOCK-EL-02 134항목·LOCK-EL-09 네임스페이스 8종 / DEC-018 ID ↔ 정본 DEC-018 백테스트 엔진 선택[D2.0-05·D2.1-D7])은 **채택 결정 전까지 효력 없음 — 정본은 6-12 AUTHORITY_CHAIN**이다. 채택하려면 LOCK_CHANGE_NEEDED 게이트 + DEC 재번호가 선행되어야 한다.",
+            "note": "로드맵 참조 문서 맵 말미(파일 최종행, 유일 매칭 확인)에 sot 3 스코프 선언 1곳 추가"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 3\\LIVING-SYSTEM-GRAPH\\00_MASTER_INDEX.md",
+            "old": "> **sot 2 영향**: **0건** — 모든 통합은 비파괴 (이벤트 발행만 추가)",
+            "new": "> **sot 2 영향**: **0건** — 모든 통합은 비파괴 (이벤트 발행만 추가)\n\n> ⚠️ **[DRAFT — 제안 계층, 정본 아님] (D15, 2026-06-11)** 본 sot 3 문서군(00~12)은 채택 미결 제안서로, VAMOS_최종_로드맵.md 및 SOT/SOT 2 정본 체계에 미등재이며 DEC-018 승인 미수행 상태다. 알려진 정본 충돌: ①신규 이벤트 78개 ↔ 6-12 LOCK-EL-02(EventTypeRegistry 134항목)·LOCK-EL-09(최상위 네임스페이스 8종) ②DEC-018 ID ↔ 정본 DEC-018(백테스트 엔진 선택, D2.0-05 L1146·D2.1-D7 L560) — 채택 시 재번호 필수 ③'sot 2 수정 0줄' ↔ 'publish() 추가·이벤트 정의 ~30줄' 자기모순(00 §5.6, 06 §3.2, 12 §H.8) ④MODE 4 명칭 내부 충돌(06=Evolution vs 04/08/12=Knowledge Pipeline View). **채택 결정(LOCK_CHANGE_NEEDED 게이트) 전까지 본 문서군의 충돌 기술은 무효이며, 해당 항목의 정본은 6-12 AUTHORITY_CHAIN 등 SOT 2이다.**",
+            "note": "sot 3 루트(00 문서) 헤더 블록 말미(L8, 유일 매칭 확인)에 DRAFT 배너 1곳 추가"
+          }
+        ],
+        "risk": "저위험. 두 edit 모두 기존 본문 무변경·추가만이며 LOCK 대상 파일 아님(로드맵은 정본 체인 외 진행 문서, sot 3는 본 판정으로 비정본 확정). 잔여 리스크: ①sot 3가 향후 채택되면 배너 제거 + LOCK-EL-02(134→변경)·LOCK-EL-09(네임스페이스 확장) LOCK_CHANGE_NEEDED 게이트 + DEC-018→신규 번호 재부여가 일괄 필요 ②sot 3의 '기존 이벤트 54' 가정은 정본 134와 불일치하므로 채택 검토 시 이벤트 카탈로그 전면 재기초화 필요 ③로드맵이 활발히 갱신되는 문서(최종 갱신 2026-06-04)라 앵커 행이 이동할 수 있으나 문자열 유일성은 현시점 grep으로 검증됨.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D16",
+        "question": "docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage에만 존재하는 6-4 P2 완성 산출물 5파일(191,749B: qdrant_adapter.md/migration_v1_v2.md/neo4j_graphrag.md/promotion_demotion.md/memory_conflict_resolution.md)을 정본 docs\\sot 2\\6-4_Memory-RAG-Storage로 승격할 것인가, 샌드박스 잔존으로 기각할 것인가",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\MEMORY_RAG_STORAGE_구조화_종합계획서.md",
+            "line": "2150",
+            "quote": "**M-3 (Phase 2 P2-1~P2-5 NTFS 미존재 forward-defined inheritance)**: SOT2_MASTER L1043-L1048 + Plan §7 양측 명시 `Phase 2 ✅ 완료 5/5 2026-04-14` vs NTFS 실제 폴더 부재 — qdrant_adapter.md (P2-1) + migration_v1_v2.md (P2-2) + neo4j_graphrag.md (P2-3) + promotion_demotion.md (P2-4, ENTRY_PROMPT/Plan §7.7 P4-4 명세 `promotion_automation.md` ≠ master 참조명) + memory_conflict_resolution.md (P2-5)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\MEMORY_RAG_STORAGE_구조화_종합계획서.md",
+            "line": "2423",
+            "quote": "| LOCK-MR-013 | V2 Qdrant | 03 | 03/qdrant_adapter.md |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\MEMORY_RAG_STORAGE_구조화_종합계획서.md",
+            "line": "1404",
+            "quote": "**산출물**: `D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\memory_conflict_resolution.md` (메모리 충돌 해소 L3)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+            "line": "148,150",
+            "quote": "| `qdrant_adapter.md` | QdrantAdapter V2 구현: Docker, payload 필터, 마이그레이션 | ⬜ Phase 2 | … | `migration_v1_v2.md` | Chroma→Qdrant 마이그레이션: 절차, 무결성 검증, 롤백 | ⬜ Phase 2 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+            "line": "128",
+            "quote": "| `promotion_demotion.md` | 승격/강등 알고리즘, 스코어링, QoD 임계값 | ⬜ Phase 1 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\dream_mode_v3.md",
+            "line": "125",
+            "quote": "P2-5 `memory_conflict_resolution.md` (M-3 acknowledged) 알고리즘:"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\qdrant_adapter.md",
+            "line": "3,9",
+            "quote": "> **Phase**: P2-1 산출물 (Phase 2 / V2 scope) … > **작성일**: 2026-04-14"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\memory_conflict_resolution.md",
+            "line": "4,9",
+            "quote": "> **세션**: P2-5 (메모리 충돌 해소 + L4 Archive 범위 확정) … > **작성일**: 2026-04-14"
+          }
+        ],
+        "conclusion": "승격(PROMOTE). 샌드박스 5파일(01_memory-hierarchy\\memory_conflict_resolution.md 25,116B SHA256:8CA633EB80DE8A30, 01_memory-hierarchy\\promotion_demotion.md 28,082B SHA256:56F192DC1D6DE5FF, 02_rag-pipeline\\neo4j_graphrag.md 58,707B SHA256:0720EAA8F6F17FD8, 03_vector-db\\migration_v1_v2.md 39,368B SHA256:5F9798CB089952A4, 03_vector-db\\qdrant_adapter.md 40,476B SHA256:EE0822A7CBD8BB5B, 합계 191,749B)을 정본 D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\ 동일 상대경로로 복사(추가-only, 정본 측 동명 파일 0건 → 덮어쓰기 없음, 샌드박스 원본 보존)하고, 정본 _index.md 3파일의 해당 행을 ✅로 갱신한다. 샌드박스의 그 외 공유 파일(L0/L1 crud 등)은 정본이 더 신규(V3, 2026-06-10)이므로 절대 복사하지 않는다.",
+        "rationale": "①정본 종합계획서 §7 H. M-3(L2150)가 'Phase 2 ✅ 완료 5/5 2026-04-14 vs NTFS 실제 부재'를 명시적으로 인정하며 누락 5파일명을 정확히 열거 — 샌드박스 5파일의 파일명·작성일(2026-04-14)·세션 태그(P2-1~P2-5)가 이 기록과 정확히 일치하므로, 이는 기각 대상 폐기물이 아니라 회수 대상인 genuine P2 산출물(기존 25개 도메인 Phase 4 RECOVERY에서 반복 확인된 sandbox 착시 패턴의 직계). ②정본 LOCK 레지스트리 행 LOCK-MR-013(plan L2423)이 위치를 03/qdrant_adapter.md로 지정하나 정본에 물리 부재 — 승격해야 LOCK 위치 참조가 성립. ③정본 V3 산출물 dream_mode_v3.md(L112, L125)가 P2-4/P2-5 파일 내용을 직접 인용(소비) 중. ④품질 표본 정독 2건(qdrant_adapter.md: 권한 체인+LOCK-MR 8건 준수 헤더+18절 L3 상세; memory_conflict_resolution.md: LOCK 준수 체크리스트+교차참조 12건+CONFLICT_LOG #004 범위 확정) — 정본 형식·품질 기준 충족. ⑤baseline_snapshot(P2 시험 개시 시점 정본 사본)에 5파일 부재 실측 → P2 기간 샌드박스에서 생성되어 정본 미반영임이 확정. ⑥복사는 추가-only로 정본 기존 파일(V3 포함) 0건 변경 — 위험 최소.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+            "old": "| `qdrant_adapter.md` | QdrantAdapter V2 구현: Docker, payload 필터, 마이그레이션 | ⬜ Phase 2 |",
+            "new": "| `qdrant_adapter.md` | QdrantAdapter V2 구현: Docker, payload 필터, 마이그레이션 | ✅ Phase 2 완료 (2026-04-14 P2-1, 2026-06-11 D16 승격 복원) |",
+            "note": "복사 작업: Copy-Item 'D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\qdrant_adapter.md' 'D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\' (40,476B, SHA256 prefix EE0822A7CBD8BB5B, 정본 측 동명 파일 없음=추가-only)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\_index.md",
+            "old": "| `migration_v1_v2.md` | Chroma→Qdrant 마이그레이션: 절차, 무결성 검증, 롤백 | ⬜ Phase 2 |",
+            "new": "| `migration_v1_v2.md` | Chroma→Qdrant 마이그레이션: 절차, 무결성 검증, 롤백 | ✅ Phase 2 완료 (2026-04-14 P2-2, 2026-06-11 D16 승격 복원) |",
+            "note": "복사 작업: Copy-Item 'D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\migration_v1_v2.md' 'D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\03_vector-db\\' (39,368B, SHA256 prefix 5F9798CB089952A4)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\_index.md",
+            "old": "| `promotion_demotion.md` | 승격/강등 알고리즘, 스코어링, QoD 임계값 | ⬜ Phase 1 |",
+            "new": "| `promotion_demotion.md` | 승격/강등 알고리즘, 스코어링, QoD 임계값 | ✅ Phase 2 완료 (2026-04-14 P2-4, 2026-06-11 D16 승격 복원) |\n| `memory_conflict_resolution.md` | 메모리 충돌 탐지·분류·해소: 충돌 유형 3종, Auto-Resolve/ADMIN Review Queue, CONFLICT_LOG #004 L4 범위 확정 | ✅ Phase 2 완료 (2026-04-14 P2-5, 2026-06-11 D16 승격 복원) |",
+            "note": "복사 작업 2건: Copy-Item 'D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\promotion_demotion.md' 및 '...\\01_memory-hierarchy\\memory_conflict_resolution.md' → 'D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\01_memory-hierarchy\\' (28,082B SHA256:56F192DC1D6DE5FF / 25,116B SHA256:8CA633EB80DE8A30). memory_conflict_resolution.md는 기존 _index 행 부재 → promotion_demotion 행 직후 신규 행 추가(단일 edit로 결합해 적용 순서 의존성 제거). 파일명은 master 참조명 promotion_demotion.md 유지(M-3 acknowledged: ENTRY_PROMPT 측 promotion_automation.md 표기는 별칭 드리프트)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\_index.md",
+            "old": "| `graphrag.md` | GraphRAG: NetworkX(V1) → Neo4j(V2), KG 스키마, 쿼리 파이프라인 | ⬜ Phase 1 |",
+            "new": "| `graphrag.md` | GraphRAG: NetworkX(V1) → Neo4j(V2), KG 스키마, 쿼리 파이프라인 | ⬜ Phase 1 |\n| `neo4j_graphrag.md` | V2 Neo4j GraphRAG: 마이그레이션, Cypher 쿼리 파이프라인 (P1-4 json_graphrag.md와 구분) | ✅ Phase 2 완료 (2026-04-14 P2-3, 2026-06-11 D16 승격 복원) |",
+            "note": "복사 작업: Copy-Item 'D:\\VAMOS\\docs\\test_iso_p2\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\neo4j_graphrag.md' 'D:\\VAMOS\\docs\\sot 2\\6-4_Memory-RAG-Storage\\02_rag-pipeline\\' (58,707B, SHA256 prefix 0720EAA8F6F17FD8). 기존 graphrag.md 행(레거시 계획명)은 D16 범위 외이므로 무변경 보존, 신규 행만 추가"
+          }
+        ],
+        "risk": "①내용 드리프트(비차단): 정본 dream_mode_v3.md §4.3(L127-132)의 충돌 유형 4행 표(contradiction/stale/duplicate/권한변경)는 파일 부재 상태에서 forward-defined로 재유도된 요약이며, 승격되는 memory_conflict_resolution.md §0.2 원본 정의는 '충돌 유형 3종(동일 키 다계층/버전 충돌/QoD 역전)' — 승격 후 CONFLICT_LOG reconcile 후보로 기록 권장(정본 우선순위상 P2-5 L3 원본이 알고리즘 정본, dream_mode_v3는 파생 요약). ②plan §7 H. M-3 L2150의 'NTFS 실제 폴더 부재' 서술은 승격 후 사실관계가 변경되므로 append-only reconcile note 1줄 후속 권장(D16 edits는 지시대로 INDEX 한정). ③promotion_automation.md 별칭 드리프트는 M-3에 이미 acknowledged — 물리 파일명 promotion_demotion.md로 확정, 추가 조치 불요. ④복사는 추가-only(정본 동명 파일 0건 실측)이므로 기존 V3/APPROVED 산출물 훼손 위험 없음. 샌드박스 원본은 증거 보존 차원에서 삭제하지 않음.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D17",
+        "question": ".pre-commit-config.yaml의 freddo1503/claude-pre-commit rev v0.1.0 핀이 upstream 태그 부재로 전 커밋을 차단함. 유효 ref 확인 후 rev 교정 또는 해당 훅 블록 제거 중 단일 결론 판정.",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\.pre-commit-config.yaml",
+            "line": "1-5",
+            "quote": "repos:\n  - repo: https://github.com/freddo1503/claude-pre-commit\n    rev: v0.1.0\n    hooks:\n      - id: claude-check"
+          },
+          {
+            "file": "git ls-remote --tags --heads https://github.com/freddo1503/claude-pre-commit (실측 2026-06-11, 1회, GIT_TERMINAL_PROMPT=0)",
+            "quote": "13f447fc7c71fc56cdeb69017a06cac00af0fa33\trefs/heads/master — 태그 0개(--tags 결과 공백), v0.1.0 ref 부재 확정"
+          },
+          {
+            "file": "https://raw.githubusercontent.com/freddo1503/claude-pre-commit/13f447fc.../.pre-commit-hooks.yaml (실측 2026-06-11)",
+            "quote": "- id: claude-check ... language: rust ... files: \\.(md|json|sh)$ — 훅 id는 master에 존재하나 무태그 스냅샷, 커밋 시 소스빌드형, 패턴이 저장소 전체 md/json/sh에 적용"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\SESSION_HANDOFF.md",
+            "line": "62",
+            "quote": "**pre-commit 훅 수정**: `.pre-commit-config.yaml`이 `freddo1503/claude-pre-commit@v0.1.0` 핀하나 그 repo에 태그 0개 → 모든 커밋 차단. rev를 유효 ref로 교정 또는 훅 제거. (이번 커밋은 검증불가 훅이라 --no-verify 우회함.)"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\SESSION_HANDOFF.md",
+            "line": "102",
+            "quote": "**pre-commit 훅 깨짐**: 커밋 시 --no-verify 필요(훅 config 사람 수정 전까지)."
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "77",
+            "quote": "**검증 인프라 4축 실효 불능**: pre-commit rev 핀 고장·.claude-pre-commit 클론 불가"
+          },
+          {
+            "file": "D:\\VAMOS\\_targets\\SESSION3_교차검증판단_2026-06-10.md",
+            "line": "83",
+            "quote": "| H5 | ✅ | .pre-commit-config.yaml:2-3 freddo1503/claude-pre-commit rev v0.1.0 핀 확인 |"
+          },
+          {
+            "file": "D:\\VAMOS\\.git\\hooks\\pre-commit (설치 확인)",
+            "line": "1-8",
+            "quote": "# File generated by pre-commit: https://pre-commit.com ... ARGS=(hook-impl --config=.pre-commit-config.yaml --hook-type=pre-commit) — 훅 실설치·활성 차단 상태"
+          }
+        ],
+        "conclusion": "freddo1503/claude-pre-commit 훅 블록을 제거한다(rev 교정 기각). .pre-commit-config.yaml에는 이 블록이 유일한 훅이므로(다른 훅 보존 대상 없음 — 전문 실독 확인), 블록 제거 후 파일을 유효한 빈 config(`repos: []`) + D17 판정 기록 주석으로 보존한다. 파일 전체 삭제는 하지 않는다.",
+        "rationale": "① ls-remote 실측(2026-06-11): upstream 태그 0개 — rev v0.1.0은 처음부터 존재한 적 없는 fabricated pin이며, refs/heads/master(13f447fc)만 존재. 즉 이 훅은 도입 이래 단 한 번도 성공 설치·실행된 적 없는 의존성으로(레지스터:77 '클론 불가', SESSION_HANDOFF:62 '--no-verify 우회'), 복원할 known-good 상태 자체가 없다 → master SHA로의 'rev 교정'은 교정이 아니라 무태그·무릴리스 개인 저장소 스냅샷의 신규 채택이다. ② 신뢰 불가 판정 근거: (a) 버전 주장(v0.1.0)이 허위였던 의존성, (b) 릴리스·감사 이력 0의 개인 저장소 Rust 코드를 매 커밋 시 소스 빌드·실행, (c) hooks 매니페스트의 files 패턴 \\.(md|json|sh)$가 Claude 설정 파일이 아닌 VAMOS 전체 문서 코퍼스(문서 중심 대형 커밋, 예: c1549de 452파일)에 적용되어 빌드 성공 시에도 콘텐츠 단계 재차단 위험 — D17의 목적(전 커밋 차단 해소) 및 전수진단 최우선 권고(영속화 커밋·main push)와 정면 충돌. ③ D17 판정 규칙 '없거나 신뢰 불가면 해당 훅 블록 제거'의 신뢰 불가 분기 충족. 제거는 커밋 차단을 결정적·검증가능하게 해소하고 SESSION_HANDOFF:102의 --no-verify 철칙을 불요화한다. ④ cargo/rustc/pre-commit 툴체인은 로컬 존재 확인했으나(C:\\Users\\dkscl\\.cargo\\bin\\cargo.exe 등), 빌드·통과 보장 불가라는 불확실성은 제거안 선택을 바꾸지 못함. 추후 이 검증기 재도입을 원하면 감사된 포크 + full-SHA 핀으로 별도 결정(신규 D)으로 진행.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\.pre-commit-config.yaml",
+            "old": "repos:\n  - repo: https://github.com/freddo1503/claude-pre-commit\n    rev: v0.1.0\n    hooks:\n      - id: claude-check",
+            "new": "# D17 판정 (2026-06-11): freddo1503/claude-pre-commit 훅 블록 제거.\n# 실측: upstream 태그 0개(rev v0.1.0 부재 — git ls-remote, refs/heads/master 13f447fc만 존재)\n#       → pre-commit checkout 실패로 전 커밋 차단(기존 우회: --no-verify).\n# 신뢰 불가 판정: 무태그·무릴리스 개인 저장소의 미감사 Rust 훅(files: \\.(md|json|sh)$)이\n#       저장소 전체 문서에 적용되어 재차단 위험. 본 블록이 유일한 훅임을 확인 후 제거.\n# 재도입 시 감사된 포크 + full-SHA 핀으로 별도 결정 필요.\nrepos: []",
+            "note": "old = 파일 전문(117B, LF-only EOL, 말미 개행 유지 — old/new는 말미 개행 직전까지). 'claude-pre-commit' 매치 1줄·전문 매칭으로 count==1 검증 완료. 파일은 유효 pre-commit config로 보존(repos: []). 적용 후 `pre-commit run --all-files`가 no-op PASS가 되어 커밋 차단 해소. .git\\hooks\\pre-commit 설치본은 유지해도 무해(빈 repos로 통과). .claude-pre-commit 로컬 클론·gitlink 깨짐은 D18 범위로 본 결정에서 불변."
+          }
+        ],
+        "risk": "잔여 리스크: ① pre-commit이 no-op이 되어 커밋 시 자동 검증 부재 — 단, 해당 검증은 도입 이래 한 번도 작동한 적 없어(태그 부재로 설치 불가) 실질 보호 손실 0, 현상의 정직한 반영임. ② upstream이 추후 정식 태그를 릴리스해도 자동 인지 불가 — 재도입은 명시적 신규 결정 필요. ③ .claude-pre-commit 로컬 디렉토리/gitlink 3개 깨짐(전수진단 G9)은 본 결정 범위 외(D18)로 잔존. ④ 적용 시 LF-only EOL 보존 필수(CRLF 변환 금지 — SESSION3 §5 철칙).",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D18",
+        "question": "저장소 위생 실행 방침 확정: ①.claude/hooks venv 커밋 바이너리 언트래킹 ②깨진 gitlink 3개 언트래킹 ③coin zip 13개(~1GB) repo 밖 이동+중복 1건 처리 ④benchmark_results simulation 무표지 README — 디스크 삭제 전면 금지(이동·언트래킹만), 명령 시퀀스 확정",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS (git index 실측)",
+            "line": "git ls-files",
+            "quote": "git ls-files \".claude/hooks\" = 74행(스크립트 39 + venv_firewall 35); venv_firewall 35개 커밋 blob 합계 3,492,806 bytes; 디스크 실측 972.2 MB"
+          },
+          {
+            "file": "D:\\VAMOS (git index 실측)",
+            "line": "ls-files -s ^160000",
+            "quote": "160000 13f447fc... .claude-pre-commit / 160000 3b541a96... .claude/plugins/claude-code-plugins-plus-skills / 160000 da6216f6... .claude/plugins/claude-code-skills — 3개 전수, .gitmodules 부재(Test-Path False), submodule status exit 128"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "76",
+            "quote": "hooks 972MB=llama-firewall venv 상주, venv 바이너리 36개 커밋됨, gitlink 3개 깨짐(submodule fatal) — ※실측 재계수 결과 추적 35개(레지스터 36은 1건 과계수)"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "74",
+            "quote": "coin-legacy (265개/1,097MB) | 문제 | 평문 API 키, zip 스냅샷 7개=1,073MB(98%), 중첩 git repo. VAMOS 운영 필요 파일 0 — 전체 repo 밖 이동 대상"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "82",
+            "quote": "gitlink 3개 .gitmodules 없이 커밋(submodule fatal) · pre-commit rev 핀 고장(모든 커밋 에러) · .claude-pre-commit gitlink 클론 불가"
+          },
+          {
+            "file": "D:\\VAMOS\\VAMOS_AI_전수진단_레지스터_2026-06-10.md",
+            "line": "106",
+            "quote": "5. 저장소 위생: venv/zip/중첩repo/coin 정리 + .gitignore 보강 + gitlink 수리 (F6 직전)"
+          },
+          {
+            "file": "D:\\VAMOS\\2025_Coin_investment_Work_space (파일시스템 실측)",
+            "line": "SHA256",
+            "quote": "Z_session_project (5).zip == (6).zip SHA256 EB57814A7AE974EBA6CA25F8DFFB16BA60048D27AB31510532E38D4C1A58837A, 각 154,762,385B byte 동일; zip 전수 13개=루트 7(1,073,337,242B)+중첩 6(~52KB); git ls-files \"2025_Coin_investment_Work_space\" = 0건(전체 미추적)"
+          },
+          {
+            "file": "D:\\VAMOS\\.gitignore",
+            "line": "20-21, 28",
+            "quote": "venv/ · .venv/ · lib/ — venv_firewall은 어느 패턴에도 미매치(이름 불일치), 본체 Lib/만 lib/ 대소문자 비민감 매치로 비추적이라 Scripts/.exe 35개가 커밋됨 → 전용 행 추가 필요"
+          },
+          {
+            "file": "D:\\VAMOS\\benchmark_results\\promptfoo_eval_latest.json",
+            "line": "1282",
+            "quote": "\"mode\": \"simulation\", — 디렉터리 전체 git 미추적(status ?? benchmark_results/), README 부재로 무표지"
+          },
+          {
+            "file": "D:\\VAMOS\\.pre-commit-config.yaml",
+            "line": "2-3",
+            "quote": "repo: https://github.com/freddo1503/claude-pre-commit / rev: v0.1.0 — 레지스터 L82 고장 확정 훅, .git/hooks/pre-commit 652B 설치 상태"
+          }
+        ],
+        "conclusion": "D18 확정 — 디스크 삭제 0건(언트래킹·이동·신규 표지만)으로 4개 항목을 다음 명령 시퀀스로 실행한다(전부 PowerShell, 작업 repo=D:\\VAMOS).\n\n【①venv 언트래킹 — 추적 35개 실측 확정】\nS1. git -C D:\\VAMOS rm -r --cached \".claude/hooks/venv_firewall\"\n    (인덱스 35개 제거, 디스크 972.2MB 보존. 기대: rm 'venv_firewall/...' 35행)\n\n【②깨진 gitlink 3개 언트래킹 — 디스크 보존】\nS2. git -C D:\\VAMOS rm --cached \".claude-pre-commit\" \".claude/plugins/claude-code-plugins-plus-skills\" \".claude/plugins/claude-code-skills\"\n\n【.gitignore 보강 — edits[0] 적용(재추적 방지 4경로)】\nS3. edits[0]의 old→new 치환 적용 후: git -C D:\\VAMOS add .gitignore\n\n【커밋 — S1+S2 staged 제거분과 .gitignore 동시 영속화】\nS4. $env:SKIP='claude-check'; git -C D:\\VAMOS commit -m \"chore(hygiene): D18 - untrack venv_firewall(35) + broken gitlinks(3), .gitignore guard (disk preserved)\"; Remove-Item Env:\\SKIP\n    (SKIP는 pre-commit 프레임워크 공식 선택 스킵 — 레지스터 L82 확정 고장 훅 claude-check 1종에 한정, --no-verify 사용 금지. G5 처분 결정으로 훅 수리 후 SKIP 사용 종료)\n\n【③coin zip 13개 이동 — 목적지 D:\\VAMOS_ARCHIVE\\coin_zips\\ (repo 밖, 미추적이므로 git 작업 불요)】\nS5. New-Item -ItemType Directory -Force \"D:\\VAMOS_ARCHIVE\\coin_zips\\_duplicate\"\nS6. robocopy \"D:\\VAMOS\\2025_Coin_investment_Work_space\" \"D:\\VAMOS_ARCHIVE\\coin_zips\" *.zip /S /MOV\n    (13개 전수 이동·하위 상대경로 보존, *.zip은 .Zip 대소문자 무관 매치, exit code <8 = 성공)\nS7. [중복 처리] Move-Item -LiteralPath \"D:\\VAMOS_ARCHIVE\\coin_zips\\Z_session_project (6).zip\" -Destination \"D:\\VAMOS_ARCHIVE\\coin_zips\\_duplicate\\\"\n    ((6)==(5) SHA256 EB57814A...837A byte 동일 — 삭제 금지 방침에 따라 삭제 대신 _duplicate\\ 격리 보관, 원본 (5)는 coin_zips\\ 루트 유지)\nS8. Set-Content -Path \"D:\\VAMOS_ARCHIVE\\coin_zips\\_duplicate\\DUPLICATE_NOTE.txt\" -Encoding utf8 -Value 'Z_session_project (6).zip == (5).zip (SHA256 EB57814A7AE974EBA6CA25F8DFFB16BA60048D27AB31510532E38D4C1A58837A, 154,762,385B). 원본 (5)는 상위 coin_zips\\ 보존. D18 삭제금지 방침에 따른 격리 — 2026-06-11.'\n\n【④benchmark_results 시뮬레이션 표지 README 1줄】\nS9. Set-Content -Path \"D:\\VAMOS\\benchmark_results\\README.md\" -Encoding utf8 -Value '주의: 본 디렉터리의 벤치마크 결과 JSON은 시뮬레이션 산출물이다(\"mode\": \"simulation\" — promptfoo_eval_latest.json L1282). 실측 벤치마크 아님 — D18(2026-06-11).'\n\n【사후 검증(전부 읽기 전용)】\nS10. git -C D:\\VAMOS ls-files \".claude/hooks/venv_firewall\" | Measure-Object -Line  → 기대 0\nS11. git -C D:\\VAMOS ls-files -s | Select-String '^160000'  → 기대 출력 0행\nS12. git -C D:\\VAMOS ls-files \".claude/hooks\" | Measure-Object -Line  → 기대 39(스크립트만)\nS13. Get-ChildItem \"D:\\VAMOS\\2025_Coin_investment_Work_space\" -Recurse -Filter *.zip → 기대 0건 / Get-ChildItem \"D:\\VAMOS_ARCHIVE\\coin_zips\" -Recurse -File -Filter *.zip → 기대 13건\n\n범위 외 명시: git 히스토리 rewrite 금지(과거 blob ~3.5MB 잔존 수용), coin 워크스페이스 잔여 파일(평문 API 키·중첩 repo)과 pre-commit 핀 수리·.claude-pre-commit 처분은 별도 결정(G5 등) 소관.",
+        "rationale": "①실측: hooks 추적 74개 중 venv_firewall 35개(.exe 29 포함, blob 합 3,492,806B)가 커밋됨(레지스터 L76 \"36개\"는 1건 과계수 — 인덱스 재계수 35 확정). 디스크 972.2MB 본체(Lib/)는 .gitignore L28 lib/의 Windows 대소문자 비민감 매치로 이미 비추적이므로 rm -r --cached 35개 + 전용 ignore 행이면 완결. ②gitlink 3개는 mode 160000으로 인덱스에 실재하나 .gitmodules 부재(Test-Path False, submodule status exit 128 fatal=레지스터 L82와 일치) — 클론 불가 데드 엔트리이므로 언트래킹+ignore가 유일한 비파괴 해소(수리=G5 별도 결정). ③coin zip 13개는 전부 git 미추적 실측이므로 파일시스템 이동만으로 충분, 레지스터 L74 \"전체 repo 밖 이동 대상\" 직접 부합; (5)==(6) SHA256 동일 확정이나 D18 삭제 전면 금지에 따라 _duplicate\\ 격리+노트가 유일한 정합 처리. ④promptfoo_eval_latest.json:1282 \"mode\": \"simulation\" 실측으로 무표지 사실 확정, README 1줄로 해소. 커밋 단계는 레지스터 L82 \"pre-commit rev 핀 고장(모든 커밋 에러)\" 확정 결함 탓에 프레임워크 공식 SKIP(고장 훅 1종 한정)을 사용 — 전역 --no-verify 회피보다 좁고 기록 가능한 최소 우회.",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\.gitignore",
+            "old": "# ── Build Artifacts ──\n*.bundle.*\n*.map",
+            "new": "# ── Build Artifacts ──\n*.bundle.*\n*.map\n\n# ── Repo Hygiene (D18, 2026-06-11) ──\n# llama-firewall venv: 디스크 972MB 보존, 인덱스 35개 언트래킹 후 재추적 방지\n.claude/hooks/venv_firewall/\n# 깨진 gitlink 3종(.gitmodules 부재, submodule fatal): 언트래킹 후 재추적 방지(디스크 보존)\n.claude-pre-commit/\n.claude/plugins/claude-code-plugins-plus-skills/\n.claude/plugins/claude-code-skills/",
+            "note": "old는 .gitignore L81-83 말미 블록 — 파일 내 유일 매칭(grep 검증: '# ── Build Artifacts ──' 1회, '*.map' 1회). 신규 4 ignore 경로는 현행 패턴(venv/, .venv/, lib/) 어느 것에도 미매치 실측 확인"
+          }
+        ],
+        "risk": "(1) S4 커밋은 고장 훅 SKIP에 의존 — G5(pre-commit 처분) 결정 전 다른 훅 추가 시 재검토 필요. (2) robocopy /S가 중첩 소형 zip 6개를 압축 해제본 폴더 구조에서 빼내므로 coin 워크스페이스 내부 폴더의 zip 참조가 끊길 수 있음(운영 필요 파일 0 — 레지스터 L74 — 이므로 실효 위험 낮음). (3) 과거 히스토리의 venv blob ~3.5MB는 rewrite 금지 방침상 잔존(pack 크기 영향 미미). (4) 레지스터 \"36개\" vs 실측 35개 — 본 판정은 실측 35 기준이며 rm -r --cached는 개수 무관 전수 제거라 안전. (5) D:\\VAMOS_ARCHIVE는 현재 미존재 — S5가 생성하므로 D: 용량(≥1.1GB 여유) 사전 확인 권장.",
+        "status": "DECIDED"
+      },
+      {
+        "decision_id": "D19",
+        "question": "구 시크릿명(DEPLOY_SSH_KEY/DEPLOY_HOST) 서술 잔존 3곳을 secrets_mapping.md v1.1 정본 명칭(STAGING_SSH_KEY/STAGING_HOST/PROD_SSH_KEY/PROD_HOST_LIST)으로 교정하는 edits 확정",
+        "canonical_basis": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\03_security-scanning\\secrets_mapping.md",
+            "line": "7",
+            "quote": "**버전**: v1.1 (P1-2 step2 미세 재검증 반영)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\03_security-scanning\\secrets_mapping.md",
+            "line": "72-75",
+            "quote": "| 15 | `STAGING_SSH_KEY` | Deploy-V2 | Staging host SSH private key | WF-6 | ... | 16 | `STAGING_HOST` | Deploy-V2 | Staging host FQDN | WF-6 | ... | 17 | `PROD_SSH_KEY` | Deploy-V2 | Production host SSH private key | WF-7 | ... LOCK-CI-10 | | 18 | `PROD_HOST_LIST` | Deploy-V2 | Production host 리스트 (canary 노드 선택) | WF-7 |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\03_security-scanning\\secrets_mapping.md",
+            "line": "150",
+            "quote": "- **SSH**: `STAGING_SSH_KEY`, `STAGING_HOST`, `PROD_SSH_KEY`, `PROD_HOST_LIST`"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CONFLICT_LOG.md",
+            "line": "66",
+            "quote": "CFL-CI-14 (DEPLOY_SSH_KEY/HOST vs STAGING_/PROD_ 분할) → **RESOLVED** (P2-1 V2 §3.4/§4.1 환경별 분기)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CONFLICT_LOG.md",
+            "line": "56",
+            "quote": "해소 방안: BL-01 일괄 처리에 통합 (CFL-CI-05/08/09/14 묶음) — secrets_mapping v1.1 분할 정본 우선, P1-4 §5.1 narrative 주석 보강 또는 STAGING_/PROD_ 분기 표기"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\docker_compose_pipeline.md",
+            "line": "544",
+            "quote": "CFL-CI-14 | OPEN — §5.1 DEPLOY_SSH_KEY/HOST vs STAGING_/PROD_ 분할 | secrets_mapping v1.1 분할 정본 우선 (DEFINED-HERE Level 4)"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CICD_PIPELINE_구조화_종합계획서.md",
+            "line": "257-258",
+            "quote": "| WF-6 | deploy-staging.yml | 02_cd-workflows | workflow_run/dispatch | / | WF-7 | deploy-prod.yml | 02_cd-workflows | workflow_dispatch |"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\phase_b6_yaml_normalization.md",
+            "line": "160",
+            "quote": "시크릿 `DEPLOY_SSH_KEY`, `DEPLOY_HOST`, `POSTGRES_PASSWORD`, `QDRANT_API_KEY`, `NEO4J_AUTH`, `OPENAI_API_KEY` 추가 필요"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\_index.md",
+            "line": "57",
+            "quote": "- **시크릿 (V2)**: DEPLOY_SSH_KEY, DEPLOY_HOST, POSTGRES_USER/PASSWORD, QDRANT_API_KEY, NEO4J_AUTH, OPENAI_API_KEY, AWS credentials, SLACK_WEBHOOK_URL"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CICD_PIPELINE_구조화_종합계획서.md",
+            "line": "1472-1473",
+            "quote": "| `DEPLOY_SSH_KEY` | deploy-*.yml | V2 서버 SSH 접근 | / | `DEPLOY_HOST` | deploy-*.yml | V2 배포 서버 호스트 |"
+          }
+        ],
+        "conclusion": "구 시크릿명 잔존 3곳 전부를 secrets_mapping.md v1.1 §2.1 #15~#18 정본 명칭으로 치환한다: DEPLOY_SSH_KEY/DEPLOY_HOST(2건 통칭) → STAGING_SSH_KEY/STAGING_HOST(WF-6 deploy-staging.yml) + PROD_SSH_KEY/PROD_HOST_LIST(WF-7 deploy-prod.yml) 4건 환경별 분할 표기. 주변의 다른 시크릿 나열(POSTGRES_*, QDRANT_API_KEY, NEO4J_AUTH, OPENAI_API_KEY, AWS, SLACK 등)은 byte 보존. 종합계획서 §A.3 표는 2행→4행 분할하되 WF 열은 정본 매핑(WF-6=deploy-staging.yml, WF-7=deploy-prod.yml)에 맞춰 구체화한다.",
+        "rationale": "정본 우선순위상 secrets_mapping.md v1.1(DEFINED-HERE Level 4, CONFLICT_LOG 명시 '분할 정본 우선')이 P1-4 narrative·_index·계획서 §A.3 서술보다 우선한다. CFL-CI-14는 CONFLICT_LOG:66에서 'DEPLOY_SSH_KEY/HOST vs STAGING_/PROD_ 분할 → RESOLVED (P2-1 V2 §3.4/§4.1 환경별 분기)'로 이미 판정 종결되었으므로, 잔존 3곳은 RESOLVED 판정의 단순 미반영 drift다. 1:1 치환이 아니라 1→2 환경 분할(staging/prod)이 판정 내용이므로 각 위치에서 2개 명칭을 4개로 확장하는 것이 정본 정합이다. 종합계획서 §A.3 표의 WF 열은 기존 'deploy-*.yml' 통칭 대신 secrets_mapping §2.1 #15~#18의 WF-6/WF-7 매핑(계획서 자체 L257-258의 파일명 deploy-staging.yml/deploy-prod.yml과 일치)을 따라 행별로 구체화한다. 세 old 문자열 모두 해당 파일 내 유일 매칭임을 grep으로 실측 검증했다(DEPLOY_SSH_KEY 출현: phase_b6 1회, _index 1회, 종합계획서 1472행 1회뿐).",
+        "edits": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\phase_b6_yaml_normalization.md",
+            "old": "시크릿 `DEPLOY_SSH_KEY`, `DEPLOY_HOST`, `POSTGRES_PASSWORD`, `QDRANT_API_KEY`, `NEO4J_AUTH`, `OPENAI_API_KEY` 추가 필요",
+            "new": "시크릿 `STAGING_SSH_KEY`, `STAGING_HOST`, `PROD_SSH_KEY`, `PROD_HOST_LIST`, `POSTGRES_PASSWORD`, `QDRANT_API_KEY`, `NEO4J_AUTH`, `OPENAI_API_KEY` 추가 필요",
+            "note": "L160. CFL-CI-14 RESOLVED 반영: 구 통칭 2건→정본 환경분할 4건(secrets_mapping v1.1 §2.1 #15~#18). 후행 시크릿 나열 및 '(P1-2 secrets_mapping.md §6 V1→V2 전환 테이블 참조)' 보존. 파일 내 유일 매칭 실측 확인."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\02_cd-workflows\\_index.md",
+            "old": "- **시크릿 (V2)**: DEPLOY_SSH_KEY, DEPLOY_HOST, POSTGRES_USER/PASSWORD,",
+            "new": "- **시크릿 (V2)**: STAGING_SSH_KEY, STAGING_HOST, PROD_SSH_KEY, PROD_HOST_LIST, POSTGRES_USER/PASSWORD,",
+            "note": "L57. 구 통칭 2건→정본 4건 분할 표기. 후행 나열(QDRANT_API_KEY, NEO4J_AUTH, OPENAI_API_KEY, AWS credentials, SLACK_WEBHOOK_URL) 보존. 파일 내 유일 매칭 실측 확인."
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\4-2_CICD-Pipeline\\CICD_PIPELINE_구조화_종합계획서.md",
+            "old": "| `DEPLOY_SSH_KEY` | deploy-*.yml | V2 서버 SSH 접근 |\n| `DEPLOY_HOST` | deploy-*.yml | V2 배포 서버 호스트 |",
+            "new": "| `STAGING_SSH_KEY` | deploy-staging.yml | V2 staging 서버 SSH 접근 |\n| `STAGING_HOST` | deploy-staging.yml | V2 staging 배포 서버 호스트 |\n| `PROD_SSH_KEY` | deploy-prod.yml | V2 production 서버 SSH 접근 |\n| `PROD_HOST_LIST` | deploy-prod.yml | V2 production 배포 서버 호스트 리스트 (canary 노드 선택) |",
+            "note": "L1472-1473 §A.3 표 2행→4행 분할. WF 열은 secrets_mapping v1.1 #15~#18 매핑(STAGING_*=WF-6 deploy-staging.yml, PROD_*=WF-7 deploy-prod.yml; 계획서 L257-258 파일명과 일치)로 구체화. PROD_HOST_LIST 설명은 정본 #18 'Production host 리스트 (canary 노드 선택)' 반영. 전후 행(SEMGREP_APP_TOKEN/POSTGRES_USER) 보존. 파일 내 유일 매칭 실측 확인."
+          }
+        ],
+        "risk": "낮음. CFL-CI-14가 이미 RESOLVED인 판정의 표면 반영이라 신규 충돌 소지 없음. 잔여 리스크 2건: (1) 종합계획서 §A.3 행 수가 2→4로 늘어 시크릿 총계를 별도 서술하는 곳이 있으면 카운트 drift 가능 — §A.3 표 자체에 합계 행은 없음을 확인했으나 타 문서의 '§A.3 23건' 류 카운트 언급(secrets_mapping.md:95, :364 CONFLICT_CANDIDATE)은 본 교정과 별개의 기존 이슈로 잔존. (2) phase_b6 L160은 V1→V2 전환 서술이므로 staging/prod 4건 동시 나열이 secrets_mapping §6 전환 테이블과 정합하나, 독자가 '4건 모두 V2 진입 시점 필요'로 읽는 것은 정본 #15~#18 Deploy-V2 카테고리와 일치하여 문제 없음.",
+        "status": "DECIDED"
+      }
+    ],
+    "judge": {
+      "contradictions": [
+        {
+          "between": "D1 ↔ 5-3 파일 실태 (C-04 RESOLVED 근거 불충분)",
+          "issue": "D1은 대안 ② '상속 출처를 부록 §C(LOCK 미부여)로 정정'이 집행 완료됐다며 C-04를 RESOLVED 전환하지만, C-04가 직접 지목한 매핑 셀이 미정정 상태로 남아 있다. 실측: 종합계획서 §A.4 L1250 '| LOCK-V12-05 | ... | LOCK-HW-09 (7원칙 내 관련) | ...', AUTHORITY_CHAIN.md L46 3열 'LOCK-HW-09 관련', S-5 행 L1083 'OPEN — C-04', 01_wellness-ui\\_index.md L14-15 'LOCK-HW-09 (→ V12-05)'. 정정 완료된 것은 소비자 2파일 L12뿐(실측 확인). 또한 D2/D3/D4는 자기 S-행(S-6/S-7/S-8)을 정정하는데 D1만 계획서 무편집 — 패턴 비대칭.",
+          "resolution": "D1에 보완 edits 4~5건 추가 후 RESOLVED 전환: ①계획서 L1250 'LOCK-HW-09 (7원칙 내 관련)' → '부록 §C — cbt_distortion_taxonomy.md §4.1 (LOCK 미부여)' ②AUTHORITY_CHAIN L46 3열 'LOCK-HW-09 관련' → '부록 §C (LOCK 미부여)' ③계획서 S-5 L1083 'OPEN — C-04' → 'RESOLVED (2026-06-11)' (D3의 S-7 처리와 동일 패턴) ④01_wellness-ui\\_index.md L14-15 표기 동기화. 보완 전에는 C-04 RESOLVED 전환 금지."
+        },
+        {
+          "between": "D2 ↔ CONFLICT_LOG C-03 기존 RESOLVED 판정문",
+          "issue": "D2가 5종(related/supports/contradicts/continues/branches)을 정본으로 확정하면 같은 CONFLICT_LOG.md L15의 C-03 RESOLVED 판정문 'PKM이 Zettelkasten 핵심 원칙(원자적 노트, 4종 링크 타입, ID 체계)을 LOCK으로 보호'가 로그 내부에서 자기모순(C-03=4종 vs C-05=5종 정본).",
+          "resolution": "D2의 CONFLICT_LOG edits에 1건 추가: L15의 '4종 링크 타입' → '5종 링크 타입' 정정(또는 C-05 행 판정문에 'C-03 행의 4종 표기는 본 판정으로 5종으로 정정됨' 명기 + L15 수정). C-05 RESOLVED 판정문에 정정 사실을 교차 기재."
+        },
+        {
+          "between": "D2·D1(기집행 전사)·D4 ↔ 5-3 AUTHORITY_CHAIN LOCK 변경 프로토콜",
+          "issue": "AUTHORITY_CHAIN.md L82-88 '상속 LOCK 변경 시 절차' 5단계는 '변경 이력 테이블에 기록'을 의무화하나, ①기집행된 LOCK-V12-05 15종 전사(L46, LastWriteTime 2026-06-11 09:48)가 변경 이력 미기록(이력 마지막 행 L116=2026-04-12) ②D2의 L50 값 변경(4종→5종)은 AUTHORITY_CHAIN edit 1건뿐으로 이력 행 부재 ③헤더 L3 '최종 갱신: 2026-04-12' stale. D2와 D4가 각자 이력/헤더를 갱신하면 동일 anchor 충돌.",
+          "resolution": "AUTHORITY_CHAIN 변경 이력 append와 헤더 L3 날짜 갱신을 단일 담당(적용 순서상 마지막인 D4)에 배정하고, 이력 1행에 V12-05 전사(D1 근거)·V12-09 5종 정정(D2)·V12-07 출처 정정(D4)을 일괄 기록한다. D2는 L50 행 수정만 수행."
+        },
+        {
+          "between": "D4 ↔ 5-3 W-05/계획서 L321·L527 (TS 정본=3-8) ↔ 2-1 LOCK-BN-18",
+          "issue": "D4가 상속 출처로 도입하는 LOCK-BN-18은 'Template 소유 = CORE(02)' 즉 'Template 원문/버전/네이밍 정본은 02 ORANGE CORE I-13'(2-1 종합계획서 L175, L659 실측)인데, 5-3 CONFLICT_LOG L34 W-05와 계획서 L321/L527은 'TS_CORE 정본 = 3-8'로 기재. D4 edits가 이를 구분 없이 인용하면 5-3 문서 내에 정본 소유 주장이 2계열(3-8 vs CORE 02) 병존하는 모순 발생. D4는 W-05/L321/L527을 편집하지 않음.",
+          "resolution": "D4 edits의 출처 문구를 계층 분리로 한정 작성: '구성(3종) LOCK 정본 = D2.0-03 §4.2(L879 \"(LOCK) TemplateSet = 3종\"); Template 원문/버전 소유 = ORANGE CORE 02 I-13(2-1 LOCK-BN-18 인용); 에이전트 대화 콘텐츠 정본 = 3-8(W-05 유지)'. W-05/L321/L527은 무수정 유지하고 LOCK-BN-18 인용을 '설계 계층 소유' 한정으로 표기."
+        },
+        {
+          "between": "D5 ↔ 5-3 AUTHORITY_CHAIN L44 상속 표기 (순환·유령 출처) / D4 패턴",
+          "issue": "D5는 E9 출처를 LOCK-V12-03으로 교체하지만, 5-3 AUTHORITY_CHAIN L44는 상속 원본을 'AI-Invest tau LOCK'(원본 도메인 LOCK 변경 시 자동 상속)으로 표기 — 실측상 Ai-investing AUTHORITY_CHAIN §4 LOCK 테이블(L62-75)에 tau 행이 없어 유령 출처이며, 교체 후 '도메인 본문→V12-03→(존재하지 않는) AI-Invest tau LOCK' 순환 고리가 남는다. D4는 V12-07의 동일한 유령 출처를 정정하는데 D5는 V12-03 출처를 방치 — 처리 비대칭.",
+          "resolution": "D5에 1건 추가: AUTHORITY_CHAIN L44 상속 원본 표기를 'Ai-investing 도메인 기준값 — top_down_allocation.md 0.025 (1/T 범위 0.01~0.05), 전용 LOCK 미등재'로 정정(D4 패턴 정합). E9 출처 교체 문구에도 top_down_allocation.md 기준값을 병기해 순환 참조를 끊는다. Ai-investing 도메인 경계 L84('tau 정본=본 도메인 소유')와의 정합도 이 표기로 충족."
+        },
+        {
+          "between": "D10 ↔ CLAUDE.md L332 V0-001 결정 행 (D13 영역 인접)",
+          "issue": "CLAUDE.md L332는 'V0 비용 상한 미정의 → V1 동일 적용 (₩40,000/월)'로 기재되어 'V0 정본 = ₩0' 단독 선언과 어긋나게 읽힐 수 있다. D10은 CLAUDE.md를 편집하지 않으므로 이 행이 잔존. 값 차원에서는 충돌 없음 — D13의 20키 레지스트리(cost.daily_limit=1300/cost.monthly_limit=40000 ABSOLUTE LOCK, CLAUDE.md L691-692)를 D10이 그대로 보존하고 V0 신규 LOCK도 만들지 않으므로 D10↔D13 직접 모순은 없다.",
+          "resolution": "D10의 4개 edit 문구를 V0-001과 동일 프레임으로 작성: 'V0 정본 지출 = ₩0(로컬 전용); ₩40,000은 V1 한도의 사전 적용(엔진 안전망)이며 V0 지출 허용·상한이 아님'. 'V0 상한 없음'이라는 단독 표현 금지. CLAUDE.md L332는 무수정(엔진 사전 적용 기록으로 양립). 단, D10 edits는 PART2 L6175·규칙서 §1.2의 ABSOLUTE LOCK 라벨을 절대 제거·완화하지 말 것(D13 분모 20에 cost 키 포함)."
+        },
+        {
+          "between": "D17 ↔ D18 (실행 순서·처분 권한 서사)",
+          "issue": "①D18 S4 커밋은 pre-commit 환경에서 실행되는데, D17 미적용 상태면 깨진 freddo1503 핀 때문에 훅 설치 단계 자체가 실패할 수 있다(SKIP=claude-check는 훅 id 스킵일 뿐 repo 설치 실패는 못 막음). ②D18 본문은 'pre-commit 핀 수리·처분은 별도 결정(G5) 소관'이라며 훅 수리 후 SKIP 종료를 전제하나, D17은 이미 해당 훅 블록 영구 제거(rev 교정 기각)를 확정 — 처분 결정 중복·서사 충돌.",
+          "resolution": "실행 순서를 D17 → D18로 고정하고, D17이 적용한 .pre-commit-config.yaml(repos: [])을 D18 S4 커밋에 함께 포함한다. .pre-commit-config.yaml 처분의 정본 결정은 D17이며, D18의 'G5 소관' 문구는 '향후 훅 재도입 여부'로 한정 해석한다. D17 적용 후 S4의 SKIP=claude-check는 무해한 잔여 안전장치로 유지 가능."
+        },
+        {
+          "between": "D1~D5 (5-3 CONFLICT_LOG.md 공유 편집 17건)",
+          "issue": "5개 결정이 동일 파일을 편집: 헤더 L3 '최종 갱신: 2026-04-12'와 변경 이력 마지막 행 L76을 복수 결정이 anchor로 쓰면 first-writer-wins로 후속 결정의 old 문자열이 불일치(편집 실패)하거나 이력 행 순서가 뒤집힌다.",
+          "resolution": "적용 순서를 D1→D2→D3→D4→D5로 고정. 헤더 L3 날짜 갱신은 1회만(마지막 적용 D5에 배정, 나머지 결정의 해당 edit은 드롭). 변경 이력 append는 각 결정이 '직전 결정이 추가한 최신 행'을 anchor로 재실측 후 적용하거나, D5에서 5건 통합 1행으로 기록. 각 C-행(L16~L20) edit의 old는 자기 행 내 고유 부분 문자열로 한정(±1행 컨텍스트 금지 — 연속 행을 서로 다른 결정이 편집)."
+        }
+      ],
+      "lock_violations": [
+        "D2: 5-3 AUTHORITY_CHAIN.md L50의 LOCK-V12-09 값 셀(링크 타입 4종 목록)을 5종으로 변경 — 상속 LOCK 전파 절차(L82-88)상 허용되는 정정이나 형식상 LOCK 값 변경에 해당하며, 절차 5단계(변경 이력 기록)가 D2 edits에 누락. 이력 기록과 함께 집행할 것.",
+        "D5: Ai-investing 3개 파일의 'E9 LOCK' 라벨 행 τ=0.05→0.025 변경 — '허위 인용(SPEC §14=14-Item 기술스택, L74 실측)' 판정으로 LOCK 자격 부인 후 본문 정정이므로 재정의 아님으로 수용. 단, Ai-investing AUTHORITY_CHAIN §4 LOCK 테이블(L62-75)에 tau 부재 확인 완료가 전제이며, 원본 도메인 측 변경 기록(CONFLICT_LOG/이력) 추가를 권고.",
+        "기집행분(D1 근거): 5-3 AUTHORITY_CHAIN.md L46 LOCK-V12-05 값 전사(2026-06-11 09:48)가 변경 이력 미기록·헤더 날짜 stale 상태 — LOCK 변경 프로토콜 5단계 미이행. D1 RESOLVED 전환 전 이력 보완 필요(contradiction #3 해소 지시에 포함).",
+        "D10 감시점: PART2 L6175 '| 14 | 비용 엔진 ₩40,000/월 하드코딩 | ABSOLUTE LOCK |' 및 규칙서 §1.2의 ABSOLUTE LOCK 라벨·값(V1 ₩40K/V2 ₩93K/V3 ₩266K)은 무변경 유지 조건으로만 적합 — 한정 표기 주석 추가만 허용, 라벨 제거·값 변경 시 위반.",
+        "D9: D2.0-02(DESIGN 2.0 문서) 편집이나 D2.0-01 §5.6 LOCK(I-1~I-25) 및 READINESS_GUIDE L450/L667/L1129 기존 표기와 정합하는 stale 참조 교정 — 위반 아님(확인 완료)."
+      ],
+      "uniqueness_risks": [
+        "5-3 CONFLICT_LOG.md L16~L20: C-04~C-08이 연속 5행이며 5개 결정(D1~D5)이 각각 자기 행을 편집 — old에 ±1행 포함 시 인접 결정 적용 후 불일치. old는 자기 행 고유 문자열로 한정.",
+        "5-3 종합계획서: §3.4 L230(D4)/L232(D2) 인접, §A.4 L1252(D4)/L1254(D2) 인접, S-5~S-8 L1083~L1086을 D1(보완 시)/D2/D3/D4가 분할 편집 — 연속 행 분할 편집의 ±1 컨텍스트 충돌 위험. 적용 순서 고정 + 행 단위 old.",
+        "5-3 AUTHORITY_CHAIN.md L48(D4)/L50(D2) 인접 행 분할 편집 — 행 단위 old 필수. 변경 이력·헤더 갱신은 단일 담당 배정(contradiction #3).",
+        "PART1: '#9~#13' 상세 헤더가 C.1(L623~L635)과 C.2(L684~L696)에 이중 존재 — D11의 12개 old는 반드시 제목 전문(예: '#10 RT-BNP RSS 소스 목록')을 포함해야 유일. D10의 PART1 edit이 C.2/C.3 구역(L640~L770)을 건드리지 않음을 적용 전 확인.",
+        "READINESS_GUIDE: '24개'가 L151/L419/L423/L1115/L1118 5회 출현 — D7 정정 대상은 L423/L1118만(나머지는 BASE-1.3 규칙 분모로 보존 대상). old에 행 전체 포함 필수. 또한 L1117(§2.5 참조 행)이 D7 대상 L1118과 인접 — D13의 GUIDE edits는 §2.5 본문(L335 이하)으로 한정하고 L1117 접근 금지.",
+        "PART2: '₩40,000'이 11개 행에 출현(L107/161/293/469/1590/1738/2558/2616/2684/5508/6175/6191) — D10 old는 GO/NO-GO 행 전체 포함 필수. D7(L802, L6172)과 D10(L6175)은 같은 표 내 3행 간격 — ±1 컨텍스트로도 비중첩 확인 완료, 행 단위 old 유지 시 안전.",
+        "D14 manifest.json 7 edits: 4개 벤치마크 source 필드가 유사 패턴 반복일 가능성 — 각 old에 벤치마크 식별자(이름/키)를 포함해 유일성 확보."
+      ],
+      "verdict": "조건부 통과(CONDITIONAL PASS). 17개 결정 간 값 차원의 치명적 상호 모순은 없음: ①비용 — D10(V0=₩0, V1 ₩40K 엔진 안전망)과 D13(20키 레지스트리의 cost.daily_limit=1300/cost.monthly_limit=40000 ABSOLUTE LOCK, CLAUDE.md L691-692)은 정합하며 V0 신규 LOCK 미창설로 충돌 없음. ②분모 — D7(스키마 42/V0 25/BASE-1.3 규칙 24), D9(I-모듈 25), D13(config LOCK 키 20)은 상호 독립 분모로 교차 영향 없음을 실측 확인(READINESS_GUIDE L450·L667·L1129의 I-Series 25, PART2 L6172의 '25개 스키마'가 이미 정합). 다만 8건의 교차 모순/잔존 격차를 확인: 핵심은 (a) D1이 C-04를 RESOLVED 처리하면서 C-04가 지목한 §A.4 L1250·AUTHORITY_CHAIN L46 3열의 'LOCK-HW-09' 매핑이 미정정으로 남는 실질 격차, (b) D2 확정 시 C-03 판정문(L15 '4종')과의 로그 내 자기모순, (c) D4의 LOCK-BN-18(Template 정본=CORE 02) 인용과 W-05(TS_CORE 정본=3-8)의 계층 미구분, (d) D5의 순환·유령 출처(AUTH L44 'AI-Invest tau LOCK' 실존 부재), (e) D17→D18 실행 순서 의존성, (f) 5-3 CONFLICT_LOG 공유 라인(헤더 날짜·이력 anchor)의 first-writer-wins 충돌. 각 항목의 해소 지시(보완 edit 추가, 단일 담당 배정, 적용 순서 D1→D2→D3→D4→D5 및 D17→D18 고정, 행 단위 old 한정)를 적용하면 전체 집행 가능. LOCK 값 재정의는 D2(L50)·D5(E9 라벨 행) 2건이 형식상 해당하나 모두 정본 상위 출처 정합 교정으로 수용 — 단 변경 이력 기록 의무 이행을 집행 조건으로 한다."
+    }
+  }
+}
