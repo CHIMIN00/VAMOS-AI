@@ -637,7 +637,7 @@ Phase 5 (Week 9-12): Integration + Test + Release
 
 # 9. 보안 필수 항목 (V1 CRITICAL)
 
-V1 릴리스 전 반드시 구현해야 할 보안 항목 14건:
+V1 릴리스 전 반드시 구현해야 할 보안 항목 **15건** *(14 S7E 항목 + 1 DEC-003 Allowlist, Phase 11 S11-6 SC-3 갱신)*:
 
 | # | ID | 항목 | 우선순위 | V1 구현 방법 |
 |---|-----|------|---------|-------------|
@@ -655,6 +655,7 @@ V1 릴리스 전 반드시 구현해야 할 보안 항목 14건:
 | 12 | S7E-006 | 입력 검증 | HIGH | Zod + regex 패턴 |
 | 13 | S7E-008 | Rate limiting/비용 | HIGH | 로컬 카운터 + 일/월 hard cap |
 | 14 | S7E-017 | Jailbreak 방어 | HIGH | Guardrail override 차단 |
+| 15 | DEC-003 | 도구 승인 Allowlist | HIGH | 읽기전용=자동허용, 외부API/쓰기/코드실행=확인 필요 *(Phase 11 S11-6 SC-3 추가)* |
 
 ---
 

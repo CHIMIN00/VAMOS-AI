@@ -152,7 +152,8 @@ C-3 Code Verifier: 코드 정확성 검증
   - 비밀키/토큰 노출 감지
 - **Phase 3: Sandbox 실행** (E-4 Code Executor 연동)
   - Docker sandbox 내 격리 실행 (LOCK)
-  - 리소스 제한: CPU 1 core, RAM 512MB, timeout 30s
+  - 실행 시간 제한: timeout 30s (LOCK-VR-15)
+  - CPU/RAM 상한: 설정 파일로 관리, 구체값은 운영 시 결정 (LOCK-VR-15). 참고 기본값 예시: CPU 1 core, RAM 512MB
   - 테스트 케이스 실행 및 결과 비교
 - **Phase 4: 의도-코드 일치 검증**
   - LLM 기반 코드 리뷰: 의도와 구현의 일치도 평가
@@ -309,7 +310,7 @@ D-2 Multimodal Engine: 멀티모달 처리 엔진
 | C-1~C-3 | D-1 Think Engine | 검증 실패 시 에스컬레이션 |
 | D-1 | I-5 Decision Engine | 추론 결과 → 의사결정 전달 |
 | D-2 | I-4, I-13 | 멀티모달 입력/출력 연동 |
-| 전체 | I-8 Self-check Engine | QoD 점수 산출 대상 |
+| 전체 | I-6 Self-check Engine (S-1) | QoD 점수 산출 대상 |
 
 ### Part2 반영 필요사항
 - V1-Phase 3 (L2140~2147): 현재 1줄 설명 → 위 상세내용으로 보강

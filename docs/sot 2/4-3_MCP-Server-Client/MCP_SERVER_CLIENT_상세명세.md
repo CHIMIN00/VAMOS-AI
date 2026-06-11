@@ -461,3 +461,212 @@ Disconnected → Connecting → Connected → Ready
 - **AutoConnect 서버**: 앱 시작 시 자동 연결 (filesystem, brave-search 등)
 - **On-demand 서버**: 도구 호출 시 연결 (puppeteer, notion 등)
 - **idle 타임아웃**: 10분 미사용 시 on-demand 서버 자동 종료
+
+---
+
+## F. 추가 내부 도구 JSON Schema (Phase 0 우선 대상)
+
+### F-1 file_read
+```json
+{
+  "name": "file_read",
+  "description": "파일 시스템에서 파일 내용을 읽어 반환",
+  "inputSchema": {
+    "type": "object",
+    "required": ["path"],
+    "properties": {
+      "path": { "type": "string", "description": "읽을 파일의 절대 경로" },
+      "encoding": { "type": "string", "default": "utf-8", "enum": ["utf-8", "base64", "binary"] },
+      "offset": { "type": "integer", "minimum": 0, "description": "읽기 시작 바이트 오프셋" },
+      "limit": { "type": "integer", "minimum": 1, "maximum": 10485760, "description": "최대 읽기 바이트 (기본 1MB)" }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "content": { "type": "string" },
+      "size": { "type": "integer" },
+      "mime_type": { "type": "string" },
+      "truncated": { "type": "boolean" }
+    }
+  }
+}
+```
+
+### F-2 file_write
+```json
+{
+  "name": "file_write",
+  "description": "파일 시스템에 내용을 기록",
+  "inputSchema": {
+    "type": "object",
+    "required": ["path", "content"],
+    "properties": {
+      "path": { "type": "string" },
+      "content": { "type": "string" },
+      "encoding": { "type": "string", "default": "utf-8" },
+      "mode": { "type": "string", "enum": ["overwrite", "append", "create_new"], "default": "overwrite" },
+      "create_dirs": { "type": "boolean", "default": false }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "success": { "type": "boolean" },
+      "bytes_written": { "type": "integer" },
+      "path": { "type": "string" }
+    }
+  }
+}
+```
+
+### F-3 web_search
+```json
+{
+  "name": "web_search",
+  "description": "웹 검색 수행 후 결과 반환",
+  "inputSchema": {
+    "type": "object",
+    "required": ["query"],
+    "properties": {
+      "query": { "type": "string", "maxLength": 500 },
+      "count": { "type": "integer", "default": 10, "minimum": 1, "maximum": 50 },
+      "language": { "type": "string", "default": "ko" },
+      "freshness": { "type": "string", "enum": ["day", "week", "month", "any"], "default": "any" }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "url": { "type": "string", "format": "uri" },
+            "snippet": { "type": "string" },
+            "published_date": { "type": "string", "format": "date-time" }
+          }
+        }
+      },
+      "total_count": { "type": "integer" }
+    }
+  }
+}
+```
+
+### F-4 knowledge_graph_query
+```json
+{
+  "name": "knowledge_graph_query",
+  "description": "지식 그래프에서 엔티티 및 관계 검색",
+  "inputSchema": {
+    "type": "object",
+    "required": ["query"],
+    "properties": {
+      "query": { "type": "string", "description": "Cypher 또는 자연어 쿼리" },
+      "query_type": { "type": "string", "enum": ["cypher", "natural_language"], "default": "natural_language" },
+      "max_depth": { "type": "integer", "default": 3, "minimum": 1, "maximum": 10 },
+      "limit": { "type": "integer", "default": 50 }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "nodes": { "type": "array", "items": { "type": "object", "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "properties": { "type": "object" } } } },
+      "edges": { "type": "array", "items": { "type": "object", "properties": { "source": { "type": "string" }, "target": { "type": "string" }, "relationship": { "type": "string" } } } }
+    }
+  }
+}
+```
+
+### F-5 workflow_trigger
+```json
+{
+  "name": "workflow_trigger",
+  "description": "VAMOS 워크플로우를 실행하거나 특정 단계를 트리거",
+  "inputSchema": {
+    "type": "object",
+    "required": ["workflow_id"],
+    "properties": {
+      "workflow_id": { "type": "string" },
+      "input_data": { "type": "object" },
+      "step_id": { "type": "string", "description": "특정 단계부터 시작 (선택)" },
+      "async": { "type": "boolean", "default": true }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "execution_id": { "type": "string" },
+      "status": { "type": "string", "enum": ["started", "queued", "completed", "failed"] },
+      "result": { "type": "object" }
+    }
+  }
+}
+```
+
+### F-6 embedding_generate
+```json
+{
+  "name": "embedding_generate",
+  "description": "텍스트를 벡터 임베딩으로 변환",
+  "inputSchema": {
+    "type": "object",
+    "required": ["text"],
+    "properties": {
+      "text": { "type": "string", "maxLength": 8192 },
+      "model": { "type": "string", "default": "text-embedding-3-small" },
+      "dimensions": { "type": "integer", "default": 1536 }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "embedding": { "type": "array", "items": { "type": "number" } },
+      "model": { "type": "string" },
+      "usage": { "type": "object", "properties": { "prompt_tokens": { "type": "integer" } } }
+    }
+  }
+}
+```
+
+---
+
+## G. 도구 실행 타임아웃 명세
+
+### G-1 도구별 타임아웃
+| 도구 카테고리 | 기본 타임아웃 | 사유 |
+|-------------|------------|------|
+| search, web_search | 10s | 네트워크 의존, 빠른 응답 기대 |
+| memory_read/write, file_read/write | 5s | 로컬 I/O, 지연 최소 |
+| code_execute | 60s | 코드 실행 + 출력 대기 |
+| knowledge_graph_query | 15s | Neo4j 쿼리 복잡도 가변 |
+| workflow_trigger (async) | 5s | 시작 확인만, 완료 대기 아님 |
+| embedding_generate | 10s | 외부 API 호출 |
+| 기타 내부 도구 | 30s | 기본값 |
+| 기타 외부 서버 도구 | 30s | 기본값 |
+
+### G-2 타임아웃 행동
+- **단일 도구**: 타임아웃 → AbortController 취소 → McpError(TIMEOUT) 반환
+- **연쇄 호출**: 총 예산 120s, 도구별 예산 = min(도구 타임아웃, 잔여 예산)
+- **재시도 시**: 재시도별 타임아웃 독립 (누적 아님), 단 총 예산 내
+
+---
+
+## H. 레이트 리밋 명세
+
+### H-1 서버별 레이트 리밋
+| 서버 | 제한 | 알고리즘 | 리셋 |
+|------|------|---------|------|
+| GitHub | 5,000 req/hr | X-RateLimit 헤더 파싱 | 시간당 리셋 |
+| Brave Search | 2,000 req/월 (free) | 로컬 카운터 | 월초 리셋 |
+| Slack | 1 msg/sec per channel | 토큰 버킷(1/s, burst 5) | 연속 |
+| 내부 도구 | 100 req/sec (글로벌) | 슬라이딩 윈도우 | 연속 |
+
+### H-2 레이트 리밋 소진 대응
+1. 80% 도달 → 경고 로그 + 우선순위 낮은 요청 지연
+2. 95% 도달 → 비필수 도구 호출 일시 중단
+3. 100% 도달 → 대체 서버 자동 전환 (가능한 경우) 또는 큐잉 + 리셋 대기
+4. 사용자 알림: "외부 도구 사용량이 한도에 도달했습니다. [시간] 후 재시도됩니다."

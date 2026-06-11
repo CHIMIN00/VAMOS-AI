@@ -129,7 +129,7 @@ class ABTestResult:
 | 카테고리 | 메트릭 | 수집 방법 | 목표치 |
 |---------|--------|----------|--------|
 | **정확도** | Task completion rate | 자동 (골든셋 대조) | >= 85% |
-| **품질** | QoD score (1~5) | LLM-as-judge + 인간 샘플링 | >= 4.0 |
+| **품질** | QoD score (0.0~1.0) | LLM-as-judge + 인간 샘플링 | >= 0.85 |
 | **안전성** | Safety violation rate | 자동 (가드레일 로그) | < 0.1% |
 | **지연** | p50/p95 latency | 자동 (APM) | p95 < 3s |
 | **비용** | Cost per interaction | 자동 (토큰 카운트) | < $0.05 |
@@ -157,7 +157,7 @@ class ABTestResult:
 class QualityGate:
     gates: list[GateRule] = [
         GateRule(metric="task_completion", op=">=", threshold=0.85, severity="block"),
-        GateRule(metric="qod_score", op=">=", threshold=4.0, severity="block"),
+        GateRule(metric="qod_score", op=">=", threshold=0.85, severity="block"),
         GateRule(metric="safety_violation", op="<", threshold=0.001, severity="block"),
         GateRule(metric="p95_latency_ms", op="<", threshold=3000, severity="warn"),
         GateRule(metric="cost_per_interaction", op="<", threshold=0.05, severity="warn"),
@@ -197,12 +197,13 @@ class QualityGate:
 | **도구 호출 실패율** | 실패/전체 도구 호출 | 6h | > 10% |
 | **사용자 재시도율** | 동일 메시지 재전송 비율 | 24h | > 15% |
 | **임베딩 코사인 유사도** | 응답 임베딩 vs 기준 클러스터 중심 | 7일 | cosine < 0.85 |
+| **응답 지연 (p95)** | 추론 응답 시간 p95 백분위수 | 6h | > 5s |
 
 ### C-3. 알림 트리거
 
 | 심각도 | 조건 | 알림 채널 | 응답 시간 |
 |--------|------|----------|----------|
-| CRITICAL | QoD < 3.0 (24h 평균) | PagerDuty + Slack | 15분 |
+| CRITICAL | QoD < 0.60 (24h 평균) | PagerDuty + Slack | 15분 |
 | HIGH | 드리프트 지표 2개+ 동시 초과 | Slack + Email | 1시간 |
 | MEDIUM | 단일 드리프트 지표 초과 | Slack | 4시간 |
 | LOW | 추세 경고 (7일 하락 추세) | 주간 리포트 | 다음 리뷰 |
@@ -293,7 +294,7 @@ class CanaryJudge:
     ↓
 [암시적 피드백]                    [명시적 피드백]
  - 재시도 (negative)               - 👍/👎 버튼
- - 대화 계속 (positive)            - 품질 점수 (1~5)
+ - 대화 계속 (positive)            - 품질 점수 (1~5, 내부 QoD 변환: score/5.0 → 0.0~1.0)
  - 응답 복사 (positive)            - 텍스트 피드백
  - 빠른 이탈 (negative)            - 오류 리포트
     ↓                                  ↓
@@ -375,3 +376,112 @@ class FeedbackContext:
 | 프롬프트 A/B 테스트 승률 | 월간 | >= 60% (새 버전 승리) |
 | 사용자 만족도 (NPS) | 월간 | >= 50 |
 | 반복 오류 발생률 | 월간 | 전월 대비 -20% |
+
+---
+
+## F. RLHF-lite 상세 알고리즘
+
+### F-1 피드백 클러스터링
+```python
+# 주간 피드백 집계 파이프라인
+class FeedbackClusterer:
+    def __init__(self):
+        self.min_samples = 5          # DBSCAN 최소 샘플
+        self.eps = 0.2                # 코사인 거리 임계값
+        self.embedding_model = "text-embedding-3-small"
+
+    def cluster(self, feedbacks: list[FeedbackRecord]) -> list[FeedbackCluster]:
+        """
+        1. 부정 피드백 필터링 (signal < 0)
+        2. 피드백 텍스트 임베딩 생성
+        3. DBSCAN 클러스터링 (metric=cosine, eps=0.2, min_samples=5)
+        4. 클러스터별 대표 피드백 + 빈도×심각도 가중 점수 산출
+        5. 점수 내림차순 정렬 → Top-10 반환
+        """
+        negatives = [f for f in feedbacks if f.signal_score < 0]
+        embeddings = self.embed(negatives)
+        clusters = DBSCAN(eps=self.eps, min_samples=self.min_samples, metric="cosine").fit(embeddings)
+        return self.rank_clusters(clusters, negatives)
+
+    def rank_clusters(self, clusters, feedbacks) -> list[FeedbackCluster]:
+        # 가중 점수 = count × avg(|signal_score|) × recency_weight
+        # recency_weight = exp(-days_old / 30)
+        ...
+```
+
+### F-2 Few-shot 생성 파이프라인
+1. **패턴 식별**: Top-10 실패 클러스터에서 대표 사용자 입력 추출
+2. **이상적 응답 생성**: LLM(Claude Sonnet)으로 개선된 응답 초안 생성
+3. **인간 검토**: QA 팀이 초안 검토 + 수정 (SLA: 48시간 이내)
+4. **Few-shot 등록**: 승인된 예시를 프롬프트 저장소에 추가 (`prompts/{domain}/few_shots/`)
+5. **A/B 검증**: 기존 프롬프트 vs 개선 프롬프트 A/B 테스트 (min_sample=500, p<0.05)
+
+### F-3 시스템 프롬프트 게이팅 규칙 추가
+```yaml
+# 새 게이팅 규칙 생성 워크플로우
+gating_rule_workflow:
+  trigger: "Top-10 패턴 중 반복 발생 (3회+/2주)"
+  steps:
+    1_draft: "규칙 초안 작성 (when: X, always: Y 형식)"
+    2_test: "스테이징에서 100건 테스트 — 정밀도 ≥90%, 부작용 0건"
+    3_review: "프롬프트 관리자 승인 (1인)"
+    4_deploy: "프로덕션 프롬프트에 규칙 추가 (MINOR 버전 범프)"
+    5_monitor: "7일간 모니터링 — 관련 부정 피드백 50%+ 감소 확인"
+  rollback: "부작용 감지 시 즉시 규칙 제거 (PATCH 버전 범프)"
+```
+
+---
+
+## G. 카나리 단계 운영 명세
+
+### G-1 단계별 체류 시간 및 승격 조건
+
+| 단계 | 트래픽 비율 | 최소 체류 시간 | 최소 샘플 | 자동 승격 조건 | 수동 개입 |
+|------|-----------|-------------|---------|-------------|---------|
+| Shadow | 0% (미러링) | 24시간 | 1,000 | 에러율 < 0.5%, QoD 차이 < 0.1 | 불필요 |
+| Canary | 5% | 48시간 | 500 | Mann-Whitney p ≥ 0.05 (QoD, 에러율) | 이상 시 일시정지 |
+| Partial | 25% | 72시간 | 2,000 | QoD ≥ 0.85 (0.0~1.0 DEC-010 정본 스케일 — 구 1.0~5.0 척도 "3.8" 표기는 LOCK-ML-05 0.85로 통일, CONF-ML-002 RESOLVED V1A-001 Phase 4 amendment), 에러율 < 1%, 사용자 불만 < 2% | 엔지니어 확인 |
+| Majority | 75% | 48시간 | 5,000 | 전 지표 안정 (변동 < 5%) | 관리자 승인 |
+| Full | 100% | — | — | — | 롤백 대기 모드 (48시간) |
+
+### G-2 단계 일시정지 규칙
+- 조건: 현재 단계에서 QoD 하락 ≥ 0.15 **또는** 에러율 상승 ≥ 50%
+- 행동: 해당 단계에서 추가 데이터 수집 (체류 시간 2배 연장)
+- 해제: 추가 데이터에서 조건 충족 → 승격, 미충족 → 자동 롤백
+
+### G-3 사용자 세그먼트 배제
+```python
+# 카나리 대상 사용자 선정
+def is_canary_eligible(user: User, stage: CanaryStage) -> bool:
+    if stage.traffic_pct <= 25 and user.plan in ("pro", "enterprise"):
+        return False  # 유료 사용자는 Partial(25%) 이후부터 포함
+    if user.opted_out_canary:
+        return False  # 사용자 명시적 거부
+    # 결정적 해싱: hash(user_id + deployment_id) % 100 < traffic_pct
+    return deterministic_hash(user.id, stage.deployment_id) < stage.traffic_pct
+```
+
+---
+
+## H. 드리프트 메트릭 검증 근거
+
+### H-1 임계값 산출 방법
+| 메트릭 | 임계값 | 베이스라인 | 산출 근거 |
+|--------|--------|----------|----------|
+| QoD 이동평균 | base - 0.3 | 롤링 30일 평균 | 표준편차 2σ ≈ 0.3 (정상 분포 가정, 95% 신뢰구간) |
+| 응답 길이 KL | > 0.1 | 프로덕션 7일 분포 | KL > 0.1은 "감지 가능한 분포 변화" (정보이론 관례) |
+| 거부율 | > 5% | 롤링 7일 평균 × 5 | 정상 거부율 ~1%, 5배 이상 = 이상 징후 |
+| 도구 실패율 | > 10% | 롤링 7일 평균 | 10%는 사용자 경험에 직접 영향 시작점 |
+| 재시도율 | > 15% | 롤링 7일 평균 | 15%는 사용자 불만족 전환점 (내부 파일럿 기준) |
+| 코사인 유사도 | < 0.85 | 골든 셋 평균 | 0.85 미만 = 의미 공간 15%+ 이탈 |
+| 응답 지연 | > 5s | 롤링 7일 p95 | 5s 초과 시 사용자 체감 지연 (§C-4 기존 트리거 공식화) |
+
+### H-2 샘플 크기 요건
+- **최소 N**: 메트릭당 100 관측치/윈도우 (이하 → 알림 억제 "insufficient_data")
+- **신뢰 수준**: 95% (z=1.96)
+- **윈도우**: QoD 24h / 응답 길이 7d / 나머지 7d (주기별 노이즈 고려)
+
+### H-3 복합 알림 규칙
+- **단일 메트릭 위반**: WARN 등급 — 대시보드 표시 + Slack #mlops-alerts
+- **2개+ 메트릭 동시 위반**: CRITICAL — on-call 알림 + 자동 카나리 일시정지
+- **QoD CRITICAL (24h 평균 < 0.60, LOCK-ML-07)**: EMERGENCY — 즉시 이전 프롬프트 롤백 + 긴급 대응팀 소집

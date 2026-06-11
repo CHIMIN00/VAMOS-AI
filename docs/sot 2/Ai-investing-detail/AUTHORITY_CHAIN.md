@@ -73,3 +73,13 @@ RULE 1.3
 | P2 Approval Timeout | **D2.0-07** (I-19 시스템 전체) | PART2 §6.8 P2 승인 흐름 | 일반 10분 / **P2 도메인(HITL) 5분** → Auto reject |
 | 14-Item Tech Stack | **SPEC §14** | PART2 §6.8 기술스택 테이블 | 변경 불가 (LOCK) |
 | 비용 상한 | **D2.0-07 / RULE 1.3 §5** | PART2 Phase 6 비용 LOCK | V1: ₩40,000($30), V2: ₩93,000($70), V3: ₩266,000($200) |
+
+---
+
+## 도메인 경계
+
+| 인접 도메인 | 본 도메인 소유 | 인접 도메인 소유 |
+|------------|--------------|----------------|
+| #3 Blue-Node-Architecture | 투자 전략 상세 (7-Layer, 83개 소스), 51% Gate, Circuit Breaker | P2 도메인 라이프사이클 (LOCK-BN-05), P2 승인 타임아웃 |
+| #19 v12-Additions | Black-Litterman tau 정본, Factor 6종 정본, Portfolio 비중 제한 정본 | 인덱스 허브 매핑, 도메인 귀속 원칙 |
+| #18 Benchmark-Evaluation | VBS-17 Investing 벤치마크 협의 (Disclaimer, Financial analysis) | VBS 프레임워크, 벤치마크 실행 인프라 |

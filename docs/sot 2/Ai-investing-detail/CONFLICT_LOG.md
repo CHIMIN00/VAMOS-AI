@@ -31,3 +31,5 @@
 | 날짜 | 충돌 유형 | 파일 A | 파일 B | 내용 | 판정 | 조치 완료 |
 |------|----------|--------|--------|------|------|----------|
 | 2026-03-22 | LOCK 위반 (참조 오류) | PART2 line 2549 (`D2.0-01 §5.9 = AI Investing 정본`) | D2.0-01 §5.9 (실제: A-Series Multi-Brain) | PART2가 D2.0-01 §5.9를 AI Investing 정본으로 잘못 참조 | D2.0-03 §1+§3.3 + VAMOS_AI_INVESTING_SPEC이 정본 | ✅ Phase 0-1에서 정정 완료 |
+| 2026-03-27 | 폴더명 비표준 (CFL-AI-001) | `Ai-investing-detail/` | 표준: `3-1_AI-Investing-Detail/` | 폴더명이 SOT 2 네이밍 컨벤션(`N-N_Domain-Name/`)과 불일치. 대소문자 혼합(`Ai`) + 번호 접두사 없음 | 현재 폴더명 유지 (레거시 참조 다수). MASTER_INDEX에 비표준 주석 표기. 향후 Phase 전환 시 리네이밍 검토 | ⚪ NOTED (비차단, 향후 검토) |
+| 2026-03-27 | LOCK 위반 (CFL-AI-002) | 14_corporate-events/ 7개 파일 E5/E9 | SPEC §14 (14-Item Tech Stack) | requests, web3, transformers, nltk, scipy가 §14-LOCK-003/006/007/008/009로 잘못 등록. 실제 §14 #3=Kafka, #6=PostgreSQL, #7=S3/MinIO, #8=Grafana, #9=Pydantic. 또한 "SPEC v3.2" 참조는 존재하지 않는 버전 | R12 규칙에 따라 "REQUIRES LOCK AMENDMENT"로 전환. 대상: insider_trading, institutional_flow, corporate_governance, institutional_tracking, short_seller, earnings_analysis, event_classification | ✅ S10-1에서 7개 파일 E5+E9 수정 완료 |

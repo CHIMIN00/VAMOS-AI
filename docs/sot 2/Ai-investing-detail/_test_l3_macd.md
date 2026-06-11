@@ -1,9 +1,9 @@
 # MACD Crossover Strategy (L3 Template Test)
 
 > **버전**: v1.0
-> **Status**: DRAFT
+> **Status**: APPROVED
 > **작성일**: 2026-03-22
-> **Last-reviewed**: 2026-03-22
+> **Last-reviewed**: 2026-03-23
 > **원본 관점**: #1 실시간 적응형 전략
 > **정본 소유 개념**: MACD Crossover 전략 상세
 > **기술스택 의존성**: SPEC §14 LOCK 범위 내
