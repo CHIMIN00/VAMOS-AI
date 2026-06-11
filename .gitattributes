@@ -1,0 +1,11 @@
+# =============================================================================
+# VAMOS Git LFS Configuration
+# =============================================================================
+# R-18-4 (오염 방지): 골든셋 데이터 Git LFS + 암호화 저장
+# F-04 골든셋 v1 구축 시 설정 (2026-04-02)
+
+# 골든셋 데이터 파일 — Git LFS 추적
+benchmarks/golden_set/**/*.json filter=lfs diff=lfs merge=lfs -text
+
+# 벤치마크 결과 파일 — Git LFS 추적 (대용량)
+benchmark_results/**/*.json filter=lfs diff=lfs merge=lfs -text

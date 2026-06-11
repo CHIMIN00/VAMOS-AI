@@ -1,0 +1,309 @@
+# ============================================================================
+# VAMOS Benchmark Smoke Test — F-06 CI 통합
+# ============================================================================
+# PR 생성/업데이트 시 골든셋 서브셋(20문항)으로 LLM 품질 스모크 테스트 실행.
+# promptfoo eval → BenchmarkResult 변환 → PASS/BORDERLINE/FAIL 판정 → PR 코멘트.
+#
+# SoT 참조:
+#   - S7G-072: promptfoo CI 통합 (PR마다 자동 실행)
+#   - S7G-078: 골든 데이터셋 관리 (분기별 교체 시 서브셋 갱신)
+#   - T-025: 골든셋 스모크 테스트 (부록 §A CAT-01, CRITICAL)
+#
+# 거버넌스:
+#   - R-18-1: seed=42, temperature=0 (재현성)
+#   - R-18-3: LOCK-BE-01 (MMLU ≥ 85%), LOCK-BE-02 (HumanEval pass@1 ≥ 85%)
+#   - R-18-4: 정답 미노출 (점수 요약만 출력), Git LFS 골든셋
+#   - R5: 본 워크플로우 = Phase 0 스모크 CI, WF-9 = 성능 벤치마크 (독립)
+#   - R7: S7G-001 (MMLU), S7G-019 (HumanEval) → promptfoo-smoke.yaml 참조
+#
+# Phase 0 범위:
+#   - 서브셋 20문항 (MMLU 10 + HumanEval 10), 5분 이내 (V-14)
+#   - FAIL 시 PR 코멘트 경고 (머지 차단 안 함 — Phase 1 S7G-072에서 확장)
+#
+# Phase 1 확장 (workflow_call 인터페이스):
+#   - nightly.yml에서 전수 170문항 실행 가능
+#   - 머지 차단 (branch protection rule) 추가
+#   - 10+ 벤치마크 확장 (S7G-072 완전 구현)
+# ============================================================================
+
+name: Benchmark Smoke Test
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+  # Phase 1 확장: 외부 워크플로우에서 호출 가능 (nightly.yml, WF-9 연동)
+  workflow_call:
+    inputs:
+      config_file:
+        description: "promptfoo 설정 파일 경로"
+        required: false
+        type: string
+        default: "promptfoo-smoke.yaml"
+      timeout_minutes:
+        description: "벤치마크 실행 타임아웃 (분)"
+        required: false
+        type: number
+        default: 5
+
+# ---------------------------------------------------------------------------
+# 환경변수 — R-18-1 재현성
+# ---------------------------------------------------------------------------
+env:
+  PROMPTFOO_SEED: "42"            # R-18-1: 시드 고정
+  BENCHMARK_TIMEOUT: "300"         # V-14: 5분 타임아웃
+  NODE_ENV: "production"
+
+# ---------------------------------------------------------------------------
+# 동시 실행 제어 — 동일 PR에서 중복 실행 방지
+# ---------------------------------------------------------------------------
+concurrency:
+  group: benchmark-smoke-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke-test:
+    name: "LLM Benchmark Smoke Test"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10            # 안전 마진 포함 (벤치마크 5분 + 설치/변환/코멘트)
+
+    # Fork PR에서는 secrets 접근 불가 → 스킵 (R-18-4 보안)
+    if: github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'workflow_call'
+
+    permissions:
+      contents: read
+      pull-requests: write         # PR 코멘트 게시
+
+    steps:
+      # ------------------------------------------------------------------
+      # 1. 체크아웃 (Git LFS 포함 — R-18-4 골든셋)
+      # ------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0           # gh-pages 비교용 히스토리
+
+      # ------------------------------------------------------------------
+      # 2. 런타임 설정 (Node.js + Python)
+      # ------------------------------------------------------------------
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ------------------------------------------------------------------
+      # 3. 의존성 설치
+      # ------------------------------------------------------------------
+      - name: Install dependencies
+        run: |
+          npm install -g promptfoo
+          pip install "pydantic>=2.0"
+          pip install -e ".[benchmark]" 2>/dev/null || true
+          echo "promptfoo version: $(promptfoo --version)"
+          echo "python version: $(python --version)"
+
+      # ------------------------------------------------------------------
+      # 4. 스모크 벤치마크 실행
+      # ------------------------------------------------------------------
+      - name: Run smoke benchmark
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          CONFIG="${{ inputs.config_file || 'promptfoo-smoke.yaml' }}"
+          echo "::group::Benchmark Configuration"
+          echo "Config: $CONFIG"
+          echo "Seed: $PROMPTFOO_SEED"
+          echo "Timeout: ${{ inputs.timeout_minutes || 5 }}m"
+          echo "::endgroup::"
+
+          mkdir -p benchmark_results
+
+          promptfoo eval \
+            -c "$CONFIG" \
+            --output benchmark_results/smoke_latest.json \
+            --no-progress-bar \
+            --verbose
+        timeout-minutes: ${{ inputs.timeout_minutes || 5 }}
+
+      # ------------------------------------------------------------------
+      # 5. 결과 변환 (promptfoo → BenchmarkResult, PASS/BORDERLINE/FAIL)
+      # ------------------------------------------------------------------
+      - name: Convert results to BenchmarkResult
+        id: convert
+        run: |
+          python scripts/promptfoo_to_benchmark_result.py \
+            --input benchmark_results/smoke_latest.json \
+            --output benchmark_results/
+
+          # 결과 파일에서 status 추출 (PR 코멘트용)
+          MMLU_STATUS=$(python -c "
+          import json
+          with open('benchmark_results/promptfoo_mmlu_result.json') as f:
+              d = json.load(f)
+          print(d.get('confidence_interval', {}).get('status', 'UNKNOWN'))
+          " 2>/dev/null || echo "UNKNOWN")
+
+          HE_STATUS=$(python -c "
+          import json
+          with open('benchmark_results/promptfoo_humaneval_result.json') as f:
+              d = json.load(f)
+          print(d.get('confidence_interval', {}).get('status', 'UNKNOWN'))
+          " 2>/dev/null || echo "UNKNOWN")
+
+          MMLU_SCORE=$(python -c "
+          import json
+          with open('benchmark_results/promptfoo_mmlu_result.json') as f:
+              d = json.load(f)
+          print(f\"{d.get('score', 0):.2%}\")
+          " 2>/dev/null || echo "N/A")
+
+          HE_SCORE=$(python -c "
+          import json
+          with open('benchmark_results/promptfoo_humaneval_result.json') as f:
+              d = json.load(f)
+          print(f\"{d.get('score', 0):.2%}\")
+          " 2>/dev/null || echo "N/A")
+
+          MMLU_CI=$(python -c "
+          import json
+          with open('benchmark_results/promptfoo_mmlu_result.json') as f:
+              d = json.load(f)
+          ci = d.get('confidence_interval', {})
+          print(f\"[{ci.get('lower', 0):.2%}, {ci.get('upper', 0):.2%}]\")
+          " 2>/dev/null || echo "[N/A]")
+
+          # 종합 판정 (F-06 판정 기준)
+          OVERALL=$(python -c "
+          import json
+          scores = {}
+          for name, path in [('mmlu', 'benchmark_results/promptfoo_mmlu_result.json'),
+                             ('humaneval', 'benchmark_results/promptfoo_humaneval_result.json')]:
+              try:
+                  with open(path) as f:
+                      scores[name] = json.load(f).get('score', 0)
+              except: scores[name] = 0
+
+          m, h = scores['mmlu'], scores['humaneval']
+          if m >= 0.85 and h >= 0.85:
+              print('PASS')
+          elif m < 0.80 or h < 0.80:
+              print('FAIL')
+          else:
+              print('BORDERLINE')
+          ")
+
+          echo "mmlu_score=$MMLU_SCORE" >> "$GITHUB_OUTPUT"
+          echo "mmlu_status=$MMLU_STATUS" >> "$GITHUB_OUTPUT"
+          echo "mmlu_ci=$MMLU_CI" >> "$GITHUB_OUTPUT"
+          echo "he_score=$HE_SCORE" >> "$GITHUB_OUTPUT"
+          echo "he_status=$HE_STATUS" >> "$GITHUB_OUTPUT"
+          echo "overall=$OVERALL" >> "$GITHUB_OUTPUT"
+
+          # R-18-4: 점수 요약만 출력 (정답 미노출)
+          echo "::notice::Smoke Test Result: $OVERALL (MMLU=$MMLU_SCORE, HumanEval=$HE_SCORE)"
+
+      # ------------------------------------------------------------------
+      # 6. PR 코멘트 게시 (WF-9 비교표 포맷 호환)
+      # ------------------------------------------------------------------
+      - name: Post PR comment
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const overall = '${{ steps.convert.outputs.overall }}';
+            const mmluScore = '${{ steps.convert.outputs.mmlu_score }}';
+            const mmluStatus = '${{ steps.convert.outputs.mmlu_status }}';
+            const mmluCi = '${{ steps.convert.outputs.mmlu_ci }}';
+            const heScore = '${{ steps.convert.outputs.he_score }}';
+            const heStatus = '${{ steps.convert.outputs.he_status }}';
+
+            // 상태 아이콘 (WF-9 PR 코멘트 포맷과 동일)
+            const icon = {
+              'PASS': ':white_check_mark:',
+              'FAIL': ':x:',
+              'BORDERLINE': ':warning:',
+              'UNKNOWN': ':grey_question:'
+            };
+
+            const overallIcon = icon[overall] || icon['UNKNOWN'];
+            const mmluIcon = icon[mmluStatus] || icon['UNKNOWN'];
+            const heIcon = icon[heStatus] || icon['UNKNOWN'];
+
+            // 판정 설명
+            let verdict = '';
+            if (overall === 'PASS') {
+              verdict = 'All benchmarks meet target thresholds.';
+            } else if (overall === 'FAIL') {
+              verdict = '**One or more benchmarks below 80%.** Merge not recommended.';
+            } else if (overall === 'BORDERLINE') {
+              verdict = 'Benchmarks between 80-85%. Review recommended before merge.';
+            }
+
+            const body = `## ${overallIcon} Benchmark Smoke Test Results
+
+            | Benchmark | Score | Target | 95% CI | Status |
+            |-----------|-------|--------|--------|--------|
+            | MMLU (S7G-001) | ${mmluScore} | ≥ 85% (LOCK-BE-01) | ${mmluCi} | ${mmluIcon} ${mmluStatus} |
+            | HumanEval (S7G-019) | ${heScore} | ≥ 85% (LOCK-BE-02) | — | ${heIcon} ${heStatus} |
+
+            **Overall: ${overallIcon} ${overall}** — ${verdict}
+
+            <details>
+            <summary>Details</summary>
+
+            - **Commit:** \`${context.sha.substring(0, 7)}\`
+            - **Seed:** 42 (R-18-1)
+            - **Subset:** 20/170 items (MMLU 10 + HumanEval 10)
+            - **Config:** \`promptfoo-smoke.yaml\`
+            - **MMLU CI:** Bootstrap B=10000, 95% (LOCK-BE-06)
+
+            Phase 0 smoke test. Full evaluation (170 items) in Phase 1.
+            </details>
+
+            ---
+            *Generated by [benchmark-smoke.yml](/.github/workflows/benchmark-smoke.yml) — S7G-072 / T-025*`;
+
+            // 기존 스모크 코멘트 찾아서 업데이트 (중복 방지)
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find(c =>
+              c.user.type === 'Bot' &&
+              c.body.includes('Benchmark Smoke Test Results')
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body: body.replace(/^ +/gm, ''),
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body.replace(/^ +/gm, ''),
+              });
+            }
+
+      # ------------------------------------------------------------------
+      # 7. 결과 아티팩트 저장 (디버그/히스토리용)
+      # ------------------------------------------------------------------
+      - name: Upload benchmark results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-smoke-results-${{ github.run_number }}
+          path: benchmark_results/
+          retention-days: 30
