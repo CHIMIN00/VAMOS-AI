@@ -79,3 +79,6 @@ Phase 0·1이 "놓친 부분"(T1~T8)을 Claude(CL-A/B/C) + GPT(GP-A/B)로 검증
 - 적용기: `_integ/apply_resolve.py` · 백업 `_integ/backup/`(TIER1)·`backup_resolve/`(예정)
 - 판정/검증: `crossAI_diff.json`·`FINAL_TARGET_VERDICT.md`·`FIX_MANIFEST.md`·`TIER1_APPLIED.md`
 - 워크플로 run id (참고, 세션한정): 판정 `wvsg2y223` · 백로그 `w9gt6mb6z` · resolve `w3o5avlja` · 재시도 `w3jl28e01`(중지됨)
+
+---
+> ⚠️ SUPERSEDED 2026-06-10 — 이 문서는 14/36 중간 체크포인트입니다. 최신 완전 인계는 **`_targets/SESSION_HANDOFF.md`** 참조 (작업 COMPLETE 상태).
