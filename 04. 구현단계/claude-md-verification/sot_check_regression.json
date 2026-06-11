@@ -1,0 +1,97 @@
+{
+  "mode": "method-c regression (R10, Phase 2-2c)",
+  "target": "D:/VAMOS/CLAUDE.md (root, Phase 2-1 보강본)",
+  "baseline": "D1 2026-06-04: 10 PRESENT / GAP 2 (HYBRID_RATIO, MAX_RETRIES) — 대상 docs/sot/CLAUDE.md",
+  "canonical_facts_checked": 12,
+  "present": 12,
+  "gap_count": 0,
+  "gaps": [],
+  "input_sha256": "410059892a98e2f70088cfbe499a17426a7b58e520fbe5bfc857c0f1f20ed82c",
+  "note": "D1 산출물 비덮어쓰기. docs/sot/CLAUDE.md(SOT 스냅샷 사본)는 무수정 — 동기화 여부는 3-0 게이트 기록.",
+  "facts": [
+    {
+      "fact_id": "QOD_L2_BAN",
+      "desc": "QoD < 0.4 -> L2 벡터 삽입 금지",
+      "in_claude_md": true,
+      "in_part2": false,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "QOD_HOLD",
+      "desc": "QoD < 0.7 -> 출력 보류",
+      "in_claude_md": true,
+      "in_part2": false,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "HYBRID_RATIO",
+      "desc": "Hybrid Search BM25 0.3/vector 0.7",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "CONF_THRESH",
+      "desc": "confidence 임계값",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "COST_MONTHLY",
+      "desc": "비용 상한 40,000/월 (V1)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "COST_GATE",
+      "desc": "CostGate 80%/100% 2단",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "FIVE_GATE",
+      "desc": "5-Gate 실행 순서",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "NEVER_AUTO",
+      "desc": "NEVER_AUTO 10개",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "MEMORY_L0L3",
+      "desc": "메모리 L0~L3 계층",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "MAX_RETRIES",
+      "desc": "MCP max_retries (V1/V2=2, V3=3)",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "STATE_MACHINE",
+      "desc": "S0~S8 상태 머신",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    },
+    {
+      "fact_id": "FIVE_FIELDS",
+      "desc": "ResponseEnvelope 5필드 LOCK",
+      "in_claude_md": true,
+      "in_part2": true,
+      "status": "PRESENT"
+    }
+  ]
+}

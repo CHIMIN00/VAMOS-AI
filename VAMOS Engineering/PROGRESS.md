@@ -10,7 +10,7 @@
 - [x] **2-0B** 골든셋 실데이터 재구축(D14): v1 합성 170 → **v2 실데이터 162** (MMLU 50/HumanEval 20/MBPP 50/LogicKor 42 전수[편차 기록 — 명세 50은 합성 가정치]). 라이선스 4종 검증(MIT/MIT/CC BY 4.0/CC BY-SA 4.0). verify ALL PASS + 재현성 PASS. data_status=REAL_DATA → **LOCK-BE-01/02 유효화**. v1 백업 `_targets/_integ/backup_phase2/golden_set_v1/`
 - [x] **2-0C** OpenAI 구키 revoke: 사용자 통보 미수신 — 기록만(현행 키 HTTP 200 유효). 환경리포트 §5
 - [x] **2-1** CLAUDE.md 보강: 705→944줄(LF 무회귀), §21~§28 신설 + §2/§4/§6/§7.4/§17/§18 실측 갱신. GAP 2건 해소(§7.4: Hybrid Search BM25 0.3/Vector 0.7·Top-K 20·threshold 0.75 + MCP max_retries V1/V2=2·V3=3 [PHASE_B4 §3.9 정본]). §28에 A13 컨텍스트 테이블 포함. 백업 `_targets/_integ/backup_phase2/CLAUDE.md.pre-2-1`
-- [ ] 2-2 CLAUDE.md 검증 (스킬 8종 생성 + 8단계 + SILVER+ 판정 + /sot-check 회귀)
+- [x] **2-2** CLAUDE.md 검증: 스킬 8종 신설(.claude/skills/claude-md-*) + 8단계 전수 실행 + Phase D 수정 10건(944→946줄, LF 무회귀) → **판정 GOLD** (UNVERIFIED 0·FAIL 0·누락 0; Symbolic 9/9·Cross-examine 91건·Consensus 50값×3라운드 값충돌 0). 회귀(R10): method-c 재실행 **12/12 PRESENT GAP 0**(비파괴 — D1 산출물·SOT 무수정). 리포트 `04. 구현단계/claude-md-verification/step1~8`. ⚠️ SOT 내부 이형 9건(C-001~C-008 등) 발견 — 기록만, **3-0 게이트 이관**
 - [ ] 2-3 Obsidian 노트 120+ (OBSIDIAN-STRATEGY-v3 §3~§6 + 3-7 도메인 포함 + A16 태깅)
 - [ ] 2-4 린터/CI (pyproject.toml + ci.yml 단일 통합 + conftest + Hook 2종 + D17 결정)
 - [ ] 2-5 vamos_lint VL-001~005 + commitlint
