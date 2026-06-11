@@ -1,0 +1,52 @@
+# VAMOS Backend — Phase 2-4 린터/CI 환경 (STRATEGY_09 §7.2 + §8.1, PART2 L1490~1536 정본)
+# Layer 0 (PART2 기본) + Layer 1 (VAMOS 고유 — DEC-002 banned-api)
+
+[tool.poetry]
+name = "vamos-backend"
+version = "0.1.0"
+description = "VAMOS AI Backend"
+authors = ["VAMOS"]
+packages = [{ include = "vamos_core" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pydantic = ">=2.0.0,<3.0"
+langchain-core = ">=0.3.0,<1.0"         # DEC-002 Allowlist
+langchain-community = ">=0.3.0,<1.0"    # DEC-002 Allowlist
+langchain-openai = ">=0.2.0,<1.0"       # DEC-002 Allowlist
+langgraph = ">=0.2.0,<1.0"              # LOCK: Agent Workflow 프레임워크
+chromadb = ">=0.5.0,<1.0"               # V1 Vector DB (LOCK: V1=Chroma)
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.3.0,<9.0"                 # PHASE_B3 정본
+pytest-asyncio = ">=0.24.0,<1.0"        # PHASE_B3 정본
+pytest-cov = ">=6.0.0,<7.0"             # PHASE_B3 정본
+ruff = ">=0.8.0,<1.0"                   # PHASE_B3 정본
+mypy = ">=1.0"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100                        # PHASE_B6 정본 (120 아님)
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "S", "B", "A", "C4", "DTZ", "T20", "ICN"]  # PHASE_B6 정본 13개
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+# DEC-002: langchain 본체 패키지 import 금지 (Allowlist: langchain-core/community/openai)
+"langchain".msg = "DEC-002: langchain 본체 import 금지. langchain-core/community/openai만 허용"
+"langchain.chains".msg = "DEC-002: langchain.chains import 금지"
+"langchain.agents".msg = "DEC-002: langchain.agents import 금지"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]               # 테스트는 assert 허용
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

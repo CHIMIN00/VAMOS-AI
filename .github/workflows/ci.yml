@@ -1,0 +1,55 @@
+# VAMOS CI — Phase 2-4 (로드맵 2-4 확정: PHASE_B6 §2 ci.yml 단일 통합이 정본, PART2 §6.4 L4844 주석)
+# quality-python.yml / test-python.yml 2파일 표기(STRATEGY_09 §7.1·PART2 V0-STEP-6)는 본 파일의 job 분리로 해석.
+# V0 최소 = quality + test (+ vamos-lint, STRATEGY_09 §8.3); V1 전체 분리는 PART2 §6.4 11종.
+name: CI
+on: [push, pull_request]
+
+jobs:
+  quality:
+    name: Python Quality (ruff + mypy)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install poetry
+          poetry install --only dev --no-root
+      - name: Ruff lint
+        run: cd backend && poetry run ruff check .
+      - name: Mypy type check
+        run: cd backend && poetry run mypy tests/  # V0 전 단계: 코드 디렉토리 생성 전 — V0-STEP-1 후 'mypy .' 전환
+
+  test:
+    name: Python Tests (pytest + coverage)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install poetry
+          poetry install --only dev --no-root
+      - name: Run pytest
+        # V0 전 단계: 0 tests collected(exit 5)는 정상 — V0-STEP-6에서 테스트 7종 추가 예정
+        run: |
+          cd backend
+          poetry run pytest tests/ -v --tb=short --cov=. --cov-report=term-missing || rc=$?
+          if [ "${rc:-0}" != "0" ] && [ "${rc}" != "5" ]; then exit "${rc}"; fi
+
+  vamos-lint:
+    name: VAMOS Custom Lint (VL-001~005)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: VAMOS custom lint
+        run: python scripts/vamos_lint.py backend

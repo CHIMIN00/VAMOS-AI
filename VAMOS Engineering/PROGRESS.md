@@ -12,8 +12,8 @@
 - [x] **2-1** CLAUDE.md 보강: 705→944줄(LF 무회귀), §21~§28 신설 + §2/§4/§6/§7.4/§17/§18 실측 갱신. GAP 2건 해소(§7.4: Hybrid Search BM25 0.3/Vector 0.7·Top-K 20·threshold 0.75 + MCP max_retries V1/V2=2·V3=3 [PHASE_B4 §3.9 정본]). §28에 A13 컨텍스트 테이블 포함. 백업 `_targets/_integ/backup_phase2/CLAUDE.md.pre-2-1`
 - [x] **2-2** CLAUDE.md 검증: 스킬 8종 신설(.claude/skills/claude-md-*) + 8단계 전수 실행 + Phase D 수정 10건(944→946줄, LF 무회귀) → **판정 GOLD** (UNVERIFIED 0·FAIL 0·누락 0; Symbolic 9/9·Cross-examine 91건·Consensus 50값×3라운드 값충돌 0). 회귀(R10): method-c 재실행 **12/12 PRESENT GAP 0**(비파괴 — D1 산출물·SOT 무수정). 리포트 `04. 구현단계/claude-md-verification/step1~8`. ⚠️ SOT 내부 이형 9건(C-001~C-008 등) 발견 — 기록만, **3-0 게이트 이관**
 - [ ] 2-3 Obsidian 노트 120+ (OBSIDIAN-STRATEGY-v3 §3~§6 + 3-7 도메인 포함 + A16 태깅)
-- [ ] 2-4 린터/CI (pyproject.toml + ci.yml 단일 통합 + conftest + Hook 2종 + D17 결정)
-- [ ] 2-5 vamos_lint VL-001~005 + commitlint
+- [x] **2-4** 린터/CI: `backend/pyproject.toml`(Poetry+DEC-002 banned-api+ruff 13룰+line-length 100+mypy strict) + `.github/workflows/ci.yml`(**단일 통합 정본** — quality/test/vamos-lint 3 job) + `backend/tests/{__init__,conftest}.py`. 검증: poetry lock 해석 정상·ruff All checks passed·pytest 0 tests(exit 5 OK)·YAML 유효. **코드 생산 Hook 2종 신설**(.py→ruff 자동, config.v1.toml→LOCK 20키 검증 `scripts/check_config_lock.py`) — 기존 16 Hook 보존(16→18). **D17 결정**: pre-commit 훅 불재도입(ci.yml 대체) — `decisions/PHASE2-DEC-01`. poetry 2.4.1/ruff 0.12.1 설치(2-0A WARN 해소)
+- [x] **2-5** vamos_lint: `scripts/vamos_lint.py` VL-001~005 구현 — 위반 샘플 8건 전 규칙 탐지 PASS·정상 파일 오탐 0 (mode=error 기본, warn 폴백 내장). ruff banned-api(§8.1)는 pyproject 포함, ci.yml vamos-lint job 통합(§8.3). `commitlint.config.js` 별도 생성
 - [ ] 2-6 CPS 템플릿(Could) / 2-7 로딩 맵(Could)
 - [ ] 2-8 인벤토리 갱신 + 정리(D-2 재실측 종결·D-3 처분·유산 폴더·5-4 SHELL 87 판정)
 - [ ] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조)

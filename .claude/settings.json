@@ -167,6 +167,28 @@
             "timeout": 10000
           }
         ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "description": "[Phase 2-4 코드 생산 Hook ①] .py 생성/수정 시 ruff 자동 실행 (STRATEGY_10 4-V4)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qE \"\\.py$\" && echo \"$FILE\" | grep -qiE \"(backend|scripts)[/\\\\\\\\]\"; then echo \"[HOOK ruff] $(basename \"$FILE\") 검사 중...\"; python -m ruff check \"$FILE\" --no-cache 2>&1 | tail -6 || true; fi; exit 0'",
+            "timeout": 20000
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "description": "[Phase 2-4 코드 생산 Hook ②] config.v1.toml 수정 시 LOCK 20키 검증 (D13)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'INPUT=$(cat); FILE=$(echo \"$INPUT\" | python -c \"import sys,json; print(json.load(sys.stdin).get(\\\"tool_input\\\",{}).get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); if echo \"$FILE\" | grep -qE \"config\\.v1\\.toml$\"; then python D:/VAMOS/scripts/check_config_lock.py \"$FILE\" 2>&1; fi; exit 0'",
+            "timeout": 15000
+          }
+        ]
       }
     ],
     "Stop": [
