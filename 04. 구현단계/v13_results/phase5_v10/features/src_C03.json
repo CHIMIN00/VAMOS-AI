@@ -13,7 +13,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "사용자 입력을 의도/도메인/제약/출력형식으로 구조화하는 핵심 모듈. IntentFrame 생성."
+      "description": "사용자 입력을 의도/도메인/제약/출력형식으로 구조화하는 핵심 모듈. IntentFrame 생성.",
+      "feature_id": "D201-001",
+      "feature_name": "I-1 Intent Detector Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-002",
@@ -22,7 +26,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "메모리/툴 호출 컨텍스트 구성. 내외부 근거 수집 및 EvidencePack 생성."
+      "description": "메모리/툴 호출 컨텍스트 구성. 내외부 근거 수집 및 EvidencePack 생성.",
+      "feature_id": "D201-002",
+      "feature_name": "I-2 Context Builder Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-003",
@@ -31,7 +39,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "4계층 메모리 시스템(L0 Session/L1 Project/L2 Semantic/L3 Procedural). 06 Storage 연동."
+      "description": "4계층 메모리 시스템(L0 Session/L1 Project/L2 Semantic/L3 Procedural). 06 Storage 연동.",
+      "feature_id": "D201-003",
+      "feature_name": "I-3 Memory System Module (4-Layer L0~L3)",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-004",
@@ -40,7 +52,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "텍스트/이미지/음성 등 멀티모달 입력 해석 처리."
+      "description": "텍스트/이미지/음성 등 멀티모달 입력 해석 처리.",
+      "feature_id": "D201-004",
+      "feature_name": "I-4 Multimodal Interpreter Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-005",
@@ -49,7 +65,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "5대 스코어 기반 단일결정(Decision Lock) 엔진. change_lock=true."
+      "description": "5대 스코어 기반 단일결정(Decision Lock) 엔진. change_lock=true.",
+      "feature_id": "D201-005",
+      "feature_name": "I-5 Condition & Decision Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-006",
@@ -58,7 +78,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "출력 품질/정합성 자기검증 엔진. S-Series와 연동."
+      "description": "출력 품질/정합성 자기검증 엔진. S-Series와 연동.",
+      "feature_id": "D201-006",
+      "feature_name": "I-6 Self-check Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-007",
@@ -67,7 +91,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "장기 프로젝트/세션/승인 흐름 관리."
+      "description": "장기 프로젝트/세션/승인 흐름 관리.",
+      "feature_id": "D201-007",
+      "feature_name": "I-7 Project/Session Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-008",
@@ -76,7 +104,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "정책 엔진. 07 Safety/Cost/Approval과 정합. change_lock=true."
+      "description": "정책 엔진. 07 Safety/Cost/Approval과 정합. change_lock=true.",
+      "feature_id": "D201-008",
+      "feature_name": "I-8 Policy Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-009",
@@ -85,7 +117,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "토큰/시간/서버/API 비용 추적 및 다운시프트 관리. change_lock=true."
+      "description": "토큰/시간/서버/API 비용 추적 및 다운시프트 관리. change_lock=true.",
+      "feature_id": "D201-009",
+      "feature_name": "I-9 Cost Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-010",
@@ -94,7 +130,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "툴 레지스트리/라우터. E-Series 경계 관리."
+      "description": "툴 레지스트리/라우터. E-Series 경계 관리.",
+      "feature_id": "D201-010",
+      "feature_name": "I-10 Tool Registry/Router Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-011",
@@ -103,7 +143,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "출력 생성기. 08 UI와 직접 연결. Hologram View surface."
+      "description": "출력 생성기. 08 UI와 직접 연결. Hologram View surface.",
+      "feature_id": "D201-011",
+      "feature_name": "I-11 Output Composer Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-012",
@@ -112,7 +156,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "워크플로우 빌더. 템플릿/승인 흐름 구성."
+      "description": "워크플로우 빌더. 템플릿/승인 흐름 구성.",
+      "feature_id": "D201-012",
+      "feature_name": "I-12 Workflow Builder Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-013",
@@ -121,7 +169,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "멀티모달 출력 렌더러. UI 렌더링 계층."
+      "description": "멀티모달 출력 렌더러. UI 렌더링 계층.",
+      "feature_id": "D201-013",
+      "feature_name": "I-13 Multimodal Output Renderer Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-014",
@@ -130,7 +182,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "요약/증류기. L2 축약 및 정리."
+      "description": "요약/증류기. L2 축약 및 정리.",
+      "feature_id": "D201-014",
+      "feature_name": "I-14 Summarizer & Memory Distiller Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-015",
@@ -139,7 +195,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "근거/QoD 관리자. EVX/C-Series와 연결."
+      "description": "근거/QoD 관리자. EVX/C-Series와 연결.",
+      "feature_id": "D201-015",
+      "feature_name": "I-15 Evidence & QoD Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-016",
@@ -148,7 +208,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "지식 검색 엔진. 검색-검증 분리 원칙."
+      "description": "지식 검색 엔진. 검색-검증 분리 원칙.",
+      "feature_id": "D201-016",
+      "feature_name": "I-16 Knowledge Search Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-017",
@@ -157,7 +221,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "블루 노드 매니저. 03 Blue Nodes와 연결. tree/graph view."
+      "description": "블루 노드 매니저. 03 Blue Nodes와 연결. tree/graph view.",
+      "feature_id": "D201-017",
+      "feature_name": "I-17 Blue Node Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-018",
@@ -166,7 +234,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "자기진화 엔진. S-Series 중심."
+      "description": "자기진화 엔진. S-Series 중심.",
+      "feature_id": "D201-018",
+      "feature_name": "I-18 Self-evo Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-019",
@@ -175,7 +247,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "승인 관리자. 07과 정합. modal/panel view. change_lock=true."
+      "description": "승인 관리자. 07과 정합. modal/panel view. change_lock=true.",
+      "feature_id": "D201-019",
+      "feature_name": "I-19 Approval Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-020",
@@ -184,7 +260,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "실패/폴백 관리자. 실패코드 체계 관리."
+      "description": "실패/폴백 관리자. 실패코드 체계 관리.",
+      "feature_id": "D201-020",
+      "feature_name": "I-20 Failure/Fallback Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-021",
@@ -193,7 +273,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "지식 소스 진화. BASE-1.3 §7.5 가드레일 준수."
+      "description": "지식 소스 진화. BASE-1.3 §7.5 가드레일 준수.",
+      "feature_id": "D201-021",
+      "feature_name": "I-21 Source Evolution Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-022",
@@ -202,7 +286,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "프로젝트 관리, 태스크 추적, DAG 구성."
+      "description": "프로젝트 관리, 태스크 추적, DAG 구성.",
+      "feature_id": "D201-022",
+      "feature_name": "I-22 Task/Project Manager Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-023",
@@ -211,7 +299,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "문서 구조화, 코드 정리 자동화."
+      "description": "문서 구조화, 코드 정리 자동화.",
+      "feature_id": "D201-023",
+      "feature_name": "I-23 Doc/Code Structuring Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-024",
@@ -220,7 +312,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "지식 그래프 엔진. GraphRAG 연동."
+      "description": "지식 그래프 엔진. GraphRAG 연동.",
+      "feature_id": "D201-024",
+      "feature_name": "I-24 Knowledge Graph Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-025",
@@ -229,7 +325,11 @@
       "source": "D2.0-01 §5.6",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "Self-Directed Adaptive Reasoning 자율추론 엔진."
+      "description": "Self-Directed Adaptive Reasoning 자율추론 엔진.",
+      "feature_id": "D201-025",
+      "feature_name": "I-25 SDAR Engine Module",
+      "source_section": "D2.0-01 §5.6",
+      "extractable": true
     },
     {
       "id": "D201-026",
@@ -238,7 +338,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "일반 태스크에서도 최소 검증 수행(항상 ON). I-6/I-15 연동."
+      "description": "일반 태스크에서도 최소 검증 수행(항상 ON). I-6/I-15 연동.",
+      "feature_id": "D201-026",
+      "feature_name": "S-1 Self-check Engine",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-027",
@@ -247,7 +351,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "통합 테스트/회귀 방지."
+      "description": "통합 테스트/회귀 방지.",
+      "feature_id": "D201-027",
+      "feature_name": "S-2 Benchmark QA Suite",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-028",
@@ -256,7 +364,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "템플릿 자동 개선."
+      "description": "템플릿 자동 개선.",
+      "feature_id": "D201-028",
+      "feature_name": "S-3 Template Evolution",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-029",
@@ -265,7 +377,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "실패코드/폴백 최적화."
+      "description": "실패코드/폴백 최적화.",
+      "feature_id": "D201-029",
+      "feature_name": "S-4 Error Pattern Miner",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-030",
@@ -274,7 +390,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "라우팅/모델선택 개선."
+      "description": "라우팅/모델선택 개선.",
+      "feature_id": "D201-030",
+      "feature_name": "S-5 Router Evolution",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-031",
@@ -283,7 +403,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "검색전략/소스 개선."
+      "description": "검색전략/소스 개선.",
+      "feature_id": "D201-031",
+      "feature_name": "S-6 Search Evolution",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-032",
@@ -292,7 +416,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "사용자 협업형 self-evo."
+      "description": "사용자 협업형 self-evo.",
+      "feature_id": "D201-032",
+      "feature_name": "S-7 User-Coop Designer",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-033",
@@ -301,7 +429,11 @@
       "source": "D2.0-01 §5.7",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "COND",
-      "description": "승인/거버넌스. Modal UI. change_lock=true."
+      "description": "승인/거버넌스. Modal UI. change_lock=true.",
+      "feature_id": "D201-033",
+      "feature_name": "S-8 Self-evo Governance",
+      "source_section": "D2.0-01 §5.7",
+      "extractable": true
     },
     {
       "id": "D201-034",
@@ -310,7 +442,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "범용 외부기능(개발/설계 지원)."
+      "description": "범용 외부기능(개발/설계 지원).",
+      "feature_id": "D201-034",
+      "feature_name": "E-1 Coding & System Design Helper",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-035",
@@ -319,7 +455,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "웹 검색 외부 기능."
+      "description": "웹 검색 외부 기능.",
+      "feature_id": "D201-035",
+      "feature_name": "E-2 Web Search",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-036",
@@ -328,7 +468,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "문서 파싱 외부 기능."
+      "description": "문서 파싱 외부 기능.",
+      "feature_id": "D201-036",
+      "feature_name": "E-3 Document Parser",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-037",
@@ -337,7 +481,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "코드 실행 외부 기능."
+      "description": "코드 실행 외부 기능.",
+      "feature_id": "D201-037",
+      "feature_name": "E-4 Code Executor",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-038",
@@ -346,7 +494,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "이미지 분석 외부 기능."
+      "description": "이미지 분석 외부 기능.",
+      "feature_id": "D201-038",
+      "feature_name": "E-5 Image Analyzer",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-039",
@@ -355,7 +507,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Z3 논리 솔버."
+      "description": "Z3 논리 솔버.",
+      "feature_id": "D201-039",
+      "feature_name": "E-6 Z3 Solver",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-040",
@@ -364,7 +520,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "음성→텍스트 변환."
+      "description": "음성→텍스트 변환.",
+      "feature_id": "D201-040",
+      "feature_name": "E-7 Speech-to-Text",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-041",
@@ -373,7 +533,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "텍스트→음성 변환."
+      "description": "텍스트→음성 변환.",
+      "feature_id": "D201-041",
+      "feature_name": "E-8 Text-to-Speech",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-042",
@@ -382,7 +546,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "비디오 분석."
+      "description": "비디오 분석.",
+      "feature_id": "D201-042",
+      "feature_name": "E-9 Video Analyzer",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-043",
@@ -391,7 +559,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "외부 API 게이트웨이."
+      "description": "외부 API 게이트웨이.",
+      "feature_id": "D201-043",
+      "feature_name": "E-10 External API Gateway",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-044",
@@ -400,7 +572,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "브라우저 자동화."
+      "description": "브라우저 자동화.",
+      "feature_id": "D201-044",
+      "feature_name": "E-11 Browser Automation",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-045",
@@ -409,7 +585,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "DB 커넥터."
+      "description": "DB 커넥터.",
+      "feature_id": "D201-045",
+      "feature_name": "E-12 DB Connector",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-046",
@@ -418,7 +598,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "RE-ADD",
-      "description": "캘린더/태스크 동기화."
+      "description": "캘린더/태스크 동기화.",
+      "feature_id": "D201-046",
+      "feature_name": "E-13 Calendar/Task Sync",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-047",
@@ -427,7 +611,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "RE-ADD",
-      "description": "이메일 핸들러."
+      "description": "이메일 핸들러.",
+      "feature_id": "D201-047",
+      "feature_name": "E-14 Email Handler",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-048",
@@ -436,7 +624,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "RE-ADD",
-      "description": "파일 시스템 접근 + 외부 소스 수집 겸용."
+      "description": "파일 시스템 접근 + 외부 소스 수집 겸용.",
+      "feature_id": "D201-048",
+      "feature_name": "E-15 File System Access / Cloud Library Collector",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-049",
@@ -445,7 +637,11 @@
       "source": "D2.0-01 §5.8",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "RE-ADD",
-      "description": "클라우드 스토리지 동기화."
+      "description": "클라우드 스토리지 동기화.",
+      "feature_id": "D201-049",
+      "feature_name": "E-16 Cloud Storage Sync",
+      "source_section": "D2.0-01 §5.8",
+      "extractable": true
     },
     {
       "id": "D201-050",
@@ -454,7 +650,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "멀티 브레인 어댑터. 04/02(I-5) 연동."
+      "description": "멀티 브레인 어댑터. 04/02(I-5) 연동.",
+      "feature_id": "D201-050",
+      "feature_name": "A-1 MultiBrain Adapter",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-051",
@@ -463,7 +663,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "프리셋 모듈화."
+      "description": "프리셋 모듈화.",
+      "feature_id": "D201-051",
+      "feature_name": "A-2 Preset Modularization",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-052",
@@ -472,7 +676,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "메타 AI 모듈."
+      "description": "메타 AI 모듈.",
+      "feature_id": "D201-052",
+      "feature_name": "A-3 Meta AI",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-053",
@@ -481,7 +689,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:OFF / V2:COND / V3:ON",
       "status": "COND",
-      "description": "토론 모드."
+      "description": "토론 모드.",
+      "feature_id": "D201-053",
+      "feature_name": "A-4 Debate Mode",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-054",
@@ -490,7 +702,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "지연 생성."
+      "description": "지연 생성.",
+      "feature_id": "D201-054",
+      "feature_name": "A-5 Lazy Generation",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-055",
@@ -499,7 +715,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "연합 모듈 네트워크."
+      "description": "연합 모듈 네트워크.",
+      "feature_id": "D201-055",
+      "feature_name": "A-6 Federated Module Network",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-056",
@@ -508,7 +728,11 @@
       "source": "D2.0-01 §5.9",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "원격 실행기."
+      "description": "원격 실행기.",
+      "feature_id": "D201-056",
+      "feature_name": "A-7 Remote Executor",
+      "source_section": "D2.0-01 §5.9",
+      "extractable": true
     },
     {
       "id": "D201-057",
@@ -517,7 +741,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "스킬 라이브러리. L3/L2.procedural 의존."
+      "description": "스킬 라이브러리. L3/L2.procedural 의존.",
+      "feature_id": "D201-057",
+      "feature_name": "B-1 Skill Library",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-058",
@@ -526,7 +754,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "방법론 메모리."
+      "description": "방법론 메모리.",
+      "feature_id": "D201-058",
+      "feature_name": "B-2 Procedural Memory",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-059",
@@ -535,7 +767,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "망각/감쇠 메커니즘."
+      "description": "망각/감쇠 메커니즘.",
+      "feature_id": "D201-059",
+      "feature_name": "B-3 Memory Decay",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-060",
@@ -544,7 +780,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "자동 커리큘럼 생성기."
+      "description": "자동 커리큘럼 생성기.",
+      "feature_id": "D201-060",
+      "feature_name": "B-4 Auto Curriculum Generator",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-061",
@@ -553,7 +793,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "RL 유사 자기 학습기."
+      "description": "RL 유사 자기 학습기.",
+      "feature_id": "D201-061",
+      "feature_name": "B-5 RL-like Self Trainer",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-062",
@@ -562,7 +806,11 @@
       "source": "D2.0-01 §5.10",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "DSPy 프롬프트 최적화."
+      "description": "DSPy 프롬프트 최적화.",
+      "feature_id": "D201-062",
+      "feature_name": "B-6 DSPy Prompt Optimizer",
+      "source_section": "D2.0-01 §5.10",
+      "extractable": true
     },
     {
       "id": "D201-063",
@@ -571,7 +819,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "논리 검증기."
+      "description": "논리 검증기.",
+      "feature_id": "D201-063",
+      "feature_name": "C-1 Logic Verifier",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-064",
@@ -580,7 +832,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "수학 검증기."
+      "description": "수학 검증기.",
+      "feature_id": "D201-064",
+      "feature_name": "C-2 Math Verifier",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-065",
@@ -589,7 +845,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "코드 검증기."
+      "description": "코드 검증기.",
+      "feature_id": "D201-065",
+      "feature_name": "C-3 Code Verifier",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-066",
@@ -598,7 +858,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "도메인 시뮬레이터."
+      "description": "도메인 시뮬레이터.",
+      "feature_id": "D201-066",
+      "feature_name": "C-4 Domain Simulator",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-067",
@@ -607,7 +871,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "베이지안 신뢰 엔진."
+      "description": "베이지안 신뢰 엔진.",
+      "feature_id": "D201-067",
+      "feature_name": "C-5 Bayesian Belief Engine",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-068",
@@ -616,7 +884,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "RL 어드바이저."
+      "description": "RL 어드바이저.",
+      "feature_id": "D201-068",
+      "feature_name": "C-6 RL Advisor",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-069",
@@ -625,7 +897,11 @@
       "source": "D2.0-01 §5.11",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "GNN 스코어 모델."
+      "description": "GNN 스코어 모델.",
+      "feature_id": "D201-069",
+      "feature_name": "C-7 GNN Score Model",
+      "source_section": "D2.0-01 §5.11",
+      "extractable": true
     },
     {
       "id": "D201-070",
@@ -634,7 +910,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "사고 엔진."
+      "description": "사고 엔진.",
+      "feature_id": "D201-070",
+      "feature_name": "D-1 Think Engine",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-071",
@@ -643,7 +923,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "멀티모달 엔진."
+      "description": "멀티모달 엔진.",
+      "feature_id": "D201-071",
+      "feature_name": "D-2 Multimodal Engine",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-072",
@@ -652,7 +936,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "장기 계획 수립기."
+      "description": "장기 계획 수립기.",
+      "feature_id": "D201-072",
+      "feature_name": "D-3 Long Horizon Planner",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-073",
@@ -661,7 +949,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "개성/톤 엔진."
+      "description": "개성/톤 엔진.",
+      "feature_id": "D201-073",
+      "feature_name": "D-4 Personality/Tone Engine",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-074",
@@ -670,7 +962,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "범용 병렬 브레인."
+      "description": "범용 병렬 브레인.",
+      "feature_id": "D201-074",
+      "feature_name": "D-5 General Brain (Parallel)",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-075",
@@ -679,7 +975,11 @@
       "source": "D2.0-01 §5.12",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "EXP",
-      "description": "GraphRAG / 하이브리드 RAG."
+      "description": "GraphRAG / 하이브리드 RAG.",
+      "feature_id": "D201-075",
+      "feature_name": "D-6 GraphRAG / Hybrid RAG",
+      "source_section": "D2.0-01 §5.12",
+      "extractable": true
     },
     {
       "id": "D201-076",
@@ -688,7 +988,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "검증 확장군. 정책을 실행 가능 코드로 체크."
+      "description": "검증 확장군. 정책을 실행 가능 코드로 체크.",
+      "feature_id": "D201-076",
+      "feature_name": "EVX-1 Code-as-Policy",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-077",
@@ -697,7 +1001,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "적대적 검증기. change_lock=true."
+      "description": "적대적 검증기. change_lock=true.",
+      "feature_id": "D201-077",
+      "feature_name": "EVX-2 Adversarial Verifier",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-078",
@@ -706,7 +1014,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "로그 확률 기반 신뢰도."
+      "description": "로그 확률 기반 신뢰도.",
+      "feature_id": "D201-078",
+      "feature_name": "EVX-3 Log-prob Confidence",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-079",
@@ -715,7 +1027,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "사고 버퍼."
+      "description": "사고 버퍼.",
+      "feature_id": "D201-079",
+      "feature_name": "EVX-4 Thought Buffer",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-080",
@@ -724,7 +1040,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "생성-검증-학습 루프."
+      "description": "생성-검증-학습 루프.",
+      "feature_id": "D201-080",
+      "feature_name": "EVX-5 Gen-Verify-Learn",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-081",
@@ -733,7 +1053,11 @@
       "source": "D2.0-01 §5.13",
       "version_scope": "V1:OFF / V2:OFF / V3:ON",
       "status": "RE-ADD",
-      "description": "Z3 솔버 라우팅."
+      "description": "Z3 솔버 라우팅.",
+      "feature_id": "D201-081",
+      "feature_name": "EVX-6 Z3 Solver Routing",
+      "source_section": "D2.0-01 §5.13",
+      "extractable": true
     },
     {
       "id": "D201-082",
@@ -742,7 +1066,11 @@
       "source": "D2.0-01 §5.15.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "QoD 점수 기반 검증 배지(VERIFIED>=0.8, PARTIAL>=0.5, UNVERIFIED<0.5)."
+      "description": "QoD 점수 기반 검증 배지(VERIFIED>=0.8, PARTIAL>=0.5, UNVERIFIED<0.5).",
+      "feature_id": "D201-082",
+      "feature_name": "Verification Badge System (VERIFIED/PARTIAL/UNVERIFIED)",
+      "source_section": "D2.0-01 §5.15.1",
+      "extractable": true
     },
     {
       "id": "D201-083",
@@ -751,7 +1079,11 @@
       "source": "D2.0-01 §5.15.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "근거 불확실성 경고 트리거 4종."
+      "description": "근거 불확실성 경고 트리거 4종.",
+      "feature_id": "D201-083",
+      "feature_name": "Uncertainty Alert Triggers (LOW_QOD/CONFLICTING/STALE/MASKED)",
+      "source_section": "D2.0-01 §5.15.2",
+      "extractable": true
     },
     {
       "id": "D201-084",
@@ -760,7 +1092,11 @@
       "source": "D2.0-01 §0.5",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "LOCK 변경관리 규칙: 삭제 금지, PLAN/RULE 밖 신규 정책 창작 금지, Major 변경 Approval 필요."
+      "description": "LOCK 변경관리 규칙: 삭제 금지, PLAN/RULE 밖 신규 정책 창작 금지, Major 변경 Approval 필요.",
+      "feature_id": "D201-084",
+      "feature_name": "LOCK Rules: Deletion Prohibited + No Content Creation Outside PLAN/RULE",
+      "source_section": "D2.0-01 §0.5",
+      "extractable": true
     },
     {
       "id": "D201-085",
@@ -769,7 +1105,11 @@
       "source": "D2.0-01 §5.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "전역 이벤트 네임스페이스 7개 접두사 체계."
+      "description": "전역 이벤트 네임스페이스 7개 접두사 체계.",
+      "feature_id": "D201-085",
+      "feature_name": "EventType Registry Namespace (oc.*/bn.*/inf.*/st.*/sf.*/ui.*/wf.*)",
+      "source_section": "D2.0-01 §5.1",
+      "extractable": true
     },
     {
       "id": "D201-086",
@@ -778,7 +1118,11 @@
       "source": "D2.0-01 §5.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "전역 실패코드 분류체계 6개 접두사."
+      "description": "전역 실패코드 분류체계 6개 접두사.",
+      "feature_id": "D201-086",
+      "feature_name": "FailureCode Registry (OC_I*/BN_*/INF_*/GT_ERR_*/POLICY_*/NONGOAL_*)",
+      "source_section": "D2.0-01 §5.2",
+      "extractable": true
     },
     {
       "id": "D201-087",
@@ -787,7 +1131,11 @@
       "source": "D2.0-01 §5.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "전역 폴백 전략 레지스트리 스키마."
+      "description": "전역 폴백 전략 레지스트리 스키마.",
+      "feature_id": "D201-087",
+      "feature_name": "Fallback Registry Schema (fallback_id/goal/preconditions/steps/degrade_level)",
+      "source_section": "D2.0-01 §5.3",
+      "extractable": true
     },
     {
       "id": "D201-088",
@@ -796,7 +1144,11 @@
       "source": "D2.0-01 §5.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "핵심 데이터 스키마 인덱스: IntentFrame, EvidencePack, Decision, StructuredOutput, MemoryRecord, ApprovalSchema, CostBudgetSchema, PolicyCheckSchema, LogEvent."
+      "description": "핵심 데이터 스키마 인덱스: IntentFrame, EvidencePack, Decision, StructuredOutput, MemoryRecord, ApprovalSchema, CostBudgetSchema, PolicyCheckSchema, LogEvent.",
+      "feature_id": "D201-088",
+      "feature_name": "Core Data Schemas Index (9 schemas)",
+      "source_section": "D2.0-01 §5.4",
+      "extractable": true
     },
     {
       "id": "D201-089",
@@ -805,7 +1157,11 @@
       "source": "D2.0-01 §3.3, §7.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "버전별 기술 조합. V1=SQLite+JSONL+Chroma, V2=Postgres+Qdrant, V3=K8s."
+      "description": "버전별 기술 조합. V1=SQLite+JSONL+Chroma, V2=Postgres+Qdrant, V3=K8s.",
+      "feature_id": "D201-089",
+      "feature_name": "Version Technology Combos (V1:SQLite+Chroma / V2:Postgres+Qdrant / V3:K8s)",
+      "source_section": "D2.0-01 §3.3, §7.1",
+      "extractable": true
     },
     {
       "id": "D201-090",
@@ -814,7 +1170,11 @@
       "source": "D2.0-01 §8.3.1, §8.5.2",
       "version_scope": "V0",
       "status": "CORE",
-      "description": "V0 최소 구현: I-1~I-5 최소 + Gate 최소 + JSONL 로깅 + L0 메모리."
+      "description": "V0 최소 구현: I-1~I-5 최소 + Gate 최소 + JSONL 로깅 + L0 메모리.",
+      "feature_id": "D201-090",
+      "feature_name": "V0 Implementation Checklist (Minimal Core)",
+      "source_section": "D2.0-01 §8.3.1, §8.5.2",
+      "extractable": true
     },
     {
       "id": "D201-091",
@@ -823,7 +1183,11 @@
       "source": "D2.0-01 §8.3.2, §8.5.3",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "V1 MVP: 17 I-Series CORE + 6 E-Series + Multi-Brain 2-3 + MCP + 37 Pydantic 스키마 + UI 골격."
+      "description": "V1 MVP: 17 I-Series CORE + 6 E-Series + Multi-Brain 2-3 + MCP + 37 Pydantic 스키마 + UI 골격.",
+      "feature_id": "D201-091",
+      "feature_name": "V1 Implementation Checklist (MVP <=40K/mo)",
+      "source_section": "D2.0-01 §8.3.2, §8.5.3",
+      "extractable": true
     },
     {
       "id": "D201-092",
@@ -832,7 +1196,11 @@
       "source": "D2.0-01 §8.5.4",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "V2 서버 확장: I-7/I-12/I-25 COND + Postgres+Qdrant+Neo4j + Docker Compose."
+      "description": "V2 서버 확장: I-7/I-12/I-25 COND + Postgres+Qdrant+Neo4j + Docker Compose.",
+      "feature_id": "D201-092",
+      "feature_name": "V2 Server Expansion (<=93K/mo)",
+      "source_section": "D2.0-01 §8.5.4",
+      "extractable": true
     },
     {
       "id": "D202-001",
@@ -841,7 +1209,11 @@
       "source": "D2.0-02 §1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "ORANGE CORE는 판단/제어/감사 담당. 실행 엔진이 아님. Decision 객체 생성이 핵심 산출물."
+      "description": "ORANGE CORE는 판단/제어/감사 담당. 실행 엔진이 아님. Decision 객체 생성이 핵심 산출물.",
+      "feature_id": "D202-001",
+      "feature_name": "ORANGE CORE Role/Boundary Definition (Judgement/Control)",
+      "source_section": "D2.0-02 §1",
+      "extractable": true
     },
     {
       "id": "D202-002",
@@ -850,7 +1222,11 @@
       "source": "D2.0-02 §1.2-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "모든 모듈 공통 인터페이스: run()/get_metadata()/health_check(). USB 규격 원칙."
+      "description": "모든 모듈 공통 인터페이스: run()/get_metadata()/health_check(). USB 규격 원칙.",
+      "feature_id": "D202-002",
+      "feature_name": "Runnable Protocol (ADD-001) - Common Module Communication Interface",
+      "source_section": "D2.0-02 §1.2-A",
+      "extractable": true
     },
     {
       "id": "D202-003",
@@ -859,7 +1235,11 @@
       "source": "D2.0-02 §1.3-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "AI 생성 코드는 Docker 샌드박스 내에서만 실행. 네트워크 차단, 30초 타임아웃, 메모리 상한."
+      "description": "AI 생성 코드는 Docker 샌드박스 내에서만 실행. 네트워크 차단, 30초 타임아웃, 메모리 상한.",
+      "feature_id": "D202-003",
+      "feature_name": "Docker Sandboxing for Code Execution",
+      "source_section": "D2.0-02 §1.3-A",
+      "extractable": true
     },
     {
       "id": "D202-004",
@@ -868,7 +1248,11 @@
       "source": "D2.0-02 §1.4-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "MCP 우선, LangChain 패턴 참조만. CORE 직접 LangChain 의존 금지."
+      "description": "MCP 우선, LangChain 패턴 참조만. CORE 직접 LangChain 의존 금지.",
+      "feature_id": "D202-004",
+      "feature_name": "MCP-First Strategy (ADD-028, DEC-002)",
+      "source_section": "D2.0-02 §1.4-A",
+      "extractable": true
     },
     {
       "id": "D202-005",
@@ -877,7 +1261,11 @@
       "source": "D2.0-02 §2.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "표준 5단계 파이프라인. 개념 정본으로 고정."
+      "description": "표준 5단계 파이프라인. 개념 정본으로 고정.",
+      "feature_id": "D202-005",
+      "feature_name": "5-Phase Pipeline (Perception/Reasoning/Action/Memory/Reflection)",
+      "source_section": "D2.0-02 §2.1",
+      "extractable": true
     },
     {
       "id": "D202-006",
@@ -886,7 +1274,11 @@
       "source": "D2.0-02 §2.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "상태 머신 9단계: S0~S8. S3 이후 결론 변경 불가. S6 FAIL 시 Soft loop 1회만 허용."
+      "description": "상태 머신 9단계: S0~S8. S3 이후 결론 변경 불가. S6 FAIL 시 Soft loop 1회만 허용.",
+      "feature_id": "D202-006",
+      "feature_name": "State Machine (S0_RECEIVED ~ S8_DONE, 9 states)",
+      "source_section": "D2.0-02 §2.2",
+      "extractable": true
     },
     {
       "id": "D202-007",
@@ -895,7 +1287,11 @@
       "source": "D2.0-02 §2.1-A",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "난이도별 사고 깊이 자동 조절. ThinkingLevel ENUM(instant/low/medium/high/max). Cost Gate 연동."
+      "description": "난이도별 사고 깊이 자동 조절. ThinkingLevel ENUM(instant/low/medium/high/max). Cost Gate 연동.",
+      "feature_id": "D202-007",
+      "feature_name": "S7B-001 Adaptive Thinking - Complexity-based Thinking Budget",
+      "source_section": "D2.0-02 §2.1-A",
+      "extractable": true
     },
     {
       "id": "D202-008",
@@ -904,7 +1300,11 @@
       "source": "D2.0-02 §2.2-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "큐+세마포어 동시성 제어. MAX_CONCURRENT_BLUE_NODES=3, MAX_CONCURRENT_TOOLS=5."
+      "description": "큐+세마포어 동시성 제어. MAX_CONCURRENT_BLUE_NODES=3, MAX_CONCURRENT_TOOLS=5.",
+      "feature_id": "D202-008",
+      "feature_name": "Concurrency Control Strategy (Queue + Semaphore)",
+      "source_section": "D2.0-02 §2.2-A",
+      "extractable": true
     },
     {
       "id": "D202-009",
@@ -913,7 +1313,11 @@
       "source": "D2.0-02 §2.2-B",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "파이프라인 Hook 시스템. 11 Hook 타입(session_start~stop). .vamos/hooks.json 설정. 10초 타임아웃."
+      "description": "파이프라인 Hook 시스템. 11 Hook 타입(session_start~stop). .vamos/hooks.json 설정. 10초 타임아웃.",
+      "feature_id": "D202-009",
+      "feature_name": "S7B-005 Hook Lifecycle System (11 Hook types)",
+      "source_section": "D2.0-02 §2.2-B",
+      "extractable": true
     },
     {
       "id": "D202-010",
@@ -922,7 +1326,11 @@
       "source": "D2.0-02 §2.2-C",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "컨텍스트 80% 사용 시 자동 압축. 최근 N턴 원문 유지. 정보 손실 추정 제공."
+      "description": "컨텍스트 80% 사용 시 자동 압축. 최근 N턴 원문 유지. 정보 손실 추정 제공.",
+      "feature_id": "D202-010",
+      "feature_name": "S7B-008 Context Auto-Compaction",
+      "source_section": "D2.0-02 §2.2-C",
+      "extractable": true
     },
     {
       "id": "D202-011",
@@ -931,7 +1339,11 @@
       "source": "D2.0-02 §2.2-D",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "토큰 단위 실시간 스트리밍. SSE 기본, WebSocket V2+. StreamEvent 6종."
+      "description": "토큰 단위 실시간 스트리밍. SSE 기본, WebSocket V2+. StreamEvent 6종.",
+      "feature_id": "D202-011",
+      "feature_name": "S7B-018 Streaming Output (SSE/WebSocket)",
+      "source_section": "D2.0-02 §2.2-D",
+      "extractable": true
     },
     {
       "id": "D202-012",
@@ -940,7 +1352,11 @@
       "source": "D2.0-02 §2.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "게이트 위치: Policy/Approval S1~S3 + S6 재검증, Cost S2~S4, Evidence S2."
+      "description": "게이트 위치: Policy/Approval S1~S3 + S6 재검증, Cost S2~S4, Evidence S2.",
+      "feature_id": "D202-012",
+      "feature_name": "Gate Positions (Policy/Approval/Cost/Evidence) in Pipeline",
+      "source_section": "D2.0-02 §2.3",
+      "extractable": true
     },
     {
       "id": "D202-013",
@@ -949,7 +1365,11 @@
       "source": "D2.0-02 §2.3-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "토큰 카운팅 tiktoken 단일 표준. 모델별 인코딩 자동 선택. 자체 토크나이저 구현 금지."
+      "description": "토큰 카운팅 tiktoken 단일 표준. 모델별 인코딩 자동 선택. 자체 토크나이저 구현 금지.",
+      "feature_id": "D202-013",
+      "feature_name": "tiktoken Token Counting Standard",
+      "source_section": "D2.0-02 §2.3-A",
+      "extractable": true
     },
     {
       "id": "D202-014",
@@ -958,7 +1378,11 @@
       "source": "D2.0-02 §2.3-B",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "성능 목표: 단순응답<=2초, 복합응답<=10초, Self-check<=1초, 동시5요청, tiktoken<=50ms/만토큰."
+      "description": "성능 목표: 단순응답<=2초, 복합응답<=10초, Self-check<=1초, 동시5요청, tiktoken<=50ms/만토큰.",
+      "feature_id": "D202-014",
+      "feature_name": "Performance Benchmark Targets",
+      "source_section": "D2.0-02 §2.3-B",
+      "extractable": true
     },
     {
       "id": "D202-015",
@@ -967,7 +1391,11 @@
       "source": "D2.0-02 §3.1-3.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "단일결정 원칙: 한 시점/한 컨텍스트/한 결론. Decision 객체 FREEZE 확정 스키마."
+      "description": "단일결정 원칙: 한 시점/한 컨텍스트/한 결론. Decision 객체 FREEZE 확정 스키마.",
+      "feature_id": "D202-015",
+      "feature_name": "Decision Kernel - Single Decision Principle (FREEZE)",
+      "source_section": "D2.0-02 §3.1-3.2",
+      "extractable": true
     },
     {
       "id": "D202-016",
@@ -976,7 +1404,11 @@
       "source": "D2.0-02 §3.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Decision 스키마: decision_id, policy_gate, approval_required/status, cost_gate, routing, memory_plan, output_spec, conclusion, locked."
+      "description": "Decision 스키마: decision_id, policy_gate, approval_required/status, cost_gate, routing, memory_plan, output_spec, conclusion, locked.",
+      "feature_id": "D202-016",
+      "feature_name": "Decision Object Schema (13+ fields, locked=true)",
+      "source_section": "D2.0-02 §3.2",
+      "extractable": true
     },
     {
       "id": "D202-017",
@@ -985,7 +1417,11 @@
       "source": "D2.0-02 §3.2 ADD-036b",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "모든 내부 객체 Pydantic v2 기반. S0~S8 경계에서 .model_validate() 의무. dict/Any 전달 금지."
+      "description": "모든 내부 객체 Pydantic v2 기반. S0~S8 경계에서 .model_validate() 의무. dict/Any 전달 금지.",
+      "feature_id": "D202-017",
+      "feature_name": "ADD-036b Pydantic v2 Schema Validation Standard",
+      "source_section": "D2.0-02 §3.2 ADD-036b",
+      "extractable": true
     },
     {
       "id": "D202-018",
@@ -994,7 +1430,11 @@
       "source": "D2.0-02 §3.2 ADD-037b",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "FC 에러 5종 분류(Schema/Timeout/Parse/Policy/Cost). 재시도 최대 1회. OC_ERR_FC_* 코드."
+      "description": "FC 에러 5종 분류(Schema/Timeout/Parse/Policy/Cost). 재시도 최대 1회. OC_ERR_FC_* 코드.",
+      "feature_id": "D202-018",
+      "feature_name": "ADD-037b Function Call Error Handling Standard",
+      "source_section": "D2.0-02 §3.2 ADD-037b",
+      "extractable": true
     },
     {
       "id": "D202-019",
@@ -1003,7 +1443,11 @@
       "source": "D2.0-02 §0.6-A, §3.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "LangGraph는 워크플로우 오케스트레이션 전용. Gate/Decision/정책 우회 금지."
+      "description": "LangGraph는 워크플로우 오케스트레이션 전용. Gate/Decision/정책 우회 금지.",
+      "feature_id": "D202-019",
+      "feature_name": "LangGraph Workflow Orchestration (DEC-002 LOCK)",
+      "source_section": "D2.0-02 §0.6-A, §3.4",
+      "extractable": true
     },
     {
       "id": "D202-020",
@@ -1012,7 +1456,11 @@
       "source": "D2.0-02 §0.6-A",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "VAMOS 자체 경량 프레임워크 채택. 외부 에이전트 프레임워크 import 금지."
+      "description": "VAMOS 자체 경량 프레임워크 채택. 외부 에이전트 프레임워크 import 금지.",
+      "feature_id": "D202-020",
+      "feature_name": "DEC-001 Self Framework (LangChain/CrewAI import 금지)",
+      "source_section": "D2.0-02 §0.6-A",
+      "extractable": true
     },
     {
       "id": "D202-021",
@@ -1021,7 +1469,11 @@
       "source": "D2.0-02 §1.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Front Mini = CORE 최전방 게이트. 입력 메타 추출, 1차 안전검사, 전처리(OCR/STT), 도메인 힌트."
+      "description": "Front Mini = CORE 최전방 게이트. 입력 메타 추출, 1차 안전검사, 전처리(OCR/STT), 도메인 힌트.",
+      "feature_id": "D202-021",
+      "feature_name": "Front Mini Position (CORE Frontend Gate)",
+      "source_section": "D2.0-02 §1.4",
+      "extractable": true
     },
     {
       "id": "D202-022",
@@ -1030,7 +1482,11 @@
       "source": "D2.0-02 §7.1-7.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "IntentFrame: intent_id, user_goal, domain_hint(P0/P1/P2), constraints, task_type, risk_flags, ambiguity, required_artifacts."
+      "description": "IntentFrame: intent_id, user_goal, domain_hint(P0/P1/P2), constraints, task_type, risk_flags, ambiguity, required_artifacts.",
+      "feature_id": "D202-022",
+      "feature_name": "I-1 IntentFrame Schema (detailed)",
+      "source_section": "D2.0-02 §7.1-7.3",
+      "extractable": true
     },
     {
       "id": "D202-023",
@@ -1039,7 +1495,11 @@
       "source": "D2.0-02 §7.5",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "I-1 내부 상태: I1_S0_RAW -> I1_S1_PARSED -> I1_S2_AMBIGUOUS -> I1_S3_READY."
+      "description": "I-1 내부 상태: I1_S0_RAW -> I1_S1_PARSED -> I1_S2_AMBIGUOUS -> I1_S3_READY.",
+      "feature_id": "D202-023",
+      "feature_name": "I-1 Internal State Machine (I1_S0~I1_S3)",
+      "source_section": "D2.0-02 §7.5",
+      "extractable": true
     },
     {
       "id": "D202-024",
@@ -1048,7 +1508,11 @@
       "source": "D2.0-02 §7.10-A",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "텍스트 감정 감지. EmotionFrame(13 감정 카테고리). V1=규칙+KNU사전, V2=KoBERT/KoELECTRA ML."
+      "description": "텍스트 감정 감지. EmotionFrame(13 감정 카테고리). V1=규칙+KNU사전, V2=KoBERT/KoELECTRA ML.",
+      "feature_id": "D202-024",
+      "feature_name": "S7B-002 Text Emotion Detection Module",
+      "source_section": "D2.0-02 §7.10-A",
+      "extractable": true
     },
     {
       "id": "D202-025",
@@ -1057,7 +1521,11 @@
       "source": "D2.0-02 §7.10-B",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "감정 기반 응답 톤 자동 조절. ToneAdapter. 시스템 프롬프트 동적 삽입. 무료(프롬프트 엔지니어링)."
+      "description": "감정 기반 응답 톤 자동 조절. ToneAdapter. 시스템 프롬프트 동적 삽입. 무료(프롬프트 엔지니어링).",
+      "feature_id": "D202-025",
+      "feature_name": "S7B-003 Adaptive Response Tone",
+      "source_section": "D2.0-02 §7.10-B",
+      "extractable": true
     },
     {
       "id": "D202-026",
@@ -1066,7 +1534,11 @@
       "source": "D2.0-02 §7.10-C",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "음성 감정 분석. OpenSMILE/librosa/Hume API. V2 활성화."
+      "description": "음성 감정 분석. OpenSMILE/librosa/Hume API. V2 활성화.",
+      "feature_id": "D202-026",
+      "feature_name": "S7B-004 Voice Emotion Analysis",
+      "source_section": "D2.0-02 §7.10-C",
+      "extractable": true
     },
     {
       "id": "D202-027",
@@ -1075,7 +1547,11 @@
       "source": "D2.0-02 §7.10-D",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "복잡도+감정 기반 응답 길이 자동 조절. ResponseLengthConfig."
+      "description": "복잡도+감정 기반 응답 길이 자동 조절. ResponseLengthConfig.",
+      "feature_id": "D202-027",
+      "feature_name": "S7B-032 Dynamic Response Length Adjustment",
+      "source_section": "D2.0-02 §7.10-D",
+      "extractable": true
     },
     {
       "id": "D202-028",
@@ -1084,7 +1560,11 @@
       "source": "D2.0-02 §7.11-7.20",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "EvidencePack: 근거 수집 결과. 검색 쿼리 → 소스 수집 → QoD 평가 → coverage 판정."
+      "description": "EvidencePack: 근거 수집 결과. 검색 쿼리 → 소스 수집 → QoD 평가 → coverage 판정.",
+      "feature_id": "D202-028",
+      "feature_name": "I-2 EvidencePack Schema and RAG Pipeline",
+      "source_section": "D2.0-02 §7.11-7.20",
+      "extractable": true
     },
     {
       "id": "D202-029",
@@ -1093,7 +1573,11 @@
       "source": "D2.0-02 §7.21-7.30",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "메모리 커밋: MemoryCommitRequest 생성 → 정책 확인 → 승인 → 저장/deny."
+      "description": "메모리 커밋: MemoryCommitRequest 생성 → 정책 확인 → 승인 → 저장/deny.",
+      "feature_id": "D202-029",
+      "feature_name": "I-3 Memory Commit Pipeline (L0/L1/L2 policy)",
+      "source_section": "D2.0-02 §7.21-7.30",
+      "extractable": true
     },
     {
       "id": "D202-030",
@@ -1102,7 +1586,11 @@
       "source": "D2.0-02 §7.31-7.40",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "StructuredOutput: artifact_type, content, compliance_report(spec_ok/citations_ok/mask_applied)."
+      "description": "StructuredOutput: artifact_type, content, compliance_report(spec_ok/citations_ok/mask_applied).",
+      "feature_id": "D202-030",
+      "feature_name": "I-4 StructuredOutput Schema and Compliance Report",
+      "source_section": "D2.0-02 §7.31-7.40",
+      "extractable": true
     },
     {
       "id": "D202-031",
@@ -1111,7 +1599,11 @@
       "source": "D2.0-02 §7.41-7.50",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "게이트 우선순위: Policy(block>require_approval>mask>allow) > Cost > Evidence. 3단계 인터페이스."
+      "description": "게이트 우선순위: Policy(block>require_approval>mask>allow) > Cost > Evidence. 3단계 인터페이스.",
+      "feature_id": "D202-031",
+      "feature_name": "I-5 Gate Priority and Decision Lock Process",
+      "source_section": "D2.0-02 §7.41-7.50",
+      "extractable": true
     },
     {
       "id": "D202-032",
@@ -1120,7 +1612,11 @@
       "source": "D2.0-02 §7.51-7.53",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Self-check 위험도 기반 가변 임계값. Soft loop 1회 자동, 이후 승인 필요."
+      "description": "Self-check 위험도 기반 가변 임계값. Soft loop 1회 자동, 이후 승인 필요.",
+      "feature_id": "D202-032",
+      "feature_name": "I-6 Self-check Thresholds (P0:70/P1:75/P2:80)",
+      "source_section": "D2.0-02 §7.51-7.53",
+      "extractable": true
     },
     {
       "id": "D202-033",
@@ -1129,7 +1625,11 @@
       "source": "D2.0-02 §5.1.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "최상위 출력 포맷. answer(summary/details/next_actions), evidence(coverage/qod), self_check(score/verdict), decision_ref, audit."
+      "description": "최상위 출력 포맷. answer(summary/details/next_actions), evidence(coverage/qod), self_check(score/verdict), decision_ref, audit.",
+      "feature_id": "D202-033",
+      "feature_name": "ResponseEnvelope Schema (answer/evidence/self_check/decision_ref/audit)",
+      "source_section": "D2.0-02 §5.1.1",
+      "extractable": true
     },
     {
       "id": "D202-034",
@@ -1138,7 +1638,11 @@
       "source": "D2.0-02 §5.1.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "근거 단위 스키마. source_type(RAG/TOOL/MEMORY/WEB/USER), claim, support, freshness, qod."
+      "description": "근거 단위 스키마. source_type(RAG/TOOL/MEMORY/WEB/USER), claim, support, freshness, qod.",
+      "feature_id": "D202-034",
+      "feature_name": "EvidenceItem Schema (source_type/claim/support/qod)",
+      "source_section": "D2.0-02 §5.1.2",
+      "extractable": true
     },
     {
       "id": "D202-035",
@@ -1147,7 +1651,11 @@
       "source": "D2.0-02 §6.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "35+ 이벤트 타입. oc.request.received부터 oc.done까지. YAML 스키마 정의."
+      "description": "35+ 이벤트 타입. oc.request.received부터 oc.done까지. YAML 스키마 정의.",
+      "feature_id": "D202-035",
+      "feature_name": "LogEvent Registry (35+ event_types for I-1~I-5)",
+      "source_section": "D2.0-02 §6.1",
+      "extractable": true
     },
     {
       "id": "D202-036",
@@ -1156,7 +1664,11 @@
       "source": "D2.0-02 §6.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "17개 실패코드: OC_I1_PARSE_FAIL ~ OC_I5_ROUTE_NOT_FOUND. 각 코드에 origin/trigger/fallback_id 연결."
+      "description": "17개 실패코드: OC_I1_PARSE_FAIL ~ OC_I5_ROUTE_NOT_FOUND. 각 코드에 origin/trigger/fallback_id 연결.",
+      "feature_id": "D202-036",
+      "feature_name": "FailureCode Registry (17 codes for I-1~I-5)",
+      "source_section": "D2.0-02 §6.2",
+      "extractable": true
     },
     {
       "id": "D202-037",
@@ -1165,7 +1677,11 @@
       "source": "D2.0-02 §6.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "14개 폴백 전략: FB_ASK_CLARIFICATION ~ FB_DENY_WITH_REASON. goal/steps/degrade_level 포함."
+      "description": "14개 폴백 전략: FB_ASK_CLARIFICATION ~ FB_DENY_WITH_REASON. goal/steps/degrade_level 포함.",
+      "feature_id": "D202-037",
+      "feature_name": "Fallback Strategy Registry (14 strategies)",
+      "source_section": "D2.0-02 §6.3",
+      "extractable": true
     },
     {
       "id": "D202-038",
@@ -1174,7 +1690,11 @@
       "source": "D2.0-02 §5",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "모든 I-Module 공통 설계 템플릿: WHY/INPUTS/OUTPUTS/DEPENDENCIES/STATE/POLICY/LOG/FAILURE/FALLBACKS/TEST."
+      "description": "모든 I-Module 공통 설계 템플릿: WHY/INPUTS/OUTPUTS/DEPENDENCIES/STATE/POLICY/LOG/FAILURE/FALLBACKS/TEST.",
+      "feature_id": "D202-038",
+      "feature_name": "Common Design Template (10 sections per I-Module)",
+      "source_section": "D2.0-02 §5",
+      "extractable": true
     },
     {
       "id": "D202-039",
@@ -1183,7 +1703,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "WebSearchTool MCP 서버. Tavily/SerpAPI. 일일 100회 제한, 캐시 15분, 인라인 출처 표기."
+      "description": "WebSearchTool MCP 서버. Tavily/SerpAPI. 일일 100회 제한, 캐시 15분, 인라인 출처 표기.",
+      "feature_id": "D202-039",
+      "feature_name": "S7B-006 Real-time Web Search Integration (Search Grounding)",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-040",
@@ -1192,7 +1716,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "시스템 프롬프트 캐싱. Anthropic cache_control + OpenAI auto caching. 30-50% 비용 절감."
+      "description": "시스템 프롬프트 캐싱. Anthropic cache_control + OpenAI auto caching. 30-50% 비용 절감.",
+      "feature_id": "D202-040",
+      "feature_name": "S7B-028 Prompt Caching",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-041",
@@ -1201,7 +1729,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "사용자 피드백 UI(thumbs up/down + 텍스트). L2 메모리 저장. 로컬 전용."
+      "description": "사용자 피드백 UI(thumbs up/down + 텍스트). L2 메모리 저장. 로컬 전용.",
+      "feature_id": "D202-041",
+      "feature_name": "S7B-034 User Feedback Collection",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-042",
@@ -1210,7 +1742,11 @@
       "source": "D2.0-02 §3.2 STEP7 R2",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "Decision 객체에 decision_rationale 자연어 필드 추가. 감사 가능성 강화."
+      "description": "Decision 객체에 decision_rationale 자연어 필드 추가. 감사 가능성 강화.",
+      "feature_id": "D202-042",
+      "feature_name": "S7-E-015 Decision Object Rationale Extension",
+      "source_section": "D2.0-02 §3.2 STEP7 R2",
+      "extractable": true
     },
     {
       "id": "D202-043",
@@ -1219,7 +1755,11 @@
       "source": "D2.0-02 §2.1-A R2",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "사용자 명시적 심층 추론 모드. reasoning_budget. S7B-001과 연동."
+      "description": "사용자 명시적 심층 추론 모드. reasoning_budget. S7B-001과 연동.",
+      "feature_id": "D202-043",
+      "feature_name": "S7-G-001 Think Mode (User-explicit Deep Reasoning)",
+      "source_section": "D2.0-02 §2.1-A R2",
+      "extractable": true
     },
     {
       "id": "D202-044",
@@ -1228,7 +1768,11 @@
       "source": "D2.0-02 §2.1-A R2",
       "version_scope": "V2",
       "status": "CORE",
-      "description": "추론 시점 추가 연산으로 품질 향상. I-8 Cost Gate 연동."
+      "description": "추론 시점 추가 연산으로 품질 향상. I-8 Cost Gate 연동.",
+      "feature_id": "D202-044",
+      "feature_name": "A-ADD-06 Inference-Time Compute",
+      "source_section": "D2.0-02 §2.1-A R2",
+      "extractable": true
     },
     {
       "id": "D202-045",
@@ -1237,7 +1781,11 @@
       "source": "D2.0-02 §2.2 ADD-052",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Chat Engine = 세션 오케스트레이터. 다중 턴 관리. 각 턴 I-1 경유 의무. 결정 생성 개입 금지."
+      "description": "Chat Engine = 세션 오케스트레이터. 다중 턴 관리. 각 턴 I-1 경유 의무. 결정 생성 개입 금지.",
+      "feature_id": "D202-045",
+      "feature_name": "ADD-052 Chat Engine Redesign (Session Orchestrator)",
+      "source_section": "D2.0-02 §2.2 ADD-052",
+      "extractable": true
     },
     {
       "id": "D202-046",
@@ -1246,7 +1794,11 @@
       "source": "D2.0-02 §10.5.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Decision에 부가 시그널 기록: signal_id, source_module, name, value, confidence."
+      "description": "Decision에 부가 시그널 기록: signal_id, source_module, name, value, confidence.",
+      "feature_id": "D202-046",
+      "feature_name": "Decision Schema Extension: optional_signals",
+      "source_section": "D2.0-02 §10.5.1",
+      "extractable": true
     },
     {
       "id": "D202-047",
@@ -1255,7 +1807,11 @@
       "source": "D2.0-02 §10.5.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "검증 체인 사용 기록. 사후 감사/재현 지원."
+      "description": "검증 체인 사용 기록. 사후 감사/재현 지원.",
+      "feature_id": "D202-047",
+      "feature_name": "Decision Schema Extension: verify.chain_used",
+      "source_section": "D2.0-02 §10.5.2",
+      "extractable": true
     },
     {
       "id": "D202-048",
@@ -1264,7 +1820,11 @@
       "source": "D2.0-02 §10.5.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "게이트 평가 결과 요약(policy/approval/cost/evidence). Decision 내부 고정."
+      "description": "게이트 평가 결과 요약(policy/approval/cost/evidence). Decision 내부 고정.",
+      "feature_id": "D202-048",
+      "feature_name": "Decision Schema Extension: gates.result",
+      "source_section": "D2.0-02 §10.5.3",
+      "extractable": true
     },
     {
       "id": "D202-049",
@@ -1273,7 +1833,11 @@
       "source": "D2.0-02 §10.5.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "S-Module 개선 제안/힌트를 Decision에 기록."
+      "description": "S-Module 개선 제안/힌트를 Decision에 기록.",
+      "feature_id": "D202-049",
+      "feature_name": "Decision Schema Extension: s_module_hints",
+      "source_section": "D2.0-02 §10.5.4",
+      "extractable": true
     },
     {
       "id": "D202-050",
@@ -1282,7 +1846,11 @@
       "source": "D2.0-02 §10.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "S-Module은 I-Module 경유로만 동작. 후보 생성→S-8 거버넌스→승인→반영→S-2 회귀테스트."
+      "description": "S-Module은 I-Module 경유로만 동작. 후보 생성→S-8 거버넌스→승인→반영→S-2 회귀테스트.",
+      "feature_id": "D202-050",
+      "feature_name": "S-Module Flow (S-1~S-8 via I-Module pathway)",
+      "source_section": "D2.0-02 §10.6",
+      "extractable": true
     },
     {
       "id": "D202-051",
@@ -1291,7 +1859,11 @@
       "source": "D2.0-02 §11.1.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "create_decision/lock_decision/query_decisions/get_decision_chain API."
+      "description": "create_decision/lock_decision/query_decisions/get_decision_chain API.",
+      "feature_id": "D202-051",
+      "feature_name": "Decision Audit Trail API",
+      "source_section": "D2.0-02 §11.1.1",
+      "extractable": true
     },
     {
       "id": "D202-052",
@@ -1300,7 +1872,11 @@
       "source": "D2.0-02 §11.1.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Failover 순서 LOCK: GPT-4o→Claude Sonnet→로컬 Ollama. 연속 3회 타임아웃/5xx 시 전환."
+      "description": "Failover 순서 LOCK: GPT-4o→Claude Sonnet→로컬 Ollama. 연속 3회 타임아웃/5xx 시 전환.",
+      "feature_id": "D202-052",
+      "feature_name": "Multi-Brain Failover Chain (GPT-4o → Claude → Ollama)",
+      "source_section": "D2.0-02 §11.1.2",
+      "extractable": true
     },
     {
       "id": "D202-053",
@@ -1309,7 +1885,11 @@
       "source": "D2.0-02 §11.1.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "ToolRegistry는 04(INFRA)에 단일 정의. D2에서는 참조만."
+      "description": "ToolRegistry는 04(INFRA)에 단일 정의. D2에서는 참조만.",
+      "feature_id": "D202-053",
+      "feature_name": "ToolRegistry Unification (04 INFRA single definition)",
+      "source_section": "D2.0-02 §11.1.3",
+      "extractable": true
     },
     {
       "id": "D202-054",
@@ -1318,7 +1898,11 @@
       "source": "D2.0-02 §11.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "OpenAI API 12개 기능 연동: Chat/Structured Output/FC/Vision/Whisper/TTS/Embeddings/Moderation/Batch/Realtime/Assistants/Rate Limits."
+      "description": "OpenAI API 12개 기능 연동: Chat/Structured Output/FC/Vision/Whisper/TTS/Embeddings/Moderation/Batch/Realtime/Assistants/Rate Limits.",
+      "feature_id": "D202-054",
+      "feature_name": "OpenAI API Integration Design (12 capabilities)",
+      "source_section": "D2.0-02 §11.2",
+      "extractable": true
     },
     {
       "id": "D202-055",
@@ -1327,7 +1911,11 @@
       "source": "D2.0-02 §11.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Claude API 15개 기능: Messages/Extended Thinking/Vision/Tool Use/Computer Use/Streaming/Prompt Caching/Batch/ASL/CAI/MCP/Citations/PDF/Embeddings."
+      "description": "Claude API 15개 기능: Messages/Extended Thinking/Vision/Tool Use/Computer Use/Streaming/Prompt Caching/Batch/ASL/CAI/MCP/Citations/PDF/Embeddings.",
+      "feature_id": "D202-055",
+      "feature_name": "Claude API Integration Design (15 capabilities)",
+      "source_section": "D2.0-02 §11.3",
+      "extractable": true
     },
     {
       "id": "D202-056",
@@ -1336,7 +1924,11 @@
       "source": "D2.0-02 §11.4",
       "version_scope": "V2:COND / V3:ON",
       "status": "EXP",
-      "description": "중국 AI 모델(Kimi/DeepSeek/Qwen 등) 기술 참조 30건. 프라이버시: 중국 서버 민감 데이터 전송 금지."
+      "description": "중국 AI 모델(Kimi/DeepSeek/Qwen 등) 기술 참조 30건. 프라이버시: 중국 서버 민감 데이터 전송 금지.",
+      "feature_id": "D202-056",
+      "feature_name": "Chinese AI MoE/1M Context Reference (30 items)",
+      "source_section": "D2.0-02 §11.4",
+      "extractable": true
     },
     {
       "id": "D202-057",
@@ -1345,7 +1937,11 @@
       "source": "D2.0-02 §11.5",
       "version_scope": "V2:COND / V3:ON",
       "status": "EXP",
-      "description": "Google/DeepMind 기술 참조 27건. Gemini 2.0, 1M Context, Flash, AlphaCode 등."
+      "description": "Google/DeepMind 기술 참조 27건. Gemini 2.0, 1M Context, Flash, AlphaCode 등.",
+      "feature_id": "D202-057",
+      "feature_name": "Google/DeepMind Technology Reference (27 items)",
+      "source_section": "D2.0-02 §11.5",
+      "extractable": true
     },
     {
       "id": "D202-058",
@@ -1354,7 +1950,11 @@
       "source": "D2.0-02 §11.6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Meta LLM 26건. Llama 3.1/Code Llama/LlamaGuard 3/FAISS. Ollama+GGUF 양자화 기본."
+      "description": "Meta LLM 26건. Llama 3.1/Code Llama/LlamaGuard 3/FAISS. Ollama+GGUF 양자화 기본.",
+      "feature_id": "D202-058",
+      "feature_name": "Meta Open Source LLM Integration (26 items)",
+      "source_section": "D2.0-02 §11.6",
+      "extractable": true
     },
     {
       "id": "D202-059",
@@ -1363,7 +1963,11 @@
       "source": "D2.0-02 §11.7",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "한국어 LLM 비교 15건. SOLAR/Polyglot-Ko/HyperCLOVA X 등. DEFER: 로컬 기본 모델 확정."
+      "description": "한국어 LLM 비교 15건. SOLAR/Polyglot-Ko/HyperCLOVA X 등. DEFER: 로컬 기본 모델 확정.",
+      "feature_id": "D202-059",
+      "feature_name": "Korean LLM Comparison Table (15 items)",
+      "source_section": "D2.0-02 §11.7",
+      "extractable": true
     },
     {
       "id": "D202-060",
@@ -1372,7 +1976,11 @@
       "source": "D2.0-02 §11.9",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "15개 벤치마크: MMLU/HumanEval/MATH/GSM8K/MT-Bench/KoBEST/KLUE/KorQuAD/AgentBench 등. 최소 기준 LOCK."
+      "description": "15개 벤치마크: MMLU/HumanEval/MATH/GSM8K/MT-Bench/KoBEST/KLUE/KorQuAD/AgentBench 등. 최소 기준 LOCK.",
+      "feature_id": "D202-060",
+      "feature_name": "Benchmark Framework (15 benchmarks)",
+      "source_section": "D2.0-02 §11.9",
+      "extractable": true
     },
     {
       "id": "D202-061",
@@ -1381,7 +1989,11 @@
       "source": "D2.0-02 §11.10.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "DI 컨테이너: IBrain/IRetriever/ICostTracker/IGateClient/IMCPClient/ILogger/IMemoryStore. Singleton/Scoped/Transient."
+      "description": "DI 컨테이너: IBrain/IRetriever/ICostTracker/IGateClient/IMCPClient/ILogger/IMemoryStore. Singleton/Scoped/Transient.",
+      "feature_id": "D202-061",
+      "feature_name": "DI Kernel (Dependency Injection Container)",
+      "source_section": "D2.0-02 §11.10.1",
+      "extractable": true
     },
     {
       "id": "D202-062",
@@ -1390,7 +2002,11 @@
       "source": "D2.0-02 §11.10.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "TEE 루프: Think(I-1+I-5)→Execute(Brain/Node)→Evaluate(I-6 QoD). CORE는 제어자만."
+      "description": "TEE 루프: Think(I-1+I-5)→Execute(Brain/Node)→Evaluate(I-6 QoD). CORE는 제어자만.",
+      "feature_id": "D202-062",
+      "feature_name": "TEE Loop (Think-Execute-Evaluate) CORE Integration",
+      "source_section": "D2.0-02 §11.10.2",
+      "extractable": true
     },
     {
       "id": "D202-063",
@@ -1399,7 +2015,11 @@
       "source": "D2.0-02 §11.11.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Trigger 유형별 Gate 요구: schedule(G1 자동통과)/event(G1+G2)/webhook(G0+G1+G2)/manual(I-1)."
+      "description": "Trigger 유형별 Gate 요구: schedule(G1 자동통과)/event(G1+G2)/webhook(G0+G1+G2)/manual(I-1).",
+      "feature_id": "D202-063",
+      "feature_name": "Trigger/Action Event Schema",
+      "source_section": "D2.0-02 §11.11.1",
+      "extractable": true
     },
     {
       "id": "D202-064",
@@ -1408,7 +2028,11 @@
       "source": "D2.0-02 §11.11.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "에이전트/모델 출력 품질 자동 평가 게이트. QoD 점수 통합."
+      "description": "에이전트/모델 출력 품질 자동 평가 게이트. QoD 점수 통합.",
+      "feature_id": "D202-064",
+      "feature_name": "Evaluations Quality Gate (Accuracy/Faithfulness/Relevance/Completeness/Safety)",
+      "source_section": "D2.0-02 §11.11.2",
+      "extractable": true
     },
     {
       "id": "D202-065",
@@ -1417,7 +2041,11 @@
       "source": "D2.0-02 §11.12.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "IntentFrame 확장: domain(trading/coding/research/general), intent_type, complexity, risk_level, required_tools, confidence, sub_intents."
+      "description": "IntentFrame 확장: domain(trading/coding/research/general), intent_type, complexity, risk_level, required_tools, confidence, sub_intents.",
+      "feature_id": "D202-065",
+      "feature_name": "IntentFrame Extended Signature (domain/intent_type/complexity/risk_level)",
+      "source_section": "D2.0-02 §11.12.1",
+      "extractable": true
     },
     {
       "id": "D202-066",
@@ -1426,7 +2054,11 @@
       "source": "D2.0-02 §11.12.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "평가 4레벨: L1 단위(벤치마크)/L2 에이전트(AgentBench)/L3 시스템(E2E)/L4 안전(SafetyBench)."
+      "description": "평가 4레벨: L1 단위(벤치마크)/L2 에이전트(AgentBench)/L3 시스템(E2E)/L4 안전(SafetyBench).",
+      "feature_id": "D202-066",
+      "feature_name": "4-Level Evaluation Framework (L1 Unit ~ L4 Safety)",
+      "source_section": "D2.0-02 §11.12.2",
+      "extractable": true
     },
     {
       "id": "D202-067",
@@ -1435,7 +2067,11 @@
       "source": "D2.0-02 §11.12.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "EleutherAI LM-Eval Harness 통합. 모델 변경 시 자동 실행."
+      "description": "EleutherAI LM-Eval Harness 통합. 모델 변경 시 자동 실행.",
+      "feature_id": "D202-067",
+      "feature_name": "LM-Eval Harness Integration",
+      "source_section": "D2.0-02 §11.12.3",
+      "extractable": true
     },
     {
       "id": "D202-068",
@@ -1444,7 +2080,11 @@
       "source": "D2.0-02 §11.13.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "G0~G4 자동화 스키마. gate_id/gate_type/context → result(pass|deny|hold|downshift). P0 자동통과 규칙."
+      "description": "G0~G4 자동화 스키마. gate_id/gate_type/context → result(pass|deny|hold|downshift). P0 자동통과 규칙.",
+      "feature_id": "D202-068",
+      "feature_name": "Gate Automation Schema (G0~G4)",
+      "source_section": "D2.0-02 §11.13.3",
+      "extractable": true
     },
     {
       "id": "D202-069",
@@ -1453,7 +2093,11 @@
       "source": "D2.0-02 §1.4 R6",
       "version_scope": "V3",
       "status": "EXP",
-      "description": "카메라 영상 실시간 분석. Gemini Project Astra 참조. Front Mini → Vision API. 사용자 동의 필수."
+      "description": "카메라 영상 실시간 분석. Gemini Project Astra 참조. Front Mini → Vision API. 사용자 동의 필수.",
+      "feature_id": "D202-069",
+      "feature_name": "S7B-016 Real-time Camera Analysis",
+      "source_section": "D2.0-02 §1.4 R6",
+      "extractable": true
     },
     {
       "id": "D202-070",
@@ -1462,7 +2106,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "Lead Agent + Sub-agents 위임 패턴. ORANGE CORE=Lead, BLUE NODES=Sub-agents."
+      "description": "Lead Agent + Sub-agents 위임 패턴. ORANGE CORE=Lead, BLUE NODES=Sub-agents.",
+      "feature_id": "D202-070",
+      "feature_name": "S7-A-001 Claude Agent Teams Architecture Reference",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-071",
@@ -1471,7 +2119,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "VAMOS 자체 SDK: @vamos.agent/@vamos.tool/@vamos.gate 데코레이터."
+      "description": "VAMOS 자체 SDK: @vamos.agent/@vamos.tool/@vamos.gate 데코레이터.",
+      "feature_id": "D202-071",
+      "feature_name": "S7-A-002 Agent SDK Pattern Benchmark",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-072",
@@ -1480,7 +2132,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "MCP 2025.06: Streamable HTTP, elicitation, OAuth 2.1, Tool annotations."
+      "description": "MCP 2025.06: Streamable HTTP, elicitation, OAuth 2.1, Tool annotations.",
+      "feature_id": "D202-072",
+      "feature_name": "S7-A-003 MCP Latest Spec (2025.06)",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-073",
@@ -1489,7 +2145,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "VAMOS Personal Constitution. 사용자 정의 가치관/규칙 자동 Self-Check."
+      "description": "VAMOS Personal Constitution. 사용자 정의 가치관/규칙 자동 Self-Check.",
+      "feature_id": "D202-073",
+      "feature_name": "S7-A-005 Constitutional AI 2.0 Pattern",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-074",
@@ -1498,7 +2158,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "모델 매트릭스 갱신: GPT-4.1(1M context), o3/o4-mini(Reasoning Effort), Llama 4 Scout(17B active)."
+      "description": "모델 매트릭스 갱신: GPT-4.1(1M context), o3/o4-mini(Reasoning Effort), Llama 4 Scout(17B active).",
+      "feature_id": "D202-074",
+      "feature_name": "S7-B-001 Model Matrix Update (GPT-4.1/o3/o4-mini/Llama 4)",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-075",
@@ -1507,7 +2171,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "VAMOS 핵심 차별화: 지식-투자-코딩 통합 원스톱. 도메인 인식 분류."
+      "description": "VAMOS 핵심 차별화: 지식-투자-코딩 통합 원스톱. 도메인 인식 분류.",
+      "feature_id": "D202-075",
+      "feature_name": "INNOV-11 Knowledge-Investment-Coding Integration",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-076",
@@ -1516,7 +2184,11 @@
       "source": "D2.0-02 §STEP7 R1",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "기본 모드 로컬 LLM. 클라우드 전환은 사용자 명시 승인만. 데이터 제로 유출."
+      "description": "기본 모드 로컬 LLM. 클라우드 전환은 사용자 명시 승인만. 데이터 제로 유출.",
+      "feature_id": "D202-076",
+      "feature_name": "INNOV-12 Local-First Privacy",
+      "source_section": "D2.0-02 §STEP7 R1",
+      "extractable": true
     },
     {
       "id": "D202-077",
@@ -1525,7 +2197,11 @@
       "source": "D2.0-02 §12.1",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "파이프라인 FSM: S1=5초/S2=30초/S3=120초/S4=10초/S5=15초 타임아웃. 병렬 scatter/gather."
+      "description": "파이프라인 FSM: S1=5초/S2=30초/S3=120초/S4=10초/S5=15초 타임아웃. 병렬 scatter/gather.",
+      "feature_id": "D202-077",
+      "feature_name": "Pipeline FSM Extension (S0~S5+S-ERR, timeouts, scatter/gather)",
+      "source_section": "D2.0-02 §12.1",
+      "extractable": true
     },
     {
       "id": "D202-078",
@@ -1534,7 +2210,11 @@
       "source": "D2.0-02 §12.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "전 I-Module 공통 인터페이스. 의존성 DAG 순환 금지. Router<100ms, E2E<30초 SLA."
+      "description": "전 I-Module 공통 인터페이스. 의존성 DAG 순환 금지. Router<100ms, E2E<30초 SLA.",
+      "feature_id": "D202-078",
+      "feature_name": "I-Module Common Interface (init/process/health_check/shutdown)",
+      "source_section": "D2.0-02 §12.2",
+      "extractable": true
     },
     {
       "id": "D202-079",
@@ -1543,7 +2223,11 @@
       "source": "D2.0-02 §12.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "77모듈x4버전 매트릭스. Feature Flag 기반 런타임 제어."
+      "description": "77모듈x4버전 매트릭스. Feature Flag 기반 런타임 제어.",
+      "feature_id": "D202-079",
+      "feature_name": "Capability Matrix (77 modules x 4 versions, Feature Flag)",
+      "source_section": "D2.0-02 §12.3",
+      "extractable": true
     },
     {
       "id": "D202-080",
@@ -1552,7 +2236,11 @@
       "source": "D2.0-02 §12.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "3단계 테스트: 단위(>=80%)/통합(>=90%)/시나리오(>=95%). Gate별 필수 테스트."
+      "description": "3단계 테스트: 단위(>=80%)/통합(>=90%)/시나리오(>=95%). Gate별 필수 테스트.",
+      "feature_id": "D202-080",
+      "feature_name": "Test Strategy (3-tier + Gate-linked test sets)",
+      "source_section": "D2.0-02 §12.4",
+      "extractable": true
     },
     {
       "id": "D202-081",
@@ -1561,7 +2249,11 @@
       "source": "D2.0-02 §10.1",
       "version_scope": "V2:COND / V3:ON",
       "status": "EXP",
-      "description": "Plan 강화 옵션: HTN 프랙탈 분해, Value Function 점수화, MCTS 후보 탐색, World Model 시뮬레이션."
+      "description": "Plan 강화 옵션: HTN 프랙탈 분해, Value Function 점수화, MCTS 후보 탐색, World Model 시뮬레이션.",
+      "feature_id": "D202-081",
+      "feature_name": "Plan Enhancement: D-4 HTN / D-5 Value Function / D-2 MCTS / D-1 World Model",
+      "source_section": "D2.0-02 §10.1",
+      "extractable": true
     },
     {
       "id": "D202-082",
@@ -1570,7 +2262,11 @@
       "source": "D2.0-02 §10.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "검증 체인 강화: Code-as-Policy, Logic/Z3 Solver, Self-consistency, Code Verifier, GraphRAG."
+      "description": "검증 체인 강화: Code-as-Policy, Logic/Z3 Solver, Self-consistency, Code Verifier, GraphRAG.",
+      "feature_id": "D202-082",
+      "feature_name": "Verify Enhancement: EVX-1/C-1/EVX-6/D-3/C-3/D-6 chain",
+      "source_section": "D2.0-02 §10.2",
+      "extractable": true
     },
     {
       "id": "D202-083",
@@ -1579,7 +2275,11 @@
       "source": "D2.0-02 §10.4.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "I-Module별 A/B/C/D/EVX/S Series 연결 매핑표."
+      "description": "I-Module별 A/B/C/D/EVX/S Series 연결 매핑표.",
+      "feature_id": "D202-083",
+      "feature_name": "I-Module to Series Connection Table (25 modules mapped)",
+      "source_section": "D2.0-02 §10.4.2",
+      "extractable": true
     },
     {
       "id": "D202-084",
@@ -1588,7 +2288,11 @@
       "source": "D2.0-02 §1.3 ADD-069",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "순수 Python 채택(CORE), LlamaIndex 부분 채택(I-2), Haystack 미채택, DSPy LATER."
+      "description": "순수 Python 채택(CORE), LlamaIndex 부분 채택(I-2), Haystack 미채택, DSPy LATER.",
+      "feature_id": "D202-084",
+      "feature_name": "ADD-069 LangChain Removal - Lightweight Alternative Evaluation",
+      "source_section": "D2.0-02 §1.3 ADD-069",
+      "extractable": true
     },
     {
       "id": "D202-085",
@@ -1597,7 +2301,11 @@
       "source": "D2.0-02 §7.10 R2",
       "version_scope": "V1",
       "status": "CORE",
-      "description": "규칙+키워드 V1, ML V2. KNU 한국어 감성사전 + VADER. S7B-002와 동일 목표."
+      "description": "규칙+키워드 V1, ML V2. KNU 한국어 감성사전 + VADER. S7B-002와 동일 목표.",
+      "feature_id": "D202-085",
+      "feature_name": "S7-F-017 Text Emotion Detection (Innovation Track)",
+      "source_section": "D2.0-02 §7.10 R2",
+      "extractable": true
     },
     {
       "id": "D202-086",
@@ -1606,7 +2314,11 @@
       "source": "D2.0-02 §11.15.1",
       "version_scope": "V2:COND / V3:ON",
       "status": "EXP",
-      "description": "MoE 스타일 전문가 풀 모델 선택. I-5 Router 확장."
+      "description": "MoE 스타일 전문가 풀 모델 선택. I-5 Router 확장.",
+      "feature_id": "D202-086",
+      "feature_name": "MoE Routing Pattern (IDEA-C01)",
+      "source_section": "D2.0-02 §11.15.1",
+      "extractable": true
     },
     {
       "id": "D202-087",
@@ -1615,7 +2327,11 @@
       "source": "D2.0-02 §11.15.2",
       "version_scope": "V3",
       "status": "EXP",
-      "description": "Execute 단계 PARL 병렬 에이전트. 최대 100개 서브에이전트. 실행시간 4.5x 단축."
+      "description": "Execute 단계 PARL 병렬 에이전트. 최대 100개 서브에이전트. 실행시간 4.5x 단축.",
+      "feature_id": "D202-087",
+      "feature_name": "Agent Swarm PARL Pattern (IDEA-C02)",
+      "source_section": "D2.0-02 §11.15.2",
+      "extractable": true
     },
     {
       "id": "D202-088",
@@ -1624,7 +2340,11 @@
       "source": "D2.0-02 §6.4",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "Cross-Doc 정합 체크: 다른 문서에서 사용한 event_type/failure_code/fallback_id만 레지스트리 등재. 발명 금지."
+      "description": "Cross-Doc 정합 체크: 다른 문서에서 사용한 event_type/failure_code/fallback_id만 레지스트리 등재. 발명 금지.",
+      "feature_id": "D202-088",
+      "feature_name": "Cross-Doc Registry Consistency Check (no-invention rule)",
+      "source_section": "D2.0-02 §6.4",
+      "extractable": true
     },
     {
       "id": "D202-089",
@@ -1633,7 +2353,11 @@
       "source": "D2.0-02 §0.3",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "통일 에러 처리: Result<T, VamosError> 반환. 예외 throw 금지. failure_code/message/fallback_id/trace_id 필드."
+      "description": "통일 에러 처리: Result<T, VamosError> 반환. 예외 throw 금지. failure_code/message/fallback_id/trace_id 필드.",
+      "feature_id": "D202-089",
+      "feature_name": "ErrorHandlingStandard (Result<T, VamosError>, no throw)",
+      "source_section": "D2.0-02 §0.3",
+      "extractable": true
     },
     {
       "id": "D202-090",
@@ -1642,7 +2366,11 @@
       "source": "D2.0-02 §11.8",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "15개 AI 연구 트렌드 참조: MoE, CoT, Tool Use, RAG+Long Context, RLHF, CAI, Multi-Agent, Agentic AI 등."
+      "description": "15개 AI 연구 트렌드 참조: MoE, CoT, Tool Use, RAG+Long Context, RLHF, CAI, Multi-Agent, Agentic AI 등.",
+      "feature_id": "D202-090",
+      "feature_name": "AI Research Trends Reference (15 items)",
+      "source_section": "D2.0-02 §11.8",
+      "extractable": true
     },
     {
       "id": "D202-091",
@@ -1651,7 +2379,11 @@
       "source": "D2.0-02 §11.14",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "R3~R6 횡단/보강 추정 항목 ~57건. R3(~8건), R4(~9건), R5(~7건), R6(~13건) 포함. NOTE: 합계 ~106건(상세49+추정57)."
+      "description": "R3~R6 횡단/보강 추정 항목 ~57건. R3(~8건), R4(~9건), R5(~7건), R6(~13건) 포함. NOTE: 합계 ~106건(상세49+추정57).",
+      "feature_id": "D202-091",
+      "feature_name": "STEP7 R3~R6 Cross-cutting Items (~57 estimated)",
+      "source_section": "D2.0-02 §11.14",
+      "extractable": true
     },
     {
       "id": "D201-093",
@@ -1660,7 +2392,11 @@
       "source": "D2.0-01 §5.8.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "E-Series UI 배지 규칙: CORE=none, COND=lock, EXP=LAB, RE-ADD=NEW."
+      "description": "E-Series UI 배지 규칙: CORE=none, COND=lock, EXP=LAB, RE-ADD=NEW.",
+      "feature_id": "D201-093",
+      "feature_name": "E-Series Status Badge Rules (CORE/COND/EXP/RE-ADD badges)",
+      "source_section": "D2.0-01 §5.8.2",
+      "extractable": true
     },
     {
       "id": "D201-094",
@@ -1669,7 +2405,11 @@
       "source": "D2.0-01 §5.5.1-5.5.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "모듈 카탈로그 표준필드 LOCK: module_id/module_name/status/change_lock/activation_default/owner_schema_doc/ui_exposed/ui_surface/ui_view_mode."
+      "description": "모듈 카탈로그 표준필드 LOCK: module_id/module_name/status/change_lock/activation_default/owner_schema_doc/ui_exposed/ui_surface/ui_view_mode.",
+      "feature_id": "D201-094",
+      "feature_name": "Module Catalog Standard Fields (LOCK)",
+      "source_section": "D2.0-01 §5.5.1-5.5.2",
+      "extractable": true
     },
     {
       "id": "D201-095",
@@ -1678,7 +2418,11 @@
       "source": "D2.0-01 §8.4.2",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "스키마 자동 생성 파이프라인. datamodel-code-generator. Cross-Doc 정합성 자동 검증."
+      "description": "스키마 자동 생성 파이프라인. datamodel-code-generator. Cross-Doc 정합성 자동 검증.",
+      "feature_id": "D201-095",
+      "feature_name": "Schema Auto-Generation Tool (S04-ADD-006)",
+      "source_section": "D2.0-01 §8.4.2",
+      "extractable": true
     },
     {
       "id": "D201-096",
@@ -1687,7 +2431,11 @@
       "source": "D2.0-01 §6",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "문서 간 의존성 맵: 02 Decision ↔ 07 Policy ↔ 05 Workflow. 필수 동기화 규칙 4개."
+      "description": "문서 간 의존성 맵: 02 Decision ↔ 07 Policy ↔ 05 Workflow. 필수 동기화 규칙 4개.",
+      "feature_id": "D201-096",
+      "feature_name": "Document Dependency Map (01~08 connection)",
+      "source_section": "D2.0-01 §6",
+      "extractable": true
     },
     {
       "id": "D201-097",
@@ -1696,7 +2444,11 @@
       "source": "D2.0-01 §7",
       "version_scope": "V1:ON / V2:ON / V3:ON",
       "status": "CORE",
-      "description": "결정 필요 목록 70건(미해소 38건/해소 32건). GT-2 gate_count 참고: D201 기준 문서당 정확한 미해소 항목 추적 필요."
+      "description": "결정 필요 목록 70건(미해소 38건/해소 32건). GT-2 gate_count 참고: D201 기준 문서당 정확한 미해소 항목 추적 필요.",
+      "feature_id": "D201-097",
+      "feature_name": "Decision Needed Inventory (70 items, 38 unresolved)",
+      "source_section": "D2.0-01 §7",
+      "extractable": true
     }
   ],
   "gt2_gate_count_note": "GT-2 gate_count discrepancy: Phase 4 reported 193 vs 195. This extraction yields 159 features. The discrepancy may stem from different granularity in counting STEP7 cross-cutting items (§11.14 alone has ~57 estimated sub-items) and registry entries (35+ event_types, 17 failure_codes, 14 fallback_strategies counted as registry features rather than individual items).",

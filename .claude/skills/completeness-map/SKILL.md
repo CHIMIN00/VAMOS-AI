@@ -123,3 +123,50 @@ TOOL_GUIDE_46.md를 읽고 아래 매트릭스를 생성하여 출력합니다.
 ## 저장 위치
 - 매트릭스 결과: 콘솔 출력 (Markdown 테이블)
 - 필요시 `D:\VAMOS\04. 구현단계\{version}_results\completeness_matrix.md`로 저장
+
+---
+
+## [SOT 2 확장] SOT 2 명세 커버리지 매트릭스 (v2 추가)
+
+> 기존 에러 유형 × 검증 도구 매트릭스를 유지한 채, SOT 2 명세 도메인의 커버리지 매트릭스를 추가합니다.
+
+### SOT 2 에러 분류 (기존과 별도)
+
+| 에러 코드 | 설명 | 탐지 도구 |
+|----------|------|----------|
+| SE1 | LOCK 값 불일치 (SOT 2 ↔ Part2) | sot2-cross-ref, sot-conflict |
+| SE2 | 방식 C 요약 stale (Part2 업데이트 미반영) | sot2-method-c, integrity |
+| SE3 | 도메인 간 중복 정의 (canonical owner 미지정) | sot2-cross-ref matrix |
+| SE4 | Authority Chain 위반 (SOT 2에서 DESIGN 레벨 재정의) | sot-conflict |
+| SE5 | 스키마 미완성 (필수 필드 누락) | extract sot2, validate |
+| SE6 | 교차 참조 깨짐 (참조 대상 없음) | sot2-cross-ref |
+| SE7 | 계획서 미생성 (도메인에 종합계획서 없음) | sot2-plan-gen status |
+| SE8 | L3 미도달 (구현 불가 수준) | quality-gate |
+
+### SOT 2 커버리지 매트릭스
+
+```
+추가 명령어: /completeness-map sot2
+
+출력 형태:
+
+          sot2-cross-ref  sot2-method-c  sot-conflict  extract  validate  quality-gate
+SE1 LOCK       ✅              ✅            ✅          .         .          .
+SE2 Stale       .              ✅             .          .         .          .
+SE3 Overlap    ✅               .            ✅          .         .          .
+SE4 Auth        .               .            ✅          .         .          .
+SE5 Schema      .               .             .         ✅        ✅          .
+SE6 BrokenRef  ✅               .             .          .         .          .
+SE7 NoPlan      .               .             .          .         .          .
+SE8 L3Gap       .               .             .          .         .         ✅
+```
+
+### SOT 2 완전성 점수
+
+```
+SOT 2 Completeness Score = (커버된 에러 유형 / 전체 에러 유형) × 100%
+목표: 100% (모든 SE1~SE8에 대해 최소 1개 도구 탐지)
+```
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_cross-ref/sot2_completeness_matrix.md`

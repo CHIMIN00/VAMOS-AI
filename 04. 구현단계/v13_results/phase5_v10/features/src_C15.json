@@ -47,7 +47,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-001",
+      "feature_name": "7-Layer Data Architecture 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §2"
     },
     {
       "id": "AINV-002",
@@ -57,7 +60,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-002",
+      "feature_name": "83개 데이터 소스 수집 시스템",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3"
     },
     {
       "id": "AINV-003",
@@ -67,7 +73,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-003",
+      "feature_name": "P0 Critical 데이터 소스 연동 (16개)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3.1"
     },
     {
       "id": "AINV-004",
@@ -77,7 +86,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-004",
+      "feature_name": "P1 High 데이터 소스 연동 (9개)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3.2"
     },
     {
       "id": "AINV-005",
@@ -87,7 +99,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-005",
+      "feature_name": "Scraper 데이터 소스 연동 (17+개)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3.3"
     },
     {
       "id": "AINV-006",
@@ -97,7 +112,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-006",
+      "feature_name": "Knowledge 데이터 소스 연동 (41+개)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3.4"
     },
     {
       "id": "AINV-007",
@@ -107,7 +125,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-007",
+      "feature_name": "OHLCV_PLUS 데이터 스키마 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §4.1"
     },
     {
       "id": "AINV-008",
@@ -117,7 +138,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-008",
+      "feature_name": "EVENT 데이터 스키마 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §4.2"
     },
     {
       "id": "AINV-009",
@@ -127,7 +151,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-009",
+      "feature_name": "DQ(Data Quality) 검증 시스템",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §5"
     },
     {
       "id": "AINV-010",
@@ -137,7 +164,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-010",
+      "feature_name": "백테스팅 엔진 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §6"
     },
     {
       "id": "AINV-011",
@@ -147,7 +177,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-011",
+      "feature_name": "51% Gate 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §6.1"
     },
     {
       "id": "AINV-012",
@@ -157,7 +190,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-012",
+      "feature_name": "기술적 분석 전략 40종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §7"
     },
     {
       "id": "AINV-013",
@@ -167,7 +203,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-013",
+      "feature_name": "퀀트/팩터 전략 20종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8"
     },
     {
       "id": "AINV-014",
@@ -177,7 +216,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-014",
+      "feature_name": "옵션 전략 10종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.2"
     },
     {
       "id": "AINV-015",
@@ -187,7 +229,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-015",
+      "feature_name": "이벤트 기반 전략 6종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.3"
     },
     {
       "id": "AINV-016",
@@ -197,7 +242,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-016",
+      "feature_name": "AI/ML 기반 전략 8종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.4"
     },
     {
       "id": "AINV-017",
@@ -207,7 +255,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-017",
+      "feature_name": "암호화폐 전략 6종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.5"
     },
     {
       "id": "AINV-018",
@@ -217,7 +268,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-018",
+      "feature_name": "포트폴리오/리스크 전략 6종 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.6"
     },
     {
       "id": "AINV-019",
@@ -227,7 +281,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-019",
+      "feature_name": "RSI_BB 전략 레퍼런스 구현체",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §9"
     },
     {
       "id": "AINV-020",
@@ -237,7 +294,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-020",
+      "feature_name": "법적 제약 시스템 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §10"
     },
     {
       "id": "AINV-021",
@@ -247,7 +307,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-021",
+      "feature_name": "Grafana 모니터링 대시보드 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §11"
     },
     {
       "id": "AINV-022",
@@ -257,7 +320,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-022",
+      "feature_name": "Airflow DAG 스케줄러 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §12"
     },
     {
       "id": "AINV-023",
@@ -267,7 +333,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-023",
+      "feature_name": "Stream Gateway 실시간 데이터 처리",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §13"
     },
     {
       "id": "AINV-024",
@@ -277,7 +346,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-024",
+      "feature_name": "AINV 전용 기술 스택 (14-item LOCK)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §14"
     },
     {
       "id": "AINV-025",
@@ -287,7 +359,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-025",
+      "feature_name": "ML/AI 스택 구현 (FinBERT, SHAP/LIME)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §14.2"
     },
     {
       "id": "AINV-026",
@@ -297,7 +372,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-026",
+      "feature_name": "수학 공식 검증 시스템",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §15"
     },
     {
       "id": "AINV-027",
@@ -307,7 +385,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-027",
+      "feature_name": "15개 결함 및 솔루션 패치",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §16"
     },
     {
       "id": "AINV-028",
@@ -318,7 +399,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 로드맵은 구현 항목이 아닌 계획 문서",
       "category": "AINV",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "AINV-028",
+      "feature_name": "4-Phase 로드맵 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §17"
     },
     {
       "id": "AINV-029",
@@ -329,7 +413,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 참조/벤치마크 문서, 직접 구현 항목 아님",
       "category": "AINV",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "AINV-029",
+      "feature_name": "35개 참조 플랫폼 벤치마크",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §18"
     },
     {
       "id": "AINV-030",
@@ -339,7 +426,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-030",
+      "feature_name": "VAMOS Core 통합 인터페이스",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §19"
     },
     {
       "id": "AINV-031",
@@ -349,7 +439,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-031",
+      "feature_name": "Scraper Manager 구현",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §20"
     },
     {
       "id": "AINV-032",
@@ -359,7 +452,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "AINV-032",
+      "feature_name": "Non-goal 규칙 적용 (실거래 금지)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §21"
     },
     {
       "id": "AINV-033",
@@ -369,7 +465,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-033",
+      "feature_name": "contracts.py 검토 결과 26개 항목 반영",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §22"
     },
     {
       "id": "AINV-034",
@@ -379,7 +478,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-034",
+      "feature_name": "Z-Session 암호화폐 트레이딩 통합",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §23"
     },
     {
       "id": "AINV-035",
@@ -389,7 +491,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-035",
+      "feature_name": "TimescaleDB 시계열 DB 구성",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §14"
     },
     {
       "id": "AINV-036",
@@ -399,7 +504,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-036",
+      "feature_name": "VaR(Value at Risk) 경고 시스템",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §10.2"
     },
     {
       "id": "AINV-037",
@@ -409,7 +517,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "AINV-037",
+      "feature_name": "면책 문구 자동 삽입",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §10.3"
     },
     {
       "id": "AINV-038",
@@ -419,7 +530,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-038",
+      "feature_name": "금융 환각(Hallucination) 탐지",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §10.4"
     },
     {
       "id": "AINV-039",
@@ -429,7 +543,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-039",
+      "feature_name": "감정적 투자 방지 (FOMO/패닉 감지)",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §10.5"
     },
     {
       "id": "AINV-040",
@@ -439,7 +556,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "AINV-040",
+      "feature_name": "포트폴리오 최적화 엔진",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §8.6"
     },
     {
       "id": "AINV-041",
@@ -449,7 +569,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-041",
+      "feature_name": "Kafka 이벤트 스트리밍 구성",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §13"
     },
     {
       "id": "AINV-042",
@@ -459,7 +582,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-042",
+      "feature_name": "전략 성과 리포트 생성기",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §6.2"
     },
     {
       "id": "AINV-043",
@@ -469,9 +595,11 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "AINV",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "AINV-043",
+      "feature_name": "데이터 수집 스케줄러",
+      "source_section": "VAMOS_AI_INVESTING_SPEC.md §3"
     },
-
     {
       "id": "CLIB-001",
       "title": "Cloud Library 10-Layer 아키텍처 구현",
@@ -480,7 +608,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-001",
+      "feature_name": "Cloud Library 10-Layer 아키텍처 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §2"
     },
     {
       "id": "CLIB-002",
@@ -490,7 +621,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-002",
+      "feature_name": "7-Stage 자율 사이트 발견 파이프라인",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §3"
     },
     {
       "id": "CLIB-003",
@@ -500,7 +634,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-003",
+      "feature_name": "Platform Template System 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §4"
     },
     {
       "id": "CLIB-004",
@@ -510,7 +647,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-004",
+      "feature_name": "Scoring Algorithm 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §5"
     },
     {
       "id": "CLIB-005",
@@ -520,7 +660,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-005",
+      "feature_name": "E-15 Collector 모듈 구현 (10 functions)",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §6.1"
     },
     {
       "id": "CLIB-006",
@@ -530,7 +673,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-006",
+      "feature_name": "S-5 Evolver 모듈 구현 (20 functions)",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §6.2"
     },
     {
       "id": "CLIB-007",
@@ -540,7 +686,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-007",
+      "feature_name": "E-15/S-5 Hybrid 통합 구조",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §6"
     },
     {
       "id": "CLIB-008",
@@ -550,7 +699,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-008",
+      "feature_name": "Scheduler System 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §7"
     },
     {
       "id": "CLIB-009",
@@ -560,7 +712,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-009",
+      "feature_name": "G0-G4 Gate 검증 통합",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §8"
     },
     {
       "id": "CLIB-010",
@@ -570,7 +725,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-010",
+      "feature_name": "Storage Structure 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §9"
     },
     {
       "id": "CLIB-011",
@@ -580,7 +738,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-011",
+      "feature_name": "Conflict Resolution Engine 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §10"
     },
     {
       "id": "CLIB-012",
@@ -590,7 +751,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-012",
+      "feature_name": "Error Handling / Retry 시스템",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §11"
     },
     {
       "id": "CLIB-013",
@@ -600,7 +764,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "CLIB-013",
+      "feature_name": "Self-Evolution System (S1-S5) 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §12"
     },
     {
       "id": "CLIB-014",
@@ -611,7 +778,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 로드맵 문서, 직접 구현 항목 아님",
       "category": "CLIB",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "CLIB-014",
+      "feature_name": "V0-V3 로드맵 관리",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §13"
     },
     {
       "id": "CLIB-015",
@@ -621,7 +791,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-015",
+      "feature_name": "API Endpoints 구현",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §14"
     },
     {
       "id": "CLIB-016",
@@ -631,7 +804,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-016",
+      "feature_name": "Pydantic v2 스키마 정의 (CLIB)",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §15"
     },
     {
       "id": "CLIB-017",
@@ -641,7 +817,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "CLIB-017",
+      "feature_name": "LOCK 결정사항 적용",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §16"
     },
     {
       "id": "CLIB-018",
@@ -651,7 +830,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-018",
+      "feature_name": "보안/비용 제약 적용",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §17"
     },
     {
       "id": "CLIB-019",
@@ -661,7 +843,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-019",
+      "feature_name": "VAMOS 4-Layer 매핑 통합",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §18"
     },
     {
       "id": "CLIB-020",
@@ -672,7 +857,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 평가 문서, 직접 구현 항목 아님",
       "category": "CLIB",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "CLIB-020",
+      "feature_name": "구현 타당성 평가 반영",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §19"
     },
     {
       "id": "CLIB-021",
@@ -682,7 +870,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-021",
+      "feature_name": "사이트 자동 분류기",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §3.3"
     },
     {
       "id": "CLIB-022",
@@ -692,7 +883,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-022",
+      "feature_name": "크롤링 모니터링 대시보드",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §11"
     },
     {
       "id": "CLIB-023",
@@ -702,7 +896,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-023",
+      "feature_name": "템플릿 버전 관리",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §4.2"
     },
     {
       "id": "CLIB-024",
@@ -712,7 +909,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "CLIB-024",
+      "feature_name": "Seed URL 관리 시스템",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §3.1"
     },
     {
       "id": "CLIB-025",
@@ -722,9 +922,11 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "CLIB",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "CLIB-025",
+      "feature_name": "수집 결과 검증 파이프라인",
+      "source_section": "VAMOS_CLOUD_LIBRARY_SPEC.md §3.4"
     },
-
     {
       "id": "TEAM-001",
       "title": "Agent Teams 시스템 코어 구현",
@@ -733,7 +935,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-001",
+      "feature_name": "Agent Teams 시스템 코어 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §1"
     },
     {
       "id": "TEAM-002",
@@ -743,7 +948,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-002",
+      "feature_name": "Lead Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §2.1"
     },
     {
       "id": "TEAM-003",
@@ -753,7 +961,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-003",
+      "feature_name": "Sub-Agent 프레임워크 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §2.2"
     },
     {
       "id": "TEAM-004",
@@ -763,7 +974,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-004",
+      "feature_name": "에이전트 간 통신 프로토콜",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §2.3"
     },
     {
       "id": "TEAM-005",
@@ -773,7 +987,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-005",
+      "feature_name": "Agent Lifecycle 관리",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §2.4"
     },
     {
       "id": "TEAM-006",
@@ -783,7 +1000,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-006",
+      "feature_name": "Delegation System (위임 시스템) 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §3"
     },
     {
       "id": "TEAM-007",
@@ -793,7 +1013,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-007",
+      "feature_name": "Task Decomposition 엔진",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §3.2"
     },
     {
       "id": "TEAM-008",
@@ -803,7 +1026,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-008",
+      "feature_name": "Agent Matching Algorithm",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §3.3"
     },
     {
       "id": "TEAM-009",
@@ -813,7 +1039,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-009",
+      "feature_name": "Research Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.1"
     },
     {
       "id": "TEAM-010",
@@ -823,7 +1052,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-010",
+      "feature_name": "Coding Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.2"
     },
     {
       "id": "TEAM-011",
@@ -833,7 +1065,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-011",
+      "feature_name": "Quant Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.3"
     },
     {
       "id": "TEAM-012",
@@ -843,7 +1078,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-012",
+      "feature_name": "Content Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.4"
     },
     {
       "id": "TEAM-013",
@@ -853,7 +1091,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-013",
+      "feature_name": "Trading Analysis Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.5"
     },
     {
       "id": "TEAM-014",
@@ -863,7 +1104,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-014",
+      "feature_name": "SDAR Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.6"
     },
     {
       "id": "TEAM-015",
@@ -873,7 +1117,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-015",
+      "feature_name": "Critic Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.7"
     },
     {
       "id": "TEAM-016",
@@ -883,7 +1130,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-016",
+      "feature_name": "Productivity Agent 구현",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §4.8"
     },
     {
       "id": "TEAM-017",
@@ -893,7 +1143,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-017",
+      "feature_name": "Sequential Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.1"
     },
     {
       "id": "TEAM-018",
@@ -903,7 +1156,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-018",
+      "feature_name": "Parallel Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.2"
     },
     {
       "id": "TEAM-019",
@@ -913,7 +1169,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-019",
+      "feature_name": "Debate Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.3"
     },
     {
       "id": "TEAM-020",
@@ -923,7 +1182,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-020",
+      "feature_name": "Supervisor Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.4"
     },
     {
       "id": "TEAM-021",
@@ -933,7 +1195,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-021",
+      "feature_name": "Handoff Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.5"
     },
     {
       "id": "TEAM-022",
@@ -943,7 +1208,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-022",
+      "feature_name": "Hybrid Collaboration Pattern",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §5.6"
     },
     {
       "id": "TEAM-023",
@@ -953,7 +1221,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-023",
+      "feature_name": "LangGraph 통합 (에이전트 워크플로우)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.1"
     },
     {
       "id": "TEAM-024",
@@ -963,7 +1234,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-024",
+      "feature_name": "5 Gates 에이전트 통합",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.2"
     },
     {
       "id": "TEAM-025",
@@ -973,7 +1247,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-025",
+      "feature_name": "9-State Machine 에이전트 연동",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.3"
     },
     {
       "id": "TEAM-026",
@@ -983,7 +1260,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-026",
+      "feature_name": "RBAC 에이전트 보안",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.5"
     },
     {
       "id": "TEAM-027",
@@ -993,7 +1273,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-027",
+      "feature_name": "TeamCostManager 비용 관리",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.6"
     },
     {
       "id": "TEAM-028",
@@ -1003,7 +1286,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-028",
+      "feature_name": "에이전트별 모델 비용 차등",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §6.6.2"
     },
     {
       "id": "TEAM-029",
@@ -1013,7 +1299,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-029",
+      "feature_name": "Pydantic v2 스키마 (TEAM)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7"
     },
     {
       "id": "TEAM-030",
@@ -1023,7 +1312,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-030",
+      "feature_name": "AgentTeamConfig 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-031",
@@ -1033,7 +1325,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-031",
+      "feature_name": "CostBudget 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-032",
@@ -1043,7 +1338,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-032",
+      "feature_name": "AgentTask 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-033",
@@ -1053,7 +1351,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-033",
+      "feature_name": "AgentResult 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-034",
@@ -1063,7 +1364,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-034",
+      "feature_name": "DelegationPlan 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-035",
@@ -1073,7 +1377,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-035",
+      "feature_name": "AgentAssignment 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-036",
@@ -1083,7 +1390,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-036",
+      "feature_name": "TeamResult 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-037",
@@ -1093,7 +1403,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-037",
+      "feature_name": "MatchScore 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-038",
@@ -1103,7 +1416,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-038",
+      "feature_name": "AgentPermissionPolicy 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-039",
@@ -1113,7 +1429,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-039",
+      "feature_name": "AgentType/AgentState/ModelTier Enum",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-040",
@@ -1123,7 +1442,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-040",
+      "feature_name": "TaskStatus/DelegationStatus/CollaborationPattern Enum",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §7.1"
     },
     {
       "id": "TEAM-041",
@@ -1133,7 +1455,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-041",
+      "feature_name": "Tauri IPC 커맨드 구현 (10개)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §8.1"
     },
     {
       "id": "TEAM-042",
@@ -1143,7 +1468,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-042",
+      "feature_name": "JSON-RPC 메서드 구현 (12개)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §8.2"
     },
     {
       "id": "TEAM-043",
@@ -1153,7 +1481,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-043",
+      "feature_name": "V1 팀 구성 (Lead+2 Sub)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.1"
     },
     {
       "id": "TEAM-044",
@@ -1163,7 +1494,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-044",
+      "feature_name": "V2 팀 확장 (10 에이전트, Debate)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.2"
     },
     {
       "id": "TEAM-045",
@@ -1173,7 +1507,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-045",
+      "feature_name": "V3 자율 에이전트 팀 (50+ 동적)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.3"
     },
     {
       "id": "TEAM-046",
@@ -1183,7 +1520,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-046",
+      "feature_name": "LOCK 결정사항 적용 (17개)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10"
     },
     {
       "id": "TEAM-047",
@@ -1193,7 +1533,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-047",
+      "feature_name": "Delegation Attack 방어",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.1.1"
     },
     {
       "id": "TEAM-048",
@@ -1203,7 +1546,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-048",
+      "feature_name": "Prompt Injection 방어 (4계층)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.1.2"
     },
     {
       "id": "TEAM-049",
@@ -1213,7 +1559,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-049",
+      "feature_name": "에이전트 격리 정책 (AgentIsolationPolicy)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.1.3"
     },
     {
       "id": "TEAM-050",
@@ -1223,7 +1572,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-050",
+      "feature_name": "버전별 비용 제약 적용",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.2"
     },
     {
       "id": "TEAM-051",
@@ -1233,7 +1585,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-051",
+      "feature_name": "TeamCostGuard 비용 제어",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.2.2"
     },
     {
       "id": "TEAM-052",
@@ -1243,7 +1598,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-052",
+      "feature_name": "TeamCostReport 비용 리포트 스키마",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §11.2.3"
     },
     {
       "id": "TEAM-053",
@@ -1253,7 +1611,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-053",
+      "feature_name": "MessageBus 구현 (V1 In-Memory, V2 Redis)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §2.3, §10.2"
     },
     {
       "id": "TEAM-054",
@@ -1263,7 +1624,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-054",
+      "feature_name": "GroupChat 발화 순서 (V2)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.2"
     },
     {
       "id": "TEAM-055",
@@ -1273,7 +1637,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-055",
+      "feature_name": "Agent Marketplace (V2)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10.2"
     },
     {
       "id": "TEAM-056",
@@ -1283,7 +1650,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-056",
+      "feature_name": "Federated Agent 연합 (V3)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.3, §10.2"
     },
     {
       "id": "TEAM-057",
@@ -1293,7 +1663,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-057",
+      "feature_name": "A2A Protocol 구현 (V3)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.3"
     },
     {
       "id": "TEAM-058",
@@ -1303,7 +1676,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-058",
+      "feature_name": "Multi-Agent Mesh (V3)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.3"
     },
     {
       "id": "TEAM-059",
@@ -1313,7 +1689,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-059",
+      "feature_name": "HMAC 무결성 검증",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10.1"
     },
     {
       "id": "TEAM-060",
@@ -1323,7 +1702,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-060",
+      "feature_name": "TEE 루프 제한 적용",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10.1"
     },
     {
       "id": "TEAM-061",
@@ -1333,7 +1715,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "TEAM-061",
+      "feature_name": "대화 턴 상한 적용",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10.1"
     },
     {
       "id": "TEAM-062",
@@ -1343,7 +1728,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-062",
+      "feature_name": "에이전트 상태 UI 패널 (V2)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.2"
     },
     {
       "id": "TEAM-063",
@@ -1353,7 +1741,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "TEAM-063",
+      "feature_name": "노코드 빌더 듀얼 구조 (n8n + Flowise)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §10.1"
     },
     {
       "id": "TEAM-064",
@@ -1363,7 +1754,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-064",
+      "feature_name": "Agent SDK 데코레이터 (V2)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.2"
     },
     {
       "id": "TEAM-065",
@@ -1373,9 +1767,11 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "TEAM",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "TEAM-065",
+      "feature_name": "Crew 역할 기반 팀 (V2)",
+      "source_section": "VAMOS_AGENT_TEAMS_SPEC.md §9.2"
     },
-
     {
       "id": "SDAR-001",
       "title": "5-Layer SDAR 파이프라인 구현",
@@ -1385,7 +1781,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-001",
+      "feature_name": "5-Layer SDAR 파이프라인 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §1-2"
     },
     {
       "id": "SDAR-002",
@@ -1396,7 +1795,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "medium",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-002",
+      "feature_name": "L1 Detection 계층 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.1"
     },
     {
       "id": "SDAR-003",
@@ -1407,7 +1809,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-003",
+      "feature_name": "L2 Diagnosis 계층 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.2"
     },
     {
       "id": "SDAR-004",
@@ -1418,7 +1823,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-004",
+      "feature_name": "L3 Prescription 계층 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.3"
     },
     {
       "id": "SDAR-005",
@@ -1429,7 +1837,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-005",
+      "feature_name": "L4 Repair 계층 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.4"
     },
     {
       "id": "SDAR-006",
@@ -1440,7 +1851,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "medium",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-006",
+      "feature_name": "L5 Verification 계층 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.5"
     },
     {
       "id": "SDAR-007",
@@ -1451,7 +1865,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-007",
+      "feature_name": "Graduated Autonomy Model (AR-L0~L4)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3"
     },
     {
       "id": "SDAR-008",
@@ -1461,7 +1878,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-008",
+      "feature_name": "AR-L0 MANUAL 수준 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.1"
     },
     {
       "id": "SDAR-009",
@@ -1471,7 +1891,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-009",
+      "feature_name": "AR-L1 NOTIFY 수준 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.2"
     },
     {
       "id": "SDAR-010",
@@ -1481,7 +1904,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-010",
+      "feature_name": "AR-L2 AUTO_SAFE 수준 구현 (기본값)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.3"
     },
     {
       "id": "SDAR-011",
@@ -1491,7 +1917,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-011",
+      "feature_name": "AR-L3 AUTO_MODERATE 수준 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.4"
     },
     {
       "id": "SDAR-012",
@@ -1501,7 +1930,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-012",
+      "feature_name": "AR-L4 AUTO_AGGRESSIVE 수준 구현",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.5"
     },
     {
       "id": "SDAR-013",
@@ -1511,7 +1943,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-013",
+      "feature_name": "RBAC AR-Level 제한",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §3.6"
     },
     {
       "id": "SDAR-014",
@@ -1522,7 +1957,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-014",
+      "feature_name": "오류 분류 체계 (5 카테고리, 42 에러코드)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4"
     },
     {
       "id": "SDAR-015",
@@ -1532,7 +1970,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-015",
+      "feature_name": "A-Infrastructure 오류 처리",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4.1"
     },
     {
       "id": "SDAR-016",
@@ -1542,7 +1983,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-016",
+      "feature_name": "B-Model 오류 처리",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4.2"
     },
     {
       "id": "SDAR-017",
@@ -1552,7 +1996,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-017",
+      "feature_name": "C-Logic 오류 처리",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4.3"
     },
     {
       "id": "SDAR-018",
@@ -1562,7 +2009,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-018",
+      "feature_name": "D-Code 오류 처리",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4.4"
     },
     {
       "id": "SDAR-019",
@@ -1572,7 +2022,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-019",
+      "feature_name": "E-Security 오류 처리",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §4.5"
     },
     {
       "id": "SDAR-020",
@@ -1583,7 +2036,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-020",
+      "feature_name": "14개 Repair Action 카탈로그",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §5.1"
     },
     {
       "id": "SDAR-021",
@@ -1593,7 +2049,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-021",
+      "feature_name": "10개 NEVER_AUTO 행동 정의",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §5.2"
     },
     {
       "id": "SDAR-022",
@@ -1603,7 +2062,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-022",
+      "feature_name": "5 Gates SDAR 통합",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §6.1"
     },
     {
       "id": "SDAR-023",
@@ -1613,7 +2075,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-023",
+      "feature_name": "S-8 State Machine 연동",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §6.2"
     },
     {
       "id": "SDAR-024",
@@ -1623,7 +2088,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-024",
+      "feature_name": "Circuit Breaker SDAR 통합",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §6.3"
     },
     {
       "id": "SDAR-025",
@@ -1633,7 +2101,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-025",
+      "feature_name": "LogEvent SDAR 로깅",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §6.4"
     },
     {
       "id": "SDAR-026",
@@ -1643,7 +2114,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-026",
+      "feature_name": "SDAR 프로젝트 구조 정의",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §6.5"
     },
     {
       "id": "SDAR-027",
@@ -1654,7 +2128,10 @@
       "extractable": true,
       "category": "SDAR",
       "complexity": "high",
-      "phase4_note": "SDAR 범위 과도(§6.9)"
+      "phase4_note": "SDAR 범위 과도(§6.9)",
+      "feature_id": "SDAR-027",
+      "feature_name": "7-State SDAR 상태 머신 (S0-S6)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §7"
     },
     {
       "id": "SDAR-028",
@@ -1664,7 +2141,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-028",
+      "feature_name": "SDARDiagnosis 스키마",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §8.1"
     },
     {
       "id": "SDAR-029",
@@ -1674,7 +2154,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-029",
+      "feature_name": "SDARRepairPlan 스키마",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §8.2"
     },
     {
       "id": "SDAR-030",
@@ -1684,7 +2167,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-030",
+      "feature_name": "SDARRepairResult 스키마",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §8.3"
     },
     {
       "id": "SDAR-031",
@@ -1694,7 +2180,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-031",
+      "feature_name": "SDARVerificationResult 스키마",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §8.4"
     },
     {
       "id": "SDAR-032",
@@ -1704,7 +2193,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-032",
+      "feature_name": "SDARGovernanceReport 스키마",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §8.5"
     },
     {
       "id": "SDAR-033",
@@ -1714,7 +2206,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-033",
+      "feature_name": "SDAR LOCK 결정사항 적용",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §9"
     },
     {
       "id": "SDAR-034",
@@ -1724,7 +2219,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-034",
+      "feature_name": "SDAR V1 로드맵 구현 (AR-L2)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §10.1"
     },
     {
       "id": "SDAR-035",
@@ -1734,7 +2232,10 @@
       "version_scope": "V2",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-035",
+      "feature_name": "SDAR V2 확장 (AR-L3)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §10.2"
     },
     {
       "id": "SDAR-036",
@@ -1744,7 +2245,10 @@
       "version_scope": "V3",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "high"
+      "complexity": "high",
+      "feature_id": "SDAR-036",
+      "feature_name": "SDAR V3 완전 자율 (AR-L4)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §10.3"
     },
     {
       "id": "SDAR-037",
@@ -1754,7 +2258,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-037",
+      "feature_name": "시간당 자동 수리 횟수 제한 (3회)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §9"
     },
     {
       "id": "SDAR-038",
@@ -1764,7 +2271,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-038",
+      "feature_name": "수리 전 스냅샷 자동 생성",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §9"
     },
     {
       "id": "SDAR-039",
@@ -1774,7 +2284,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "SDAR-039",
+      "feature_name": "수리 알림 시스템",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §9"
     },
     {
       "id": "SDAR-040",
@@ -1784,7 +2297,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-040",
+      "feature_name": "Emergency Kill Switch",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §9"
     },
     {
       "id": "SDAR-041",
@@ -1794,7 +2310,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-041",
+      "feature_name": "롤백 메커니즘",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.5, §9"
     },
     {
       "id": "SDAR-042",
@@ -1804,7 +2323,10 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-042",
+      "feature_name": "30초 주기 헬스체크",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §2.1"
     },
     {
       "id": "SDAR-043",
@@ -1814,9 +2336,11 @@
       "version_scope": "V1",
       "extractable": true,
       "category": "SDAR",
-      "complexity": "medium"
+      "complexity": "medium",
+      "feature_id": "SDAR-043",
+      "feature_name": "불변 구역 보호 (7 immutable zones)",
+      "source_section": "VAMOS_SDAR_DESIGN_SPECIFICATION.md §5.2, §9"
     },
-
     {
       "id": "BGNR-001",
       "title": "VAMOS 시스템 개요 (4-Layer Architecture)",
@@ -1826,7 +2350,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 초보자 가이드 개요, 구현은 별도 스펙 문서에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-001",
+      "feature_name": "VAMOS 시스템 개요 (4-Layer Architecture)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §1-2장"
     },
     {
       "id": "BGNR-002",
@@ -1837,7 +2364,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 MASTER_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-002",
+      "feature_name": "9-State 처리 파이프라인 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §3장"
     },
     {
       "id": "BGNR-003",
@@ -1848,7 +2378,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 ORANGE_CORE_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-003",
+      "feature_name": "ORANGE CORE 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §4장"
     },
     {
       "id": "BGNR-004",
@@ -1859,7 +2392,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 BLUE_NODES_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-004",
+      "feature_name": "BLUE NODES 가이드 (P0/P1/P2, MCP)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §5장"
     },
     {
       "id": "BGNR-005",
@@ -1870,7 +2406,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 INFRA_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-005",
+      "feature_name": "INFRA CORE 가이드 (Model Routing, Prompt Cache, Rate Limit)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §6장"
     },
     {
       "id": "BGNR-006",
@@ -1881,7 +2420,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 STORAGE_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-006",
+      "feature_name": "Storage/Memory 가이드 (4-Tier L0-L3, Vector DB, RAG)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §7장"
     },
     {
       "id": "BGNR-007",
@@ -1892,7 +2434,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 SAFETY_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-007",
+      "feature_name": "Safety/Cost/Approval 가이드 (3-Layer Guardrails, 7 Immutable Zones)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §8장"
     },
     {
       "id": "BGNR-008",
@@ -1903,7 +2448,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 UI_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-008",
+      "feature_name": "UI/UX 가이드 (Hologram/Builder Views)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §9장"
     },
     {
       "id": "BGNR-009",
@@ -1914,7 +2462,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-009",
+      "feature_name": "Self-Evolution 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §10장"
     },
     {
       "id": "BGNR-010",
@@ -1925,7 +2476,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 규칙 정리, 구현은 별도 스펙에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-010",
+      "feature_name": "Self-evo LOCK 규칙",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §14장"
     },
     {
       "id": "BGNR-011",
@@ -1936,7 +2490,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-011",
+      "feature_name": "Tech Stack 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §11장"
     },
     {
       "id": "BGNR-012",
@@ -1947,7 +2504,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 로드맵 개요",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-012",
+      "feature_name": "Version Roadmap 가이드 (V0-V3)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §12장"
     },
     {
       "id": "BGNR-013",
@@ -1958,7 +2518,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 AINV 스펙에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-013",
+      "feature_name": "AI INVESTING 초보자 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §15장"
     },
     {
       "id": "BGNR-014",
@@ -1969,7 +2532,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 SDAR 스펙에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-014",
+      "feature_name": "SDAR 초보자 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §16장"
     },
     {
       "id": "BGNR-015",
@@ -1980,7 +2546,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 TEAM 스펙에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-015",
+      "feature_name": "Agent Teams 초보자 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §17장"
     },
     {
       "id": "BGNR-016",
@@ -1991,7 +2560,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 참조 문서, 구현 항목 아님",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-016",
+      "feature_name": "용어 사전 (가나다순, 50+항목)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §18장"
     },
     {
       "id": "BGNR-017",
@@ -2002,7 +2574,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 요약 다이어그램, 구현 항목 아님",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-017",
+      "feature_name": "전체 흐름 한눈에 보기 (최종 요약)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §19장"
     },
     {
       "id": "BGNR-018",
@@ -2013,7 +2588,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 SAFETY_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-018",
+      "feature_name": "비용 상한 가이드 (V1 ₩40,000/V2 ₩93,000/V3 ₩266,000)",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §8장"
     },
     {
       "id": "BGNR-019",
@@ -2024,7 +2602,10 @@
       "extractable": false,
       "extractable_reason": "TITLE_ONLY: 개념 설명, 구현은 STORAGE_SPEC에서 추출",
       "category": "BGNR",
-      "complexity": "low"
+      "complexity": "low",
+      "feature_id": "BGNR-019",
+      "feature_name": "Semantic Cache 가이드",
+      "source_section": "VAMOS_BEGINNER_GUIDE.md §7장"
     }
   ],
   "statistics": {
@@ -2039,11 +2620,26 @@
       "BGNR": 19
     },
     "extractable_by_category": {
-      "AINV": {"true": 41, "false": 2},
-      "CLIB": {"true": 22, "false": 3},
-      "TEAM": {"true": 65, "false": 0},
-      "SDAR": {"true": 43, "false": 0},
-      "BGNR": {"true": 0, "false": 19}
+      "AINV": {
+        "true": 41,
+        "false": 2
+      },
+      "CLIB": {
+        "true": 22,
+        "false": 3
+      },
+      "TEAM": {
+        "true": 65,
+        "false": 0
+      },
+      "SDAR": {
+        "true": 43,
+        "false": 0
+      },
+      "BGNR": {
+        "true": 0,
+        "false": 19
+      }
     },
     "by_version": {
       "V1": 149,
@@ -2051,9 +2647,18 @@
       "V3": 9
     },
     "extractable_by_version": {
-      "V1": {"true": 127, "false": 22},
-      "V2": {"true": 36, "false": 1},
-      "V3": {"true": 9, "false": 0}
+      "V1": {
+        "true": 127,
+        "false": 22
+      },
+      "V2": {
+        "true": 36,
+        "false": 1
+      },
+      "V3": {
+        "true": 9,
+        "false": 0
+      }
     },
     "inferred_count": 0,
     "V_UNKNOWN_count": 0,

@@ -117,3 +117,38 @@ Layer B 결과: `v13_results/phase0/extraction/validation/{파일명}_sv_result.
 - `$ARGUMENTS`가 파일 경로면 → 해당 파일만 검증
 - `$ARGUMENTS`가 `all`이면 → extraction/ 디렉토리의 모든 v13_EA*.json 검증
 - `$ARGUMENTS`가 비어있으면 → 가장 최근 생성된 EA JSON 파일 검증
+
+---
+
+## [SOT 2 확장] SOT 2 구조화 추출물 검증 (v2 추가)
+
+> 기존 EA JSON DV-1~DV-9 검증을 유지한 채, SOT 2 추출물(SC1~SC8)에 대한 검증 규칙을 추가합니다.
+
+### SOT 2 전용 결정론적 검증 (SDV-1~SDV-7)
+
+| 규칙 | 검증 내용 | 판정 |
+|------|---------|------|
+| SDV-1 | SC JSON 필수 필드 존재 (source_file, domain, items) | PASS/FAIL |
+| SDV-2 | SC 카테고리 합계 = 전체 항목 수 | PASS/FAIL |
+| SDV-3 | source_line 범위 유효 (0 < line ≤ 파일 총 줄수) | PASS/FAIL |
+| SDV-4 | LOCK 값이 Part2 정본과 일치 (sot-check 연동) | PASS/WARN/FAIL |
+| SDV-5 | 스키마 필드 타입 일치 (Pydantic 모델 검증) | PASS/FAIL |
+| SDV-6 | 도메인 간 중복 정의 없음 (canonical owner 확인) | PASS/WARN |
+| SDV-7 | part2_reference 라인이 실제 Part2에 존재 | PASS/SHIFTED/FAIL |
+
+### 추가 명령어
+
+- `/validate sot2 {파일}` → SOT 2 추출물 SDV-1~SDV-7 검증
+- `/validate sot2-all` → SOT 2 전체 추출물 검증
+- `/validate sot2-locks` → LOCK 값 전수 검증 (SDV-4 집중)
+
+### SOT 2 AI 의미 검증 (SSV-1~SSV-3, 기존 SV와 별도)
+
+| 규칙 | 검증 내용 |
+|------|---------|
+| SSV-1 | 상세명세 내용이 SOT 원본의 의도와 일치하는가 |
+| SSV-2 | 방식 C 요약이 Part2 정본의 핵심을 정확히 포착하는가 |
+| SSV-3 | 계획서의 Phase 구분이 상세명세 항목 수/복잡도와 적절한가 |
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_extractions/validation/{도메인}_validation.json`

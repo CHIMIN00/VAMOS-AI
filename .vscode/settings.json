@@ -42,6 +42,16 @@
     "**/node_modules": true,
     "**/target": true,
     "**/dist": true,
-    "**/.venv": true
-  }
+    "**/.venv": true,
+    ".claude/hooks/venv_firewall/**": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    ".claude/hooks/venv_firewall/**": true
+  },
+  "python.analysis.indexing": false,
+  "python.analysis.diagnosticMode": "openFilesOnly"
 }

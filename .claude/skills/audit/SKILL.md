@@ -128,3 +128,75 @@ python D:/VAMOS/.claude/hooks/cm_validator.py <CM_JSON_PATH>
 **저장**: `v13_results/phase0/extraction/audit/{파일명}_audit.json`
 
 **판정**: CRITICAL ≥ 1 → CONTAMINATED, WARNING > 3 → SUSPICIOUS, 나머지 → CLEAN
+
+---
+
+## [SOT 2 확장] 34개 도메인 계획서 감사
+
+> SOT 2 구조화 종합계획서 산출물을 `/audit` 대상으로 받을 경우 아래 추가 감사를 수행한다.
+> 기존 AD-1~AD-4 프로토콜은 그대로 적용하며, 아래는 **추가** 검증 항목이다.
+
+### SOT2-AD1: 14섹션 구조 완전성
+
+1. 대상 계획서가 14섹션(§1~§14 + 부록)을 모두 포함하는지 확인
+2. `SOT2_20_DOMAIN_PLAN_GUIDE.md` §5 매트릭스에서 해당 도메인의 "필수" 표기 섹션이 실제로 존재하는지 확인
+3. 누락 섹션 → `STRUCTURE_INCOMPLETE` 판정
+
+### SOT2-AD2: LOCK 값 보호 검증
+
+1. 계획서 내 수치/파라미터가 SOT/DESIGN 원본의 LOCK 값을 **재정의**하고 있지 않은지 확인
+2. 검증 대상 LOCK 원본:
+   - Tier 1~2: `D2.0-01/02/03` (모듈 인터페이스, 엔진 스펙)
+   - Tier 3: `STEP7-{섹션}` (도메인별 정량 기준)
+   - Tier 4: `D2.0-04`, `D2.1-D2~4`, `PHASE_B6` (인프라 설정값)
+   - Tier 5: `STEP7-G`, `PHASE_B5` (벤치마크 임계값)
+3. LOCK 재정의 발견 → `LOCK_VIOLATION` (CRITICAL)
+
+### SOT2-AD3: 방식 C 요약 정합성
+
+1. Part2 FULL/PARTIAL 영역에 대한 방식 C 요약이 계획서에 포함된 경우:
+   - 요약이 Part2 원본의 핵심 내용을 **왜곡 없이** 반영하는지 확인
+   - 원본 Part2 해당 섹션을 Read tool로 직접 읽어 비교
+2. 요약에 원본에 없는 내용이 추가되었으면 → `METHOD_C_HALLUCINATION`
+3. 원본의 핵심 항목(50% 이상)이 누락되었으면 → `METHOD_C_INCOMPLETE`
+
+### SOT2-AD4: Tier·도메인 규칙 준수
+
+1. 거버넌스 규칙이 `R-{도메인#}-{seq}` 형식을 준수하는지 확인 (접두사 충돌 방지)
+2. 공통 규칙 R1~R8이 누락 없이 포함되는지 확인
+3. Tier별 필수 규칙 확인:
+   - Tier 1: 모듈 인터페이스 계약 규칙 존재 여부
+   - Tier 2: 실행 엔진 규칙 존재 여부
+   - Tier 3: 도메인 특화 규칙 존재 여부
+   - Tier 4: 인프라 운영 규칙 존재 여부
+   - Tier 5: 횡단 품질 규칙 존재 여부
+4. 위반 시 → `GOVERNANCE_VIOLATION` (WARNING)
+
+### SOT2-AD5: 교차 의존성 검증
+
+1. 계획서의 §5(선행작업) 또는 §7(Phase 실행)에서 참조하는 타 도메인이 실제로 존재하는지 확인
+2. `SOT2_20_DOMAIN_PLAN_GUIDE.md` 부록 C 교차 의존성 맵과 대조
+3. 맵에 없는 의존성이 추가되었으면 → `UNDECLARED_DEPENDENCY` (WARNING)
+4. 맵에 있는 의존성이 계획서에서 무시되었으면 → `MISSING_DEPENDENCY` (WARNING)
+
+### SOT 2 감사 출력 확장
+
+기존 출력 JSON에 아래 필드를 추가:
+
+```json
+{
+  "sot2_audit": {
+    "structure_complete": true,
+    "sections_checked": 14,
+    "sections_missing": [],
+    "lock_violations": 0,
+    "lock_violations_detail": [],
+    "method_c_issues": 0,
+    "governance_violations": 0,
+    "dependency_issues": 0,
+    "sot2_verdict": "CLEAN|STRUCTURE_ISSUE|LOCK_VIOLATION|MIXED"
+  }
+}
+```
+
+**SOT 2 판정 기준**: `LOCK_VIOLATION` ≥ 1 → CONTAMINATED, `STRUCTURE_INCOMPLETE` → SUSPICIOUS, 나머지 WARNING만 → CLEAN

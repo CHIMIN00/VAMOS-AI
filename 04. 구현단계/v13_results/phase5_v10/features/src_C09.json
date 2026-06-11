@@ -17,7 +17,20 @@
       "coverage_target": "95%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D2-001", "AC-D2-002", "AC-D2-003", "AC-D3-002", "AC-D4-002", "AC-D5-002", "AC-D6-001", "AC-D7-001"]
+      "related_ac": [
+        "AC-D2-001",
+        "AC-D2-002",
+        "AC-D2-003",
+        "AC-D3-002",
+        "AC-D4-002",
+        "AC-D5-002",
+        "AC-D6-001",
+        "AC-D7-001"
+      ],
+      "feature_id": "PB5-001",
+      "feature_name": "Python Unit Tests - Pydantic Schema Validation (D2.1)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-002",
@@ -30,7 +43,15 @@
       "coverage_target": "85%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D2-001", "AC-D2-002", "AC-D2-003"]
+      "related_ac": [
+        "AC-D2-001",
+        "AC-D2-002",
+        "AC-D2-003"
+      ],
+      "feature_id": "PB5-002",
+      "feature_name": "Python Unit Tests - Orange Core (Decision Kernel, Intent, Evidence)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-003",
@@ -43,7 +64,18 @@
       "coverage_target": "80%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D3-001", "AC-D3-004", "AC-D3-005", "AC-D3-006", "AC-D3-007", "AC-D3-008"]
+      "related_ac": [
+        "AC-D3-001",
+        "AC-D3-004",
+        "AC-D3-005",
+        "AC-D3-006",
+        "AC-D3-007",
+        "AC-D3-008"
+      ],
+      "feature_id": "PB5-003",
+      "feature_name": "Python Unit Tests - Blue Nodes (NodeRegistry, Executor, MCP Bridge)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-004",
@@ -56,7 +88,16 @@
       "coverage_target": "90%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D7-002", "AC-D7-005", "AC-D7-006", "AC-D7-007"]
+      "related_ac": [
+        "AC-D7-002",
+        "AC-D7-005",
+        "AC-D7-006",
+        "AC-D7-007"
+      ],
+      "feature_id": "PB5-004",
+      "feature_name": "Python Unit Tests - Safety (PolicyCheck, Approval, CostBudget, Guardrails, RBAC, Autonomy)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-005",
@@ -69,7 +110,18 @@
       "coverage_target": "80%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D6-002", "AC-D6-003", "AC-D6-004", "AC-D6-008", "AC-D6-009", "AC-D6-010"]
+      "related_ac": [
+        "AC-D6-002",
+        "AC-D6-003",
+        "AC-D6-004",
+        "AC-D6-008",
+        "AC-D6-009",
+        "AC-D6-010"
+      ],
+      "feature_id": "PB5-005",
+      "feature_name": "Python Unit Tests - Storage (Memory, VectorStore, SemanticCache, GraphRAG)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-006",
@@ -82,7 +134,19 @@
       "coverage_target": "80%",
       "test_layer": "unit",
       "test_framework": "pytest",
-      "related_ac": ["AC-D5-003", "AC-D5-004", "AC-D5-006", "AC-D5-008", "AC-D5-009", "AC-D5-010", "AC-D5-011"]
+      "related_ac": [
+        "AC-D5-003",
+        "AC-D5-004",
+        "AC-D5-006",
+        "AC-D5-008",
+        "AC-D5-009",
+        "AC-D5-010",
+        "AC-D5-011"
+      ],
+      "feature_id": "PB5-006",
+      "feature_name": "Python Unit Tests - Agent (LangGraph StateGraph, Pipeline, CircuitBreaker, HITL)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-007",
@@ -94,7 +158,11 @@
       "priority": "P0",
       "coverage_target": "80%",
       "test_layer": "unit",
-      "test_framework": "cargo test"
+      "test_framework": "cargo test",
+      "feature_id": "PB5-007",
+      "feature_name": "Rust Unit Tests - IPC Command Handler & Subprocess Management",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-008",
@@ -107,7 +175,15 @@
       "coverage_target": "75%",
       "test_layer": "unit",
       "test_framework": "vitest",
-      "related_ac": ["AC-D8-003", "AC-D8-004", "AC-D8-005"]
+      "related_ac": [
+        "AC-D8-003",
+        "AC-D8-004",
+        "AC-D8-005"
+      ],
+      "feature_id": "PB5-008",
+      "feature_name": "React Unit Tests - Component Tests (ChatPanel, DecisionCard, CostDashboard, etc.)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-009",
@@ -119,7 +195,11 @@
       "priority": "P1",
       "coverage_target": "75%",
       "test_layer": "unit",
-      "test_framework": "vitest"
+      "test_framework": "vitest",
+      "feature_id": "PB5-009",
+      "feature_name": "React Unit Tests - Store/Hook Tests (useAgentStore, useCostStore, useIPC, useStreaming)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-010",
@@ -131,7 +211,11 @@
       "priority": "P0",
       "coverage_target": "60%",
       "test_layer": "integration",
-      "test_framework": "pytest"
+      "test_framework": "pytest",
+      "feature_id": "PB5-010",
+      "feature_name": "Integration Tests - Python <-> Rust IPC Bridge",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-011",
@@ -144,7 +228,18 @@
       "coverage_target": "60%",
       "test_layer": "integration",
       "test_framework": "pytest",
-      "related_ac": ["AC-D5-003", "AC-D5-006", "AC-D5-009", "AC-D5-010", "AC-D7-005", "AC-D3-006"]
+      "related_ac": [
+        "AC-D5-003",
+        "AC-D5-006",
+        "AC-D5-009",
+        "AC-D5-010",
+        "AC-D7-005",
+        "AC-D3-006"
+      ],
+      "feature_id": "PB5-011",
+      "feature_name": "Integration Tests - LangGraph Pipeline (Intake -> Deliver)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-012",
@@ -157,7 +252,17 @@
       "coverage_target": "60%",
       "test_layer": "integration",
       "test_framework": "pytest",
-      "related_ac": ["AC-D6-002", "AC-D6-003", "AC-D6-008", "AC-D6-009", "AC-D6-010"]
+      "related_ac": [
+        "AC-D6-002",
+        "AC-D6-003",
+        "AC-D6-008",
+        "AC-D6-009",
+        "AC-D6-010"
+      ],
+      "feature_id": "PB5-012",
+      "feature_name": "Integration Tests - Storage Stack (Memory + Vector + Cache)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-013",
@@ -170,7 +275,17 @@
       "coverage_target": "60%",
       "test_layer": "integration",
       "test_framework": "pytest",
-      "related_ac": ["AC-D7-002", "AC-D7-005", "AC-D7-006", "AC-D7-007", "AC-D4-006"]
+      "related_ac": [
+        "AC-D7-002",
+        "AC-D7-005",
+        "AC-D7-006",
+        "AC-D7-007",
+        "AC-D4-006"
+      ],
+      "feature_id": "PB5-013",
+      "feature_name": "Integration Tests - Safety Chain (PolicyCheck -> Approval -> CostBudget)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-014",
@@ -183,7 +298,14 @@
       "coverage_target": "100%",
       "test_layer": "e2e",
       "test_framework": "Playwright + Tauri WebDriver",
-      "related_ac": ["AC-D5-003", "AC-D8-003"]
+      "related_ac": [
+        "AC-D5-003",
+        "AC-D8-003"
+      ],
+      "feature_id": "PB5-014",
+      "feature_name": "E2E Tests - User Chat Flow",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-015",
@@ -196,7 +318,13 @@
       "coverage_target": "100%",
       "test_layer": "e2e",
       "test_framework": "Playwright + Tauri WebDriver",
-      "related_ac": ["AC-D8-005"]
+      "related_ac": [
+        "AC-D8-005"
+      ],
+      "feature_id": "PB5-015",
+      "feature_name": "E2E Tests - Cost Limit Downshift & Block",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-016",
@@ -209,7 +337,14 @@
       "coverage_target": "100%",
       "test_layer": "e2e",
       "test_framework": "Playwright + Tauri WebDriver",
-      "related_ac": ["AC-D5-011", "AC-D7-007"]
+      "related_ac": [
+        "AC-D5-011",
+        "AC-D7-007"
+      ],
+      "feature_id": "PB5-016",
+      "feature_name": "E2E Tests - HITL Approval Flow",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-017",
@@ -222,7 +357,14 @@
       "coverage_target": "100%",
       "test_layer": "e2e",
       "test_framework": "Playwright + Tauri WebDriver",
-      "related_ac": ["AC-D7-005", "AC-D3-008"]
+      "related_ac": [
+        "AC-D7-005",
+        "AC-D3-008"
+      ],
+      "feature_id": "PB5-017",
+      "feature_name": "E2E Tests - Guardrails Block, Error Recovery, MCP Bridge, Config Change",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-018",
@@ -233,7 +375,11 @@
       "version_scope": "V1",
       "priority": "P0",
       "coverage_target": "100%",
-      "test_layer": "all"
+      "test_layer": "all",
+      "feature_id": "PB5-018",
+      "feature_name": "AC Verification Mapping - D2~D8 Complete (50 ACs -> 79 Tests)",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-019",
@@ -244,7 +390,11 @@
       "version_scope": "V1",
       "priority": "P1",
       "test_layer": "infrastructure",
-      "test_framework": "pytest"
+      "test_framework": "pytest",
+      "feature_id": "PB5-019",
+      "feature_name": "Test Fixtures Strategy - pytest conftest.py Hierarchy",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB5-020",
@@ -255,7 +405,11 @@
       "version_scope": "V1",
       "priority": "P0",
       "coverage_target": "80%",
-      "test_layer": "all"
+      "test_layer": "all",
+      "feature_id": "PB5-020",
+      "feature_name": "Coverage Targets - Module-Level Minimum Coverage Enforcement",
+      "source_file": "PHASE_B5_TEST_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB6-001",
@@ -264,7 +418,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-001",
+      "feature_name": "CI Pipeline - Python Quality (ruff lint + format + mypy strict)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-002",
@@ -273,7 +431,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-002",
+      "feature_name": "CI Pipeline - Rust Quality (clippy + rustfmt + cargo build)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-003",
@@ -282,7 +444,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-003",
+      "feature_name": "CI Pipeline - React Quality (eslint + tsc --noEmit + prettier)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-004",
@@ -291,7 +457,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-004",
+      "feature_name": "CI Pipeline - Schema Validation (Pydantic v2 import + JSON Schema export)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-005",
@@ -300,7 +470,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-005",
+      "feature_name": "CI Pipeline - Python Unit/Integration Tests with Coverage",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-006",
@@ -309,7 +483,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-006",
+      "feature_name": "CI Pipeline - Rust Tests with Coverage (cargo-tarpaulin)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-007",
@@ -318,7 +496,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-007",
+      "feature_name": "CI Pipeline - React Tests with Coverage (vitest + v8)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-008",
@@ -327,7 +509,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-008",
+      "feature_name": "CI Pipeline - Coverage Report Aggregation (Python + Rust + React)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-009",
@@ -336,7 +522,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-009",
+      "feature_name": "Build Pipeline - Tauri Cross-Platform Build (Linux/Windows/macOS)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-010",
@@ -345,7 +535,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-010",
+      "feature_name": "Build Pipeline - Python Package Build (wheel + sdist + twine check)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-011",
@@ -354,7 +548,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-011",
+      "feature_name": "Build Pipeline - Docker Image Build (V2+ multi-service)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-012",
@@ -363,7 +561,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-012",
+      "feature_name": "Release Pipeline - Semantic Versioning + Conventional Commits",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-013",
@@ -372,7 +574,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-013",
+      "feature_name": "Release Pipeline - Changelog Auto-Generation (git-cliff)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-014",
@@ -381,7 +587,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-014",
+      "feature_name": "Release Pipeline - GitHub Release + Tauri Binary Upload",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-015",
@@ -390,7 +600,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-015",
+      "feature_name": "Release Pipeline - Docker Registry Push (V2+ GHCR)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-016",
@@ -399,7 +613,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-016",
+      "feature_name": "Deploy Pipeline - Docker Compose Deployment (V2)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-017",
@@ -408,7 +626,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V3",
-      "priority": "P2"
+      "priority": "P2",
+      "feature_id": "PB6-017",
+      "feature_name": "Deploy Pipeline - Kubernetes Deployment with Helm (V3)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-018",
@@ -417,7 +639,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-018",
+      "feature_name": "Security Pipeline - Dependency Vulnerability Scan (pip-audit, cargo-audit, npm audit)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-019",
@@ -426,7 +652,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-019",
+      "feature_name": "Security Pipeline - Docker Image Scan (Trivy)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-020",
@@ -435,7 +665,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-020",
+      "feature_name": "Security Pipeline - Secret Leak Detection (gitleaks + custom patterns)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-021",
@@ -444,7 +678,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB6-021",
+      "feature_name": "Security Pipeline - License Compliance Check (Python/NPM/Rust)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-022",
@@ -453,7 +691,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-022",
+      "feature_name": "CI Orchestration - Integrated CI Workflow (ci.yml)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-023",
@@ -462,7 +704,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V3",
-      "priority": "P2"
+      "priority": "P2",
+      "feature_id": "PB6-023",
+      "feature_name": "CI Pipeline - Nightly Full Test Suite (V3 stub)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-024",
@@ -471,7 +717,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-024",
+      "feature_name": "CI/CD - GitHub Secrets Configuration",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB6-025",
@@ -480,7 +730,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B6_CICD_PIPELINE",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB6-025",
+      "feature_name": "CI/CD - Branch Strategy (main/develop/feature/hotfix/release)",
+      "source_file": "PHASE_B6_CICD_PIPELINE",
+      "extractable": true
     },
     {
       "id": "PB7-001",
@@ -489,7 +743,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-001",
+      "feature_name": "Schema Version Management - VersionedSchema Base Class",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-002",
@@ -498,7 +756,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V1",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-002",
+      "feature_name": "Schema Change Management - Additive/Breaking/Deprecation Patterns",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-003",
@@ -507,7 +769,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-003",
+      "feature_name": "Alembic Migration Infrastructure (env.py, alembic.ini, versions/)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-004",
@@ -516,7 +782,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-004",
+      "feature_name": "V2 Postgres Tables - Alembic Migration (decisions, log_events, memory_records, policy_checks, rbac_roles)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-005",
@@ -525,7 +795,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-005",
+      "feature_name": "SQLite -> Postgres Data Migration (V1 -> V2)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-006",
@@ -534,7 +808,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-006",
+      "feature_name": "JSONL -> Postgres Log Migration (V1 -> V2)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-007",
@@ -543,7 +821,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-007",
+      "feature_name": "Chroma -> Qdrant Vector DB Migration (V1 -> V2)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-008",
@@ -552,7 +834,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-008",
+      "feature_name": "JSON File -> Neo4j Graph Migration (V1 -> V2)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-009",
@@ -561,7 +847,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-009",
+      "feature_name": "Config File Migration (config.v1.toml -> config.v2.toml)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-010",
@@ -570,7 +860,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V3",
-      "priority": "P2"
+      "priority": "P2",
+      "feature_id": "PB7-010",
+      "feature_name": "Postgres -> Managed Postgres Migration (V2 -> V3)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-011",
@@ -579,7 +873,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V3",
-      "priority": "P2"
+      "priority": "P2",
+      "feature_id": "PB7-011",
+      "feature_name": "Qdrant Self-Hosted -> Qdrant Cloud Migration (V2 -> V3)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-012",
@@ -588,7 +886,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V3",
-      "priority": "P2"
+      "priority": "P2",
+      "feature_id": "PB7-012",
+      "feature_name": "Neo4j Community -> Neo4j Aura Migration (V2 -> V3)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-013",
@@ -597,7 +899,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V1",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-013",
+      "feature_name": "Rollback Strategy - Alembic Downgrade + BackupConfigSchema Restore",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-014",
@@ -606,7 +912,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-014",
+      "feature_name": "Blue-Green Deployment Rollback (V2+)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-015",
@@ -615,7 +925,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-015",
+      "feature_name": "Migration Pre-Validation (source/target accessibility, schema compatibility, record counts, sample hashes)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-016",
@@ -624,7 +938,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-016",
+      "feature_name": "Migration Post-Validation (record count comparison, integrity verification)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-017",
@@ -633,7 +951,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-017",
+      "feature_name": "Migration Orchestrator - V1->V2 Full Integration (10-step pipeline)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-018",
@@ -642,7 +964,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-018",
+      "feature_name": "V1 Data Archive & Cleanup Post-Migration",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-019",
@@ -651,7 +977,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P0"
+      "priority": "P0",
+      "feature_id": "PB7-019",
+      "feature_name": "Embedding Model Migration - BGE-M3 -> text-embedding-3-small (Dual-Collection Re-embedding)",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     },
     {
       "id": "PB7-020",
@@ -660,7 +990,11 @@
       "type": "FT-MIG",
       "source_doc": "PHASE_B7_MIGRATION_STRATEGY",
       "version_scope": "V2",
-      "priority": "P1"
+      "priority": "P1",
+      "feature_id": "PB7-020",
+      "feature_name": "Hybrid Vector Search During Embedding Transition",
+      "source_file": "PHASE_B7_MIGRATION_STRATEGY",
+      "extractable": true
     }
   ],
   "statistics": {

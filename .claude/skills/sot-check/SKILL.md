@@ -47,3 +47,44 @@ $ARGUMENTS 를 파싱하여 모드 결정.
 - 불일치 C: 3-tier vs 4-tier — 분류 기준 차이
 
 **저장**: `v13_results/phase0/extraction/sot_check/{대상}_sot_check.json`
+
+---
+
+## [SOT 2 확장] SOT 2 소스 직접 검증 (v2 추가)
+
+> 기존 SOT 원본 68파일 검증 기능을 유지한 채, SOT 2 파일을 추가 검증 대상으로 확장합니다.
+
+### 추가 검증 대상
+
+```
+기존: SOT 원본 68파일 (D:/VAMOS/docs/sot/)
+추가: SOT 2 상세명세 (~34파일) + 방식 C 요약 (~7파일) + 계획서 (~34파일)
+추가: Part2 구현단계 (D:/VAMOS/docs/guides/VAMOS_구현가이드_PART2_구현단계.md)
+```
+
+### 추가 명령어
+
+- `/sot-check sot2 {항목}` → SOT 2 파일에서 해당 항목 직접 검증
+- `/sot-check method-c {영역}` → 방식 C 요약 ↔ Part2 정본 대조 검증
+- `/sot-check sot2-lock {LOCK명}` → LOCK 값이 SOT 2 전체에서 일관적인지 검증
+
+### SOT 2 검증 판정 기준
+
+| 판정 | 기준 |
+|------|------|
+| MATCH | SOT 2 값 = Part2 정본 값 (완전 일치) |
+| SHIFTED | SOT 2 값은 정확하나 라인 번호 ±10 이동 |
+| PARTIAL | SOT 2에 일부만 기재 (누락 필드 존재) |
+| MISMATCH | SOT 2 값 ≠ Part2 정본 값 |
+| STALE | Part2 업데이트 후 SOT 2 미반영 |
+| NOT_IN_SOT2 | Part2에 있으나 SOT 2에 미수록 (방식 C 대상 후보) |
+
+### SOT 2 고유 불일치 추적 (기존 3건과 별도)
+
+SOT 2 작업 과정에서 발견되는 불일치는 별도 추적:
+- `D:/VAMOS/docs/sot 2/CONFLICT_LOG.md`에 기록
+- Part2 정본 기준으로 해결
+- 해결 후 RESOLVED 상태로 전환
+
+### 저장
+- `D:/VAMOS/docs/sot 2/_cross-ref/sot2_check_{대상}.json`

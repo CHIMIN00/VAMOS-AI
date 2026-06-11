@@ -113,3 +113,63 @@ Phase 0-A에서 15개 EA를 수동 프롬프트로 추출했던 작업을 자동
 - source_line은 Read tool의 행 번호 기준
 - confidence < 0.7인 항목은 `[LOW_CONF]` 태그 부착
 - 파일 후반부(70% 이후) 추출률이 30% 미만이면 WARNING
+
+---
+
+## [SOT 2 확장] SOT 2 명세 구조화 추출 (v2 추가)
+
+> 기존 SOT 원본 EA 추출 기능을 유지한 채, SOT 2 상세명세에서 구현 항목을 구조화 추출하는 확장입니다.
+
+### SOT 2 추출 카테고리 (SC1~SC8, 기존 C1~C8과 별도)
+
+| 코드 | 카테고리 | 탐지 패턴 |
+|------|---------|----------|
+| SC1 | 스키마 (Schema) | Pydantic/TypeScript 모델, JSON 스키마 |
+| SC2 | 알고리즘 (Algorithm) | "Phase 1:", "Step N:", 파이프라인 |
+| SC3 | LOCK 값 (Lock) | "LOCK", 숫자+단위+임계값 |
+| SC4 | 상태 머신 (StateMachine) | "→", "IDLE", "ACTIVE", 상태 전이 |
+| SC5 | API/인터페이스 (Interface) | "async def", "class", "endpoint" |
+| SC6 | 의존성 (Dependency) | "의존", "requires", 모듈 참조 |
+| SC7 | 매핑 (Mapping) | "→", 테이블, 코드→동작 |
+| SC8 | 기술스택 (TechStack) | 라이브러리명, 버전, "V1/V2/V3" |
+
+### 추가 명령어
+
+- `/extract sot2 {상세명세파일}` → SOT 2 상세명세에서 SC1~SC8 추출
+- `/extract sot2-all` → SOT 2 전체 18개 상세명세 일괄 추출
+- `/extract sot2-schema {도메인}` → 특정 도메인 스키마만 추출
+- `/extract sot2-locks` → SOT 2 전체 LOCK 값 추출
+
+### SOT 2 추출 JSON 스키마
+
+```json
+{
+  "source_file": "sot 2/3-2_Multimodal-Processing/MULTIMODAL_상세명세.md",
+  "domain": "3-2_Multimodal-Processing",
+  "extraction_date": "2026-03-22",
+  "items": [
+    {
+      "item_id": "SC1-001",
+      "category": "SC1_Schema",
+      "key": "MultimodalRequest",
+      "value": {
+        "modalities": "list[ModalityInput]",
+        "task": "str",
+        "fusion_strategy": "Literal['early','late','hybrid']"
+      },
+      "source_line": 45,
+      "source_text": "class MultimodalRequest:",
+      "confidence": 0.95,
+      "part2_reference": "V1-Phase 3 L2147"
+    }
+  ],
+  "metadata": {
+    "total_items": 0,
+    "by_category": {"SC1": 0, "SC2": 0, "SC3": 0, "SC4": 0, "SC5": 0, "SC6": 0, "SC7": 0, "SC8": 0}
+  }
+}
+```
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_extractions/{도메인}_extraction.json`
+- 기존 v13_results EA와 **별도** 경로

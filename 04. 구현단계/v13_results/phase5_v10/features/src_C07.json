@@ -21,7 +21,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "SchemaMetaTemplate",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD1-001",
+      "feature_name": "SchemaMetaTemplate — _meta block standard",
+      "source_file": "D1",
+      "source_section": "D1 §3.1",
+      "extractable": true
     },
     {
       "id": "DD2-001",
@@ -33,7 +38,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "DecisionSchema",
-      "fields_count": 16
+      "fields_count": 16,
+      "feature_id": "DD2-001",
+      "feature_name": "DecisionSchema — Decision Kernel 산출물",
+      "source_file": "D2",
+      "source_section": "D2 §4.1, DESIGN 02 §3.2",
+      "extractable": true
     },
     {
       "id": "DD2-002",
@@ -46,7 +56,12 @@
       "priority": "P0",
       "schema_name": "LogEventSchema",
       "fields_count": 7,
-      "notes": "Phase 4 finding: LogEventSchema 7-field name mismatch — D2 SOT uses 'when' (text description of trigger condition) while DESIGN 02 references may use 'trigger'/'condition' terminology. Both variants must be reconciled in code generation."
+      "notes": "Phase 4 finding: LogEventSchema 7-field name mismatch — D2 SOT uses 'when' (text description of trigger condition) while DESIGN 02 references may use 'trigger'/'condition' terminology. Both variants must be reconciled in code generation.",
+      "feature_id": "DD2-002",
+      "feature_name": "LogEventSchema — 표준 이벤트 로그",
+      "source_file": "D2",
+      "source_section": "D2 §4.2, DESIGN 02 §6.1",
+      "extractable": true
     },
     {
       "id": "DD2-003",
@@ -58,7 +73,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "EventTypeRegistry",
-      "registry_count": 123
+      "registry_count": 123,
+      "feature_id": "DD2-003",
+      "feature_name": "EventTypeRegistry — event_type 코드값 목록",
+      "source_file": "D2",
+      "source_section": "D2 §5.1",
+      "extractable": true
     },
     {
       "id": "DD2-004",
@@ -70,7 +90,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "FailureCodeRegistry",
-      "registry_count": 36
+      "registry_count": 36,
+      "feature_id": "DD2-004",
+      "feature_name": "FailureCodeRegistry — failure_code 코드값 목록",
+      "source_file": "D2",
+      "source_section": "D2 §5.2",
+      "extractable": true
     },
     {
       "id": "DD2-005",
@@ -82,7 +107,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "FallbackRegistry",
-      "registry_count": 23
+      "registry_count": 23,
+      "feature_id": "DD2-005",
+      "feature_name": "FallbackRegistry — fallback_id 코드값 목록",
+      "source_file": "D2",
+      "source_section": "D2 §5.3",
+      "extractable": true
     },
     {
       "id": "DD2-006",
@@ -93,7 +123,12 @@
       "source_ref": "D2 §5.1 S13-A-003",
       "version_scope": "V1",
       "priority": "P0",
-      "schema_name": "EventType_Literal"
+      "schema_name": "EventType_Literal",
+      "feature_id": "DD2-006",
+      "feature_name": "EventType Literal type (contracts.py)",
+      "source_file": "D2",
+      "source_section": "D2 §5.1 S13-A-003",
+      "extractable": true
     },
     {
       "id": "DD2-007",
@@ -104,7 +139,12 @@
       "source_ref": "D2 §5.1 S13-A-009",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "IntentType_Literal"
+      "schema_name": "IntentType_Literal",
+      "feature_id": "DD2-007",
+      "feature_name": "IntentType Literal enum with 'other'",
+      "source_file": "D2",
+      "source_section": "D2 §5.1 S13-A-009",
+      "extractable": true
     },
     {
       "id": "DD3-001",
@@ -115,7 +155,12 @@
       "source_ref": "D3 §4.1",
       "version_scope": "V1",
       "priority": "P0",
-      "schema_name": "NodeRegistry"
+      "schema_name": "NodeRegistry",
+      "feature_id": "DD3-001",
+      "feature_name": "NodeRegistry — BLUE NODE 정의 레지스트리",
+      "source_file": "D3",
+      "source_section": "D3 §4.1",
+      "extractable": true
     },
     {
       "id": "DD3-002",
@@ -127,7 +172,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "NodeCapabilityProfileSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD3-002",
+      "feature_name": "NodeCapabilityProfileSchema — BLUE NODE capability 프로파일",
+      "source_file": "D3",
+      "source_section": "D3 §5.1, DESIGN 03 §2.3",
+      "extractable": true
     },
     {
       "id": "DD3-003",
@@ -139,7 +189,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "NodeRequestEnvelopeSchema",
-      "fields_count": 12
+      "fields_count": 12,
+      "feature_id": "DD3-003",
+      "feature_name": "NodeRequestEnvelopeSchema — CORE→NODE 요청",
+      "source_file": "D3",
+      "source_section": "D3 §5.2, DESIGN 03 §5.2",
+      "extractable": true
     },
     {
       "id": "DD3-004",
@@ -151,7 +206,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "NodeResponseEnvelopeSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD3-004",
+      "feature_name": "NodeResponseEnvelopeSchema — NODE→CORE 응답",
+      "source_file": "D3",
+      "source_section": "D3 §5.3, DESIGN 03 §5.2.1",
+      "extractable": true
     },
     {
       "id": "DD3-005",
@@ -163,7 +223,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "ToolCallRegistrySchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD3-005",
+      "feature_name": "ToolCallRegistrySchema — BLUE NODE MCP 도구 관리",
+      "source_file": "D3",
+      "source_section": "D3 §5.4, DESIGN 03 §6.3",
+      "extractable": true
     },
     {
       "id": "DD3-006",
@@ -175,7 +240,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "MCPBridgeLayerSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD3-006",
+      "feature_name": "MCPBridgeLayerSchema — MCP 프로토콜 연결 계층",
+      "source_file": "D3",
+      "source_section": "D3 §5.5, DESIGN 03 §6.4.1 DEC-017",
+      "extractable": true
     },
     {
       "id": "DD3-007",
@@ -187,7 +257,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibraryCollectionRequestSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD3-007",
+      "feature_name": "CloudLibraryCollectionRequestSchema — E-15 수집 요청",
+      "source_file": "D3",
+      "source_section": "D3 §5.6, CLOUD_LIBRARY_SPEC §14",
+      "extractable": true
     },
     {
       "id": "DD3-008",
@@ -199,7 +274,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibrarySiteEvaluationSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD3-008",
+      "feature_name": "CloudLibrarySiteEvaluationSchema — 사이트 평가 100점 체계",
+      "source_file": "D3",
+      "source_section": "D3 §5.7, CLOUD_LIBRARY_SPEC §5",
+      "extractable": true
     },
     {
       "id": "DD3-009",
@@ -211,7 +291,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibraryExtractionOutputSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD3-009",
+      "feature_name": "CloudLibraryExtractionOutputSchema — E-15→S-5 인터페이스",
+      "source_file": "D3",
+      "source_section": "D3 §5.8, CLOUD_LIBRARY_SPEC §6.5",
+      "extractable": true
     },
     {
       "id": "DD3-010",
@@ -223,7 +308,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibraryGateResultSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD3-010",
+      "feature_name": "CloudLibraryGateResultSchema — S-5 Gate G0-G4 검증",
+      "source_file": "D3",
+      "source_section": "D3 §5.9, CLOUD_LIBRARY_SPEC §8",
+      "extractable": true
     },
     {
       "id": "DD3-011",
@@ -235,7 +325,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibraryConflictResolutionSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD3-011",
+      "feature_name": "CloudLibraryConflictResolutionSchema — S-5 충돌 해결",
+      "source_file": "D3",
+      "source_section": "D3 §5.10, CLOUD_LIBRARY_SPEC §10",
+      "extractable": true
     },
     {
       "id": "DD3-012",
@@ -247,7 +342,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibraryVersionChangeSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD3-012",
+      "feature_name": "CloudLibraryVersionChangeSchema — Semantic Versioning 결과",
+      "source_file": "D3",
+      "source_section": "D3 §5.11, CLOUD_LIBRARY_SPEC §2.10",
+      "extractable": true
     },
     {
       "id": "DD3-013",
@@ -259,7 +359,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "CloudLibrarySiteRegistryEntrySchema",
-      "fields_count": 9
+      "fields_count": 9,
+      "feature_id": "DD3-013",
+      "feature_name": "CloudLibrarySiteRegistryEntrySchema — site_registry.json 항목",
+      "source_file": "D3",
+      "source_section": "D3 §5.12, CLOUD_LIBRARY_SPEC §3.8",
+      "extractable": true
     },
     {
       "id": "DD4-001",
@@ -271,7 +376,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "ToolRegistryEntrySchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD4-001",
+      "feature_name": "ToolRegistryEntrySchema — ToolRegistry 단일 엔트리",
+      "source_file": "D4",
+      "source_section": "D4 §4.1, DESIGN 04 §7.2",
+      "extractable": true
     },
     {
       "id": "DD4-002",
@@ -283,7 +393,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "BrainAdapterResponseSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD4-002",
+      "feature_name": "BrainAdapterResponseSchema — Brain Adapter Layer 표준 응답",
+      "source_file": "D4",
+      "source_section": "D4 §4.2, DESIGN 04 §3",
+      "extractable": true
     },
     {
       "id": "DD4-003",
@@ -295,7 +410,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "InfraInvokeResultSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD4-003",
+      "feature_name": "InfraInvokeResultSchema — INFRA 호출 결과",
+      "source_file": "D4",
+      "source_section": "D4 §4.3, DESIGN 04 §9.4",
+      "extractable": true
     },
     {
       "id": "DD4-004",
@@ -307,7 +427,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "PromptCacheManagerSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD4-004",
+      "feature_name": "PromptCacheManagerSchema — 프롬프트 캐시 관리자",
+      "source_file": "D4",
+      "source_section": "D4 §4.4, DESIGN 04 §6.x",
+      "extractable": true
     },
     {
       "id": "DD4-005",
@@ -319,7 +444,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "RateLimitConfigSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD4-005",
+      "feature_name": "RateLimitConfigSchema — API/도구별 호출 제한",
+      "source_file": "D4",
+      "source_section": "D4 §4.5, DESIGN 04 §5.x",
+      "extractable": true
     },
     {
       "id": "DD4-006",
@@ -331,7 +461,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "BackupConfigSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD4-006",
+      "feature_name": "BackupConfigSchema — 데이터 백업 설정",
+      "source_file": "D4",
+      "source_section": "D4 §4.6, DESIGN 04 §9.x",
+      "extractable": true
     },
     {
       "id": "DD4-007",
@@ -342,7 +477,12 @@
       "source_ref": "D4 §5.1",
       "version_scope": "V1",
       "priority": "P0",
-      "schema_name": "ToolRegistry"
+      "schema_name": "ToolRegistry",
+      "feature_id": "DD4-007",
+      "feature_name": "ToolRegistry — tool_id 및 도구 메타 레지스트리",
+      "source_file": "D4",
+      "source_section": "D4 §5.1",
+      "extractable": true
     },
     {
       "id": "DD4-008",
@@ -353,7 +493,12 @@
       "source_ref": "D4 §8-A.1 S13-A-001",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "OutputProfile_Enum"
+      "schema_name": "OutputProfile_Enum",
+      "feature_id": "DD4-008",
+      "feature_name": "OutputProfile enum (contracts.py)",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.1 S13-A-001",
+      "extractable": true
     },
     {
       "id": "DD4-009",
@@ -364,7 +509,12 @@
       "source_ref": "D4 §8-A.2 S13-A-002",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "TaskPriority_SchedulePriority_Enums"
+      "schema_name": "TaskPriority_SchedulePriority_Enums",
+      "feature_id": "DD4-009",
+      "feature_name": "TaskPriority / SchedulePriority enums (contracts.py)",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.2 S13-A-002",
+      "extractable": true
     },
     {
       "id": "DD4-010",
@@ -375,7 +525,12 @@
       "source_ref": "D4 §8-A.8 S13-A-010",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "ConnectorResponse"
+      "schema_name": "ConnectorResponse",
+      "feature_id": "DD4-010",
+      "feature_name": "ConnectorResponse Pydantic model (contracts.py)",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.8 S13-A-010",
+      "extractable": true
     },
     {
       "id": "DD4-011",
@@ -386,7 +541,12 @@
       "source_ref": "D4 §8-A.9 S13-A-011",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "OHLCVValues"
+      "schema_name": "OHLCVValues",
+      "feature_id": "DD4-011",
+      "feature_name": "OHLCVValues conditional required fields (contracts.py)",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.9 S13-A-011",
+      "extractable": true
     },
     {
       "id": "DD4-012",
@@ -397,7 +557,12 @@
       "source_ref": "D4 §8-A.4 S13-A-004",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "sentiment_score_constraint"
+      "schema_name": "sentiment_score_constraint",
+      "feature_id": "DD4-012",
+      "feature_name": "sentiment_score Field constraint ge=-1.0 le=1.0",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.4 S13-A-004",
+      "extractable": true
     },
     {
       "id": "DD4-013",
@@ -408,7 +573,12 @@
       "source_ref": "D4 §8-A.6 S13-A-008",
       "version_scope": "V1",
       "priority": "P1",
-      "schema_name": "sequence_id_migration"
+      "schema_name": "sequence_id_migration",
+      "feature_id": "DD4-013",
+      "feature_name": "sequence_id position migration (contracts.py)",
+      "source_file": "D4",
+      "source_section": "D4 §8-A.6 S13-A-008",
+      "extractable": true
     },
     {
       "id": "DD5-001",
@@ -420,7 +590,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "WorkflowOutputEnvelopeSchema",
-      "fields_count": 3
+      "fields_count": 3,
+      "feature_id": "DD5-001",
+      "feature_name": "WorkflowOutputEnvelopeSchema — 워크플로우 3단 출력",
+      "source_file": "D5",
+      "source_section": "D5 §4.1, DESIGN 05 §7.2",
+      "extractable": true
     },
     {
       "id": "DD5-002",
@@ -432,7 +607,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "FailureReportSchema",
-      "fields_count": 4
+      "fields_count": 4,
+      "feature_id": "DD5-002",
+      "feature_name": "FailureReportSchema — 실패 리포트 4필드",
+      "source_file": "D5",
+      "source_section": "D5 §4.2, DESIGN 05 §6",
+      "extractable": true
     },
     {
       "id": "DD5-003",
@@ -444,7 +624,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "VerifyChainEntrySchema",
-      "fields_count": 5
+      "fields_count": 5,
+      "feature_id": "DD5-003",
+      "feature_name": "VerifyChainEntrySchema — EVX 단일 엔트리",
+      "source_file": "D5",
+      "source_section": "D5 §4.3, DESIGN 05 §7.4.1",
+      "extractable": true
     },
     {
       "id": "DD5-004",
@@ -456,7 +641,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "WorkflowStageSchema",
-      "fields_count": 4
+      "fields_count": 4,
+      "feature_id": "DD5-004",
+      "feature_name": "WorkflowStageSchema — 표준 5단계 Pipeline",
+      "source_file": "D5",
+      "source_section": "D5 §4.4, DESIGN 05 §7.1",
+      "extractable": true
     },
     {
       "id": "DD5-005",
@@ -468,7 +658,12 @@
       "version_scope": "V2",
       "priority": "P1",
       "schema_name": "AgentMarketplaceSchema",
-      "fields_count": 9
+      "fields_count": 9,
+      "feature_id": "DD5-005",
+      "feature_name": "AgentMarketplaceSchema — 에이전트 마켓플레이스",
+      "source_file": "D5",
+      "source_section": "D5 §4.5, STEP7 R2",
+      "extractable": true
     },
     {
       "id": "DD5-006",
@@ -480,7 +675,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "CircuitBreakerSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD5-006",
+      "feature_name": "CircuitBreakerSchema — 자동 차단/복구 패턴",
+      "source_file": "D5",
+      "source_section": "D5 §4.6, DESIGN 05 §4.x",
+      "extractable": true
     },
     {
       "id": "DD5-007",
@@ -492,7 +692,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "GatePipelineMappingSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD5-007",
+      "feature_name": "GatePipelineMappingSchema — Gate-Pipeline 매핑",
+      "source_file": "D5",
+      "source_section": "D5 §4.7, DESIGN 05 §7.x",
+      "extractable": true
     },
     {
       "id": "DD5-008",
@@ -504,7 +709,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "HITLRequestSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD5-008",
+      "feature_name": "HITLRequestSchema — Human-in-the-Loop 요청",
+      "source_file": "D5",
+      "source_section": "D5 §4.8, STEP7 R2, 07 §3.2.1",
+      "extractable": true
     },
     {
       "id": "DD5-009",
@@ -516,7 +726,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "ResponseEnvelopeSchema",
-      "fields_count": 9
+      "fields_count": 9,
+      "feature_id": "DD5-009",
+      "feature_name": "ResponseEnvelopeSchema — CORE→사용자 최종 응답",
+      "source_file": "D5",
+      "source_section": "D5 §4.9, D2-02 PART1",
+      "extractable": true
     },
     {
       "id": "DD5-010",
@@ -527,7 +742,12 @@
       "source_ref": "D5 §5.1",
       "version_scope": "V1",
       "priority": "P0",
-      "schema_name": "VerifyChainRegistry"
+      "schema_name": "VerifyChainRegistry",
+      "feature_id": "DD5-010",
+      "feature_name": "VerifyChainRegistry — EVX-ID 및 Verify 체인 정의",
+      "source_file": "D5",
+      "source_section": "D5 §5.1",
+      "extractable": true
     },
     {
       "id": "DD6-001",
@@ -539,7 +759,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "MemoryRecordSchema",
-      "fields_count": 18
+      "fields_count": 18,
+      "feature_id": "DD6-001",
+      "feature_name": "MemoryRecordSchema — 저장/메모리 레코드",
+      "source_file": "D6",
+      "source_section": "D6 §4.1, DESIGN 06 §2",
+      "extractable": true
     },
     {
       "id": "DD6-002",
@@ -551,7 +776,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "SourceQoDSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD6-002",
+      "feature_name": "SourceQoDSchema — QoD 점수 및 구성요소",
+      "source_file": "D6",
+      "source_section": "D6 §4.2, DESIGN 06 §4",
+      "extractable": true
     },
     {
       "id": "DD6-003",
@@ -563,7 +793,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "VectorStoreAdapterSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD6-003",
+      "feature_name": "VectorStoreAdapterSchema — Vector DB 추상화 어댑터",
+      "source_file": "D6",
+      "source_section": "D6 §4.3, DESIGN 06 §4.x DEC-005",
+      "extractable": true
     },
     {
       "id": "DD6-004",
@@ -575,7 +810,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "GraphRAGConfigSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD6-004",
+      "feature_name": "GraphRAGConfigSchema — GraphRAG 설정",
+      "source_file": "D6",
+      "source_section": "D6 §4.4, STEP7 R4 DEC-004",
+      "extractable": true
     },
     {
       "id": "DD6-005",
@@ -587,7 +827,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "SemanticCacheSchema",
-      "fields_count": 8
+      "fields_count": 8,
+      "feature_id": "DD6-005",
+      "feature_name": "SemanticCacheSchema — 의미 유사 질문 캐시",
+      "source_file": "D6",
+      "source_section": "D6 §4.5, DESIGN 06 §4.7 ADD-012",
+      "extractable": true
     },
     {
       "id": "DD6-006",
@@ -599,7 +844,12 @@
       "version_scope": "V1",
       "priority": "P1",
       "schema_name": "KBEmbeddingRecordSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD6-006",
+      "feature_name": "KBEmbeddingRecordSchema — KB 임베딩 레코드 확장",
+      "source_file": "D6",
+      "source_section": "D6 §7-A.1 S13-A-007",
+      "extractable": true
     },
     {
       "id": "DD7-001",
@@ -611,7 +861,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "PolicyCheckSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD7-001",
+      "feature_name": "PolicyCheckSchema — 정책 게이트 판단 결과",
+      "source_file": "D7",
+      "source_section": "D7 §4.1, DESIGN 07 §6.4",
+      "extractable": true
     },
     {
       "id": "DD7-002",
@@ -623,7 +878,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "ApprovalSchema",
-      "fields_count": 11
+      "fields_count": 11,
+      "feature_id": "DD7-002",
+      "feature_name": "ApprovalSchema — 2단계 승인 요청/결과",
+      "source_file": "D7",
+      "source_section": "D7 §4.2, DESIGN 07 §6.2",
+      "extractable": true
     },
     {
       "id": "DD7-003",
@@ -635,7 +895,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "CostBudgetSchema",
-      "fields_count": 9
+      "fields_count": 9,
+      "feature_id": "DD7-003",
+      "feature_name": "CostBudgetSchema — 비용 상한 관리",
+      "source_file": "D7",
+      "source_section": "D7 §4.3, DESIGN 07 §4.1",
+      "extractable": true
     },
     {
       "id": "DD7-004",
@@ -647,7 +912,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "DownshiftSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD7-004",
+      "feature_name": "DownshiftSchema — 다운시프트 정책",
+      "source_file": "D7",
+      "source_section": "D7 §4.4, DESIGN 07 §4.2",
+      "extractable": true
     },
     {
       "id": "DD7-005",
@@ -659,7 +929,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "GuardrailsCheckSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD7-005",
+      "feature_name": "GuardrailsCheckSchema — 3-Layer Guardrails 검사",
+      "source_file": "D7",
+      "source_section": "D7 §4.5, DESIGN 07 §1.1 ADD-013~015",
+      "extractable": true
     },
     {
       "id": "DD7-006",
@@ -671,7 +946,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "RBACRoleSchema",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD7-006",
+      "feature_name": "RBACRoleSchema — RBAC 역할 정의",
+      "source_file": "D7",
+      "source_section": "D7 §4.6, DESIGN 07 §3.6 MOD-023",
+      "extractable": true
     },
     {
       "id": "DD7-007",
@@ -683,7 +963,12 @@
       "version_scope": "V1",
       "priority": "P0",
       "schema_name": "AutonomyLevelSchema",
-      "fields_count": 7
+      "fields_count": 7,
+      "feature_id": "DD7-007",
+      "feature_name": "AutonomyLevelSchema — 자율 운영 수준 L0~L3",
+      "source_file": "D7",
+      "source_section": "D7 §4.7, DESIGN 07 §3.2.1",
+      "extractable": true
     },
     {
       "id": "DD7-008",
@@ -695,7 +980,12 @@
       "version_scope": "V2",
       "priority": "P2",
       "schema_name": "WalkForwardConfig",
-      "fields_count": 5
+      "fields_count": 5,
+      "feature_id": "DD7-008",
+      "feature_name": "WalkForwardConfig — 과적합 방지 WFV 설정",
+      "source_file": "D7",
+      "source_section": "D7 §7-A.1 S13 AINV",
+      "extractable": true
     },
     {
       "id": "DD7-009",
@@ -707,7 +997,12 @@
       "version_scope": "V2",
       "priority": "P2",
       "schema_name": "PaperTradingSession",
-      "fields_count": 6
+      "fields_count": 6,
+      "feature_id": "DD7-009",
+      "feature_name": "PaperTradingSession — Paper Trading 모듈",
+      "source_file": "D7",
+      "source_section": "D7 §7-A.2 S13 AINV",
+      "extractable": true
     },
     {
       "id": "DD7-010",
@@ -719,7 +1014,12 @@
       "version_scope": "V2",
       "priority": "P2",
       "schema_name": "CorrelationMatrix",
-      "fields_count": 5
+      "fields_count": 5,
+      "feature_id": "DD7-010",
+      "feature_name": "CorrelationMatrix — 다자산 상관계수 행렬",
+      "source_file": "D7",
+      "source_section": "D7 §7-A.4 S13 AINV",
+      "extractable": true
     },
     {
       "id": "DD7-011",
@@ -731,7 +1031,12 @@
       "version_scope": "V2",
       "priority": "P2",
       "schema_name": "StrategyPortfolio",
-      "fields_count": 4
+      "fields_count": 4,
+      "feature_id": "DD7-011",
+      "feature_name": "StrategyPortfolio — 멀티 전략 포트폴리오",
+      "source_file": "D7",
+      "source_section": "D7 §7-A.7 S13 AINV",
+      "extractable": true
     },
     {
       "id": "DD7-012",
@@ -742,7 +1047,12 @@
       "source_ref": "D7 §7-B.1 S13 AINV",
       "version_scope": "V2",
       "priority": "P2",
-      "schema_name": "DataSourceFallback"
+      "schema_name": "DataSourceFallback",
+      "feature_id": "DD7-012",
+      "feature_name": "DataSourceFallback + CircuitBreakerConfig — 데이터 소스 폴백",
+      "source_file": "D7",
+      "source_section": "D7 §7-B.1 S13 AINV",
+      "extractable": true
     },
     {
       "id": "DD7-013",
@@ -754,7 +1064,12 @@
       "version_scope": "V2",
       "priority": "P2",
       "schema_name": "SentimentAnalysis",
-      "fields_count": 5
+      "fields_count": 5,
+      "feature_id": "DD7-013",
+      "feature_name": "SentimentAnalysis — FinBERT 감성 분석",
+      "source_file": "D7",
+      "source_section": "D7 §7-B.3 S13 AINV",
+      "extractable": true
     }
   ],
   "statistics": {
@@ -786,8 +1101,32 @@
     "phase4_finding": "LogEventSchema 7-field name mismatch: D2 SOT uses 'when' field (text trigger condition) while DESIGN 02 may reference 'trigger'/'condition' terminology. Both variants noted in DD2-002.",
     "files_read_100_pct": true,
     "glossary_terms_excluded": true,
-    "registries_included": ["EventTypeRegistry(123)", "FailureCodeRegistry(36)", "FallbackRegistry(23)", "NodeRegistry", "ToolRegistry", "VerifyChainRegistry(6)"],
-    "contracts_py_rules_included": ["S13-A-001 OutputProfile", "S13-A-002 Priority split", "S13-A-003 EventType Literal", "S13-A-004 sentiment_score", "S13-A-007 KBEmbeddingRecord", "S13-A-008 sequence_id", "S13-A-009 IntentType", "S13-A-010 ConnectorResponse", "S13-A-011 OHLCVValues"],
-    "ainv_schemas_included": ["WalkForwardConfig", "PaperTradingSession", "CorrelationMatrix", "StrategyPortfolio", "DataSourceFallback", "SentimentAnalysis"]
+    "registries_included": [
+      "EventTypeRegistry(123)",
+      "FailureCodeRegistry(36)",
+      "FallbackRegistry(23)",
+      "NodeRegistry",
+      "ToolRegistry",
+      "VerifyChainRegistry(6)"
+    ],
+    "contracts_py_rules_included": [
+      "S13-A-001 OutputProfile",
+      "S13-A-002 Priority split",
+      "S13-A-003 EventType Literal",
+      "S13-A-004 sentiment_score",
+      "S13-A-007 KBEmbeddingRecord",
+      "S13-A-008 sequence_id",
+      "S13-A-009 IntentType",
+      "S13-A-010 ConnectorResponse",
+      "S13-A-011 OHLCVValues"
+    ],
+    "ainv_schemas_included": [
+      "WalkForwardConfig",
+      "PaperTradingSession",
+      "CorrelationMatrix",
+      "StrategyPortfolio",
+      "DataSourceFallback",
+      "SentimentAnalysis"
+    ]
   }
 }

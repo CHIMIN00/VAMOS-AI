@@ -2037,3 +2037,80 @@ A: Step -1의 체크포인트 패턴에는 3가지 수렴 한계가 있으며
 | 6.읽기≠이해 | 6-A.섹션경계, 6-B.교차참조, 6-C.매트릭스완전성 | 헤딩분할+별도패스+ModeF대조 | 한계2,3 |
 | 7.다파일비교 | 7-A.표현불일치, 7-B.맥락손실, 7-C.스키마불일치 | 정규화+spot-check+동일스키마강제 | 한계1,2 |
 ```
+
+---
+
+## [SOT 2 확장] SOT 2 최종 검증 (v2 추가)
+
+> 기존 final-review 7단계 검증을 유지한 채, SOT 2 산출물(상세명세/계획서/방식C요약)에 대한 최종 검증을 추가합니다.
+
+### SOT 2 최종 검증 대상
+
+| 대상 유형 | 검증 포인트 |
+|----------|-----------|
+| **상세명세** (*_상세명세.md) | 스키마 완전성, LOCK 값 정확성, Part2 라인 참조 유효성 |
+| **종합계획서** (*_구조화_종합계획서.md) | 14섹션 완전성, Phase Gate 조건 구체성, 방식 C 대상 식별 |
+| **방식 C 요약** (_method-c-summaries/*.md) | Part2 정본 일치, LOCK 전수 포함, 교차 참조 유효 |
+| **COND 종합명세** (COND_MODULES_종합명세.md) | 106개 모듈 전수 기재, CAT-A~G 분류 정확성 |
+| **마스터 인덱스** (SOT2_MASTER_INDEX.md) | 전체 폴더 반영, 파일 수/라인수 정확성, 상태 최신성 |
+
+### 추가 명령어
+
+- `/final-review sot2 {도메인}` → 특정 도메인 최종 검증
+- `/final-review sot2-all` → 34개 도메인 전수 최종 검증
+- `/final-review sot2-plan {도메인}` → 계획서 14섹션 완전성 집중 검증
+- `/final-review sot2-method-c` → 방식 C 요약 7개 전수 검증
+- `/final-review sot2-index` → 마스터 인덱스 정확성 검증
+
+### SOT 2 상세명세 최종 판정 기준
+
+```
+FINAL 조건 (모두 충족):
+  ✅ 모든 모듈/기능에 입출력 스키마 존재
+  ✅ 모든 LOCK 값이 Part2 정본과 일치
+  ✅ 모든 Part2 라인 참조가 유효 (±10줄)
+  ✅ 교차 참조 0 BROKEN
+  ✅ quality-gate SILVER 이상
+
+NOT_FINAL 조건 (1개 이상):
+  ❌ 입출력 스키마 누락
+  ❌ LOCK 값 MISMATCH
+  ❌ Part2 라인 참조 BROKEN
+  ❌ 교차 참조 BROKEN 존재
+  ❌ quality-gate REJECT
+```
+
+### SOT 2 계획서 최종 판정 기준
+
+```
+FINAL 조건:
+  ✅ 14섹션 모두 존재 (§1~§14 + 부록 A/B)
+  ✅ §3 Authority Chain 선언 완료
+  ✅ §7 Phase 0~3 + Gate 조건 구체적
+  ✅ §11 방식 C 대상 영역 식별 완료
+  ✅ §10 검증 체크리스트 40+ 항목
+```
+
+### SOT 2 방식 C 요약 최종 판정 기준
+
+```
+FINAL 조건:
+  ✅ Part2 정본의 모든 LOCK 값 포함
+  ✅ 상태 머신 축약 포함
+  ✅ 핵심 스키마 필드 포함
+  ✅ 교차 참조 목록 최신
+  ✅ Part2 버전 기록 일치
+```
+
+### 대용량 파일 처리 (기존 Step -1 확장)
+
+```
+SOT 2 계획서 > 2,000줄 시:
+  1. SOT2_MASTER_INDEX.md에서 해당 도메인 메타정보 로드
+  2. 계획서를 §단위로 청크 분할
+  3. §별 검증 후 통합 판정
+```
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_quality-gate/{도메인}_final_review.json`
+- 판정 스탬프: `D:/VAMOS/docs/sot 2/_quality-gate/{도메인}_final_stamp.json`

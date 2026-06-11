@@ -74,6 +74,10 @@ htmlcov/
 .vitest/
 coverage/
 
+# ── Benchmark Results (F-07: R-18-4 오염 방지) ──
+benchmark_results/parquet/
+benchmark_results/benchmark_store.db
+
 # ── Build Artifacts ──
 *.bundle.*
 *.map

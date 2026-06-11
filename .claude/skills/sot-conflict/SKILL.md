@@ -254,3 +254,47 @@ SOT 68개 파일에서 동일 개념에 다른 용어를 사용하는 경우를 
 
 ### $ARGUMENTS 추가
 - `ontology` → 용어/개념 표준화 매핑 구축
+
+---
+
+## [SOT 2 확장] SOT 2 교차 충돌 탐지 (v2 추가)
+
+> 아래 내용은 기존 SOT 68파일 스캔 기능을 **유지한 채** SOT 2 파일 세트를 추가 스캔하는 확장입니다.
+
+### 추가 스캔 대상
+
+| 대상 | 경로 | 파일 수 |
+|------|------|--------|
+| SOT 2 상세명세 | `D:/VAMOS/docs/sot 2/*/` | ~18개 .md |
+| SOT 2 방식 C 요약 | `D:/VAMOS/docs/sot 2/_method-c-summaries/` | ~7개 .md |
+| SOT 2 계획서 | `D:/VAMOS/docs/sot 2/*/*_구조화_종합계획서.md` | ~18개 .md |
+
+### 추가 명령어
+
+- `/sot-conflict sot2-scan` → SOT 2 전체 파일 내부 충돌 스캔
+- `/sot-conflict sot2-vs-part2` → SOT 2 ↔ Part2 LOCK 값 불일치 탐지
+- `/sot-conflict sot2-vs-sot` → SOT 2 ↔ SOT 원본 68파일 불일치 탐지
+- `/sot-conflict sot2-numbers` → SOT 2 내 숫자/임계값 수집 + 전수 비교
+- `/sot-conflict sot2-terms` → SOT 2 내 용어 불일치 탐지 (한글/영문 혼용 등)
+
+### SOT 2 특화 충돌 패턴
+
+```
+패턴 1: LOCK 값 분산 (SOT 2 ↔ Part2)
+  SOT 2 파일 A에서 "α=0.7" → Part2 L2030에서 "α=0.7" → CONSISTENT
+  SOT 2 파일 B에서 "α=0.8" → Part2 L2030에서 "α=0.7" → MISMATCH
+
+패턴 2: 방식 C 요약 stale
+  방식 C 요약에서 "7-State" → Part2 정본에서 "9-State" → STALE
+
+패턴 3: 도메인 간 중복 정의
+  3-3_PKM에서 "SM-2 알고리즘" 정의 → 3-5_Education에서도 "SM-2" 정의
+  → canonical owner 확인 필요 → OVERLAP
+
+패턴 4: Authority Chain 위반
+  SOT 2에서 DESIGN 레벨 값 재정의 → Authority Chain 위반 → OVERRIDE
+```
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_cross-ref/sot2_conflict_scan.json`
+- 기존 v13_results 경로와 **별도** 관리

@@ -41,7 +41,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.0-02에서 상세 정의, 여기서는 통합 참조"
+      "notes": "D2.0-02에서 상세 정의, 여기서는 통합 참조",
+      "feature_id": "MSTR-001",
+      "feature_name": "IntentFrame 스키마 구현 (I-1 파서 출력)",
+      "source_section": "MSTR §4.2",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-002",
@@ -51,7 +56,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-002",
+      "feature_name": "EvidencePack 스키마 구현 (I-2 출력)",
+      "source_section": "MSTR §4.3",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-003",
@@ -61,7 +71,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-003",
+      "feature_name": "Decision 스키마 16필드 FREEZE 구현",
+      "source_section": "MSTR §4.4",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-004",
@@ -71,7 +86,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "core",
-      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-004",
+      "feature_name": "상태 머신 S0~S8 구현",
+      "source_section": "MSTR §4.5",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-005",
@@ -81,7 +101,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "core",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-005",
+      "feature_name": "5 Gate 시스템 구현 (PolicyGate/CostGate/ApprovalGate/EvidenceGate/SelfCheckGate)",
+      "source_section": "MSTR §4.6",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-006",
@@ -91,7 +116,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-006",
+      "feature_name": "Self-check 임계값 구현 (P0:70, P1:75, P2:80)",
+      "source_section": "MSTR §4.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-007",
@@ -101,7 +131,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "schema",
-      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-02에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-007",
+      "feature_name": "ResponseEnvelope 3단 출력 구현",
+      "source_section": "MSTR §4.7",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-008",
@@ -111,7 +146,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-008",
+      "feature_name": "성능 벤치마크 모니터링 구현",
+      "source_section": "MSTR §4.8",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-009",
@@ -121,7 +161,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "core",
-      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-009",
+      "feature_name": "P0/P1/P2 도메인 분류 구현",
+      "source_section": "MSTR §5.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-010",
@@ -131,7 +176,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "schema",
-      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-010",
+      "feature_name": "NodeCapabilityProfile 구현",
+      "source_section": "MSTR §5.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-011",
@@ -141,7 +191,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-03에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-011",
+      "feature_name": "MCP Bridge Layer 구현 (DEC-017)",
+      "source_section": "MSTR §5.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-012",
@@ -151,7 +206,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-012",
+      "feature_name": "MCP 서버 카탈로그 구현 (11개 서버)",
+      "source_section": "MSTR §5.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-013",
@@ -161,7 +221,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-013",
+      "feature_name": "MCP 보안 위협 방어 구현",
+      "source_section": "MSTR §5.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-014",
@@ -171,7 +236,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-014",
+      "feature_name": "MCP 세션 관리 구현",
+      "source_section": "MSTR §5.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-015",
@@ -181,7 +251,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-015",
+      "feature_name": "TemplateSet 3종 구현 (TS_CORE/TS_WEB_RESEARCH/TS_CODE)",
+      "source_section": "MSTR §5.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-016",
@@ -191,7 +266,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-016",
+      "feature_name": "노드 상한 관리 구현 (active_node_cap/candidate_node_cap)",
+      "source_section": "MSTR §5.7",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-017",
@@ -201,7 +281,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "schema",
-      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-017",
+      "feature_name": "Brain Adapter Layer ConnectorResponse 구현",
+      "source_section": "MSTR §6.1",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-018",
@@ -211,7 +296,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "schema",
-      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-04에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-018",
+      "feature_name": "ToolRegistry 스키마 구현 (MOD-006)",
+      "source_section": "MSTR §6.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-019",
@@ -221,7 +311,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-019",
+      "feature_name": "동적 모델 라우팅 구현 (5단계)",
+      "source_section": "MSTR §6.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-020",
@@ -231,7 +326,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-020",
+      "feature_name": "Prompt Cache Manager 구현",
+      "source_section": "MSTR §6.4",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-021",
@@ -241,7 +341,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-021",
+      "feature_name": "Rate Limit 구현",
+      "source_section": "MSTR §6.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-022",
@@ -251,7 +356,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-022",
+      "feature_name": "Backup/Recovery 시스템 구현",
+      "source_section": "MSTR §6.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-023",
@@ -261,7 +371,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-023",
+      "feature_name": "10계층 보안 아키텍처 구현",
+      "source_section": "MSTR §6.8",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-024",
@@ -271,7 +386,12 @@
       "priority": "HIGH",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-024",
+      "feature_name": "설정 우선순위 구현 (ENV > config.toml > default)",
+      "source_section": "MSTR §6.9",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-025",
@@ -281,7 +401,12 @@
       "priority": "HIGH",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-025",
+      "feature_name": "JSON Structured 로깅 표준 구현",
+      "source_section": "MSTR §6.10",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-026",
@@ -291,7 +416,12 @@
       "priority": "CRITICAL",
       "version": "V1",
       "category": "workflow",
-      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-026",
+      "feature_name": "5단계 Pipeline 구현 (Intake/Plan/Execute/Verify/Deliver)",
+      "source_section": "MSTR §7.1~7.8",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-027",
@@ -301,7 +431,12 @@
       "priority": "CRITICAL",
       "version": "V1",
       "category": "workflow",
-      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-027",
+      "feature_name": "LangGraph StateGraph 통합 구현",
+      "source_section": "MSTR §7.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-028",
@@ -311,7 +446,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "workflow",
-      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-028",
+      "feature_name": "EVX-1~EVX-6 검증 체인 구현",
+      "source_section": "MSTR §7.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-029",
@@ -321,7 +461,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "workflow",
-      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-05에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-029",
+      "feature_name": "Circuit Breaker 구현 (CLOSED/OPEN/HALF-OPEN)",
+      "source_section": "MSTR §7.4",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-030",
@@ -331,7 +476,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "workflow",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-030",
+      "feature_name": "3단 출력 구현 (user_response/evidence_summary/log_report)",
+      "source_section": "MSTR §7.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-031",
@@ -341,7 +491,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "workflow",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-031",
+      "feature_name": "HITL (Human-In-The-Loop) 구현",
+      "source_section": "MSTR §7.9",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-032",
@@ -351,7 +506,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-032",
+      "feature_name": "도구 승인 Allowlist 구현 (DEC-003)",
+      "source_section": "MSTR §7.11",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-033",
@@ -361,7 +521,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-033",
+      "feature_name": "대화 턴 상한 구현 (P0=5/P1=10/P2=20)",
+      "source_section": "MSTR §7.12",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-034",
@@ -371,7 +536,12 @@
       "priority": "CRITICAL",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-034",
+      "feature_name": "4-Layer Guardrails 구현",
+      "source_section": "MSTR §7.13, §9.1",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-035",
@@ -381,7 +551,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "workflow",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-035",
+      "feature_name": "워크플로우 패턴 카탈로그 12건 구현",
+      "source_section": "MSTR §7.14",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "MSTR-036",
@@ -391,7 +566,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "storage",
-      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-036",
+      "feature_name": "4계층 메모리 구현 (L0/L1/L2/L3)",
+      "source_section": "MSTR §8.1~8.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-037",
@@ -401,7 +581,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-037",
+      "feature_name": "B-2 Procedural Memory 파이프라인 구현",
+      "source_section": "MSTR §8.2",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "MSTR-038",
@@ -411,7 +596,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "storage",
-      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-038",
+      "feature_name": "VectorStore 어댑터 인터페이스 구현 (LOCK)",
+      "source_section": "MSTR §8.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-039",
@@ -421,7 +611,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-039",
+      "feature_name": "Semantic Cache 구현 (MOD-017)",
+      "source_section": "MSTR §8.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-040",
@@ -431,7 +626,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "storage",
-      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-040",
+      "feature_name": "RAG 6단계 파이프라인 구현 (LOCK)",
+      "source_section": "MSTR §8.7",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-041",
@@ -441,7 +641,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "storage",
-      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만. PLAN-3.0 5요소 공식이 정본(V1-006 참조)"
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만. PLAN-3.0 5요소 공식이 정본(V1-006 참조)",
+      "feature_id": "MSTR-041",
+      "feature_name": "QoD 점수 체계 구현 (DEC-010/DEC-014)",
+      "source_section": "MSTR §8.8",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-042",
@@ -451,7 +656,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-06에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-042",
+      "feature_name": "저장 정책 (Allow/Restrict/Deny) 구현",
+      "source_section": "MSTR §8.9",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-043",
@@ -461,7 +671,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-043",
+      "feature_name": "RBAC 4역할 구현 (OWNER/ADMIN/OPERATOR/VIEWER)",
+      "source_section": "MSTR §9.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-044",
@@ -471,7 +686,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-044",
+      "feature_name": "Autonomy Level L0~L3 구현",
+      "source_section": "MSTR §9.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-045",
@@ -481,7 +701,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-045",
+      "feature_name": "PolicyCheck 구현",
+      "source_section": "MSTR §9.4",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-046",
@@ -491,7 +716,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-046",
+      "feature_name": "Approval 2단계 구현",
+      "source_section": "MSTR §9.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-047",
@@ -501,7 +731,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-047",
+      "feature_name": "CostBudget 비용 상한 구현 (LOCK)",
+      "source_section": "MSTR §9.6",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-048",
@@ -511,7 +746,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "safety",
-      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-07에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-048",
+      "feature_name": "Downshift 구현 (80% warn/100% block)",
+      "source_section": "MSTR §9.7",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-049",
@@ -521,7 +761,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-049",
+      "feature_name": "7개 불변 구역 구현 (LOCK)",
+      "source_section": "MSTR §9.9",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-050",
@@ -531,7 +776,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "ui",
-      "notes": "D2.0-08에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.0-08에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-050",
+      "feature_name": "UI 상태 머신 구현 (UIS1~UIS6)",
+      "source_section": "MSTR §10.4",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-051",
@@ -541,7 +791,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "ui",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-051",
+      "feature_name": "에러 메시지 매핑 구현 (입력/판단/실행 단계별)",
+      "source_section": "MSTR §10.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-052",
@@ -551,7 +806,12 @@
       "priority": "MEDIUM",
       "version": "V3",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "MSTR-052",
+      "feature_name": "Self-evo 롤백 메커니즘 구현",
+      "source_section": "MSTR §11.5",
+      "version_scope": "V3",
+      "extractable": true
     },
     {
       "id": "MSTR-053",
@@ -561,7 +821,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-053",
+      "feature_name": "EventTypeRegistry 구현 (53+개)",
+      "source_section": "MSTR §12.2",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-054",
@@ -571,7 +836,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-054",
+      "feature_name": "FailureCodeRegistry 구현 (20개)",
+      "source_section": "MSTR §12.3",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-055",
@@ -581,7 +851,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-055",
+      "feature_name": "FallbackRegistry 구현 (13개) + Failure→Fallback 매핑 (20쌍)",
+      "source_section": "MSTR §12.4~12.5",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-056",
@@ -591,7 +866,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만"
+      "notes": "D2.1-D2에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-056",
+      "feature_name": "LogEventSchema 구현 (7필드)",
+      "source_section": "MSTR §12.6",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "MSTR-057",
@@ -601,7 +881,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "api",
-      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만"
+      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-057",
+      "feature_name": "Tauri IPC Commands 72개 구현",
+      "source_section": "MSTR §13.1",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-058",
@@ -611,7 +896,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "api",
-      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만"
+      "notes": "PHASE_B1에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-058",
+      "feature_name": "Python-Rust JSON-RPC 13개 메서드 구현",
+      "source_section": "MSTR §13.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-059",
@@ -621,7 +911,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "domain",
-      "notes": "VAMOS_AI_INVESTING_SPEC에서 상세 정의, 여기서는 참조만"
+      "notes": "VAMOS_AI_INVESTING_SPEC에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-059",
+      "feature_name": "AINV 투자 분석 시스템 통합",
+      "source_section": "MSTR §18",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "MSTR-060",
@@ -631,7 +926,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "core",
-      "notes": "VAMOS_SDAR_DESIGN_SPECIFICATION에서 상세 정의, 여기서는 참조만"
+      "notes": "VAMOS_SDAR_DESIGN_SPECIFICATION에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-060",
+      "feature_name": "SDAR 5-Layer 파이프라인 구현 (I-25)",
+      "source_section": "MSTR §19",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "MSTR-061",
@@ -641,7 +941,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "workflow",
-      "notes": "VAMOS_AGENT_TEAMS_SPEC에서 상세 정의, 여기서는 참조만"
+      "notes": "VAMOS_AGENT_TEAMS_SPEC에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-061",
+      "feature_name": "Agent Teams 위임 시스템 구현",
+      "source_section": "MSTR §20",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "MSTR-062",
@@ -651,7 +956,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "infra",
-      "notes": "PHASE_B2에서 상세 정의, 여기서는 참조만"
+      "notes": "PHASE_B2에서 상세 정의, 여기서는 참조만",
+      "feature_id": "MSTR-062",
+      "feature_name": "Monorepo 프로젝트 구조 스캐폴딩",
+      "source_section": "MSTR §14",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-001",
@@ -661,7 +971,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-001",
+      "feature_name": "통신 계층 확정 — Python 백엔드 (V0-004)",
+      "source_section": "IRGD §2.1.1",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-002",
@@ -671,7 +986,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-002",
+      "feature_name": "BASE-1.3 24개 규칙 코드 매핑 구현",
+      "source_section": "IRGD §2.2",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-003",
@@ -681,7 +1001,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-003",
+      "feature_name": "D2.1 스키마 → 3개 언어 코드 생성 (24개 스키마)",
+      "source_section": "IRGD §2.6",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-004",
@@ -691,7 +1016,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-004",
+      "feature_name": "config.v1.toml LOCK 값 배치 (22개)",
+      "source_section": "IRGD §2.5",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-005",
@@ -701,7 +1031,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-005",
+      "feature_name": "V0 구현 대상 모듈 스켈레톤 (I-1~I-5 + I-19)",
+      "source_section": "IRGD §2.7",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRGD-006",
@@ -711,7 +1046,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "schema",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-006",
+      "feature_name": "approval_status enum 4값 통일 (V1-004)",
+      "source_section": "IRGD §3.3.1",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-007",
@@ -721,7 +1061,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-007",
+      "feature_name": "QoD 5요소 공식 통일 구현 (V1-006)",
+      "source_section": "IRGD §3.3.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-008",
@@ -731,7 +1076,12 @@
       "priority": "CRITICAL",
       "version": "V1",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-008",
+      "feature_name": "14개 보안 CRITICAL 항목 구현 (S7E)",
+      "source_section": "IRGD §3.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-009",
@@ -741,7 +1091,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-009",
+      "feature_name": "테스트 인프라 구축 (커버리지 80%+)",
+      "source_section": "IRGD §3.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-010",
@@ -751,7 +1106,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-010",
+      "feature_name": "CI/CD 8-Stage 파이프라인 구축",
+      "source_section": "IRGD §3.7",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-011",
@@ -761,7 +1121,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-011",
+      "feature_name": "Pydantic→Zod 자동 변환기 구현 (CC-007)",
+      "source_section": "IRGD §6.6",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRGD-012",
@@ -771,7 +1136,12 @@
       "priority": "HIGH",
       "version": "V2",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-012",
+      "feature_name": "SQLite→PostgreSQL 마이그레이션 (V2-004)",
+      "source_section": "IRGD §4.2.1",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "IRGD-013",
@@ -781,7 +1151,12 @@
       "priority": "HIGH",
       "version": "V2",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-013",
+      "feature_name": "Chroma→Qdrant 벡터 마이그레이션 (V2-005)",
+      "source_section": "IRGD §4.2.2",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "IRGD-014",
@@ -791,7 +1166,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "storage",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-014",
+      "feature_name": "NetworkX→Neo4j 그래프 마이그레이션 (V2-006)",
+      "source_section": "IRGD §4.2.3",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "IRGD-015",
@@ -801,7 +1181,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-015",
+      "feature_name": "HMAC-SHA256 키 관리 프로토콜 구현 (CC-012)",
+      "source_section": "IRGD §6.7",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "IRGD-016",
@@ -811,7 +1196,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "schema",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRGD-016",
+      "feature_name": "EventTypeRegistry agent.*/sdar.* 통합 등록 (CC-006)",
+      "source_section": "IRGD §6.5",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRRV-001",
@@ -821,7 +1211,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "doc_fix",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-001",
+      "feature_name": "BLOCKER 해결 — I-모듈 번호 매핑표 추가 (BLK-1)",
+      "source_section": "IRRV §2.1 BLK-1",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRRV-002",
@@ -831,7 +1226,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-002",
+      "feature_name": "BLOCKER 해결 — P0 도메인 리스트 확정 (BLK-2)",
+      "source_section": "IRRV §2.1 BLK-2",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRRV-003",
@@ -841,7 +1241,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "schema",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-003",
+      "feature_name": "BLOCKER 해결 — Storage 이벤트/실패 코드 등록 (BLK-3)",
+      "source_section": "IRRV §2.1 BLK-3",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRRV-004",
@@ -851,7 +1256,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "doc_fix",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-004",
+      "feature_name": "BLOCKER 해결 — 다운시프트 임계값 정본 통일 (BLK-4)",
+      "source_section": "IRRV §2.1 BLK-4",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRRV-005",
@@ -861,7 +1271,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "doc_fix",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-005",
+      "feature_name": "BLOCKER 해결 — 스키마 버전 v3.0.0 일괄 승격 (BLK-8)",
+      "source_section": "IRRV §2.1 BLK-8",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "IRRV-006",
@@ -871,7 +1286,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "workflow",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-006",
+      "feature_name": "V1 구현 순서 5-Phase 실행",
+      "source_section": "IRRV §5.2",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "IRRV-007",
@@ -881,7 +1301,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "IRRV-007",
+      "feature_name": "V0 스캐폴딩 11단계 실행",
+      "source_section": "IRRV §5.1",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "V0RD-001",
@@ -891,7 +1316,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "doc_fix",
-      "notes": "IRRV-001과 동일 이슈, 여기서 상세 근거 제공"
+      "notes": "IRRV-001과 동일 이슈, 여기서 상세 근거 제공",
+      "feature_id": "V0RD-001",
+      "feature_name": "BLOCKER 해결 — PLAN vs DESIGN I-모듈 불일치 교정",
+      "source_section": "V0RD PART 1 BLOCKER 1",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "V0RD-002",
@@ -901,7 +1331,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "doc_fix",
-      "notes": "IRRV-002와 동일 이슈, 여기서 상세 근거 제공"
+      "notes": "IRRV-002와 동일 이슈, 여기서 상세 근거 제공",
+      "feature_id": "V0RD-002",
+      "feature_name": "P0/P1/P2 도메인 분류 PLAN 3.0 공식 추가",
+      "source_section": "V0RD PART 1 BLOCKER 2",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "V0RD-003",
@@ -911,7 +1346,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-003",
+      "feature_name": "V1 HIGH 이슈 12건 해소 구현",
+      "source_section": "V0RD PART 3 §3.1",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-004",
@@ -921,7 +1361,12 @@
       "priority": "MEDIUM",
       "version": "V2",
       "category": "core",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-004",
+      "feature_name": "V2 이슈 12건 해소 구현",
+      "source_section": "V0RD PART 3 §3.2",
+      "version_scope": "V2",
+      "extractable": true
     },
     {
       "id": "V0RD-005",
@@ -931,7 +1376,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "ui",
-      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의",
+      "feature_id": "V0RD-005",
+      "feature_name": "UI/UX 코딩 — 핵심 레이아웃 4종 구현",
+      "source_section": "V0RD PART 4 §4.1.A",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-006",
@@ -941,7 +1391,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "ui",
-      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의",
+      "feature_id": "V0RD-006",
+      "feature_name": "UI/UX 코딩 — React 페이지 5개 구현",
+      "source_section": "V0RD PART 4 §4.1.B",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-007",
@@ -951,7 +1406,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "ui",
-      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의"
+      "notes": "D2.0-08에서 상세 정의, 여기서는 코딩 작업량 관점 정의",
+      "feature_id": "V0RD-007",
+      "feature_name": "UI/UX 코딩 — React 컴포넌트 39개 구현",
+      "source_section": "V0RD PART 4 §4.1.C",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-008",
@@ -961,7 +1421,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "ui",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-008",
+      "feature_name": "Custom Hooks 8개 + Zustand Stores 7개 구현",
+      "source_section": "V0RD PART 4 §4.1.D",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-009",
@@ -971,7 +1436,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "ui",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-009",
+      "feature_name": "i18n 국제화 구현",
+      "source_section": "V0RD PART 4 §4.1.E",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-010",
@@ -981,7 +1451,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "api",
-      "notes": "MSTR-057과 동일, 여기서는 Rust 관점"
+      "notes": "MSTR-057과 동일, 여기서는 Rust 관점",
+      "feature_id": "V0RD-010",
+      "feature_name": "72개 Tauri IPC 커맨드 핸들러 Rust 구현",
+      "source_section": "V0RD PART 4 §4.2.A",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-011",
@@ -991,7 +1466,12 @@
       "priority": "CRITICAL",
       "version": "V0",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-011",
+      "feature_name": "python_manager.rs 구현 (Python 프로세스 관리)",
+      "source_section": "V0RD PART 4 §4.2.C",
+      "version_scope": "V0",
+      "extractable": true
     },
     {
       "id": "V0RD-012",
@@ -1001,7 +1481,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-012",
+      "feature_name": "테스트 코딩 ~97개 구현",
+      "source_section": "V0RD PART 4 §4.3",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-013",
@@ -1011,7 +1496,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-013",
+      "feature_name": "CI/CD GitHub Actions 워크플로우 14개 구현",
+      "source_section": "V0RD PART 4 §4.4",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-014",
@@ -1021,7 +1511,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "workflow",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-014",
+      "feature_name": "LangGraph StateGraph 5-Phase 파이프라인 코딩",
+      "source_section": "V0RD PART 4 §4.8",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-015",
@@ -1031,7 +1526,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-015",
+      "feature_name": "이벤트/로깅 시스템 구현",
+      "source_section": "V0RD PART 4 §4.9",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-016",
@@ -1041,7 +1541,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-016",
+      "feature_name": "MCP 서버/클라이언트 코딩 7개",
+      "source_section": "V0RD PART 4 §4.7",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-017",
@@ -1051,7 +1556,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "infra",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-017",
+      "feature_name": "Multi-Brain Adapter 구현 (A-1)",
+      "source_section": "V0RD PART 4 §4.10",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "V0RD-018",
@@ -1061,7 +1571,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "ui",
-      "notes": ""
+      "notes": "",
+      "feature_id": "V0RD-018",
+      "feature_name": "멀티모달 UI 구현 (V1 핵심 7종)",
+      "source_section": "V0RD PART 4 §4.1.G",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "CLAUDE-001",
@@ -1071,7 +1586,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "core",
-      "notes": "MSTR에서 B-Series는 기억유형(B-1~B-4)으로 정의되나 CLAUDE에서는 별도 모듈 시리즈로 확장 정의"
+      "notes": "MSTR에서 B-Series는 기억유형(B-1~B-4)으로 정의되나 CLAUDE에서는 별도 모듈 시리즈로 확장 정의",
+      "feature_id": "CLAUDE-001",
+      "feature_name": "B-Series 6개 모듈 구현 (Memory/Skill/Self-evo 자산)",
+      "source_section": "CLAUDE §6 B-Series",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "CLAUDE-002",
@@ -1081,7 +1601,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "core",
-      "notes": "C-1~C-3은 V1 ON, C-4~C-7은 V3"
+      "notes": "C-1~C-3은 V1 ON, C-4~C-7은 V3",
+      "feature_id": "CLAUDE-002",
+      "feature_name": "C-Series 7개 Verifier/Reasoning 모듈 구현",
+      "source_section": "CLAUDE §6 C-Series",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "CLAUDE-003",
@@ -1091,7 +1616,12 @@
       "priority": "HIGH",
       "version": "V1",
       "category": "core",
-      "notes": "D-1~D-2는 V1 ON, D-3~D-6은 V3"
+      "notes": "D-1~D-2는 V1 ON, D-3~D-6은 V3",
+      "feature_id": "CLAUDE-003",
+      "feature_name": "D-Series 6개 Brain/Planner/RAG 모듈 구현",
+      "source_section": "CLAUDE §6 D-Series",
+      "version_scope": "V1",
+      "extractable": true
     },
     {
       "id": "CLAUDE-004",
@@ -1101,7 +1631,12 @@
       "priority": "LOW",
       "version": "V3",
       "category": "ui",
-      "notes": ""
+      "notes": "",
+      "feature_id": "CLAUDE-004",
+      "feature_name": "WCAG 2.1 AA 접근성 구현",
+      "source_section": "MSTR §10.7",
+      "version_scope": "V3",
+      "extractable": true
     },
     {
       "id": "CLAUDE-005",
@@ -1111,7 +1646,12 @@
       "priority": "MEDIUM",
       "version": "V1",
       "category": "safety",
-      "notes": ""
+      "notes": "",
+      "feature_id": "CLAUDE-005",
+      "feature_name": "AINV 투자 특화 안전 규칙 구현",
+      "source_section": "MSTR §9.8, §18.9",
+      "version_scope": "V1",
+      "extractable": true
     }
   ],
   "statistics": {

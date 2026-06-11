@@ -55,3 +55,43 @@ python D:\VAMOS\.claude\hooks\sot_search.py \
 ## 저장 위치
 - 인덱스: Milvus `vamos_sot` 컬렉션 (localhost:19530)
 - 검색 결과: 콘솔 출력 (Markdown 테이블). 필요시 `--output` 옵션으로 JSON 저장 가능
+
+---
+
+## [SOT 2 확장] SOT 2 벡터 검색 (v2 추가)
+
+> 기존 SOT 68파일 인덱싱을 유지한 채, SOT 2 파일을 별도 컬렉션으로 인덱싱합니다.
+
+### 추가 인덱스 대상
+
+| 대상 | 파일 수 | 총 라인 | 컬렉션명 |
+|------|--------|---------|---------|
+| SOT 2 상세명세 | ~18 | ~10,000 | `vamos_sot2_specs` |
+| SOT 2 방식 C 요약 | ~7 | ~2,000 | `vamos_sot2_method_c` |
+| SOT 2 계획서 | ~18 | ~15,000 | `vamos_sot2_plans` |
+
+### 추가 명령어
+
+- `/sot-search sot2-index` → SOT 2 전체 인덱싱 (3개 컬렉션)
+- `/sot-search sot2 "검색어"` → SOT 2에서만 검색
+- `/sot-search all "검색어"` → SOT 원본 + SOT 2 + Part2 통합 검색
+- `/sot-search sot2-status` → SOT 2 인덱스 상태 (문서 수, 청크 수, 최종 인덱싱일)
+
+### 인덱싱 파라미터 (SOT 2 전용)
+
+```
+청크 크기: 500자 (기존 SOT와 동일)
+오버랩: 100자
+임베딩 모델: sentence-transformers (기존과 동일)
+한국어 최적화: KR-SBERT 설치 시 자동 사용 (E-45)
+```
+
+### 통합 검색 결과 포맷
+
+```
+| 순위 | 유사도 | 소스 | 파일 | 라인 | 내용 (축약) |
+|------|--------|------|------|------|-----------|
+| 1 | 0.93 | SOT 2 | 3-2_Multimodal/상세명세.md | L45 | MultimodalRequest... |
+| 2 | 0.89 | SOT | D2.0-01_Overview.md | L1234 | 멀티모달 해석기... |
+| 3 | 0.85 | Part2 | PART2.md | L2147 | D-2 Multimodal Engine... |
+```

@@ -106,3 +106,39 @@ Step 5: 종합 판정
 | 단일 컨텍스트에서 생성+검증 | **별도 Agent로 분리 (편향 차단)** |
 | 검증 결과도 AI가 자체 판단 | **결정론적 스크립트가 PASS/FAIL 판정** |
 | 환각 여부를 AI가 판단 | **프로그램이 source_text를 파일에서 직접 grep** |
+
+---
+
+## [SOT 2 확장] SOT 2 품질 게이트 파이프라인 (v2 추가)
+
+> 기존 EA JSON quality-gate를 유지한 채, SOT 2 산출물에 대한 품질 게이트 체인을 추가합니다.
+
+### SOT 2 품질 게이트 체인
+
+```
+/quality-gate sot2 {도메인}
+
+  Step 1: /validate sot2 → SDV-1~SDV-7 + SSV-1~SSV-3
+  Step 2: /sot2-cross-ref {도메인} → Layer 1~4 교차 참조 검증
+  Step 3: /sot-conflict sot2-scan → 해당 도메인 충돌 탐지
+  Step 4: /sot-check sot2 {항목} → LOCK 값 spot-check (상위 10건)
+  Step 5: Final Verdict
+```
+
+### SOT 2 품질 등급
+
+| 등급 | 기준 |
+|------|------|
+| **GOLD** | SDV 전 PASS + SSV 전 PASS + 교차참조 0 MISMATCH + LOCK 전 CONSISTENT |
+| **SILVER** | SDV 전 PASS + SSV 1건 이하 WARN + 교차참조 2건 이하 WARNING |
+| **BRONZE** | SDV 1건 이하 FAIL + 교차참조 5건 이하 WARNING |
+| **REJECT** | SDV 2건 이상 FAIL 또는 LOCK MISMATCH 1건 이상 |
+
+### 추가 명령어
+
+- `/quality-gate sot2 {도메인}` → 특정 도메인 SOT 2 품질 판정
+- `/quality-gate sot2-all` → 34개 도메인 전수 판정
+- `/quality-gate sot2-summary` → 전체 등급 분포 요약
+
+### 저장 위치
+- `D:/VAMOS/docs/sot 2/_quality-gate/{도메인}_verdict.json`

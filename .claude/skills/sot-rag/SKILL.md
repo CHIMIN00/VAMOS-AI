@@ -125,3 +125,45 @@ python D:\VAMOS\.claude\hooks\rag_context_injector.py \
 - `$ARGUMENTS`가 `disable`이면 → RAG 자동 주입 비활성화
 - `$ARGUMENTS`가 `status`이면 → 현재 상태 + 인덱스 통계 출력
 - `$ARGUMENTS`가 비어있으면 → 현재 상태 출력
+
+---
+
+## [SOT 2 확장] SOT 2 RAG 자동 주입 (v2 추가)
+
+> 기존 SOT 원본 RAG 주입을 유지한 채, SOT 2 상세명세를 추가 컨텍스트 소스로 활용합니다.
+
+### SOT 2 RAG 소스 우선순위
+
+```
+기존: SOT 원본 68파일 (vamos_sot 컬렉션)
+추가 (우선순위 순):
+  1. SOT 2 상세명세 (vamos_sot2_specs) — 도메인별 구현 상세
+  2. SOT 2 방식 C 요약 (vamos_sot2_method_c) — Part2 FULL 핵심 요약
+  3. SOT 2 계획서 (vamos_sot2_plans) — 도메인별 실행 계획
+```
+
+### 토큰 예산 분배 (확장)
+
+```
+기존: SOT 원본 top-3 구절 → 최대 3,000 토큰
+확장:
+  SOT 원본 top-2 구절 → 최대 2,000 토큰
+  SOT 2 top-2 구절 → 최대 2,000 토큰
+  방식 C 요약 top-1 구절 → 최대 1,000 토큰
+  합계: 최대 5,000 토큰 (조정 가능)
+```
+
+### 추가 명령어
+
+- `/sot-rag sot2-enable` → SOT 2 RAG 소스 추가 활성화
+- `/sot-rag sot2-disable` → SOT 2 RAG 소스 비활성화 (기존 SOT만)
+- `/sot-rag sot2-status` → SOT 2 RAG 주입 통계
+
+### SOT 2 작업 시 자동 주입 시나리오
+
+```
+도메인 상세 작업 중 (예: /sot2-plan-gen 3-2_Multimodal):
+  → 자동으로 3-2_Multimodal 상세명세 관련 구절 주입
+  → Part2 §6.1 멀티모달 UI 관련 방식 C 요약 주입
+  → SOT STEP7-J 관련 원본 구절 주입
+```

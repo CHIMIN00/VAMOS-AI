@@ -17,7 +17,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D2 DecisionSchema"
+      "schema_ref": "D2 DecisionSchema",
+      "feature_id": "PB1-001",
+      "feature_name": "Tauri IPC: vamos:decision:create",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-002",
@@ -29,7 +33,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D2 DecisionSchema"
+      "schema_ref": "D2 DecisionSchema",
+      "feature_id": "PB1-002",
+      "feature_name": "Tauri IPC: vamos:decision:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-003",
@@ -41,7 +49,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D2 DecisionSchema"
+      "schema_ref": "D2 DecisionSchema",
+      "feature_id": "PB1-003",
+      "feature_name": "Tauri IPC: vamos:decision:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-004",
@@ -53,7 +65,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D2 DecisionSchema"
+      "schema_ref": "D2 DecisionSchema",
+      "feature_id": "PB1-004",
+      "feature_name": "Tauri IPC: vamos:decision:lock",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-005",
@@ -65,7 +81,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Core",
-      "schema_ref": "D2 LogEventSchema"
+      "schema_ref": "D2 LogEventSchema",
+      "feature_id": "PB1-005",
+      "feature_name": "Tauri IPC: vamos:decision:event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-006",
@@ -77,7 +97,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D5 WorkflowStageSchema"
+      "schema_ref": "D5 WorkflowStageSchema",
+      "feature_id": "PB1-006",
+      "feature_name": "Tauri IPC: vamos:workflow:start",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-007",
@@ -89,7 +113,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D5 WorkflowStageSchema"
+      "schema_ref": "D5 WorkflowStageSchema",
+      "feature_id": "PB1-007",
+      "feature_name": "Tauri IPC: vamos:workflow:status",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-008",
@@ -101,7 +129,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D5 WorkflowStageSchema"
+      "schema_ref": "D5 WorkflowStageSchema",
+      "feature_id": "PB1-008",
+      "feature_name": "Tauri IPC: vamos:workflow:cancel",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-009",
@@ -113,7 +145,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D5 WorkflowOutputEnvelopeSchema"
+      "schema_ref": "D5 WorkflowOutputEnvelopeSchema",
+      "feature_id": "PB1-009",
+      "feature_name": "Tauri IPC: vamos:workflow:output",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-010",
@@ -125,7 +161,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Core",
-      "schema_ref": "D5 WorkflowStageSchema"
+      "schema_ref": "D5 WorkflowStageSchema",
+      "feature_id": "PB1-010",
+      "feature_name": "Tauri IPC: vamos:workflow:stage_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-011",
@@ -137,7 +177,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "D5 FailureReportSchema"
+      "schema_ref": "D5 FailureReportSchema",
+      "feature_id": "PB1-011",
+      "feature_name": "Tauri IPC: vamos:workflow:failure_report",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-012",
@@ -149,7 +193,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "-"
+      "schema_ref": "-",
+      "feature_id": "PB1-012",
+      "feature_name": "Tauri IPC: vamos:session:create",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-013",
@@ -161,7 +209,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "-"
+      "schema_ref": "-",
+      "feature_id": "PB1-013",
+      "feature_name": "Tauri IPC: vamos:session:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-014",
@@ -173,7 +225,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "-"
+      "schema_ref": "-",
+      "feature_id": "PB1-014",
+      "feature_name": "Tauri IPC: vamos:session:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-015",
@@ -185,7 +241,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Core",
-      "schema_ref": "-"
+      "schema_ref": "-",
+      "feature_id": "PB1-015",
+      "feature_name": "Tauri IPC: vamos:session:close",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-016",
@@ -197,7 +257,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D3 NodeRequestEnvelopeSchema"
+      "schema_ref": "D3 NodeRequestEnvelopeSchema",
+      "feature_id": "PB1-016",
+      "feature_name": "Tauri IPC: vamos:node:dispatch",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-017",
@@ -209,7 +273,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Agent",
-      "schema_ref": "D3 NodeResponseEnvelopeSchema"
+      "schema_ref": "D3 NodeResponseEnvelopeSchema",
+      "feature_id": "PB1-017",
+      "feature_name": "Tauri IPC: vamos:node:response",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-018",
@@ -221,7 +289,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D3 NodeCapabilityProfileSchema"
+      "schema_ref": "D3 NodeCapabilityProfileSchema",
+      "feature_id": "PB1-018",
+      "feature_name": "Tauri IPC: vamos:node:profile",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-019",
@@ -233,7 +305,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D3 NodeRegistry"
+      "schema_ref": "D3 NodeRegistry",
+      "feature_id": "PB1-019",
+      "feature_name": "Tauri IPC: vamos:node:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-020",
@@ -245,7 +321,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D3 NodeRegistry"
+      "schema_ref": "D3 NodeRegistry",
+      "feature_id": "PB1-020",
+      "feature_name": "Tauri IPC: vamos:node:register",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-021",
@@ -257,7 +337,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 GatePipelineMappingSchema"
+      "schema_ref": "D5 GatePipelineMappingSchema",
+      "feature_id": "PB1-021",
+      "feature_name": "Tauri IPC: vamos:pipeline:gate_status",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-022",
@@ -269,7 +353,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 GatePipelineMappingSchema"
+      "schema_ref": "D5 GatePipelineMappingSchema",
+      "feature_id": "PB1-022",
+      "feature_name": "Tauri IPC: vamos:pipeline:gate_mapping",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-023",
@@ -281,7 +369,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 VerifyChainEntrySchema"
+      "schema_ref": "D5 VerifyChainEntrySchema",
+      "feature_id": "PB1-023",
+      "feature_name": "Tauri IPC: vamos:pipeline:verify_chain",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-024",
@@ -293,7 +385,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 CircuitBreakerSchema"
+      "schema_ref": "D5 CircuitBreakerSchema",
+      "feature_id": "PB1-024",
+      "feature_name": "Tauri IPC: vamos:pipeline:circuit_breaker",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-025",
@@ -305,7 +401,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 HITLRequestSchema"
+      "schema_ref": "D5 HITLRequestSchema",
+      "feature_id": "PB1-025",
+      "feature_name": "Tauri IPC: vamos:pipeline:hitl_respond",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-026",
@@ -317,7 +417,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Agent",
-      "schema_ref": "D5 HITLRequestSchema"
+      "schema_ref": "D5 HITLRequestSchema",
+      "feature_id": "PB1-026",
+      "feature_name": "Tauri IPC: vamos:pipeline:hitl_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-027",
@@ -329,7 +433,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 AgentMarketplaceSchema"
+      "schema_ref": "D5 AgentMarketplaceSchema",
+      "feature_id": "PB1-027",
+      "feature_name": "Tauri IPC: vamos:marketplace:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-028",
@@ -341,7 +449,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 AgentMarketplaceSchema"
+      "schema_ref": "D5 AgentMarketplaceSchema",
+      "feature_id": "PB1-028",
+      "feature_name": "Tauri IPC: vamos:marketplace:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-029",
@@ -353,7 +465,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 AgentMarketplaceSchema"
+      "schema_ref": "D5 AgentMarketplaceSchema",
+      "feature_id": "PB1-029",
+      "feature_name": "Tauri IPC: vamos:marketplace:install",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-030",
@@ -365,7 +481,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Agent",
-      "schema_ref": "D5 AgentMarketplaceSchema"
+      "schema_ref": "D5 AgentMarketplaceSchema",
+      "feature_id": "PB1-030",
+      "feature_name": "Tauri IPC: vamos:marketplace:uninstall",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-031",
@@ -377,7 +497,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-031",
+      "feature_name": "Tauri IPC: vamos:memory:save",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-032",
@@ -389,7 +513,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-032",
+      "feature_name": "Tauri IPC: vamos:memory:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-033",
@@ -401,7 +529,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-033",
+      "feature_name": "Tauri IPC: vamos:memory:search",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-034",
@@ -413,7 +545,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-034",
+      "feature_name": "Tauri IPC: vamos:memory:delete",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-035",
@@ -425,7 +561,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-035",
+      "feature_name": "Tauri IPC: vamos:memory:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-036",
@@ -437,7 +577,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Storage",
-      "schema_ref": "D6 MemoryRecordSchema"
+      "schema_ref": "D6 MemoryRecordSchema",
+      "feature_id": "PB1-036",
+      "feature_name": "Tauri IPC: vamos:memory:update_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-037",
@@ -449,7 +593,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 VectorStoreAdapterSchema"
+      "schema_ref": "D6 VectorStoreAdapterSchema",
+      "feature_id": "PB1-037",
+      "feature_name": "Tauri IPC: vamos:vector:search",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-038",
@@ -461,7 +609,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 VectorStoreAdapterSchema"
+      "schema_ref": "D6 VectorStoreAdapterSchema",
+      "feature_id": "PB1-038",
+      "feature_name": "Tauri IPC: vamos:vector:upsert",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-039",
@@ -473,7 +625,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 VectorStoreAdapterSchema"
+      "schema_ref": "D6 VectorStoreAdapterSchema",
+      "feature_id": "PB1-039",
+      "feature_name": "Tauri IPC: vamos:vector:delete",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-040",
@@ -485,7 +641,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 VectorStoreAdapterSchema"
+      "schema_ref": "D6 VectorStoreAdapterSchema",
+      "feature_id": "PB1-040",
+      "feature_name": "Tauri IPC: vamos:vector:adapter_config",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-041",
@@ -497,7 +657,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 SemanticCacheSchema"
+      "schema_ref": "D6 SemanticCacheSchema",
+      "feature_id": "PB1-041",
+      "feature_name": "Tauri IPC: vamos:cache:semantic_lookup",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-042",
@@ -509,7 +673,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 SemanticCacheSchema"
+      "schema_ref": "D6 SemanticCacheSchema",
+      "feature_id": "PB1-042",
+      "feature_name": "Tauri IPC: vamos:cache:semantic_save",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-043",
@@ -521,7 +689,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D4 PromptCacheManagerSchema"
+      "schema_ref": "D4 PromptCacheManagerSchema",
+      "feature_id": "PB1-043",
+      "feature_name": "Tauri IPC: vamos:cache:prompt_lookup",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-044",
@@ -533,7 +705,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 SemanticCacheSchema"
+      "schema_ref": "D6 SemanticCacheSchema",
+      "feature_id": "PB1-044",
+      "feature_name": "Tauri IPC: vamos:cache:invalidate",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-045",
@@ -545,7 +721,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 GraphRAGConfigSchema"
+      "schema_ref": "D6 GraphRAGConfigSchema",
+      "feature_id": "PB1-045",
+      "feature_name": "Tauri IPC: vamos:graphrag:query",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-046",
@@ -557,7 +737,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 GraphRAGConfigSchema"
+      "schema_ref": "D6 GraphRAGConfigSchema",
+      "feature_id": "PB1-046",
+      "feature_name": "Tauri IPC: vamos:graphrag:config",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-047",
@@ -569,7 +753,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 SourceQoDSchema"
+      "schema_ref": "D6 SourceQoDSchema",
+      "feature_id": "PB1-047",
+      "feature_name": "Tauri IPC: vamos:qod:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-048",
@@ -581,7 +769,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Storage",
-      "schema_ref": "D6 SourceQoDSchema"
+      "schema_ref": "D6 SourceQoDSchema",
+      "feature_id": "PB1-048",
+      "feature_name": "Tauri IPC: vamos:qod:compute",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-049",
@@ -593,7 +785,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 PolicyCheckSchema"
+      "schema_ref": "D7 PolicyCheckSchema",
+      "feature_id": "PB1-049",
+      "feature_name": "Tauri IPC: vamos:policy:check",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-050",
@@ -605,7 +801,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 PolicyCheckSchema"
+      "schema_ref": "D7 PolicyCheckSchema",
+      "feature_id": "PB1-050",
+      "feature_name": "Tauri IPC: vamos:policy:result",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-051",
@@ -617,7 +817,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Safety",
-      "schema_ref": "D7 PolicyCheckSchema"
+      "schema_ref": "D7 PolicyCheckSchema",
+      "feature_id": "PB1-051",
+      "feature_name": "Tauri IPC: vamos:policy:block_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-052",
@@ -629,7 +833,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 CostBudgetSchema"
+      "schema_ref": "D7 CostBudgetSchema",
+      "feature_id": "PB1-052",
+      "feature_name": "Tauri IPC: vamos:cost:budget_get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-053",
@@ -641,7 +849,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 CostBudgetSchema"
+      "schema_ref": "D7 CostBudgetSchema",
+      "feature_id": "PB1-053",
+      "feature_name": "Tauri IPC: vamos:cost:budget_update",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-054",
@@ -653,7 +865,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 DownshiftSchema"
+      "schema_ref": "D7 DownshiftSchema",
+      "feature_id": "PB1-054",
+      "feature_name": "Tauri IPC: vamos:cost:downshift_status",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-055",
@@ -665,7 +881,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Safety",
-      "schema_ref": "D7 DownshiftSchema"
+      "schema_ref": "D7 DownshiftSchema",
+      "feature_id": "PB1-055",
+      "feature_name": "Tauri IPC: vamos:cost:downshift_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-056",
@@ -677,7 +897,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 ApprovalSchema"
+      "schema_ref": "D7 ApprovalSchema",
+      "feature_id": "PB1-056",
+      "feature_name": "Tauri IPC: vamos:approval:request",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-057",
@@ -689,7 +913,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 ApprovalSchema"
+      "schema_ref": "D7 ApprovalSchema",
+      "feature_id": "PB1-057",
+      "feature_name": "Tauri IPC: vamos:approval:decide",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-058",
@@ -701,7 +929,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 ApprovalSchema"
+      "schema_ref": "D7 ApprovalSchema",
+      "feature_id": "PB1-058",
+      "feature_name": "Tauri IPC: vamos:approval:get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-059",
@@ -713,7 +945,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 ApprovalSchema"
+      "schema_ref": "D7 ApprovalSchema",
+      "feature_id": "PB1-059",
+      "feature_name": "Tauri IPC: vamos:approval:list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-060",
@@ -725,7 +961,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Safety",
-      "schema_ref": "D7 ApprovalSchema"
+      "schema_ref": "D7 ApprovalSchema",
+      "feature_id": "PB1-060",
+      "feature_name": "Tauri IPC: vamos:approval:request_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-061",
@@ -737,7 +977,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 GuardrailsCheckSchema"
+      "schema_ref": "D7 GuardrailsCheckSchema",
+      "feature_id": "PB1-061",
+      "feature_name": "Tauri IPC: vamos:guardrails:check",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-062",
@@ -749,7 +993,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 GuardrailsCheckSchema"
+      "schema_ref": "D7 GuardrailsCheckSchema",
+      "feature_id": "PB1-062",
+      "feature_name": "Tauri IPC: vamos:guardrails:result",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-063",
@@ -761,7 +1009,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "Safety",
-      "schema_ref": "D7 GuardrailsCheckSchema"
+      "schema_ref": "D7 GuardrailsCheckSchema",
+      "feature_id": "PB1-063",
+      "feature_name": "Tauri IPC: vamos:guardrails:block_event",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-064",
@@ -773,7 +1025,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 RBACRoleSchema"
+      "schema_ref": "D7 RBACRoleSchema",
+      "feature_id": "PB1-064",
+      "feature_name": "Tauri IPC: vamos:rbac:get_role",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-065",
@@ -785,7 +1041,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 RBACRoleSchema"
+      "schema_ref": "D7 RBACRoleSchema",
+      "feature_id": "PB1-065",
+      "feature_name": "Tauri IPC: vamos:rbac:check_permission",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-066",
@@ -797,7 +1057,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 AutonomyLevelSchema"
+      "schema_ref": "D7 AutonomyLevelSchema",
+      "feature_id": "PB1-066",
+      "feature_name": "Tauri IPC: vamos:autonomy:get_level",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-067",
@@ -809,7 +1073,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "Safety",
-      "schema_ref": "D7 AutonomyLevelSchema"
+      "schema_ref": "D7 AutonomyLevelSchema",
+      "feature_id": "PB1-067",
+      "feature_name": "Tauri IPC: vamos:autonomy:set_level",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-068",
@@ -821,7 +1089,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "UI",
-      "schema_ref": "D2 LogEventSchema"
+      "schema_ref": "D2 LogEventSchema",
+      "feature_id": "PB1-068",
+      "feature_name": "Tauri IPC: vamos:ui:log_stream",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-069",
@@ -833,7 +1105,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "UI",
-      "schema_ref": "D8"
+      "schema_ref": "D8",
+      "feature_id": "PB1-069",
+      "feature_name": "Tauri IPC: vamos:ui:config_get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-070",
@@ -845,7 +1121,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "UI",
-      "schema_ref": "D8"
+      "schema_ref": "D8",
+      "feature_id": "PB1-070",
+      "feature_name": "Tauri IPC: vamos:ui:config_set",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-071",
@@ -857,7 +1137,11 @@
       "layer": "Tauri IPC",
       "direction": "invoke",
       "category": "UI",
-      "schema_ref": "D8"
+      "schema_ref": "D8",
+      "feature_id": "PB1-071",
+      "feature_name": "Tauri IPC: vamos:ui:theme_set",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-072",
@@ -869,7 +1153,11 @@
       "layer": "Tauri IPC",
       "direction": "event",
       "category": "UI",
-      "schema_ref": "D8"
+      "schema_ref": "D8",
+      "feature_id": "PB1-072",
+      "feature_name": "Tauri IPC: vamos:ui:notification",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-073",
@@ -881,7 +1169,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Core",
-      "schema_ref": "D5 WorkflowOutputEnvelopeSchema"
+      "schema_ref": "D5 WorkflowOutputEnvelopeSchema",
+      "feature_id": "PB1-073",
+      "feature_name": "JSON-RPC: langgraph.workflow.run",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-074",
@@ -893,7 +1185,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Core",
-      "schema_ref": "D5 WorkflowStageSchema"
+      "schema_ref": "D5 WorkflowStageSchema",
+      "feature_id": "PB1-074",
+      "feature_name": "JSON-RPC: langgraph.stage.execute",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-075",
@@ -905,7 +1201,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Core",
-      "schema_ref": "D2 DecisionSchema"
+      "schema_ref": "D2 DecisionSchema",
+      "feature_id": "PB1-075",
+      "feature_name": "JSON-RPC: langgraph.decision.create",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-076",
@@ -917,7 +1217,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Agent",
-      "schema_ref": "D3 NodeRequestEnvelopeSchema / NodeResponseEnvelopeSchema"
+      "schema_ref": "D3 NodeRequestEnvelopeSchema / NodeResponseEnvelopeSchema",
+      "feature_id": "PB1-076",
+      "feature_name": "JSON-RPC: langgraph.node.dispatch",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-077",
@@ -929,7 +1233,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Agent",
-      "schema_ref": "D5 VerifyChainEntrySchema"
+      "schema_ref": "D5 VerifyChainEntrySchema",
+      "feature_id": "PB1-077",
+      "feature_name": "JSON-RPC: langgraph.verify.run_chain",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-078",
@@ -941,7 +1249,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Storage",
-      "schema_ref": "D6 KBEmbeddingRecordSchema"
+      "schema_ref": "D6 KBEmbeddingRecordSchema",
+      "feature_id": "PB1-078",
+      "feature_name": "JSON-RPC: embedding.encode",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-079",
@@ -953,7 +1265,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Storage",
-      "schema_ref": "D6 VectorStoreAdapterSchema"
+      "schema_ref": "D6 VectorStoreAdapterSchema",
+      "feature_id": "PB1-079",
+      "feature_name": "JSON-RPC: embedding.store",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-080",
@@ -965,7 +1281,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Infra",
-      "schema_ref": "D4 BrainAdapterResponseSchema"
+      "schema_ref": "D4 BrainAdapterResponseSchema",
+      "feature_id": "PB1-080",
+      "feature_name": "JSON-RPC: llm.generate",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-081",
@@ -977,7 +1297,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Infra",
-      "schema_ref": "D4 InfraInvokeResultSchema"
+      "schema_ref": "D4 InfraInvokeResultSchema",
+      "feature_id": "PB1-081",
+      "feature_name": "JSON-RPC: llm.record_invoke",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-082",
@@ -989,7 +1313,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "Infra",
-      "schema_ref": "D4 RateLimitConfigSchema"
+      "schema_ref": "D4 RateLimitConfigSchema",
+      "feature_id": "PB1-082",
+      "feature_name": "JSON-RPC: llm.rate_limit.get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-083",
@@ -1001,7 +1329,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "MCP",
-      "schema_ref": "D3 MCPBridgeLayerSchema"
+      "schema_ref": "D3 MCPBridgeLayerSchema",
+      "feature_id": "PB1-083",
+      "feature_name": "JSON-RPC: mcp.bridge.init",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-084",
@@ -1013,7 +1345,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "MCP",
-      "schema_ref": "D3 MCPBridgeLayerSchema"
+      "schema_ref": "D3 MCPBridgeLayerSchema",
+      "feature_id": "PB1-084",
+      "feature_name": "JSON-RPC: mcp.bridge.health",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-085",
@@ -1025,7 +1361,11 @@
       "layer": "Python-Rust JSON-RPC",
       "direction": "Rust->Python",
       "category": "MCP",
-      "schema_ref": "D3 ToolCallRegistrySchema"
+      "schema_ref": "D3 ToolCallRegistrySchema",
+      "feature_id": "PB1-085",
+      "feature_name": "JSON-RPC: mcp.tools.discover",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-086",
@@ -1037,7 +1377,11 @@
       "layer": "MCP Tool Protocol",
       "direction": "Python->MCP Server",
       "category": "MCP",
-      "schema_ref": "MCP Streamable HTTP"
+      "schema_ref": "MCP Streamable HTTP",
+      "feature_id": "PB1-086",
+      "feature_name": "MCP: tools/call",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-087",
@@ -1049,7 +1393,11 @@
       "layer": "MCP Tool Protocol",
       "direction": "internal",
       "category": "MCP",
-      "schema_ref": "D4 ToolRegistryEntrySchema"
+      "schema_ref": "D4 ToolRegistryEntrySchema",
+      "feature_id": "PB1-087",
+      "feature_name": "MCP: mcp.tool_registry.get",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB1-088",
@@ -1061,7 +1409,11 @@
       "layer": "MCP Tool Protocol",
       "direction": "internal",
       "category": "MCP",
-      "schema_ref": "D4 ToolRegistryEntrySchema"
+      "schema_ref": "D4 ToolRegistryEntrySchema",
+      "feature_id": "PB1-088",
+      "feature_name": "MCP: mcp.tool_registry.list",
+      "source_file": "PHASE_B1_API_CONTRACT",
+      "extractable": true
     },
     {
       "id": "PB2-001",
@@ -1070,7 +1422,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "vamos/"
+      "module_path": "vamos/",
+      "feature_id": "PB2-001",
+      "feature_name": "Project Root Structure Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-002",
@@ -1079,7 +1435,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": ".github/workflows/"
+      "module_path": ".github/workflows/",
+      "feature_id": "PB2-002",
+      "feature_name": "GitHub Actions CI/CD Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-003",
@@ -1088,7 +1448,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": ".vscode/"
+      "module_path": ".vscode/",
+      "feature_id": "PB2-003",
+      "feature_name": "VSCode Shared Settings",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-004",
@@ -1097,7 +1461,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/"
+      "module_path": "src/",
+      "feature_id": "PB2-004",
+      "feature_name": "Frontend React Entry Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-005",
@@ -1106,7 +1474,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/common/"
+      "module_path": "src/components/common/",
+      "feature_id": "PB2-005",
+      "feature_name": "Frontend Common Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-006",
@@ -1115,7 +1487,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/layout/"
+      "module_path": "src/components/layout/",
+      "feature_id": "PB2-006",
+      "feature_name": "Frontend Layout Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-007",
@@ -1124,7 +1500,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/canvas/"
+      "module_path": "src/components/canvas/",
+      "feature_id": "PB2-007",
+      "feature_name": "Frontend Canvas Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-008",
@@ -1133,7 +1513,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/artifacts/"
+      "module_path": "src/components/artifacts/",
+      "feature_id": "PB2-008",
+      "feature_name": "Frontend Artifacts Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-009",
@@ -1142,7 +1526,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/notifications/"
+      "module_path": "src/components/notifications/",
+      "feature_id": "PB2-009",
+      "feature_name": "Frontend Notifications Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-010",
@@ -1151,7 +1539,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/autonomy/"
+      "module_path": "src/components/autonomy/",
+      "feature_id": "PB2-010",
+      "feature_name": "Frontend Autonomy Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-011",
@@ -1160,7 +1552,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/decision/"
+      "module_path": "src/components/decision/",
+      "feature_id": "PB2-011",
+      "feature_name": "Frontend Decision Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-012",
@@ -1169,7 +1565,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/memory/"
+      "module_path": "src/components/memory/",
+      "feature_id": "PB2-012",
+      "feature_name": "Frontend Memory Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-013",
@@ -1178,7 +1578,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/cost/"
+      "module_path": "src/components/cost/",
+      "feature_id": "PB2-013",
+      "feature_name": "Frontend Cost Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-014",
@@ -1187,7 +1591,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/components/log/"
+      "module_path": "src/components/log/",
+      "feature_id": "PB2-014",
+      "feature_name": "Frontend Log Components Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-015",
@@ -1196,7 +1604,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/pages/"
+      "module_path": "src/pages/",
+      "feature_id": "PB2-015",
+      "feature_name": "Frontend Pages Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-016",
@@ -1205,7 +1617,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/hooks/"
+      "module_path": "src/hooks/",
+      "feature_id": "PB2-016",
+      "feature_name": "Frontend Custom Hooks Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-017",
@@ -1214,7 +1630,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/stores/"
+      "module_path": "src/stores/",
+      "feature_id": "PB2-017",
+      "feature_name": "Frontend Stores Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-018",
@@ -1223,7 +1643,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/types/"
+      "module_path": "src/types/",
+      "feature_id": "PB2-018",
+      "feature_name": "Frontend Types Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-019",
@@ -1232,7 +1656,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/utils/"
+      "module_path": "src/utils/",
+      "feature_id": "PB2-019",
+      "feature_name": "Frontend Utils Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-020",
@@ -1241,7 +1669,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/styles/"
+      "module_path": "src/styles/",
+      "feature_id": "PB2-020",
+      "feature_name": "Frontend Styles Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-021",
@@ -1250,7 +1682,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/assets/"
+      "module_path": "src/assets/",
+      "feature_id": "PB2-021",
+      "feature_name": "Frontend Assets Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-022",
@@ -1259,7 +1695,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/"
+      "module_path": "src-tauri/",
+      "feature_id": "PB2-022",
+      "feature_name": "Rust Tauri Core Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-023",
@@ -1268,7 +1708,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/commands/"
+      "module_path": "src-tauri/src/commands/",
+      "feature_id": "PB2-023",
+      "feature_name": "Rust IPC Commands Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-024",
@@ -1277,7 +1721,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/bridge/"
+      "module_path": "src-tauri/src/bridge/",
+      "feature_id": "PB2-024",
+      "feature_name": "Rust Python Bridge Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-025",
@@ -1286,7 +1734,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/state/"
+      "module_path": "src-tauri/src/state/",
+      "feature_id": "PB2-025",
+      "feature_name": "Rust State Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-026",
@@ -1295,7 +1747,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/models/"
+      "module_path": "src-tauri/src/models/",
+      "feature_id": "PB2-026",
+      "feature_name": "Rust Data Models Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-027",
@@ -1304,7 +1760,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/utils/"
+      "module_path": "src-tauri/src/utils/",
+      "feature_id": "PB2-027",
+      "feature_name": "Rust Utils Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-028",
@@ -1313,7 +1773,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/"
+      "module_path": "backend/",
+      "feature_id": "PB2-028",
+      "feature_name": "Python Backend Package Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-029",
@@ -1322,7 +1786,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/orange_core/"
+      "module_path": "backend/vamos_core/orange_core/",
+      "feature_id": "PB2-029",
+      "feature_name": "Python Orange Core Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-030",
@@ -1331,7 +1799,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/blue_nodes/"
+      "module_path": "backend/vamos_core/blue_nodes/",
+      "feature_id": "PB2-030",
+      "feature_name": "Python Blue Nodes Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-031",
@@ -1340,7 +1812,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/infra/"
+      "module_path": "backend/vamos_core/infra/",
+      "feature_id": "PB2-031",
+      "feature_name": "Python Infra Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-032",
@@ -1349,7 +1825,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/agent/"
+      "module_path": "backend/vamos_core/agent/",
+      "feature_id": "PB2-032",
+      "feature_name": "Python Agent Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-033",
@@ -1358,7 +1838,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/storage/"
+      "module_path": "backend/vamos_core/storage/",
+      "feature_id": "PB2-033",
+      "feature_name": "Python Storage Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-034",
@@ -1367,7 +1851,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/safety/"
+      "module_path": "backend/vamos_core/safety/",
+      "feature_id": "PB2-034",
+      "feature_name": "Python Safety Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-035",
@@ -1376,7 +1864,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/schemas/"
+      "module_path": "backend/vamos_core/schemas/",
+      "feature_id": "PB2-035",
+      "feature_name": "Python Schemas Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-036",
@@ -1385,7 +1877,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/vamos_core/mcp/"
+      "module_path": "backend/vamos_core/mcp/",
+      "feature_id": "PB2-036",
+      "feature_name": "Python MCP Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-037",
@@ -1394,7 +1890,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "shared/"
+      "module_path": "shared/",
+      "feature_id": "PB2-037",
+      "feature_name": "Shared Types Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-038",
@@ -1403,7 +1903,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "backend/tests/"
+      "module_path": "backend/tests/",
+      "feature_id": "PB2-038",
+      "feature_name": "Python Test Directory Structure",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-039",
@@ -1412,7 +1916,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src/__tests__/"
+      "module_path": "src/__tests__/",
+      "feature_id": "PB2-039",
+      "feature_name": "React Test Directory Structure",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-040",
@@ -1421,7 +1929,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "src-tauri/src/tests/"
+      "module_path": "src-tauri/src/tests/",
+      "feature_id": "PB2-040",
+      "feature_name": "Rust Test Module",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-041",
@@ -1430,7 +1942,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "tests/"
+      "module_path": "tests/",
+      "feature_id": "PB2-041",
+      "feature_name": "Root Integration Tests",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-042",
@@ -1439,7 +1955,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "config/"
+      "module_path": "config/",
+      "feature_id": "PB2-042",
+      "feature_name": "Config Directory Structure",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-043",
@@ -1448,7 +1968,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "scripts/"
+      "module_path": "scripts/",
+      "feature_id": "PB2-043",
+      "feature_name": "Scripts Directory Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB2-044",
@@ -1457,7 +1981,11 @@
       "type": "FT-INFRA",
       "source_doc": "PHASE_B2_PROJECT_STRUCTURE",
       "version_scope": "V1",
-      "module_path": "vamos/"
+      "module_path": "vamos/",
+      "feature_id": "PB2-044",
+      "feature_name": "Root Config Files Setup",
+      "source_file": "PHASE_B2_PROJECT_STRUCTURE",
+      "extractable": true
     },
     {
       "id": "PB3-001",
@@ -1466,7 +1994,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-001",
+      "feature_name": "Frontend Dep: react + react-dom",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-002",
@@ -1475,7 +2007,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-002",
+      "feature_name": "Frontend Dep: react-router-dom",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-003",
@@ -1484,7 +2020,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-003",
+      "feature_name": "Frontend Dep: @tauri-apps/api + plugin-shell",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-004",
@@ -1493,7 +2033,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-004",
+      "feature_name": "Frontend Dep: zustand",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-005",
@@ -1502,7 +2046,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-005",
+      "feature_name": "Frontend Dep: @tanstack/react-query",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-006",
@@ -1511,7 +2059,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-006",
+      "feature_name": "Frontend Dep: recharts",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-007",
@@ -1520,7 +2072,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-007",
+      "feature_name": "Frontend Dep: @xyflow/react",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-008",
@@ -1529,7 +2085,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend dependencies"
+      "dep_section": "Frontend dependencies",
+      "feature_id": "PB3-008",
+      "feature_name": "Frontend Dep: date-fns + clsx + lucide-react + sonner + zod",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-009",
@@ -1538,7 +2098,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend devDependencies"
+      "dep_section": "Frontend devDependencies",
+      "feature_id": "PB3-009",
+      "feature_name": "Frontend DevDeps: TypeScript + Vite + Vitest toolchain",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-010",
@@ -1547,7 +2111,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend devDependencies"
+      "dep_section": "Frontend devDependencies",
+      "feature_id": "PB3-010",
+      "feature_name": "Frontend DevDeps: TailwindCSS + PostCSS + Autoprefixer",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-011",
@@ -1556,7 +2124,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend devDependencies"
+      "dep_section": "Frontend devDependencies",
+      "feature_id": "PB3-011",
+      "feature_name": "Frontend DevDeps: ESLint + Prettier",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-012",
@@ -1565,7 +2137,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Frontend devDependencies"
+      "dep_section": "Frontend devDependencies",
+      "feature_id": "PB3-012",
+      "feature_name": "Frontend DevDep: @tauri-apps/cli",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-013",
@@ -1574,7 +2150,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-013",
+      "feature_name": "Rust Dep: tauri + tauri-plugin-shell",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-014",
@@ -1583,7 +2163,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-014",
+      "feature_name": "Rust Dep: serde + serde_json",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-015",
@@ -1592,7 +2176,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-015",
+      "feature_name": "Rust Dep: tokio",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-016",
@@ -1601,7 +2189,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-016",
+      "feature_name": "Rust Dep: reqwest",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-017",
@@ -1610,7 +2202,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-017",
+      "feature_name": "Rust Dep: chrono + uuid + thiserror + anyhow",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-018",
@@ -1619,7 +2215,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-018",
+      "feature_name": "Rust Dep: tracing + tracing-subscriber",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-019",
@@ -1628,7 +2228,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dependencies"
+      "dep_section": "Rust dependencies",
+      "feature_id": "PB3-019",
+      "feature_name": "Rust Dep: toml + dirs",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-020",
@@ -1637,7 +2241,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Rust dev-dependencies"
+      "dep_section": "Rust dev-dependencies",
+      "feature_id": "PB3-020",
+      "feature_name": "Rust DevDeps: tauri-build + tokio-test + tempfile",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-021",
@@ -1646,7 +2254,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python core"
+      "dep_section": "Python core",
+      "feature_id": "PB3-021",
+      "feature_name": "Python Core Deps: pydantic + pydantic-settings",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-022",
@@ -1655,7 +2267,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python core"
+      "dep_section": "Python core",
+      "feature_id": "PB3-022",
+      "feature_name": "Python Core Deps: langgraph + langchain-core",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-023",
@@ -1664,7 +2280,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python core"
+      "dep_section": "Python core",
+      "feature_id": "PB3-023",
+      "feature_name": "Python Core Deps: langchain-openai + langchain-community",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-024",
@@ -1673,7 +2293,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python embedding"
+      "dep_section": "Python embedding",
+      "feature_id": "PB3-024",
+      "feature_name": "Python Embedding Deps: FlagEmbedding + sentence-transformers + torch",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-025",
@@ -1682,7 +2306,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python embedding"
+      "dep_section": "Python embedding",
+      "feature_id": "PB3-025",
+      "feature_name": "Python Embedding Dep: openai SDK",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-026",
@@ -1691,7 +2319,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python vector"
+      "dep_section": "Python vector",
+      "feature_id": "PB3-026",
+      "feature_name": "Python Vector Dep: chromadb",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-027",
@@ -1700,7 +2332,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python storage"
+      "dep_section": "Python storage",
+      "feature_id": "PB3-027",
+      "feature_name": "Python Storage Deps: aiosqlite + sqlalchemy + alembic",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-028",
@@ -1709,7 +2345,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python guardrails"
+      "dep_section": "Python guardrails",
+      "feature_id": "PB3-028",
+      "feature_name": "Python Guardrails Deps: nemoguardrails + guardrails-ai",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-029",
@@ -1718,7 +2358,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python mcp"
+      "dep_section": "Python mcp",
+      "feature_id": "PB3-029",
+      "feature_name": "Python MCP Deps: httpx + sse-starlette + starlette + uvicorn",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-030",
@@ -1727,7 +2371,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python utils"
+      "dep_section": "Python utils",
+      "feature_id": "PB3-030",
+      "feature_name": "Python Utils Deps: tiktoken + python-dotenv + structlog + rich + orjson + tenacity + aiofiles",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-031",
@@ -1736,7 +2384,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python dev"
+      "dep_section": "Python dev",
+      "feature_id": "PB3-031",
+      "feature_name": "Python Dev Deps: pytest + pytest-asyncio + pytest-cov + pytest-mock + ruff + mypy + pre-commit + pip-audit + ipython",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-032",
@@ -1745,7 +2397,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Python project metadata"
+      "dep_section": "Python project metadata",
+      "feature_id": "PB3-032",
+      "feature_name": "Python Project Metadata: requires-python >= 3.11",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB3-033",
@@ -1754,7 +2410,11 @@
       "type": "FT-CFG",
       "source_doc": "PHASE_B3_DEPENDENCIES",
       "version_scope": "V1",
-      "dep_section": "Security"
+      "dep_section": "Security",
+      "feature_id": "PB3-033",
+      "feature_name": "Security Audit Tools Configuration",
+      "source_file": "PHASE_B3_DEPENDENCIES",
+      "extractable": true
     },
     {
       "id": "PB4-001",
@@ -1764,7 +2424,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "core",
-      "key_count": 5
+      "key_count": 5,
+      "feature_id": "PB4-001",
+      "feature_name": "Config Section: [core] - ORANGE CORE Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-002",
@@ -1774,7 +2438,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "llm",
-      "key_count": 8
+      "key_count": 8,
+      "feature_id": "PB4-002",
+      "feature_name": "Config Section: [llm] - LLM Model Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-003",
@@ -1784,7 +2452,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "embedding",
-      "key_count": 5
+      "key_count": 5,
+      "feature_id": "PB4-003",
+      "feature_name": "Config Section: [embedding] - Embedding Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-004",
@@ -1794,7 +2466,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "vector_db",
-      "key_count": 5
+      "key_count": 5,
+      "feature_id": "PB4-004",
+      "feature_name": "Config Section: [vector_db] - Vector DB Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-005",
@@ -1804,7 +2480,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "graph_db",
-      "key_count": 5
+      "key_count": 5,
+      "feature_id": "PB4-005",
+      "feature_name": "Config Section: [graph_db] - Graph DB Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-006",
@@ -1814,7 +2494,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "storage",
-      "key_count": 11
+      "key_count": 11,
+      "feature_id": "PB4-006",
+      "feature_name": "Config Section: [storage] - Storage Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-007",
@@ -1824,7 +2508,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "cost",
-      "key_count": 7
+      "key_count": 7,
+      "feature_id": "PB4-007",
+      "feature_name": "Config Section: [cost] - Cost Budget Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-008",
@@ -1834,7 +2522,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "guardrails",
-      "key_count": 11
+      "key_count": 11,
+      "feature_id": "PB4-008",
+      "feature_name": "Config Section: [guardrails] - Guardrails Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-009",
@@ -1844,7 +2536,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "mcp",
-      "key_count": 4
+      "key_count": 4,
+      "feature_id": "PB4-009",
+      "feature_name": "Config Section: [mcp] - MCP Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-010",
@@ -1854,7 +2550,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "rbac",
-      "key_count": 2
+      "key_count": 2,
+      "feature_id": "PB4-010",
+      "feature_name": "Config Section: [rbac] - RBAC Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-011",
@@ -1864,7 +2564,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "rate_limit",
-      "key_count": 2
+      "key_count": 2,
+      "feature_id": "PB4-011",
+      "feature_name": "Config Section: [rate_limit] - Rate Limit Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-012",
@@ -1874,7 +2578,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "logging",
-      "key_count": 4
+      "key_count": 4,
+      "feature_id": "PB4-012",
+      "feature_name": "Config Section: [logging] - Logging Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-013",
@@ -1884,7 +2592,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "semantic_cache",
-      "key_count": 4
+      "key_count": 4,
+      "feature_id": "PB4-013",
+      "feature_name": "Config Section: [semantic_cache] - Semantic Cache Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-014",
@@ -1894,7 +2606,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "self_check",
-      "key_count": 4
+      "key_count": 4,
+      "feature_id": "PB4-014",
+      "feature_name": "Config Section: [self_check] - Self-check Thresholds (LOCK)",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-015",
@@ -1904,7 +2620,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "approval",
-      "key_count": 2
+      "key_count": 2,
+      "feature_id": "PB4-015",
+      "feature_name": "Config Section: [approval] - Approval Timeout (LOCK)",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-016",
@@ -1914,7 +2634,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "blue_nodes",
-      "key_count": 3
+      "key_count": 3,
+      "feature_id": "PB4-016",
+      "feature_name": "Config Section: [blue_nodes] - Blue Node Cap Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-017",
@@ -1924,7 +2648,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "ui",
-      "key_count": 4
+      "key_count": 4,
+      "feature_id": "PB4-017",
+      "feature_name": "Config Section: [ui] - UI Layout Settings",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-018",
@@ -1934,7 +2662,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "env_variables",
-      "key_count": 18
+      "key_count": 18,
+      "feature_id": "PB4-018",
+      "feature_name": "Environment Variables (.env) Spec",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-019",
@@ -1944,7 +2676,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "version_presets",
-      "key_count": 3
+      "key_count": 3,
+      "feature_id": "PB4-019",
+      "feature_name": "Config Version Presets (V1/V2/V3)",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-020",
@@ -1954,7 +2690,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "config_model",
-      "key_count": 13
+      "key_count": 13,
+      "feature_id": "PB4-020",
+      "feature_name": "Pydantic v2 VamosConfig Model Implementation",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     },
     {
       "id": "PB4-021",
@@ -1964,7 +2704,11 @@
       "source_doc": "PHASE_B4_CONFIG_SPEC",
       "version_scope": "V1",
       "config_section": "config_loader",
-      "key_count": 1
+      "key_count": 1,
+      "feature_id": "PB4-021",
+      "feature_name": "Config Loading Flow Implementation",
+      "source_file": "PHASE_B4_CONFIG_SPEC",
+      "extractable": true
     }
   ],
   "statistics": {
@@ -1987,8 +2731,27 @@
       "total_endpoints": 88
     },
     "pb4_config_sections": {
-      "main_13_sections": ["core", "llm", "embedding", "vector_db", "graph_db", "storage", "cost", "guardrails", "mcp", "rbac", "rate_limit", "logging", "semantic_cache"],
-      "additional_4_sections": ["self_check", "approval", "blue_nodes", "ui"],
+      "main_13_sections": [
+        "core",
+        "llm",
+        "embedding",
+        "vector_db",
+        "graph_db",
+        "storage",
+        "cost",
+        "guardrails",
+        "mcp",
+        "rbac",
+        "rate_limit",
+        "logging",
+        "semantic_cache"
+      ],
+      "additional_4_sections": [
+        "self_check",
+        "approval",
+        "blue_nodes",
+        "ui"
+      ],
       "total_sections": 17
     }
   }

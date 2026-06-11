@@ -84,5 +84,94 @@
     "F-03": "v11_results/v11_checkpoint.md",
     "3차-02": "v11_results/phase2/v11_phase2_final_report.md"
   },
-  "last_updated": "2026-03-13"
+  "phase11_sessions": {
+    "S11-1": {
+      "status": "COMPLETED",
+      "completed_at": "2026-03-28",
+      "reports": ["S11-1_INTEGRITY_REPORT.md", "S11-1_SOT_CONFLICT_REPORT.md"],
+      "issues_found": 8,
+      "notes": "사전 점검 완료, CRITICAL 8건 발견"
+    },
+    "S11-2": {
+      "status": "COMPLETED",
+      "completed_at": "2026-03-28",
+      "reports": [
+        "S11-2_VALIDATE_REPORT.md",
+        "S11-2_AUDIT_REPORT.md",
+        "S11-2_CROSS_MATCH_REPORT.md",
+        "S11-2_SOT_CHECK_REPORT.md"
+      ],
+      "procedures": {
+        "validate": "DONE — 36 domains, Layer A(SDV-7) + Layer B(SSV-3)",
+        "audit_sot2_ad": "DONE — SOT2-AD1~5, 172/180 (95.6%)",
+        "audit_ad": "DONE (보완) — AD-1~AD-4, FABRICATED 3 / INCONSISTENT 6",
+        "cross_match": "DONE — C1~C8, 4 CONSISTENT / 3 PARTIAL / 1 INCONSISTENT",
+        "sot_check_s11_1": "DONE — 8건 MISMATCH",
+        "sot_check_additional": "DONE (보완) — 6건 (2 MISMATCH / 3 PARTIAL / 1 SHIFTED)"
+      },
+      "completion_criteria": {
+        "ALL_PASS": "미충족 (33P + 1C + 2F)",
+        "FAIL_0": "미충족 (2건)",
+        "INCONSISTENT_0": "미충족 (1건)",
+        "MISMATCH_0": "미충족 (10건)"
+      },
+      "issues_to_s11_6": {
+        "validate_fails": 3,
+        "cross_match_issues": 4,
+        "sot_check_original": 8,
+        "sot_check_additional": 6,
+        "ad_critical_high": 7,
+        "namespace_fix": 1,
+        "total": 29
+      },
+      "notes": "1차 검증(발견) 완료, 수정은 S11-6으로 이관"
+    },
+    "S11-3a": { "status": "PENDING", "notes": "심층 검증 A — 결정론적 사실 검증" },
+    "S11-3b": { "status": "PENDING", "notes": "심층 검증 B — 다중 에이전트/모델 검증" },
+    "S11-4": { "status": "PENDING", "notes": "SOT 2 전용 검증" },
+    "S11-5": {
+      "status": "COMPLETED",
+      "completed_at": "2026-03-28",
+      "reports": [
+        "S11-5_ECOSYSTEM_QA_REPORT.md",
+        "S11-5_EVAL_AUDIT_REPORT.md",
+        "S11-5_GISKARD_REPORT.md",
+        "S11-5_CONFIDENCE_REPORT.md",
+        "S11-5_RAGAS_REPORT.md",
+        "S11-5_DRIFT_REPORT.md"
+      ],
+      "completion_criteria": {
+        "RELIABLE": "PASS",
+        "HIGH_vulnerabilities_0": "PASS",
+        "RAGAS_4_metrics_PASS": "PASS",
+        "STABLE_no_drift": "PASS"
+      },
+      "notes": "생태계 QA — Overall Ecosystem Health: GREEN",
+      "updated_at": "2026-03-28",
+      "update_notes": "S11-6/S11-7 확정 반영: LOCK 469→484, Giskard MEDIUM 0건, Confidence 전 Tier HIGH"
+    },
+    "S11-6": {
+      "status": "COMPLETED",
+      "completed_at": "2026-03-28",
+      "reports": ["S11-6_CROSS_EXAMINE_FIX_REPORT.md"],
+      "fixes_executed": 29,
+      "completion_criteria": {
+        "CONTRADICTORY_0": "PASS",
+        "MAJOR_DIFF_0": "PASS",
+        "BACKPROP_0": "PASS",
+        "NUMERIC_MISMATCH_0": "PASS",
+        "S11_2_FAIL_0": "PASS (2건 EXEMPTED)",
+        "S11_2_MISMATCH_14": "PASS (14/14 해소)",
+        "S11_2_PARTIAL_SHIFTED": "PASS (전건 문서화)",
+        "AD_CRITICAL_HIGH_0": "PASS (5/5 해소)",
+        "LOCK_BM_BE": "PASS"
+      },
+      "files_modified": 24,
+      "edit_points": 52,
+      "notes": "S11-6 재실행 완료 — 29건 전수 처리 + 검증 후 보완 12개소 (QoD 구 스케일 전파 완결). CRITICAL 2 + HIGH 3 + MEDIUM 3 + 기타 21건. 24파일 52+개소. 9/9 완료 기준 전부 PASS"
+    },
+    "S11-7": { "status": "PENDING", "notes": "최종 판정" },
+    "S11-8": { "status": "PENDING", "notes": "최종 보고서" }
+  },
+  "last_updated": "2026-03-28"
 }

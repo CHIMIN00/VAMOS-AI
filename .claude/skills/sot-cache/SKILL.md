@@ -218,3 +218,40 @@ v6~v13에서 이미 추출/검증된 구조화 산출물이 존재 → 이것을
   ]
 }
 ```
+
+---
+
+## [SOT 2 확장] SOT 2 참조 캐시 (v2 추가)
+
+> 기존 SOT 68파일 + Part2 캐시를 유지한 채, SOT 2 파일 세트를 추가 캐시 레이어로 등록합니다.
+
+### Tier 4: SOT 2 구조 인덱스 (신규)
+
+| 캐시 파일 | 경로 | 내용 |
+|----------|------|------|
+| SOT 2 Master Index | `docs/sot 2/SOT2_MASTER_INDEX.md` | 5 Tier / 19 대분류 / 107건 + COND 106개 |
+| 도메인별 상세명세 | `docs/sot 2/*/*.md` | ~18개 상세명세 (총 ~10,000줄) |
+| 방식 C 요약 | `docs/sot 2/_method-c-summaries/*.md` | Part2 FULL 7개 영역 요약 |
+| 계획서 | `docs/sot 2/*/*_구조화_종합계획서.md` | 도메인별 실행 계획 |
+| COND 종합명세 | `docs/sot 2/2-2_COND-Modules-Detail/COND_MODULES_종합명세.md` | 106개 모듈 카탈로그 |
+
+### 추가 명령어
+
+- `/sot-cache sot2` → SOT 2 전체 캐시 로딩
+- `/sot-cache sot2-refresh` → SOT 2 캐시 갱신 (파일 변경 감지)
+- `/sot-cache sot2-status` → SOT 2 캐시 상태 + 파일별 해시
+
+### 캐시 무효화 규칙 (SOT 2 전용)
+
+```
+SOT 2 파일 수정 → 해당 파일 캐시 무효
+Part2 정본 수정 → 방식 C 요약 캐시 무효 (sot2-method-c 재실행 필요)
+계획서 Phase 전환 → 해당 도메인 캐시 갱신
+```
+
+### 로딩 우선순위
+
+```
+기존: Tier 1 (Part2 섹션맵) > Tier 2 (Feature Registry) > Tier 3 (Consistency)
+추가: Tier 4 (SOT 2 인덱스) — 기존 Tier와 병렬 로딩 가능
+```

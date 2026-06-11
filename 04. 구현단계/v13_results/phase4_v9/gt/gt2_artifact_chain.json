@@ -909,23 +909,24 @@
     "by_version": {
       "V0": { "go_nogo": 16, "stage_gate": 58, "subset": 4, "superset": 8, "unique": 4 },
       "V1": { "go_nogo": 21, "stage_gate": 66, "subset": 5, "superset": 7, "unique": 9 },
-      "V2": { "go_nogo": 14, "stage_gate": 35, "subset": 5, "superset": 3, "unique": 6 },
-      "V3": { "go_nogo": 11, "stage_gate": 34, "subset": 8, "superset": 1, "unique": 2 }
+      "V2": { "go_nogo": 14, "stage_gate": 36, "subset": 5, "superset": 3, "unique": 6 },
+      "V3": { "go_nogo": 11, "stage_gate": 35, "subset": 8, "superset": 1, "unique": 2 }
     },
-    "implication": "Stage Gate(193)가 GO/NO-GO(62)보다 3배 이상 상세. GO/NO-GO는 버전 진입 시 상위 판정, Stage Gate는 단계별 세부 검증. UNIQUE 21건은 문서/정책 작업으로 코드 구현 Stage Gate에 대응 없음."
+    "implication": "Stage Gate(195)가 GO/NO-GO(62)보다 3배 이상 상세. GO/NO-GO는 버전 진입 시 상위 판정, Stage Gate는 단계별 세부 검증. UNIQUE 21건은 문서/정책 작업으로 코드 구현 Stage Gate에 대응 없음."
   },
 
   "verification": {
     "total_stages": 18,
-    "total_gate_conditions": 193,
+    "total_gate_conditions": 195,
     "by_version": {
       "V0": { "stages": 6, "gates": 58, "formula": "8 + 9 + 8 + 13 + 10 + 10 = 58" },
       "V1": { "stages": 6, "gates": 66, "formula": "10 + 12 + 11 + 12 + 11 + 10 = 66" },
-      "V2": { "stages": 3, "gates": 35, "formula": "10 + 13 + 12 = 35" },
-      "V3": { "stages": 3, "gates": 34, "formula": "10 + 12 + 12 = 34" }
+      "V2": { "stages": 3, "gates": 36, "formula": "10 + 14 + 12 = 36" },
+      "V3": { "stages": 3, "gates": 35, "formula": "10 + 13 + 12 = 35" }
     },
-    "grand_total": "58 + 66 + 35 + 34 = 193",
-    "all_gate_counts_verified": true
+    "grand_total": "58 + 66 + 36 + 35 = 195",
+    "all_gate_counts_verified": true,
+    "pass2_fix": "CRIT-005 resolved — V2 gates 35→36 (V2-Phase-2 gate_count=14), V3 gates 34→35 (V3-Phase-2 gate_count=13), total 193→195"
   },
 
   "validation_summary": {
@@ -934,7 +935,8 @@
     "base": "v9_gt2",
     "total_stages": 18,
     "total_gates_from_stages": 195,
-    "total_gates_from_original_verification": 193,
+    "total_gates_from_corrected_verification": 195,
+    "total_gates_from_original_verification_before_fix": 193,
     "version_breakdown": {
       "V0": {
         "stages": 6,
