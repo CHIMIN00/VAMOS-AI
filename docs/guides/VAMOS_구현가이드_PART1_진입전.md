@@ -546,7 +546,7 @@ TAURI_SIGNING_PRIVATE_KEY (V1에서 이관), TAURI_SIGNING_PRIVATE_KEY_PASSWORD 
 
 | 버전 | 월 비용 상한 (LOCK) | 일 비용 상한 | 외부 API Key | 서버 |
 |------|-------------------|-------------|-------------|------|
-| V0 | 테스트용 (~₩5,000) | - | OpenAI 1개 | 없음 (로컬) |
+| V0 | **₩0** (로컬 정본 — V0 자체 상한 LOCK 없음. API 연동 테스트 ~₩5,000은 비정본 예상치, 비용 엔진은 V1 한도 ₩40,000 사전 설정으로 통제) | - | OpenAI 1개 (연동 테스트용) | 없음 (로컬) |
 | V1 | **₩40,000** | ₩1,300 | OpenAI + Tavily + SerpAPI + E2B + Unstructured (5개) | 없음 (로컬) |
 | V2 | **₩93,000** | ₩3,100 | +Anthropic + Slack (7개) | VPS + Postgres + Qdrant (~₩45K) |
 | V3 | **₩266,000** | ₩8,900 | 동일 | +K8s + GPU (~₩190K) |
@@ -639,6 +639,8 @@ TAURI_SIGNING_PRIVATE_KEY (V1에서 이관), TAURI_SIGNING_PRIVATE_KEY_PASSWORD 
 
 ## C.2 V1 구현 중 결정 필요 (13건)
 
+> **[D11 배정 확정]** #9~13 전부 **Phase 6 (V1 구현)** 배정 — 로드맵(VAMOS_최종_로드맵.md) Phase 6 작업표 기준 #9=6-6(R3 운영 시작 실측), #10·#11·#12=6-3(R2a' CORE 활성화), #13=6-3 구현+6-7(B3' Eval) 확정. 항목별 상세는 각 행의 "배정" 표기 참조.
+
 | # | 결정 사항 | 현재 상태 | 권장안 | 근거 |
 |---|----------|----------|--------|------|
 | 1 | 한국어 기본 로컬 LLM | DEFER V1.1 | GPT-4o-mini 임시 사용 | SOLAR/Polyglot-Ko 벤치마크 미완 |
@@ -649,11 +651,11 @@ TAURI_SIGNING_PRIVATE_KEY (V1에서 이관), TAURI_SIGNING_PRIVATE_KEY_PASSWORD 
 | 6 | Blue Node 간 A2A 통신 | 미정의 (V1+) | V1=Lead 경유만, V2=MessageBus | Agent Teams 로드맵 |
 | 7 | React 버전 | 18 vs 19 | V1=React 18 | 생태계 안정성 |
 | 8 | contracts.py 12개 불일치 | ACTION-REQUIRED | Phase A에서 정렬 | AI Investing P0 blocker |
-| 9 | **메모리 저장 용량 한계** | 미정의 (TTL만 정의됨) | 실측 후 결정 | L0~L3 각 계층별 용량 상한 미정의. 구현 시 디스크 사용량 측정 필요 |
-| 10 | **RT-BNP RSS 소스 목록** | 미정의 | V1에서 구독할 RSS 피드 URL 리스트 확정 | CLOUD_LIBRARY_SPEC §7 확장 |
-| 11 | **RT-BNP Breaking 키워드 사전** | 미정의 | 속보 감지 트리거 키워드 목록 확정 | 도메인별 정의 필요 (금융/지정학/기술) |
-| 12 | **DCL-TECH RSS 소스 목록** | 미정의 | AI/기술 동향 수집 RSS 피드 URL 확정 | §6.10.2 |
-| 13 | **DCL 배경 요약 프롬프트** | 미정의 | I-3 L0에 주입할 "세상 상황 요약" 생성 프롬프트 확정 | §6.10.2 |
+| 9 | **메모리 저장 용량 한계** | 미정의 (TTL만 정의됨) | 실측 후 결정 | L0~L3 각 계층별 용량 상한 미정의. 구현 시 디스크 사용량 측정 필요 · **배정: Phase 6 (6-6 R3 운영 시작 — SQLite 모니터링 2~4주 실측 후 상한 확정)** |
+| 10 | **RT-BNP RSS 소스 목록** | 미정의 | V1에서 구독할 RSS 피드 URL 리스트 확정 | CLOUD_LIBRARY_SPEC §7 확장 · **배정: Phase 6 (6-3 R2a' CORE 활성화 — RT-BNP 구현 시 config.toml 등록)** |
+| 11 | **RT-BNP Breaking 키워드 사전** | 미정의 | 속보 감지 트리거 키워드 목록 확정 | 도메인별 정의 필요 (금융/지정학/기술) · **배정: Phase 6 (6-3 R2a' CORE 활성화 — 기본 키워드 세트 제공, 편집 UI는 6-5)** |
+| 12 | **DCL-TECH RSS 소스 목록** | 미정의 | AI/기술 동향 수집 RSS 피드 URL 확정 | §6.10.2 · **배정: Phase 6 (6-3 R2a' CORE 활성화 — DCL-TECH 구현 시 기본 추천 목록 등록)** |
+| 13 | **DCL 배경 요약 프롬프트** | 미정의 | I-3 L0에 주입할 "세상 상황 요약" 생성 프롬프트 확정 | §6.10.2 · **배정: Phase 6 (6-3 구현 + 6-7 B3' Eval — 실데이터 테스트로 프롬프트 확정)** |
 
 ### C.2 각 항목 상세 설명
 
@@ -700,13 +702,15 @@ TAURI_SIGNING_PRIVATE_KEY (V1에서 이관), TAURI_SIGNING_PRIVATE_KEY_PASSWORD 
 
 ## C.3 V2 이후 결정 필요 (5건)
 
+> **[D11 배정 확정]** #1~5는 현행 로드맵 Phase 2~6 **비해당(로드맵 범위 밖)** — 로드맵(VAMOS_최종_로드맵.md)은 Phase 6(V1 구현, 완료=git tag v1-release)에서 종료되므로, 본 5건은 V1 출시 후 차기 버전 사이클("Phase 1~5 반복" 패턴 준용)에서 처리한다: #1~#3=V2 사이클(#1은 Redis 확정으로 구현만 잔존), #4~#5=V3 사이클. 결정 정식화 시점은 각 사이클의 Phase 3(런타임 설계) 상당.
+
 | # | 결정 사항 | 대상 버전 | 현재 상태 | 권장안 |
 |---|----------|----------|----------|--------|
-| 1 | MessageBus 구현 (In-Memory vs Redis) | V2 | DEFER-AT-001 → Redis 확정 | **Redis (이미 확정)** |
-| 2 | GroupChat 순서 알고리즘 | V2 | DEFER-AT-002 | **Round-Robin + Priority Queue** |
-| 3 | Agent Marketplace 등록 기준 | V2 | DEFER-AT-003 | **QoD ≥ 0.7 + 테스트 10회 통과 + OWNER 승인** |
-| 4 | Federated Agent 승인 정책 | V3 | DEFER-AT-004 | **OWNER 수동승인 + 샌드박스 72시간 검증** |
-| 5 | A2A 프로토콜 설계 | V3 | DEFER-AT-005 | **JSON-RPC over Streamable HTTP (MCP LOCK 통일)** |
+| 1 | MessageBus 구현 (In-Memory vs Redis) | V2 | DEFER-AT-001 → Redis 확정 | **Redis (이미 확정)** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클, 결정 확정으로 구현(Phase 4 상당)만 잔존** |
+| 2 | GroupChat 순서 알고리즘 | V2 | DEFER-AT-002 | **Round-Robin + Priority Queue** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |
+| 3 | Agent Marketplace 등록 기준 | V2 | DEFER-AT-003 | **QoD ≥ 0.7 + 테스트 10회 통과 + OWNER 승인** · **배정: 로드맵 Phase 2~6 비해당 — V2 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |
+| 4 | Federated Agent 승인 정책 | V3 | DEFER-AT-004 | **OWNER 수동승인 + 샌드박스 72시간 검증** · **배정: 로드맵 Phase 2~6 비해당 — V3 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |
+| 5 | A2A 프로토콜 설계 | V3 | DEFER-AT-005 | **JSON-RPC over Streamable HTTP (MCP LOCK 통일)** · **배정: 로드맵 Phase 2~6 비해당 — V3 사이클 Phase 3 상당(런타임 설계)에서 정식 확정** |
 
 ### C.3 각 항목 상세 설명
 

@@ -291,7 +291,7 @@ Must 5개 완성 → D1 부분 실행 가능
 | 3-6 | R1: IPC JSON-RPC 사양 | Python↔Rust 통신. **인터페이스 계약 규칙 포함(A20)**: Pydantic 정본, Rust/TS 자동 생성, 수동 수정 금지 | **Must** | 순차 | |
 | 3-7 | R1: MCP Streamable HTTP | 외부 도구 통신 계약 | **Must** | 순차 | |
 | 3-7a | **R1: 다층 방어 설계 (A21)** | Defense Layer 1(config LOCK) + Defense Layer 2(5-Gate) + Defense Layer 3(NEVER_AUTO) 독립 3계층 확정. ※PART2 "Security Layer"와 다른 개념 — 내부 아키텍처 방어 계층 | **Must** | 3-7후 | |
-| 3-7b | **R1: 사용자 투명성 설계 (A22)** | ResponseEnvelope에 reasoning_trace + evidence_sources 추가. ※SOT 5필드 LOCK과의 관계 확정 필요 (선택지A: metadata 내부 포함 / 선택지B: LOCK 해제) — STRATEGY_05 §4.2 참조 | **Must** | 3-7a후 | |
+| 3-7b | **R1: 사용자 투명성 설계 (A22)** | ResponseEnvelope에 reasoning_trace + evidence_sources 추가. ※SOT 5필드 LOCK과의 관계 **확정(D6, 2026-06-11): 선택지A 채택** — reasoning_trace/evidence_sources는 metadata(dict) 내부 포함, 5필드 LOCK 보존 (선택지B LOCK 해제 기각, Approval Gate 불요) — STRATEGY_05 §4.2 참조 | **Must** | 3-7a후 | |
 | 3-7c | **R1: 예측 신뢰도 설계 (A25)** | Decision에 confidence_score(0.0~1.0) + 임계값(0.85/0.60/0.30 LOCK) + 행동 분기(HIGH/MEDIUM/LOW/REFUSE) | **Must** | 3-7b후 | |
 | 3-8 | X1: 보안 전략 | 7개 불변 + Permission Matrix + 감사 로그 + **책임 AI 체크리스트(A16)** + **다층 방어 검증 방법(A21)** | **Must** | ⓑ | security_strategy.md |
 | 3-9 | X1: 테스트 전략 | 테스트 피라미드 + 커버리지 80%+ | Should | 순차 | test_strategy.md |
@@ -603,3 +603,5 @@ Phase 3                Phase 4·5          Phase 6      ┃
 | PART2 | `docs\guides\VAMOS_구현가이드_PART2_구현단계.md` | 구현 순서 + 린터/CI |
 | READINESS | `docs\sot\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md` | GO/NO-GO 62건 |
 | LOCK Registry | `VAMOS HOME\00_HUB\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |
+
+> ※ **문서 위상 선언 — `docs\sot 3` (Living System Graph) [D15, 2026-06-11]**: `docs\sot 3\LIVING-SYSTEM-GRAPH\00~12`는 **DRAFT 제안 계층**이며 정본(SOT/SOT 2)이 아니다. 본 로드맵 Phase 0~6 및 참조 문서 맵에 미등재이고, 자체 GO 조건인 DEC-018 승인도 미수행 상태다. 알려진 정본 충돌(신규 이벤트 78개 ↔ 6-12 LOCK-EL-02 134항목·LOCK-EL-09 네임스페이스 8종 / DEC-018 ID ↔ 정본 DEC-018 백테스트 엔진 선택[D2.0-05·D2.1-D7])은 **채택 결정 전까지 효력 없음 — 정본은 6-12 AUTHORITY_CHAIN**이다. 채택하려면 LOCK_CHANGE_NEEDED 게이트 + DEC 재번호가 선행되어야 한다.

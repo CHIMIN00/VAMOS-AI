@@ -104,6 +104,8 @@ timeout_seconds: 30     # per question
 | 82% ≤ score < 85% | **BORDERLINE** | CI 상한이 85% 이상이면 조건부 PASS |
 | score < 82% | **FAIL** | LOCK-BE-01 미충족 |
 
+> ⚠️ **데이터 유효성 플래그 (D14, 2026-06-11)**: 현행 `benchmarks/golden_set/mmlu/`는 합성 템플릿 placeholder(세션3 S2 확정, manifest.json data_status=SYNTHETIC_PLACEHOLDER). **합성 데이터로 측정한 점수는 본 게이트 판정에 무효** — 실제 MMLU 층화 추출 재구축(Phase 2-0) 완료 후에만 LOCK-BE-01 판정 유효. LOCK 값(≥ 85%) 자체는 불변(재정의 0).
+
 ### 로깅 포맷 (R-01-7)
 
 ```json
@@ -216,6 +218,8 @@ ci_bootstrap_b: 10000
 | pass@1 ≥ 85% | **PASS** | LOCK-BE-02 충족 |
 | 82% ≤ pass@1 < 85% | **BORDERLINE** | CI 상한이 85% 이상이면 조건부 PASS |
 | pass@1 < 82% | **FAIL** | LOCK-BE-02 미충족 |
+
+> ⚠️ **데이터 유효성 플래그 (D14, 2026-06-11)**: 현행 `benchmarks/golden_set/humaneval/`은 합성 placeholder(세션3 S2 확정, manifest.json data_status=SYNTHETIC_PLACEHOLDER). **합성 데이터로 측정한 pass@1은 본 게이트 판정에 무효** — 실제 HumanEval 재구축(Phase 2-0) 완료 후에만 LOCK-BE-02 판정 유효. LOCK 값(pass@1 ≥ 85%) 자체는 불변(재정의 0).
 
 ### 로깅 포맷 (R-01-7)
 

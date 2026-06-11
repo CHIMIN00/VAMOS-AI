@@ -1,6 +1,6 @@
 # AUTHORITY_CHAIN — v12 Additions Detail (#19)
 
-> **최종 갱신**: 2026-04-12
+> **최종 갱신**: 2026-06-11
 > **도메인**: 5-3_v12-Additions-Detail
 > **Tier**: 5 — Quality/Cross-cutting (횡단 허브)
 > **LOCK 항목 수**: 10개
@@ -41,13 +41,13 @@ Level 6: 구현 코드
 | ID | LOCK 항목 | 상속 원본 도메인 | 상속 원본 LOCK | 값 / 기준 | 변경 시 필요 조치 |
 |----|----------|----------------|---------------|----------|-----------------|
 | LOCK-V12-02 | SM-2 알고리즘 공식 | #6 PKM + #8 Education | PKM SM-2 LOCK (공유) | ease_factor = max(1.3, EF + (0.1 - (5-q) * (0.08 + (5-q) * 0.02))); interval 계산 규칙 | 원본 도메인(#6 PKM) LOCK 변경 시 자동 상속. #8 Education은 참조만 |
-| LOCK-V12-03 | Black-Litterman tau 값 | AI Investing | AI-Invest tau LOCK | tau = 0.025 (스케일링 계수); Omega = diag(P * tau * Sigma * P^T) | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |
+| LOCK-V12-03 | Black-Litterman tau 값 | AI Investing | Ai-investing 도메인 기준값 — top_down_allocation.md tau=0.025 (1/T 범위 0.01~0.05), 전용 LOCK 미등재 | tau = 0.025 (스케일링 계수); Omega = diag(P * tau * Sigma * P^T) | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |
 | LOCK-V12-04 | Factor Investing 6종 정의 | AI Investing | AI-Invest Factor LOCK | Value (PER/PBR), Momentum (3/6/12개월 수익률), Quality (ROE/부채비율), Size (시가총액), Low Volatility (변동성 역수), Dividend (배당수익률) | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |
-| LOCK-V12-05 | CBT 15가지 인지 왜곡 유형 | #9 Health-Wellness | LOCK-HW-09 관련 | 전부 아니면 전무(All-or-Nothing Thinking), 과잉일반화(Overgeneralization), 정신적 필터(Mental Filter), 긍정 격하(Disqualifying the Positive), 성급한 결론 - 독심술(Mind Reading), 성급한 결론 - 점쟁이 오류(Fortune Telling), 파국화/축소화(Catastrophizing/Minimization), 감정적 추론(Emotional Reasoning), 당위 진술(Should Statements), 낙인 찍기(Labeling), 개인화(Personalization), 비난(Blaming), 공정성 오류(Fallacy of Fairness), 변화 기대(Fallacy of Change), 통제 오류(Control Fallacy) | 원본 도메인(#9 Health-Wellness) LOCK 변경 시 자동 상속 |
+| LOCK-V12-05 | CBT 15가지 인지 왜곡 유형 | #9 Health-Wellness | 부록 §C — cbt_distortion_taxonomy.md §4.1 (LOCK 미부여; LOCK-HW-09=거버넌스 관련) | 전부 아니면 전무(All-or-Nothing Thinking), 과잉일반화(Overgeneralization), 정신적 필터(Mental Filter), 긍정 격하(Disqualifying the Positive), 성급한 결론 - 독심술(Mind Reading), 성급한 결론 - 점쟁이 오류(Fortune Telling), 파국화/축소화(Catastrophizing/Minimization), 감정적 추론(Emotional Reasoning), 당위 진술(Should Statements), 낙인 찍기(Labeling), 개인화(Personalization), 비난(Blaming), 공정성 오류(Fallacy of Fairness), 변화 기대(Fallacy of Change), 통제 오류(Control Fallacy) | 원본 도메인(#9 Health-Wellness) LOCK 변경 시 자동 상속 |
 | LOCK-V12-06 | BreathingPattern 4-7-8 기본 패턴 | #9 Health-Wellness | LOCK-HW-07 | 4-7-8 패턴: 흡기 4초 → 유지 7초 → 호기 8초; Box: 4-4-4-4; 횡격막: 4-2-6 | 원본 도메인(#9 Health-Wellness) LOCK 변경 시 자동 상속 |
-| LOCK-V12-07 | TemplateSets 3종 구성 | #11 Conversation-A2A + #17 MLOps | 공유 LOCK | TS_CORE (범용 대화), TS_WEB_RESEARCH (웹 검색+요약), TS_CODE (코드 생성+리뷰). 각 세트는 system_prompt + few_shot_examples + output_format + constraints로 구성 | 원본 도메인(#11 A2A 주, #17 MLOps 참조) LOCK 변경 시 자동 상속 |
+| LOCK-V12-07 | TemplateSets 3종 구성 | 2-1 Blue-Node-Architecture (D2.0-03 §4.2) | LOCK-BN-18 + D2.0-03 §4.2 "(LOCK) TemplateSet = 3종" | TS_CORE (범용 대화), TS_WEB_RESEARCH (웹 검색+요약), TS_CODE (코드 생성+리뷰). 각 세트는 system_prompt + few_shot_examples + output_format + constraints로 구성 | 원본 정본(D2.0-03 §4.2 / 2-1 `03_template-injection/_index.md`) LOCK 변경 시 자동 상속. #11 A2A·#17 MLOps는 소비/저장 구조 참조만 — C-07 판정(2026-06-11) |
 | LOCK-V12-08 | PortfolioConstraints 최대 비중 | AI Investing | AI-Invest Constraints LOCK | 단일 종목 최대 비중: 10%, 단일 섹터 최대 비중: 30% | 원본 도메인(AI Investing) LOCK 변경 시 자동 상속 |
-| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM | PKM Zettelkasten LOCK | Luhmann-style 원자적 노트; 1 노트 = 1 아이디어; 링크 타입 4종 (RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES); ID 체계 = 계층적 영숫자 | 원본 도메인(#6 PKM) LOCK 변경 시 자동 상속 |
+| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM | PKM Zettelkasten LOCK | Luhmann-style 원자적 노트; 1 노트 = 1 아이디어; 링크 타입 5종 (related, supports, contradicts, continues, branches — 정본: #6 PKM 부록 §A.3); ID 체계 = 계층적 영숫자 | 원본 도메인(#6 PKM) LOCK 변경 시 자동 상속 |
 
 ---
 
@@ -67,7 +67,7 @@ AI Investing (tau LOCK, Factor LOCK, Constraints LOCK)
     ├──→ LOCK-V12-04 (Factor 6종)
     └──→ LOCK-V12-08 (Portfolio 비중 제한)
 
-#11 A2A + #17 MLOps (공유 LOCK)
+2-1 Blue-Node-Architecture — D2.0-03 §4.2 / LOCK-BN-18 (#11 A2A·#17 MLOps는 참조)
     └──→ LOCK-V12-07 (TemplateSets 3종)
 
 본 계획서 (자체 정의)
@@ -114,6 +114,7 @@ AI Investing (tau LOCK, Factor LOCK, Constraints LOCK)
 | 2026-03-24 | 전체 | 초기 작성 (10개 LOCK 등록: 자체 2개 + 상속 8개) | 도메인 #19 구조화 세션 |
 | 2026-04-03 | 전체 | **P0-3 LOCK 상속 검증 완료** — 10건 전수 대조 (자체 2건 PASS + 도메인 8건 대조). 5건 PASS(V12-01,02,04,06,10), 3건 CONDITIONAL(V12-03,07,08), 2건 FAIL(V12-05,09). CONFLICT_LOG C-04~C-08 등록. P0-1/P0-2 산출물 교차확인 24건 PASS. §3.4↔§A.4 정합성 PASS | P0-3 절차 |
 | 2026-04-12 | 전체 | **Phase 1 완료 검증** — P1-1 링크 검증 23/24 VALID (95.8%, 게이트 PASS). LOCK 10건 변경 0건. CONFLICT_LOG C-04~C-08 OPEN 5건 유지 (신규 등록 0건). B-2 TemplateSets CONDITIONAL 1건 잔여 | P1 Step 7 횡단 동기화 |
+| 2026-06-11 | V12-03·05·07·09 | **세션5 결정 일괄 반영** — V12-05: 정본(3-6 cbt_distortion_taxonomy.md §4.1) 15종 전사(세션4)+상속 출처 '부록 §C(LOCK 미부여)' 정정 (D1, C-04 RESOLVED). V12-09: 링크 타입 4종→5종 정본(#6 PKM 부록 §A.3) 정정 (D2, C-05 RESOLVED). V12-07: 출처 '#11+#17 공유'→'2-1 Blue-Node(D2.0-03 §4.2 LOCK + LOCK-BN-18), #11/#17은 참조' 정정 — 계층 구분: 구성 3종 LOCK 정본=D2.0-03 §4.2 / Template 원문·버전 소유=ORANGE CORE 02 I-13 / 에이전트 대화 콘텐츠 정본=3-8 (W-05 유지) (D4, C-07 RESOLVED). V12-03: 상속 원본 표기 'AI-Invest tau LOCK(미실재)'→'Ai-investing 도메인 기준값 top_down_allocation.md tau=0.025, 전용 LOCK 미등재' 정정 (D5, C-08 RESOLVED) | 세션5 결정 세션 D1~D5 |
 
 ---
 

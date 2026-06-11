@@ -334,7 +334,7 @@ vamos/                              (Monorepo LOCK)
 
 ### 2.5 설정 파일 구성 (PHASE_B4 기준)
 
-**config.v1.toml LOCK 값:**
+**config.v1.toml LOCK 값 (LOCK 20개 — PHASE_B4 §3 정본):**
 
 | 설정 키 | V0/V1 값 | LOCK 여부 | 근거 |
 |---------|----------|----------|------|
@@ -359,10 +359,18 @@ vamos/                              (Monorepo LOCK)
 | `semantic_cache.similarity_threshold` | 0.95 | **LOCK** | AC-D6-010 |
 | `logging.trace_id_required` | true | **LOCK** | D2 LogEvent |
 | `mcp.transport` | streamable_http | **LOCK** | DEC-017 |
+| `self_check.threshold_p0` | 70 | **LOCK** | PHASE_B4 §3.8a |
+| `self_check.threshold_p1` | 75 | **LOCK** | PHASE_B4 §3.8a |
+| `self_check.threshold_p2` | 80 | **LOCK** | PHASE_B4 §3.8a |
+| `self_check.soft_loop_max` | 1 | **LOCK** | PHASE_B4 §3.8a |
+| `approval.timeout_s` | 600 | **LOCK** | PHASE_B4 §3.8b |
+| `approval.p2_timeout_s` | 300 | **LOCK** | PHASE_B4 §3.8b |
+| `blue_nodes.active_node_cap` | 3 | **LOCK** (V1) | D2.0-03 §4.3-B / LOCK-AT-014 |
+| `ui.min_width` | 1280 | **LOCK** (V1) | D8 §3.1 |
 
 ### 2.6 스키마 코드 생성 (D2.1-D1~D8 → 실제 코드)
 
-D2.1 스키마 문서의 ~40개 JSON Schema를 3개 언어로 변환:
+D2.1 스키마 문서의 42개 JSON Schema(실측: D2=2, D3=12, D4=6, D5=9, D6=6, D7=7, D8=0)를 3개 언어로 변환:
 
 | 대상 | 파일 위치 | 소스 문서 |
 |------|----------|----------|
@@ -371,6 +379,8 @@ D2.1 스키마 문서의 ~40개 JSON Schema를 3개 언어로 변환:
 | Rust serde 구조체 | `src-tauri/src/models/` | D2.1-D2~D7 |
 
 **필수 스키마 목록 (V0에서 생성해야 할 것):**
+
+> ⚠️ V0 코드 생성 작업 정본은 구현가이드 PART2 STEP-1의 **25개 모델 열거표**(D2.1 전체 42개 중 V0 서브셋)이다. 아래 표는 레지스트리 3종을 포함한 24행 참고 목록으로, 분모로 사용하지 않는다.
 
 | 스키마 | 소스 | 우선순위 |
 |--------|------|---------|
@@ -420,7 +430,7 @@ D2.1 스키마 문서의 ~40개 JSON Schema를 3개 언어로 변환:
 ☐ PHASE_B2 디렉토리 구조 스캐폴딩 생성
 ☐ PHASE_B3 의존성 전체 설치 (pip/npm/cargo)
 ☐ PHASE_B4 config.v1.toml LOCK 값 배치
-☐ D2.1 스키마 → Pydantic v2/Zod/serde 코드 생성 (24개)
+☐ D2.1 스키마 → Pydantic v2/Zod/serde 코드 생성 (V0 서브셋 25개 — 구현가이드 PART2 STEP-1 정본, D2.1 전체 42개 중)
 ☐ I-1~I-5 + I-19 스켈레톤 생성
 ☐ L0 세션 메모리 최소 구현
 ☐ LogEvent JSONL 최소 구현
@@ -1115,7 +1125,7 @@ GitHub Actions (.github/workflows/ci.yml)
 | 8 | BASE-1.3 전 24개 규칙 코드 매핑 | §2.2 | ☐ |
 | 9 | 스캐폴딩 + 의존성 설치 | §2.3~2.4 | ☐ |
 | 10 | config.v1.toml LOCK 값 배치 | §2.5 | ☐ |
-| 11 | 24개 스키마 코드 생성 | §2.6 | ☐ |
+| 11 | 25개 스키마 코드 생성 (V0 서브셋, D2.1 전체 42개 중) | §2.6 | ☐ |
 | 12 | I-1~I-5 + I-19 스켈레톤 | §2.7 | ☐ |
 | 13 | L0 세션 메모리 최소 구현 | §2.7 | ☐ |
 | 14 | 비용 엔진 ₩40,000/월 하드코딩 | §2.7 | ☐ |

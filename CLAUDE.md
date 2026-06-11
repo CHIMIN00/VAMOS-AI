@@ -679,7 +679,7 @@ vamos/
 
 ---
 
-## 20. 핵심 config.v1.toml LOCK 값
+## 20. 핵심 config.v1.toml LOCK 값 (20개 — 정본: PHASE_B4_CONFIG_SPEC §3 LOCK 표기 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외)
 
 | 설정 키 | 값 | LOCK |
 |---------|-----|------|
@@ -695,3 +695,11 @@ vamos/
 | semantic_cache.similarity_threshold | 0.95 | LOCK |
 | logging.trace_id_required | true | LOCK |
 | mcp.transport | streamable_http | LOCK |
+| self_check.threshold_p0 | 70 | LOCK |
+| self_check.threshold_p1 | 75 | LOCK |
+| self_check.threshold_p2 | 80 | LOCK |
+| self_check.soft_loop_max | 1 | LOCK |
+| approval.timeout_s | 600 | LOCK |
+| approval.p2_timeout_s | 300 | LOCK |
+| blue_nodes.active_node_cap | 3 | LOCK (V1) |
+| ui.min_width | 1280 | LOCK (V1) |

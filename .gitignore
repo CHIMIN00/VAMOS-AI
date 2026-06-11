@@ -81,3 +81,11 @@ benchmark_results/benchmark_store.db
 # ── Build Artifacts ──
 *.bundle.*
 *.map
+
+# ── Repo Hygiene (D18, 2026-06-11) ──
+# llama-firewall venv: 디스크 972MB 보존, 인덱스 35개 언트래킹 후 재추적 방지
+.claude/hooks/venv_firewall/
+# 깨진 gitlink 3종(.gitmodules 부재, submodule fatal): 언트래킹 후 재추적 방지(디스크 보존)
+.claude-pre-commit/
+.claude/plugins/claude-code-plugins-plus-skills/
+.claude/plugins/claude-code-skills/

@@ -1,5 +1,7 @@
-repos:
-  - repo: https://github.com/freddo1503/claude-pre-commit
-    rev: v0.1.0
-    hooks:
-      - id: claude-check
+# D17 판정 (2026-06-11): freddo1503/claude-pre-commit 훅 블록 제거.
+# 실측: upstream 태그 0개(rev v0.1.0 부재 — git ls-remote, refs/heads/master 13f447fc만 존재)
+#       → pre-commit checkout 실패로 전 커밋 차단(기존 우회: --no-verify).
+# 신뢰 불가 판정: 무태그·무릴리스 개인 저장소의 미감사 Rust 훅(files: \.(md|json|sh)$)이
+#       저장소 전체 문서에 적용되어 재차단 위험. 본 블록이 유일한 훅임을 확인 후 제거.
+# 재도입 시 감사된 포크 + full-SHA 핀으로 별도 결정 필요.
+repos: []

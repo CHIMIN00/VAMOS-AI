@@ -248,11 +248,11 @@ toml ^0.8  dirs ^5.0
 
 | # | 파일 | 핵심 LOCK 값 | 확인 |
 |---|------|-------------|------|
-| 1 | `config/config.v1.toml` | 22개 LOCK 값 (§4.1.G 참조) | ☐ |
+| 1 | `config/config.v1.toml` | 20개 LOCK 값 (§4.1.G 참조) | ☐ |
 | 2 | `.env.example` | OPENAI_API_KEY 외 9개 키 플레이스홀더 | ☐ |
 | 3 | `.vamosrules.json` | BASE 1.3 규칙 구조화 | ☐ |
 
-### G. config.v1.toml 핵심 LOCK 값 (22개)
+### G. config.v1.toml 핵심 LOCK 값 (20개)
 
 ```toml
 [core]
@@ -293,6 +293,22 @@ trace_id_required = true                       # LOCK
 
 [mcp]
 transport = "streamable_http"                  # LOCK (DEC-017)
+
+[self_check]
+threshold_p0 = 70                              # LOCK
+threshold_p1 = 75                              # LOCK
+threshold_p2 = 80                              # LOCK
+soft_loop_max = 1                              # LOCK
+
+[approval]
+timeout_s = 600                                # LOCK
+p2_timeout_s = 300                             # LOCK
+
+[blue_nodes]
+active_node_cap = 3                            # LOCK (V1, D2.0-03 §4.3-B)
+
+[ui]
+min_width = 1280                               # LOCK (V1, D8 §3.1)
 ```
 
 ### H. 디렉토리 구조 (V0 스캐폴딩)
@@ -418,7 +434,7 @@ Week 1:
   ├─ [V0-S2] Tauri 2.0 + React 프로젝트 초기화
   ├─ [V0-S3] Rust IPC 브릿지 셸 구현
   ├─ [V0-S4] Python backend stdin/stdout 서버 셸 구현
-  └─ [V0-S5] config.v1.toml 생성 (22개 LOCK 값)
+  └─ [V0-S5] config.v1.toml 생성 (20개 LOCK 값)
 
 Week 2:
   ├─ [V0-S6] D2.1 스키마 → Pydantic v2 코드 생성 (24개)

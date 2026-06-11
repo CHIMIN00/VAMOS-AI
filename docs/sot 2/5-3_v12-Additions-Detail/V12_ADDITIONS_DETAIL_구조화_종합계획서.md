@@ -227,9 +227,9 @@ RULE 1.3
 | LOCK-V12-04 | Factor 6종 정의 | Ai-investing-detail LOCK | Value/Momentum/Quality/Size/Volatility/Dividend | 상세명세 C-2 참조 |
 | LOCK-V12-05 | CBT 15가지 인지 왜곡 유형 | #9 Health-Wellness LOCK | 전부 아니면 전무, 과잉일반화, 파국화 등 15종 | 상세명세 A-2 참조 |
 | LOCK-V12-06 | BreathingPattern 4-7-8 기본 패턴 | #9 Health-Wellness LOCK-HW-07 | 흡4초-지7초-호8초 | 상세명세 A-1 참조 |
-| LOCK-V12-07 | TS_CORE/TS_WEB_RESEARCH/TS_CODE 3종 | #17 MLOps / #11 A2A LOCK | 3개 TemplateSet 구성 | 상세명세 B-2 참조 |
+| LOCK-V12-07 | TS_CORE/TS_WEB_RESEARCH/TS_CODE 3종 | D2.0-03 §4.2 LOCK + 2-1 LOCK-BN-18 | 3개 TemplateSet 구성 | 상세명세 B-2 참조. C-07 판정(2026-06-11): #11/#17은 참조만 |
 | LOCK-V12-08 | PortfolioConstraints max 비중 | Ai-investing-detail LOCK | 단일 종목 max 10%, 단일 섹터 max 30% | 상세명세 C-2 참조 |
-| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM LOCK | Luhmann-style 원자적 노트, 4종 링크 타입 | 상세명세 D-7 참조 |
+| LOCK-V12-09 | Zettelkasten 원자적 노트 원칙 | #6 PKM LOCK | Luhmann-style 원자적 노트, 5종 링크 타입 (related/supports/contradicts/continues/branches) | 상세명세 D-7 참조 |
 | LOCK-V12-10 | 도메인 정본 연결 매핑 | 본 계획서 부록 §A | 부록 §A 전체 매핑 테이블 | 자체 정의 |
 
 ---
@@ -639,7 +639,7 @@ RULE 1.3
      - §A.4 값: "단일 종목 max 10%, 단일 섹터 max 30%"
      - 대조: Ai-investing-detail 계획서 LOCK (AI-Invest Constraints LOCK)
    - LOCK-V12-09 (Zettelkasten 원자적 노트 원칙):
-     - §A.4 값: "원자적 노트, 4종 링크 타입"
+     - §A.4 값: "원자적 노트, 5종 링크 타입"
      - 대조: #6 PKM 계획서 LOCK (PKM Zettelkasten LOCK)
 3. P0-1/P0-2 산출물 LOCK 기입 정합성 교차 확인:
    - P0-1 _index.md 6개의 LOCK 상속 참조 기입값이 §A.4 + 절차 2 도메인 대조 결과와 일치하는지 확인:
@@ -1080,10 +1080,10 @@ RULE 1.3
 | S-2 | 8건 LOCK 상속 전수 일치 확인 — 상세명세 내 LOCK 값이 해당 도메인 정본의 LOCK 값과 글자 그대로 일치하는지 전수 대조 | LOW | S8-4 검증 | **SUPERSEDED** — P0-3에서 도메인 정본 LOCK과 직접 대조 시 2건 FAIL(V12-05, V12-09), 3건 CONDITIONAL(V12-03, V12-07, V12-08) 발견. S8-4는 상세명세 기준 대조였으나 P0-3은 도메인 계획서 LOCK 기준 대조. CONFLICT_LOG C-04~C-08 참조 |
 | S-3 | V2/V3 27건 잠정 항목 도메인 귀속 미확정 — 섹션 E/F/G의 27건이 잠정 매핑 상태로 Phase 2 진입 시 최종 확정 필요 | MEDIUM | Phase 2 진입 시 확정 | OPEN |
 | S-4 | §1.5 핵심 문제 기술 깊이 보강 — 각 문제 항목에 구체적 영향 범위와 해결 경과를 추가 기술 | LOW | S10-3 보강 | DONE |
-| S-5 | LOCK-V12-05 상속 매핑 부정확 — §A.4에서 LOCK-HW-09(감정 AI 7원칙)를 상속 원본으로 매핑하나, LOCK-HW-09는 CBT 15유형이 아닌 윤리 원칙. CBT 15유형 전용 LOCK이 #9 Health-Wellness에 부재 | HIGH | #9 도메인에 CBT 전용 LOCK 신규 부여 요청 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | OPEN — C-04 |
-| S-6 | LOCK-V12-09 Zettelkasten 링크 타입 불일치 — V12 "4종(RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES)" vs PKM 부록 §A.3 "5종(related, supports, contradicts, continues, branches)". 개수·명칭 모두 불일치 | HIGH | #6 PKM 도메인에서 링크 타입 LOCK 여부 확인 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | OPEN — C-05 |
-| S-7 | LOCK-V12-08 AUTHORITY_CHAIN 현금 비중 초과 기재 — §3.4/§A.4에 없는 "현금 비중 최소 5%"가 AUTHORITY_CHAIN에 기재, 도메인 값(20%)과도 불일치 | MEDIUM | AUTHORITY_CHAIN에서 현금 비중 삭제 또는 도메인 값(20%)으로 정정 | OPEN — C-06 |
-| S-8 | LOCK-V12-07 TS 3종 도메인 전용 LOCK 부재 — A2A/MLOps 양쪽 도메인 모두 TS_CORE/TS_WEB_RESEARCH/TS_CODE 전용 LOCK 미등록 | MEDIUM | A2A 또는 MLOps 도메인에서 TS 전용 LOCK 생성 권장 | OPEN — C-07 |
+| S-5 | LOCK-V12-05 상속 매핑 부정확 — §A.4에서 LOCK-HW-09(감정 AI 7원칙)를 상속 원본으로 매핑하나, LOCK-HW-09는 CBT 15유형이 아닌 윤리 원칙. CBT 15유형 전용 LOCK이 #9 Health-Wellness에 부재 | HIGH | #9 도메인에 CBT 전용 LOCK 신규 부여 요청 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | ✅ RESOLVED (2026-06-11, D1) — 상속 출처 '부록 §C(LOCK 미부여)' 정정 + 정본 15종 전사 완료, LOCK-HW-13 신설안 기각 (C-04) |
+| S-6 | LOCK-V12-09 Zettelkasten 링크 타입 불일치 — V12 "4종(RELATED_TO, SUPPORTS, CONTRADICTS, SUPERSEDES)" vs PKM 부록 §A.3 "5종(related, supports, contradicts, continues, branches)". 개수·명칭 모두 불일치 | HIGH | #6 PKM 도메인에서 링크 타입 LOCK 여부 확인 후 §3.4/§A.4/AUTHORITY_CHAIN 정정 | ✅ RESOLVED (2026-06-11, D2) — C-05: PKM 정본 5종 채택, §3.4/§A.4/AUTHORITY_CHAIN 정정 완료 |
+| S-7 | LOCK-V12-08 AUTHORITY_CHAIN 현금 비중 초과 기재 — §3.4/§A.4에 없는 "현금 비중 최소 5%"가 AUTHORITY_CHAIN에 기재, 도메인 값(20%)과도 불일치 | MEDIUM | AUTHORITY_CHAIN에서 현금 비중 삭제 또는 도메인 값(20%)으로 정정 | ✅ RESOLVED (2026-06-11) — C-06: 현행 AUTHORITY_CHAIN에 현금 비중 기재 부재(권고 기이행) + 5%/20% 맥락 구분(20%=SPEC §10.2 LOCK 안전장치, 5%=cash_allocation.md 운영 목표, LOCK-V12-08 범위 밖 유지) |
+| S-8 | LOCK-V12-07 TS 3종 도메인 전용 LOCK 부재 — A2A/MLOps 양쪽 도메인 모두 TS_CORE/TS_WEB_RESEARCH/TS_CODE 전용 LOCK 미등록 | MEDIUM | A2A 또는 MLOps 도메인에서 TS 전용 LOCK 생성 권장 | ✅ RESOLVED (2026-06-11, D4) — 전용 LOCK은 D2.0-03 §4.2 + 2-1 LOCK-BN-18로 기존재, 신설 불요. LOCK-V12-07 상속 출처 정정으로 해결 — C-07 RESOLVED |
 | S-9 | P0-4 경로 검증: #9 Health-Wellness 정본 파일 7건(6개 고유 파일) 미생성 — 서브폴더(`04_stress-management/`, `06_ethics-privacy/`) 존재하나 `breathing_exercises.md` 등 6개 정본 파일 미생성. V-06 게이트(90%) 충족을 위해 #9 도메인 파일 생성 필수 | MEDIUM | Phase 1 진입 시 #9 도메인 파일 생성 확인 선행. CONFLICT_LOG 불요(§9.1 충돌 비해당) | ✅ RESOLVED (2026-04-12) — P1-1 검증에서 7/7 전수 VALID 확인 |
 | S-10 | P0-4 경로 검증: CONDITIONAL PASS 3건(B-2, C-1, C-2) 서브폴더 미특정 — §A.1에 괄호 설명만 기재, 구체적 서브폴더 미매핑. Ai-investing 내 관련 파일(`portfolio_optimization.md`, `factor.md`) 존재 확인됨 | LOW | Phase 1에서 정확한 서브폴더 경로 특정 후 §A.1 갱신 | ✅ RESOLVED (2026-04-12) — C-1→VALID, C-2→VALID, B-2→CONDITIONAL 유지(Phase 2 귀속 확정 시 처리) |
 
@@ -1247,11 +1247,11 @@ RULE 1.3
 | LOCK-V12-02 | A-4 (SM2) | #6 PKM | (PKM SM-2 LOCK) | ease_factor, interval 공식 |
 | LOCK-V12-03 | C-1 (BL) | AI Investing | (AI-Invest tau LOCK) | tau = 0.025 |
 | LOCK-V12-04 | C-2 (Factor) | AI Investing | (AI-Invest Factor LOCK) | 6종: Value/Momentum/Quality/Size/Volatility/Dividend |
-| LOCK-V12-05 | A-2 (CBT) | #9 Health-Wellness | LOCK-HW-09 (7원칙 내 관련) | 15가지 인지 왜곡 유형 |
+| LOCK-V12-05 | A-2 (CBT) | #9 Health-Wellness | 부록 §C — cbt_distortion_taxonomy.md §4.1 (LOCK 미부여; LOCK-HW-09는 감정 AI 7원칙 거버넌스 관련) | 15가지 인지 왜곡 유형 |
 | LOCK-V12-06 | A-1 (Breathing) | #9 Health-Wellness | LOCK-HW-07 | 4-7-8 호흡법 (흡4초-지7초-호8초) |
-| LOCK-V12-07 | B-2 (TS) | #11 A2A + #17 MLOps | (공유 LOCK) | TS_CORE, TS_WEB_RESEARCH, TS_CODE |
+| LOCK-V12-07 | B-2 (TS) | 2-1 Blue-Node-Architecture (D2.0-03 §4.2) | LOCK-BN-18 + D2.0-03 §4.2 (LOCK) TemplateSet = 3종 | TS_CORE, TS_WEB_RESEARCH, TS_CODE |
 | LOCK-V12-08 | C-2 (Portfolio) | AI Investing | (AI-Invest Constraints LOCK) | 단일 종목 max 10%, 단일 섹터 max 30% |
-| LOCK-V12-09 | D-7 (Zettel) | #6 PKM | (PKM Zettelkasten LOCK) | 원자적 노트, 4종 링크 타입 |
+| LOCK-V12-09 | D-7 (Zettel) | #6 PKM | (PKM Zettelkasten LOCK) | 원자적 노트, 5종 링크 타입 (related/supports/contradicts/continues/branches) |
 | LOCK-V12-10 | — | 본 계획서 부록 §A | (자체) | 전체 매핑 테이블 |
 
 ---
