@@ -248,7 +248,7 @@ Must 5개 완성 → D1 부분 실행 가능
 |---|------|------|---------|------|--------|
 | 2-0 | **외부 의존성 재확인** | PART1 E.1+E.3+B.1 재확인(A4). 2026-03-02 이후 변경 여부 + **골든셋 실데이터 재구축**(D14 선행과업 — benchmarks/ [SYNTHETIC] 해소; 5-1·6-7 Eval과 LOCK-BE-01/02 게이트의 전제) | **Must** | 선행 | 환경 리포트 + 골든셋 v2 |
 | 2-1 | CLAUDE.md 보강 | 보강전략 Phase A (5세션) → §21~§27 추가 + §28(엔지니어링 프레임워크 — 본 로드맵 신설분, 보강전략엔 미정의). §28에 매트릭스/PROGRESS.md/Phase별 컨텍스트(A13) 포함. 입력: PART1 §D.0(CLAUDE.md 필수 수정) + claude_md_gap_report 2건(D1 산출) 반영 | **Must** | ⓐ | 보강된 CLAUDE.md |
-| 2-2 | CLAUDE.md 검증 | 보강전략 Phase B (8스킬) → SILVER+ 판정 | Should | 2-1후 | 검증 리포트 |
+| 2-2 | CLAUDE.md 검증 | 보강전략 Phase B~D(스킬 8종 생성[B, 2세션]→8단계 검증 실행[C, 4세션]→수정·재검증[D]) → SILVER+ 판정 | Should | 2-1후 | 검증 리포트 |
 | 2-3 | Obsidian 노트 생성 | Strategy v3.0 → 120+ 노트 + 매트릭스 노트. 책임 AI 관련 자산 태깅(A16) | Should | ⓑ | VAMOS HOME |
 | 2-4 | 린터/CI 환경 세팅 | 하네스 §7 → pyproject.toml + ruff + CI yaml + conftest.py. ✔ (2026-06-11 기집행) 구 .claude-pre-commit 처분 완료 — pre-commit 훅 블록 제거(D17, `repos: []` 보존)·gitlink 언트래킹(D18, 디스크 보존); 훅 재도입 여부는 본 작업에서 결정. **CI yaml 기준**: PHASE_B6 §2 ci.yml 단일 통합이 정본(V0 최소=quality+test job; V1 전체 분리는 PART2 §6.4 11종 — L4844 주석) | **Must** | ⓒ | 린터/CI 파일 + 코드 생산 Hook(STRATEGY_10 §4 4-V4: py 수정 시 ruff·config LOCK 검증) |
 | 2-5 | VAMOS 커스텀 린터 | 하네스 §8 → vamos_lint VL-001~005 (commitlint는 §8 vamos_lint 규칙 아님 — STRATEGY_09 §3 린터 목록의 별도 커밋 린터, 2-4 린터/CI 트랙) | **Must** | 2-4후 | vamos_lint.py |

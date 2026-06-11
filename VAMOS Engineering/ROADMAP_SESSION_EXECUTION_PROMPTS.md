@@ -439,35 +439,39 @@ VAMOS 로드맵 Phase 1, 세션 P1-2 — D1 보조 검증 + 기준선 + Gate
 
 | # | 작업 | 상세 | 우선순위 | 산출물 |
 |---|------|------|---------|--------|
-| 2-0 | 외부 의존성 | PART1 E.1(9) + E.3(8) + B.1(9) 재확인 | **Must** | 환경 리포트 |
+| 2-0 | 외부 의존성 | PART1 E.1(9) + E.3(8) + B.1(11) 재확인 + 골든셋 실데이터 재구축(D14) | **Must** | 환경 리포트 + 골든셋 v2 |
 
 ````
 VAMOS 로드맵 Phase 2, 세션 P2-0 — 외부 의존성 재확인
 
-■ 대상: 2-0(PART1 E.1+E.3+B.1 재확인, Must)
+■ 대상: 2-0(PART1 E.1+E.3+B.1 재확인 + 골든셋 실데이터 재구축[D14], Must)
 
 ■ 참조:
   D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md — Section E.1, E.3, B.1
+  D:\VAMOS\benchmarks\golden_set\manifest.json — next_update(D14 재구축 명세)·data_status
 
 ■ STEP 1: 프롬프트 자체 검증
-  a. 확인 대상 26건(E.1 9건 + E.3 8건 + B.1 9건)이 PART1과 일치하는지
+  a. 확인 대상 28건(E.1 9건 + E.3 8건 + B.1 11건[1+7+3])이 PART1과 일치하는지
   b. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
   1. E.1 재확인 (9건): python/node/rust/ollama/git 버전 + pnpm/Poetry/CUDA 결정값
   2. E.3 재확인 (8건): pydantic v2/cargo/API Key/디스크/BGE-M3
-  3. B.1 재확인 (9건): V0 준비 완료
-  4. 변경 있으면 → 해당 항목 업데이트
+  3. B.1 재확인 (11건): V0 준비 완료
+  4. 골든셋 실데이터 재구축(D14 — manifest next_update 명세 그대로): 실제 MMLU/HumanEval/MBPP/LogicKor
+     다운로드+라이선스 검증 → seed=42 층화(50/20/50/50) → placeholder 전량 교체 → SHA 재계산 →
+     contamination_check 재수행 → data_status 해제+change_log v2 → LOCK-BE-01/02 유효화 (LFS 주의)
+  5. 변경 있으면 → 해당 항목 업데이트
 
 ■ STEP 3: 산출물 검증 (반복)
-  a. 26건 전부 PASS/변경사항 기록?
-  b. "산출물 최종 확정"
+  a. 28건 전부 PASS/변경사항 기록? b. 골든셋 data_status 실데이터 전환 확인?
+  c. "산출물 최종 확정"
 
 ■ STEP 4: PROGRESS.md 갱신
 
 ■ STEP 5: 갱신 검증
 
-■ PASS 조건: E.1(9) + E.3(8) + B.1(9) 전부 PASS
+■ PASS 조건: E.1(9) + E.3(8) + B.1(11) 전부 PASS + 골든셋 실데이터 전환(불가 시 사유 기록·보고)
 ````
 
 ---
@@ -539,11 +543,12 @@ VAMOS 로드맵 Phase 2, 세션 P2-2 — CLAUDE.md 검증
   b. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
-  1. 8스킬 순차 실행:
+  1. 스킬 8종 생성(보강전략 Phase B 2세션 — 현재 미존재, §6.2 경로 .claude/skills/claude-md-*/SKILL.md + §6.4 설계):
      /claude-md-sot-conflict, /claude-md-hallucination, /claude-md-fact-audit
      /claude-md-cross-examine, /claude-md-symbolic, /claude-md-consensus
-     /claude-md-completeness, /claude-md-final-review → GOLD/SILVER/BRONZE/REJECT
-  2. 회귀 확인: /sot-check 재실행 → D1 정합 안 깨뜨렸는지 (A15 R10)
+     /claude-md-completeness, /claude-md-final-review
+  2. 8단계 검증 실행(Phase C 4세션) + 수정·재검증(Phase D 1~2세션) → GOLD/SILVER/BRONZE/REJECT
+  3. 회귀 확인: /sot-check 재실행 → D1 정합 안 깨뜨렸는지 (A15 R10)
 
 ■ STEP 3: 산출물 검증 (반복)
   a. 8스킬 결과 전부 기록?
@@ -632,9 +637,16 @@ VAMOS 로드맵 Phase 2, 세션 P2-4 — 린터/CI 환경 세팅
   d. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
-  1. 하네스 §7 (Layer 0): pyproject.toml, quality-python.yml, test-python.yml, conftest.py
-  2. 하네스 §8 (Layer 1): ruff banned-api(DEC-002), vamos_lint.py(VL-001~005), commitlint
-  3. CPS 템플릿 (Could)
+  1. 하네스 §7 (Layer 0): backend/pyproject.toml + .github/workflows/ci.yml + backend/tests/conftest.py·__init__.py
+     ⚠️ CI 중재(로드맵 2-4 확정): §7.1·PART2의 quality-python.yml/test-python.yml 2파일 표기는
+     PHASE_B6 §2 ci.yml 단일 통합(정본, PART2 L4844 주석)의 job 분리로 해석 —
+     ci.yml 1파일(quality job: ruff+mypy / test job: pytest+coverage)로 생성
+  2. 하네스 §8 (Layer 1): ruff banned-api(DEC-002) + scripts/vamos_lint.py(VL-001~005) + ci.yml에
+     vamos_lint job 통합(§8.3). commitlint.config.js는 별도 생성(STRATEGY_09 §3 도구 — §8 범위 아님)
+  3. 코드 생산 Hook 신설(STRATEGY_10 §4 4-V4 — 로드맵 2-4 산출물): .claude/settings.json에
+     ①.py 수정 시 ruff 자동 실행 ②config.v1.toml 수정 시 LOCK 검증 추가(기존 16 Hook 보존)
+  4. D17 잔여 결정: .pre-commit-config.yaml(repos:[]) 훅 재도입 여부 결정·기록(권고: ci.yml 대체)
+  5. CPS 템플릿 (Could)
 
 ■ STEP 3: 산출물 검증 (반복)
   a. poetry install 정상?
@@ -650,7 +662,7 @@ VAMOS 로드맵 Phase 2, 세션 P2-4 — 린터/CI 환경 세팅
 
 ■ 실패 시 (A1): 린터 오탐(A15 R05) → 초기 warn 모드로 실행 → 안정화 후 error 전환
 
-■ PASS 조건: ruff+pytest+vamos_lint 실행 가능 + CI yaml 존재 + 산출물 확정
+■ PASS 조건: ruff+pytest+vamos_lint 실행 가능 + ci.yml(통합) 존재 + Hook 신설 + D17 결정 기록 + 산출물 확정
 ````
 
 ---
@@ -677,10 +689,14 @@ VAMOS 로드맵 Phase 2, 세션 P2-5 — Phase 2 Gate
 
 ■ STEP 2: 작업 실행
   1. 로딩 전략 (Could): 자산 인벤토리 §3 기반 Phase별 SOT 2 로딩 맵
-  2. 인벤토리 갱신 (2-8): STRATEGY_11에 Phase 2 생성 파일 반영
+  2. 인벤토리 갱신 (2-8): STRATEGY_11에 Phase 2 생성 파일 반영 + 정리작업 —
+     D-2 네비링크 재실측·보수(세션7 OBSOLETE 판정과 대조 후 종결) · D-3 INDEX 부재 6도메인
+     (0-0/5-3/5-4/6-4/6-10/6-13) 처분 · 유산 폴더 정리(이동만, 삭제 금지) ·
+     5-4 SHELL 87 처분 판정·기록(§G REGISTERED — Phase 2 처리 vs 3-0 이연 단일 결론)
   3. Phase 2 검증 (2-V):
-     □ CLAUDE.md SILVER+? □ Obsidian 120+ 노트? □ 린터 동작?
-     □ CI yaml? □ 외부 의존성 PASS? □ 회귀 PASS?
+     □ CLAUDE.md 보강 완료(§28 A13 포함)? □ Obsidian 120+ 노트 + A16 태깅? □ 린터(ruff 13+VL 5) 동작?
+     □ CI yaml(ci.yml 통합) PART2 일치? □ 외부 의존성 E.1+E.3 PASS? □ 회귀(/sot-check) PASS?
+     □ 골든셋 실데이터 전환(LOCK-BE-01/02 유효화)?
 
 ■ STEP 3: 산출물 검증 (반복)
   a. 2-V 전항목 ☑?
@@ -689,7 +705,7 @@ VAMOS 로드맵 Phase 2, 세션 P2-5 — Phase 2 Gate
 ■ STEP 4: 관련 문서 갱신
   - Phase 2 회고 (A11) → decisions/phase2_retro.md
   - PROGRESS.md 갱신 (Phase 2 완료)
-  - git tag phase2-b1-complete
+  - git tag phase2-complete (A2 패턴 — 구 표기 phase2-b1-complete 폐기)
   - 로드맵 대조 (A12)
 
 ■ STEP 5: 갱신 결과 검증
