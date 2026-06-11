@@ -1,0 +1,702 @@
+[
+  {
+    "item_id": "mbpp_001",
+    "task_id": 11,
+    "question": "Write a python function to solve: string operation task 1",
+    "text": "Write a function to perform string operation for task 1.",
+    "prompt": "\"\"\"Write a function to perform string operation for task 1.\nassert string_task_1(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def string_task_1(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert string_task_1(/* input1 */) == /* expected1 */",
+      "assert string_task_1(/* input2 */) == /* expected2 */",
+      "assert string_task_1(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def string_task_1(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_002",
+    "task_id": 19,
+    "question": "Write a python function to solve: list operation task 2",
+    "text": "Write a function to perform list operation for task 2.",
+    "prompt": "\"\"\"Write a function to perform list operation for task 2.\nassert list_task_2(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def list_task_2(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert list_task_2(/* input1 */) == /* expected1 */",
+      "assert list_task_2(/* input2 */) == /* expected2 */",
+      "assert list_task_2(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def list_task_2(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_003",
+    "task_id": 27,
+    "question": "Write a python function to solve: math operation task 3",
+    "text": "Write a function to perform math operation for task 3.",
+    "prompt": "\"\"\"Write a function to perform math operation for task 3.\nassert math_task_3(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def math_task_3(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert math_task_3(/* input1 */) == /* expected1 */",
+      "assert math_task_3(/* input2 */) == /* expected2 */",
+      "assert math_task_3(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def math_task_3(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_004",
+    "task_id": 35,
+    "question": "Write a python function to solve: sorting operation task 4",
+    "text": "Write a function to perform sorting operation for task 4.",
+    "prompt": "\"\"\"Write a function to perform sorting operation for task 4.\nassert sorting_task_4(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def sorting_task_4(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert sorting_task_4(/* input1 */) == /* expected1 */",
+      "assert sorting_task_4(/* input2 */) == /* expected2 */",
+      "assert sorting_task_4(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def sorting_task_4(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_005",
+    "task_id": 43,
+    "question": "Write a python function to solve: search operation task 5",
+    "text": "Write a function to perform search operation for task 5.",
+    "prompt": "\"\"\"Write a function to perform search operation for task 5.\nassert search_task_5(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def search_task_5(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert search_task_5(/* input1 */) == /* expected1 */",
+      "assert search_task_5(/* input2 */) == /* expected2 */",
+      "assert search_task_5(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def search_task_5(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_006",
+    "task_id": 51,
+    "question": "Write a python function to solve: conversion operation task 6",
+    "text": "Write a function to perform conversion operation for task 6.",
+    "prompt": "\"\"\"Write a function to perform conversion operation for task 6.\nassert conversion_task_6(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def conversion_task_6(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert conversion_task_6(/* input1 */) == /* expected1 */",
+      "assert conversion_task_6(/* input2 */) == /* expected2 */",
+      "assert conversion_task_6(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def conversion_task_6(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_007",
+    "task_id": 59,
+    "question": "Write a python function to solve: validation operation task 7",
+    "text": "Write a function to perform validation operation for task 7.",
+    "prompt": "\"\"\"Write a function to perform validation operation for task 7.\nassert validation_task_7(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def validation_task_7(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert validation_task_7(/* input1 */) == /* expected1 */",
+      "assert validation_task_7(/* input2 */) == /* expected2 */",
+      "assert validation_task_7(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def validation_task_7(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_008",
+    "task_id": 67,
+    "question": "Write a python function to solve: recursion operation task 8",
+    "text": "Write a function to perform recursion operation for task 8.",
+    "prompt": "\"\"\"Write a function to perform recursion operation for task 8.\nassert recursion_task_8(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def recursion_task_8(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert recursion_task_8(/* input1 */) == /* expected1 */",
+      "assert recursion_task_8(/* input2 */) == /* expected2 */",
+      "assert recursion_task_8(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def recursion_task_8(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_009",
+    "task_id": 75,
+    "question": "Write a python function to solve: array operation task 9",
+    "text": "Write a function to perform array operation for task 9.",
+    "prompt": "\"\"\"Write a function to perform array operation for task 9.\nassert array_task_9(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def array_task_9(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert array_task_9(/* input1 */) == /* expected1 */",
+      "assert array_task_9(/* input2 */) == /* expected2 */",
+      "assert array_task_9(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def array_task_9(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_010",
+    "task_id": 83,
+    "question": "Write a python function to solve: logic operation task 10",
+    "text": "Write a function to perform logic operation for task 10.",
+    "prompt": "\"\"\"Write a function to perform logic operation for task 10.\nassert logic_task_10(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def logic_task_10(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert logic_task_10(/* input1 */) == /* expected1 */",
+      "assert logic_task_10(/* input2 */) == /* expected2 */",
+      "assert logic_task_10(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def logic_task_10(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_011",
+    "task_id": 91,
+    "question": "Write a python function to solve: string operation task 11",
+    "text": "Write a function to perform string operation for task 11.",
+    "prompt": "\"\"\"Write a function to perform string operation for task 11.\nassert string_task_11(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def string_task_11(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert string_task_11(/* input1 */) == /* expected1 */",
+      "assert string_task_11(/* input2 */) == /* expected2 */",
+      "assert string_task_11(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def string_task_11(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_012",
+    "task_id": 99,
+    "question": "Write a python function to solve: list operation task 12",
+    "text": "Write a function to perform list operation for task 12.",
+    "prompt": "\"\"\"Write a function to perform list operation for task 12.\nassert list_task_12(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def list_task_12(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert list_task_12(/* input1 */) == /* expected1 */",
+      "assert list_task_12(/* input2 */) == /* expected2 */",
+      "assert list_task_12(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def list_task_12(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_013",
+    "task_id": 107,
+    "question": "Write a python function to solve: math operation task 13",
+    "text": "Write a function to perform math operation for task 13.",
+    "prompt": "\"\"\"Write a function to perform math operation for task 13.\nassert math_task_13(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def math_task_13(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert math_task_13(/* input1 */) == /* expected1 */",
+      "assert math_task_13(/* input2 */) == /* expected2 */",
+      "assert math_task_13(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def math_task_13(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_014",
+    "task_id": 115,
+    "question": "Write a python function to solve: sorting operation task 14",
+    "text": "Write a function to perform sorting operation for task 14.",
+    "prompt": "\"\"\"Write a function to perform sorting operation for task 14.\nassert sorting_task_14(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def sorting_task_14(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert sorting_task_14(/* input1 */) == /* expected1 */",
+      "assert sorting_task_14(/* input2 */) == /* expected2 */",
+      "assert sorting_task_14(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def sorting_task_14(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_015",
+    "task_id": 123,
+    "question": "Write a python function to solve: search operation task 15",
+    "text": "Write a function to perform search operation for task 15.",
+    "prompt": "\"\"\"Write a function to perform search operation for task 15.\nassert search_task_15(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def search_task_15(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert search_task_15(/* input1 */) == /* expected1 */",
+      "assert search_task_15(/* input2 */) == /* expected2 */",
+      "assert search_task_15(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def search_task_15(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_016",
+    "task_id": 131,
+    "question": "Write a python function to solve: conversion operation task 16",
+    "text": "Write a function to perform conversion operation for task 16.",
+    "prompt": "\"\"\"Write a function to perform conversion operation for task 16.\nassert conversion_task_16(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def conversion_task_16(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert conversion_task_16(/* input1 */) == /* expected1 */",
+      "assert conversion_task_16(/* input2 */) == /* expected2 */",
+      "assert conversion_task_16(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def conversion_task_16(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_017",
+    "task_id": 139,
+    "question": "Write a python function to solve: validation operation task 17",
+    "text": "Write a function to perform validation operation for task 17.",
+    "prompt": "\"\"\"Write a function to perform validation operation for task 17.\nassert validation_task_17(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def validation_task_17(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert validation_task_17(/* input1 */) == /* expected1 */",
+      "assert validation_task_17(/* input2 */) == /* expected2 */",
+      "assert validation_task_17(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def validation_task_17(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_018",
+    "task_id": 147,
+    "question": "Write a python function to solve: recursion operation task 18",
+    "text": "Write a function to perform recursion operation for task 18.",
+    "prompt": "\"\"\"Write a function to perform recursion operation for task 18.\nassert recursion_task_18(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def recursion_task_18(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert recursion_task_18(/* input1 */) == /* expected1 */",
+      "assert recursion_task_18(/* input2 */) == /* expected2 */",
+      "assert recursion_task_18(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def recursion_task_18(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_019",
+    "task_id": 155,
+    "question": "Write a python function to solve: array operation task 19",
+    "text": "Write a function to perform array operation for task 19.",
+    "prompt": "\"\"\"Write a function to perform array operation for task 19.\nassert array_task_19(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def array_task_19(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert array_task_19(/* input1 */) == /* expected1 */",
+      "assert array_task_19(/* input2 */) == /* expected2 */",
+      "assert array_task_19(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def array_task_19(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_020",
+    "task_id": 163,
+    "question": "Write a python function to solve: logic operation task 20",
+    "text": "Write a function to perform logic operation for task 20.",
+    "prompt": "\"\"\"Write a function to perform logic operation for task 20.\nassert logic_task_20(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def logic_task_20(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert logic_task_20(/* input1 */) == /* expected1 */",
+      "assert logic_task_20(/* input2 */) == /* expected2 */",
+      "assert logic_task_20(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def logic_task_20(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_021",
+    "task_id": 171,
+    "question": "Write a python function to solve: string operation task 21",
+    "text": "Write a function to perform string operation for task 21.",
+    "prompt": "\"\"\"Write a function to perform string operation for task 21.\nassert string_task_21(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def string_task_21(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert string_task_21(/* input1 */) == /* expected1 */",
+      "assert string_task_21(/* input2 */) == /* expected2 */",
+      "assert string_task_21(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def string_task_21(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_022",
+    "task_id": 179,
+    "question": "Write a python function to solve: list operation task 22",
+    "text": "Write a function to perform list operation for task 22.",
+    "prompt": "\"\"\"Write a function to perform list operation for task 22.\nassert list_task_22(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def list_task_22(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert list_task_22(/* input1 */) == /* expected1 */",
+      "assert list_task_22(/* input2 */) == /* expected2 */",
+      "assert list_task_22(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def list_task_22(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_023",
+    "task_id": 187,
+    "question": "Write a python function to solve: math operation task 23",
+    "text": "Write a function to perform math operation for task 23.",
+    "prompt": "\"\"\"Write a function to perform math operation for task 23.\nassert math_task_23(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def math_task_23(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert math_task_23(/* input1 */) == /* expected1 */",
+      "assert math_task_23(/* input2 */) == /* expected2 */",
+      "assert math_task_23(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def math_task_23(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_024",
+    "task_id": 195,
+    "question": "Write a python function to solve: sorting operation task 24",
+    "text": "Write a function to perform sorting operation for task 24.",
+    "prompt": "\"\"\"Write a function to perform sorting operation for task 24.\nassert sorting_task_24(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def sorting_task_24(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert sorting_task_24(/* input1 */) == /* expected1 */",
+      "assert sorting_task_24(/* input2 */) == /* expected2 */",
+      "assert sorting_task_24(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def sorting_task_24(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_025",
+    "task_id": 203,
+    "question": "Write a python function to solve: search operation task 25",
+    "text": "Write a function to perform search operation for task 25.",
+    "prompt": "\"\"\"Write a function to perform search operation for task 25.\nassert search_task_25(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def search_task_25(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert search_task_25(/* input1 */) == /* expected1 */",
+      "assert search_task_25(/* input2 */) == /* expected2 */",
+      "assert search_task_25(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def search_task_25(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_026",
+    "task_id": 211,
+    "question": "Write a python function to solve: conversion operation task 26",
+    "text": "Write a function to perform conversion operation for task 26.",
+    "prompt": "\"\"\"Write a function to perform conversion operation for task 26.\nassert conversion_task_26(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def conversion_task_26(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert conversion_task_26(/* input1 */) == /* expected1 */",
+      "assert conversion_task_26(/* input2 */) == /* expected2 */",
+      "assert conversion_task_26(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def conversion_task_26(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_027",
+    "task_id": 219,
+    "question": "Write a python function to solve: validation operation task 27",
+    "text": "Write a function to perform validation operation for task 27.",
+    "prompt": "\"\"\"Write a function to perform validation operation for task 27.\nassert validation_task_27(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def validation_task_27(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert validation_task_27(/* input1 */) == /* expected1 */",
+      "assert validation_task_27(/* input2 */) == /* expected2 */",
+      "assert validation_task_27(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def validation_task_27(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_028",
+    "task_id": 227,
+    "question": "Write a python function to solve: recursion operation task 28",
+    "text": "Write a function to perform recursion operation for task 28.",
+    "prompt": "\"\"\"Write a function to perform recursion operation for task 28.\nassert recursion_task_28(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def recursion_task_28(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert recursion_task_28(/* input1 */) == /* expected1 */",
+      "assert recursion_task_28(/* input2 */) == /* expected2 */",
+      "assert recursion_task_28(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def recursion_task_28(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_029",
+    "task_id": 235,
+    "question": "Write a python function to solve: array operation task 29",
+    "text": "Write a function to perform array operation for task 29.",
+    "prompt": "\"\"\"Write a function to perform array operation for task 29.\nassert array_task_29(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def array_task_29(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert array_task_29(/* input1 */) == /* expected1 */",
+      "assert array_task_29(/* input2 */) == /* expected2 */",
+      "assert array_task_29(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def array_task_29(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_030",
+    "task_id": 243,
+    "question": "Write a python function to solve: logic operation task 30",
+    "text": "Write a function to perform logic operation for task 30.",
+    "prompt": "\"\"\"Write a function to perform logic operation for task 30.\nassert logic_task_30(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def logic_task_30(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert logic_task_30(/* input1 */) == /* expected1 */",
+      "assert logic_task_30(/* input2 */) == /* expected2 */",
+      "assert logic_task_30(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def logic_task_30(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_031",
+    "task_id": 251,
+    "question": "Write a python function to solve: string operation task 31",
+    "text": "Write a function to perform string operation for task 31.",
+    "prompt": "\"\"\"Write a function to perform string operation for task 31.\nassert string_task_31(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def string_task_31(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert string_task_31(/* input1 */) == /* expected1 */",
+      "assert string_task_31(/* input2 */) == /* expected2 */",
+      "assert string_task_31(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def string_task_31(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_032",
+    "task_id": 259,
+    "question": "Write a python function to solve: list operation task 32",
+    "text": "Write a function to perform list operation for task 32.",
+    "prompt": "\"\"\"Write a function to perform list operation for task 32.\nassert list_task_32(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def list_task_32(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert list_task_32(/* input1 */) == /* expected1 */",
+      "assert list_task_32(/* input2 */) == /* expected2 */",
+      "assert list_task_32(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def list_task_32(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_033",
+    "task_id": 267,
+    "question": "Write a python function to solve: math operation task 33",
+    "text": "Write a function to perform math operation for task 33.",
+    "prompt": "\"\"\"Write a function to perform math operation for task 33.\nassert math_task_33(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def math_task_33(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert math_task_33(/* input1 */) == /* expected1 */",
+      "assert math_task_33(/* input2 */) == /* expected2 */",
+      "assert math_task_33(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def math_task_33(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_034",
+    "task_id": 275,
+    "question": "Write a python function to solve: sorting operation task 34",
+    "text": "Write a function to perform sorting operation for task 34.",
+    "prompt": "\"\"\"Write a function to perform sorting operation for task 34.\nassert sorting_task_34(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def sorting_task_34(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert sorting_task_34(/* input1 */) == /* expected1 */",
+      "assert sorting_task_34(/* input2 */) == /* expected2 */",
+      "assert sorting_task_34(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def sorting_task_34(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_035",
+    "task_id": 283,
+    "question": "Write a python function to solve: search operation task 35",
+    "text": "Write a function to perform search operation for task 35.",
+    "prompt": "\"\"\"Write a function to perform search operation for task 35.\nassert search_task_35(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def search_task_35(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert search_task_35(/* input1 */) == /* expected1 */",
+      "assert search_task_35(/* input2 */) == /* expected2 */",
+      "assert search_task_35(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def search_task_35(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_036",
+    "task_id": 291,
+    "question": "Write a python function to solve: conversion operation task 36",
+    "text": "Write a function to perform conversion operation for task 36.",
+    "prompt": "\"\"\"Write a function to perform conversion operation for task 36.\nassert conversion_task_36(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def conversion_task_36(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert conversion_task_36(/* input1 */) == /* expected1 */",
+      "assert conversion_task_36(/* input2 */) == /* expected2 */",
+      "assert conversion_task_36(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def conversion_task_36(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_037",
+    "task_id": 299,
+    "question": "Write a python function to solve: validation operation task 37",
+    "text": "Write a function to perform validation operation for task 37.",
+    "prompt": "\"\"\"Write a function to perform validation operation for task 37.\nassert validation_task_37(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def validation_task_37(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert validation_task_37(/* input1 */) == /* expected1 */",
+      "assert validation_task_37(/* input2 */) == /* expected2 */",
+      "assert validation_task_37(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def validation_task_37(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_038",
+    "task_id": 307,
+    "question": "Write a python function to solve: recursion operation task 38",
+    "text": "Write a function to perform recursion operation for task 38.",
+    "prompt": "\"\"\"Write a function to perform recursion operation for task 38.\nassert recursion_task_38(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def recursion_task_38(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert recursion_task_38(/* input1 */) == /* expected1 */",
+      "assert recursion_task_38(/* input2 */) == /* expected2 */",
+      "assert recursion_task_38(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def recursion_task_38(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_039",
+    "task_id": 315,
+    "question": "Write a python function to solve: array operation task 39",
+    "text": "Write a function to perform array operation for task 39.",
+    "prompt": "\"\"\"Write a function to perform array operation for task 39.\nassert array_task_39(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def array_task_39(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert array_task_39(/* input1 */) == /* expected1 */",
+      "assert array_task_39(/* input2 */) == /* expected2 */",
+      "assert array_task_39(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def array_task_39(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_040",
+    "task_id": 323,
+    "question": "Write a python function to solve: logic operation task 40",
+    "text": "Write a function to perform logic operation for task 40.",
+    "prompt": "\"\"\"Write a function to perform logic operation for task 40.\nassert logic_task_40(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def logic_task_40(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert logic_task_40(/* input1 */) == /* expected1 */",
+      "assert logic_task_40(/* input2 */) == /* expected2 */",
+      "assert logic_task_40(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def logic_task_40(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_041",
+    "task_id": 331,
+    "question": "Write a python function to solve: string operation task 41",
+    "text": "Write a function to perform string operation for task 41.",
+    "prompt": "\"\"\"Write a function to perform string operation for task 41.\nassert string_task_41(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def string_task_41(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert string_task_41(/* input1 */) == /* expected1 */",
+      "assert string_task_41(/* input2 */) == /* expected2 */",
+      "assert string_task_41(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def string_task_41(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_042",
+    "task_id": 339,
+    "question": "Write a python function to solve: list operation task 42",
+    "text": "Write a function to perform list operation for task 42.",
+    "prompt": "\"\"\"Write a function to perform list operation for task 42.\nassert list_task_42(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def list_task_42(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert list_task_42(/* input1 */) == /* expected1 */",
+      "assert list_task_42(/* input2 */) == /* expected2 */",
+      "assert list_task_42(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def list_task_42(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_043",
+    "task_id": 347,
+    "question": "Write a python function to solve: math operation task 43",
+    "text": "Write a function to perform math operation for task 43.",
+    "prompt": "\"\"\"Write a function to perform math operation for task 43.\nassert math_task_43(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def math_task_43(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert math_task_43(/* input1 */) == /* expected1 */",
+      "assert math_task_43(/* input2 */) == /* expected2 */",
+      "assert math_task_43(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def math_task_43(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_044",
+    "task_id": 355,
+    "question": "Write a python function to solve: sorting operation task 44",
+    "text": "Write a function to perform sorting operation for task 44.",
+    "prompt": "\"\"\"Write a function to perform sorting operation for task 44.\nassert sorting_task_44(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def sorting_task_44(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert sorting_task_44(/* input1 */) == /* expected1 */",
+      "assert sorting_task_44(/* input2 */) == /* expected2 */",
+      "assert sorting_task_44(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def sorting_task_44(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_045",
+    "task_id": 363,
+    "question": "Write a python function to solve: search operation task 45",
+    "text": "Write a function to perform search operation for task 45.",
+    "prompt": "\"\"\"Write a function to perform search operation for task 45.\nassert search_task_45(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def search_task_45(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert search_task_45(/* input1 */) == /* expected1 */",
+      "assert search_task_45(/* input2 */) == /* expected2 */",
+      "assert search_task_45(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def search_task_45(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_046",
+    "task_id": 371,
+    "question": "Write a python function to solve: conversion operation task 46",
+    "text": "Write a function to perform conversion operation for task 46.",
+    "prompt": "\"\"\"Write a function to perform conversion operation for task 46.\nassert conversion_task_46(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def conversion_task_46(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert conversion_task_46(/* input1 */) == /* expected1 */",
+      "assert conversion_task_46(/* input2 */) == /* expected2 */",
+      "assert conversion_task_46(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def conversion_task_46(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_047",
+    "task_id": 379,
+    "question": "Write a python function to solve: validation operation task 47",
+    "text": "Write a function to perform validation operation for task 47.",
+    "prompt": "\"\"\"Write a function to perform validation operation for task 47.\nassert validation_task_47(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def validation_task_47(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert validation_task_47(/* input1 */) == /* expected1 */",
+      "assert validation_task_47(/* input2 */) == /* expected2 */",
+      "assert validation_task_47(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def validation_task_47(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_048",
+    "task_id": 387,
+    "question": "Write a python function to solve: recursion operation task 48",
+    "text": "Write a function to perform recursion operation for task 48.",
+    "prompt": "\"\"\"Write a function to perform recursion operation for task 48.\nassert recursion_task_48(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def recursion_task_48(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert recursion_task_48(/* input1 */) == /* expected1 */",
+      "assert recursion_task_48(/* input2 */) == /* expected2 */",
+      "assert recursion_task_48(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def recursion_task_48(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_049",
+    "task_id": 395,
+    "question": "Write a python function to solve: array operation task 49",
+    "text": "Write a function to perform array operation for task 49.",
+    "prompt": "\"\"\"Write a function to perform array operation for task 49.\nassert array_task_49(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def array_task_49(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert array_task_49(/* input1 */) == /* expected1 */",
+      "assert array_task_49(/* input2 */) == /* expected2 */",
+      "assert array_task_49(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def array_task_49(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "mbpp_050",
+    "task_id": 403,
+    "question": "Write a python function to solve: logic operation task 50",
+    "text": "Write a function to perform logic operation for task 50.",
+    "prompt": "\"\"\"Write a function to perform logic operation for task 50.\nassert logic_task_50(/* test_input */) == /* expected */\n\"\"\"",
+    "code": "def logic_task_50(/* params */):\n    # reference solution\n    pass",
+    "test_list": [
+      "assert logic_task_50(/* input1 */) == /* expected1 */",
+      "assert logic_task_50(/* input2 */) == /* expected2 */",
+      "assert logic_task_50(/* input3 */) == /* expected3 */"
+    ],
+    "answer": "def logic_task_50(/* params */):\n    # correct implementation\n    pass"
+  }
+]

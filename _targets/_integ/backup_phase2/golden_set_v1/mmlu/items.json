@@ -1,0 +1,652 @@
+[
+  {
+    "item_id": "mmlu_001",
+    "question": "[abstract_algebra] Golden set question 1: Which of the following statements about abstract algebra is most accurate?",
+    "choices": {
+      "A": "Statement A regarding abstract algebra (option 1)",
+      "B": "Statement B regarding abstract algebra (option 2)",
+      "C": "Statement C regarding abstract algebra (option 3)",
+      "D": "Statement D regarding abstract algebra (option 4)"
+    },
+    "answer": "A",
+    "subject": "abstract_algebra",
+    "prompt": "The following is a multiple choice question about abstract algebra.\n\nGolden set question 1: Which of the following statements about abstract algebra is most accurate?\nA. Statement A regarding abstract algebra (option 1)\nB. Statement B regarding abstract algebra (option 2)\nC. Statement C regarding abstract algebra (option 3)\nD. Statement D regarding abstract algebra (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_002",
+    "question": "[anatomy] Golden set question 2: Which of the following statements about anatomy is most accurate?",
+    "choices": {
+      "A": "Statement A regarding anatomy (option 1)",
+      "B": "Statement B regarding anatomy (option 2)",
+      "C": "Statement C regarding anatomy (option 3)",
+      "D": "Statement D regarding anatomy (option 4)"
+    },
+    "answer": "D",
+    "subject": "anatomy",
+    "prompt": "The following is a multiple choice question about anatomy.\n\nGolden set question 2: Which of the following statements about anatomy is most accurate?\nA. Statement A regarding anatomy (option 1)\nB. Statement B regarding anatomy (option 2)\nC. Statement C regarding anatomy (option 3)\nD. Statement D regarding anatomy (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_003",
+    "question": "[astronomy] Golden set question 3: Which of the following statements about astronomy is most accurate?",
+    "choices": {
+      "A": "Statement A regarding astronomy (option 1)",
+      "B": "Statement B regarding astronomy (option 2)",
+      "C": "Statement C regarding astronomy (option 3)",
+      "D": "Statement D regarding astronomy (option 4)"
+    },
+    "answer": "A",
+    "subject": "astronomy",
+    "prompt": "The following is a multiple choice question about astronomy.\n\nGolden set question 3: Which of the following statements about astronomy is most accurate?\nA. Statement A regarding astronomy (option 1)\nB. Statement B regarding astronomy (option 2)\nC. Statement C regarding astronomy (option 3)\nD. Statement D regarding astronomy (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_004",
+    "question": "[business_ethics] Golden set question 4: Which of the following statements about business ethics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding business ethics (option 1)",
+      "B": "Statement B regarding business ethics (option 2)",
+      "C": "Statement C regarding business ethics (option 3)",
+      "D": "Statement D regarding business ethics (option 4)"
+    },
+    "answer": "C",
+    "subject": "business_ethics",
+    "prompt": "The following is a multiple choice question about business ethics.\n\nGolden set question 4: Which of the following statements about business ethics is most accurate?\nA. Statement A regarding business ethics (option 1)\nB. Statement B regarding business ethics (option 2)\nC. Statement C regarding business ethics (option 3)\nD. Statement D regarding business ethics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_005",
+    "question": "[clinical_knowledge] Golden set question 5: Which of the following statements about clinical knowledge is most accurate?",
+    "choices": {
+      "A": "Statement A regarding clinical knowledge (option 1)",
+      "B": "Statement B regarding clinical knowledge (option 2)",
+      "C": "Statement C regarding clinical knowledge (option 3)",
+      "D": "Statement D regarding clinical knowledge (option 4)"
+    },
+    "answer": "C",
+    "subject": "clinical_knowledge",
+    "prompt": "The following is a multiple choice question about clinical knowledge.\n\nGolden set question 5: Which of the following statements about clinical knowledge is most accurate?\nA. Statement A regarding clinical knowledge (option 1)\nB. Statement B regarding clinical knowledge (option 2)\nC. Statement C regarding clinical knowledge (option 3)\nD. Statement D regarding clinical knowledge (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_006",
+    "question": "[college_biology] Golden set question 6: Which of the following statements about college biology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college biology (option 1)",
+      "B": "Statement B regarding college biology (option 2)",
+      "C": "Statement C regarding college biology (option 3)",
+      "D": "Statement D regarding college biology (option 4)"
+    },
+    "answer": "B",
+    "subject": "college_biology",
+    "prompt": "The following is a multiple choice question about college biology.\n\nGolden set question 6: Which of the following statements about college biology is most accurate?\nA. Statement A regarding college biology (option 1)\nB. Statement B regarding college biology (option 2)\nC. Statement C regarding college biology (option 3)\nD. Statement D regarding college biology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_007",
+    "question": "[college_chemistry] Golden set question 7: Which of the following statements about college chemistry is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college chemistry (option 1)",
+      "B": "Statement B regarding college chemistry (option 2)",
+      "C": "Statement C regarding college chemistry (option 3)",
+      "D": "Statement D regarding college chemistry (option 4)"
+    },
+    "answer": "A",
+    "subject": "college_chemistry",
+    "prompt": "The following is a multiple choice question about college chemistry.\n\nGolden set question 7: Which of the following statements about college chemistry is most accurate?\nA. Statement A regarding college chemistry (option 1)\nB. Statement B regarding college chemistry (option 2)\nC. Statement C regarding college chemistry (option 3)\nD. Statement D regarding college chemistry (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_008",
+    "question": "[college_computer_science] Golden set question 8: Which of the following statements about college computer science is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college computer science (option 1)",
+      "B": "Statement B regarding college computer science (option 2)",
+      "C": "Statement C regarding college computer science (option 3)",
+      "D": "Statement D regarding college computer science (option 4)"
+    },
+    "answer": "A",
+    "subject": "college_computer_science",
+    "prompt": "The following is a multiple choice question about college computer science.\n\nGolden set question 8: Which of the following statements about college computer science is most accurate?\nA. Statement A regarding college computer science (option 1)\nB. Statement B regarding college computer science (option 2)\nC. Statement C regarding college computer science (option 3)\nD. Statement D regarding college computer science (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_009",
+    "question": "[college_mathematics] Golden set question 9: Which of the following statements about college mathematics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college mathematics (option 1)",
+      "B": "Statement B regarding college mathematics (option 2)",
+      "C": "Statement C regarding college mathematics (option 3)",
+      "D": "Statement D regarding college mathematics (option 4)"
+    },
+    "answer": "B",
+    "subject": "college_mathematics",
+    "prompt": "The following is a multiple choice question about college mathematics.\n\nGolden set question 9: Which of the following statements about college mathematics is most accurate?\nA. Statement A regarding college mathematics (option 1)\nB. Statement B regarding college mathematics (option 2)\nC. Statement C regarding college mathematics (option 3)\nD. Statement D regarding college mathematics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_010",
+    "question": "[college_medicine] Golden set question 10: Which of the following statements about college medicine is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college medicine (option 1)",
+      "B": "Statement B regarding college medicine (option 2)",
+      "C": "Statement C regarding college medicine (option 3)",
+      "D": "Statement D regarding college medicine (option 4)"
+    },
+    "answer": "C",
+    "subject": "college_medicine",
+    "prompt": "The following is a multiple choice question about college medicine.\n\nGolden set question 10: Which of the following statements about college medicine is most accurate?\nA. Statement A regarding college medicine (option 1)\nB. Statement B regarding college medicine (option 2)\nC. Statement C regarding college medicine (option 3)\nD. Statement D regarding college medicine (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_011",
+    "question": "[college_physics] Golden set question 11: Which of the following statements about college physics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding college physics (option 1)",
+      "B": "Statement B regarding college physics (option 2)",
+      "C": "Statement C regarding college physics (option 3)",
+      "D": "Statement D regarding college physics (option 4)"
+    },
+    "answer": "A",
+    "subject": "college_physics",
+    "prompt": "The following is a multiple choice question about college physics.\n\nGolden set question 11: Which of the following statements about college physics is most accurate?\nA. Statement A regarding college physics (option 1)\nB. Statement B regarding college physics (option 2)\nC. Statement C regarding college physics (option 3)\nD. Statement D regarding college physics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_012",
+    "question": "[conceptual_physics] Golden set question 12: Which of the following statements about conceptual physics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding conceptual physics (option 1)",
+      "B": "Statement B regarding conceptual physics (option 2)",
+      "C": "Statement C regarding conceptual physics (option 3)",
+      "D": "Statement D regarding conceptual physics (option 4)"
+    },
+    "answer": "B",
+    "subject": "conceptual_physics",
+    "prompt": "The following is a multiple choice question about conceptual physics.\n\nGolden set question 12: Which of the following statements about conceptual physics is most accurate?\nA. Statement A regarding conceptual physics (option 1)\nB. Statement B regarding conceptual physics (option 2)\nC. Statement C regarding conceptual physics (option 3)\nD. Statement D regarding conceptual physics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_013",
+    "question": "[econometrics] Golden set question 13: Which of the following statements about econometrics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding econometrics (option 1)",
+      "B": "Statement B regarding econometrics (option 2)",
+      "C": "Statement C regarding econometrics (option 3)",
+      "D": "Statement D regarding econometrics (option 4)"
+    },
+    "answer": "A",
+    "subject": "econometrics",
+    "prompt": "The following is a multiple choice question about econometrics.\n\nGolden set question 13: Which of the following statements about econometrics is most accurate?\nA. Statement A regarding econometrics (option 1)\nB. Statement B regarding econometrics (option 2)\nC. Statement C regarding econometrics (option 3)\nD. Statement D regarding econometrics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_014",
+    "question": "[electrical_engineering] Golden set question 14: Which of the following statements about electrical engineering is most accurate?",
+    "choices": {
+      "A": "Statement A regarding electrical engineering (option 1)",
+      "B": "Statement B regarding electrical engineering (option 2)",
+      "C": "Statement C regarding electrical engineering (option 3)",
+      "D": "Statement D regarding electrical engineering (option 4)"
+    },
+    "answer": "D",
+    "subject": "electrical_engineering",
+    "prompt": "The following is a multiple choice question about electrical engineering.\n\nGolden set question 14: Which of the following statements about electrical engineering is most accurate?\nA. Statement A regarding electrical engineering (option 1)\nB. Statement B regarding electrical engineering (option 2)\nC. Statement C regarding electrical engineering (option 3)\nD. Statement D regarding electrical engineering (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_015",
+    "question": "[elementary_mathematics] Golden set question 15: Which of the following statements about elementary mathematics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding elementary mathematics (option 1)",
+      "B": "Statement B regarding elementary mathematics (option 2)",
+      "C": "Statement C regarding elementary mathematics (option 3)",
+      "D": "Statement D regarding elementary mathematics (option 4)"
+    },
+    "answer": "C",
+    "subject": "elementary_mathematics",
+    "prompt": "The following is a multiple choice question about elementary mathematics.\n\nGolden set question 15: Which of the following statements about elementary mathematics is most accurate?\nA. Statement A regarding elementary mathematics (option 1)\nB. Statement B regarding elementary mathematics (option 2)\nC. Statement C regarding elementary mathematics (option 3)\nD. Statement D regarding elementary mathematics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_016",
+    "question": "[global_facts] Golden set question 16: Which of the following statements about global facts is most accurate?",
+    "choices": {
+      "A": "Statement A regarding global facts (option 1)",
+      "B": "Statement B regarding global facts (option 2)",
+      "C": "Statement C regarding global facts (option 3)",
+      "D": "Statement D regarding global facts (option 4)"
+    },
+    "answer": "D",
+    "subject": "global_facts",
+    "prompt": "The following is a multiple choice question about global facts.\n\nGolden set question 16: Which of the following statements about global facts is most accurate?\nA. Statement A regarding global facts (option 1)\nB. Statement B regarding global facts (option 2)\nC. Statement C regarding global facts (option 3)\nD. Statement D regarding global facts (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_017",
+    "question": "[high_school_biology] Golden set question 17: Which of the following statements about high school biology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school biology (option 1)",
+      "B": "Statement B regarding high school biology (option 2)",
+      "C": "Statement C regarding high school biology (option 3)",
+      "D": "Statement D regarding high school biology (option 4)"
+    },
+    "answer": "C",
+    "subject": "high_school_biology",
+    "prompt": "The following is a multiple choice question about high school biology.\n\nGolden set question 17: Which of the following statements about high school biology is most accurate?\nA. Statement A regarding high school biology (option 1)\nB. Statement B regarding high school biology (option 2)\nC. Statement C regarding high school biology (option 3)\nD. Statement D regarding high school biology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_018",
+    "question": "[high_school_chemistry] Golden set question 18: Which of the following statements about high school chemistry is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school chemistry (option 1)",
+      "B": "Statement B regarding high school chemistry (option 2)",
+      "C": "Statement C regarding high school chemistry (option 3)",
+      "D": "Statement D regarding high school chemistry (option 4)"
+    },
+    "answer": "B",
+    "subject": "high_school_chemistry",
+    "prompt": "The following is a multiple choice question about high school chemistry.\n\nGolden set question 18: Which of the following statements about high school chemistry is most accurate?\nA. Statement A regarding high school chemistry (option 1)\nB. Statement B regarding high school chemistry (option 2)\nC. Statement C regarding high school chemistry (option 3)\nD. Statement D regarding high school chemistry (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_019",
+    "question": "[high_school_european_history] Golden set question 19: Which of the following statements about high school european history is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school european history (option 1)",
+      "B": "Statement B regarding high school european history (option 2)",
+      "C": "Statement C regarding high school european history (option 3)",
+      "D": "Statement D regarding high school european history (option 4)"
+    },
+    "answer": "C",
+    "subject": "high_school_european_history",
+    "prompt": "The following is a multiple choice question about high school european history.\n\nGolden set question 19: Which of the following statements about high school european history is most accurate?\nA. Statement A regarding high school european history (option 1)\nB. Statement B regarding high school european history (option 2)\nC. Statement C regarding high school european history (option 3)\nD. Statement D regarding high school european history (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_020",
+    "question": "[high_school_geography] Golden set question 20: Which of the following statements about high school geography is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school geography (option 1)",
+      "B": "Statement B regarding high school geography (option 2)",
+      "C": "Statement C regarding high school geography (option 3)",
+      "D": "Statement D regarding high school geography (option 4)"
+    },
+    "answer": "C",
+    "subject": "high_school_geography",
+    "prompt": "The following is a multiple choice question about high school geography.\n\nGolden set question 20: Which of the following statements about high school geography is most accurate?\nA. Statement A regarding high school geography (option 1)\nB. Statement B regarding high school geography (option 2)\nC. Statement C regarding high school geography (option 3)\nD. Statement D regarding high school geography (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_021",
+    "question": "[high_school_macroeconomics] Golden set question 21: Which of the following statements about high school macroeconomics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school macroeconomics (option 1)",
+      "B": "Statement B regarding high school macroeconomics (option 2)",
+      "C": "Statement C regarding high school macroeconomics (option 3)",
+      "D": "Statement D regarding high school macroeconomics (option 4)"
+    },
+    "answer": "B",
+    "subject": "high_school_macroeconomics",
+    "prompt": "The following is a multiple choice question about high school macroeconomics.\n\nGolden set question 21: Which of the following statements about high school macroeconomics is most accurate?\nA. Statement A regarding high school macroeconomics (option 1)\nB. Statement B regarding high school macroeconomics (option 2)\nC. Statement C regarding high school macroeconomics (option 3)\nD. Statement D regarding high school macroeconomics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_022",
+    "question": "[high_school_mathematics] Golden set question 22: Which of the following statements about high school mathematics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school mathematics (option 1)",
+      "B": "Statement B regarding high school mathematics (option 2)",
+      "C": "Statement C regarding high school mathematics (option 3)",
+      "D": "Statement D regarding high school mathematics (option 4)"
+    },
+    "answer": "C",
+    "subject": "high_school_mathematics",
+    "prompt": "The following is a multiple choice question about high school mathematics.\n\nGolden set question 22: Which of the following statements about high school mathematics is most accurate?\nA. Statement A regarding high school mathematics (option 1)\nB. Statement B regarding high school mathematics (option 2)\nC. Statement C regarding high school mathematics (option 3)\nD. Statement D regarding high school mathematics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_023",
+    "question": "[high_school_microeconomics] Golden set question 23: Which of the following statements about high school microeconomics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school microeconomics (option 1)",
+      "B": "Statement B regarding high school microeconomics (option 2)",
+      "C": "Statement C regarding high school microeconomics (option 3)",
+      "D": "Statement D regarding high school microeconomics (option 4)"
+    },
+    "answer": "A",
+    "subject": "high_school_microeconomics",
+    "prompt": "The following is a multiple choice question about high school microeconomics.\n\nGolden set question 23: Which of the following statements about high school microeconomics is most accurate?\nA. Statement A regarding high school microeconomics (option 1)\nB. Statement B regarding high school microeconomics (option 2)\nC. Statement C regarding high school microeconomics (option 3)\nD. Statement D regarding high school microeconomics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_024",
+    "question": "[high_school_physics] Golden set question 24: Which of the following statements about high school physics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school physics (option 1)",
+      "B": "Statement B regarding high school physics (option 2)",
+      "C": "Statement C regarding high school physics (option 3)",
+      "D": "Statement D regarding high school physics (option 4)"
+    },
+    "answer": "B",
+    "subject": "high_school_physics",
+    "prompt": "The following is a multiple choice question about high school physics.\n\nGolden set question 24: Which of the following statements about high school physics is most accurate?\nA. Statement A regarding high school physics (option 1)\nB. Statement B regarding high school physics (option 2)\nC. Statement C regarding high school physics (option 3)\nD. Statement D regarding high school physics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_025",
+    "question": "[high_school_psychology] Golden set question 25: Which of the following statements about high school psychology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school psychology (option 1)",
+      "B": "Statement B regarding high school psychology (option 2)",
+      "C": "Statement C regarding high school psychology (option 3)",
+      "D": "Statement D regarding high school psychology (option 4)"
+    },
+    "answer": "B",
+    "subject": "high_school_psychology",
+    "prompt": "The following is a multiple choice question about high school psychology.\n\nGolden set question 25: Which of the following statements about high school psychology is most accurate?\nA. Statement A regarding high school psychology (option 1)\nB. Statement B regarding high school psychology (option 2)\nC. Statement C regarding high school psychology (option 3)\nD. Statement D regarding high school psychology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_026",
+    "question": "[high_school_statistics] Golden set question 26: Which of the following statements about high school statistics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school statistics (option 1)",
+      "B": "Statement B regarding high school statistics (option 2)",
+      "C": "Statement C regarding high school statistics (option 3)",
+      "D": "Statement D regarding high school statistics (option 4)"
+    },
+    "answer": "B",
+    "subject": "high_school_statistics",
+    "prompt": "The following is a multiple choice question about high school statistics.\n\nGolden set question 26: Which of the following statements about high school statistics is most accurate?\nA. Statement A regarding high school statistics (option 1)\nB. Statement B regarding high school statistics (option 2)\nC. Statement C regarding high school statistics (option 3)\nD. Statement D regarding high school statistics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_027",
+    "question": "[high_school_us_history] Golden set question 27: Which of the following statements about high school us history is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school us history (option 1)",
+      "B": "Statement B regarding high school us history (option 2)",
+      "C": "Statement C regarding high school us history (option 3)",
+      "D": "Statement D regarding high school us history (option 4)"
+    },
+    "answer": "D",
+    "subject": "high_school_us_history",
+    "prompt": "The following is a multiple choice question about high school us history.\n\nGolden set question 27: Which of the following statements about high school us history is most accurate?\nA. Statement A regarding high school us history (option 1)\nB. Statement B regarding high school us history (option 2)\nC. Statement C regarding high school us history (option 3)\nD. Statement D regarding high school us history (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_028",
+    "question": "[high_school_world_history] Golden set question 28: Which of the following statements about high school world history is most accurate?",
+    "choices": {
+      "A": "Statement A regarding high school world history (option 1)",
+      "B": "Statement B regarding high school world history (option 2)",
+      "C": "Statement C regarding high school world history (option 3)",
+      "D": "Statement D regarding high school world history (option 4)"
+    },
+    "answer": "D",
+    "subject": "high_school_world_history",
+    "prompt": "The following is a multiple choice question about high school world history.\n\nGolden set question 28: Which of the following statements about high school world history is most accurate?\nA. Statement A regarding high school world history (option 1)\nB. Statement B regarding high school world history (option 2)\nC. Statement C regarding high school world history (option 3)\nD. Statement D regarding high school world history (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_029",
+    "question": "[human_aging] Golden set question 29: Which of the following statements about human aging is most accurate?",
+    "choices": {
+      "A": "Statement A regarding human aging (option 1)",
+      "B": "Statement B regarding human aging (option 2)",
+      "C": "Statement C regarding human aging (option 3)",
+      "D": "Statement D regarding human aging (option 4)"
+    },
+    "answer": "C",
+    "subject": "human_aging",
+    "prompt": "The following is a multiple choice question about human aging.\n\nGolden set question 29: Which of the following statements about human aging is most accurate?\nA. Statement A regarding human aging (option 1)\nB. Statement B regarding human aging (option 2)\nC. Statement C regarding human aging (option 3)\nD. Statement D regarding human aging (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_030",
+    "question": "[human_sexuality] Golden set question 30: Which of the following statements about human sexuality is most accurate?",
+    "choices": {
+      "A": "Statement A regarding human sexuality (option 1)",
+      "B": "Statement B regarding human sexuality (option 2)",
+      "C": "Statement C regarding human sexuality (option 3)",
+      "D": "Statement D regarding human sexuality (option 4)"
+    },
+    "answer": "B",
+    "subject": "human_sexuality",
+    "prompt": "The following is a multiple choice question about human sexuality.\n\nGolden set question 30: Which of the following statements about human sexuality is most accurate?\nA. Statement A regarding human sexuality (option 1)\nB. Statement B regarding human sexuality (option 2)\nC. Statement C regarding human sexuality (option 3)\nD. Statement D regarding human sexuality (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_031",
+    "question": "[international_law] Golden set question 31: Which of the following statements about international law is most accurate?",
+    "choices": {
+      "A": "Statement A regarding international law (option 1)",
+      "B": "Statement B regarding international law (option 2)",
+      "C": "Statement C regarding international law (option 3)",
+      "D": "Statement D regarding international law (option 4)"
+    },
+    "answer": "C",
+    "subject": "international_law",
+    "prompt": "The following is a multiple choice question about international law.\n\nGolden set question 31: Which of the following statements about international law is most accurate?\nA. Statement A regarding international law (option 1)\nB. Statement B regarding international law (option 2)\nC. Statement C regarding international law (option 3)\nD. Statement D regarding international law (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_032",
+    "question": "[jurisprudence] Golden set question 32: Which of the following statements about jurisprudence is most accurate?",
+    "choices": {
+      "A": "Statement A regarding jurisprudence (option 1)",
+      "B": "Statement B regarding jurisprudence (option 2)",
+      "C": "Statement C regarding jurisprudence (option 3)",
+      "D": "Statement D regarding jurisprudence (option 4)"
+    },
+    "answer": "A",
+    "subject": "jurisprudence",
+    "prompt": "The following is a multiple choice question about jurisprudence.\n\nGolden set question 32: Which of the following statements about jurisprudence is most accurate?\nA. Statement A regarding jurisprudence (option 1)\nB. Statement B regarding jurisprudence (option 2)\nC. Statement C regarding jurisprudence (option 3)\nD. Statement D regarding jurisprudence (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_033",
+    "question": "[machine_learning] Golden set question 33: Which of the following statements about machine learning is most accurate?",
+    "choices": {
+      "A": "Statement A regarding machine learning (option 1)",
+      "B": "Statement B regarding machine learning (option 2)",
+      "C": "Statement C regarding machine learning (option 3)",
+      "D": "Statement D regarding machine learning (option 4)"
+    },
+    "answer": "B",
+    "subject": "machine_learning",
+    "prompt": "The following is a multiple choice question about machine learning.\n\nGolden set question 33: Which of the following statements about machine learning is most accurate?\nA. Statement A regarding machine learning (option 1)\nB. Statement B regarding machine learning (option 2)\nC. Statement C regarding machine learning (option 3)\nD. Statement D regarding machine learning (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_034",
+    "question": "[management] Golden set question 34: Which of the following statements about management is most accurate?",
+    "choices": {
+      "A": "Statement A regarding management (option 1)",
+      "B": "Statement B regarding management (option 2)",
+      "C": "Statement C regarding management (option 3)",
+      "D": "Statement D regarding management (option 4)"
+    },
+    "answer": "A",
+    "subject": "management",
+    "prompt": "The following is a multiple choice question about management.\n\nGolden set question 34: Which of the following statements about management is most accurate?\nA. Statement A regarding management (option 1)\nB. Statement B regarding management (option 2)\nC. Statement C regarding management (option 3)\nD. Statement D regarding management (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_035",
+    "question": "[marketing] Golden set question 35: Which of the following statements about marketing is most accurate?",
+    "choices": {
+      "A": "Statement A regarding marketing (option 1)",
+      "B": "Statement B regarding marketing (option 2)",
+      "C": "Statement C regarding marketing (option 3)",
+      "D": "Statement D regarding marketing (option 4)"
+    },
+    "answer": "C",
+    "subject": "marketing",
+    "prompt": "The following is a multiple choice question about marketing.\n\nGolden set question 35: Which of the following statements about marketing is most accurate?\nA. Statement A regarding marketing (option 1)\nB. Statement B regarding marketing (option 2)\nC. Statement C regarding marketing (option 3)\nD. Statement D regarding marketing (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_036",
+    "question": "[medical_genetics] Golden set question 36: Which of the following statements about medical genetics is most accurate?",
+    "choices": {
+      "A": "Statement A regarding medical genetics (option 1)",
+      "B": "Statement B regarding medical genetics (option 2)",
+      "C": "Statement C regarding medical genetics (option 3)",
+      "D": "Statement D regarding medical genetics (option 4)"
+    },
+    "answer": "D",
+    "subject": "medical_genetics",
+    "prompt": "The following is a multiple choice question about medical genetics.\n\nGolden set question 36: Which of the following statements about medical genetics is most accurate?\nA. Statement A regarding medical genetics (option 1)\nB. Statement B regarding medical genetics (option 2)\nC. Statement C regarding medical genetics (option 3)\nD. Statement D regarding medical genetics (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_037",
+    "question": "[miscellaneous] Golden set question 37: Which of the following statements about miscellaneous is most accurate?",
+    "choices": {
+      "A": "Statement A regarding miscellaneous (option 1)",
+      "B": "Statement B regarding miscellaneous (option 2)",
+      "C": "Statement C regarding miscellaneous (option 3)",
+      "D": "Statement D regarding miscellaneous (option 4)"
+    },
+    "answer": "C",
+    "subject": "miscellaneous",
+    "prompt": "The following is a multiple choice question about miscellaneous.\n\nGolden set question 37: Which of the following statements about miscellaneous is most accurate?\nA. Statement A regarding miscellaneous (option 1)\nB. Statement B regarding miscellaneous (option 2)\nC. Statement C regarding miscellaneous (option 3)\nD. Statement D regarding miscellaneous (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_038",
+    "question": "[moral_disputes] Golden set question 38: Which of the following statements about moral disputes is most accurate?",
+    "choices": {
+      "A": "Statement A regarding moral disputes (option 1)",
+      "B": "Statement B regarding moral disputes (option 2)",
+      "C": "Statement C regarding moral disputes (option 3)",
+      "D": "Statement D regarding moral disputes (option 4)"
+    },
+    "answer": "A",
+    "subject": "moral_disputes",
+    "prompt": "The following is a multiple choice question about moral disputes.\n\nGolden set question 38: Which of the following statements about moral disputes is most accurate?\nA. Statement A regarding moral disputes (option 1)\nB. Statement B regarding moral disputes (option 2)\nC. Statement C regarding moral disputes (option 3)\nD. Statement D regarding moral disputes (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_039",
+    "question": "[moral_scenarios] Golden set question 39: Which of the following statements about moral scenarios is most accurate?",
+    "choices": {
+      "A": "Statement A regarding moral scenarios (option 1)",
+      "B": "Statement B regarding moral scenarios (option 2)",
+      "C": "Statement C regarding moral scenarios (option 3)",
+      "D": "Statement D regarding moral scenarios (option 4)"
+    },
+    "answer": "B",
+    "subject": "moral_scenarios",
+    "prompt": "The following is a multiple choice question about moral scenarios.\n\nGolden set question 39: Which of the following statements about moral scenarios is most accurate?\nA. Statement A regarding moral scenarios (option 1)\nB. Statement B regarding moral scenarios (option 2)\nC. Statement C regarding moral scenarios (option 3)\nD. Statement D regarding moral scenarios (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_040",
+    "question": "[nutrition] Golden set question 40: Which of the following statements about nutrition is most accurate?",
+    "choices": {
+      "A": "Statement A regarding nutrition (option 1)",
+      "B": "Statement B regarding nutrition (option 2)",
+      "C": "Statement C regarding nutrition (option 3)",
+      "D": "Statement D regarding nutrition (option 4)"
+    },
+    "answer": "C",
+    "subject": "nutrition",
+    "prompt": "The following is a multiple choice question about nutrition.\n\nGolden set question 40: Which of the following statements about nutrition is most accurate?\nA. Statement A regarding nutrition (option 1)\nB. Statement B regarding nutrition (option 2)\nC. Statement C regarding nutrition (option 3)\nD. Statement D regarding nutrition (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_041",
+    "question": "[philosophy] Golden set question 41: Which of the following statements about philosophy is most accurate?",
+    "choices": {
+      "A": "Statement A regarding philosophy (option 1)",
+      "B": "Statement B regarding philosophy (option 2)",
+      "C": "Statement C regarding philosophy (option 3)",
+      "D": "Statement D regarding philosophy (option 4)"
+    },
+    "answer": "B",
+    "subject": "philosophy",
+    "prompt": "The following is a multiple choice question about philosophy.\n\nGolden set question 41: Which of the following statements about philosophy is most accurate?\nA. Statement A regarding philosophy (option 1)\nB. Statement B regarding philosophy (option 2)\nC. Statement C regarding philosophy (option 3)\nD. Statement D regarding philosophy (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_042",
+    "question": "[prehistory] Golden set question 42: Which of the following statements about prehistory is most accurate?",
+    "choices": {
+      "A": "Statement A regarding prehistory (option 1)",
+      "B": "Statement B regarding prehistory (option 2)",
+      "C": "Statement C regarding prehistory (option 3)",
+      "D": "Statement D regarding prehistory (option 4)"
+    },
+    "answer": "D",
+    "subject": "prehistory",
+    "prompt": "The following is a multiple choice question about prehistory.\n\nGolden set question 42: Which of the following statements about prehistory is most accurate?\nA. Statement A regarding prehistory (option 1)\nB. Statement B regarding prehistory (option 2)\nC. Statement C regarding prehistory (option 3)\nD. Statement D regarding prehistory (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_043",
+    "question": "[professional_accounting] Golden set question 43: Which of the following statements about professional accounting is most accurate?",
+    "choices": {
+      "A": "Statement A regarding professional accounting (option 1)",
+      "B": "Statement B regarding professional accounting (option 2)",
+      "C": "Statement C regarding professional accounting (option 3)",
+      "D": "Statement D regarding professional accounting (option 4)"
+    },
+    "answer": "D",
+    "subject": "professional_accounting",
+    "prompt": "The following is a multiple choice question about professional accounting.\n\nGolden set question 43: Which of the following statements about professional accounting is most accurate?\nA. Statement A regarding professional accounting (option 1)\nB. Statement B regarding professional accounting (option 2)\nC. Statement C regarding professional accounting (option 3)\nD. Statement D regarding professional accounting (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_044",
+    "question": "[professional_law] Golden set question 44: Which of the following statements about professional law is most accurate?",
+    "choices": {
+      "A": "Statement A regarding professional law (option 1)",
+      "B": "Statement B regarding professional law (option 2)",
+      "C": "Statement C regarding professional law (option 3)",
+      "D": "Statement D regarding professional law (option 4)"
+    },
+    "answer": "D",
+    "subject": "professional_law",
+    "prompt": "The following is a multiple choice question about professional law.\n\nGolden set question 44: Which of the following statements about professional law is most accurate?\nA. Statement A regarding professional law (option 1)\nB. Statement B regarding professional law (option 2)\nC. Statement C regarding professional law (option 3)\nD. Statement D regarding professional law (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_045",
+    "question": "[professional_medicine] Golden set question 45: Which of the following statements about professional medicine is most accurate?",
+    "choices": {
+      "A": "Statement A regarding professional medicine (option 1)",
+      "B": "Statement B regarding professional medicine (option 2)",
+      "C": "Statement C regarding professional medicine (option 3)",
+      "D": "Statement D regarding professional medicine (option 4)"
+    },
+    "answer": "B",
+    "subject": "professional_medicine",
+    "prompt": "The following is a multiple choice question about professional medicine.\n\nGolden set question 45: Which of the following statements about professional medicine is most accurate?\nA. Statement A regarding professional medicine (option 1)\nB. Statement B regarding professional medicine (option 2)\nC. Statement C regarding professional medicine (option 3)\nD. Statement D regarding professional medicine (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_046",
+    "question": "[professional_psychology] Golden set question 46: Which of the following statements about professional psychology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding professional psychology (option 1)",
+      "B": "Statement B regarding professional psychology (option 2)",
+      "C": "Statement C regarding professional psychology (option 3)",
+      "D": "Statement D regarding professional psychology (option 4)"
+    },
+    "answer": "C",
+    "subject": "professional_psychology",
+    "prompt": "The following is a multiple choice question about professional psychology.\n\nGolden set question 46: Which of the following statements about professional psychology is most accurate?\nA. Statement A regarding professional psychology (option 1)\nB. Statement B regarding professional psychology (option 2)\nC. Statement C regarding professional psychology (option 3)\nD. Statement D regarding professional psychology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_047",
+    "question": "[sociology] Golden set question 47: Which of the following statements about sociology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding sociology (option 1)",
+      "B": "Statement B regarding sociology (option 2)",
+      "C": "Statement C regarding sociology (option 3)",
+      "D": "Statement D regarding sociology (option 4)"
+    },
+    "answer": "B",
+    "subject": "sociology",
+    "prompt": "The following is a multiple choice question about sociology.\n\nGolden set question 47: Which of the following statements about sociology is most accurate?\nA. Statement A regarding sociology (option 1)\nB. Statement B regarding sociology (option 2)\nC. Statement C regarding sociology (option 3)\nD. Statement D regarding sociology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_048",
+    "question": "[us_foreign_policy] Golden set question 48: Which of the following statements about us foreign policy is most accurate?",
+    "choices": {
+      "A": "Statement A regarding us foreign policy (option 1)",
+      "B": "Statement B regarding us foreign policy (option 2)",
+      "C": "Statement C regarding us foreign policy (option 3)",
+      "D": "Statement D regarding us foreign policy (option 4)"
+    },
+    "answer": "B",
+    "subject": "us_foreign_policy",
+    "prompt": "The following is a multiple choice question about us foreign policy.\n\nGolden set question 48: Which of the following statements about us foreign policy is most accurate?\nA. Statement A regarding us foreign policy (option 1)\nB. Statement B regarding us foreign policy (option 2)\nC. Statement C regarding us foreign policy (option 3)\nD. Statement D regarding us foreign policy (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_049",
+    "question": "[virology] Golden set question 49: Which of the following statements about virology is most accurate?",
+    "choices": {
+      "A": "Statement A regarding virology (option 1)",
+      "B": "Statement B regarding virology (option 2)",
+      "C": "Statement C regarding virology (option 3)",
+      "D": "Statement D regarding virology (option 4)"
+    },
+    "answer": "C",
+    "subject": "virology",
+    "prompt": "The following is a multiple choice question about virology.\n\nGolden set question 49: Which of the following statements about virology is most accurate?\nA. Statement A regarding virology (option 1)\nB. Statement B regarding virology (option 2)\nC. Statement C regarding virology (option 3)\nD. Statement D regarding virology (option 4)\n\nAnswer:"
+  },
+  {
+    "item_id": "mmlu_050",
+    "question": "[world_religions] Golden set question 50: Which of the following statements about world religions is most accurate?",
+    "choices": {
+      "A": "Statement A regarding world religions (option 1)",
+      "B": "Statement B regarding world religions (option 2)",
+      "C": "Statement C regarding world religions (option 3)",
+      "D": "Statement D regarding world religions (option 4)"
+    },
+    "answer": "D",
+    "subject": "world_religions",
+    "prompt": "The following is a multiple choice question about world religions.\n\nGolden set question 50: Which of the following statements about world religions is most accurate?\nA. Statement A regarding world religions (option 1)\nB. Statement B regarding world religions (option 2)\nC. Statement C regarding world religions (option 3)\nD. Statement D regarding world religions (option 4)\n\nAnswer:"
+  }
+]

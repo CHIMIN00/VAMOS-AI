@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "humaneval_003",
+    "task_id": "HumanEval/2",
+    "question": "Complete the function truncate_number: Return decimal part of number",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef truncate_number(/* params */):\n    \"\"\"Return decimal part of number\n    >>> truncate_number(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for truncate_number\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "truncate_number",
+    "answer": "def truncate_number(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_004",
+    "task_id": "HumanEval/3",
+    "question": "Complete the function below_zero: Check if balance goes below zero",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef below_zero(/* params */):\n    \"\"\"Check if balance goes below zero\n    >>> below_zero(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for below_zero\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "below_zero",
+    "answer": "def below_zero(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_005",
+    "task_id": "HumanEval/4",
+    "question": "Complete the function mean_absolute_deviation: Calculate mean absolute deviation",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef mean_absolute_deviation(/* params */):\n    \"\"\"Calculate mean absolute deviation\n    >>> mean_absolute_deviation(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for mean_absolute_deviation\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "mean_absolute_deviation",
+    "answer": "def mean_absolute_deviation(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_006",
+    "task_id": "HumanEval/5",
+    "question": "Complete the function intersperse: Insert delimiter between list elements",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef intersperse(/* params */):\n    \"\"\"Insert delimiter between list elements\n    >>> intersperse(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for intersperse\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "intersperse",
+    "answer": "def intersperse(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_008",
+    "task_id": "HumanEval/7",
+    "question": "Complete the function filter_by_substring: Filter strings containing substring",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef filter_by_substring(/* params */):\n    \"\"\"Filter strings containing substring\n    >>> filter_by_substring(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for filter_by_substring\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "filter_by_substring",
+    "answer": "def filter_by_substring(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_011",
+    "task_id": "HumanEval/10",
+    "question": "Complete the function make_palindrome: Find shortest palindrome from string",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef make_palindrome(/* params */):\n    \"\"\"Find shortest palindrome from string\n    >>> make_palindrome(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for make_palindrome\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "make_palindrome",
+    "answer": "def make_palindrome(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_012",
+    "task_id": "HumanEval/11",
+    "question": "Complete the function string_xor: XOR two binary strings",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef string_xor(/* params */):\n    \"\"\"XOR two binary strings\n    >>> string_xor(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for string_xor\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "string_xor",
+    "answer": "def string_xor(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_016",
+    "task_id": "HumanEval/15",
+    "question": "Complete the function string_sequence: Return space-delimited sequence",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef string_sequence(/* params */):\n    \"\"\"Return space-delimited sequence\n    >>> string_sequence(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for string_sequence\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "string_sequence",
+    "answer": "def string_sequence(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_018",
+    "task_id": "HumanEval/17",
+    "question": "Complete the function parse_music: Parse music note string to beats",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef parse_music(/* params */):\n    \"\"\"Parse music note string to beats\n    >>> parse_music(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for parse_music\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "parse_music",
+    "answer": "def parse_music(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_019",
+    "task_id": "HumanEval/18",
+    "question": "Complete the function how_many_times: Count substring occurrences",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef how_many_times(/* params */):\n    \"\"\"Count substring occurrences\n    >>> how_many_times(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for how_many_times\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "how_many_times",
+    "answer": "def how_many_times(/* params */):\n    # correct implementation\n    pass"
+  }
+]

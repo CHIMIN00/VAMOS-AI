@@ -1,0 +1,602 @@
+[
+  {
+    "question": "[abstract_algebra] Sample question 1: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q1",
+      "B": "Option B for q1",
+      "C": "Option C for q1",
+      "D": "Option D for q1"
+    },
+    "answer": "A",
+    "subject": "abstract_algebra",
+    "prompt": "The following is a multiple choice question about abstract_algebra.\n\nSample question 1: Which of the following is correct?\nA. Option A for q1\nB. Option B for q1\nC. Option C for q1\nD. Option D for q1\n\nAnswer:"
+  },
+  {
+    "question": "[anatomy] Sample question 2: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q2",
+      "B": "Option B for q2",
+      "C": "Option C for q2",
+      "D": "Option D for q2"
+    },
+    "answer": "A",
+    "subject": "anatomy",
+    "prompt": "The following is a multiple choice question about anatomy.\n\nSample question 2: Which of the following is correct?\nA. Option A for q2\nB. Option B for q2\nC. Option C for q2\nD. Option D for q2\n\nAnswer:"
+  },
+  {
+    "question": "[astronomy] Sample question 3: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q3",
+      "B": "Option B for q3",
+      "C": "Option C for q3",
+      "D": "Option D for q3"
+    },
+    "answer": "C",
+    "subject": "astronomy",
+    "prompt": "The following is a multiple choice question about astronomy.\n\nSample question 3: Which of the following is correct?\nA. Option A for q3\nB. Option B for q3\nC. Option C for q3\nD. Option D for q3\n\nAnswer:"
+  },
+  {
+    "question": "[business_ethics] Sample question 4: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q4",
+      "B": "Option B for q4",
+      "C": "Option C for q4",
+      "D": "Option D for q4"
+    },
+    "answer": "B",
+    "subject": "business_ethics",
+    "prompt": "The following is a multiple choice question about business_ethics.\n\nSample question 4: Which of the following is correct?\nA. Option A for q4\nB. Option B for q4\nC. Option C for q4\nD. Option D for q4\n\nAnswer:"
+  },
+  {
+    "question": "[clinical_knowledge] Sample question 5: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q5",
+      "B": "Option B for q5",
+      "C": "Option C for q5",
+      "D": "Option D for q5"
+    },
+    "answer": "B",
+    "subject": "clinical_knowledge",
+    "prompt": "The following is a multiple choice question about clinical_knowledge.\n\nSample question 5: Which of the following is correct?\nA. Option A for q5\nB. Option B for q5\nC. Option C for q5\nD. Option D for q5\n\nAnswer:"
+  },
+  {
+    "question": "[college_biology] Sample question 6: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q6",
+      "B": "Option B for q6",
+      "C": "Option C for q6",
+      "D": "Option D for q6"
+    },
+    "answer": "B",
+    "subject": "college_biology",
+    "prompt": "The following is a multiple choice question about college_biology.\n\nSample question 6: Which of the following is correct?\nA. Option A for q6\nB. Option B for q6\nC. Option C for q6\nD. Option D for q6\n\nAnswer:"
+  },
+  {
+    "question": "[college_chemistry] Sample question 7: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q7",
+      "B": "Option B for q7",
+      "C": "Option C for q7",
+      "D": "Option D for q7"
+    },
+    "answer": "A",
+    "subject": "college_chemistry",
+    "prompt": "The following is a multiple choice question about college_chemistry.\n\nSample question 7: Which of the following is correct?\nA. Option A for q7\nB. Option B for q7\nC. Option C for q7\nD. Option D for q7\n\nAnswer:"
+  },
+  {
+    "question": "[college_computer_science] Sample question 8: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q8",
+      "B": "Option B for q8",
+      "C": "Option C for q8",
+      "D": "Option D for q8"
+    },
+    "answer": "A",
+    "subject": "college_computer_science",
+    "prompt": "The following is a multiple choice question about college_computer_science.\n\nSample question 8: Which of the following is correct?\nA. Option A for q8\nB. Option B for q8\nC. Option C for q8\nD. Option D for q8\n\nAnswer:"
+  },
+  {
+    "question": "[college_mathematics] Sample question 9: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q9",
+      "B": "Option B for q9",
+      "C": "Option C for q9",
+      "D": "Option D for q9"
+    },
+    "answer": "D",
+    "subject": "college_mathematics",
+    "prompt": "The following is a multiple choice question about college_mathematics.\n\nSample question 9: Which of the following is correct?\nA. Option A for q9\nB. Option B for q9\nC. Option C for q9\nD. Option D for q9\n\nAnswer:"
+  },
+  {
+    "question": "[college_medicine] Sample question 10: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q10",
+      "B": "Option B for q10",
+      "C": "Option C for q10",
+      "D": "Option D for q10"
+    },
+    "answer": "A",
+    "subject": "college_medicine",
+    "prompt": "The following is a multiple choice question about college_medicine.\n\nSample question 10: Which of the following is correct?\nA. Option A for q10\nB. Option B for q10\nC. Option C for q10\nD. Option D for q10\n\nAnswer:"
+  },
+  {
+    "question": "[college_physics] Sample question 11: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q11",
+      "B": "Option B for q11",
+      "C": "Option C for q11",
+      "D": "Option D for q11"
+    },
+    "answer": "A",
+    "subject": "college_physics",
+    "prompt": "The following is a multiple choice question about college_physics.\n\nSample question 11: Which of the following is correct?\nA. Option A for q11\nB. Option B for q11\nC. Option C for q11\nD. Option D for q11\n\nAnswer:"
+  },
+  {
+    "question": "[computer_security] Sample question 12: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q12",
+      "B": "Option B for q12",
+      "C": "Option C for q12",
+      "D": "Option D for q12"
+    },
+    "answer": "A",
+    "subject": "computer_security",
+    "prompt": "The following is a multiple choice question about computer_security.\n\nSample question 12: Which of the following is correct?\nA. Option A for q12\nB. Option B for q12\nC. Option C for q12\nD. Option D for q12\n\nAnswer:"
+  },
+  {
+    "question": "[conceptual_physics] Sample question 13: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q13",
+      "B": "Option B for q13",
+      "C": "Option C for q13",
+      "D": "Option D for q13"
+    },
+    "answer": "B",
+    "subject": "conceptual_physics",
+    "prompt": "The following is a multiple choice question about conceptual_physics.\n\nSample question 13: Which of the following is correct?\nA. Option A for q13\nB. Option B for q13\nC. Option C for q13\nD. Option D for q13\n\nAnswer:"
+  },
+  {
+    "question": "[econometrics] Sample question 14: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q14",
+      "B": "Option B for q14",
+      "C": "Option C for q14",
+      "D": "Option D for q14"
+    },
+    "answer": "B",
+    "subject": "econometrics",
+    "prompt": "The following is a multiple choice question about econometrics.\n\nSample question 14: Which of the following is correct?\nA. Option A for q14\nB. Option B for q14\nC. Option C for q14\nD. Option D for q14\n\nAnswer:"
+  },
+  {
+    "question": "[electrical_engineering] Sample question 15: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q15",
+      "B": "Option B for q15",
+      "C": "Option C for q15",
+      "D": "Option D for q15"
+    },
+    "answer": "A",
+    "subject": "electrical_engineering",
+    "prompt": "The following is a multiple choice question about electrical_engineering.\n\nSample question 15: Which of the following is correct?\nA. Option A for q15\nB. Option B for q15\nC. Option C for q15\nD. Option D for q15\n\nAnswer:"
+  },
+  {
+    "question": "[elementary_mathematics] Sample question 16: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q16",
+      "B": "Option B for q16",
+      "C": "Option C for q16",
+      "D": "Option D for q16"
+    },
+    "answer": "B",
+    "subject": "elementary_mathematics",
+    "prompt": "The following is a multiple choice question about elementary_mathematics.\n\nSample question 16: Which of the following is correct?\nA. Option A for q16\nB. Option B for q16\nC. Option C for q16\nD. Option D for q16\n\nAnswer:"
+  },
+  {
+    "question": "[formal_logic] Sample question 17: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q17",
+      "B": "Option B for q17",
+      "C": "Option C for q17",
+      "D": "Option D for q17"
+    },
+    "answer": "D",
+    "subject": "formal_logic",
+    "prompt": "The following is a multiple choice question about formal_logic.\n\nSample question 17: Which of the following is correct?\nA. Option A for q17\nB. Option B for q17\nC. Option C for q17\nD. Option D for q17\n\nAnswer:"
+  },
+  {
+    "question": "[global_facts] Sample question 18: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q18",
+      "B": "Option B for q18",
+      "C": "Option C for q18",
+      "D": "Option D for q18"
+    },
+    "answer": "B",
+    "subject": "global_facts",
+    "prompt": "The following is a multiple choice question about global_facts.\n\nSample question 18: Which of the following is correct?\nA. Option A for q18\nB. Option B for q18\nC. Option C for q18\nD. Option D for q18\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_biology] Sample question 19: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q19",
+      "B": "Option B for q19",
+      "C": "Option C for q19",
+      "D": "Option D for q19"
+    },
+    "answer": "D",
+    "subject": "high_school_biology",
+    "prompt": "The following is a multiple choice question about high_school_biology.\n\nSample question 19: Which of the following is correct?\nA. Option A for q19\nB. Option B for q19\nC. Option C for q19\nD. Option D for q19\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_chemistry] Sample question 20: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q20",
+      "B": "Option B for q20",
+      "C": "Option C for q20",
+      "D": "Option D for q20"
+    },
+    "answer": "C",
+    "subject": "high_school_chemistry",
+    "prompt": "The following is a multiple choice question about high_school_chemistry.\n\nSample question 20: Which of the following is correct?\nA. Option A for q20\nB. Option B for q20\nC. Option C for q20\nD. Option D for q20\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_computer_science] Sample question 21: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q21",
+      "B": "Option B for q21",
+      "C": "Option C for q21",
+      "D": "Option D for q21"
+    },
+    "answer": "A",
+    "subject": "high_school_computer_science",
+    "prompt": "The following is a multiple choice question about high_school_computer_science.\n\nSample question 21: Which of the following is correct?\nA. Option A for q21\nB. Option B for q21\nC. Option C for q21\nD. Option D for q21\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_european_history] Sample question 22: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q22",
+      "B": "Option B for q22",
+      "C": "Option C for q22",
+      "D": "Option D for q22"
+    },
+    "answer": "B",
+    "subject": "high_school_european_history",
+    "prompt": "The following is a multiple choice question about high_school_european_history.\n\nSample question 22: Which of the following is correct?\nA. Option A for q22\nB. Option B for q22\nC. Option C for q22\nD. Option D for q22\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_geography] Sample question 23: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q23",
+      "B": "Option B for q23",
+      "C": "Option C for q23",
+      "D": "Option D for q23"
+    },
+    "answer": "D",
+    "subject": "high_school_geography",
+    "prompt": "The following is a multiple choice question about high_school_geography.\n\nSample question 23: Which of the following is correct?\nA. Option A for q23\nB. Option B for q23\nC. Option C for q23\nD. Option D for q23\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_government_and_politics] Sample question 24: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q24",
+      "B": "Option B for q24",
+      "C": "Option C for q24",
+      "D": "Option D for q24"
+    },
+    "answer": "C",
+    "subject": "high_school_government_and_politics",
+    "prompt": "The following is a multiple choice question about high_school_government_and_politics.\n\nSample question 24: Which of the following is correct?\nA. Option A for q24\nB. Option B for q24\nC. Option C for q24\nD. Option D for q24\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_macroeconomics] Sample question 25: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q25",
+      "B": "Option B for q25",
+      "C": "Option C for q25",
+      "D": "Option D for q25"
+    },
+    "answer": "C",
+    "subject": "high_school_macroeconomics",
+    "prompt": "The following is a multiple choice question about high_school_macroeconomics.\n\nSample question 25: Which of the following is correct?\nA. Option A for q25\nB. Option B for q25\nC. Option C for q25\nD. Option D for q25\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_mathematics] Sample question 26: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q26",
+      "B": "Option B for q26",
+      "C": "Option C for q26",
+      "D": "Option D for q26"
+    },
+    "answer": "B",
+    "subject": "high_school_mathematics",
+    "prompt": "The following is a multiple choice question about high_school_mathematics.\n\nSample question 26: Which of the following is correct?\nA. Option A for q26\nB. Option B for q26\nC. Option C for q26\nD. Option D for q26\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_microeconomics] Sample question 27: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q27",
+      "B": "Option B for q27",
+      "C": "Option C for q27",
+      "D": "Option D for q27"
+    },
+    "answer": "B",
+    "subject": "high_school_microeconomics",
+    "prompt": "The following is a multiple choice question about high_school_microeconomics.\n\nSample question 27: Which of the following is correct?\nA. Option A for q27\nB. Option B for q27\nC. Option C for q27\nD. Option D for q27\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_physics] Sample question 28: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q28",
+      "B": "Option B for q28",
+      "C": "Option C for q28",
+      "D": "Option D for q28"
+    },
+    "answer": "C",
+    "subject": "high_school_physics",
+    "prompt": "The following is a multiple choice question about high_school_physics.\n\nSample question 28: Which of the following is correct?\nA. Option A for q28\nB. Option B for q28\nC. Option C for q28\nD. Option D for q28\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_psychology] Sample question 29: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q29",
+      "B": "Option B for q29",
+      "C": "Option C for q29",
+      "D": "Option D for q29"
+    },
+    "answer": "A",
+    "subject": "high_school_psychology",
+    "prompt": "The following is a multiple choice question about high_school_psychology.\n\nSample question 29: Which of the following is correct?\nA. Option A for q29\nB. Option B for q29\nC. Option C for q29\nD. Option D for q29\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_statistics] Sample question 30: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q30",
+      "B": "Option B for q30",
+      "C": "Option C for q30",
+      "D": "Option D for q30"
+    },
+    "answer": "A",
+    "subject": "high_school_statistics",
+    "prompt": "The following is a multiple choice question about high_school_statistics.\n\nSample question 30: Which of the following is correct?\nA. Option A for q30\nB. Option B for q30\nC. Option C for q30\nD. Option D for q30\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_us_history] Sample question 31: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q31",
+      "B": "Option B for q31",
+      "C": "Option C for q31",
+      "D": "Option D for q31"
+    },
+    "answer": "D",
+    "subject": "high_school_us_history",
+    "prompt": "The following is a multiple choice question about high_school_us_history.\n\nSample question 31: Which of the following is correct?\nA. Option A for q31\nB. Option B for q31\nC. Option C for q31\nD. Option D for q31\n\nAnswer:"
+  },
+  {
+    "question": "[high_school_world_history] Sample question 32: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q32",
+      "B": "Option B for q32",
+      "C": "Option C for q32",
+      "D": "Option D for q32"
+    },
+    "answer": "A",
+    "subject": "high_school_world_history",
+    "prompt": "The following is a multiple choice question about high_school_world_history.\n\nSample question 32: Which of the following is correct?\nA. Option A for q32\nB. Option B for q32\nC. Option C for q32\nD. Option D for q32\n\nAnswer:"
+  },
+  {
+    "question": "[human_aging] Sample question 33: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q33",
+      "B": "Option B for q33",
+      "C": "Option C for q33",
+      "D": "Option D for q33"
+    },
+    "answer": "C",
+    "subject": "human_aging",
+    "prompt": "The following is a multiple choice question about human_aging.\n\nSample question 33: Which of the following is correct?\nA. Option A for q33\nB. Option B for q33\nC. Option C for q33\nD. Option D for q33\n\nAnswer:"
+  },
+  {
+    "question": "[human_sexuality] Sample question 34: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q34",
+      "B": "Option B for q34",
+      "C": "Option C for q34",
+      "D": "Option D for q34"
+    },
+    "answer": "C",
+    "subject": "human_sexuality",
+    "prompt": "The following is a multiple choice question about human_sexuality.\n\nSample question 34: Which of the following is correct?\nA. Option A for q34\nB. Option B for q34\nC. Option C for q34\nD. Option D for q34\n\nAnswer:"
+  },
+  {
+    "question": "[international_law] Sample question 35: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q35",
+      "B": "Option B for q35",
+      "C": "Option C for q35",
+      "D": "Option D for q35"
+    },
+    "answer": "C",
+    "subject": "international_law",
+    "prompt": "The following is a multiple choice question about international_law.\n\nSample question 35: Which of the following is correct?\nA. Option A for q35\nB. Option B for q35\nC. Option C for q35\nD. Option D for q35\n\nAnswer:"
+  },
+  {
+    "question": "[jurisprudence] Sample question 36: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q36",
+      "B": "Option B for q36",
+      "C": "Option C for q36",
+      "D": "Option D for q36"
+    },
+    "answer": "A",
+    "subject": "jurisprudence",
+    "prompt": "The following is a multiple choice question about jurisprudence.\n\nSample question 36: Which of the following is correct?\nA. Option A for q36\nB. Option B for q36\nC. Option C for q36\nD. Option D for q36\n\nAnswer:"
+  },
+  {
+    "question": "[logical_fallacies] Sample question 37: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q37",
+      "B": "Option B for q37",
+      "C": "Option C for q37",
+      "D": "Option D for q37"
+    },
+    "answer": "D",
+    "subject": "logical_fallacies",
+    "prompt": "The following is a multiple choice question about logical_fallacies.\n\nSample question 37: Which of the following is correct?\nA. Option A for q37\nB. Option B for q37\nC. Option C for q37\nD. Option D for q37\n\nAnswer:"
+  },
+  {
+    "question": "[machine_learning] Sample question 38: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q38",
+      "B": "Option B for q38",
+      "C": "Option C for q38",
+      "D": "Option D for q38"
+    },
+    "answer": "A",
+    "subject": "machine_learning",
+    "prompt": "The following is a multiple choice question about machine_learning.\n\nSample question 38: Which of the following is correct?\nA. Option A for q38\nB. Option B for q38\nC. Option C for q38\nD. Option D for q38\n\nAnswer:"
+  },
+  {
+    "question": "[management] Sample question 39: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q39",
+      "B": "Option B for q39",
+      "C": "Option C for q39",
+      "D": "Option D for q39"
+    },
+    "answer": "D",
+    "subject": "management",
+    "prompt": "The following is a multiple choice question about management.\n\nSample question 39: Which of the following is correct?\nA. Option A for q39\nB. Option B for q39\nC. Option C for q39\nD. Option D for q39\n\nAnswer:"
+  },
+  {
+    "question": "[marketing] Sample question 40: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q40",
+      "B": "Option B for q40",
+      "C": "Option C for q40",
+      "D": "Option D for q40"
+    },
+    "answer": "A",
+    "subject": "marketing",
+    "prompt": "The following is a multiple choice question about marketing.\n\nSample question 40: Which of the following is correct?\nA. Option A for q40\nB. Option B for q40\nC. Option C for q40\nD. Option D for q40\n\nAnswer:"
+  },
+  {
+    "question": "[medical_genetics] Sample question 41: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q41",
+      "B": "Option B for q41",
+      "C": "Option C for q41",
+      "D": "Option D for q41"
+    },
+    "answer": "C",
+    "subject": "medical_genetics",
+    "prompt": "The following is a multiple choice question about medical_genetics.\n\nSample question 41: Which of the following is correct?\nA. Option A for q41\nB. Option B for q41\nC. Option C for q41\nD. Option D for q41\n\nAnswer:"
+  },
+  {
+    "question": "[miscellaneous] Sample question 42: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q42",
+      "B": "Option B for q42",
+      "C": "Option C for q42",
+      "D": "Option D for q42"
+    },
+    "answer": "C",
+    "subject": "miscellaneous",
+    "prompt": "The following is a multiple choice question about miscellaneous.\n\nSample question 42: Which of the following is correct?\nA. Option A for q42\nB. Option B for q42\nC. Option C for q42\nD. Option D for q42\n\nAnswer:"
+  },
+  {
+    "question": "[moral_disputes] Sample question 43: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q43",
+      "B": "Option B for q43",
+      "C": "Option C for q43",
+      "D": "Option D for q43"
+    },
+    "answer": "B",
+    "subject": "moral_disputes",
+    "prompt": "The following is a multiple choice question about moral_disputes.\n\nSample question 43: Which of the following is correct?\nA. Option A for q43\nB. Option B for q43\nC. Option C for q43\nD. Option D for q43\n\nAnswer:"
+  },
+  {
+    "question": "[moral_scenarios] Sample question 44: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q44",
+      "B": "Option B for q44",
+      "C": "Option C for q44",
+      "D": "Option D for q44"
+    },
+    "answer": "A",
+    "subject": "moral_scenarios",
+    "prompt": "The following is a multiple choice question about moral_scenarios.\n\nSample question 44: Which of the following is correct?\nA. Option A for q44\nB. Option B for q44\nC. Option C for q44\nD. Option D for q44\n\nAnswer:"
+  },
+  {
+    "question": "[nutrition] Sample question 45: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q45",
+      "B": "Option B for q45",
+      "C": "Option C for q45",
+      "D": "Option D for q45"
+    },
+    "answer": "A",
+    "subject": "nutrition",
+    "prompt": "The following is a multiple choice question about nutrition.\n\nSample question 45: Which of the following is correct?\nA. Option A for q45\nB. Option B for q45\nC. Option C for q45\nD. Option D for q45\n\nAnswer:"
+  },
+  {
+    "question": "[philosophy] Sample question 46: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q46",
+      "B": "Option B for q46",
+      "C": "Option C for q46",
+      "D": "Option D for q46"
+    },
+    "answer": "B",
+    "subject": "philosophy",
+    "prompt": "The following is a multiple choice question about philosophy.\n\nSample question 46: Which of the following is correct?\nA. Option A for q46\nB. Option B for q46\nC. Option C for q46\nD. Option D for q46\n\nAnswer:"
+  },
+  {
+    "question": "[prehistory] Sample question 47: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q47",
+      "B": "Option B for q47",
+      "C": "Option C for q47",
+      "D": "Option D for q47"
+    },
+    "answer": "C",
+    "subject": "prehistory",
+    "prompt": "The following is a multiple choice question about prehistory.\n\nSample question 47: Which of the following is correct?\nA. Option A for q47\nB. Option B for q47\nC. Option C for q47\nD. Option D for q47\n\nAnswer:"
+  },
+  {
+    "question": "[professional_accounting] Sample question 48: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q48",
+      "B": "Option B for q48",
+      "C": "Option C for q48",
+      "D": "Option D for q48"
+    },
+    "answer": "A",
+    "subject": "professional_accounting",
+    "prompt": "The following is a multiple choice question about professional_accounting.\n\nSample question 48: Which of the following is correct?\nA. Option A for q48\nB. Option B for q48\nC. Option C for q48\nD. Option D for q48\n\nAnswer:"
+  },
+  {
+    "question": "[professional_law] Sample question 49: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q49",
+      "B": "Option B for q49",
+      "C": "Option C for q49",
+      "D": "Option D for q49"
+    },
+    "answer": "B",
+    "subject": "professional_law",
+    "prompt": "The following is a multiple choice question about professional_law.\n\nSample question 49: Which of the following is correct?\nA. Option A for q49\nB. Option B for q49\nC. Option C for q49\nD. Option D for q49\n\nAnswer:"
+  },
+  {
+    "question": "[professional_medicine] Sample question 50: Which of the following is correct?",
+    "choices": {
+      "A": "Option A for q50",
+      "B": "Option B for q50",
+      "C": "Option C for q50",
+      "D": "Option D for q50"
+    },
+    "answer": "A",
+    "subject": "professional_medicine",
+    "prompt": "The following is a multiple choice question about professional_medicine.\n\nSample question 50: Which of the following is correct?\nA. Option A for q50\nB. Option B for q50\nC. Option C for q50\nD. Option D for q50\n\nAnswer:"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "item_id": "humaneval_001",
+    "task_id": "HumanEval/0",
+    "question": "Complete the function has_close_elements: Check if list has two close elements",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef has_close_elements(/* params */):\n    \"\"\"Check if list has two close elements\n    >>> has_close_elements(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for has_close_elements\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "has_close_elements",
+    "answer": "def has_close_elements(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_002",
+    "task_id": "HumanEval/1",
+    "question": "Complete the function separate_paren_groups: Separate parentheses groups",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef separate_paren_groups(/* params */):\n    \"\"\"Separate parentheses groups\n    >>> separate_paren_groups(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for separate_paren_groups\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "separate_paren_groups",
+    "answer": "def separate_paren_groups(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_003",
+    "task_id": "HumanEval/2",
+    "question": "Complete the function truncate_number: Return decimal part of number",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef truncate_number(/* params */):\n    \"\"\"Return decimal part of number\n    >>> truncate_number(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for truncate_number\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "truncate_number",
+    "answer": "def truncate_number(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_004",
+    "task_id": "HumanEval/3",
+    "question": "Complete the function below_zero: Check if balance goes below zero",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef below_zero(/* params */):\n    \"\"\"Check if balance goes below zero\n    >>> below_zero(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for below_zero\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "below_zero",
+    "answer": "def below_zero(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_005",
+    "task_id": "HumanEval/4",
+    "question": "Complete the function mean_absolute_deviation: Calculate mean absolute deviation",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef mean_absolute_deviation(/* params */):\n    \"\"\"Calculate mean absolute deviation\n    >>> mean_absolute_deviation(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for mean_absolute_deviation\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "mean_absolute_deviation",
+    "answer": "def mean_absolute_deviation(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_006",
+    "task_id": "HumanEval/5",
+    "question": "Complete the function intersperse: Insert delimiter between list elements",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef intersperse(/* params */):\n    \"\"\"Insert delimiter between list elements\n    >>> intersperse(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for intersperse\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "intersperse",
+    "answer": "def intersperse(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_007",
+    "task_id": "HumanEval/6",
+    "question": "Complete the function parse_nested_parens: Find max nesting depth",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef parse_nested_parens(/* params */):\n    \"\"\"Find max nesting depth\n    >>> parse_nested_parens(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for parse_nested_parens\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "parse_nested_parens",
+    "answer": "def parse_nested_parens(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_008",
+    "task_id": "HumanEval/7",
+    "question": "Complete the function filter_by_substring: Filter strings containing substring",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef filter_by_substring(/* params */):\n    \"\"\"Filter strings containing substring\n    >>> filter_by_substring(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for filter_by_substring\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "filter_by_substring",
+    "answer": "def filter_by_substring(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_009",
+    "task_id": "HumanEval/8",
+    "question": "Complete the function sum_product: Return sum and product tuple",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef sum_product(/* params */):\n    \"\"\"Return sum and product tuple\n    >>> sum_product(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for sum_product\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "sum_product",
+    "answer": "def sum_product(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_010",
+    "task_id": "HumanEval/9",
+    "question": "Complete the function rolling_max: Return rolling maximum list",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef rolling_max(/* params */):\n    \"\"\"Return rolling maximum list\n    >>> rolling_max(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for rolling_max\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "rolling_max",
+    "answer": "def rolling_max(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_011",
+    "task_id": "HumanEval/10",
+    "question": "Complete the function make_palindrome: Find shortest palindrome from string",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef make_palindrome(/* params */):\n    \"\"\"Find shortest palindrome from string\n    >>> make_palindrome(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for make_palindrome\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "make_palindrome",
+    "answer": "def make_palindrome(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_012",
+    "task_id": "HumanEval/11",
+    "question": "Complete the function string_xor: XOR two binary strings",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef string_xor(/* params */):\n    \"\"\"XOR two binary strings\n    >>> string_xor(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for string_xor\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "string_xor",
+    "answer": "def string_xor(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_013",
+    "task_id": "HumanEval/12",
+    "question": "Complete the function longest: Find longest string in list",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef longest(/* params */):\n    \"\"\"Find longest string in list\n    >>> longest(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for longest\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "longest",
+    "answer": "def longest(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_014",
+    "task_id": "HumanEval/13",
+    "question": "Complete the function greatest_common_divisor: Compute GCD of two integers",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef greatest_common_divisor(/* params */):\n    \"\"\"Compute GCD of two integers\n    >>> greatest_common_divisor(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for greatest_common_divisor\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "greatest_common_divisor",
+    "answer": "def greatest_common_divisor(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_015",
+    "task_id": "HumanEval/14",
+    "question": "Complete the function all_prefixes: Return all prefixes of string",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef all_prefixes(/* params */):\n    \"\"\"Return all prefixes of string\n    >>> all_prefixes(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for all_prefixes\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "all_prefixes",
+    "answer": "def all_prefixes(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_016",
+    "task_id": "HumanEval/15",
+    "question": "Complete the function string_sequence: Return space-delimited sequence",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef string_sequence(/* params */):\n    \"\"\"Return space-delimited sequence\n    >>> string_sequence(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for string_sequence\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "string_sequence",
+    "answer": "def string_sequence(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_017",
+    "task_id": "HumanEval/16",
+    "question": "Complete the function count_distinct_characters: Count distinct chars case-insensitive",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef count_distinct_characters(/* params */):\n    \"\"\"Count distinct chars case-insensitive\n    >>> count_distinct_characters(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for count_distinct_characters\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "count_distinct_characters",
+    "answer": "def count_distinct_characters(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_018",
+    "task_id": "HumanEval/17",
+    "question": "Complete the function parse_music: Parse music note string to beats",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef parse_music(/* params */):\n    \"\"\"Parse music note string to beats\n    >>> parse_music(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for parse_music\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "parse_music",
+    "answer": "def parse_music(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_019",
+    "task_id": "HumanEval/18",
+    "question": "Complete the function how_many_times: Count substring occurrences",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef how_many_times(/* params */):\n    \"\"\"Count substring occurrences\n    >>> how_many_times(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for how_many_times\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "how_many_times",
+    "answer": "def how_many_times(/* params */):\n    # correct implementation\n    pass"
+  },
+  {
+    "item_id": "humaneval_020",
+    "task_id": "HumanEval/19",
+    "question": "Complete the function sort_numbers: Sort spelled-out number string",
+    "prompt": "from typing import List, Tuple, Optional\n\ndef sort_numbers(/* params */):\n    \"\"\"Sort spelled-out number string\n    >>> sort_numbers(/* example */)\n    /* expected */\n    \"\"\"",
+    "canonical_solution": "    # Reference solution for sort_numbers\n    pass",
+    "test": "def check(candidate):\n    assert candidate(/* test_input */) == /* expected */",
+    "entry_point": "sort_numbers",
+    "answer": "def sort_numbers(/* params */):\n    # correct implementation\n    pass"
+  }
+]

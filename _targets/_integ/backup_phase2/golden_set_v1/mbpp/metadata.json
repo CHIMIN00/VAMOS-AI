@@ -1,0 +1,452 @@
+[
+  {
+    "item_id": "mbpp_001",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "string",
+    "source": "mbpp/sanitized/11",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_002",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "list",
+    "source": "mbpp/sanitized/19",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_003",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "math",
+    "source": "mbpp/sanitized/27",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_004",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "sorting",
+    "source": "mbpp/sanitized/35",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_005",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "search",
+    "source": "mbpp/sanitized/43",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_006",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "conversion",
+    "source": "mbpp/sanitized/51",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_007",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "validation",
+    "source": "mbpp/sanitized/59",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_008",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "recursion",
+    "source": "mbpp/sanitized/67",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_009",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "array",
+    "source": "mbpp/sanitized/75",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_010",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "logic",
+    "source": "mbpp/sanitized/83",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_011",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "string",
+    "source": "mbpp/sanitized/91",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_012",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "list",
+    "source": "mbpp/sanitized/99",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_013",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "math",
+    "source": "mbpp/sanitized/107",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_014",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "sorting",
+    "source": "mbpp/sanitized/115",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_015",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "search",
+    "source": "mbpp/sanitized/123",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_016",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "conversion",
+    "source": "mbpp/sanitized/131",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_017",
+    "benchmark": "mbpp",
+    "difficulty": "easy",
+    "category": "validation",
+    "source": "mbpp/sanitized/139",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_018",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "recursion",
+    "source": "mbpp/sanitized/147",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_019",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "array",
+    "source": "mbpp/sanitized/155",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_020",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "logic",
+    "source": "mbpp/sanitized/163",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_021",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "string",
+    "source": "mbpp/sanitized/171",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_022",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "list",
+    "source": "mbpp/sanitized/179",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_023",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "math",
+    "source": "mbpp/sanitized/187",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_024",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "sorting",
+    "source": "mbpp/sanitized/195",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_025",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "search",
+    "source": "mbpp/sanitized/203",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_026",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "conversion",
+    "source": "mbpp/sanitized/211",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_027",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "validation",
+    "source": "mbpp/sanitized/219",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_028",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "recursion",
+    "source": "mbpp/sanitized/227",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_029",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "array",
+    "source": "mbpp/sanitized/235",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_030",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "logic",
+    "source": "mbpp/sanitized/243",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_031",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "string",
+    "source": "mbpp/sanitized/251",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_032",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "list",
+    "source": "mbpp/sanitized/259",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_033",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "math",
+    "source": "mbpp/sanitized/267",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_034",
+    "benchmark": "mbpp",
+    "difficulty": "medium",
+    "category": "sorting",
+    "source": "mbpp/sanitized/275",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_035",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "search",
+    "source": "mbpp/sanitized/283",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_036",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "conversion",
+    "source": "mbpp/sanitized/291",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_037",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "validation",
+    "source": "mbpp/sanitized/299",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_038",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "recursion",
+    "source": "mbpp/sanitized/307",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_039",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "array",
+    "source": "mbpp/sanitized/315",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_040",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "logic",
+    "source": "mbpp/sanitized/323",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_041",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "string",
+    "source": "mbpp/sanitized/331",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_042",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "list",
+    "source": "mbpp/sanitized/339",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_043",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "math",
+    "source": "mbpp/sanitized/347",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_044",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "sorting",
+    "source": "mbpp/sanitized/355",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_045",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "search",
+    "source": "mbpp/sanitized/363",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_046",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "conversion",
+    "source": "mbpp/sanitized/371",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_047",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "validation",
+    "source": "mbpp/sanitized/379",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_048",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "recursion",
+    "source": "mbpp/sanitized/387",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_049",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "array",
+    "source": "mbpp/sanitized/395",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mbpp_050",
+    "benchmark": "mbpp",
+    "difficulty": "hard",
+    "category": "logic",
+    "source": "mbpp/sanitized/403",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "item_id": "humaneval_001",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/0",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_002",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_003",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_004",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_005",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/4",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_006",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_007",
+    "benchmark": "humaneval",
+    "difficulty": "easy",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_008",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_009",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/8",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_010",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_011",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_012",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/11",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_013",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/12",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_014",
+    "benchmark": "humaneval",
+    "difficulty": "medium",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/13",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_015",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/14",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_016",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/15",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_017",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/16",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_018",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/17",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_019",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/18",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "humaneval_020",
+    "benchmark": "humaneval",
+    "difficulty": "hard",
+    "category": "python_function",
+    "source": "humaneval/HumanEval/19",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  }
+]

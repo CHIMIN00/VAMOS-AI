@@ -1,0 +1,452 @@
+[
+  {
+    "item_id": "mmlu_001",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "abstract_algebra",
+    "source": "mmlu/abstract_algebra/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_002",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "anatomy",
+    "source": "mmlu/anatomy/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_003",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "astronomy",
+    "source": "mmlu/astronomy/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_004",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "business_ethics",
+    "source": "mmlu/business_ethics/4",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_005",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "clinical_knowledge",
+    "source": "mmlu/clinical_knowledge/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_006",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "college_biology",
+    "source": "mmlu/college_biology/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_007",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "college_chemistry",
+    "source": "mmlu/college_chemistry/8",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_008",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "college_computer_science",
+    "source": "mmlu/college_computer_science/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_009",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "college_mathematics",
+    "source": "mmlu/college_mathematics/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_010",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "college_medicine",
+    "source": "mmlu/college_medicine/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_011",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "college_physics",
+    "source": "mmlu/college_physics/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_012",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "conceptual_physics",
+    "source": "mmlu/conceptual_physics/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_013",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "econometrics",
+    "source": "mmlu/econometrics/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_014",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "electrical_engineering",
+    "source": "mmlu/electrical_engineering/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_015",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "elementary_mathematics",
+    "source": "mmlu/elementary_mathematics/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_016",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "global_facts",
+    "source": "mmlu/global_facts/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_017",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "high_school_biology",
+    "source": "mmlu/high_school_biology/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_018",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "high_school_chemistry",
+    "source": "mmlu/high_school_chemistry/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_019",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "high_school_european_history",
+    "source": "mmlu/high_school_european_history/8",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_020",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "high_school_geography",
+    "source": "mmlu/high_school_geography/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_021",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "high_school_macroeconomics",
+    "source": "mmlu/high_school_macroeconomics/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_022",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "high_school_mathematics",
+    "source": "mmlu/high_school_mathematics/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_023",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "high_school_microeconomics",
+    "source": "mmlu/high_school_microeconomics/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_024",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "high_school_physics",
+    "source": "mmlu/high_school_physics/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_025",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "high_school_psychology",
+    "source": "mmlu/high_school_psychology/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_026",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "high_school_statistics",
+    "source": "mmlu/high_school_statistics/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_027",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "high_school_us_history",
+    "source": "mmlu/high_school_us_history/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_028",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "high_school_world_history",
+    "source": "mmlu/high_school_world_history/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_029",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "human_aging",
+    "source": "mmlu/human_aging/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_030",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "human_sexuality",
+    "source": "mmlu/human_sexuality/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_031",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "international_law",
+    "source": "mmlu/international_law/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_032",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "jurisprudence",
+    "source": "mmlu/jurisprudence/8",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_033",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "machine_learning",
+    "source": "mmlu/machine_learning/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_034",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "management",
+    "source": "mmlu/management/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_035",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "marketing",
+    "source": "mmlu/marketing/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_036",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "medical_genetics",
+    "source": "mmlu/medical_genetics/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_037",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "miscellaneous",
+    "source": "mmlu/miscellaneous/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_038",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "moral_disputes",
+    "source": "mmlu/moral_disputes/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_039",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "moral_scenarios",
+    "source": "mmlu/moral_scenarios/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_040",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "nutrition",
+    "source": "mmlu/nutrition/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_041",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "philosophy",
+    "source": "mmlu/philosophy/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_042",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "prehistory",
+    "source": "mmlu/prehistory/4",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_043",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "professional_accounting",
+    "source": "mmlu/professional_accounting/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_044",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "professional_law",
+    "source": "mmlu/professional_law/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_045",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "professional_medicine",
+    "source": "mmlu/professional_medicine/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_046",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "professional_psychology",
+    "source": "mmlu/professional_psychology/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_047",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "sociology",
+    "source": "mmlu/sociology/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_048",
+    "benchmark": "mmlu",
+    "difficulty": "hard",
+    "category": "us_foreign_policy",
+    "source": "mmlu/us_foreign_policy/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_049",
+    "benchmark": "mmlu",
+    "difficulty": "easy",
+    "category": "virology",
+    "source": "mmlu/virology/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "mmlu_050",
+    "benchmark": "mmlu",
+    "difficulty": "medium",
+    "category": "world_religions",
+    "source": "mmlu/world_religions/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  }
+]

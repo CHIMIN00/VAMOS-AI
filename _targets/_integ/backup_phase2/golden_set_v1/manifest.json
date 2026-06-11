@@ -1,0 +1,61 @@
+{
+  "golden_set_version": "v1",
+  "created_date": "2026-04-02",
+  "created_by": "F-04 골든셋 v1 구축 (scripts/generate_golden_set.py — 합성 템플릿 생성)",
+  "data_status": "SYNTHETIC_PLACEHOLDER — 4개 벤치마크(mmlu/humaneval/mbpp/logickor) 전체가 합성 템플릿 (세션3 S2 확정 2026-06-10, D14). 실제 원본 데이터셋 미사용. 합성 데이터 측정치는 LOCK-BE-01/02/03 게이트 판정에 무효(INVALID_FOR_GATES). 실데이터 재구축 = Phase 2-0 선행과업",
+  "seed": 42,
+  "total_items": 170,
+  "benchmarks": {
+    "mmlu": {
+      "items_count": 50,
+      "source": "[SYNTHETIC] 합성 템플릿 50문항 (과목명 치환 동일문장, 실제 MMLU 미사용) — 원계획: MMLU 14,042 → 570 골든 후보(과목당 10) → 50 층화 추출 (미수행, Phase 2-0 재구축 대상)",
+      "sampling_method": "stratified (50/57 subjects, seed=42)",
+      "items_sha256": "cdd98383cd6ad7dcd7f527a33b3b74d481e00b9117b36528a1185745e681752f",
+      "metadata_sha256": "d255d28f49b3dd6aa106879f38350d482845daab46d6c12a425f3f7c0304fddc"
+    },
+    "humaneval": {
+      "items_count": 20,
+      "source": "[SYNTHETIC] 합성 placeholder 20문항 (canonical_solution/test 전부 pass 스텁) — 원계획: HumanEval 164 → 20 난이도 분포 대표 (미수행, Phase 2-0 재구축 대상)",
+      "sampling_method": "difficulty-stratified (7 easy, 7 medium, 6 hard)",
+      "items_sha256": "25719f1f55e163d407bec7ad88d793b8c978731eded4d75e157c42c3eeefeb43",
+      "metadata_sha256": "4ffcd574d509a382fe2f67336da0b1ded6b579f0b288b856ba09e0bf9a66a957"
+    },
+    "mbpp": {
+      "items_count": 50,
+      "source": "[SYNTHETIC] 합성 placeholder 50문항 (string_task_N 스텁) — 원계획: MBPP 427 sanitized → 50 난이도 분포 대표 (미수행, Phase 2-0 재구축 대상)",
+      "sampling_method": "difficulty-stratified (17 easy, 17 medium, 16 hard)",
+      "items_sha256": "81af229b1bd75a20276e472c2ef7423f5caba2e7269c1ecad0a73cb565111cee",
+      "metadata_sha256": "6395d7a0154138a2b8ec25f2b02ba6b186aaa97d6d3f7875879f1b0b203fcbd3"
+    },
+    "logickor": {
+      "items_count": 50,
+      "source": "[SYNTHETIC] 합성 템플릿 50문항 (모범답안 placeholder) — 원계획: LogicKor 50 전수 (미수행, Phase 2-0 재구축 대상)",
+      "sampling_method": "full (all 50 items)",
+      "items_sha256": "d94cf098f12f8384e21ef571a0f0ed7476207358ea1921572830e1f8184fe7bd",
+      "metadata_sha256": "c11ef09830eb21dca26590fe12cff60a6efd90665140b4f975de810e1b3e2d58"
+    }
+  },
+  "governance": {
+    "R-18-1": "seed=42 고정, 층화 추출 재현 가능",
+    "R-18-4": "Git LFS + 암호화, 접근 권한 제한, 분기별 갱신 기록"
+  },
+  "next_update": "Phase 2-0 (선행과업, D14): 실제 MMLU/HumanEval/MBPP/LogicKor 다운로드·라이선스 검증·층화 추출로 합성 placeholder 전량 교체 + items/metadata SHA 재계산 + contamination_check 재수행 → 이후 Phase 2 — ARC-AGI 30문항 추가 + 분기별 교체",
+  "change_log": [
+    {
+      "version": "v1",
+      "date": "2026-04-02",
+      "action": "초기 구축",
+      "items_added": 170,
+      "items_removed": 0,
+      "description": "MMLU 50 + HumanEval 20 + MBPP 50 + LogicKor 50"
+    },
+    {
+      "version": "v1.0.1",
+      "date": "2026-06-11",
+      "action": "출처 정정 (D14)",
+      "items_added": 0,
+      "items_removed": 0,
+      "description": "세션3 S2 확정: 전 항목 합성 템플릿(scripts/generate_golden_set.py). source 4건 [SYNTHETIC] 정정 + data_status 추가 + 실데이터 재구축 Phase 2-0 선행과업 등재. 문항 데이터 자체는 무변경(items_sha256 유효 유지)"
+    }
+  ]
+}

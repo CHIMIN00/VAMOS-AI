@@ -1,0 +1,452 @@
+[
+  {
+    "item_id": "logickor_001",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "논리추론/삼단논법",
+    "source": "logickor/1",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_002",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "독해/요약",
+    "source": "logickor/2",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_003",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "수학/방정식",
+    "source": "logickor/3",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_004",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "코딩/알고리즘",
+    "source": "logickor/4",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_005",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "상식/과학상식",
+    "source": "logickor/5",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_006",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "논리추론/조건추론",
+    "source": "logickor/6",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_007",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "독해/추론",
+    "source": "logickor/7",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_008",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "수학/확률통계",
+    "source": "logickor/8",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_009",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "코딩/자료구조",
+    "source": "logickor/9",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_010",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "상식/역사상식",
+    "source": "logickor/10",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_011",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "논리추론/모순찾기",
+    "source": "logickor/11",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_012",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "독해/비교분석",
+    "source": "logickor/12",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_013",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "수학/기하",
+    "source": "logickor/13",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_014",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "코딩/디버깅",
+    "source": "logickor/14",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_015",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "상식/경제상식",
+    "source": "logickor/15",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_016",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "논리추론/인과관계",
+    "source": "logickor/16",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_017",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "독해/맥락파악",
+    "source": "logickor/17",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_018",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "수학/수열",
+    "source": "logickor/18",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_019",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "코딩/코드분석",
+    "source": "logickor/19",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_020",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "상식/법률상식",
+    "source": "logickor/20",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_021",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "논리추론/유비추론",
+    "source": "logickor/21",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_022",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "독해/주제찾기",
+    "source": "logickor/22",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_023",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "수학/최적화",
+    "source": "logickor/23",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_024",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "코딩/설계",
+    "source": "logickor/24",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_025",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "상식/문화상식",
+    "source": "logickor/25",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_026",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "논리추론/연역추론",
+    "source": "logickor/26",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_027",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "독해/어휘이해",
+    "source": "logickor/27",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_028",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "수학/집합론",
+    "source": "logickor/28",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_029",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "코딩/최적화",
+    "source": "logickor/29",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_030",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "상식/기술상식",
+    "source": "logickor/30",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_031",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "논리추론/귀납추론",
+    "source": "logickor/31",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_032",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "독해/의도파악",
+    "source": "logickor/32",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_033",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "수학/미적분",
+    "source": "logickor/33",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_034",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "코딩/테스트",
+    "source": "logickor/34",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_035",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "상식/사회상식",
+    "source": "logickor/35",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_036",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "논리추론/확률추론",
+    "source": "logickor/36",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_037",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "독해/논증분석",
+    "source": "logickor/37",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_038",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "수학/행렬",
+    "source": "logickor/38",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_039",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "코딩/리팩토링",
+    "source": "logickor/39",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_040",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "상식/환경상식",
+    "source": "logickor/40",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_041",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "논리추론/논리퍼즐",
+    "source": "logickor/41",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_042",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "독해/정보추출",
+    "source": "logickor/42",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_043",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "수학/조합론",
+    "source": "logickor/43",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_044",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "코딩/패턴인식",
+    "source": "logickor/44",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_045",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "상식/건강상식",
+    "source": "logickor/45",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_046",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "논리추론/진위판별",
+    "source": "logickor/46",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_047",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "독해/함축이해",
+    "source": "logickor/47",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_048",
+    "benchmark": "logickor",
+    "difficulty": "hard",
+    "category": "수학/수치해석",
+    "source": "logickor/48",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_049",
+    "benchmark": "logickor",
+    "difficulty": "easy",
+    "category": "코딩/API설계",
+    "source": "logickor/49",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  },
+  {
+    "item_id": "logickor_050",
+    "benchmark": "logickor",
+    "difficulty": "medium",
+    "category": "상식/교육상식",
+    "source": "logickor/50",
+    "golden_version": "v1",
+    "added_date": "2026-04-02"
+  }
+]

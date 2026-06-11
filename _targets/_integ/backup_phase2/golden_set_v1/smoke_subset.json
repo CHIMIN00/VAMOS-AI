@@ -1,0 +1,146 @@
+{
+  "smoke_subset_version": "v1",
+  "created_date": "2026-04-02",
+  "created_by": "F-06 CI 통합 (스모크) — generate_smoke_subset.py",
+  "seed": 42,
+  "total_items": 20,
+  "selection_method": "stratified sampling (seed-deterministic)",
+  "benchmarks": {
+    "mmlu": {
+      "count": 10,
+      "method": "과목(category) 균등 추출 — 50과목 중 10과목 선택, 각 1문항",
+      "item_ids": [
+        "mmlu_005",
+        "mmlu_010",
+        "mmlu_012",
+        "mmlu_017",
+        "mmlu_020",
+        "mmlu_024",
+        "mmlu_026",
+        "mmlu_027",
+        "mmlu_030",
+        "mmlu_046"
+      ],
+      "details": [
+        {
+          "item_id": "mmlu_005",
+          "category": "clinical_knowledge",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "mmlu_010",
+          "category": "college_medicine",
+          "difficulty": "easy"
+        },
+        {
+          "item_id": "mmlu_012",
+          "category": "conceptual_physics",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "mmlu_017",
+          "category": "high_school_biology",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "mmlu_020",
+          "category": "high_school_geography",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "mmlu_024",
+          "category": "high_school_physics",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "mmlu_026",
+          "category": "high_school_statistics",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "mmlu_027",
+          "category": "high_school_us_history",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "mmlu_030",
+          "category": "human_sexuality",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "mmlu_046",
+          "category": "professional_psychology",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    "humaneval": {
+      "count": 10,
+      "method": "난이도(difficulty) 비율 보존 추출 — easy 4 + medium 3 + hard 3",
+      "item_ids": [
+        "humaneval_003",
+        "humaneval_004",
+        "humaneval_005",
+        "humaneval_006",
+        "humaneval_008",
+        "humaneval_011",
+        "humaneval_012",
+        "humaneval_016",
+        "humaneval_018",
+        "humaneval_019"
+      ],
+      "details": [
+        {
+          "item_id": "humaneval_003",
+          "difficulty": "easy"
+        },
+        {
+          "item_id": "humaneval_004",
+          "difficulty": "easy"
+        },
+        {
+          "item_id": "humaneval_005",
+          "difficulty": "easy"
+        },
+        {
+          "item_id": "humaneval_006",
+          "difficulty": "easy"
+        },
+        {
+          "item_id": "humaneval_008",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "humaneval_011",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "humaneval_012",
+          "difficulty": "medium"
+        },
+        {
+          "item_id": "humaneval_016",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "humaneval_018",
+          "difficulty": "hard"
+        },
+        {
+          "item_id": "humaneval_019",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  },
+  "governance": {
+    "R-18-1": "seed=42 고정, 동일 골든셋에서 동일 서브셋 재현 보장",
+    "R-18-4": "item_id만 저장, 정답 데이터 미포함 (오염 방지)"
+  },
+  "sot_references": [
+    "S7G-072 (promptfoo CI 통합)",
+    "S7G-078 (골든 데이터셋 관리)",
+    "T-025 (골든셋 스모크 테스트)"
+  ],
+  "content_sha256": "9ab3fc99f8d9ad945e7e5ad77a444ec33154913c09b3110246907060c6d254bf"
+}

@@ -1,0 +1,14 @@
+﻿2DBCC1D858555839  contamination_check.json
+8F9235068F56E622  manifest.json
+E80C753D226F5069  mmlu_sample_50.json
+B5B336D355D01E89  smoke_subset.json
+25719F1F55E163D4  humaneval\items.json
+4FFCD574D509A382  humaneval\metadata.json
+D94CF098F12F8384  logickor\items.json
+C11EF09830EB21DC  logickor\metadata.json
+81AF229B1BD75A20  mbpp\items.json
+6395D7A0154138A2  mbpp\metadata.json
+CDD98383CD6AD7DC  mmlu\items.json
+D255D28F49B3DD6A  mmlu\metadata.json
+F03C7EDA52775366  smoke\humaneval_items.json
+BE257F58C910ED84  smoke\mmlu_items.json

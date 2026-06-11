@@ -1,0 +1,702 @@
+[
+  {
+    "item_id": "logickor_001",
+    "question": "[논리추론/삼단논법] LogicKor 문항 1: 삼단논법에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "삼단논법",
+    "reference_answer": "LogicKor 문항 1의 모범답안입니다. 삼단논법 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/삼단논법] LogicKor 문항 1: 삼단논법에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 1의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_002",
+    "question": "[독해/요약] LogicKor 문항 2: 요약에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "요약",
+    "reference_answer": "LogicKor 문항 2의 모범답안입니다. 요약 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/요약] LogicKor 문항 2: 요약에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 2의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_003",
+    "question": "[수학/방정식] LogicKor 문항 3: 방정식에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "방정식",
+    "reference_answer": "LogicKor 문항 3의 모범답안입니다. 방정식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/방정식] LogicKor 문항 3: 방정식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 3의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_004",
+    "question": "[코딩/알고리즘] LogicKor 문항 4: 알고리즘에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "알고리즘",
+    "reference_answer": "LogicKor 문항 4의 모범답안입니다. 알고리즘 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/알고리즘] LogicKor 문항 4: 알고리즘에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 4의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_005",
+    "question": "[상식/과학상식] LogicKor 문항 5: 과학상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "과학상식",
+    "reference_answer": "LogicKor 문항 5의 모범답안입니다. 과학상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/과학상식] LogicKor 문항 5: 과학상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 5의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_006",
+    "question": "[논리추론/조건추론] LogicKor 문항 6: 조건추론에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "조건추론",
+    "reference_answer": "LogicKor 문항 6의 모범답안입니다. 조건추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/조건추론] LogicKor 문항 6: 조건추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 6의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_007",
+    "question": "[독해/추론] LogicKor 문항 7: 추론에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "추론",
+    "reference_answer": "LogicKor 문항 7의 모범답안입니다. 추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/추론] LogicKor 문항 7: 추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 7의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_008",
+    "question": "[수학/확률통계] LogicKor 문항 8: 확률통계에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "확률통계",
+    "reference_answer": "LogicKor 문항 8의 모범답안입니다. 확률통계 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/확률통계] LogicKor 문항 8: 확률통계에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 8의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_009",
+    "question": "[코딩/자료구조] LogicKor 문항 9: 자료구조에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "자료구조",
+    "reference_answer": "LogicKor 문항 9의 모범답안입니다. 자료구조 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/자료구조] LogicKor 문항 9: 자료구조에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 9의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_010",
+    "question": "[상식/역사상식] LogicKor 문항 10: 역사상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "역사상식",
+    "reference_answer": "LogicKor 문항 10의 모범답안입니다. 역사상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/역사상식] LogicKor 문항 10: 역사상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 10의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_011",
+    "question": "[논리추론/모순찾기] LogicKor 문항 11: 모순찾기에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "모순찾기",
+    "reference_answer": "LogicKor 문항 11의 모범답안입니다. 모순찾기 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/모순찾기] LogicKor 문항 11: 모순찾기에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 11의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_012",
+    "question": "[독해/비교분석] LogicKor 문항 12: 비교분석에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "비교분석",
+    "reference_answer": "LogicKor 문항 12의 모범답안입니다. 비교분석 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/비교분석] LogicKor 문항 12: 비교분석에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 12의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_013",
+    "question": "[수학/기하] LogicKor 문항 13: 기하에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "기하",
+    "reference_answer": "LogicKor 문항 13의 모범답안입니다. 기하 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/기하] LogicKor 문항 13: 기하에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 13의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_014",
+    "question": "[코딩/디버깅] LogicKor 문항 14: 디버깅에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "디버깅",
+    "reference_answer": "LogicKor 문항 14의 모범답안입니다. 디버깅 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/디버깅] LogicKor 문항 14: 디버깅에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 14의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_015",
+    "question": "[상식/경제상식] LogicKor 문항 15: 경제상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "경제상식",
+    "reference_answer": "LogicKor 문항 15의 모범답안입니다. 경제상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/경제상식] LogicKor 문항 15: 경제상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 15의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_016",
+    "question": "[논리추론/인과관계] LogicKor 문항 16: 인과관계에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "인과관계",
+    "reference_answer": "LogicKor 문항 16의 모범답안입니다. 인과관계 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/인과관계] LogicKor 문항 16: 인과관계에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 16의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_017",
+    "question": "[독해/맥락파악] LogicKor 문항 17: 맥락파악에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "맥락파악",
+    "reference_answer": "LogicKor 문항 17의 모범답안입니다. 맥락파악 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/맥락파악] LogicKor 문항 17: 맥락파악에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 17의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_018",
+    "question": "[수학/수열] LogicKor 문항 18: 수열에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "수열",
+    "reference_answer": "LogicKor 문항 18의 모범답안입니다. 수열 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/수열] LogicKor 문항 18: 수열에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 18의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_019",
+    "question": "[코딩/코드분석] LogicKor 문항 19: 코드분석에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "코드분석",
+    "reference_answer": "LogicKor 문항 19의 모범답안입니다. 코드분석 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/코드분석] LogicKor 문항 19: 코드분석에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 19의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_020",
+    "question": "[상식/법률상식] LogicKor 문항 20: 법률상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "법률상식",
+    "reference_answer": "LogicKor 문항 20의 모범답안입니다. 법률상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/법률상식] LogicKor 문항 20: 법률상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 20의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_021",
+    "question": "[논리추론/유비추론] LogicKor 문항 21: 유비추론에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "유비추론",
+    "reference_answer": "LogicKor 문항 21의 모범답안입니다. 유비추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/유비추론] LogicKor 문항 21: 유비추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 21의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_022",
+    "question": "[독해/주제찾기] LogicKor 문항 22: 주제찾기에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "주제찾기",
+    "reference_answer": "LogicKor 문항 22의 모범답안입니다. 주제찾기 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/주제찾기] LogicKor 문항 22: 주제찾기에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 22의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_023",
+    "question": "[수학/최적화] LogicKor 문항 23: 최적화에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "최적화",
+    "reference_answer": "LogicKor 문항 23의 모범답안입니다. 최적화 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/최적화] LogicKor 문항 23: 최적화에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 23의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_024",
+    "question": "[코딩/설계] LogicKor 문항 24: 설계에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "설계",
+    "reference_answer": "LogicKor 문항 24의 모범답안입니다. 설계 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/설계] LogicKor 문항 24: 설계에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 24의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_025",
+    "question": "[상식/문화상식] LogicKor 문항 25: 문화상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "문화상식",
+    "reference_answer": "LogicKor 문항 25의 모범답안입니다. 문화상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/문화상식] LogicKor 문항 25: 문화상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 25의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_026",
+    "question": "[논리추론/연역추론] LogicKor 문항 26: 연역추론에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "연역추론",
+    "reference_answer": "LogicKor 문항 26의 모범답안입니다. 연역추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/연역추론] LogicKor 문항 26: 연역추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 26의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_027",
+    "question": "[독해/어휘이해] LogicKor 문항 27: 어휘이해에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "어휘이해",
+    "reference_answer": "LogicKor 문항 27의 모범답안입니다. 어휘이해 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/어휘이해] LogicKor 문항 27: 어휘이해에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 27의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_028",
+    "question": "[수학/집합론] LogicKor 문항 28: 집합론에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "집합론",
+    "reference_answer": "LogicKor 문항 28의 모범답안입니다. 집합론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/집합론] LogicKor 문항 28: 집합론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 28의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_029",
+    "question": "[코딩/최적화] LogicKor 문항 29: 최적화에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "최적화",
+    "reference_answer": "LogicKor 문항 29의 모범답안입니다. 최적화 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/최적화] LogicKor 문항 29: 최적화에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 29의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_030",
+    "question": "[상식/기술상식] LogicKor 문항 30: 기술상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "기술상식",
+    "reference_answer": "LogicKor 문항 30의 모범답안입니다. 기술상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/기술상식] LogicKor 문항 30: 기술상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 30의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_031",
+    "question": "[논리추론/귀납추론] LogicKor 문항 31: 귀납추론에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "귀납추론",
+    "reference_answer": "LogicKor 문항 31의 모범답안입니다. 귀납추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/귀납추론] LogicKor 문항 31: 귀납추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 31의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_032",
+    "question": "[독해/의도파악] LogicKor 문항 32: 의도파악에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "의도파악",
+    "reference_answer": "LogicKor 문항 32의 모범답안입니다. 의도파악 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/의도파악] LogicKor 문항 32: 의도파악에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 32의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_033",
+    "question": "[수학/미적분] LogicKor 문항 33: 미적분에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "미적분",
+    "reference_answer": "LogicKor 문항 33의 모범답안입니다. 미적분 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/미적분] LogicKor 문항 33: 미적분에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 33의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_034",
+    "question": "[코딩/테스트] LogicKor 문항 34: 테스트에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "테스트",
+    "reference_answer": "LogicKor 문항 34의 모범답안입니다. 테스트 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/테스트] LogicKor 문항 34: 테스트에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 34의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_035",
+    "question": "[상식/사회상식] LogicKor 문항 35: 사회상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "사회상식",
+    "reference_answer": "LogicKor 문항 35의 모범답안입니다. 사회상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/사회상식] LogicKor 문항 35: 사회상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 35의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_036",
+    "question": "[논리추론/확률추론] LogicKor 문항 36: 확률추론에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "확률추론",
+    "reference_answer": "LogicKor 문항 36의 모범답안입니다. 확률추론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/확률추론] LogicKor 문항 36: 확률추론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 36의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_037",
+    "question": "[독해/논증분석] LogicKor 문항 37: 논증분석에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "논증분석",
+    "reference_answer": "LogicKor 문항 37의 모범답안입니다. 논증분석 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/논증분석] LogicKor 문항 37: 논증분석에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 37의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_038",
+    "question": "[수학/행렬] LogicKor 문항 38: 행렬에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "행렬",
+    "reference_answer": "LogicKor 문항 38의 모범답안입니다. 행렬 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/행렬] LogicKor 문항 38: 행렬에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 38의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_039",
+    "question": "[코딩/리팩토링] LogicKor 문항 39: 리팩토링에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "리팩토링",
+    "reference_answer": "LogicKor 문항 39의 모범답안입니다. 리팩토링 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/리팩토링] LogicKor 문항 39: 리팩토링에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 39의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_040",
+    "question": "[상식/환경상식] LogicKor 문항 40: 환경상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "환경상식",
+    "reference_answer": "LogicKor 문항 40의 모범답안입니다. 환경상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/환경상식] LogicKor 문항 40: 환경상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 40의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_041",
+    "question": "[논리추론/논리퍼즐] LogicKor 문항 41: 논리퍼즐에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "논리퍼즐",
+    "reference_answer": "LogicKor 문항 41의 모범답안입니다. 논리퍼즐 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/논리퍼즐] LogicKor 문항 41: 논리퍼즐에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 41의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_042",
+    "question": "[독해/정보추출] LogicKor 문항 42: 정보추출에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "정보추출",
+    "reference_answer": "LogicKor 문항 42의 모범답안입니다. 정보추출 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/정보추출] LogicKor 문항 42: 정보추출에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 42의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_043",
+    "question": "[수학/조합론] LogicKor 문항 43: 조합론에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "조합론",
+    "reference_answer": "LogicKor 문항 43의 모범답안입니다. 조합론 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/조합론] LogicKor 문항 43: 조합론에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 43의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_044",
+    "question": "[코딩/패턴인식] LogicKor 문항 44: 패턴인식에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "패턴인식",
+    "reference_answer": "LogicKor 문항 44의 모범답안입니다. 패턴인식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/패턴인식] LogicKor 문항 44: 패턴인식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 44의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_045",
+    "question": "[상식/건강상식] LogicKor 문항 45: 건강상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "건강상식",
+    "reference_answer": "LogicKor 문항 45의 모범답안입니다. 건강상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/건강상식] LogicKor 문항 45: 건강상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 45의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_046",
+    "question": "[논리추론/진위판별] LogicKor 문항 46: 진위판별에 대한 다음 문제를 풀어주세요.",
+    "category": "논리추론",
+    "subcategory": "진위판별",
+    "reference_answer": "LogicKor 문항 46의 모범답안입니다. 진위판별 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[논리추론/진위판별] LogicKor 문항 46: 진위판별에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 46의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_047",
+    "question": "[독해/함축이해] LogicKor 문항 47: 함축이해에 대한 다음 문제를 풀어주세요.",
+    "category": "독해",
+    "subcategory": "함축이해",
+    "reference_answer": "LogicKor 문항 47의 모범답안입니다. 함축이해 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[독해/함축이해] LogicKor 문항 47: 함축이해에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 47의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_048",
+    "question": "[수학/수치해석] LogicKor 문항 48: 수치해석에 대한 다음 문제를 풀어주세요.",
+    "category": "수학",
+    "subcategory": "수치해석",
+    "reference_answer": "LogicKor 문항 48의 모범답안입니다. 수치해석 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[수학/수치해석] LogicKor 문항 48: 수치해석에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 48의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_049",
+    "question": "[코딩/API설계] LogicKor 문항 49: API설계에 대한 다음 문제를 풀어주세요.",
+    "category": "코딩",
+    "subcategory": "API설계",
+    "reference_answer": "LogicKor 문항 49의 모범답안입니다. API설계 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[코딩/API설계] LogicKor 문항 49: API설계에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 49의 모범답안입니다."
+  },
+  {
+    "item_id": "logickor_050",
+    "question": "[상식/교육상식] LogicKor 문항 50: 교육상식에 대한 다음 문제를 풀어주세요.",
+    "category": "상식",
+    "subcategory": "교육상식",
+    "reference_answer": "LogicKor 문항 50의 모범답안입니다. 교육상식 관련 논리적 추론 과정을 포함합니다.",
+    "scoring_criteria": {
+      "accuracy_weight": 0.4,
+      "logic_weight": 0.3,
+      "completeness_weight": 0.3
+    },
+    "prompt": "다음 문제에 대해 정확하고 논리적으로 답변해 주세요.\n\n[상식/교육상식] LogicKor 문항 50: 교육상식에 대한 다음 문제를 풀어주세요.",
+    "answer": "LogicKor 문항 50의 모범답안입니다."
+  }
+]

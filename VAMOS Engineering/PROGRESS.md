@@ -9,7 +9,7 @@
 - [x] **2-0A** 외부 의존성 재확인: E.1(9)+E.3(8)+B.1(11) = **28/28 PASS** — `_targets/PHASE2_환경리포트.md` (변경 2 비차단: pydantic 2.12.5·디스크 / WARN 1: poetry 미설치→2-4 처리)
 - [x] **2-0B** 골든셋 실데이터 재구축(D14): v1 합성 170 → **v2 실데이터 162** (MMLU 50/HumanEval 20/MBPP 50/LogicKor 42 전수[편차 기록 — 명세 50은 합성 가정치]). 라이선스 4종 검증(MIT/MIT/CC BY 4.0/CC BY-SA 4.0). verify ALL PASS + 재현성 PASS. data_status=REAL_DATA → **LOCK-BE-01/02 유효화**. v1 백업 `_targets/_integ/backup_phase2/golden_set_v1/`
 - [x] **2-0C** OpenAI 구키 revoke: 사용자 통보 미수신 — 기록만(현행 키 HTTP 200 유효). 환경리포트 §5
-- [ ] 2-1 CLAUDE.md 보강 (§21~§28 + GAP 2건[HYBRID_RATIO/MAX_RETRIES] + PART1 §D.0) ← **다음**
+- [x] **2-1** CLAUDE.md 보강: 705→944줄(LF 무회귀), §21~§28 신설 + §2/§4/§6/§7.4/§17/§18 실측 갱신. GAP 2건 해소(§7.4: Hybrid Search BM25 0.3/Vector 0.7·Top-K 20·threshold 0.75 + MCP max_retries V1/V2=2·V3=3 [PHASE_B4 §3.9 정본]). §28에 A13 컨텍스트 테이블 포함. 백업 `_targets/_integ/backup_phase2/CLAUDE.md.pre-2-1`
 - [ ] 2-2 CLAUDE.md 검증 (스킬 8종 생성 + 8단계 + SILVER+ 판정 + /sot-check 회귀)
 - [ ] 2-3 Obsidian 노트 120+ (OBSIDIAN-STRATEGY-v3 §3~§6 + 3-7 도메인 포함 + A16 태깅)
 - [ ] 2-4 린터/CI (pyproject.toml + ci.yml 단일 통합 + conftest + Hook 2종 + D17 결정)
