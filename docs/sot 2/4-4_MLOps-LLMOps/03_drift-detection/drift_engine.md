@@ -556,11 +556,13 @@ class DriftAutoResponder:
     def __init__(self, canary_router: "ICanaryRouter",          # 2-3 인터페이스
                  benchmark_trigger: "IBenchmarkTrigger",        # 2-1 TR-07
                  catalog: "ICatalogLoader",                     # P1-4
-                 escalator: "IEscalator"):                      # I-20
+                 escalator: "IEscalator",                       # I-20
+                 auto_rollback: bool = True):                    # §C-4 (상세명세 L215 정본)
         self.canary = canary_router
         self.benchmark = benchmark_trigger
         self.catalog = catalog
         self.escalator = escalator
+        self.auto_rollback = auto_rollback
 
     def respond(self, alert: DriftAlert) -> "AutoResponseResult":
         actions: list[str] = []

@@ -392,7 +392,7 @@ X-Client-Cert: <mTLS fingerprint>
 | 3 | REG-03 | 헬스 체크 3회 실패 | CB OPEN, 레지스트리 질의 응답에서 제외 |
 | 4 | REG-04 | 60초 후 HALF-OPEN 복귀 | probe 1건 성공 → CLOSED 복귀 |
 | 5 | REG-05 | `load_factor` 갱신 `PUT /heartbeat` | 질의 정렬 순위 변경 확인 |
-| 6 | REG-06 | TTL 만료 (기본 300s) | 자동 제거 + `-32007` 이후 질의 시 |
+| 6 | REG-06 | TTL 만료 (기본 300s) | 자동 제거 + `-32021` 이후 질의 시 |
 | 7 | REG-07 | `capability=streaming` 필터 | 매칭 에이전트만 반환 |
 | 8 | REG-08 | `skill=code-review` 필터 | Jaccard 계산 전 1차 필터 |
 | 9 | REG-09 | 레지스트리 서버 장애 3회 | 로컬 캐시 fallback + 60s 후 probe |
