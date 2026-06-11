@@ -705,50 +705,6 @@ VAMOS 로드맵 Phase 2, 세션 P2-5 — Phase 2 Gate
 
 ## 4. Phase 3
 
-### 세션 P3-0: 미결정 게이트 (선행) ⟦2026-06-11 신설 — 로드맵 3-0 동기⟧
-
-**로드맵 작업 매핑:**
-
-| # | 작업 | 상세 | 우선순위 | 산출물 |
-|---|------|------|---------|--------|
-| 3-0 | 미결정 게이트 | D1 이연 대장 + 전수진단 결정 확인 + PART1 C.1 13건 + 분모·V1 귀속·STEP7 reconcile 확정 | **Must** (선행) | 결정 기록 |
-
-````
-VAMOS 로드맵 Phase 3, 세션 P3-0 — 미결정 게이트 (R1 착수 전 선행)
-
-■ 대상: 3-0 (Must, 선행) — 로드맵 Phase 3 표 3-0 행의 게이트 스코프 ①~⑥ 전건
-
-■ 참조:
-  D:\VAMOS\VAMOS_최종_로드맵.md — Phase 3 표 3-0 행 (게이트 스코프 정의)
-  D:\VAMOS\04. 구현단계\v13_results\phase0\D1_RESULTS_INDEX.md §3 — 이연 대장 D-1~D-4
-  D:\VAMOS\_targets\DECISION_REGISTER.md — 기확정 17건 (D1~D7·D9~D11·D13~D19, D8·D12 결번)
-  D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md §C.1 — V0 시작 전 결정 13건
-  D:\VAMOS\_targets\ROADMAP_정본화_검증보고서_2026-06-11.md — 분모·귀속 충돌 상세(F-03/F-11/F-12/F-18)
-
-■ STEP 1: 프롬프트 자체 검증
-  a. 3-0 행 스코프 ①~⑥과 본 세션 대상 일치 확인
-  b. "프롬프트 최종 확정"
-
-■ STEP 2: 작업 실행
-  1. ① D1 이연 대장 D-2~D-4 처분 확인 (D-1은 RESOLVED 기록 확인만 — 2026-06-11 기해소)
-  2. ② PART1 C.1 #1~3 기결정 확인, #4~13 확정 + 기록
-  3. ③ 분모 확정: V0 모듈 "전 25 파일 선생성 여부"(기본 = PART2 V0-STEP-4 활성 5+stub 3) / V1 CORE 26 vs 32(기본 = PART2 §1.1 32)
-  4. ④ V1 귀속 확정: SDAR §10.1 기반 · Cloud Library CB1(E-15/S-5) · RT-BNP V1 · 4-4 MLOps 본대 — SPEC↔PART2 충돌 해소(V1 추가 or V2 이연 명시)
-  5. ⑤ STEP7 V1 라벨 ↔ PART2 V2/V3 배치 reconcile 방침 1건 (정본 우선순위: 본문 PART2 > STEP7)
-  6. ⑥ READINESS §8 문서수정 잔여 확인 (다수 세션4~7 기집행 — 잔여만)
-  7. 각 확정을 decisions/ ADR로 기록 (A6) — 기존 17건은 DECISION_REGISTER.md 정본 유지
-
-■ STEP 3: 산출물 검증 (반복) — 미결정 잔여 0 확인 → "게이트 통과 선언"
-■ STEP 4: PROGRESS.md 갱신
-■ STEP 5: 갱신 검증 — 로드맵 3-0 행·DECISION_REGISTER와 모순 없는지
-
-■ 실패 시 (A1): 확정 불가 항목 발생 → 보류 사유·기한 명기 후 R1 차단 여부 판단(차단 항목만 해소 후 진행)
-
-■ PASS 조건: 스코프 ①~⑥ 전건 확정·기록 → P3-1(R1) 진입 허용
-````
-
----
-
 ### 세션 P3-1: R1 런타임 설계 10개 LOCK
 
 **로드맵 작업 매핑:**
@@ -773,9 +729,9 @@ VAMOS 로드맵 Phase 3, 세션 P3-1 — R1 런타임 설계 10개 LOCK
 
 ■ STEP 1: 프롬프트 자체 검증
   a. 10개 결정 목록이 로드맵 3-1~3-7c와 일치하는지
-  b. 각 결정의 대조 SOT 정본이 정확한지 (D2.0-02, D2.0-05, D2.0-06, D2.0-07, PHASE_B1, PHASE_B4, DEC-017)
+  b. 각 결정의 대조 SOT 정본이 정확한지 (D2.0-02, D2.0-06, D2.0-07, PHASE_B4~B5, DEC-017)
   c. A21 Defense Layer 3계층이 STRATEGY_05 §3과 일치하는지
-  d. A22 ResponseEnvelope LOCK 관계가 STRATEGY_05 §4.2와 일치하는지 (D6 기확정: 선택지 A — metadata 내부 포함, 5필드 LOCK 보존)
+  d. A22 ResponseEnvelope LOCK 관계가 STRATEGY_05 §4.2와 일치하는지 (선택지 A/B)
   e. A25 confidence 임계값이 STRATEGY_05 §5.2와 일치하는지 (0.85/0.60/0.30)
   f. "프롬프트 최종 확정"
 
@@ -784,12 +740,12 @@ VAMOS 로드맵 Phase 3, 세션 P3-1 — R1 런타임 설계 10개 LOCK
      3-1: 5-Gate 순서 → D2.0-07
      3-2: L0~L3 → D2.0-06
      3-3: Failover → D2.0-02 A-1
-     3-4: DAG → D2.0-05 + D2.0-02 §2.2(9-State LOCK) ⟦2026-06-11 정정: 구 표기 PHASE_B5(테스트 전략)는 오참조⟧
+     3-4: DAG → PHASE_B5
      3-5: CostGate → D2.0-07 §4.2
-     3-6: IPC + A20(Pydantic 정본) → PHASE_B1 §5.2(JSON-RPC 13) + D2.1 스키마 ⟦2026-06-11 정정: 구 표기 PHASE_B4(config)는 오참조⟧
+     3-6: IPC + A20(Pydantic 정본) → PHASE_B4
      3-7: MCP → DEC-017
      3-7a: Defense Layer 3계층 → BASE-1.3 + SDAR §5.1
-     3-7b: reasoning_trace → ResponseEnvelope LOCK 관계 — D6 기확정(선택지 A: metadata 내부, 5필드 LOCK 보존), 스키마 상세만 확정
+     3-7b: reasoning_trace → ResponseEnvelope LOCK 관계 확정 (선택지 A or B)
      3-7c: confidence 임계값 → 0.85/0.60/0.30 LOCK
   2. 각 결정을 ADR 기록 (A6) → decisions/PHASE3-DEC-001~010
   3. LOCK Registry 일치 또는 신규 등록
@@ -1009,7 +965,7 @@ VAMOS 로드맵 Phase 4, 세션 P4-3 — Phase 4 Gate
 ■ STEP 1: 프롬프트 자체 검증 → "확정"
 
 ■ STEP 2: Phase 4 검증 (4-V):
-  □ Must 11개 전부 통과(STRATEGY_02 표 라벨 기준 — 로드맵 4-V 분모 확정 2026-06-11)? □ B2c 왕복 PASS(A20)? □ 하네스 매 커밋 자동?
+  □ Must 9개 전부 통과? □ B2c 왕복 PASS(A20)? □ 하네스 매 커밋 자동?
   □ Defense Layer 구현(A21)? □ reasoning_trace(A22)? □ confidence_score(A25)?
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
@@ -1221,21 +1177,20 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 
 | Phase | 세션 | 작업 | 상태 |
 |-------|------|------|------|
-| **0** | P0-1 | 자산 인벤토리 + Git + 리스크 | ✅ (2026-04-04) |
-| | P0-2 | CLAUDE.md 구조 + Obsidian 연결 | ✅ (2026-04-04) |
-| | P0-3 | 매트릭스 v1.1 갱신 | ✅ (2026-04-04) |
-| | P0-4 | Phase 0 Gate | ✅ (2026-04-04, tag phase0-complete — 산출물 소급 커밋 06-05) |
-| **1** | P1-0 | 도구 점검 + SOT 2 완성 확인 | ✅ (2026-06-03, 30/30 도메인) |
-| | P1-1 | D1 핵심 검증 (1-2~1-5) | ✅ (2026-06-04 D1 PASS) |
-| | P1-2 | D1 보조 + 기준선 + Gate | ✅ (2026-06-04, 감사 정정 06-05, tag phase1-d1-pass) |
+| **0** | P0-1 | 자산 인벤토리 + Git + 리스크 | ⬜ |
+| | P0-2 | CLAUDE.md 구조 + Obsidian 연결 | ⬜ |
+| | P0-3 | 매트릭스 v1.1 갱신 | ⬜ |
+| | P0-4 | Phase 0 Gate | ⬜ |
+| **1** | P1-0 | 도구 점검 + SOT 2 완성 확인 | ⬜ |
+| | P1-1 | D1 핵심 검증 (1-2~1-5) | ⬜ |
+| | P1-2 | D1 보조 + 기준선 + Gate | ⬜ |
 | **2** | P2-0 | 외부 의존성 재확인 | ⬜ |
 | | P2-1 | CLAUDE.md 보강 | ⬜ |
 | | P2-2 | CLAUDE.md 검증 | ⬜ |
 | | P2-3 | Obsidian 노트 생성 | ⬜ |
 | | P2-4 | 린터/CI + 커스텀 린터 | ⬜ |
 | | P2-5 | Phase 2 Gate | ⬜ |
-| **3** | P3-0 | 미결정 게이트 (선행, 2026-06-11 신설) | ⬜ |
-| | P3-1 | R1 런타임 10개 LOCK | ⬜ |
+| **3** | P3-1 | R1 런타임 10개 LOCK | ⬜ |
 | | P3-2 | X1 전략 + 계획서 + Gate | ⬜ |
 | **4** | P4-0 | 스킬 점검 + 타입 동기화 | ⬜ |
 | | P4-1 | ORANGE CORE + Registry + config | ⬜ |
@@ -1247,7 +1202,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | | P6-2 | V1 UI + 운영 + Eval | ⬜ |
 | | P6-3 | V1 Gate | ⬜ |
 
-**총 25세션** (P3-0 신설 2026-06-11 반영 · Phase 0~1 = 7세션 완료, 잔여 18세션)
+**총 24세션**
 
 ---
 

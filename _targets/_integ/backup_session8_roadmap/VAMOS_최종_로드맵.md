@@ -1,9 +1,9 @@
 # VAMOS 최종 로드맵
 
-> **작성일**: 2026-04-04 | **최종 갱신**: 2026-06-11 (3-0 게이트 신설·PART2 V0/V1 매핑 노트·스코프 선언·정본화 검증 전건 반영)
+> **작성일**: 2026-04-04 | **최종 갱신**: 2026-06-04 (현재 진행상황 반영)
 > **목적**: VAMOS AI 프로젝트의 전체 진행 순서 — Phase 0~6
 > **근거**: 엔지니어링 매트릭스 + 하네스 계획서 + 보강전략 V1.0 + 검증 체계 + 자산 인벤토리 + 25건 관점 전략 (STRATEGY 01~07)
-> **상태**: 최종 확정 (25건 관점 전략 반영) · **진행: Phase 0 ✅ 완료 / Phase 1 ✅ 완료 (D1 PASS, 2026-06-04, 조건부·비차단 이연 1도메인 5-3 — 2026-06-11 결정 D1~D5로 전건 RESOLVED, 3-0 참조) / Phase 3 ◐ 부분 / Phase 2·4~6 미착수**
+> **상태**: 최종 확정 (25건 관점 전략 반영) · **진행: Phase 0 ✅ 완료 / Phase 1 ✅ 완료 (D1 PASS, 2026-06-04, 조건부·비차단 이연 1도메인 5-3) / Phase 3 ◐ 부분 / Phase 2·4~6 미착수**
 
 ---
 
@@ -124,7 +124,7 @@ Phase 완료 시: git tag phase{N}-complete → git push --tags → git push ori
   Could:  시간 여유 시 수행
 
 Critical Path (Must만 연결한 최단 루트):
-  0-0→0-3 → 1-1→1-2~1-5→1-9 → 2-0→2-1→2-4→2-5 → 3-0→3-1~3-7c → 4-1→4-2→4-4→4-5 → 5-3~5-6→5-7a→5-8
+  0-0→0-3 → 1-1→1-2~1-5→1-9 → 2-0→2-1→2-4→2-5 → 3-1~3-7c → 4-1→4-2→4-4~4-6 → 5-3~5-6→5-7a→5-8
 ```
 
 ---
@@ -171,7 +171,7 @@ Critical Path (Must만 연결한 최단 루트):
 > **적용 전략**: A10(SOT 2 완성 정의), A17(재현성), A15(리스크 R01~R03)
 > **거버넌스 교차**: PART1 Section A.1/E.2 (BLOCKER 14건)
 
-> ※ **D1 PASS (2026-06-04)**: D1 산출물 전종 생성 완료 — `sot_conflict_report.json`·`sot2_conflict_scan.json`·`cross_ref_matrix/lock_consistency/broken_references`·`{도메인}_validation.json×36`·`integrity_snapshot.json`(2,654 파일)·`claude_md_gap_report`·`obsidian_gap_report`·`blocker_log`. 값 게이트 5/5 PASS, 인덱스 `04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md`(+`D1_VERDICT.json`). 조건부: 비차단 이연 1도메인(5-3 C-04~C-08 5건)·BROKEN 1(사소 네비)은 이연대장 등록, 자동 정본 변경 0. **6-5 W-CB는 v1.3(2026-05-19)에서 RESOLVED**(1차 D1의 6-5 이연·OPEN 6은 2026-06-05 감사로 5-3 5건+6-5 0으로 정정). ⟦2026-06-11: 5-3 C-04~C-08도 결정 D1~D5로 전건 RESOLVED — 실효 OPEN 0, 3-0 게이트 기록 참조⟧ SOT2 빌드 산출물(S11-x)은 별개.
+> ※ **D1 PASS (2026-06-04)**: D1 산출물 전종 생성 완료 — `sot_conflict_report.json`·`sot2_conflict_scan.json`·`cross_ref_matrix/lock_consistency/broken_references`·`{도메인}_validation.json×36`·`integrity_snapshot.json`(2,654 파일)·`claude_md_gap_report`·`obsidian_gap_report`·`blocker_log`. 값 게이트 5/5 PASS, 인덱스 `04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md`(+`D1_VERDICT.json`). 조건부: 비차단 이연 1도메인(5-3 C-04~C-08 5건)·BROKEN 1(사소 네비)은 이연대장 등록, 자동 정본 변경 0. **6-5 W-CB는 v1.3(2026-05-19)에서 RESOLVED**(1차 D1의 6-5 이연·OPEN 6은 2026-06-05 감사로 5-3 5건+6-5 0으로 정정). SOT2 빌드 산출물(S11-x)은 별개.
 
 ### SOT 2 완성 기준 (A10 — STRATEGY_02)
 
@@ -237,11 +237,11 @@ Must 5개 완성 → D1 부분 실행 가능
 
 | # | 작업 | 상세 | 우선순위 | 병렬 | 산출물 |
 |---|------|------|---------|------|--------|
-| 2-0 | **외부 의존성 재확인** | PART1 E.1+E.3+B.1 재확인(A4). 2026-03-02 이후 변경 여부 + **골든셋 실데이터 재구축**(D14 선행과업 — benchmarks/ [SYNTHETIC] 해소; 5-1·6-7 Eval과 LOCK-BE-01/02 게이트의 전제) | **Must** | 선행 | 환경 리포트 + 골든셋 v2 |
-| 2-1 | CLAUDE.md 보강 | 보강전략 Phase A (5세션) → §21~§27 추가 + §28(엔지니어링 프레임워크 — 본 로드맵 신설분, 보강전략엔 미정의). §28에 매트릭스/PROGRESS.md/Phase별 컨텍스트(A13) 포함. 입력: PART1 §D.0(CLAUDE.md 필수 수정) + claude_md_gap_report 2건(D1 산출) 반영 | **Must** | ⓐ | 보강된 CLAUDE.md |
+| 2-0 | **외부 의존성 재확인** | PART1 E.1+E.3+B.1 재확인(A4). 2026-03-02 이후 변경 여부 | **Must** | 선행 | 환경 리포트 |
+| 2-1 | CLAUDE.md 보강 | 보강전략 Phase A (5세션) → §21~§28 추가. §28(엔지니어링 프레임워크)에 매트릭스/PROGRESS.md/Phase별 컨텍스트(A13) 포함. 입력: PART1 §D.0(CLAUDE.md 필수 수정) + claude_md_gap_report 2건(D1 산출) 반영 | **Must** | ⓐ | 보강된 CLAUDE.md |
 | 2-2 | CLAUDE.md 검증 | 보강전략 Phase B (8스킬) → SILVER+ 판정 | Should | 2-1후 | 검증 리포트 |
 | 2-3 | Obsidian 노트 생성 | Strategy v3.0 → 120+ 노트 + 매트릭스 노트. 책임 AI 관련 자산 태깅(A16) | Should | ⓑ | VAMOS HOME |
-| 2-4 | 린터/CI 환경 세팅 | 하네스 §7 → pyproject.toml + ruff + CI yaml + conftest.py. ✔ (2026-06-11 기집행) 구 .claude-pre-commit 처분 완료 — pre-commit 훅 블록 제거(D17, `repos: []` 보존)·gitlink 언트래킹(D18, 디스크 보존); 훅 재도입 여부는 본 작업에서 결정. **CI yaml 기준**: PHASE_B6 §2 ci.yml 단일 통합이 정본(V0 최소=quality+test job; V1 전체 분리는 PART2 §6.4 11종 — L4844 주석) | **Must** | ⓒ | 린터/CI 파일 + 코드 생산 Hook(STRATEGY_10 §4 4-V4: py 수정 시 ruff·config LOCK 검증) |
+| 2-4 | 린터/CI 환경 세팅 | 하네스 §7 → pyproject.toml + ruff + CI yaml + conftest.py. ✔ (2026-06-11 기집행) 구 .claude-pre-commit 처분 완료 — pre-commit 훅 블록 제거(D17, `repos: []` 보존)·gitlink 언트래킹(D18, 디스크 보존); 훅 재도입 여부는 본 작업에서 결정 | **Must** | ⓒ | 린터/CI 파일 |
 | 2-5 | VAMOS 커스텀 린터 | 하네스 §8 → vamos_lint VL-001~005 (commitlint는 §8 vamos_lint 규칙 아님 — STRATEGY_09 §3 린터 목록의 별도 커밋 린터, 2-4 린터/CI 트랙) | **Must** | 2-4후 | vamos_lint.py |
 | 2-6 | CPS 템플릿 정의 | Context/Problem/Solution 구조화 | Could | 2-4병렬 | 템플릿 |
 | 2-7 | 컨텍스트 로딩 전략 | 자산 인벤토리 §3 기반 로딩 맵 | Could | 2-1후 | 로딩 맵 |
@@ -283,11 +283,9 @@ Must 5개 완성 → D1 부분 실행 가능
 > **적용 전략**: A20(인터페이스 계약), A21(다층 방어), A22(사용자 투명성), A25(예측 신뢰도), A15(리스크 R06~R07)
 > **거버넌스 교차**: LOCK Registry DEC-001~017 중 10건
 
-> ※ **산출물 위상·경로**: 3-1~3-13이 신설하는 결정문서 7종은 기존 정본(PHASE_B5/B6/B7·SOT 2 도메인 정본)의 **결정 요약+로드맵 바인딩** 문서이며 기존 정본을 대체하지 않는다(충돌 시 기존 정본 우선, 변경은 LOCK 절차). 저장 위치: `VAMOS Engineering\` 직하(3-0에서 확정 시 변경 가능).
-
 | # | 작업 | 상세 | 우선순위 | 병렬 | 산출물 |
 |---|------|------|---------|------|--------|
-| 3-0 | **미결정 게이트** | R1 착수 전 미결정·이연 항목 일괄 처리 게이트: ①D1 이연 대장(D1_RESULTS_INDEX §3, D-1~D-4) + 전수진단 결정 항목 확인 ②PART1 C.1 V0 시작 전 결정 13건(#1~3 기결정 확인·#4~13 확정 기록) ③분모 확정 2건(V0 모듈 "전 25 파일 선생성 여부"·V1 CORE 26 vs 32 — 4-2/6-3 참조) ④V1 귀속 확정(SDAR §10.1 기반·Cloud Library CB1[E-15/S-5]·RT-BNP V1·4-4 MLOps 본대 — SPEC↔PART2 충돌 해소) ⑤STEP7 V1 라벨↔PART2 V2/V3 배치 reconcile 방침 ⑥READINESS §8 문서수정 잔여 확인. ✔ (2026-06-11) D-1(5-3 C-04~C-08) RESOLVED·결정 D1~D19 기적용(17건 — D8·D12 결번) — 잔여·신규 미결정은 본 게이트에서 확정 후 R1 진행 | **Must** | 선행 | 결정 기록(decisions/ — 기존 17건 정본은 `_targets/DECISION_REGISTER.md`; ADR 소급 여부 본 게이트에서 결정) |
+| 3-0 | **미결정 게이트** | R1 착수 전 미결정·이연 항목 일괄 처리 게이트: D1 이연 대장(D1_RESULTS_INDEX §3, D-1~D-4) + 전수진단 결정 항목 확인. ✔ (2026-06-11) D-1(5-3 C-04~C-08) RESOLVED·결정 D1~D19 기적용 — 잔여·신규 미결정은 본 게이트에서 확정 후 R1 진행 | **Must** | 선행 | 결정 기록(decisions/) |
 | 3-1 | R1: 5-Gate 실행 순서 | PolicyGate→Approval→Cost→Evidence→SelfCheck | **Must** | ⓐ | runtime_decisions.md |
 | 3-2 | R1: 메모리 L0~L3 알고리즘 | 승격/강등 조건, 저장 방식 | **Must** | 순차 | |
 | 3-3 | R1: Multi-Brain Failover | GPT→Claude→Ollama 순서/조건 | **Must** | 순차 | |
@@ -345,8 +343,6 @@ R1 결정 시 SOT 대조 (A15 R06):
 > **적용 전략**: A7(스킬 점검), A20(계약 거버넌스), A8(스킬 의존), A15(리스크 R07~R09, R14)
 > **사용 자산**: STRATEGY_11 §3.4 "V0 코드 짤 때"
 
-> ※ **Phase 4 ↔ PART2 V0 매핑**: V0 구현 상세의 정본은 PART2 §2 V0-STEP-1~6(+§7.1 V0 GO/NO-GO 16항·각 STEP 단계검증 게이트·§1.3 공통 규칙 R1~R11)이다. 본 표 4-1~4-7은 트랙 요약이며 구현 상세 충돌 시 PART2가 우선한다 — Phase 6 표의 V1 매핑 노트와 함께 **"로드맵=마스터 + PART2=V0·V1 실행 상세 정본"의 2층 구조**를 구성한다.
-
 ### 스킬/Hook 사전 점검 (A7 — STRATEGY_04)
 
 ```
@@ -355,19 +351,16 @@ Phase 4 착수 전:
   Hook 6개 트리거 정상 확인
   settings.json 경로가 실제 파일과 일치 확인
   결과: PROGRESS.md에 "도구 점검 PASS" 기록
-  ※ Hook 분모는 점검 시점 .claude/settings.json 실측 기준 재확정(현행 16 wired —
-    STRATEGY_04 "6개"는 작성 시점 값). 코드 생산 Hook 신설(py 수정 시 ruff·config LOCK
-    검증, STRATEGY_10 §4 4-V4)은 2-4 산출물에 포함.
 ```
 
 | # | 작업 | 상세 | 우선순위 | 병렬 | 산출물 |
 |---|------|------|---------|------|--------|
 | 4-1 | B2c: 타입 동기화 | Pydantic→JSON Schema→serde→TS. **A20 규칙 적용**: Pydantic 정본, 자동 생성, 왕복 테스트 PASS | **Must** | 선행 | backend/vamos_core/schemas/ |
-| 4-2 | R2a: ORANGE CORE 스켈레톤 | V0 활성 5(I-1/2/3/5/19)+stub 3(I-8/9/20) — **PART2 V0-STEP-4·§7.1 #12 정본**(전 25 파일 선생성 여부는 3-0 확정; 모듈 카탈로그는 I-1~I-25, D9) + 5-Phase Pipeline + Gate 3종(Policy/Cost/Approval — 5-Gate 완성은 V1) + **Defense Layer 3계층(A21)** + **reasoning_trace(A22)** + **confidence_score(A25)** | **Must** | ⓐ | backend/vamos_core/orange_core/ |
+| 4-2 | R2a: ORANGE CORE 스켈레톤 | I-1~I-25 + 5-Phase Pipeline + 5-Gate + **Defense Layer 3계층(A21)** + **reasoning_trace(A22)** + **confidence_score(A25)** | **Must** | ⓐ | backend/vamos_core/orange_core/ |
 | 4-3 | R2c: 프론트엔드 스켈레톤 | Tauri 앱 셸 + React UI + IPC + **"왜?" 버튼(A22)** + **신뢰도 표시(A25)** + **면책 조항(A16)** | Should | ⓑ | src/ + src-tauri/ |
 | 4-4 | R2a: Registry 정의 | EventType/Failure/Fallback Registry | **Must** | 순차 | |
 | 4-5 | R2a: config.v1.toml | LOCK 값 포함. **confidence 임계값 3개(A25)** + **cost_monthly_limit(A21 Layer1)** | **Must** | 순차 | |
-| 4-6 | R2b: BLUE NODE 스켈레톤 | 디렉토리 스캐폴딩만(PHASE_B2 — PART2 V0 스코프 E-Series 0; 노드 구현 E-1~E-6은 V1-Phase 3, 3노드 명칭 Dev/Research/Productivity는 D2.0-03) | Should | 순차 | backend/vamos_core/blue_nodes/ |
+| 4-6 | R2b: BLUE NODE 스켈레톤 | Dev/Research/Productivity 3개 | **Must** | 순차 | backend/vamos_core/blue_nodes/ |
 | 4-7 | X2: 횡단 실행 | 보안 스캔 + 테스트 작성 + 커밋 린트 | Should | ⓒ | 리포트 |
 
 ```
@@ -402,13 +395,13 @@ D2 상시 감시:
 > ※ 본 표의 V0-STEP-1~5는 A9 MoSCoW 중간체크포인트(자체 번호)로, PART2 정본의 V0-STEP 번호(STEP-3=IPC/JSON-RPC, STEP-4=ORANGE CORE 5-Phase, STEP-5=저장소+로깅)와는 별개 체계다.
 
 ```
-V0-STEP Must 5개 + Registry·E2E 기본 흐름 2개 + 하네스 게이트(ruff·vamos_lint·pytest·CI) 4개 — 정본 STRATEGY_02 "V0 체크리스트 16항목"(표 L71~96) 中 Must 라벨 실측 11개(舊요약문 "10"은 표 라벨과 불일치 — 분모 11로 확정, STRATEGY_02 요약 동기 정정 완료)
-Must 11개 전부 PASS → Phase 5 진입 가능
+V0-STEP Must 5개 + 하네스 게이트(ruff·vamos_lint·pytest·CI) — 정본 STRATEGY_02 §L92 "V0 체크리스트 16항목" 中 Must 10개에 해당
+Must 10개 전부 PASS → Phase 5 진입 가능
 Should 미통과 → V1에서 보완 (A9)
 ```
 
 **Phase 4 검증 체크리스트 (4-V):**
-- □ Must 11개 전부 통과 (STRATEGY_02 표 기준 — 위 분모 확정 참조)
+- □ Must 10개 전부 통과
 - □ B2c 타입 동기화: Python↔Rust↔TS 일치 + 왕복 PASS (A20)
 - □ 하네스 자동 실행: 매 커밋 ruff+vamos_lint+pytest 확인
 - □ 다층 방어 구현: config LOCK(Defense Layer1) + 5-Gate(Defense Layer2) + NEVER_AUTO(Defense Layer3) (A21)
@@ -435,7 +428,7 @@ Should 미통과 → V1에서 보완 (A9)
 |---|------|------|---------|------|--------|
 | 5-1 | B3: Eval 파이프라인 | ragas+deepeval+promptfoo+minicheck | Should | ⓐ | eval_results.json |
 | 5-2 | B3: QoD 측정 | 5요소 가중합 | Should | 순차 | QoD 점수 |
-| 5-3 | D3: 모듈 수 대조 | 모듈 카탈로그 25종(D9) 정의 ↔ 코드 구조 정합 — V0 실파일 분모는 PART2 §7.1 #12(활성 5+stub 3; 전 25 파일 선생성 채택 시 3-0 확정값) | **Must** | ⓑ | alignment_report.json |
+| 5-3 | D3: 모듈 수 대조 | SOT 25개 vs 코드 | **Must** | ⓑ | alignment_report.json |
 | 5-4 | D3: 스키마 필드 대조 | D2.1 vs 실제 Pydantic + confidence_score(A25) 포함 확인 | **Must** | 순차 | |
 | 5-5 | D3: Registry 대조 | EventType/Failure/Fallback vs 코드 | **Must** | 순차 | |
 | 5-6 | D3: LOCK 값 대조 | config.v1.toml vs SOT LOCK + confidence 임계값(A25) | **Must** | 순차 | |
@@ -500,14 +493,14 @@ config: 기존 키 유지 + 새 키에 기본값 필수
 |---|------|------|---------|
 | 6-1 | D1' 재검증 | V0 D3 결과 + COND 106개 추가 | **Must** |
 | 6-2 | B1' 환경 확장 | vamos_lint Layer 2 (187개 네이밍) | **Must** |
-| 6-3 | R2a': CORE 활성화 | CORE 실제 구현 — V1 활성 분모 = **PART2 §1.1 기준 32**(I17+E6+S1+A2+B1+C3+D2; V1-Phase 1은 I-모듈 17 우선. STRATEGY_08 표기 26은 구집계 — 충돌 시 PART2 우선, 최종 확정 3-0) | **Must** |
+| 6-3 | R2a': CORE 활성화 | 26개 CORE 실제 구현 | **Must** |
 | 6-4 | R2b': 에이전트+RAG | LangGraph 3개 + BGE-M3→Chroma | **Must** |
 | 6-5 | R2c': E2E UI | 입력→응답 + reasoning_trace(A22) + confidence(A25) 표시 | Should |
 | 6-6 | R3: 운영 시작 | SQLite 모니터링 + 비용 추적(₩40K/월) + Alert | Should |
 | 6-7 | B3': Eval | QoD≥0.70 + V1 벤치마크 4개 | **Must** |
 | 6-8 | D3': API 정합 | 88개 API 계약 vs 코드 | **Must** |
 | 6-8a | **배포 검증 (A24)** | /health + config LOCK 런타임 대조 + 핵심 E2E 1개 | **Must** |
-| 6-9 | **V1 GO/NO-GO** | PART2 §7.2 22항목(=READINESS V1 21건 + MCP Bridge/Server/Client 개별 검증 1, FIX-11) + PART1 B.2(12건) | **Must** |
+| 6-9 | **V1 GO/NO-GO** | READINESS V1 21건 + PART1 B.2(12건) | **Must** |
 
 > ※ **Phase 6 ↔ PART2 V1-Phase 매핑**: V1 구현 순서의 정본은 PART2의 V1-Phase 1~6(Week 1~16)이다. 본 표에 직접 행이 없는 **AI Investing MVP·MCP(PART2 §6.6 서버/클라이언트 7개)·Circuit Breaker**는 PART2 **V1-Phase 6**(AI Investing MVP + MCP — Phase 4-5와 병렬, Week 13-16; Circuit Breaker 자체 구현은 V1-Phase 3 Workflow+Agent)에 배정되어 있다 — V1 착수 시 PART2 기준으로 스코프에 포함한다.
 
@@ -617,9 +610,7 @@ Phase 3                Phase 4·5          Phase 6      ┃
 | LOCK Registry | `VAMOS HOME\00_HUB\LOCK-DECISION-REGISTRY.md` | LOCK 469건 |
 | 세션 실행 프롬프트 | `VAMOS Engineering\ROADMAP_SESSION_EXECUTION_PROMPTS.md` | Phase별 세션 실행 프롬프트 |
 | D1 결과 인덱스 | `04. 구현단계\v13_results\phase0\D1_RESULTS_INDEX.md` | D1 검증 산출물 인덱스 + 이연 대장(D-1~D-4) |
-| 결정 대장 | `_targets\DECISION_REGISTER.md` | 확정 결정 17건(D1~D7·D9~D11·D13~D19 — D8·D12 결번), 3-0 게이트 입력 |
-| 정본화 검증 보고서 | `_targets\ROADMAP_정본화_검증보고서_2026-06-11.md` | 본 로드맵 전수 검증 + PART2 매핑표 + 수정 적용 근거 |
 
 > ※ **문서 위상 선언 — `docs\sot 3` (Living System Graph) [D15, 2026-06-11]**: `docs\sot 3\LIVING-SYSTEM-GRAPH\00~12`는 **DRAFT 제안 계층**이며 정본(SOT/SOT 2)이 아니다. 본 로드맵 Phase 0~6 및 참조 문서 맵에 미등재이고, 자체 GO 조건인 DEC-018 승인도 미수행 상태다. 알려진 정본 충돌(신규 이벤트 78개 ↔ 6-12 LOCK-EL-02 134항목·LOCK-EL-09 네임스페이스 8종 / DEC-018 ID ↔ 정본 DEC-018 백테스트 엔진 선택[D2.0-05·D2.1-D7])은 **채택 결정 전까지 효력 없음 — 정본은 6-12 AUTHORITY_CHAIN**이다. 채택하려면 LOCK_CHANGE_NEEDED 게이트 + DEC 재번호가 선행되어야 한다.
 
-> ※ **스코프 선언 — V2/V3·한국어 LLM [D11 연계 — 오류리스트 §D 원번호 D12, DECISION_REGISTER에는 D11에 병합·D12 결번, 2026-06-11]**: V2/V3 GO 조건(25건)과 한국어 LLM 도입은 본 로드맵(Phase 0~6 = V0·V1)의 범위 밖이며, **차기 로드맵으로 명시 이연**한다.
+> ※ **스코프 선언 — V2/V3·한국어 LLM [D12, 2026-06-11]**: V2/V3 GO 조건(25건)과 한국어 LLM 도입은 본 로드맵(Phase 0~6 = V0·V1)의 범위 밖이며, **차기 로드맵으로 명시 이연**한다.
