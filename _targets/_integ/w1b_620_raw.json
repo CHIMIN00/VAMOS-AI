@@ -1,0 +1,1053 @@
+{
+  "summary": "Re-derive subjective items for the 12 domains that failed on session limit",
+  "agentCount": 12,
+  "logs": [
+    "배치 1/2: 0-0_Governance-Rules-Meta, 2-1_Blue-Node-Architecture, 3-9_Business-Model-Strategy, 5-1_Benchmark-Evaluation, 5-3_v12-Additions-Detail, 5-4_v23-Extension-Items",
+    "배치 2/2: 6-6_Self-Evolution-System, 6-8_Cloud-Library, 6-10_EXP-Modules-Detail, 6-11_Hologram-Main-LLM, 6-12_Event-Logging, 6-13_Operations",
+    "재실행 완료: 12/12 도메인, 항목 83 (목표 82), CHANGE 5"
+  ],
+  "result": {
+    "domains": [
+      {
+        "domain": "0-0_Governance-Rules-Meta",
+        "count_target": 7,
+        "count_found": 7,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\03_phase-checklists\\S8-4_QC_RESULT.md",
+            "line": "492",
+            "source_ids": [
+              "0-0_Governance-Rules-Meta-T8-034"
+            ],
+            "choice": "Post-Review §13에서 COMPLETENESS_MATRIX 3번째 차원 0.0%를 차원 명칭·사유 설명 없이 '✅ 확인'으로 수용하는 QC 보고 granularity 선택.",
+            "options": "(a) 현행 유지 — 0.0%는 해당 단계 미적용 차원으로 수용, 설명 생략 / (b) 3축 명칭과 0.0% 사유 주석 추가 / (c) 미설명 0값을 검증 FAIL로 처리",
+            "recommendation": "KEEP — COMPLETENESS_MATRIX 3축의 정의를 강제하는 정본(RULE 1.3/PLAN 3.0/DESIGN LOCK)이 부재하므로 검증 가능한 정본 위반이 없고, 0.0%를 어느 수준까지 해설할지는 QC 작성자의 보고 설계 선택이다(주석 보강은 권고 수준).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "164 (L3 pipeline_stages), 182 (L21 9-State), 89 (Glossary S0~S8)",
+            "source_ids": [
+              "0-0_Governance-Rules-Meta-T8-058"
+            ],
+            "choice": "5단계 논리 파이프라인(intake→plan→execute→verify→deliver, LOCK L3)과 9-State 상태머신(S0~S8, LOCK L21)을 명시적 매핑 없이 이중 상태 모델로 공존시키는 아키텍처 선택.",
+            "options": "(a) 이중 모델 유지 — L3은 논리 단계, L21은 실행 상태머신으로 추상화 수준 분리 / (b) 단일 모델로 통합 / (c) 5단계↔9-State 매핑 표를 본문에 추가",
+            "recommendation": "KEEP — 두 모델 모두 DESIGN LOCK급 정본(L3=PHASE_B4 §3.1, L21=pipeline.py)으로 동급이며 상호 모순 값이 아니라 추상화 수준이 다른 공존 설계다. 정본 우선순위상 어느 쪽도 다른 쪽을 무효화하지 않으므로 현행 유지(매핑 표 추가는 개선 권고일 뿐 결함 아님).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "386",
+            "source_ids": [
+              "GOV-008"
+            ],
+            "choice": "보안 검토 기준의 PII 마스킹을 precision/recall/FN 허용치 분해 없이 '주민번호/전화번호/이메일/카드번호 탐지율 99%+' 단일 지표로 정의하는 스펙 granularity 선택.",
+            "options": "(a) 99%+ 단일 임계 유지 — 세부 메트릭·테스트셋·실패 정책은 6-2 Security 구현 레벨에 위임 / (b) recall/precision/FN 허용치/테스트셋/실패 시 deny·quarantine 정책으로 분해 정의",
+            "recommendation": "KEEP — 99%+는 검증 가능한 정본 위반이 없는 임계값 설계 선택이며, 거버넌스(0-0) 문서는 상위 기준만 LOCK하고 메트릭 분해는 6-2 도메인 구현 명세에 위임하는 계층 구조가 정본 우선순위(RULE>PLAN>LOCK>본문)와 정합한다.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "115 (R4), 133 (§2.2 #4)",
+            "source_ids": [
+              "GOV-009"
+            ],
+            "choice": "R4 no-delete를 예외 없는 절대 규칙으로 두고 삭제 필요 시 '[DEPRECATE] + 대체 경로' 단일 경로만 허용하는 거버넌스 정책 선택(SECURITY/SECRET 사유 hard delete 예외 절차 미정의).",
+            "options": "(a) 무예외 no-delete 유지 — AI 임의 삭제로 인한 자산 소실 방지가 최우선 / (b) SECURITY/SECRET/LEGAL 사유 승인 기반 hard delete 예외 Gate + 감사 로그 추가",
+            "recommendation": "KEEP — R4는 Part2 §1.3 원문에서 직수입된 최상위 정본(RULE 1.3급) 규칙으로, 무예외 no-delete 자체가 의도된 설계다. 예외 추가는 정본 변경(R-T0-1 전 도메인 동기화) 사안이지 결함 교정이 아니며, 비밀정보 파일은 [DEPRECATE]+마스킹으로 처리 가능해 정본 모순이 없다.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\PROMPT_INTEGRITY_REPORT.md",
+            "line": "120-138 (PI-1~PI-4), 156-160 (결론 PASS)",
+            "source_ids": [
+              "GOV-010"
+            ],
+            "choice": "프롬프트 정합성 게이트에서 ERROR/MINOR 2단 심각도를 두고, 라인범위·SOT출처 헤더 미명시 4건(PI-1~PI-4)을 '산출물 영향 0건' 근거로 MINOR=비차단 PASS 처리하는 QC 게이트 정책 선택.",
+            "options": "(a) 현행 유지 — 산출물 영향 0건이면 MINOR는 권고로만 이월(Phase 8 참고 전달) / (b) MINOR도 정확한 Part2 라인 범위·SOT 경로 보완 후에만 PASS / (c) 영향 0건 판정의 근거 파일/라인 추가",
+            "recommendation": "KEEP — 어느 정본도 'MINOR 미명시 시 차단'을 강제하지 않으며, 각 MINOR에 보완 경로(INTEGRATION_PLAN §3 대조 가능)와 산출물 정확성 확인이 기재되어 있어 게이트 심각도 체계는 검증 프로세스 설계자의 합리적 선택이다.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "171-173 (LOCK L10~L12), 423 (§3.6.5 #8), 92 (P0=긴급 정의)",
+            "source_ids": [
+              "GOV-011"
+            ],
+            "choice": "self_check 임계값을 P0≥70 < P1≥75 < P2≥80으로 — 즉 긴급도가 높을수록 낮은 품질 임계를 부여(속도 우선)하는 임계값 설계 선택.",
+            "options": "(a) 현행 유지 — P0=긴급(L92 정의)이므로 낮은 임계로 신속 통과, 위험은 NEVER_AUTO(L23 P1+ 자동승인 금지) 등 별도 게이트가 보완 / (b) P0/P1/P2를 위험도로 재정의하고 P0 임계를 최고로 역전",
+            "recommendation": "KEEP — L10~L12는 PHASE_B4 §3.8a 출처의 DESIGN LOCK 정본이고, 규칙서 L92가 P0~P3을 '우선순위(P0=긴급~P3=낮음)'로 명시해 위험도 해석 여지가 정본상 없다. 긴급 작업의 낮은 self-check 임계는 승인 게이트와 분업하는 일관된 설계로 정본 모순 없음(원판정 GPT 측도 is_confident=false).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\0-0_Governance-Rules-Meta\\GOVERNANCE_RULES_META_규칙서.md",
+            "line": "90, 181 (LOCK L20), 417 (§3.6.5 #2); GLOSSARY_CROSS_DOMAIN.md:156-157",
+            "source_ids": [
+              "GOV-012"
+            ],
+            "choice": "전역 VAMOS-5-Gate 순서를 Policy→Approval→Cost→Evidence→SelfCheck(Approval이 Evidence 선행)로 하고, SDAR-Gate는 PolicyGate→EvidenceGate→CostGate→ApprovalGate→SelfCheckGate 별도 순서로 분리 운영하는 게이트 순서 아키텍처 선택.",
+            "options": "(a) 두 체계 별도 유지 — GLOSSARY §13이 접두사 구분 규칙('5-Gate 단독=VAMOS 정본, SDAR/CL은 접두사 필수')으로 공존 등재 / (b) Evidence 선행으로 전역 순서 변경 통일 / (c) EvidenceGate 의미(승인 전 근거검증 vs 승인 후 증빙기록) 주석 명시",
+            "recommendation": "KEEP — L20 LOCK(pipeline.py)이 VAMOS-5-Gate 순서의 DESIGN LOCK 정본이고, GLOSSARY §13(Phase 11 S11-6 CM-1)이 SDAR-Gate를 용도 상이(수리 안전성 평가 전용)한 별도 체계로 이미 정본 등재해 직접 충돌이 없다. 전역 게이트에서 Approval 선행은 사용자 승인 후 비용·근거 검증을 수행하는 설계자의 순서 선택이며 정본 모순 미발견(원판정 GPT 측도 is_confident=false).",
+            "action": "KEEP"
+          }
+        ],
+        "notes": "앵커 7건과 정확히 일치(짜맞춤 없이 자연 도출). [제외 내역] (1) mf_in 객관결함 10건과 동일/중복: GOV-001=i0(V0 비용), T6-053=i1(자율도 오프셋), T6-050·GOV-002=i2(§2.9 범위), T5-051=i3(3-10 명칭), GOV-003=i4(R1~R9 재사용), GOV-006=i5(DEFINED-HERE 40건), GOV-007=i6(DH-SDAR-T1/DH-CL-D1), T8-059·GOV-004=i7(DEPENDENCY_GRAPH §5.2 vs §7), GOV-005=i8(34/35/36 도메인 수), T8-035=i9(R-63-7 off-by-one). (2) verify=refuted 오탐 5건: T8-001, T8-011, T8-012, T6-036(RAGAS 0.80/0.85), T8-081. (3) 단순 표기 1건: T5-057 'L2(COPILOT)' vs 'L2_COPILOT' underscore 유무(규칙서 L26/L71 실측 — 표기 형식 분기일 뿐 값 동일). [기해소 관찰 — 객관분이라 등재 대상 아님] 세션5(2026-06-11) 교정이 디스크에 기반영됨을 실측: 규칙서 L26 'V0=L0(MANUAL)... (정본: GLOSSARY §14)' 자율도 교정, L284/L295 §3.2 #3·#14 'V0 실제 지출 ₩0 — 로컬 전용, §1.5 정본' 주석, L246 '3-10 Agent-Protocol' 명칭 교정, L378/L389 비용 4단계 임계 6-13 LOCK-OP-07 정본 주석. 단 §2.9 헤더 L229 '20개 도메인(1-1~6-13)' vs 테이블 5-4 종료(Tier6 부재)와 §1.5 L71 'L1 (수동)'·§2.5.1 L162 autonomy_level \"L1\"(V0)은 미교정 잔존 — 모두 mf_in 객관분(i2, i1)이므로 본 출력 범위 외, 참고로만 기록. [실측 요약] 주관 7건 전부 대상 파일 file:line 디스크 확인 완료, 7건 모두 정본 모순 미발견으로 KEEP(CHANGE 0건, edit 불요). T8-034의 COMPLETENESS_MATRIX는 도메인 전체 grep에서 S8-4 L492 단일 출현으로 3축 정의 정본 부재 확인."
+      },
+      {
+        "domain": "2-1_Blue-Node-Architecture",
+        "count_target": 8,
+        "count_found": 8,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\01_permission-matrix\\integration_test_permission.md",
+            "line": "319",
+            "source_ids": [
+              "2-1_Blue-Node-Architecture-T6-001"
+            ],
+            "choice": "IT-PM-13(MCP tier read-only → PermissionLevel.READ) 테스트 행의 LOCK 인용 범위를 BN-02(레벨 의미)+BN-11(MCP 전송 경로 맥락)로 잡은 인용 granularity 선택 — tier→Level 매핑 자체를 고정하는 LOCK은 존재하지 않음.",
+            "options": "(a) 현행 BN-02+BN-11 병기 유지 (b) BN-11 제거하고 07_mcp-bridge §6.2 본문 인용으로 교체 (c) tier→Level 매핑 전용 LOCK 신설",
+            "recommendation": "KEEP 현행 — 매핑 정본은 LOCK이 아닌 07 §6.2 본문이며(정본 우선순위상 본문 수준), 시나리오가 MCP 외부 클라이언트 경로(LOCK-BN-11 streamable_http 전송)를 실제로 경유하므로 BN-11 병기는 맥락 인용으로 무모순. tier 라벨 명칭 문제는 mf_in i5가 객관결함으로 별도 처리함.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\04_node-lifecycle\\integration_test_lifecycle.md",
+            "line": "327-337 (시나리오 E), 394 (IT-LC-08)",
+            "source_ids": [
+              "2-1_Blue-Node-Architecture-T8-005"
+            ],
+            "choice": "도메인 우선순위 선점 알고리즘(PriorityComparator/priority_evict)을 04 §11 정본화 이전에 '합리적 추론' 기반으로 선행 테스트 명세하는 방법론 선택.",
+            "options": "(a) 추론 기반 테스트 유지 + Phase 3 정본화 시 동기화 (b) 정본화 전까지 시나리오 E/IT-LC-08 제거 (c) 04 §11에 즉시 알고리즘 정본화",
+            "recommendation": "KEEP 현행 — L337 'MODULE-ARCH 경계' 노트가 비정본 상태(LOCK-BN-12/15 임계값 기반 합리적 추론, Phase 3 baseline 확정 시 04 §11 정본화 예정)를 명시적으로 선언하고 있고, P0>P1>P2 선점 순서는 LOCK-BN-05 우선순위 위계와 정합. 검증 가능한 정본 위반 없음.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\01_permission-matrix\\integration_test_permission.md",
+            "line": "339 (-0.1), 341 (-0.15), 382 (0.0); sibling 02_core-node-interface/integration_test_core_bn.md:345/375 (-0.2/-0.3/-1.0)",
+            "source_ids": [
+              "2-1_Blue-Node-Architecture-T8-008"
+            ],
+            "choice": "confidence_penalty 크기 값 선택 — Permission층 -0.1(CAP_EXCEEDED 관측)/-0.15(강제 우회), Interface층 -0.2(TRACE_ID_MISMATCH)/-0.3(필드 누락)/-1.0(Node-to-Node 직접통신, 재시도 금지). JSON 샘플 0.0은 무오류 성공 케이스.",
+            "options": "(a) 현행 계층별·오류유형별 독립 값 유지 (b) 전 도메인 단일 penalty 스케일 레지스트리 통일 (c) penalty 제도 폐지",
+            "recommendation": "KEEP 현행 — penalty 값을 고정하는 LOCK/SOT 정본이 없고 L341이 '단위 없음, 상대 점수'로 성격을 명시. 위반 심각도에 따른 차등(-0.1 관측성 → -1.0 LOCK-BN-14 위반)은 합리적 설계 재량이며 0.0 샘플은 성공 경로라 모순 아님. Phase 3에서 스케일 근거 주석 추가는 선택적 개선.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\01_permission-matrix\\integration_test_permission.md",
+            "line": "316 (IT-PM-10), 292 (W-04-b), 296 (검증 포인트)",
+            "source_ids": [
+              "2-1_Blue-Node-Architecture-T8-012"
+            ],
+            "choice": "Permission 통합테스트 한 시나리오 안에서 계층 경계 횡단 기대값(Permission allowed=true + 상위 Gate CAP_EXCEEDED 거부)을 함께 검증하는 테스트 설계 선택.",
+            "options": "(a) 현행 — 통합테스트가 Permission/Lifecycle 경계 협력을 1시나리오로 검증 (b) CAP_EXCEEDED 기대값을 04 lifecycle 테스트로 이관하고 IT-PM-10은 allowed=true까지만 검증",
+            "recommendation": "KEEP 현행 — W-04-b(L292)와 검증 포인트(L296 'Permission 층은 Cap 책임이 아니다 — LOCK-BN-12/15는 Lifecycle/Cap 층 책임')가 계층 책임을 명시한 상태에서 경계 협력을 검증하는 것은 통합테스트 고유 목적이며, §8.1 L339가 CAP_EXCEEDED를 '신설 — W-04'로 출처 표기해 층 책임 혼동 없음. 정본 위반 아님.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\BLUE_NODE_ARCHITECTURE_상세명세.md",
+            "line": "114-150 (§2.1 VamosMessage)",
+            "source_ids": [
+              "BN-AUD-003"
+            ],
+            "choice": "상세명세 §2.1의 비-LOCK 필드(auth_token/permission_level/signature/correlation_id/version/heartbeat 등) 처분 — 종합계획서 L420이 '삭제 또는 MODULE-ARCH 확장 필드로 재분류' 양자택일을 설계자 선택으로 열어둠. 단 현재 디스크의 §2.1 스키마(message_id/destination/payload 구조)는 LOCK-BN-16(id, type, source, target, content, metadata 필수)과 모순 상태로 잔존하며 §1.1과 달리 정본위임 주석이 없음.",
+            "options": "(a) §2.1 전면 재작성(K-049 기준, PLAN 절차 1) (b) §1.1 세션5 교정 선례에 따라 정본위임 주석 추가 + 잔여 필드 MODULE-ARCH 확장 초안으로 격하 (c) §2.1 삭제",
+            "recommendation": "PLAN 3.0(종합계획서 L415-421 선행 교정) + DESIGN LOCK(LOCK-BN-16) 우선 — 02_core-node-interface/_index.md §1이 LOCK 구현 정본(L77-84)이고 07 L299가 CF-007 해소를 기록하므로, 최소 침습인 (b) 정본위임 주석 방식 채택(§1.1 L35 기교정 선례와 동일 패턴).",
+            "action": "CHANGE",
+            "edit": {
+              "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\BLUE_NODE_ARCHITECTURE_상세명세.md",
+              "old": "### 2.1 VamosMessage 표준 포맷",
+              "new": "### 2.1 VamosMessage 표준 포맷\n\n> **LOCK-BN-16 정본**: VamosMessage 구조는 02_core-node-interface/_index.md §1 (D2.0-03 K-049 — id, type, source, target, content, metadata 6개 top-level 필수) 정본을 따른다. 아래 스키마는 MODULE-ARCH 확장 초안으로 정본과 충돌 시 정본이 우선하며, auth_token/permission_level/signature 는 메시지 필드가 아닌 AuthGateway/Policy/Gate 계층 소관이다 (종합계획서 '선행 교정: 상세명세 §2 ↔ SoT 불일치 해소' 참조)."
+            }
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\BLUE_NODE_ARCHITECTURE_상세명세.md",
+            "line": "152-213+ (§2.2 NodeRequestEnvelope, §2.3 NodeResponseEnvelope)",
+            "source_ids": [
+              "BN-AUD-004"
+            ],
+            "choice": "상세명세 §2.2~2.3의 비-LOCK 필드(conversation_turn/task_type/task_params/relevant_memory/template_set_id/response_id/confidence/memory_updates 등) 처분 — 종합계획서 L426/L434가 '삭제 또는 constraints 내부/MODULE-ARCH 확장 재분류' 선택지를 열어둠. 단 현재 디스크의 §2.2/2.3은 LOCK-BN-03(7필수)/LOCK-BN-04(7필수, status 2종 success|fail)와 모순 상태로 잔존(status 4종 포함)하며 정본위임 주석 없음.",
+            "options": "(a) §2.2~2.3 전면 재작성(AC-D3-004/005 기준, PLAN 절차 2~3) (b) 정본위임 주석 추가 + 잔여 필드 constraints 내부/MODULE-ARCH 확장 격하 (c) §2.2~2.3 삭제",
+            "recommendation": "PLAN 3.0(종합계획서 L422-434 선행 교정) + DESIGN LOCK(LOCK-BN-03/04) 우선 — 02_core-node-interface/_index.md §2~§3이 7필수+5선택 구현 정본이고 07 L299가 '상세명세 L2 필드는 02에서 삭제됨(intent_summary 통합/constraints 재분류)'을 기록하므로, 최소 침습인 (b) 정본위임 주석 방식 채택(§1.1 기교정 선례 동일 패턴).",
+            "action": "CHANGE",
+            "edit": {
+              "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\BLUE_NODE_ARCHITECTURE_상세명세.md",
+              "old": "### 2.2 NodeRequestEnvelope",
+              "new": "### 2.2 NodeRequestEnvelope\n\n> **LOCK-BN-03/04 정본**: §2.2~§2.3 봉투 구조는 02_core-node-interface/_index.md §2~§3 정본을 따른다 (LOCK-BN-03 7필수: request_id, project_id, session_id, node_id, intent_summary, constraints, trace_id / LOCK-BN-04 7필수: trace_id, node_id, domain, inputs.summary, outputs.result, outputs.evidence_refs, status[success|fail]). 아래 스키마의 비-LOCK 필드는 MODULE-ARCH 확장 또는 constraints 내부 재분류 대상이며 정본과 충돌 시 정본이 우선한다 (종합계획서 '선행 교정: 상세명세 §2 ↔ SoT 불일치 해소' 참조)."
+            }
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\05_memory-sharing\\_index.md",
+            "line": "513 (CAS conflict → BN 재시도), 601-602 (재시도 책임/LWW 모드)",
+            "source_ids": [
+              "BN-AUD-015"
+            ],
+            "choice": "CAS 충돌 재시도 책임을 MemoryBroker가 아닌 BN(클라이언트)에 위임하고 재시도 파라미터(max_attempts/backoff/jitter/idempotency key)를 미고정, expected_version 미명시 시 LWW 기본 — 동시성 제어 전략 선택.",
+            "options": "(a) 현행 — BN 재시도 책임 + LWW 기본(단일 라이터 권장) 유지, 파라미터는 Phase 3 구현 결정 (b) MemoryBroker 측 재시도 정책(max_attempts/backoff/idempotency) 정본 고정 (c) LWW 폐지, CAS 전면 강제",
+            "recommendation": "KEEP 현행 — L602가 'V1 단일 프로세스 가정 부합, D2.0-03 K-029 Line 904'를 SOT 근거로 명시한 의도적 위임이고, is_critical 경로는 LOCK-BN-10 Gate 승인으로 별도 보호(L517-519). 재시도 파라미터를 고정하는 정본이 없어 위반 없음. V2 멀티프로세스 전환 시 BN MemoryClient 표준 재시도 정책 정의를 Phase 3 이월 항목으로 권장.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\2-1_Blue-Node-Architecture\\07_mcp-bridge\\_index.md",
+            "line": "214-220 (MCPClient 모델), 471-476 (인증 6단계)",
+            "source_ids": [
+              "BN-AUD-016"
+            ],
+            "choice": "외부 MCP 클라이언트의 권한 scope 축을 allowed_node_ids + allowed_tool_patterns 2축으로 한정하고 project/session binding(allowed_project_ids)을 도입하지 않은 테넌시 경계 아키텍처 선택 — project_id/session_id는 Bridge 세션 컨텍스트에서 주입(L296-315).",
+            "options": "(a) 현행 — node/tool 2축 scope + Bridge 컨텍스트 주입 유지 (b) MCPClient에 allowed_project_ids 추가 + 인증 단계 4~6 사이 project/session scope 검증 신설",
+            "recommendation": "KEEP 현행 — VAMOS V1은 단일 사용자 로컬 시스템 전제로 교차 프로젝트 위협 모델이 약하고, AuthResult가 permission_level ≤ 4 상한(Level 5 금융 매핑 절대 금지, L226-232 LOCK 주석)과 단계 6 required_permission_level 검증으로 방어선을 보유. project binding을 요구하는 정본 부재(GPT 원판정도 is_confident=false). 멀티테넌트 노출 시점(V3 Realtime API 확장)에 (b) 검토를 권장.",
+            "action": "KEEP"
+          }
+        ],
+        "notes": "원판정 앵커 8건과 정확히 일치(짜맞춤 아님 — 자연 도출). 도출 과정: 전체 후보 = clc 21 + GPT 17(tight 10은 clc 부분집합, 신규 0). (1) mf_in 객관 16건과 동일/중복 제외: T8-088/T8-089/T6-090/T6-100/T5-101/T8-102/T8-103/T8-104/T8-006(clc) + BN-AUD-001/002/005/006/007/008/009/010/011/012/013/014/017(GPT). (2) verify=refuted 6건 오탐 제외: T8-017/T8-022/T8-055/T8-057/T8-080/T8-081 — T8-022는 AUTHORITY_CHAIN L72 LOCK-BN-19가 '일반 10분 / P2(HITL) 5분'을 직접 정의함을 실측해 refuted 타당성 재확증. (3) verify=uncertain 2건(T6-039/T6-040) 제외: SOT(D2.0-03/D2.0-01) 인용 충실도 주장으로 설계 선택이 아니며 도메인 외부 문서 검증 필요 — 주관 분류 부적합. 잔여 8건 전수 디스크 실측 후 등재. 기해소 관찰: 상세명세 §1.1(L26-35)은 세션5에서 LOCK-BN-02 기준으로 이미 물리 교정 + 정본위임 주석(L35) 기적용 — mf_in i0 해소 확인. 반면 §2.1~2.3은 미교정 잔존이어서 BN-AUD-003/004만 CHANGE(정본위임 주석 최소 edit, §1.1 선례 패턴) 제안 — 두 건의 '주관' 성격은 PLAN(종합계획서 L420/L426/L434)이 잔여 필드 처분을 '삭제 vs MODULE-ARCH 확장 재분류' 양자택일로 설계자에게 위임한 점이며, 02 _index 정본 존재 + 07 L299 CF-007 해소 기록으로 시스템 차원 정본 우선순위는 이미 확립됨. 줄번호 차이: 원 finding 대비 디스크 +1~2행 이동 관찰(T6-001 318→319, T8-012 315→316, T8-008 340→341, sibling 374→375) — 세션5 교정 삽입 영향으로 추정, 내용 동일 확인. 읽기 전용 준수 — 파일 수정 0건(CHANGE edit은 제안만 기록)."
+      },
+      {
+        "domain": "3-9_Business-Model-Strategy",
+        "count_target": 10,
+        "count_found": 10,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\04_financial-modeling\\financial_projection.md",
+            "line": "373 (원판정 시점 372; L411에도 동일 260개월 재인용)",
+            "choice": "순burn $770/mo 수준에서 Runway를 'Seed $200K / $770 ≈ 260개월 (초기 안전)'으로 그대로 제시할지, 표시 상한(예: 24+개월)으로 캡할지의 지표 표현 방식 선택",
+            "options": "(a) 산술 그대로 260개월 표기 + '초기 안전' 해석 주석 (현행) / (b) '24+개월(사실상 무제한)' 캡 표기 / (c) Net Burn 절대액만 표기하고 Runway 생략",
+            "recommendation": "KEEP 현행 (a) — 산술 자체는 정확하고 LOCK/STEP7-H 어디에도 Runway 표시 규약 정본이 없으며, L411 시나리오4가 세션5 교정으로 '비관 정상 운영 +$4,230/mo 흑자, 적자는 V2 초기 램프 한정' 맥락 주석을 이미 보강해 오독 위험이 해소됨",
+            "action": "KEEP",
+            "source_ids": [
+              "3-9_Business-Model-Strategy-T8-066"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\INDEX.md",
+            "line": "8 (cross_domain_deps `[]` 자기완결) vs 120-128 (§8 #14/#16/#17 RECHECK_FLAG) + AUTHORITY_CHAIN.md 103-110 (§7 교차 참조)",
+            "choice": "cross_domain_deps 메타필드를 'blocking dependency 한정([], Part2 ABSENT 자기완결)'으로 정의하고 비차단 교차참조(RECHECK_FLAG)는 §8 표로 분리 관리하는 의존성 표현 체계 선택",
+            "options": "(a) cross_domain_deps=[] 유지 + §8 RECHECK_FLAG 별도 표 (현행) / (b) cross_domain_deps에 #14/#16/#17 등재 / (c) 필드 정의 주석 추가",
+            "recommendation": "KEEP 현행 (a) — INDEX §8과 AUTHORITY §7/§8이 교차 LOCK 영향과 RECHECK_FLAG를 이미 완결 기술하므로 자동 그래프 누락 위험은 도메인 내부에서 상쇄되며, 메타필드 의미론은 RULE/PLAN 정본에 단일 정의가 없어 설계자 재량 범위",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-001"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\AUTHORITY_CHAIN.md",
+            "line": "5 (Status: APPROVED Phase 2 완료) vs 6/8 (버전 v1.2·최종 갱신 2026-06-01 Phase 4) + INDEX.md 3 (Phase 4 ✅ COMPLETE)",
+            "choice": "AUTHORITY_CHAIN의 Status 필드를 '승인 상태(APPROVED, Phase 2 마감 앵커)'로 고정하고 Phase 진행은 버전/최종 갱신 라인 + §9 변경 이력 + INDEX 헤더로 추적하는 상태 표기 체계 선택",
+            "options": "(a) Status=APPROVED(Phase 2 앵커) 유지, phase는 버전 라인으로 추적 (현행) / (b) Status를 Phase 4 COMPLETE로 갱신 / (c) approval_status·phase_status 필드 분리",
+            "recommendation": "KEEP 현행 (a) — Phase 4 RECOVERY가 동일 헤더의 버전·최종 갱신 라인은 2026-06-01로 갱신하면서 Status는 의도적으로 보존했고(v1.2 변경 이력 기재), Phase 현황 정본은 INDEX L3이 담당하므로 모순이 아닌 역할 분담; 단일 정본 우선 원칙상 phase 상태 조회는 INDEX 기준",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-002"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\CONFLICT_LOG.md",
+            "line": "5-7 (v1.0·최종 갱신 2026-04-22) + 224 (v1.0 유지 선언) vs INDEX.md 35 (Phase 2~4 신규 0건)",
+            "choice": "CONFLICT_LOG 버전 인상을 '신규 CFL 등재 시에만' 수행하고, 신규 충돌 0건인 Phase 4 검증 결과는 INDEX §2/§7과 AUTHORITY v1.2에 기록하는 로그 버저닝 정책 선택",
+            "options": "(a) v1.0 유지 + 신규 0건은 타 거버넌스 문서에 기록 (현행) / (b) Phase 4 검증 행(신규 0·OPEN 0·날짜·범위)을 CONFLICT_LOG에 추가하고 v1.1 인상",
+            "recommendation": "KEEP 현행 (a) — L224에 'v1.0 유지(신규 CFL 등재 없음)' 정책이 명시 선언돼 있고 13건 전수 RESOLVED·신규 0건 사실은 INDEX L35/AUTHORITY 변경 이력으로 추적 가능하므로 정본 위반 없음; 추적성 강화용 Phase 4 행 추가는 선택적 개선 사항",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-003"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\CONFLICT_LOG.md",
+            "line": "14 (우선순위 체인 LOCK > STEP7-H > sot2 계획서 > 상세명세) vs 152-163 (CFL-010 계획서 §B 7티어 최종 정본 채택)",
+            "choice": "충돌 해결에서 '승인된 상위 통합 파생안(계획서 §B 7티어)이 원문 4티어들을 superset으로 대체'하는 예외를 허용하는 충돌 판정 메타규칙 선택",
+            "options": "(a) CFL-010 판정 유지(통합안이 양 정본의 superset이므로 최종 정본) (현행) / (b) STEP7-H 4티어(Free/Core/Pro/Team)로 환원 / (c) superset-예외 규칙을 우선순위 체인에 명문화 또는 CFL-010을 LOCK/Decision 승격",
+            "recommendation": "KEEP 현행 (a) — 7티어는 STEP7-H 티어 전부와 LOCK-BM-06/07/08 가격값을 보존한 채 확장한 superset이라 LOCK·STEP7-H 실질 위반이 없고, AUTHORITY §6에 이미 최종 정본으로 등재(C-7 해결)·상세명세 4티어 결함은 별도 객관건(T8-133)으로 기처리됨; 재현성 향상용 예외 규칙 명문화는 선택적",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-004"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\03_gtm-growth\\growth_strategy.md",
+            "line": "677-683 (기준 ACV $150K, L683 'ACV = 평균 80석 × $35/seat/mo × 12 + 부가 (추정)') + gtm_phases.md 641 (40계약 × ACV $150K)",
+            "choice": "Enterprise 평균 ACV $150K(좌석 $33.6K + 부가 ~$116K) 가정을 부가 항목 분해 없이 `(추정)` 표기 + 3시나리오 범위($90K~$200K)로 제시하는 재무 가정 수준 선택",
+            "options": "(a) ACV $150K (추정) + R-12-3 3시나리오 범위 병기 (현행) / (b) implementation fee/support/white-label/usage/SLA 항목별 단가 분해 / (c) ACV를 좌석 매출 기반 ~$40K로 하향 재계산",
+            "recommendation": "KEEP 현행 (a) — STEP7-H/LOCK 어디에도 ACV 정본값이 없고, LOCK-BM-08 정가($35/seat 최소 10석)는 L671에 verbatim 인용·재정의 0이며, R-12-4(출처·시점·추정 표기)와 R-12-3(3시나리오, 비관 $90K)을 준수한 사업 가정이므로 결함이 아닌 설계 선택; 부가 매출 분해는 V3 실집행 시점 보강 사항",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-009"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\05_kpi-dashboard\\kpi_definitions.md",
+            "line": "821-828 (§V3.7 V1/V2/V3 전수 '✅ 8 요소' 매트릭스) vs 24-59 (V1 MAU: 정의/측정 기준/목표 값/대시보드 스키마 4섹션 형식)",
+            "choice": "V1/V2 KPI를 V3식 8요소 단일 표로 재작성하지 않고, 기존 4섹션 형식에 8요소(이름·정의·수식·단위·소스·주기·목표·임계)가 분산 충족된 것으로 매핑 인정하는 문서 형식 선택",
+            "options": "(a) V1/V2 기존 형식 보존 + §V3.7 논리적 8요소 충족 매핑 (현행) / (b) V1/V2를 V3와 동일한 8필드 표로 재작성 / (c) '8 요소' 주장을 V3 한정으로 축소",
+            "recommendation": "KEEP 현행 (a) — §V3 헤더(L732)가 'V1+V2 영역 byte 무변경 prefix EXACT' append-only 규약을 명시하므로 V1 재작성(b)은 오히려 도메인 보존 규약 위반이며, V1 MAU에도 소스(L38)·주기(L36)·목표(L44-47)·임계(L57)가 실재해 8요소가 형식만 다르게 충족됨; 형식 통일성은 검증 가능한 정본 위반이 아닌 표현 선택",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-010"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\02_market-analysis\\personas.md",
+            "line": "7-8 (헤더 담당 항목 S7H-027~030/032 + C-5 'P1~P4 기준') + 16 (cross-ref P1~P4) vs 358-360 (§E.1.1 CFL-008 P1~P5 5종 정본 채택)",
+            "choice": "V1 헤더/cross-ref 블록을 V1 시점 그대로 동결(byte 보존)하고 P5 추가는 §E append 영역 + CONFLICT_LOG CFL-008로만 반영하는 append-only 문서 진화 방식 선택",
+            "options": "(a) V1 헤더 동결 + §E.1.1/CFL-008에서 P1~P5 정본 선언 (현행) / (b) 헤더 담당 항목·cross-ref를 P1~P5/S7H-027~031 기준으로 갱신",
+            "recommendation": "KEEP 현행 (a) — 도메인 전체가 'V1+V2 prefix byte EXACT' append-only 보존 규약(INDEX §9 v1.1, Phase 4 RECOVERY 검증 5/5)을 채택하고 있어 헤더 갱신(b)이 오히려 규약 모순이며, P5 정본 채택은 §E.1.1(L360)과 CONFLICT_LOG CFL-008(RESOLVED)에 추적 가능하게 명시돼 실질 오해 위험이 통제됨",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-011"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\AUTHORITY_CHAIN.md",
+            "line": "96 (Enterprise: SSO/SAML+감사+SLA 99.9%) + personas.md 398 (관리 기능: 권한+감사 로그+SSO) + risk_analysis.md 257-261 (STEP7-E 보안 체계 mitigation) + growth_strategy.md 668 (PoC: SSO/SAML+감사 로그+SLA 검증)",
+            "choice": "Enterprise 보안 요구(역할/권한 매트릭스, 감사 이벤트 taxonomy, tenant isolation, SAML/SCIM 경계, 보안 리뷰 Gate)의 상세 명세를 3-9 도메인 내부에 두지 않고 STEP7-E 보안 체계 등 타 도메인 소유로 위임하는 도메인 경계 설계 선택",
+            "options": "(a) 3-9는 가격·SLA 기준(LOCK-BM-05/08)만 소유, 보안 상세는 STEP7-E/보안 도메인 참조 (현행) / (b) 3-9 내 Enterprise 판매 Gate용 security contract(owner domain·통제·감사 이벤트 ID·tenant model·acceptance criteria) 신설",
+            "recommendation": "KEEP 현행 (a) — AUTHORITY §8 도메인 경계가 3-9 소유를 '가격 체계·비용 상한·SLA 기준'으로 한정하고 risk_analysis L257이 보안 아키텍처를 STEP7-E 정본으로 명시 위임하므로 도메인 내 부재는 결함이 아닌 경계 설계이며, GPT 원 finding도 is_confident:false로 확정 결함 단정을 유보함",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-013"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\3-9_Business-Model-Strategy\\03_gtm-growth\\gtm_phases.md",
+            "line": "609/615 (Y3 ARR ≥ $20M Scale 목표) + 621 (출처: 계획서 §7.6 P3-2 entry-gate forward-defined L1353 + S7H-037 정합) vs revenue_model.md 797-803 (V3 누적 ARR ~$15M, S7H-037 정합)",
+            "choice": "Y3 ARR을 단일 값으로 통합하지 않고 $15M(S7H-037 상위 집계 base)과 $20M(계획서 P3-2 entry-gate/스케일 stretch 목표) 이중 목표로 운용하는 목표 체계 선택",
+            "options": "(a) $15M=S7H-037/SOM base + $20M=계획서 §7.6 P3-2 gate/stretch 이중 운용 (현행) / (b) base/stretch/gate 라벨을 양 파일에 명시 분리 / (c) 단일 ARR LOCK으로 통합",
+            "recommendation": "KEEP 현행 (a) — 정본 우선순위상 STEP7-H S7H-037($15M~)이 base 정본, PLAN(종합계획서 §7.6 P3-2 entry-gate 'ARR ≥ $20M', forward-defined L1353)이 gate 정본으로 각각 출처가 살아 있고, gtm_phases L621이 $20M을 S7H-037 보수~낙관($3.6M~$75M) 범위 내 V3 목표로 포지셔닝하는 관계 설명을 이미 보유해 정본 상호 모순이 아님; ARR LOCK 신설(c)은 LOCK-BM 체계(비용·가격 보호 목적)와 성격이 달라 불필요",
+            "action": "KEEP",
+            "source_ids": [
+              "BM-AUD-014"
+            ]
+          }
+        ],
+        "notes": "재도출 결과 10/10 — 원판정 앵커와 정확히 일치(짜맞춤 아님: 제외 적용 후 잔여가 자연히 10건). [도출 절차] 고유 풀 29건(clc 22 + tight 17은 clc 진부분집합 + GPT 14) 중 (1) mf_in 객관확정 19건 매핑 제외: T8-004(i9)/020(i10)/021(i8)/022(i11)/026(i7)/030(i12)/031(i4)/065(i13)/068(i14)/072(i15)/132(i5)/133(i3), T6-043(i0)/067(i1)/078(i2), BM-AUD-005(i6)/006(i4 중복)/007(i16)/008(i17)/012(i18·BM-AUD-013과 별건); (2) verify:\"refuted\" 디스크 반박 오탐 7건 제외: T8-023/042/052/053/103/110/116. 잔여 10건(T8-066 + BM-AUD-001/002/003/004/009/010/011/013/014) 전건 디스크 실측 file:line 확인 완료. [기해소 관찰] 세션5(2026-06-11) 교정 흔적 확인: financial_projection.md L411 시나리오4가 T8-065(객관, mf_in i13) 교정본('Net Burn $770…비관 정상 운영 +$4,230/mo 흑자' 주석)으로 이미 갱신됨 — 객관분이므로 본 리스트 비등재이나, 이 교정이 T8-066(260개월 표기)의 오독 위험을 추가로 완화해 KEEP 근거 보강. T8-066의 원판정 line 372는 현재 디스크 L373으로 1행 이동(세션5 편집 영향). [판정] 10건 전건 KEEP, CHANGE 0 — LOCK-BM-01~10 재정의 0·STEP7-H 정본 모순 0 확인. 공통 설계 규약 2개가 다수 건의 KEEP 근거: (a) append-only 'V1+V2 prefix byte EXACT' 보존 규약(BM-AUD-010/011), (b) 거버넌스 메타 역할 분담(Status=승인상태, Phase=INDEX/버전 라인; BM-AUD-001/002/003). 경계 사례 투명성: BM-AUD-002/011은 '단순 표기(stale header)'로 볼 여지도 있으나, 도메인의 명시적 헤더 동결·append-only 규약 하에서는 의도된 설계 선택으로 판정(원판정 카운트 10과도 정합). 읽기 전용 준수 — 파일 수정 0건."
+      },
+      {
+        "domain": "5-1_Benchmark-Evaluation",
+        "count_target": 7,
+        "count_found": 9,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\01_standard-benchmarks\\coding_benchmarks.md",
+            "line": "94",
+            "choice": "pass@k 추정식이 수학적으로 정의되지 않는 k>n 경계에서 'IF k > n: RETURN 1.0 if c > 0 else 0.0' 낙관적 관례를 채택",
+            "options": "(a) 현행 낙관 관례 c>0→1.0 (b) n≥k assert로 에러 처리(OpenAI 원 구현 방식) (c) 복원추출 근사 1-(1-c/n)^k",
+            "recommendation": "KEEP — 정본(LOCK-BE-01~15, R-18-x)은 pass@k 경계 관례를 규정하지 않으며, 실행 파라미터 k_values [1,5,10]·seed=42 결정론(LOCK-BE-08) 하에서 k>n은 방어적 dead-branch. 본문 L95 정상 경로 식 1-product((n-c-i)/(n-i))는 표준식과 일치.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-010"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\03_domain-benchmarks\\vbs_core.md",
+            "line": "32, 505-513",
+            "choice": "S7G-061/062/063 목표값을 _index.md의 엄격한 값(S7G-063 ≥90%) 대신 종합계획서/V1 값(≥80%)으로 채택해 PASS/FAIL 표를 구성",
+            "options": "(a) V1/종합계획서 ≥80% 유지 (b) _index.md ≥90% 상향 (c) 단계적 상향(80→90)",
+            "recommendation": "KEEP — CONFLICT_LOG C-19/C-20(L53-54)이 OPEN→RESOLVED '일치 확인, V1 정본 값 유지'로 종결 → V1 vbs_core.md의 80% 채택이 정본 결정과 정합. L513이 _index.md 90% 기준을 투명하게 병기. 헤더 L32 CONFLICT_CANDIDATE 배너는 stale 표기이나 값 선택 자체는 무모순.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T6-072",
+              "BE-AUD-008"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\03_domain-benchmarks\\vbs_core.md",
+            "line": "486",
+            "choice": "S7G-063 Memory Recall 사실판정 judge로 외부 단일 모델 'openai:gpt-4-turbo'를 채택하고, 장애 대응은 예외처리표(L633)의 '3회 실행 majority vote' 일관성 정책만 둠(API 장애 fallback 체인 없음)",
+            "options": "(a) 현행 단일 외부 judge + majority vote (b) 로컬/대체 judge fallback 체인 추가 (c) 듀얼 judge 합의 방식",
+            "recommendation": "KEEP — 어떤 LOCK도 judge 모델·fallback을 규정하지 않는 설계 재량 영역. temperature 0 + seed 42로 재현성(R-18-1) 충족, 예외처리표가 일관성 저하 시나리오를 커버. LogicKor judge 명세 보강은 mf_in i=22 객관건(상세명세 A-4)으로 별도 트랙.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-073"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\05_test-items\\benchmark_scheduler.md",
+            "line": "40 (+promptfoo_integration.md:309)",
+            "choice": "전수 실행 시간 예산을 이원화: 월간 full_suite_vbs timeout_min 360 vs 야간 promptfoo full(GitHub Actions) timeout-minutes 180",
+            "options": "(a) 현행 이원 예산(월간 360/야간 180) (b) 단일 예산으로 통일 (c) 스코프별 산식(분/항목) 정의",
+            "recommendation": "KEEP — benchmark_scheduler §V3.1 L144가 'schedule 값 = LOCK 아님'(LOCK-BE-12는 주기 정책만 LOCK)을 명시. 두 실행은 스코프·주기가 다름(월간=VBS 포함 전체 suite, 야간=promptfoo_full+judge)이므로 360>180 배분은 무모순인 예산 설계 선택.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-096"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\05_test-items\\scheduler_cicd_integration.md",
+            "line": "39, 45",
+            "choice": "4-2 CI 게이트의 merge 차단 최소 통과율을 pass_ratio < 0.95 → FAIL로 설정 — LOCK 미등재 신규 임계값",
+            "options": "(a) 0.95 유지 (b) AUTHORITY_CHAIN LOCK-BE 신규 등재 후 0.95 고정 (c) CRITICAL suite 1.0 / 전체 0.95 이원화",
+            "recommendation": "KEEP — AUTHORITY_CHAIN 실측상 pass_ratio LOCK 부재 확인(LOCK-BE-09 ≥95%는 Prompt Injection 방어율로 무관). LOCK-BE-14는 회귀 하락 알림(3%/CRITICAL 1%)만 규정하고 L45는 이를 verbatim 정합 인용 — pass_ratio 최솟값은 미규정 영역의 설계 재량이며 R-18-3(LOCK 등재 임계값 변경 절차)에도 저촉 없음. 운영 안정 후 AUTHORITY_CHAIN 등재 검토 권장.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-118"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\BENCHMARK_EVALUATION_구조화_종합계획서.md",
+            "line": "400",
+            "choice": "R-18-2 인간평가 동점 해소: 2점 이상 차이 시 3차 평가자 투입 후 최종 점수를 '합의 결과 또는 중앙값'으로 산출 — 둘 사이 우선순위를 평가 주관자 재량에 위임",
+            "options": "(a) 현행 '합의 또는 중앙값' 재량 (b) 중앙값 고정 (c) '합의 불성립 시 중앙값' 우선순위 명문화",
+            "recommendation": "KEEP — R-18-2는 도메인 고유 거버넌스 규칙으로 그 자체가 정본이며 핵심 요건(최소 2인+3차 투입)은 명확. 1/3/5 극단 분기에서도 중앙값이 자연 default로 동작해 판정 불능이 발생하지 않음. 차기 개정 시 '합의 불성립 시 중앙값' 1구절 명시 권장(현행 무모순).",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-132"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\BENCHMARK_EVALUATION_구조화_종합계획서.md",
+            "line": "1362 (+2252)",
+            "choice": "LogicKor(S7G-013) 목표를 GPT-4 Judge 스케일 '≥ 8.0/10' 정본 + STEP7-G 백분율 '85+' 병행 표기로 운영 — Phase 1-A 표는 85+, L1415 계열/korean_benchmarks는 8.0/10",
+            "options": "(a) 현행 이중 스케일 병행 표기 (b) 8.0/10 단일화 (c) 백분율 85+ 단일화",
+            "recommendation": "KEEP — DESIGN LOCK 정본인 AUTHORITY_CHAIN L33 LOCK-BE-03이 '≥ 8.0/10 (GPT-4 Judge 기준)... S7G-013의 85+는 백분율 기준으로 병행 (CONFLICT_LOG C-02 참조)'을 명시 → 두 스케일 공존은 LOCK이 승인한 표기 정책 선택. G4-3 L2252의 'LogicKor ≥ 85+' 보존 인용도 이 병행 조항과 정합(정본 위반 0).",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T6-141"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\BENCHMARK_EVALUATION_구조화_종합계획서.md",
+            "line": "3230-3233",
+            "choice": "CAT-06 MCP 테스트 매핑: MCP 연결/도구호출(T-116/117)을 S7G-027(BFCL v3)로 프록시 매핑하고, T-119 'MCP 인증/권한'(CRITICAL)은 S7G 매핑 '-'로 두고 Security 카테고리(자동화 ✅)로 커버",
+            "options": "(a) 현행 프록시 매핑 + 카테고리 커버 (b) MCP 프로토콜 적합성 전용 S7G 신설 (c) T-119를 6-2 Security/4-3 MCP 도메인에 측정 위임 명시",
+            "recommendation": "KEEP — S7G '-' 매핑은 카탈로그 전반의 정상 패턴(T-030/031/034/035 등 동일 실측)이고 BFCL v3는 tool-calling 능력의 합리적 프록시. R-T5-1 횡단 원칙(L392)상 MCP 프로토콜 적합성 정본은 4-3 도메인 소유이므로 5-1 측 매핑 선택은 측정 위임 재량 — 정본 위반 없음.",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-181"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-1_Benchmark-Evaluation\\BENCHMARK_EVALUATION_상세명세.md",
+            "line": "112-114",
+            "choice": "배포 전 골든셋 스모크 테스트(V1 170문항: MMLU 50+HumanEval 20+MBPP 50+LogicKor 50)의 시간 예산을 '5분 이내'로 설정 — HumanEval 문항당 timeout 10s 최악치 직렬 가정(200s)과 긴장 관계",
+            "options": "(a) 5분 유지(병렬 실행 전제) (b) 10분으로 완화 (c) 스모크 문항수 축소",
+            "recommendation": "KEEP — 5분은 '목적' 수준의 목표 예산이고 timeout 10s(A-2)는 문항당 최악치 상한이지 전형 latency가 아님. 병렬 worker≥4면 최악치로도 충족 가능하며 어떤 정본(LOCK/RULE)도 스모크 예산을 규정하지 않음. B-2에 병렬도 전제 1줄 명시 권장(현행 무모순).",
+            "action": "KEEP",
+            "source_ids": [
+              "5-1_Benchmark-Evaluation-T8-196"
+            ]
+          }
+        ],
+        "notes": "[재도출 방법] mf_in 객관확정 23건(i=0~22)을 CL-C 28건/tight 24건(CL-C 부분집합)/GPT 13건과 매칭 제외 → 잔여 후보 12건 전수 디스크 실측 후 분류. [카운트 차이 9 vs 앵커 7] 원판정과 +2 차이. 추정 원인: 원판정이 T6-072(clc verify=refuted — 'CONFLICT_LOG 해소 없이'라는 주장부가 C-19/C-20 RESOLVED 실존으로 반박됨)와 T6-141(LOCK-BE-03 '85+ 백분율 병행' 조항으로 모순 주장 반박)을 오탐으로 분류했을 가능성이 큼. 본 재도출은 두 건 모두 지적 내용(80% 채택, 이중 스케일)이 디스크에 실존하고 그 선택 자체가 정본이 승인한 설계 재량이므로 '파일에 그런 내용 없음' 오탐 기준에 해당하지 않아 주관으로 등재. 이 2건을 빼면 정확히 7건(T8-010/T8-073/T8-096/T8-118/T8-132/T8-181/T8-196)으로 앵커와 일치. [제외 3건] T5-115: notifier/통보 채널 혼용 — 단순 표기, 기준상 제외. BE-AUD-007: safety_benchmarks L18 '충돌 없음' vs L25/L28 CONFLICT_CANDIDATE — 실존 확인했으나 mf_in i=4/i=5의 fix(CONFLICT_CANDIDATE 블록 제거 포함)에 종속되는 객관건 중복. BE-AUD-012: plan L2246 실측 결과 G4-1~G4-8은 'Phase 4 → Phase 5 전환 게이트 (forward-defined)' 조건 정의이며 L2301-2309 미체크 박스는 forward-defined 절차 템플릿 — 완료 선언으로 오독한 오탐. [기해소 확인] T8-093/mf i=7: promptfoo_integration.md L299 cron이 이미 '0 17 * * *'(02:00 KST 정본 정합)로 교정되어 있음(세션5 기적용). 반면 mf i=0(coding_benchmarks 75%→85%)은 L36/L46에 75% 잔존(미적용) — 객관 트랙 정보로만 기록. [전건 KEEP] 9건 모두 현행 값이 합리적이고 RULE/PLAN/LOCK 어느 정본과도 모순 없음 — CHANGE 0건. 핵심 정본 근거: LOCK-BE-03 병행 조항(AUTHORITY_CHAIN L33), CONFLICT_LOG C-19/C-20 'V1 정본 값 유지'(L53-54), benchmark_scheduler §V3.1 L144 'schedule 값 = LOCK 아님', AUTHORITY_CHAIN에 pass_ratio LOCK 부재 실측. 파일 무수정(읽기 전용 준수)."
+      },
+      {
+        "domain": "5-3_v12-Additions-Detail",
+        "count_target": 10,
+        "count_found": 9,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\04_investing-additions\\black_litterman_model.md",
+            "line": "12 (+ AUTHORITY_CHAIN.md:44, 상세명세 L329 '통상 0.025~0.05', Ai-investing portfolio_optimization.md L99/L388/L610 실측)",
+            "source_ids": [
+              "5-3_v12-Additions-Detail-T6-005",
+              "V53-011"
+            ],
+            "choice": "Black-Litterman 스케일링 팩터 tau 기본값을 0.025로 잠글지 0.05 또는 동적 1/T로 둘지의 파라미터 선택",
+            "options": "0.025(Idzorek/top_down_allocation 기본, 현행 LOCK-V12-03) vs 0.05(He-Litterman 1999, 구 portfolio_optimization E9) vs 동적 1/T(0.01~0.05 범위)",
+            "recommendation": "LOCK-V12-03 tau=0.025 단일 정본 유지 — RULE 1.3/PLAN 3.0에 tau 부재, DESIGN LOCK 계층 유일 등재값(0.025)이 본문(구 0.05 기재)에 우선(D5 2026-06-11 기판정과 동일 결론)",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "1179 (§A.1 #14 C-2 행 LOCK 상속 칼럼 — 'AI-Invest Factor 6종 LOCK'만 기재, Constraints LOCK 미병기 실측)",
+            "source_ids": [
+              "5-3_v12-Additions-Detail-T8-013"
+            ],
+            "choice": "§A.1 마스터 테이블 LOCK 상속 칼럼에 항목당 대표 LOCK 1개만 적을지 상속 LOCK 전부(LOCK-V12-08 포함)를 병기할지의 요약 표기 깊이 선택",
+            "options": "대표 LOCK 요약 표기(현행 §A.1) vs 전체 나열(factor_investing.md L12·04_investing-additions/_index.md L12와 동일 수준)",
+            "recommendation": "LOCK 매핑 정본은 §A.4 매트릭스(L1254 V12-08←C-2)+AUTHORITY_CHAIN L49로 정합 유지 중이므로 §A.1 요약 표기는 무모순 — 현행 유지, 차기 §A.1 갱신 시 'AI-Invest Factor 6종 LOCK + Constraints LOCK' 병기 권장. (T8-013의 현금 5% vs 20% 부분은 객관 i7로서 C-06 RESOLVED(D3, 맥락 구분: 20%=CB-4 LOCK 안전장치/5%=cash_allocation 운영 목표) 기해소)",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "153-158 (§2.1 트리: 4개 분리 파일) vs 166 (§2.2: '_index.md 내부 섹션으로 처리') — 디스크 실측: 06_v2-v3-advanced에 _index.md 단일, 27건 전수 등재",
+            "source_ids": [
+              "V53-003"
+            ],
+            "choice": "06_v2-v3-advanced의 E/F/G 27건을 별도 4개 파일(v2_phase3_high/medium, v3_phase2_medium, v3_phase3_low)로 분리할지 _index.md 단일 파일 내부 섹션으로 처리할지의 파일 구조 선택",
+            "options": "4파일 분리(§2.1 목표 트리) vs _index.md 단일(§2.2 깊이 규칙 + 현행 디스크 + V-01 DONE 6/6·51건 전수 등록)",
+            "recommendation": "실제 구현·§2.2 규칙·검증 완료 상태(V-01 DONE)가 모두 _index 단일안으로 일치하므로 §2.1 트리의 4파일 기재가 자체 정본(거버넌스 규칙+검증된 산출물)과 모순 — 트리를 _index 단일로 정정",
+            "action": "CHANGE",
+            "edit": {
+              "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+              "old": "    ├── _index.md                              ← 섹션 E/F/G 인덱스\n    ├── v2_phase3_high.md                      ← E-1~E-8 HIGH 항목 인덱스\n    ├── v2_phase3_medium.md                    ← E-9~E-15 MEDIUM 항목 인덱스\n    ├── v3_phase2_medium.md                    ← F-1~F-6 인덱스\n    └── v3_phase3_low.md                       ← G-1~G-6 인덱스",
+              "new": "    └── _index.md                              ← 섹션 E/F/G 인덱스 (E/F/G 27건은 §2.2 규칙에 따라 _index.md 내부 섹션으로 처리)"
+            }
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\03_agent-teams\\template_sets.md",
+            "line": "12 (+ AUTHORITY_CHAIN.md:48, 계획서 L231 §3.4·L1253 §A.4, CONFLICT_LOG.md:19 C-07 RESOLVED 실측)",
+            "source_ids": [
+              "V53-010"
+            ],
+            "choice": "TS 3종(TS_CORE/TS_WEB_RESEARCH/TS_CODE) 보호를 위해 전용 LOCK을 신설할지, B-2를 조건부로 유지할지, 기존 상위 정본 LOCK으로 상속 출처를 정정할지의 거버넌스 전략 선택",
+            "options": "3-8/4-4 전용 LOCK 신설 vs B-2 CONDITIONAL 유지 vs D2.0-03 §4.2 '(LOCK) TemplateSet=3종'+2-1 LOCK-BN-18로 출처 정정(D4 채택)",
+            "recommendation": "DESIGN 2.0 LOCK(D2.0-03 §4.2)이 정본 우선순위상 S7-4 레벨 판정(W-05)에 우선하므로 D4(2026-06-11) 채택안 유지 — 전용 LOCK 신설은 D2.0-03 §4.2 규칙1(BLUE NODE 템플릿 정본 소유 금지)·R-T5-1(공동 소유 금지) 위반이라 금지. 기해소: C-07 RESOLVED, AUTHORITY_CHAIN L48·계획서 §3.4/§A.4 동시 정정 실측. B-2 정본 파일 placeholder(L11)는 Phase 2 귀속 확정 이월로 §7.3/S-3에 명시 추적 중",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "1054 (§10.2 V-07: 기준 '10/10 일치' vs 상태 '✅ DONE (2026-04-12) — ... C-04~C-08 OPEN 5건' dated 기록 잔존 실측)",
+            "source_ids": [
+              "V53-012"
+            ],
+            "choice": "검증 행 상태 'DONE'의 의미론 선택 — 검증 절차 수행 완료 기록으로 볼지 기준(10/10 일치) 충족으로 볼지, 그리고 dated 검증 레코드의 append-only 보존 방식",
+            "options": "DONE=절차 수행 기록 유지+일자·예외 병기(현행) vs CONDITIONAL/FAIL로 소급 변경 vs 재검증 행 추가",
+            "recommendation": "dated 레코드(2026-04-12)의 append-only 보존이 VAMOS 정본 컨벤션이므로 소급 수정 금지 — 현행 유지하되 C-04~C-08 전건 RESOLVED(2026-06-11 D1~D5)로 기준 10/10이 현재 충족되므로 차기 갱신 시 V-07에 2026-06-11 재검증 노트 1행 추가 권장. 행 내 'OPEN 5건' 문구는 당시 사실의 이력 기록으로 CONFLICT_LOG 현행과의 차이는 모순 아님",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "1089 (§11 S-10: '✅ RESOLVED — C-1→VALID, C-2→VALID, B-2→CONDITIONAL 유지(Phase 2 귀속 확정 시 처리)' 실측)",
+            "source_ids": [
+              "V53-015"
+            ],
+            "choice": "부분 해소 항목의 상태 라벨링 선택 — 범위 한정 RESOLVED + 이월 명시로 처리할지 PARTIAL/OPEN 상태를 신설·환원할지",
+            "options": "RESOLVED(범위=경로 특정)+B-2 CONDITIONAL 유지 명시(현행) vs PARTIAL 또는 OPEN 환원",
+            "recommendation": "S-10의 정의 범위는 '서브폴더 경로 특정'이며 C-1/C-2는 완료 — B-2 잔여는 S-3(OPEN, L1082)·§7.3(L968 '대기 CONDITIONAL')·P1 리포트 L148의 3중 추적으로 유실 없음이 실측되므로 현행 라벨링 유지(추적 손실이라는 우려 사실관계 불성립)",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\04_investing-additions\\_index.md",
+            "line": "11-12 (괄호 placeholder 잔존 실측; §A.1 L1178-1179·항목 파일 L11은 확정 경로 기재)",
+            "source_ids": [
+              "V53-017"
+            ],
+            "choice": "서브폴더 _index의 '정본 경로' 칼럼 상세도 선택 — P1-1 확정 경로를 동기화할지 괄호 추정 표기를 요약 수준으로 둘지",
+            "options": "괄호 placeholder 유지(현행 _index) vs §A.1 확정 경로 동기화(15_portfolio-advanced/portfolio_optimization.md, 20_strategy-detail/quant/factor.md)",
+            "recommendation": "LOCK-V12-10 정본(부록 §A.1 L1178-1179)과 항목 파일(black_litterman_model.md L11, factor_investing.md L11)이 모두 P1-1 확정 경로를 기재 — 동일 허브 내 _index만 stale로 정본 모순 + R-19-2 양방향 정합성 위배이므로 확정 경로로 정정",
+            "action": "CHANGE",
+            "edit": {
+              "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\04_investing-additions\\_index.md",
+              "old": "| 1 | C-1 | Black-Litterman Model | C-1 | AI Investing | `Ai-investing-detail/(포트폴리오 최적화 폴더)` | AI-Invest tau LOCK (→ V12-03) | TODO |\n| 2 | C-2 | Factor Investing | C-2 | AI Investing | `Ai-investing-detail/(팩터 투자 폴더)` | AI-Invest Factor LOCK (→ V12-04), Constraints LOCK (→ V12-08) | TODO |",
+              "new": "| 1 | C-1 | Black-Litterman Model | C-1 | AI Investing | `Ai-investing-detail/15_portfolio-advanced/portfolio_optimization.md` | AI-Invest tau LOCK (→ V12-03) | TODO |\n| 2 | C-2 | Factor Investing | C-2 | AI Investing | `Ai-investing-detail/20_strategy-detail/quant/factor.md` | AI-Invest Factor LOCK (→ V12-04), Constraints LOCK (→ V12-08) | TODO |"
+            }
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+            "line": "64 (§1.3 '4건 (11 컴포넌트)') + 변형 L302 '(4건, 11 컴포넌트)' vs L392 §6.8 '10건' 실측",
+            "source_ids": [
+              "V53-018"
+            ],
+            "choice": "섹션 A 수량 표기 단위 선택 — 그룹 단위(4건)+컴포넌트 병기 컨벤션 vs 컴포넌트 단위 단독, 그리고 컴포넌트 집계값",
+            "options": "'4건(그룹)+컴포넌트 병기'(§1.3/§6.1) vs '컴포넌트 단위 10건'(§6.8)",
+            "recommendation": "병기 컨벤션 자체는 유효한 표기 선택이나 컴포넌트 수 '11'은 어느 컨벤션으로도 도출 불가 — 상세명세 실측 A-1 3+A-2 2+A-3 2+A-4 3=10, §6.8 L392 '10건', §A.1 #1~#10, 같은 행 본문 '3종+2종+2종+3종'=10과 자기모순이므로 10으로 정정. L302 '(4건, 11 컴포넌트)'도 동반 정정 필요(별도 위치, 본 edit 범위 외)",
+            "action": "CHANGE",
+            "edit": {
+              "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_DETAIL_구조화_종합계획서.md",
+              "old": "4건 (11 컴포넌트)",
+              "new": "4건 (10 컴포넌트)"
+            }
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-3_v12-Additions-Detail\\V12_ADDITIONS_상세명세.md",
+            "line": "422 (§D-1 '병합 충돌 해결: LWW(Last Writer Wins) 또는 CRDT 기반' 잔존 실측)",
+            "source_ids": [
+              "V53-021"
+            ],
+            "choice": "Evolution Control Policy의 병합 충돌 해결 알고리즘 선택 — LWW vs CRDT",
+            "options": "LWW(단순, 마지막 쓰기 우선, 변경 손실 허용) vs CRDT(충돌 보존, 구현 복잡) vs 데이터 유형별 혼합",
+            "recommendation": "D-1의 정본은 #6 PKM(§A.1 #15 `3-3_PKM.../01_knowledge-capture/`)이므로 알고리즘 확정은 PKM 정본 소관(R-19-1) — Level 4 레거시 참조인 상세명세의 양안 나열은 정본 무모순. PKM 정본 확정 시 단일안: 노트 단위 기본 LWW(원자적 노트 원칙과 정합)+실시간 공동 편집 도입 시 해당 문서 유형만 CRDT 승격",
+            "action": "KEEP"
+          }
+        ],
+        "notes": "[집계] 원판정 주관 10건 vs 재도출 9건(유니크). 차이 사유: tau 항목이 CLC(T6-005)와 GPT(V53-011) 양 소스에서 별개 finding으로 집계되면 10건과 일치 — 본 재도출은 동일 사안을 1건으로 병합. T8-035(SM2 초기 간격)는 CLC verify=refuted 오탐으로 제외(현행 L175-178은 표준 SM-2와 정합·기교정). [기해소 확인] 세션5 D1~D5 디스크 기적용 실측: tau 0.025 단일화(C-08 RESOLVED, portfolio_optimization.md L99/L388/L610), TS LOCK 출처 정정(C-07 RESOLVED, AUTHORITY_CHAIN L48), CBT 15종 전사(C-04), 링크 5종(C-05), 현금 비중 부재(C-06). 객관 기교정도 다수 실측: §3.4 절대규칙 L221, R6 L251, P2-1 게이트 L947(CONFIRMED≥19 분리), P1-1 요약 L905(누적 OPEN 분리), §7.3 L968(B-2 대기), SM2 리셋 L177, BreathingPattern hold2_seconds L40, factor_investing.md 'Low Volatility'. [객관 트랙 잔여 참고 — 주관 아님] (a) §3.2 L208 '이 폴더는 LOCK을 신규 정의하지 않으며'가 §3.4 정정문(자체 2건 허용)과 잔여 모순(i4 부분 기해소), (b) 계획서 §3.4 L228·§A.4 L1250의 'Volatility'(Low 누락, i8 잔여 — factor_investing.md만 정정됨), (c) 루트 INDEX.md 여전 부재(i16), (d) E/F/G 항목명 상세명세↔계획서 불일치 잔존(i5). [edit 적용 주의] 계획서.md는 CRLF, 04_investing-additions/_index.md는 LF 줄바꿈 — old 문자열 멀티라인 매칭 시 줄바꿈 정규화 필요(유일성 count==1은 양 파일에서 바이트 수준 검증 완료). 본 세션은 읽기 전용으로 파일을 수정하지 않음."
+      },
+      {
+        "domain": "5-4_v23-Extension-Items",
+        "count_target": 3,
+        "count_found": 3,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-4_v23-Extension-Items\\V23_EXTENSION_ITEMS_구조화_종합계획서.md",
+            "line": "815, 839, 870 vs 954",
+            "source_ids": [
+              "5-4-LOGIC-003"
+            ],
+            "choice": "인덱스 자동 갱신을 '설계상 선언(Part2 로드맵 외부 트리거)'으로 두고 실제 자동화 스크립트 구현은 S-3로 Phase 3+에 이연하는 로드맵 선택.",
+            "options": "(a) 현행: §7.3은 자동 갱신을 목표 메커니즘으로 선언(L815 '자동 추적...자동 갱신됨', L839 '산출물: Part2 릴리스 시 자동 갱신', L870 '외부 트리거로 자동 실행')하고 §11 S-3(L954)는 스크립트를 LOW/Phase 3+/OPEN으로 유지 / (b) §7.3에 '현재 미구현, 수동 갱신 절차' 명시 / (c) 자동화 스크립트 입출력·트리거·실패처리 명세를 정본에 선반영",
+            "recommendation": "KEEP 현행(a). RULE 1.3/PLAN 3.0/Part2(Level 2) 어디에도 자동화 구현 시점을 강제하는 정본 없음 — §7.3의 '자동'은 Part2 종속 외부 트리거 추적 설계 선언이고 S-3는 그 구현 스크립트의 시기 선택이며, 본 도메인이 STAGE 9 B-2(L849)에서 영구 EXCLUDED(Part2 종속, 자체 수동 실행 없음)로 확정되어 Phase 3+ 이연이 합리적.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-4_v23-Extension-Items\\V23_EXTENSION_ITEMS_구조화_종합계획서.md",
+            "line": "925-942 vs 968-980",
+            "source_ids": [
+              "5-4-LOGIC-007"
+            ],
+            "choice": "§10 검증 체크리스트를 미체크 템플릿(검증 기준 카탈로그)으로 유지하고 실행 검증 기록은 §12 FINAL REVIEW에 단일화하는 문서화 컨벤션 선택.",
+            "options": "(a) 현행: §10 전 항목 [ ] 유지 + §12가 실행 기록 정본(87건 전수/SOT2 경로/LOCK/거버넌스/OPEN 3건 전부 PASS, Gate APPROVED L980) / (b) §10 완료 항목을 [x]로 갱신하고 §12 PASS 근거와 상호 링크 / (c) §10 상단에 '검증 템플릿' 라벨 추가",
+            "recommendation": "KEEP 현행(a). 정본 우선순위상 §12 FINAL REVIEW(Status APPROVED — Phase 8 QC B+ → Phase 10 QC A-, L970)가 검증 실행 기록의 본문 정본이며 §10은 기준 목록으로 읽는 데 모순 없음 — 체크리스트를 템플릿으로 둘지 기록으로 쓸지는 검증 가능한 정본 위반 없는 표기 정책 선택(원하면 (c) 라벨 추가가 저비용 개선이나 필수 아님).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\5-4_v23-Extension-Items\\V23_EXTENSION_ITEMS_인덱스.md",
+            "line": "4 (vs 종합계획서.md L9, CONFLICT_LOG.md L107-117 CL-002)",
+            "source_ids": [
+              "5-4-FIDELITY-008"
+            ],
+            "choice": "인덱스 헤더 'Part2 상태'에 Part2 원문 표기(~100+ items)를 보존하고, 계획서 헤더에는 v23 subset 정밀 집계(~87건)를 쓰는 표현 방식 선택.",
+            "options": "(a) 현행: 인덱스 L4 'SHELL (~100+ items, 이름만 존재)' = SOT 원문 충실 표기, 계획서 L9 'SHELL (이름만 존재, ~87건)' = v23 정밀 집계 / (b) 두 헤더를 'Part2 원문: ~100+ / v23 subset: 87건' 병기 형식으로 통일 / (c) 양쪽 모두 87건으로 단일화",
+            "recommendation": "KEEP 현행(a). 충돌 해석은 이미 CONFLICT_LOG CL-002 RESOLVED(L107-117)가 정본으로 확정 — Part2 '~100+'는 전체 확장 범위(v12+v23+기타) 포괄 추정치, 87건이 v23 Extension Items 정본 수치 — 이므로 정본 위반 없는 표기 선택이며, SOT 원문(Part2, Level 2)에 충실한 인덱스 헤더 보존이 권한 체계(§3.2)와도 정합.",
+            "action": "KEEP"
+          }
+        ],
+        "notes": "전수 재도출 결과 주관 3건 = 원판정 앵커 3건과 정확히 일치(짜맞춤 아님, 디스크 실측 기반). [입력 전수 분해] 고유 finding 10건: CLC/tight 2건(T8-001/T8-003)은 GPT 5-4-LOGIC-001 및 mf_in i0/i1과 동일 사안으로 객관 중복 제외. mf_in 객관 6건(i0 게이트 모순, i1 81vs87, i2 DONE/DEPRECATED, i3 V3-P3 REF-only, i4 추적 34/87, i5 T-03 오라클)은 제외 기준이며 전부 2026-06-11 세션5 기적용으로 디스크에서 기해소 확인: R-20-2 L232 단일 게이트 명시, 인덱스 분포표 L184/190/193/194/196 = 87 정합, §4.4 L247 DONE/DEPRECATED 게이트 제외 노트, §7.3 L823 비핵심(MEDIUM 40+LOW 13) 추적 노트, §7.4 L880 'MEDIUM 70% 이상 STUB/REF', 01_high-priority/_index.md L137 T-03 비교 기준 인덱스+§6.1/부록 A.2로 교정. [제외 1건] 5-4-SECURITY-009(권한/감사로그/롤백 부재)는 디스크 실측으로 핵심 전제('누가 변경 가능한지 미명시')가 상당 부분 반박됨 — §3 권한 체계 Level 0~5(L152-175), R-20-3 우선순위 변경 분기 리뷰만 허용(L233), §3.4 LOCK별 변경 시 필요 조치(L191-200), §9.2 충돌 시 CONFLICT_LOG 등록(L912), 글로벌 R1~R11 준수 선언(L206), 상태 전환 주체=Part2 외부 트리거·자체 수동 실행 없음(L849/L870). GPT 자체 is_confident:false. 잔여 갭(감사로그 필드/원자적 락/롤백)은 Tier 5 추적 인덱스의 범위 선택이나, 전제 반박이 우세해 주관이 아닌 오탐 측으로 분류 — 원판정의 10=객관6+주관3+오탐1 구조와 정합. [부수 관찰, 읽기 전용이라 미수정] 세션5 교정 적용 부산물로 보이는 중복 행 2쌍 존재: 종합계획서 L823-824(게이트 비핵심 추적 노트 동일 행 2회), L247-249(DONE/DEPRECATED 범위 노트 동일 블록 2회) — 후속 정리 후보로 보고만 함. 검증 파일: D:\\VAMOS\\docs\\sot 2\\5-4_v23-Extension-Items\\ (live 정본; backup/test_iso_p2 사본은 미사용)."
+      },
+      {
+        "domain": "6-6_Self-Evolution-System",
+        "count_target": 6,
+        "count_found": 6,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\01_s-series-modules\\s05_feedback_loop.md",
+            "line": "168-171",
+            "choice": "S-5 출력 스키마의 주 작업 명칭을 FeedbackInsight로 두고 _index.md §1.1 정본 명칭 LearningUpdate를 하위 호환 별칭 서브클래스(class LearningUpdate(FeedbackInsight))로 유지하는 이중 명명 구조.",
+            "options": "(a) 현행 — FeedbackInsight 주 클래스 + LearningUpdate 별칭(스키마 동일, '정본 명칭 보존' 명시 문서화) / (b) LearningUpdate를 주 클래스로 승격하고 FeedbackInsight를 별칭으로 강등하여 §2/§3.3/§9 전반 단일 명칭 통일",
+            "recommendation": "현행 유지 — 별칭이 s05:168-170에 '하위 호환 별칭 (정본 명칭 유지)·동일 스키마(_index.md §1.1)'로 명시 문서화되어 정본(_index §1.1 LearningUpdate)과 무모순이며 소비자 S-3는 정본 명칭으로 수신 가능. 검증 가능한 정본 위반 없는 명명 설계 선택.",
+            "action": "KEEP",
+            "source_ids": [
+              "6-6_Self-Evolution-System-T5-032"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\01_s-series-modules\\s07_evolution_scheduler.md",
+            "line": "255-256 (s08_governance.md:394-421 DH-7 별개 명시)",
+            "choice": "S-8 pre-exec 재확인을 신규 평가(DH-2 600s)와 분리된 경량 게이트로 설계 — S8_PREEXEC_TIMEOUT_SEC=10s + MAX_RETRIES=2, 타임아웃 시 HOLD(다음 Cron 슬롯)→ABORT_S8_REJECT.",
+            "options": "(a) 현행 — 10s 경량 즉시 재확인(이미 1차 승인된 plan의 승인 당시 vs 현재 상태 차이 검증 전용) / (b) pre-exec에서도 DH-2 600s 전체 재평가 수행 / (c) 중간 타임아웃(예: 60s)",
+            "recommendation": "현행 유지 — s08 §4.5(L396-421)와 AUTHORITY §5 DH-7이 '10s는 DH-2 600s와 별개 항목, 신규 평가 600s와 구분'을 명시해 finding의 전제(재확인이 600s 평가를 촉발)가 스펙상 배제됨. 1차 승인된 plan의 실행 직전 재확인 SLA로 10s+재시도2회는 합리적 설계 선택, 정본(AUTHORITY DH-7) 무모순.",
+            "action": "KEEP",
+            "source_ids": [
+              "6-6_Self-Evolution-System-T8-058"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\01_s-series-modules\\s08_governance.md",
+            "line": "131-151, 609",
+            "choice": "S-8 승인 채널에 자체 큐 깊이 상한·rate limit·deduplication 필드를 두지 않고 DH-2 600s eval_deadline 타임아웃 + 상류 S-7 back-pressure(MAX_QUEUE_DEPTH=500, MAX_JOBS_PER_TICK=20) 위임으로 보호하는 아키텍처.",
+            "options": "(a) 현행 — timeout 600s 보호 + 큐 상한은 S-7 소유(DH-7e L609 명시) / (b) GPT 권고 — S-8 자체 MAX_APPROVAL_QUEUE_DEPTH·MAX_INFLIGHT_APPROVALS·source별 rate limit·plan_id/trace_id dedup·overflow audited reject 추가",
+            "recommendation": "현행 유지 — DH-7e(s08:609)가 '큐/틱 상한 (S-7 영역, MAX_QUEUE_DEPTH=500 — s07 §3.1 정본), 본 모듈 자체 승인 채널은 timeout 600s 보호'로 정합화되어 s07↔s08 객관 모순(mf_in i13)은 기해소 상태이며 잔여 쟁점은 순수 아키텍처 선택. 정본 무모순이므로 유지하되 S-2 직행 경로(s2_new_pattern) 폭주가 운영에서 관측되면 S-8 측 상한 추가를 후속 검토.",
+            "action": "KEEP",
+            "source_ids": [
+              "SEVO-AUD-003"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\01_s-series-modules\\s03_strategy_optimizer.md",
+            "line": "246",
+            "choice": "S-3 evolve()가 S-8 결정을 동기 대기하지 않고 COLLECT_S8_DECISIONS(plans, timeout=60s) async 수집 윈도우만 사용하여 SELF_EVO_TIMEOUT(120s) 예산 내 반환하는 호출자 측 대기 전략.",
+            "options": "(a) 현행 — 60s async 수집 후 반환, 미도착 결정은 pending / (b) DH-2 600s까지 동기 대기(S-5/S-6의 구 패턴 — mf_in i7에서 객관결함 확정) / (c) 완전 비동기 콜백 — 제출 즉시 반환, S-8 결정 이벤트 콜백으로 보상 갱신",
+            "recommendation": "현행 유지 — 60s async는 공통 evolve 예산 120s(정본 SELF_EVO_TIMEOUT)와 무모순인 유일한 동기-수집 선택지이며 S-8 DH-2 600s는 S-8 측 결정 마감일 뿐 호출자 대기 의무가 아님. 단 60s 이후 도착 결정의 보상 반영은 mf_in i16 교정 방향(evaluation_window 만료 콜백)과 함께 (c) 콜백 경로로 수렴시키는 것을 권고.",
+            "action": "KEEP",
+            "source_ids": [
+              "SEVO-AUD-008"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\01_s-series-modules\\s06_adaptation_engine.md",
+            "line": "283-284 (s07_evolution_scheduler.md:238-239, 626; AUTHORITY_CHAIN.md:123-131)",
+            "choice": "L6 순차 활성화 게이트에서 DH-1 안정화를 '에러율<1%·스키마 검증률 100%·3주기 연속 PASS' 요약형으로 운영화 — 정본 DH-1(AUTHORITY §5)은 4메트릭(에러율<1%/스키마100%/I-Module≥99%/리소스<80%)·7일 관찰.",
+            "options": "(a) 현행 — 모듈 docstring 요약 인용 + '3주기 연속 PASS'를 보조 운영 게이트로 병기 / (b) GPT 권고 — AUTHORITY_CHAIN DH-1 4메트릭·7일 전문을 그대로 인용하고 3주기 PASS는 별도 보조 조건으로 분리 명기",
+            "recommendation": "현행 유지 — 정본 우선순위상 AUTHORITY_CHAIN §5 DH-1(4메트릭·7일·상태 확정, L123-131)이 규범이고 s06/s07 docstring은 DH-1을 명칭으로 인용하는 요약문이지 재정의가 아니므로(s08 DH 매핑 L600도 'DH-1 안정화 4메트릭 변경 없음' 확인) 정본 모순 없음. 안정화 게이트의 운영 단순화(3주기 연속 PASS 병기)는 설계 선택이며, 규범 판정 시 DH-1 전문 기준 적용을 전제로 유지.",
+            "action": "KEEP",
+            "source_ids": [
+              "SEVO-AUD-009"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-6_Self-Evolution-System\\03_model-upgrade-strategy\\upgrade_safety.md",
+            "line": "167-179, 512, 520-522",
+            "choice": "ISS-5(4-4 MLOps 연동)를 송신측 6-필드 정본 스키마(ModelUpgradeRequest, 6-6→4-4 단방향 발행)로 해결 처리하고, 4-4 측 MLOpsUpgradeReceiver 직수신 채널은 §12 C-1 HIGH 향후 확장([RECHECK_FLAG: 4-4] 발행)으로 이월하는 단계적 통합 전략.",
+            "options": "(a) 현행 — sender 정본 확정 + ISS-5 ✅ 표기 + receiver는 C-1 HIGH 이월 추적 / (b) GPT 권고 — ISS-5를 sender-defined/receiver-unverified로 강등하고 4-4 receiver schema·ack·timeout 계약 완성 전 resolved 표기 금지",
+            "recommendation": "현행 유지 — 도메인 경계상 4-4 receiver 계약은 4-4 정본 소유 영역이며 6-6은 발행 스키마를 정본 확정(§3, ISS-5 추상 정의 위임 수용)하고 §12 C-1 HIGH + RECHECK_FLAG로 투명 추적 중. 종합계획서 G4-6(L1553)에 4-4 reverse-inheritance(LOCK-ML read-only) 정합이 Phase4에 기록되어 미수신 위험도 완화됨. 정본 위반 없는 단계적 통합 scope 선택.",
+            "action": "KEEP",
+            "source_ids": [
+              "SEVO-AUD-010"
+            ]
+          }
+        ],
+        "notes": "읽기 전용 수행, 파일 수정 0건. count_found=6=원판정 앵커 6과 자연 수렴(짜맞춤 없음). [입력 매핑] clc 24건+tight 16건(clc 부분집합, 신규 0)+GPT 12건+mf_in confirmed 20건/unconfirmed 1건. mf_in 동일/중복으로 제외된 객관 finding: T8-001(i11)/003(i5)/004(i15)/005(i16)/006(i17)/013(i12)/018(i6)/025(i7)/029(i18)/035(i8)/036(i7 s06 동일)/049(i19)/053(i2 동일 timeout 모순)/055(i13)/073(i9)/093(i10)/103(i10 중복)/105(i0), AUD-001(i1)/002(i2)/004(i3)/005(i14)/006(i8)/007(i4)/012(i9 포함). [비주관 제외 5건] T6-012=SOT 원문 미확인 메타 finding(결함 단정 불가, 설계선택 아님); T5-031=EnvironmentMetric 체크리스트 단순 표기; T5-054=S8_/S7_ PREEXEC 접두어 단순 표기; T8-059=params.cooldown_default 의사코드 표기 수준(s07:412-413 실측, 값 300은 COOLDOWN_SAME_PARAM_SEC=300 L260과 일치 — 정렬·전달 표기 문제일 뿐 선택 가능한 값 쟁점 아님); T8-104=종합계획서 L1458/L1851이 'LOCK L18=6-5 AUTHORITY §4 L18, 본 도메인 L4와 동일 정본 출처 SDAR_SPEC §9.3 cross-domain reference'를 명시 → '미정의 참조' 결함 주장이 문서 내 실측으로 반박(오탐/기해소). AUD-011=mf_in unconfirmed 배열에 동일 finding 기등재 → 중복 제외(주관 재산입 시 이중계상). [기해소 관찰 — 2026-06-11 세션5 D1~D19+객관168 기적용 흔적] (1) s08 DH-7e(L609)가 'MAX_QUEUE_DEPTH=500은 s07 소유, 본 모듈은 timeout 600s 보호'로 재서술되어 mf_in i13(s07 500 vs s08 무제한) 모순 해소 — AUD-003은 순수 아키텍처 선택만 잔존. (2) AUTHORITY_CHAIN DH-2(L137)가 'timeout 시 보수적 거부 auto_timeout_reject 정식 확정'으로 기재되어 AUD-002/T8-053 방향 기확정. 6건 전원 KEEP — 현행 값이 정본(RULE/AUTHORITY/LOCK/_index) 무모순으로 실측 확인되어 CHANGE 0건, edit 제안 없음."
+      },
+      {
+        "domain": "6-8_Cloud-Library",
+        "count_target": 7,
+        "count_found": 7,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\02_service-mesh\\error_fallback.md",
+            "line": "133",
+            "choice": "CL-G1 내부에 Trust 하한 서브게이트(G1_TRUST_LOW, L3 가중치 적용 후 ≤5)를 두고 FB-X 즉시 거부로 처리하는 임계값·게이트 책임 배치 선택",
+            "options": "(a) 현행 weighted ≤5 유지 (b) raw 점수 기준으로 변경 (c) G1에서 Trust 조건 제거하고 L3 소스 가중치 정책에 위임",
+            "recommendation": "(a) 현행 유지 — DESIGN LOCK L1~L22에 Trust 하한 규정이 없어 정본 위반이 아니며, 행 내 괄호 주석 '(L3 가중치 SNS=0.3 적용 후)'가 weighted 기준임을 명시해 자기일관적(가중 후 최대 7.5 대비 ≤5는 유의미한 컷)",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8_Cloud-Library-T8-010"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\02_service-mesh\\error_fallback.md",
+            "line": "200-205, 224, 268",
+            "choice": "FailureCode/Fallback 수량 집계 컨벤션 — SCORE_BORDERLINE_* 코드를 V1 합계(36)에 포함할지 별도 분류할지, §5.2 매핑 행수(39행)와 정본 합계(FB 35)의 관계 정의",
+            "options": "(a) Part2 §6.10 L5743-L5787 정본 합계(FC 36/48, FB 23/35) 보존 + Borderline 별도 분류 (b) 표 행수 실측 기준으로 정본 합계 자체를 재산정",
+            "recommendation": "(a) — PLAN 3.0급 상위 정본(Part2 §6.10)의 합계 보존이 우선이며, 디스크 L203-204·L207·L268에 reconcile note('V1 합계 정본 36, +1 차이는 SCORE_BORDERLINE_G1 V1 포함 여부', '정본 합계 보존')가 이미 기재되어 집계 컨벤션이 명시화됨(기해소)",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8_Cloud-Library-T8-002",
+              "6-8-007"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\03_cdn-scaling\\v12_extensions.md",
+            "line": "89",
+            "choice": "change_type 'gate_threshold_change'를 semver scope=minor로 분류하면서 승인정책은 MAJOR_APPROVE로 격상하는 2축 분리(영향도 분류 vs 위험 기반 승인) 설계",
+            "options": "(a) 현행: scope=minor + MAJOR_APPROVE(LOCK 보호) 병행 (b) scope를 major로 격상해 두 열을 일치",
+            "recommendation": "(a) 현행 유지 — R-68-1(SPEC §16 LOCK 불변 원칙) 보호를 승인정책 열이 단일 판정 기준으로 담보하고, 같은 행의 자동 적용=❌/승인 필수=✅ 열과 §3.5 'gate_threshold_change → 즉시 MAJOR_APPROVE (LOCK L4~L8/L19/L20 보호)' 설명으로 오독 여지가 차단됨; scope는 semver 버전 영향도 분류로 별개 축",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8_Cloud-Library-T8-033"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\02_service-mesh\\gate_details.md",
+            "line": "304-313",
+            "choice": "CL-G3 PII 처리 정책 — pii_count>5에서만 G3_PII_BLOCK 차단, 1~5건은 건당 5점 감점 후 통과 허용하는 임계값·감점 계수 선택",
+            "options": "(a) 현행 임계(>5 차단, 1~5 감점×5) 유지 (b) PII≥1 즉시 redaction/quarantine 선행 (c) 임계 하향 또는 embedding 전 PII 제거 검증 추가",
+            "recommendation": "(a) 현행 유지 — DESIGN LOCK L7은 'Security_Score≥30'만 규정하고 PII 건수 임계를 정본화하지 않아 설계 재량 영역이며, 장기 저장 금지는 PII_LONGTERM_DENIED NEVER_AUTO 경로(error_fallback §4.2.10/§6)가 별도 커버; redaction 선행은 V2+(BERT/위협인텔 확장) 단계의 강화 선택지",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8-011"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\01_cloud-deploy\\deployment_strategy.md",
+            "line": "61",
+            "choice": "V1 디스크 용량 설계 — L12×L14 이론상한 500GB 대비 실사용 10% 가정으로 Hetzner CX31 160GB 채택(admission control 미규정)",
+            "options": "(a) 160GB + 10% 실사용 가정 명시 유지 (b) 저장 전 admission control/eviction 규칙 추가 (c) 디스크 증설로 상한 전수 수용",
+            "recommendation": "(a) 현행 유지 — DH-CL-D1(DEFINED-HERE, AUTHORITY_CHAIN §4 정본)이 V1=Hetzner CX31(160GB SSD)로 고정하고 본 파일 §2.2가 그 값 변경을 금지하며, L12/L14는 상한(cap)이지 기대 사용량이 아님; 근거 열에 'V1 실사용 10% 수용(일반 소스 ≪ 50MB)' 가정이 이미 명시되어 정본 무모순",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8-012"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\01_cloud-deploy\\deployment_strategy.md",
+            "line": "111-114",
+            "choice": "V1 API를 8080 포트로 노출하면서 인증/인가/TLS를 V1 범위에서 생략하는 보안 강화 단계화(phasing) 선택",
+            "options": "(a) V1 단일 호스트 무인증 유지 + V2 Swarm/V3 K8s에서 인증·TLS 도입 (b) V1부터 API 인증/TLS/RBAC 의무화",
+            "recommendation": "(a) — 정본(DH-CL-D1, LOCK L1~L22)에 API 인증 요구가 없고 V1은 단일 VM 내부 Compose 구성이라 노출면이 제한적이므로 단계화는 설계 재량; 단 finding의 승인자 무결성 부분(approver Optional, security_fix 자동)은 mf_in i=17 객관결함 트랙에서 별도 처리됨(중복 제외)",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8-014"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-8_Cloud-Library\\FINAL_REVIEW_REPORT.md",
+            "line": "30-42 (및 L3_COMPLETENESS_REPORT.md:78-90)",
+            "choice": "완결성/최종 리뷰 PASS 판정 근거로 grep occurrence 실측 + 체크리스트 방식을 채택한 검증 방법론 선택",
+            "options": "(a) grep 실측 기반 검증 유지 (b) parsed-table count·스키마 검증·산식 단일성 검사로 대체/보강",
+            "recommendation": "(a) 현행 유지 — 검증 방법론은 RULE/PLAN/LOCK이 규정하지 않는 설계 재량 영역이고 보고서가 grep 근거(39/73/60/100 occ)와 예외(V10 'PASS substantive' accepted exception)를 투명 기재함; 의미 불일치류 실결함은 객관 트랙(mf_in 18건, 세션5 168건 기적용 — gate_details.md:312 clamp 등 확인)에서 별도 교정되어 보고서 방법론 자체는 결함이 아님",
+            "action": "KEEP",
+            "source_ids": [
+              "6-8-016"
+            ]
+          }
+        ],
+        "notes": "앵커 7건 = 재도출 7건 정확 일치(강제 짜맞춤 없음). [제외 내역] ① mf_in 18건 객관결함과 동일/중복: clc/tight T8-025(=i0)·T8-026(=i8)·T8-027(=i6)·T8-028(=i7)·T8-029(=i12)·T8-030(=i13)·T8-032(=i15), GPT 6-8-001(=i1)·002(=i2)·003(=i0)·004(=i3)·005(=i11)·006(=i5)·008(=i16)·009(=i14)·010(=i4)·013(=i10)·015(=i9), 6-8-014의 approver Optional 부분(=i17). ② T8-001(verify=real)은 mf i=1(G1 합산 vs Quality 단독 입력 모순)의 동일 근원 로깅 사례(디스크 error_fallback.md:437-447 score 38=4카테고리 합, quality:10 → Quality_100=40 통과여야 함)로 중복 제외 — 주관 아님. ③ verify=refuted 오탐 6건 제외: T8-012(L15 batch '초과'=OOM 트리거 조건이지 LOCK 위반 상태 아님), T8-039(gate_details.md:339 'CL-G0~G3 통과 후' 게이팅으로 G2 demote는 G4 미진입), T8-048(L7 Score=안전점수, gate_details §3.4.2 score=100-misinfo… 높을수록 안전 → ≥30 PASS 방향 정상), T8-050(A.4는 '알고리즘 방향성 힌트' 표, L1825-1828 게이트 인라인 적용 + L8 최종 집계로 모순 아님), T6-059(SC-13 명명은 plan §9.3 SPEC 우선 결정 기록), T8-060(A.2 L1770-1782 순서 = §1.4와 동일 G0→G1→G2→G3→G4, 내부 모순 부재 — 잔여 '보안게이트 선행 배치' 의견은 설계선택 영역이나 원판정 실측 refuted 라벨 준수로 미등재). [기해소 관찰] 세션5 168건 적용 흔적: gate_details.md:312 score=max(0,…) clamp 기적용(mf i=12), error_fallback.md:203-207/268 V1=36·FB 35 정본 합계 reconcile note 기적용(항목2 관련), v12_extensions.md:89 '(LOCK 보호)' 주석 존재(항목3 관련). [신규 관찰, read-only 기록만] error_fallback.md:154-155에 SCORE_BORDERLINE_G3 행이 완전 동일하게 2회 중복 등재(세션5 mf i=16 패치 이중 적용 의심) — 수정 금지 지시에 따라 미수정, 후속 트랙 전달 요망. 전 항목 디스크 실측(file:line) 후 등재, 정본 모순 발견 0건으로 CHANGE 없음(전부 KEEP)."
+      },
+      {
+        "domain": "6-10_EXP-Modules-Detail",
+        "count_target": 3,
+        "count_found": 3,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-10_EXP-Modules-Detail\\CONFLICT_LOG.md",
+            "line": "L30(출처 B: B-5 Knowledge Distillation) vs L34(해결: B-5 'Few-Shot Manager') — 카탈로그.md L38·L137-147 실측 B-5=Few-Shot Manager(MMR) 일관",
+            "choice": "B-5 슬롯의 공식 정식명·기능 범위를 'Few-Shot Manager'(MMR 기반 동적 예제 관리)로 채택할지 'Knowledge Distillation'(지식 증류)로 채택할지의 명명·범위 결정",
+            "options": "(a) Few-Shot Manager 정식명 유지(현행, CFL-610-002 S10-5 결정) (b) Knowledge Distillation으로 환원 + 카탈로그/B-시리즈 인덱스 되돌림 (c) CONFLICT_LOG 출처 B 행 재서술",
+            "recommendation": "(a) 유지 — CFL-610-002 해결란이 SOT2 카탈로그 정식명 채택을 명시적 결정(결정자 S10-5)으로 기록했고, sot2 카탈로그(본문 정본) 전체가 Few-Shot Manager로 일관(L38, L137-147, 01_b-series/_index.md L24). 출처 B 행은 충돌 등록 시점(S8-6)의 역사 기록으로 append-only 보존이 원칙이라 정본 모순 아님",
+            "action": "KEEP",
+            "source_ids": [
+              "610-FIDELITY-002"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-10_EXP-Modules-Detail\\EXP_MODULES_DETAIL_카탈로그.md",
+            "line": "L346-358(§3.1 공통 인터페이스 예시: category+enabled만) vs AUTHORITY_CHAIN.md L32(LOCK-610-1 표준 필드: category, module_id, enabled, version, dependencies)",
+            "choice": "공통 인터페이스 예시 코드에 표준 필드 5종 검증을 전부 명시할지, 정본(D2.0-01 §5.5) 참조로 위임하고 예시는 최소 발췌로 둘지의 문서화 상세 수준 결정",
+            "options": "(a) 현행 최소 예시 유지 + R-610-4로 정본 위임(현행) (b) 예시에 module_id/version/dependencies 필드·검증 로직 추가 (c) BaseModule 스키마 별도 절 신설",
+            "recommendation": "(a) 유지 — 정본 우선순위상 표준 필드 정본은 D2.0-01 §5.5(DESIGN 2.0)이고, 카탈로그 §3.2 R-610-4(L368)가 '표준 필드 준수→LOCK'을 이미 규범으로 강제하므로 예시 코드(`# 모듈 로직 구현 ...` 발췌 성격)의 필드 생략은 강제력 공백이 아닌 표현 선택. 정본 모순 없음",
+            "action": "KEEP",
+            "source_ids": [
+              "610-OMISSION-004"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-10_EXP-Modules-Detail\\EXP_MODULES_DETAIL_카탈로그.md",
+            "line": "L158(B-6: 100 에피소드 수렴·분산<0.1), L245(A-3: QoD 개선≥3%), L302(D-4: 페르소나 일관성≥90%·스타일 편차<10%)",
+            "choice": "LOCK 비보호 모듈별 테스트 임계값(에피소드 수, 분산 한계, QoD 개선율, 일관성/편차 비율)의 수치와 측정 산식 상세화 수준 결정",
+            "options": "(a) 현행 임계값 유지 + 산식은 구현 단계(I-14 Benchmark·S-4 Monitor 연동)에서 구체화(현행) (b) 임계값마다 산식·데이터셋·window·단위를 카탈로그에 즉시 추가 (c) 임계값 자체 재조정",
+            "recommendation": "(a) 유지 — 전형적 SLA 임계값 설계 선택으로, LOCK-610-8(D-6 90%, Part2 V3-P2 L4039 정본 고정)과 달리 어떤 정본(RULE 1.3/PLAN 3.0/DESIGN LOCK)도 다른 값·산식을 고정하지 않으며, 본 도메인은 SDV 예외(EXEMPTED, AUTHORITY_CHAIN L82-87) 카탈로그 형식이라 14-section 상세명세 수준의 산식 정의 의무가 없음. 값 자체도 합리적 범위",
+            "action": "KEEP",
+            "source_ids": [
+              "610-INVALID-011"
+            ]
+          }
+        ],
+        "notes": "앵커 3건과 재도출 3건 정확히 일치(짜맞춤 없음). 도출 경로: GPT 12건 중 9건이 mf_in 객관확정분 i0~i8과 1:1 대응(LOGIC-001→i0 LOCK 번호체계, LOGIC-003→i1 L1/L3 상태, LOGIC-007→i2 A-6 DEFER, OMISSION-010→i3 EVX-1 rollback, SECURITY-008→i4 A-7, LOGIC-005→i5 DAG, LOGIC-006→i6 Z3, LOGIC-012→i7 V3-004, SECURITY-009→i8 Thought Buffer)→중복 제외; 잔여 3건이 주관. 제외 상세: (1) CLC T8-012(EVX-1 샌드박스 미명세)=verify 'refuted'+실측 반박 — 카탈로그 L168 '샌드박스 실행'·L171 실행시간<30s·L172 vamos-experimental 격리 명시 → 오탐. (2) CLC/tight T8-013(A-6 Federated mTLS)=mf_in i2와 실질 중복(동일 근거 FEDERATED_AUTH_FAIL→mTLS vs DEFER-AT-004) + 세션5 교정으로 03_a-series/_index.md L57이 이미 '에러 처리 DEFER/테스트 기준 DEFER'로 기해소(잔여 논점인 gradient poisoning 방어·DP 채택 여부는 DEFER-AT-004 해제 조건에 종속되어 독립 주관 항목으로 등재 부적절). 세션5(D1~D19+객관168) 기적용 실측 확인: A-7 카탈로그 L278 '즉시 실행 중단(suspend)+07 Gate 통보(자동 키/인증 갱신 금지)'(i4 기해소), EVX-6 L229 'Z3 SMT solver 제약 충족성 사전 검사→NSGA-II'(i6 기해소), D-6 04_d-series/_index.md L61 테스트 기준 PARTIAL(i7 기해소) — 모두 객관분이며 주관 3건은 디스크에 현존함을 실측. 카탈로그 §1.2 ⬜ L1 vs 서브인덱스 ✅(i1) 및 AUTHORITY_CHAIN LOCK-610-1~8 vs 카탈로그 LOCK-610-01~08 표기 이원화(i0)는 잔존하나 객관확정분 소관. 3건 전원 KEEP — 정본 모순 미발견, 파일 수정 0건(읽기 전용 준수)."
+      },
+      {
+        "domain": "6-11_Hologram-Main-LLM",
+        "count_target": 9,
+        "count_found": 9,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\04_main-llm-integration\\two_tier_routing.md",
+            "line": "193",
+            "source_ids": [
+              "6-11_Hologram-Main-LLM-T8-108"
+            ],
+            "choice": "CostHudSnapshot.threshold_pct 상한을 le=150.0(150%)으로 클램프할지, overlay_schema의 ratio_to_budget처럼 상한 없이(ge=0.0만) 둘지의 값 선택.",
+            "options": "(a) le=150.0 유지 — LLM 페이로드 폭주값 차단용 안전 클램프 / (b) 상한 제거하여 overlay_schema ratio_to_budget(0~1+ 초과 가능, UI clamp)와 대칭 / (c) 다른 상한값(예: 200%)",
+            "recommendation": "현행 (a) 유지 — LOCK-HM-10은 수치 상한을 정의하지 않으며(정본 무규정), 두 필드는 서로 다른 스키마(HologramContextPayload 입력 vs GlassHUDData 출력)라 모순이 아님. >100=초과 게이지 로직(L193 description)과도 양립. 상한 근거 한 줄 주석 추가만 권고.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\05_glass-hud-overlay\\overlay_schema.md",
+            "line": "430-431 (트리거 표) / 208-221 (EvidenceHudSnapshot)",
+            "source_ids": [
+              "6-11_Hologram-Main-LLM-T8-112"
+            ],
+            "choice": "Uncertainty Alert 트리거(CONFLICTING_SOURCES 분산>0.3, STALE_DATA >24h)를 per-source 데이터가 있는 상류(Front Mini/I-10, T2-2 EvidenceSummary)에서 평가할지, HUD 스냅샷에 sources[i].confidence/retrieved_at_ms를 실어 GlassHUDData 단독 평가 가능하게 할지의 아키텍처 선택.",
+            "options": "(a) 상류 평가 + 최소 스냅샷(현행: source_count+top_source_title만 유지, 트리거 결과는 uncertainty_alert.items로 전달) / (b) 스냅샷에 per-source 필드 추가하여 HUD 측 자체 평가",
+            "recommendation": "현행 (a) 유지 — §3.5 트리거 표의 '입력 소스' 컬럼이 T2-2 sources/6-9 meta를 명시해 평가 위치가 상류임이 본문에 이미 내재. HUD 스냅샷 최소화는 LOCK-HM-10 '최소 필드 추출' 취지(L206)와 정합. §3.5에 '평가 위치=build 시점, GlassHUDData 단독 재평가 불가' 명시 한 줄만 권고.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\05_glass-hud-overlay\\rendering_rules.md",
+            "line": "101 (§2.1), 110-111 (§2.2)",
+            "source_ids": [
+              "6-11_Hologram-Main-LLM-T8-135"
+            ],
+            "choice": "Fixed HUD 앵커링 구현을 position:fixed + Right Panel contain:layout(로컬 containing block화)으로 할지, position:sticky 등가 구현으로 할지의 CSS 아키텍처 선택.",
+            "options": "(a) fixed + contain:layout (현행 정본 해석) / (b) Right Panel position:relative + sticky (본문 §2.2가 '동등'이라고 스스로 인정하는 대안) / (c) 순수 viewport-fixed",
+            "recommendation": "현행 (a) 유지 — D2.0-08 §9.1 Option A 'Fixed HUD' LOCK은 앵커링 메커니즘을 규정하지 않고, contain:layout이 fixed 자손의 containing block이 되는 것은 CSS Containment 표준 동작이라 정본 위반 없음. §2.2가 sticky 등가 구현을 이미 허용하므로 구현 시점 선택 여지로 두는 게 적절. 브라우저 지원 가드(@supports) 노트 추가만 권고.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\performance_benchmark_baseline.md",
+            "line": "26 (T-2), 32 (D-P4-5-2 reconcile)",
+            "source_ids": [
+              "6-11_Hologram-Main-LLM-T6-273"
+            ],
+            "choice": "Glass HUD 갱신 지연 SLA를 Phase3 <50ms에서 Phase4 <100ms로 완화한 임계값 선택.",
+            "options": "(a) <100ms 유지 (Phase4 정본, D-P4-5-2 reconcile 명시) / (b) <50ms 복원 (Phase3 baseline) / (c) 실측 데이터 첨부 후 재확정",
+            "recommendation": "현행 (a) 유지 — LOCK-HM-10은 '실시간 표시'만 규정하고 수치 지연값을 갖지 않으므로(finding 스스로 확인) 정본 위반 없음. D-P4-5-2 reconcile 노트가 본문 정본으로 완화를 명문화했고 100ms는 인지 한계(RAIL) 내 합리값. '실측 기반' 주장의 측정 run ID 인용 추가만 권고 (값 변경 불요).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\06_streaming-canvas\\stream_protocol.md",
+            "line": "664/675 (resync·response GET), 731-732 (fetch), 55/965-968 (인증 scope-out·§10.4)",
+            "source_ids": [
+              "HM-6-11-AUD-006"
+            ],
+            "choice": "resync/full-resync 엔드포인트의 trace_id 소유권(ownership) 검증을 본 프로토콜 문서에 명세할지, 6-2 Security-Governance(서버 구현은 6-12/6-9) 경계로 위임할지의 책임 배치 선택.",
+            "options": "(a) 현행 — §0 In/Out 표(L55)가 인증/세션 검증을 6-2 소유로 명시 위임, 본 문서는 401/세션만료(§10.4)만 연계 / (b) 본 문서에 403/404·ownership 검증·audit log 규칙 직접 추가",
+            "recommendation": "현행 (a) 유지 — 본 문서 §0이 '인증/세션 재검증 구현 제외(6-2 소유)'를 명시한 도메인 경계 설계이고 정본(도메인 소유권 체계)과 무모순. 검증 자체가 누락된 게 아니라 명세 위치가 6-2임. §7.3/§7.4에 '6-2 세션+trace 소유권 검증 상속, 실패 시 403/410' cross-ref 한 줄 추가만 권고.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\06_streaming-canvas\\token_rendering.md",
+            "line": "264-269 (§5.1 파이프라인 채택표)",
+            "source_ids": [
+              "HM-6-11-AUD-007"
+            ],
+            "choice": "메인 응답 Markdown 렌더 경로의 raw HTML/sanitizer 정책 — remark→rehype 기본 파이프라인(raw HTML 미통과, safe-by-default)에 암묵 의존할지, artifact_rendering(L379 DOMPurify 명시)처럼 명시 정책을 둘지의 보안 정책 표기 선택.",
+            "options": "(a) 현행 — unified+remark-parse+remark-rehype+rehype-react 기본값(allowDangerousHtml=false)이 raw HTML을 통과시키지 않으므로 암묵 안전 / (b) rehype-sanitize·URL allowlist·HTML_SANITIZED 전용 경로를 token_rendering에 명문화",
+            "recommendation": "현행 (a) KEEP — 채택된 파이프라인의 표준 기본 동작이 raw HTML을 렌더하지 않아 객관 결함이 아닌 명세 강도 선택. 단 UserResponseFormat에 HTML_SANITIZED가 존재(response_formatting L154)하므로, 방어선 명문화를 위해 §5.1에 'allowDangerousHtml=false 고정 + HTML_SANITIZED는 rehype-sanitize 경유' 1행 추가를 권고(정본 모순은 아니므로 CHANGE 아님).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\performance_benchmark_baseline.md",
+            "line": "30 (T-6) + stream_protocol.md:586-593 (백오프 표)",
+            "source_ids": [
+              "HM-6-11-AUD-008"
+            ],
+            "choice": "T-6 'SSE 재연결 시간 <5s (P95)'의 측정 범위 정의 — 첫 재연결 시도 지연인지, 성공까지 총 소요인지, 그리고 지수 백오프(3차 누적 7s~5차 31s)와의 양립 방식 선택.",
+            "options": "(a) P95 성공-기준 해석 유지 — 정상망에서 1~2차(누적 ≤3s) 성공이 대다수이므로 P95<5s와 백오프 표는 양립, 3차 이상은 꼬리 5% / (b) '첫 attempt 시작 시간'으로 재정의 / (c) 백오프 표를 SLO에 맞춰 단축",
+            "recommendation": "현행 (a) KEEP — P95 지표는 꼬리(3차 이상 재시도)를 허용하는 통계 정의라 백오프 표(stream_protocol §6.1 정본, realtime_update와 verbatim 공유)와 수치 모순이 아님. 백오프 변경(c)은 peer 2개 문서 verbatim 정합을 깨므로 비권장. T-6 비고란에 '성공까지 시간, P95, 자동재시도 5회 내' 측정 범위 1행 명시만 권고.",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\07_orchestration-layer\\cost_evidence_log.md",
+            "line": "492-514 (write_all_stores·위반 시 롤백), 645-650 (recovery.action=rollback_stores), 675 (TS-CEL-12)",
+            "source_ids": [
+              "HM-6-11-AUD-009"
+            ],
+            "choice": "store_write_order 위반 시 rollback_stores의 구현 전략 — snapshot-restore 방식인지 per-store compensation 방식인지, idempotency/재실패 처리 수준을 어디까지 명세할지의 복구 아키텍처 선택.",
+            "options": "(a) 현행 — rollback_stores 액션·next_retry_ms=100·user_facing=false만 계약으로 규정, 메커니즘은 구현 자유 / (b) write 전 7-store snapshot + 역순 restore 명세 / (c) store별 compensation action 테이블 명세",
+            "recommendation": "현행 (a) KEEP — 정본(LOCK-HM 체계·overlay_schema store_write_order verbatim)은 쓰기 순서만 규정하고 롤백 메커니즘은 무규정이므로 구현 선택지. 동기 7-store 메모리 쓰기라 snapshot-restore가 자명한 구현이며 계약 수준 명세로 충분. 차기 개정 시 §8.1에 'write 전 스냅샷 보관 → 역순 복원' 2행 추가 권고(의무 아님).",
+            "action": "KEEP"
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-11_Hologram-Main-LLM\\03_ui-state-machine\\state_definitions.md",
+            "line": "375-377 (근거/실행/포맷 축) vs 340/353 (retryAxis·user.retry.* 영문) vs 391 (evidence 재수집)",
+            "source_ids": [
+              "6-11_Hologram-Main-LLM-T5-076"
+            ],
+            "choice": "재시도 3축의 표기 컨벤션 — 기계값(retryAxis enum·trigger명)은 영문 {evidence, execution, format}, 본문 산문·에러표는 한글 {근거, 실행, 포맷}으로 이원화할지, 단일 언어로 통일할지의 네이밍 선택.",
+            "options": "(a) 현행 이원화 유지 (기계값 영문 / 표시·산문 한글, 1:1 대응 자명) / (b) 문서 전체 영문 통일 / (c) 한↔영 매핑 표 1개 추가",
+            "recommendation": "현행 (a) KEEP — 근거=evidence, 실행=execution, 포맷=format 1:1 대응이 명확하고 trigger/ctx 기계값은 영문으로 일관(L340/353/472)되어 구현 모호성 없음. 정본 위반 없는 표기 컨벤션 선택. §5 에러표 옆에 '(근거=evidence/실행=execution/포맷=format)' 매핑 1행 추가만 권고.",
+            "action": "KEEP"
+          }
+        ],
+        "notes": "앵커 9건과 정확히 일치 (count_found=9, 짜맞춤 아님 — 후보 도출이 자연히 9건으로 수렴). 도출 절차: (1) mf_in 객관결함 25건(i0~i24)을 소스 ID로 역매핑해 제외 — T8-002/004/009/033/034/035/038/065/067/080/097/105/129/141/143/161/162/175/186/204, T6-234/235, AUD-001~005 (T8-106은 mf_in i21과 동근원 중복, T8-185는 i14와 동근원 중복으로 제외). (2) verify=refuted 오탐 9건 제외 — T8-005/010/019/089/091/117/128/185/262. (3) 잔여 9건 전수를 디스크 실측 확인 후 등재. 디스크 라인 보정: T8-108은 finding L192→현재 L193, T6-273은 L31→L32. 기해소 확인사항: 세션5 객관 168건 적용 흔적이 디스크에 확인됨 — stream_protocol.md L707-713에 handleGap 후 OOO 버퍼 flush(T8-161 해소), L741-748에 빈배열/partial escalation(T8-162 해소)이 이미 패치되어 있음 (둘 다 mf_in 객관분이므로 본 리스트와 무관, 참고 기록). 9건 전부 KEEP — RULE 1.3/PLAN 3.0/DESIGN LOCK 어느 층에서도 수치·메커니즘 모순이 발견되지 않았고(LOCK-HM-10은 지연 수치 무규정, LOCK은 쓰기순서만 규정 등), 현행 값/아키텍처가 합리적이며 본문 reconcile(D-P4-5-2 등)로 이미 정본화된 항목 포함. CHANGE/edit 0건. 읽기 전용 준수 — 파일 수정 0."
+      },
+      {
+        "domain": "6-12_Event-Logging",
+        "count_target": 9,
+        "count_found": 9,
+        "subjective_items": [
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/failure_code_registry_v2.md",
+            "line": "282-283 (§3.5 심각도 P1 / 권고 레벨 WARN)",
+            "choice": "P1(긴급) SDAR_REPAIR_FAIL의 권고 로그 레벨을 ERROR가 아닌 WARN으로 두는 레벨 매핑 선택",
+            "options": "(a) WARN 유지(자동 fallback 활성 가능 시, V1 §4.11 정본 cite) vs (b) HITL 에스컬레이션 경로이므로 ERROR 격상",
+            "recommendation": "KEEP WARN — 정본 우선: V1 §4.11 권고 레벨 cite + log_level_spec §4.1 규약 'SDAR_* (V2) → WARN, 예외 없음'(충돌 시 본 규약 우선 명시)과 정합하며, 알림 부족은 FB_SDAR_ESCALATE HITL + 운영자 알림(TS-SDAR-REPAIR-1)으로 보상됨",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-041"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/failure_code_registry_v2.md",
+            "line": "155-156 (§3.2 심각도 P3 / 권고 레벨 WARN)",
+            "choice": "COND_BATCH_TIMEOUT P3(정보)를 INFO가 아닌 WARN으로 매핑하는 선택 — LOCK-EL-07 연계 규칙(§2.2)이 P2/P1만 명시하고 P3은 미규정",
+            "options": "(a) WARN 유지('P3 정보지만 운영 알림 가치' 근거 명기) vs (b) P3→INFO 일괄 규칙 신설 vs (c) §2.2에 P3→WARN 규칙 명문화",
+            "recommendation": "KEEP WARN — 정본 우선: log_level_spec §4.1 규약 'COND_* (V2) → WARN (예외 COND_BLOCK=ERROR)'이 이미 상위 규약으로 커버하므로 LOCK 위반 없음, 레지스트리 행에 근거('운영 알림 가치')도 명기됨",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-042"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/03_trace-context/loki_integration_v3.md",
+            "line": "67 (§3 알림 룰 4 EXP_A2A_AUTH_FAIL [5m] > 5, FB_A2A_RETRY mTLS 재시도 3회)",
+            "choice": "A2A 인증 실패 알림 임계값(>5/5m)과 lockout 없는 재시도 전용 폴백 전략의 선택",
+            "options": "(a) >5/5m + FB_A2A_RETRY 유지 vs (b) 임계 하향(>0~3) + rate-limit/lockout 에스컬레이션 추가",
+            "recommendation": "KEEP — 정본 우선: FB_A2A_RETRY는 fallback_registry V1 canonical cite-only 값이고 임계값은 LOCK 미규정 자유 설계값, ERROR 레벨 + 보안 라우팅으로 모니터링은 확보됨 (lockout 정책은 6-2 Security 소관의 향후 확장 후보)",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-061"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/log_level_spec.md",
+            "line": "402 (§6.4 '총 penalty ≥ 0.30 이면 강제 ERROR 승격(추가 규칙)')",
+            "choice": "누적 confidence penalty 0.30을 강제 ERROR 승격 임계로 두는 추가 규칙의 임계값/적용 범위 선택",
+            "options": "(a) ≥0.30 승격 규칙 유지 vs (b) 누적 단위(요청별/이벤트별) 명문화 후 유지 vs (c) 규칙 삭제(Phase별 레벨로 충분)",
+            "recommendation": "KEEP — 임계값은 LOCK 미규정 설계값이며 R6(-0.50, 이미 CRITICAL)과의 충돌 주장은 레벨 승격이 단조(max) 연산이라 실효 모순 없음; 본문 우선순위상 §6.4가 자체 정본('충돌 시 본 규약 우선')",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-063"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/never_auto_detector.md",
+            "line": "170 (detect_never_auto confidence_penalty=-0.20 고정) vs 260-262 (§4.2 HITL 승인 -0.10 / 거부 -0.20)",
+            "choice": "탐지 시점에 잠정 penalty -0.20(레지스트리 정본값)을 선할당하고 HITL 승인 성공 시 -0.10으로 완화하는 2단계 penalty 부여 설계",
+            "options": "(a) 탐지=잠정 -0.20, 결과 확정 후 §4.2 표로 최종값 적용(현행) vs (b) 탐지 시 penalty 미할당, HITL 결과 후 일괄 부여",
+            "recommendation": "KEEP — 정본 우선: 탐지 verdict의 -0.20은 failure_code_registry §9 'CRITICAL/NEVER_AUTO −0.20' 정본 cite이고 §4.2가 결과별 최종값(-0.10/-0.20/-0.50)을 별도 정본(registry §9 + fc_fb_mapping §4)으로 명시하므로 보수적 선할당-후완화는 무모순 설계",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-070"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/never_auto_detector.md",
+            "line": "192-195 (_route_rule: R1 명시 분기 + '그 외 OC_I5_POLICY_BLOCK → R1 기본값')",
+            "choice": "OC_I5_POLICY_BLOCK 미분류 케이스를 가장 일반적/엄격한 R1으로 fail-safe 기본 라우팅하는 설계 (S3 가드 분기와 기본값이 동일 결과)",
+            "options": "(a) R1 기본값 유지(명시 분기는 정상 경로 문서화 역할) vs (b) 미분류 케이스 전용 R0/UNKNOWN 분기 신설 vs (c) S3 가드 제거",
+            "recommendation": "KEEP — R1 기본값은 NEVER_AUTO 도메인에서 가장 안전한 fail-closed 선택이고(어느 경로든 CRITICAL+escalate), 가드 분기는 R4/R5 판별 순서를 정의하는 역할로 기능상 무해; 정본 위반 없음",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T8-058"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/01_event-system/event_schema.md",
+            "line": "116 (§2.3 선택 필드 `severity`) vs log_level_spec LogRecord `level` / registry 'Level 권고'",
+            "choice": "이벤트 envelope 계층의 선택 필드명은 `severity`, 로그 레코드 계층은 `level`로 계층별로 다른 필드명을 쓰는 명명 설계",
+            "options": "(a) 계층별 이원 명명 유지(envelope=severity, log=level) vs (b) 전 계층 `level` 단일화",
+            "recommendation": "KEEP — structured_logging §3.1 row 7이 `severity`→`level`(add_log_level) 매핑을 명시적으로 정본 등재해 두 명칭의 대응이 문서화되어 있고, LOCK-EL-07은 5단계 값만 잠그지 필드명은 잠그지 않음(비필수 권고 필드, non-LOCK 명시)",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T5-008"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/02_logging-standard/log_level_spec.md",
+            "line": "237 (§3.2.5 'LOCK-EL-06 5규칙'), 308-315 (§4.3 NEVER_AUTO 5규칙 표) vs never_auto_detector §3.3 (5규칙→3 FC 매핑)",
+            "choice": "NEVER_AUTO를 '탐지 상황 5규칙(R1~R5)'으로 표현하면서 정본 코드는 3 FailureCode로 수렴시키는 m:1 프레이밍 설계",
+            "options": "(a) 5규칙 표현 유지(탐지 상황) + 3코드 정본(LOCK-EL-06) 이원 구조 vs (b) 3코드 단일 표현으로 통일 vs (c) log_level_spec에 5→3 수렴 각주 추가",
+            "recommendation": "KEEP — 정본 우선: LOCK-EL-06 정본 범위(3코드)는 never_auto_detector §3.3 표가 R1~R5→3 FC 매핑으로 이미 reconcile했고(P1-9), 탐지 규칙 수와 코드 수를 분리하는 것은 검증 가능한 정본 위반이 없는 표현 설계",
+            "action": "KEEP",
+            "source_ids": [
+              "6-12_Event-Logging-T6-057"
+            ]
+          },
+          {
+            "file": "D:/VAMOS/docs/sot 2/6-12_Event-Logging/CONFLICT_LOG.md",
+            "line": "6 (헤더 OPEN 0/RESOLVED 6) vs 15, 29 (본문 CFL-EL-001/002 '상태: OPEN') + AUTHORITY_CHAIN.md 172-177 (§7.5 OPEN 2 스냅샷) vs 300-302 (§7.12.3 OPEN 0)",
+            "choice": "메타 문서를 append-only로 운영해 본문 등재 시점 상태(OPEN)와 단계별 스냅샷(§7.5)을 byte 보존하고, 현행 상태는 헤더·변경이력 row로만 갱신하는 문서화 컨벤션",
+            "options": "(a) append-only 유지 + 헤더/변경이력=현행 정본(현행) vs (b) 본문 상태를 RESOLVED로 in-place 갱신 vs (c) §7.5에 'historical snapshot' 라벨만 추가",
+            "recommendation": "KEEP — 정본 우선: 현행 상태의 정본은 헤더 L6('OPEN 0건 ✅')와 v1.4/v1.5 변경이력 row이며, 본문 OPEN 보존은 6-5/6-7 등 도메인 횡단 선례가 확립된 append-only 컨벤션(V1 byte-prefix SHA UNCHANGED 엄수)이라 모순이 아닌 의도된 설계",
+            "action": "KEEP",
+            "source_ids": [
+              "EL-AUDIT-001",
+              "EL-AUDIT-002"
+            ]
+          }
+        ],
+        "notes": "전수 처리 완료(표본 없음). 입력 4파일 dedup 결과: clc 25건 + tight 15건(전부 clc 부분집합) + GPT 12건 → mf_in 객관 19건(i0~i18)과 동일/중복인 T8-001·T6-019, T8-026, T5-056, T8-007, T8-010, T8-021, T8-020, T8-009, T8-075, T8-076, T8-083, T8-043, T8-059, T5-040, EL-AUDIT-003/004/005/006/007/009 제외. 추가 제외: T6-004(인용 시작라인 5814 vs 5830 — 단순 표기), T8-093(plan 48→52 수치 — 최종 정본 48=44+4로 객관 영역, 설계선택 아님), EL-AUDIT-008(stale 참조 46건 실재하나 CFL-EL-002 RESOLVED 자체가 'V3 단계 일괄 교정 forward-defined' 결정이므로 잔존은 결정 이행 상태 — 9번 항목의 append-only/V1 동결 컨벤션과 동일 뿌리라 별도 등재 안함), EL-AUDIT-010(structured_logging L269 startup 예시가 자기 파일 §3.1 required 규칙 위반 — 객관성 결함 성격), EL-AUDIT-011(oc.i5.policy.block vs 등록값 oc.i5.policy.blocked L118 — 객관/표기), EL-AUDIT-012(is_confident:false 체크리스트 템플릿 표기). 카운트: 앵커 9 = 도출 9 일치. 단 EL-AUDIT-001과 002는 동일 설계선택(append-only 메타문서 컨벤션)의 2개 파일 발현이라 1건으로 병합 — 분리 계산 시 10건. 기해소 확인(2026-06-11 세션5 적용 흔적): failure_code_registry_v2.md L301 retry_attempts가 이미 min_length=1,max_length=3으로 교정(T8-043 해소), loki_integration_v3.md L52 Panel 7이 이미 'correlation_id Missing Rate'로 개명(T8-059 해소) — 둘 다 mf_in 객관분. finding의 line 번호는 디스크 실측과 1~4행 drift 있어 항목별 line 필드는 실측값 기준. 전 항목 KEEP — 정본(RULE/PLAN/LOCK/본문) 모순 발견 0건, 파일 수정 0건(읽기 전용 준수)."
+      },
+      {
+        "domain": "6-13_Operations",
+        "count_target": 3,
+        "count_found": 3,
+        "subjective_items": [
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-13_Operations\\OPERATIONS_운영매뉴얼.md",
+            "line": "174 (QoD 이동평균 행 LOCK-ML-07 참조), 224 (R4); AUTHORITY_CHAIN.md:38-53 (레지스트리는 LOCK-OP-01~14만)",
+            "choice": "타 도메인 소유 LOCK(LOCK-ML-07)을 소비할 때 로컬 AUTHORITY_CHAIN 레지스트리에 등재할지, cite-only 참조로만 둘지의 거버넌스 설계 선택",
+            "options": "(a) 현행: cite-only 참조, 레지스트리는 도메인 소유 14건 전용 / (b) AUTHORITY_CHAIN에 '외부 소비 LOCK' 섹션 신설 등재 / (c) 별도 dependency registry 파일",
+            "recommendation": "KEEP (a) — AUTHORITY_CHAIN 헤더가 'LOCK 항목 수: 14건(LOCK-OP-01~14)'으로 레지스트리를 도메인 소유 LOCK 전용으로 명시 스코프하고, R8(LOCK 재정의 금지)·VAMOS 교차도메인 cite-only 컨벤션과 부합한다. R4는 본 도메인 LOCK/DEFINED-HERE 출처 추적 의무이지 외부 LOCK 등재 의무가 아니므로 정본 위반 없음",
+            "action": "KEEP",
+            "source_ids": [
+              "OP-012"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-13_Operations\\06_rollback\\_index.md",
+            "line": "28-39 (V2 롤백 실행 명령); 10_sdar-fallback/_index.md:39-44 (AR-L2 config 수정); OPERATIONS_운영매뉴얼.md:193 (L3 Kill Switch 검토)",
+            "choice": "고위험 운영 조치(롤백·config 수정·Kill Switch)에 승인 주체·2인 확인·감사 필드·실행 전 Gate를 어느 강도로 문서화할지의 권한 모델 설계 선택",
+            "options": "(a) 현행: §5.3 에스컬레이션 단계별 담당 주체(당번/운영팀/팀 리드+의사결정권자)만 정의, 조치별 승인 매트릭스 없음 / (b) P0/P1 조치별 승인자·2인 확인·감사 이벤트·롤백 전 백업 Gate 명시 / (c) 권한 모델 상세를 6-2 Security-Governance로 위임",
+            "recommendation": "KEEP (a) — Part2 §6.12.3/§6.12.5와 LOCK-OP-11/12 어디에도 승인 매트릭스·2인 룰 의무가 없고, 운영매뉴얼 §5.3(L188-201)이 단계별 담당·자동/수동·판단 주체를 이미 정의하며, §7 도메인 경계상 권한/접근제어 정책 정의는 6-2 소유다. 1인 운영 규모에서 승인 강도는 설계자 재량이며 정본 모순 없음",
+            "action": "KEEP",
+            "source_ids": [
+              "OP-014"
+            ]
+          },
+          {
+            "file": "D:\\VAMOS\\docs\\sot 2\\6-13_Operations\\12_cloud-library-failover\\_index.md",
+            "line": "52 (월 1회 LLM API 페일오버 테스트: 'API 키 임시 무효화 → Ollama 전환 확인')",
+            "choice": "LLM API 페일오버 월간 드릴의 장애 주입 방법으로 운영 키 임시 무효화를 쓸지, 대체 주입 기법을 쓸지의 테스트 전략 선택",
+            "options": "(a) 현행: API 키 임시 무효화 (인증 실패 경로를 실제 end-to-end 검증) / (b) LLM_PROVIDER 강제 전환·feature flag 주입 / (c) 네트워크 차단·mock endpoint / (d) 테스트 전용 키",
+            "recommendation": "KEEP (a) — Part2 §6.12.11(L6104-6113)과 LOCK 어디에도 테스트 주입 방법이 규정되지 않은 설계 재량 영역이며, 키 무효화는 타임아웃 감지→이벤트 발행→Ollama 전환 전 경로를 실제로 검증하는 장점이 있다(키 재발급으로 가역). 복구 누락 리스크는 런북(failover_test_plan.md 예정)에 키 복원 체크 항목으로 흡수 가능하므로 정본 모순 없음",
+            "action": "KEEP",
+            "source_ids": [
+              "OP-015"
+            ]
+          }
+        ],
+        "notes": "도출 방법: GPT 16건(OP-001~016) 중 mf_in 객관결함 13건(i0~i12 = OP-001,002,003,004,005,006,007,008,009,010,011,013,016)을 매핑 제외, CL-C 2건(T6-009 LOCK-OP-14 600s 앵커 부재 주장 / T8-012 RTO V2 2h vs P1 1h)은 verify=refuted 오탐으로 제외(T8-012는 재해복구 RTO와 인시던트 복구목표가 별개 개념으로 반박됨), tight 0건. 잔여 3건이 원판정 주관 카운트 3과 정확히 일치 — 강제 짜맞춤 없음. 디스크 실측: 주관 3건 모두 현행 디스크에 그대로 존재(기해소 아님). 반면 세션5 기적용 확인분(객관, mf_in 소속): 12_cloud-library-failover L27 타임아웃 30초→5초(OP-009 기해소), L35 cite-only 정본 이벤트(OP-016 기해소), L43-46 PG 쓰기 거부 503(OP-010 기해소), 06_rollback L32-34 PREVIOUS_IMAGE_TAG 반영(OP-007 기해소), 운영매뉴얼 L276 V-5 '12개 도메인'(OP-013 기해소) — 이들로 인해 OP-014의 원 file:line(06_rollback:30-34)은 현행 28-39로 라인 시프트됨. 3건 전부 정본(RULE 1.3>PLAN 3.0>DESIGN LOCK>Part2 본문) 모순 미발견으로 action=KEEP, edit 불요."
+      }
+    ],
+    "total_found": 83,
+    "total_changes": 5
+  }
+}

@@ -453,6 +453,7 @@ class BrowserAction(Enum):
     EXTRACT = "extract"              # 데이터 추출 (CSS/XPath)
     WAIT = "wait"                    # 요소 대기
     SCROLL = "scroll"                # 스크롤
+    HOVER = "hover"                  # 요소 호버 (LOCK-WF-07)
     FILL_FORM = "fill_form"          # 폼 자동 입력
     DOWNLOAD = "download"            # 파일 다운로드
     EXECUTE_JS = "execute_js"        # JavaScript 실행

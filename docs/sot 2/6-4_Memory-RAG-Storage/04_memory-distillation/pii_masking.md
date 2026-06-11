@@ -617,7 +617,7 @@ SENSITIVITY_STORAGE_POLICY: dict[SensitivityLevel, dict] = {
         "policy_decision": "allow",
     },
     SensitivityLevel.CONFIDENTIAL: {
-        "storage_allowed": ["L0", "L1"],  # S7D-065: L1만(TTL 강제)
+        "storage_allowed": ["L1"],  # S7D-065: L1만(TTL 강제)
         "vector_insert": True,            # 마스킹 후 허용 (D2.0-06 §3.2)
         "mask_required": True,            # 벡터 삽입 전 마스킹 필수
         "ttl_forced": True,               # TTL 강제 적용

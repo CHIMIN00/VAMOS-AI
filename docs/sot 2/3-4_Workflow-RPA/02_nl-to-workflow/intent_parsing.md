@@ -480,7 +480,7 @@ const ACTION_NODE_MAP: Record<string, NodeType> = {
   "검색": "APINode",
 
   // ConditionNode
-  "판단": "ConditionNode", "비교": "ConditionNode", "확인": "ConditionNode",
+  "판단": "ConditionNode", "비교": "ConditionNode", "확인": "HumanApprovalNode",
 
   // TransformNode
   "변환": "TransformNode", "계산": "TransformNode", "매핑": "TransformNode",

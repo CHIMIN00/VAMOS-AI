@@ -1012,7 +1012,7 @@ class EscalationPayload:
 | 5 | P2-T-RAG-05 | GraphRAG + Stage 5 | KG 서브그래프 → 컨텍스트 보강 | 관련 엔티티 포함 |
 | 6 | P2-T-RAG-06 | DCL + Stage 4 | Deny 판정 문서 → 저장 차단 | LOCK-MR-015 검증 |
 | 7 | P2-T-RAG-07 | PII + Stage 1 | PII 포함 문서 → 마스킹 후 Ingest | 벡터에 PII 없음 |
-| 8 | P2-T-RAG-08 | B-3 Decay + Stage 4 | TTL 만료 벡터 → 자동 삭제 | Decay 후 검색 결과 미포함 |
+| 8 | P2-T-RAG-08 | B-3 Decay + Stage 4 | Decay 임계 도달 벡터 → 비활성화(deprecated) 태깅·검색 제외 (LOCK-MR-005: 자동 삭제 금지) | Decay 후 검색 결과 미포함 |
 | 9 | P2-T-RAG-09 | Export + Stage 5 | 내보내기 데이터 → 재임포트 → 검색 동일 | 데이터 무결성 |
 | 10 | P2-T-RAG-10 | DCL-FIN + Stage 1 | RSS 수집 → 자동 Ingest | 자동 인덱싱 완료 |
 | 11 | P2-T-RAG-11 | 전 Stage | E2E Ingest + Query + project_id 격리 | 전체 파이프라인 정합 |

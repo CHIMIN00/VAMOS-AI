@@ -231,7 +231,7 @@ flowchart TD
 - 모든 access 이벤트는 `AuditLog` 로 기록
 - 보존: **무기한** (사용자 수동 삭제 전까지) — GDPR 접근 로그 권리 보장
 - 암호화: `AuditLog` 자체도 AES-256-GCM 암호화 (LOCK-HW-06 준수)
-- **주의**: 감정 로그 (LOCK-HW-03 180일, CL-002 OPEN) 와 달리 AuditLog 는 별도 정책
+- **주의**: 감정 로그 (LOCK-HW-03 180일, CL-002 DEFERRED_TO_PHASE3) 와 달리 AuditLog 는 별도 정책
 
 ### 5.3 삭제 정책
 

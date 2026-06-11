@@ -448,9 +448,10 @@ concurrency:
     CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
   run: |
     echo "$CERTIFICATE" | base64 --decode > certificate.p12
-    security create-keychain -p "" build.keychain
+    KEYCHAIN_PW=$(openssl rand -base64 32)
+    security create-keychain -p "$KEYCHAIN_PW" build.keychain
     security import certificate.p12 -k build.keychain -P "$CERTIFICATE_PASSWORD" -T /usr/bin/codesign
-    security set-key-partition-list -S apple-tool:,apple: -s -k "" build.keychain
+    security set-key-partition-list -S apple-tool:,apple: -s -k "$KEYCHAIN_PW" build.keychain
 ```
 
 **Windows**:

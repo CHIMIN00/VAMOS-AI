@@ -725,7 +725,7 @@ class HybridSearcher:
 
         # LOCK 검증
         if alpha != 0.7:
-            self._log("WARNING", "HYB_WARN_001",
+            self._log("WARNING", "HYB_ERR_007",
                       f"alpha={alpha} overridden to 0.7 (LOCK-MR-008)",
                       project_id=project_id)
             alpha = 0.7  # LOCK-MR-008 강제

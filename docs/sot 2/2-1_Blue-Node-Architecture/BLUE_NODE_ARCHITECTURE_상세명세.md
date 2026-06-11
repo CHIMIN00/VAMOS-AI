@@ -113,6 +113,8 @@ class DynamicPermissionAdjuster:
 
 ### 2.1 VamosMessage 표준 포맷
 
+> **LOCK-BN-16 정본**: VamosMessage 구조는 02_core-node-interface/_index.md §1 (D2.0-03 K-049 — id, type, source, target, content, metadata 6개 top-level 필수) 정본을 따른다. 아래 스키마는 MODULE-ARCH 확장 초안으로 정본과 충돌 시 정본이 우선하며, auth_token/permission_level/signature 는 메시지 필드가 아닌 AuthGateway/Policy/Gate 계층 소관이다 (종합계획서 '선행 교정: 상세명세 §2 ↔ SoT 불일치 해소' 참조).
+
 ```python
 class VamosMessage(BaseModel):
     """모든 CORE-NODE 간 통신의 기본 메시지 포맷 (K-049)"""
@@ -150,6 +152,8 @@ class MessageMetadata(BaseModel):
 ```
 
 ### 2.2 NodeRequestEnvelope
+
+> **LOCK-BN-03/04 정본**: §2.2~§2.3 봉투 구조는 02_core-node-interface/_index.md §2~§3 정본을 따른다 (LOCK-BN-03 7필수: request_id, project_id, session_id, node_id, intent_summary, constraints, trace_id / LOCK-BN-04 7필수: trace_id, node_id, domain, inputs.summary, outputs.result, outputs.evidence_refs, status[success|fail]). 아래 스키마의 비-LOCK 필드는 MODULE-ARCH 확장 또는 constraints 내부 재분류 대상이며 정본과 충돌 시 정본이 우선한다 (종합계획서 '선행 교정: 상세명세 §2 ↔ SoT 불일치 해소' 참조).
 
 ```python
 class NodeRequestEnvelope(BaseModel):

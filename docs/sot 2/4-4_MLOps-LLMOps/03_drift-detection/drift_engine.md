@@ -565,8 +565,8 @@ class DriftAutoResponder:
     def respond(self, alert: DriftAlert) -> "AutoResponseResult":
         actions: list[str] = []
 
-        # CRITICAL (LOCK-ML-07): QoD<0.60 → 즉시 롤백 + 재평가
-        if alert.severity == Severity.CRITICAL:
+        # CRITICAL (LOCK-ML-07): QoD<0.60 → 롤백 + 재평가 (§C-4 정본: auto_rollback=true 설정 시)
+        if alert.severity == Severity.CRITICAL and self.auto_rollback:
             # (a) 카나리 롤백 신호 출력 (2-3 인터페이스, LOCK-ML-09)
             self.canary.rollback(reason="LOCK-ML-07 EMERGENCY",
                                  alert_id=alert.alert_id,

@@ -61,7 +61,7 @@
 
 | 섹션 | 범위 | 항목수 | 주요 내용 | 서브폴더 매핑 |
 |------|------|--------|----------|-------------|
-| **A: §6.1 UI/UX v12 추가** | A-1~A-4 | 4건 (11 컴포넌트) | 웰니스 UI 3종, CBT 도구 2종, 번아웃 예방 2종, 학습 도구 3종 | `01_wellness-ui/`, `02_learning-tools/` |
+| **A: §6.1 UI/UX v12 추가** | A-1~A-4 | 4건 (10 컴포넌트) | 웰니스 UI 3종, CBT 도구 2종, 번아웃 예방 2종, 학습 도구 3종 | `01_wellness-ui/`, `02_learning-tools/` |
 | **B: §6.7 Agent Teams v12 추가** | B-1~B-2 | 2건 (4 항목) | Prompt Registry API, TemplateSets 3종 | `03_agent-teams/` |
 | **C: §6.8 AI Investing v12 추가** | C-1~C-2 | 2건 | Black-Litterman 모델, Factor Investing (6 팩터) | `04_investing-additions/` |
 | **D: §6.10 Cloud Library v12 추가** | D-1~D-10 | 10건 | Evolution Control ~ Zettelkasten Extension | `05_cloud-library/` |
@@ -151,11 +151,7 @@ D:\VAMOS\docs\sot 2\5-3_v12-Additions-Detail\
 │   └── zettelkasten_extension.md              ← D-10 → #6 PKM 정본 참조
 │
 └── 06_v2-v3-advanced\                         ← V2/V3 고급 확장 v12 항목
-    ├── _index.md                              ← 섹션 E/F/G 인덱스
-    ├── v2_phase3_high.md                      ← E-1~E-8 HIGH 항목 인덱스
-    ├── v2_phase3_medium.md                    ← E-9~E-15 MEDIUM 항목 인덱스
-    ├── v3_phase2_medium.md                    ← F-1~F-6 인덱스
-    └── v3_phase3_low.md                       ← G-1~G-6 인덱스
+    └── _index.md                              ← 섹션 E/F/G 인덱스 (E/F/G 27건은 §2.2 규칙에 따라 _index.md 내부 섹션으로 처리)
 ```
 
 ### 2.2 폴더 깊이 규칙
