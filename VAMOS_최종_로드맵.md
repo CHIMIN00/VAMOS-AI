@@ -411,7 +411,7 @@ Should 미통과 → V1에서 보완 (A9)
 - □ Must 11개 전부 통과 (STRATEGY_02 표 기준 — 위 분모 확정 참조)
 - □ B2c 타입 동기화: Python↔Rust↔TS 일치 + 왕복 PASS (A20)
 - □ 하네스 자동 실행: 매 커밋 ruff+vamos_lint+pytest 확인
-- □ 다층 방어 구현: config LOCK(Defense Layer1) + 5-Gate(Defense Layer2) + NEVER_AUTO(Defense Layer3) (A21)
+- □ 다층 방어 구현: config LOCK(Defense Layer1) + Gate 체인(Defense Layer2 — V0는 Policy/Cost/Approval 3종, 5-Gate 완성은 V1) + NEVER_AUTO(Defense Layer3) (A21)
 - □ 사용자 투명성: reasoning_trace 필드 존재 (A22)
 - □ 예측 신뢰도: confidence_score + 임계값 + 행동 분기 동작 (A25)
 
