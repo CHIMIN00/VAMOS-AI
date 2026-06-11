@@ -900,7 +900,7 @@ Benchmark-Evaluation은 Tier 5 Quality/Cross-cutting 도메인으로, 타 도메
   - S7G-072 (promptfoo 통합) — 정의: 프롬프트 변경 시 자동 회귀 테스트. CI/CD 통합: PR마다 promptfoo 자동 실행, 품질 저하 시 머지 차단. 구현: STEP7-F S7F-070 상세 참조. Phase 0에서는 기본 설정(2개 벤치마크), Phase 1에서 10+ 벤치마크 자동 실행으로 확장
   - S7G-073 (회귀 테스트 자동화) — 참고: assertions 임계값 설계 시 "이전 대비 3% 이상 하락 시 알림" 기준 반영 (Phase 1 연동)
 - `D:\VAMOS\docs\sot\STEP7-F_인프라_배포_MLOps_작업가이드.md`
-  - S7F-070 (프롬프트 테스트 — promptfoo 자동 평가) — promptfoo 구현 상세 정본: promptfooconfig.yaml 구조, providers (anthropic:messages:claude-3-5-sonnet), tests (vars + assert), assert 유형 (contains, not-contains, llm-rubric). 비용: 무료 오픈소스
+  - S7F-070 (프롬프트 테스트 — promptfoo 자동 평가) — promptfoo 구현 상세 정본: promptfooconfig.yaml 구조, providers (anthropic:messages:claude-sonnet-4-6 — 2026-06-11 승계), tests (vars + assert), assert 유형 (contains, not-contains, llm-rubric). 비용: 무료 오픈소스
 - `D:\VAMOS\docs\sot 2\5-1_Benchmark-Evaluation\BENCHMARK_EVALUATION_상세명세.md`
   - §A-1 (MMLU 채점 규칙) — 5-shot, exact match (정규식 `^[A-D]` 또는 `answer is [A-D]`), 추출 실패 시 오답, 과목별 균등 가중치(1/57), macro average, bootstrap 95% CI. 목표: ≥ 85%
   - §A-2 (HumanEval 채점 규칙) — pass@1 (Docker 샌드박스, Python 3.11, 타임아웃 10초/문제), 코드 추출 (```python 블록), pass@k 공식: `1 - C(n-c,k)/C(n,k)`, 부분 점수 없음 (binary). 목표: pass@1 ≥ 85%
@@ -929,7 +929,7 @@ Benchmark-Evaluation은 Tier 5 Quality/Cross-cutting 도메인으로, 타 도메
    - CI/CD 통합: PR마다 자동 실행, 품질 저하 시 머지 차단 → F-06에서 구현
 2. STEP7-F S7F-070 구현 상세 확인 — promptfoo yaml 구조 정본:
    - prompts: 시스템 프롬프트 파일 참조 (`file://prompts/system/...`)
-   - providers: `anthropic:messages:claude-3-5-sonnet-20241022` (모델 지정)
+   - providers: `anthropic:messages:claude-sonnet-4-6` (모델 지정 — 원표기 claude-3-5-sonnet-20241022 retired, 2026-06-11 승계)
    - tests: vars (입력 변수) + assert (검증 조건) 구조
    - assert 유형: contains (키워드 포함), not-contains (키워드 미포함), llm-rubric (LLM 판정), equals (정답 일치)
 3. 상세명세 §A-1, §A-2 채점 규칙 → promptfoo assertions 매핑 설계:
@@ -943,7 +943,7 @@ Benchmark-Evaluation은 Tier 5 Quality/Cross-cutting 도메인으로, 타 도메
 5. `promptfoo.yaml` 설정 파일 작성:
    - description: "VAMOS Benchmark Evaluation — Phase 0 (MMLU + HumanEval)"
    - providers:
-     - id: `anthropic:messages:claude-3-5-sonnet-20241022` (S7F-070 정본)
+     - id: `anthropic:messages:claude-sonnet-4-6` (S7F-070 정본 — 원표기 claude-3-5-sonnet-20241022 retired 2025-10-28, 2026-06-11 드롭인 승계)
      - config: temperature=0 (R-18-1 재현성), max_tokens=1024 (MMLU) / 2048 (HumanEval)
      - API 키: `ANTHROPIC_API_KEY` 환경변수 참조 (yaml에 하드코딩 금지)
    - defaultTest: options.seed=42 (R-18-1)
@@ -967,7 +967,7 @@ Benchmark-Evaluation은 Tier 5 Quality/Cross-cutting 도메인으로, 타 도메
 
 **검증** (2026-04-02 전수 PASS — 60항목 자동화 검증 0이슈):
 - [x] promptfoo.yaml 존재 + 문법 유효 — YAML lint 통과 (yaml.safe_load 성공, description/providers/prompts/tests/defaultTest/outputPath 6개 필수 키 전수 확인)
-- [x] providers 모델 설정 정상 — id=anthropic:messages:claude-3-5-sonnet-20241022 (S7F-070 정본), temperature=0 (R-18-1), max_tokens=2048 (시뮬레이션 모드로 구조 검증, 실제 API 연결은 배포 시 확인)
+- [x] providers 모델 설정 정상 — id=anthropic:messages:claude-sonnet-4-6 (2026-06-11 승계) (S7F-070 정본), temperature=0 (R-18-1), max_tokens=2048 (시뮬레이션 모드로 구조 검증, 실제 API 연결은 배포 시 확인)
 - [x] MMLU 벤치마크 실행 성공 — 50문항 exact match 채점, macro average=0.22 (시뮬레이션), CI=[0.10, 0.34] (LOCK-BE-06 bootstrap B=1000), n_shot=5 (§A-1), 결과 JSON 저장
 - [x] HumanEval 벤치마크 실행 성공 — 20문항 pass@1=0.15 (시뮬레이션), timeout_seconds=10.0 (§A-2), 결과 JSON 저장
 - [x] `promptfoo eval` 실행 성공 — §10.3 V-12 선행 충족 (시뮬레이션 모드, 70건=MMLU 50+HumanEval 20): promptfoo_eval_latest.json 생성 확인

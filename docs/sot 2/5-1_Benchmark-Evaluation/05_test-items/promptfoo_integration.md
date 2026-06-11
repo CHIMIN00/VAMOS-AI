@@ -62,7 +62,7 @@ env:
   EVAL_MODE: ${EVAL_MODE:-sim}  # sim | live
 
 providers:
-  - id: anthropic:messages:claude-3-5-sonnet-20241022
+  - id: anthropic:messages:claude-sonnet-4-6
     config:
       temperature: 0          # R-18-1
       apiKey: ${ANTHROPIC_API_KEY}
@@ -113,7 +113,7 @@ def get_provider(mode: str):
 description: "VAMOS Benchmark Evaluation — Phase 1 Full (13+ benchmarks)"
 
 providers:
-  - id: anthropic:messages:claude-3-5-sonnet-20241022
+  - id: anthropic:messages:claude-sonnet-4-6
     config:
       temperature: 0          # R-18-1 재현성
       max_tokens: 2048

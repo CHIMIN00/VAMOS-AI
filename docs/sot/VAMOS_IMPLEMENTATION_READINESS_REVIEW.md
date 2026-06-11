@@ -591,8 +591,8 @@ Phase 5 (Week 9-12): Integration + Test + Release
 |---|--------|----------|
 | 1 | `TAURI_SIGNING_PRIVATE_KEY` | V1+ |
 | 2 | `TAURI_SIGNING_PRIVATE_KEY_PASSWORD` | V1+ |
-| 3 | `DEPLOY_SSH_KEY` | V2+ |
-| 4 | `DEPLOY_HOST` | V2+ |
+| 3 | `STAGING_SSH_KEY` / `PROD_SSH_KEY` | V2+ |
+| 4 | `STAGING_HOST` / `PROD_HOST_LIST` | V2+ |
 | 5 | `POSTGRES_USER` | V2+ |
 | 6 | `POSTGRES_PASSWORD` | V2+ |
 | 7 | `QDRANT_API_KEY` | V2+ |

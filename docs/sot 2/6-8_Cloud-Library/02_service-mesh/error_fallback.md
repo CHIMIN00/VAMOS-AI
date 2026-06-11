@@ -152,7 +152,6 @@ FailureCode 형식: <STAGE>_<CATEGORY>_<DETAIL>
 | `G3_SECURITY_LOW` | Security < 30 (L7) | FB-4 운영자 알림 + I-20 큐 | — |
 | `G3_THREAT_INTEL_HIT` | V2+ MITRE ATT&CK 매칭 | 즉시 ESCALATED + 6-2 Security 알람 | V2+ |
 | `SCORE_BORDERLINE_G3` | 28 ≤ score < 30 (G3 임계값 -2 경계) | FB-3 I-20 운영자 큐 | — |
-| `SCORE_BORDERLINE_G3` | 28 ≤ score < 30 (G3 임계값 -2 경계) | FB-3 I-20 운영자 큐 | — |
 
 #### §4.2.6 S5 G4_ARCHIVE_ONLY — 2건
 

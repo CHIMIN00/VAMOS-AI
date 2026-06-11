@@ -1004,7 +1004,7 @@ jobs:
       - name: Configure SSH
         uses: webfactory/ssh-agent@v0.9.0
         with:
-          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
+          ssh-private-key: ${{ inputs.environment == 'production' && secrets.PROD_SSH_KEY || secrets.STAGING_SSH_KEY }}
 
       - name: Generate .env file
         run: |
@@ -1020,7 +1020,7 @@ jobs:
 
       - name: Deploy via Docker Compose
         run: |
-          ssh ${{ secrets.DEPLOY_HOST }} << 'ENDSSH'
+          ssh ${{ inputs.environment == 'production' && secrets.PROD_HOST_LIST || secrets.STAGING_HOST }} << 'ENDSSH'
             cd /opt/vamos
             docker compose pull
             docker compose up -d --remove-orphans
@@ -1032,7 +1032,7 @@ jobs:
 
       - name: Post-deploy smoke test
         run: |
-          ssh ${{ secrets.DEPLOY_HOST }} << 'ENDSSH'
+          ssh ${{ inputs.environment == 'production' && secrets.PROD_HOST_LIST || secrets.STAGING_HOST }} << 'ENDSSH'
             curl -sf http://localhost:8080/api/v1/health | jq .
             curl -sf http://localhost:8080/api/v1/schemas/version | jq .
           ENDSSH
@@ -1732,8 +1732,8 @@ on:
 |-------------|------|------|
 | `TAURI_SIGNING_PRIVATE_KEY` | Tauri 앱 서명 | V1+ |
 | `TAURI_SIGNING_PRIVATE_KEY_PASSWORD` | 서명 키 패스워드 | V1+ |
-| `DEPLOY_SSH_KEY` | 배포 서버 SSH | V2+ |
-| `DEPLOY_HOST` | 배포 서버 호스트 | V2+ |
+| `STAGING_SSH_KEY` / `PROD_SSH_KEY` | 배포 서버 SSH (staging/prod 분리, CFL-CI-14) | V2+ |
+| `STAGING_HOST` / `PROD_HOST_LIST` | 배포 서버 호스트 (staging/prod 분리, CFL-CI-14) | V2+ |
 | `POSTGRES_USER` | DB 사용자 | V2+ |
 | `POSTGRES_PASSWORD` | DB 패스워드 | V2+ |
 | `QDRANT_API_KEY` | Qdrant API 키 | V2+ |
