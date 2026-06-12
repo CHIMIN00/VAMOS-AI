@@ -1,6 +1,6 @@
 # VAMOS AI 프로젝트 컨텍스트
 
-> **자동 로딩 파일** | 최종 갱신: 2026-06-11 (Phase 2-1 보강 — §21~§28 신설 + 실측 갱신)
+> **자동 로딩 파일** | 최종 갱신: 2026-06-12 (Phase 3 완료 — §28.4 현행화; 본문 보강은 2026-06-11 Phase 2-1)
 > **목적**: Claude Code 대화 시작 시 VAMOS 프로젝트 전체 맥락을 즉시 제공
 
 ---
@@ -942,5 +942,5 @@ Phase 완료 시: git tag phase{N}-complete → git push --tags (A2) + 회고 de
 
 ### 28.4 Phase 진행 현황 (2026-06-12)
 
-- Phase 0 ✅ (2026-04-04) / Phase 1 ✅ D1 PASS (2026-06-04) / **Phase 2 ✅ 최종 확정** (2026-06-12, 2-V 전항목 PASS + 3-AI 교차감사 CONFIRM — decisions/PHASE2-DEC-03) / Phase 3 ◐ (SOT 2 흡수, 결정문서 7종 미생성 — 3-0 미결정 게이트 선행) / Phase 4~8 ⬜
+- Phase 0 ✅ (2026-04-04) / Phase 1 ✅ D1 PASS (2026-06-04) / **Phase 2 ✅ 최종 확정** (2026-06-12, 2-V 전항목 PASS + 3-AI 교차감사 CONFIRM — decisions/PHASE2-DEC-03) / **Phase 3 ✅** (2026-06-12, 3-0 게이트 + R1 10결정 + X1 4전략 + 계획서 2 — runtime_decisions.md·PHASE3-DEC/GATE, LOCK 재정의 0·신규 3) / Phase 4~8 ⬜
 - 2층 구조: **로드맵 = 마스터 + PART2 = V0·V1(·V2·V3) 실행 상세 정본** (Phase 7/8 = PART2 §4/§5)

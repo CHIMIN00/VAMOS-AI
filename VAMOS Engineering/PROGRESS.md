@@ -1,9 +1,14 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**Phase 3 ✅ 완료** — R1 10결정 + X1 4전략 + 계획서 2 + 3-V Gate, tag phase3-complete)
+> 최종 갱신: 2026-06-12 (**Phase 3 최종 확정** — 3-AI 교차감사 실효 CONFIRM 3/3, PHASE3-DEC-011)
 
 ## 현재 Phase
-**Phase 3 ✅ 완료 (2026-06-12)** — 3-0 게이트 + 3-1~3-7c(R1 10결정) + 3-8~3-11(X1 4전략) + 3-12/3-13(계획서) + 3-V Gate 전항목 PASS → 다음: **Phase 4 — V0 구현 (P4-0 스킬 점검 + 타입 동기화)**
+**Phase 3 ✅ 최종 확정 (2026-06-12, 3-AI 교차감사 — decisions/PHASE3-DEC-011)** → 다음: **Phase 4 — V0 구현 (P4-0 스킬 점검 + 타입 동기화)**
+
+## Phase 3 교차감사 최종 확정 (2026-06-12)
+- 3-AI 독립 감사: Fable 5 max **CONFIRM/GO**(C0/M0/m1) · Opus 4.8 max CONDITIONAL(C0/M1) · GPT 5.5 CONDITIONAL(C0/m1, 증거팩 한정) — **CRITICAL 0·silent drop 0·fabrication 0 공통**, 디스크 감사관 실측 상호 일치(인용 10/10 verbatim·LOCK 순수 추가만·EOL diff 0)
+- 수합(다수결 금지·증거 우선): finding 전수 재실측 — **F1 스냅샷 재이격 1줄 즉시 해소**(루트→sot 재복사 SHA 45120F11 일치) + **F2 헤더 날짜 해소**(946줄·CR 0 무회귀) + F3 □=기존 컨벤션 NO_FIX + F4 STRATEGY_08 "26"=GATE-03 기처분 유지 + F5 GPT UNVERIFIABLE 전건 원문 일치 해소 → **실효 CONFIRM 3/3, PHASE4_ENTRY=GO**
+- 권고(P4-0): Phase 종결 커밋 후 sot CLAUDE.md 재동기화 1줄 추가(구조적 재발 방지) — PHASE3-DEC-011 §4
 
 ## P3-2 결과 (2026-06-12) — X1 횡단 전략 + 계획서 + Phase 3 Gate
 - ☑ **산출물 6종** (전부 `VAMOS Engineering/` 직하, 위상 = 결정 요약+바인딩·정본 무대체):
