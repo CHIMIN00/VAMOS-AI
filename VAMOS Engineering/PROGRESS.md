@@ -30,7 +30,7 @@
 - ☑ 보강된 CLAUDE.md(946줄 GOLD) → Phase 3 AI 컨텍스트 활성화 (자동 로딩 + §21 라우팅 + §28 프레임워크)
 - ☑ 린터/CI(ruff·vamos_lint·pytest·ci.yml) + Hook 18 → Phase 4 자동 실행 준비 완료
 - ☑ Obsidian Vault(124) + CPS_TEMPLATE + CONTEXT_LOADING_MAP → Phase 3~4 설계 참조·세션 골격
-- 📌 3-0 게이트 추가 이관: SOT 내부 이형 9건(step1 C-001~C-008 등) + docs\sot\CLAUDE.md 스냅샷 동기화 + 5-4 SHELL 87(PHASE2-DEC-02) + LOCK-MCP-06(3회) vs PHASE_B4(V1/V2=2·V3=3) 표기 뉘앙스 1건
+- 📌 3-0 게이트 추가 이관: SOT 내부 이형 9건(step1 C-001~C-008 등) + docs\sot\CLAUDE.md 스냅샷 동기화 + 5-4 SHELL 87(PHASE2-DEC-02) + LOCK-MCP-06(3회) vs PHASE_B4(V1/V2=2·V3=3) 표기 뉘앙스 1건 — **✅ 4항목 전건 처분 완료 (2026-06-12, PHASE3-GATE-07 — 상기 Phase 3-0 결과 ⑦ 참조)**
 
 ## Phase 2 체크포인트 (2026-06-11)
 - [x] **2-0A** 외부 의존성 재확인: E.1(9)+E.3(8)+B.1(11) = **28/28 PASS** — `_targets/PHASE2_환경리포트.md` (변경 2 비차단: pydantic 2.12.5·디스크 / WARN 1: poetry 미설치→2-4 처리)
