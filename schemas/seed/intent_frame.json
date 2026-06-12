@@ -1,0 +1,71 @@
+{
+  "schema_name": "IntentFrame",
+  "source_document": "D2.0-02 I-1 상세 출력(L2632-2648; §7.3 요약은 timestamp 누락 구판 — P4-0 판정) ",
+  "version": "v1.0",
+  "freeze_status": "CANONICAL",
+  "field_count": 10,
+  "required_count": 10,
+  "optional_count": 0,
+  "fields": [
+    {
+      "name": "intent_id",
+      "type": "string",
+      "required": true,
+      "description": "Intent 레코드 고유 식별자"
+    },
+    {
+      "name": "trace_id",
+      "type": "string",
+      "required": true,
+      "description": "Trace 레코드 식별자(추적 연계)"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "required": true,
+      "description": "생성 시각 (ISO 8601)"
+    },
+    {
+      "name": "user_goal",
+      "type": "string",
+      "required": true,
+      "description": "사용자 최종 목표/의도"
+    },
+    {
+      "name": "task_type",
+      "type": "enum",
+      "required": true,
+      "description": "explain|plan|code|research|summarize|design|debug|etc"
+    },
+    {
+      "name": "domain_hint",
+      "type": "object",
+      "required": true,
+      "description": "P0/P1/P2 + 후보 리스트"
+    },
+    {
+      "name": "constraints",
+      "type": "object",
+      "required": true,
+      "description": "format_constraints + must_include[] / must_not_include[]"
+    },
+    {
+      "name": "risk_flags",
+      "type": "object",
+      "required": true,
+      "description": "safety_sensitive(bool) + approval_maybe_required(bool) + cost_sensitive(bool)"
+    },
+    {
+      "name": "ambiguity",
+      "type": "object",
+      "required": true,
+      "description": "is_ambiguous(bool) + missing_slots[](0..N) + clarification_questions[](0..3)"
+    },
+    {
+      "name": "required_artifacts",
+      "type": "array",
+      "required": true,
+      "description": "doc|pdf|ppt|sheet|code|diagram|etc"
+    }
+  ]
+}

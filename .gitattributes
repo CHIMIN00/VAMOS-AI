@@ -9,3 +9,22 @@ benchmarks/golden_set/**/*.json filter=lfs diff=lfs merge=lfs -text
 
 # 벤치마크 결과 파일 — Git LFS 추적 (대용량)
 benchmark_results/**/*.json filter=lfs diff=lfs merge=lfs -text
+
+# =============================================================================
+# EOL 규칙 — 코드 확장자 한정 (PHASE4-DEC-006, P4-0 2026-06-12)
+# =============================================================================
+# 배경: 2026-06-12 autocrlf 체크아웃 EOL 사건(824파일) 재발 방지의 구조적 3중 장치
+#   ① repo-local core.autocrlf=false ② 브랜치 체크아웃 금지 ③ 본 규칙(코드 파일 LF 고정)
+# 범위: Phase 4+ 신규 생산 코드 확장자만. 문서(*.md)는 제외 — 기존 CRLF-디스크/LF-blob
+#   이중 상태 683파일은 자연 수렴 경로(d5bc6e8 선례) 유지. *.json은 LFS 규칙과의
+#   간섭 방지를 위해 제외. 기존 LFS 규칙(상단) 삭제·변경 금지 — 추가만.
+*.py   text eol=lf
+*.rs   text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.js   text eol=lf
+*.jsx  text eol=lf
+*.toml text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.sh   text eol=lf

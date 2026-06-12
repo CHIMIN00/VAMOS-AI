@@ -49,10 +49,11 @@ Phase 6 착수 전: V1 확장이므로 도구 호환성 재확인
   /integrity → 스냅샷 생성 가능?
   나머지 6개: 실행 가능 여부만 확인
 
-Hook 6개 점검:
+Hook 점검 (분모 = 점검 시점 settings.json 실측 — P4-0 실측 2026-06-12: 18 = Pre 6+Post 11+Stop 1):
   settings.json의 matcher 경로가 실제 파일과 일치?
   block_invalid_ea.sh 실행 가능?
   deterministic_validator.py 실행 가능?
+  ※ "6개"는 작성 시점 값 — 폐기 (로드맵 Phase 4 ※ 노트와 동기)
 ```
 
 **점검 결과 기록:**

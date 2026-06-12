@@ -1,0 +1,189 @@
+{
+  "schema_name": "DecisionSchema",
+  "source_document": "D2.1-D2 §4.1 (18, FREEZE) + PHASE3-DEC-010 (confidence 2)",
+  "version": "v3.0.0",
+  "freeze_status": "FREEZE+DEC-010",
+  "field_count": 20,
+  "required_count": 16,
+  "optional_count": 4,
+  "fields": [
+    {
+      "name": "decision_id",
+      "type": "string",
+      "required": true,
+      "example": "dec_01HZX9R1ABCDE",
+      "description": "Decision 레코드 고유 식별자"
+    },
+    {
+      "name": "trace_id",
+      "type": "string",
+      "required": true,
+      "example": "trc_01HZX9R1ABCDE",
+      "description": "Trace 레코드 식별자(추적 연계)"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "required": true,
+      "example": "2026-01-15T20:17:00+09:00",
+      "description": "Decision 생성 시각(ISO8601)"
+    },
+    {
+      "name": "intent_frame_ref",
+      "type": "string",
+      "required": true,
+      "example": "if_01HZX9R1ABCDE",
+      "description": "IntentFrame 참조(I-1 결과)"
+    },
+    {
+      "name": "evidence_pack_ref",
+      "type": "string",
+      "required": true,
+      "example": "evp_01HZX9R1ABCDE",
+      "description": "EvidencePack 참조(I-2 결과)"
+    },
+    {
+      "name": "policy_gate",
+      "type": "enum",
+      "required": true,
+      "example": "allow",
+      "description": "정책 게이트 결과. 값: block | require_approval | mask | allow (D7 PolicyCheck 정본)"
+    },
+    {
+      "name": "approval_required",
+      "type": "boolean",
+      "required": true,
+      "example": false,
+      "description": "승인 필요 여부"
+    },
+    {
+      "name": "approval_status",
+      "type": "enum",
+      "required": true,
+      "example": "approved",
+      "description": "승인 상태. 값: approved | denied (D7 Approval 정본, Q1 DN-014 A 결정)"
+    },
+    {
+      "name": "cost_gate",
+      "type": "enum",
+      "required": true,
+      "example": "normal",
+      "description": "비용 게이트 결과. 값: normal | downshift | split | stop (02 I-8 정본)"
+    },
+    {
+      "name": "routing",
+      "type": "object",
+      "required": true,
+      "example": {
+        "selected_blue_node_id": "bn_analysis",
+        "execution_mode": "main"
+      },
+      "description": "라우팅 결정. selected_blue_node_id + execution_mode(mini|main|tool)"
+    },
+    {
+      "name": "memory_plan",
+      "type": "object",
+      "required": true,
+      "example": {
+        "save_candidate": true,
+        "target_layer": "L1",
+        "requires_user_approval": false
+      },
+      "description": "메모리 계획. save_candidate + target_layer(L0|L1|L2) + requires_user_approval"
+    },
+    {
+      "name": "output_spec",
+      "type": "object",
+      "required": true,
+      "example": {
+        "format_constraints": "markdown"
+      },
+      "description": "출력 스펙. format_constraints 등"
+    },
+    {
+      "name": "conclusion",
+      "type": "enum",
+      "required": true,
+      "example": "ACCEPT",
+      "description": "최종 결론. 값: ACCEPT | REJECT | HOLD | ESCALATE (02 §3.2 정본)"
+    },
+    {
+      "name": "locked",
+      "type": "boolean",
+      "required": true,
+      "example": true,
+      "description": "결정 잠금 여부(단일결정 원칙)"
+    },
+    {
+      "name": "optional_signals",
+      "type": "array",
+      "required": false,
+      "example": [
+        {
+          "signal_id": "sig_01",
+          "source_module": "I-6",
+          "name": "qod_score",
+          "value": 0.85
+        }
+      ],
+      "description": "옵션 신호 목록(§10.5.1)"
+    },
+    {
+      "name": "verify",
+      "type": "object",
+      "required": false,
+      "example": {
+        "chain_used": [
+          "self_check",
+          "policy_check",
+          "cost_check"
+        ],
+        "refs": {
+          "policy_check_id": "pol_01",
+          "cost_budget_id": "bud_01"
+        }
+      },
+      "description": "검증 체인 사용 기록(§10.5.2)"
+    },
+    {
+      "name": "gates",
+      "type": "object",
+      "required": false,
+      "example": {
+        "result": {
+          "policy": {
+            "decision": "allow"
+          },
+          "cost": {
+            "mode": "normal"
+          }
+        }
+      },
+      "description": "게이트 평가 결과 요약(§10.5.3)"
+    },
+    {
+      "name": "s_module_hints",
+      "type": "object",
+      "required": false,
+      "example": {
+        "s1_priority": "high",
+        "s3_cache_policy": "aggressive"
+      },
+      "description": "S-Series 모듈 힌트 (FREEZE 스펙 반영, D2-01). Self-evo 모듈에 전달할 옵셔널 힌트 객체"
+    },
+    {
+      "name": "confidence_score",
+      "type": "number",
+      "required": true,
+      "example": 0.91,
+      "description": "예측 신뢰도 산출값 0.0~1.0 (PHASE3-DEC-010 신규 — A25)"
+    },
+    {
+      "name": "confidence_level",
+      "type": "enum",
+      "required": true,
+      "example": "HIGH",
+      "description": "임계값 적용 결과. 값: HIGH | MEDIUM | LOW | REFUSE (PHASE3-DEC-010 — 0.85/0.60/0.30 LOCK)"
+    }
+  ]
+}

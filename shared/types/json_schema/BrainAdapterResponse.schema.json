@@ -1,0 +1,68 @@
+{
+  "additionalProperties": false,
+  "description": "Brain Adapter 응답 — D2.1-D4 §4.2 (7필드, 5+2).",
+  "properties": {
+    "output_text": {
+      "title": "Output Text",
+      "type": "string"
+    },
+    "evidence_summary": {
+      "title": "Evidence Summary",
+      "type": "string"
+    },
+    "cost_used_estimate": {
+      "additionalProperties": true,
+      "title": "Cost Used Estimate",
+      "type": "object"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "tool_calls": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tool Calls"
+    },
+    "qod_hint": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Qod Hint"
+    }
+  },
+  "required": [
+    "output_text",
+    "evidence_summary",
+    "cost_used_estimate",
+    "warnings",
+    "trace_id"
+  ],
+  "title": "BrainAdapterResponse",
+  "type": "object"
+}

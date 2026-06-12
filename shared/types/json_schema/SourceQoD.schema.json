@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "description": "소스 QoD — D2.1-D6 §4.2 (8필드, 7+1).",
+  "properties": {
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "project_id": {
+      "title": "Project Id",
+      "type": "string"
+    },
+    "qod_score": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Qod Score",
+      "type": "number"
+    },
+    "freshness": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Freshness",
+      "type": "number"
+    },
+    "reliability": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Reliability",
+      "type": "number"
+    },
+    "completeness": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Completeness",
+      "type": "number"
+    },
+    "computed_at": {
+      "title": "Computed At",
+      "type": "string"
+    },
+    "scope": {
+      "anyOf": [
+        {
+          "enum": [
+            "L0",
+            "L1",
+            "L2",
+            "L3"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Scope"
+    }
+  },
+  "required": [
+    "source_id",
+    "project_id",
+    "qod_score",
+    "freshness",
+    "reliability",
+    "completeness",
+    "computed_at"
+  ],
+  "title": "SourceQoD",
+  "type": "object"
+}

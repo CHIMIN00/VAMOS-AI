@@ -8,6 +8,7 @@
 - **기본 브랜치 = `main`** (release tag 부착 + ff-only 동기화)
 - 작업 브랜치: `phase{N}-*` (현행 phase01-targeted-fixes) → feature/* (V1+ 본격 개발 시 `feature/*` 도입)
 - **병합 정책 (P3-0 PHASE3-GATE-08 확정)**: 각 Phase 게이트 완료 커밋·태그 이후 `main`을 **`--ff-only`로 동기화 + push**. 체크아웃 왕복 금지 — `git fetch . <branch>:main`(작업 트리 비접촉)으로 수행 (autocrlf EOL 손상 방지, [[git-eol-autocrlf-checkout-hazard]] 규칙)
+- **sot CLAUDE.md 재동기화 (PHASE3-DEC-011 §4 확정, P4-0 집행)**: Phase 종결 커밋이 루트 `CLAUDE.md`를 갱신하면 차기 게이트 첫 작업으로 `docs\sot\CLAUDE.md`에 byte 동일 재복사 + SHA-256 일치 확인 (GATE-07b 운영 규칙의 상시 체크리스트화 — F1 재발 구조 차단)
 - X1 매트릭스 셀 표기 `main/develop/feature/*`는 V1+ 본격 개발 시점 정식 채택 — V0까지는 main + phase 브랜치로 충분
 
 ## 2. Semantic Versioning (SemVer)

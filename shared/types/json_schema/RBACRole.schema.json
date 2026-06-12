@@ -1,0 +1,62 @@
+{
+  "additionalProperties": false,
+  "description": "RBAC 역할 — D2.1-D7 §4.6 (6필드, 5+1).",
+  "properties": {
+    "role": {
+      "enum": [
+        "OWNER",
+        "ADMIN",
+        "OPERATOR",
+        "VIEWER"
+      ],
+      "title": "Role",
+      "type": "string"
+    },
+    "permissions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Permissions",
+      "type": "array"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "max_autonomy_level": {
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "title": "Max Autonomy Level",
+      "type": "string"
+    },
+    "p2_access": {
+      "title": "P2 Access",
+      "type": "boolean"
+    },
+    "cost_approval_limit": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cost Approval Limit"
+    }
+  },
+  "required": [
+    "role",
+    "permissions",
+    "description",
+    "max_autonomy_level",
+    "p2_access"
+  ],
+  "title": "RBACRole",
+  "type": "object"
+}

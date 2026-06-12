@@ -1,0 +1,20 @@
+# Unified Schema Registry — 모든 DB 스키마의 단일 정의 파일 (PART2 V0-STEP-2 #4, v24 개선안 4)
+# 정본 구조 예시 = PART2 L640~650 (V0 초기본 — P4-1/P4-2 구현 시 확장, V1→V2 시 [timescaledb]/[qdrant] 추가)
+# 일관성 검증: scripts/validate_schema_registry.py (contracts.py 대조)
+# LOCK 연동: chroma embedding 차원 1024 = config LOCK embedding.dimension (D13)
+
+[meta]
+version = "0.1.0"
+created = "2026-06-12"
+source = "P4-0 4-1 타입 동기화 (PHASE4-DEC-005 스캐폴딩 범위)"
+
+[sqlite.tables]
+sessions = ["session_id:TEXT PK", "created_at:DATETIME", "mode:TEXT"]
+modules  = ["module_id:TEXT PK", "series:TEXT", "status:TEXT"]
+# memory_records 테이블 상세는 V0-STEP-5(P4-1)에서 MemoryRecord(contracts.py) 기준 확정
+
+[chroma.collections]
+memory_long = ["doc_id:TEXT", "embedding:VECTOR(1024)", "metadata:JSON"]
+
+[jsonl.files]
+trace_log = ["trace_id:TEXT", "timestamp:ISO8601", "payload:JSON"]

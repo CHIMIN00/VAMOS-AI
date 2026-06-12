@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "description": "MCP 브릿지 계층 — D2.1-D3 §5.5 (7필드, 4+3).",
+  "properties": {
+    "bridge_id": {
+      "title": "Bridge Id",
+      "type": "string"
+    },
+    "node_id": {
+      "title": "Node Id",
+      "type": "string"
+    },
+    "transport": {
+      "const": "streamable_http",
+      "title": "Transport",
+      "type": "string"
+    },
+    "base_url": {
+      "title": "Base Url",
+      "type": "string"
+    },
+    "discovered_tools": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Discovered Tools"
+    },
+    "auth_config": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Auth Config"
+    },
+    "health_check_interval_sec": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Health Check Interval Sec"
+    }
+  },
+  "required": [
+    "bridge_id",
+    "node_id",
+    "transport",
+    "base_url"
+  ],
+  "title": "MCPBridgeLayer",
+  "type": "object"
+}

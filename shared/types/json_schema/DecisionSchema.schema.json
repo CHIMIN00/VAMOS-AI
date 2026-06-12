@@ -1,0 +1,178 @@
+{
+  "additionalProperties": false,
+  "description": "단일 Decision Kernel 산출물 — D2.1-D2 §4.1 FREEZE 18 + PHASE3-DEC-010 confidence 2 = 20필드.\n\n16 required + 4 optional. 필드 추가/삭제 절대 불가 (FREEZE — 변경은 A20 6-Step + ADR).",
+  "properties": {
+    "decision_id": {
+      "title": "Decision Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "intent_frame_ref": {
+      "title": "Intent Frame Ref",
+      "type": "string"
+    },
+    "evidence_pack_ref": {
+      "title": "Evidence Pack Ref",
+      "type": "string"
+    },
+    "policy_gate": {
+      "enum": [
+        "block",
+        "require_approval",
+        "mask",
+        "allow"
+      ],
+      "title": "Policy Gate",
+      "type": "string"
+    },
+    "approval_required": {
+      "title": "Approval Required",
+      "type": "boolean"
+    },
+    "approval_status": {
+      "enum": [
+        "approved",
+        "denied"
+      ],
+      "title": "Approval Status",
+      "type": "string"
+    },
+    "cost_gate": {
+      "enum": [
+        "normal",
+        "downshift",
+        "split",
+        "stop"
+      ],
+      "title": "Cost Gate",
+      "type": "string"
+    },
+    "routing": {
+      "additionalProperties": true,
+      "title": "Routing",
+      "type": "object"
+    },
+    "memory_plan": {
+      "additionalProperties": true,
+      "title": "Memory Plan",
+      "type": "object"
+    },
+    "output_spec": {
+      "additionalProperties": true,
+      "title": "Output Spec",
+      "type": "object"
+    },
+    "conclusion": {
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "HOLD",
+        "ESCALATE"
+      ],
+      "title": "Conclusion",
+      "type": "string"
+    },
+    "locked": {
+      "title": "Locked",
+      "type": "boolean"
+    },
+    "optional_signals": {
+      "anyOf": [
+        {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Optional Signals"
+    },
+    "verify": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Verify"
+    },
+    "gates": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Gates"
+    },
+    "s_module_hints": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "S Module Hints"
+    },
+    "confidence_score": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence Score",
+      "type": "number"
+    },
+    "confidence_level": {
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "REFUSE"
+      ],
+      "title": "Confidence Level",
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision_id",
+    "trace_id",
+    "timestamp",
+    "intent_frame_ref",
+    "evidence_pack_ref",
+    "policy_gate",
+    "approval_required",
+    "approval_status",
+    "cost_gate",
+    "routing",
+    "memory_plan",
+    "output_spec",
+    "conclusion",
+    "locked",
+    "confidence_score",
+    "confidence_level"
+  ],
+  "title": "DecisionSchema",
+  "type": "object"
+}

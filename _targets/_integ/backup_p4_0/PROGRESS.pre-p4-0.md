@@ -1,29 +1,9 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**P4-0 완료 — Phase 4 진입 게이트 PASS + 4-1 타입 동기화 왕복 25/25**)
+> 최종 갱신: 2026-06-12 (**P4-PRE 사전 전수 검증 완료** — 직전 동일자 Phase 3 최종 확정[PHASE3-DEC-011] 포함)
 
 ## 현재 Phase
-**Phase 4 진행 중 — P4-0 ✅ 완료 (2026-06-12)** → 다음: **P4-1 (ORANGE CORE 8파일 + Registry 연동 + config.v1.toml 23키 — 하단 P4-0 결과의 "P4-1 입력" 참조)**
-
-## P4-0 결과 (2026-06-12) — Phase 4 진입 게이트: 환경·도구(A7) + 선행 결정 9건 + 4-1 타입 동기화
-- ☑ **판정: PASS — P4-1 진입 허용** (수렴 선언: 적대 R1 6건 정정→R2 잔존 0→R3 1건 정정→R4 신규 0)
-- ☑ **환경·EOL 게이트**: autocrlf=false 재확인 + `git ls-files --eol` 기준선 저장(`_targets/eol_baseline_p4-0.txt` — 이중 상태 683 실측) + sot CLAUDE.md SHA-256 루트 일치(45120F11, 재이격 0) + DEC-011 §4 재동기화 상시 규칙 release_strategy.md §1 집행 + `.gitattributes` 코드 확장자 EOL 규칙 추가(LFS 규칙 보존·추가만, 기존 추적 126파일 변경 0 — PHASE4-DEC-006)
-- ☑ **도구 점검 PASS (A7)**: 검증 스킬 11/11(SKILL.md+엔진 py_compile) + **Hook 18/18**(Pre 6+Post 11+Stop 1 — 분모 실측, 경로 전건 실재) + 하네스(ruff 0.12.1 All passed·vamos_lint 0건·pytest·ci.yml YAML 유효·poetry 2.4.1) — **수리 2건**: check_config_lock.py·vamos_lint.py cp949 UnicodeEncodeError(utf-8 reconfigure)
-- ☑ **선행 결정 9건 전건 단일 결론 + ADR(decisions/PHASE4-DEC-001~009) + 즉시 집행**:
-  - ⑦ **(b) LangGraph V0 오케스트레이션 전용 예외 허용** — PART2 V0-STEP-4 정본 유지, PHASE3-DEC-004 구현 바인딩 1줄 보정(결정 본문 무변경·재정의 0), Must 11 라벨 무수정(분모 불변)
-  - ⑧ **CostGate 병존 확정**: 게이트 [cost] warn_threshold=80/block_threshold=100(LOCK — check_config_lock.py D13 분모 기대값과 일치, DownshiftSchema D7 §4.4 명문) + 경보 alert_thresholds=[70,85,95](P30-058 비-LOCK 통지 전용) — PART2 템플릿 2곳+L1097+§6.12.8 주석+§7.5.1 연쇄 집행
-  - ⑨ **DecisionSchema 18→20(16 required+4 optional)** + 신규 [confidence] 섹션 3키(V0 config 13→**14섹션**) — PART2 V0-STEP-2 연쇄 전건 집행(표 2곳·Stage Gate #2 len==20·FREEZE_SNAPSHOT·test 예시·약기 #3/#11/#12 SOT 정정·VamosConfig 14 서브모델·템플릿 [confidence] 2곳), PHASE_B4 §3.17 신설은 SOT 지시 등재
-  - ⑩ V0 GO #15 = 코드 수준 L1(입력: extra=forbid+model_validate+non-goal deny)/L2(출력: ResponseEnvelope 검증+verify 노드) 등가 — [guardrails] 섹션 V1 유지
-  - ⑪ D:\VAMOS 단일 repo 확정 + Phase 2 자산(backend/pyproject·tests·ci.yml·Hook 18) 승계 + **ci.yml 단일 통합 정본 재확인**(STEP-6 yml 2종 대체) + **src-tauri/serde = P4-2 순연** + PART2 STEP-1/6 reconcile 주석
-  - ⑫ EOL: 일괄 정규화 불채택 — **자연 수렴(d5bc6e8 선례) + .gitattributes 코드 확장자 한정 LF 규칙**(집행 완료)
-  - ⑬ Eval 스택(ragas·deepeval·minicheck) = **Phase 5 착수 시** poetry `eval` optional 그룹 등재
-  - ⑭ 5-7a(Must) 전제 = **4-3 최소 서브셋(Tauri 셸 기동+Python spawn)만 한정 격상** — 로드맵 4-3·5-7a 행 명기, 분모 무변경
-  - ⑮ seed=루트 `schemas/seed/` 확정·[core] ipc 2키(3/30) P4-1 포함·**VAMOS_DATA_DIR=.env.example 추가 집행**·config "17섹션" 라벨 정정 + ※ PART2 약기 테이블 SOT 이탈 발견(경고 주석+#3/#11/#12 교체 처분)
-- ☑ **4-1 타입 동기화 (B2c·A20)**: `schemas/seed/` 5종(D2.1-D2·CLAUDE.md §12·D2.0-02 I-모듈 상세에서 **기계 추출, 창작 0** — scripts/extract_seeds.py 카운트 assert) + `backend/vamos_core/schemas/contracts.py` **25모델**(extra="forbid" 전건, 필드 수 SOT 실측 전건 일치) + `registries.py`(기계 생성 — EventType **123**/FailureCode **36**/Fallback **23**/Tool 2/Node 1) + `scripts/generate_types.py`(JSON Schema 25종+Zod TS 25종 자동 생성) + `config/schema_registry.toml`+검증 스크립트 → **왕복 테스트 25/25 PASS**(Python→JSON→TS[무의존 Node 검증기]→Python 동일성) + **pytest 61 passed**(필드 수·extra·레지스트리 분모·네이밍 VL-005) + seed↔contracts 교차 7/7 — serde(Rust)는 P4-2 활성화(PHASE4-DEC-005)
-- ⚠️ **필드 분기 해소 기록**: IntentFrame/EvidencePack/StructuredOutput은 D2.0-02 초반 §7.3/7.13/7.33 요약(9/5/3 — timestamp·artifact_meta 누락 구판)과 후반 I-모듈 상세(10/6/4)가 병존 — **후반 상세 = 필드 정본 판정**(PART2 분모 10/6/4와 정확 일치, CLAUDE.md §12 IntentFrame 18 = 코어 10 + §11.12.1 V1 확장 8). seed에 판정 근거 기록
-- ☑ **SOT 수정 지시(승인 대기, 비차단)**: `_targets/p4_0_sot_edits_pending.md` — ①GATE-06 #4 MASTER_SPEC L78 "(= IMPLEMENTATION 계층)" ②C-001 3곳(D2.0-01 L208·MASTER_SPEC L1512·BEGINNER L1376) 5-Gate 열거 + **신규 발견 BEGINNER L1813**(순서 오기 동계열) ③PHASE_B4 §3.17 [confidence] 신설(DEC-010)
-- ☑ 구키 revoke: 통보 미수신 유지(등재 트리거 유지·비차단) / CLAUDE.md §12 Decision 20필드·§20 분모 23 갱신은 4-5 바인딩(DEC-010 기확정 경로)
-- 📌 **P4-1 입력**: ⑦ LangGraph(오케스트레이션 한정·Gate 우회 금지·StateGraph 중첩 금지) · ⑧ [cost] 80/100 LOCK+alert 3값 · **config 23키**(20+confidence 3, 14섹션) + [core] ipc_max_restart=3/ipc_timeout_s=30 · **DecisionSchema 20** · V0 실파일 8(GATE-03) · 백업 `_targets/_integ/backup_p4_0/`
+**Phase 3 ✅ 최종 확정 + P4-PRE 사전 검증 ✅ PASS (2026-06-12)** → 다음: **Phase 4 — V0 구현 (P4-0 스킬 점검 + 타입 동기화 — 신규 입력 ⑦~⑮ 포함, 하단 P4-PRE 결과 참조)**
 
 ## P4-PRE 결과 (2026-06-12) — 구현단계(Phase 4~8) 사전 전수 검증: 정확성(축A) + 부재 탐지(축B 5종)
 - ☑ **판정: Phase 4 진입 가능(차단 0)** — 보고서 `_targets/구현단계_사전검증보고서_2026-06-12.md` (수렴 R4, 발견 전건 처분·미결 0)
@@ -142,10 +122,11 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P4-1 — ORANGE CORE + Registry 연동 + config.v1.toml (B2a·R2a)** — 실파일 8(활성 I-1/2/3/5/19 + stub I-8/9/20, GATE-03) + 5-Phase Pipeline(LangGraph 오케스트레이션 전용 — PHASE4-DEC-001) + Gate 3종 + Defense Layer 1/3 + reasoning_trace + confidence 분기 + config.v1.toml **14섹션 23키**([cost] 80/100 LOCK+alert_thresholds — PHASE4-DEC-002/-003, [core] ipc 2키 — DEC-009) → P4-2(IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸) → P4-3(Phase 4 Gate, Must 11)
-→ 입력: **상단 P4-0 결과 "P4-1 입력"** + runtime_decisions.md + runtime_eng_plan.md + contracts.py 25모델(4-1 산출물) + PHASE4-DEC-001~009
-→ 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / 4-5에서 check_config_lock.py 분모 20→23 + CLAUDE.md §12/§20 갱신(DEC-010 바인딩)
-→ 잔여(비차단): SOT edits 승인 대기(`_targets/p4_0_sot_edits_pending.md`) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
+**Phase 4 — V0 구현 (B2 + R2 + X2)** — P4-0(스킬/Hook 점검 A7 + 타입 동기화 B2c) → P4-1(ORANGE CORE 8파일 + Registry + config.v1.toml 23키) → P4-2(IPC JSON-RPC 13 + BLUE NODE 3 스켈레톤 + Tauri 프론트) → P4-3(Phase 4 Gate, Must 11)
+→ 입력: runtime_decisions.md + runtime_eng_plan.md(R2 매핑) + cross_eng_plan.md(X2) + 4 전략 + PHASE3-GATE-03(분모 V0=8/V1=32/Must=11)
+→ ⚠️ P4-0 선행 점검: autocrlf=false 확인 + ls-files --eol 기준선([[git-eol-autocrlf-checkout-hazard]]) + **Phase 3 종결 커밋 후 sot CLAUDE.md 재동기화 확인(DEC-011 §4)** + CRLF 685 정규화 여부 결정 + READINESS §8 #4(MASTER_SPEC §0 IMPLEMENTATION 계층)+SOT 이형 C-001 수정 지시(GATE-06) + **P4-PRE 신규 입력 ⑦~⑮(HIGH 2: V0 LangGraph·CostGate 임계 — `_targets/구현단계_사전검증보고서_2026-06-12.md` §7 정본)**
+→ 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P4-0 + CONTEXT_LOADING_MAP.md(Phase 4 행)
+→ 잔여 이관 액션(비차단): P4-0(MASTER_SPEC §0 표기 + SOT 이형 C-001 3곳) / P6-0(5건+이형 3건) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 스냅샷 동기화 집행(사용자 승인 후) — 상세 GATE-06/07
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)

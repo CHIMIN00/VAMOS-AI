@@ -1,0 +1,94 @@
+{
+  "additionalProperties": false,
+  "description": "도구 레지스트리 항목 — D2.1-D4 §4.1 (8필드, 6+2).",
+  "properties": {
+    "tool_id": {
+      "title": "Tool Id",
+      "type": "string"
+    },
+    "category": {
+      "title": "Category",
+      "type": "string"
+    },
+    "adapter_id": {
+      "title": "Adapter Id",
+      "type": "string"
+    },
+    "risk_class": {
+      "enum": [
+        "low",
+        "med",
+        "high"
+      ],
+      "title": "Risk Class",
+      "type": "string"
+    },
+    "cost_class": {
+      "enum": [
+        "v0",
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "title": "Cost Class",
+      "type": "string"
+    },
+    "required_gates": {
+      "items": {
+        "enum": [
+          "policy",
+          "cost",
+          "approval",
+          "evidence",
+          "self_check"
+        ],
+        "type": "string"
+      },
+      "title": "Required Gates",
+      "type": "array"
+    },
+    "outputs": {
+      "anyOf": [
+        {
+          "items": {
+            "enum": [
+              "signal",
+              "artifact",
+              "memory",
+              "log"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Outputs"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "tool_id",
+    "category",
+    "adapter_id",
+    "risk_class",
+    "cost_class",
+    "required_gates"
+  ],
+  "title": "ToolRegistryEntry",
+  "type": "object"
+}

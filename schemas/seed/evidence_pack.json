@@ -1,0 +1,47 @@
+{
+  "schema_name": "EvidencePack",
+  "source_document": "D2.0-02 I-2 상세 출력(L2698-2709; §7.13 요약은 timestamp 누락 구판 — P4-0 판정)",
+  "version": "v1.0",
+  "freeze_status": "CANONICAL",
+  "field_count": 6,
+  "required_count": 6,
+  "optional_count": 0,
+  "fields": [
+    {
+      "name": "evidence_pack_id",
+      "type": "string",
+      "required": true,
+      "description": "EvidencePack 고유 식별자"
+    },
+    {
+      "name": "trace_id",
+      "type": "string",
+      "required": true,
+      "description": "Trace 레코드 식별자(추적 연계)"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "required": true,
+      "description": "생성 시각 (ISO 8601)"
+    },
+    {
+      "name": "items",
+      "type": "array",
+      "required": true,
+      "description": "근거 항목: source_type(memory|doc|web|code|log|tool) + source_ref + excerpt_or_summary + qod_score + captured_at/recency_hint"
+    },
+    {
+      "name": "coverage",
+      "type": "object",
+      "required": true,
+      "description": "sufficient(bool) + gaps[]"
+    },
+    {
+      "name": "citations_ready",
+      "type": "boolean",
+      "required": true,
+      "description": "인용 준비 여부"
+    }
+  ]
+}

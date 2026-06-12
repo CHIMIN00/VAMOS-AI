@@ -1,0 +1,61 @@
+{
+  "additionalProperties": false,
+  "description": "자율 수준 — D2.1-D7 §4.7 (7필드, 6+1).",
+  "properties": {
+    "level": {
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3"
+      ],
+      "title": "Level",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "auto_execute": {
+      "title": "Auto Execute",
+      "type": "boolean"
+    },
+    "notification_required": {
+      "title": "Notification Required",
+      "type": "boolean"
+    },
+    "approval_required": {
+      "title": "Approval Required",
+      "type": "boolean"
+    },
+    "allowed_domains": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Allowed Domains"
+    }
+  },
+  "required": [
+    "level",
+    "name",
+    "description",
+    "auto_execute",
+    "notification_required",
+    "approval_required"
+  ],
+  "title": "AutonomyLevelSchema",
+  "type": "object"
+}

@@ -10,6 +10,10 @@ config.v1.toml 수정 시 Hook이 호출 — LOCK 값이 정본과 다르면 위
 import sys
 import os
 
+# Windows cp949 콘솔에서 — / ✅ 출력 UnicodeEncodeError 방지 (P4-0 도구 점검 수리)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 try:
     import tomllib  # Python 3.11+
 except ImportError:  # pragma: no cover

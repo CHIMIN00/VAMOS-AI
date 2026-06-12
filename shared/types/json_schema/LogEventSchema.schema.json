@@ -1,0 +1,70 @@
+{
+  "additionalProperties": false,
+  "description": "표준 이벤트 로그 — D2.1-D2 §4.2 (7필드, 5+2).",
+  "properties": {
+    "event_type": {
+      "title": "Event Type",
+      "type": "string"
+    },
+    "producer": {
+      "title": "Producer",
+      "type": "string"
+    },
+    "when": {
+      "title": "When",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warn",
+        "error",
+        "critical"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "sinks": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sinks"
+    },
+    "links": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Links"
+    }
+  },
+  "required": [
+    "event_type",
+    "producer",
+    "when",
+    "payload",
+    "severity"
+  ],
+  "title": "LogEventSchema",
+  "type": "object"
+}

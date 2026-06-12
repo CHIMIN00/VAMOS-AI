@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "description": "최종 응답 봉투 — CLAUDE.md §12 (5필드 LOCK).",
+  "properties": {
+    "answer": {
+      "additionalProperties": true,
+      "title": "Answer",
+      "type": "object"
+    },
+    "evidence": {
+      "additionalProperties": true,
+      "title": "Evidence",
+      "type": "object"
+    },
+    "self_check": {
+      "additionalProperties": true,
+      "title": "Self Check",
+      "type": "object"
+    },
+    "decision_ref": {
+      "additionalProperties": true,
+      "title": "Decision Ref",
+      "type": "object"
+    },
+    "audit": {
+      "additionalProperties": true,
+      "title": "Audit",
+      "type": "object"
+    }
+  },
+  "required": [
+    "answer",
+    "evidence",
+    "self_check",
+    "decision_ref",
+    "audit"
+  ],
+  "title": "ResponseEnvelope",
+  "type": "object"
+}

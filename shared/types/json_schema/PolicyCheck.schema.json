@@ -1,0 +1,79 @@
+{
+  "additionalProperties": false,
+  "description": "정책 체크 결과 — D2.1-D7 §4.1 (7필드, 5+2).",
+  "properties": {
+    "check_id": {
+      "title": "Check Id",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "deny",
+        "restrict",
+        "allow"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+    },
+    "rule_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Rule Refs",
+      "type": "array"
+    },
+    "detected_sensitive_types": {
+      "items": {
+        "enum": [
+          "PII",
+          "AUTH",
+          "MEDICAL",
+          "LEGAL"
+        ],
+        "type": "string"
+      },
+      "title": "Detected Sensitive Types",
+      "type": "array"
+    },
+    "fallback_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fallback Id"
+    },
+    "required_approval_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Required Approval Id"
+    }
+  },
+  "required": [
+    "check_id",
+    "decision",
+    "reasons",
+    "rule_refs",
+    "detected_sensitive_types"
+  ],
+  "title": "PolicyCheck",
+  "type": "object"
+}

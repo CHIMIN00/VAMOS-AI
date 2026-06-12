@@ -1,0 +1,81 @@
+{
+  "additionalProperties": false,
+  "description": "비용 예산 — D2.1-D7 §4.3 (9필드, 6+3).",
+  "properties": {
+    "budget_id": {
+      "title": "Budget Id",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "V1",
+        "V2",
+        "V3"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "daily_limit": {
+      "title": "Daily Limit",
+      "type": "integer"
+    },
+    "monthly_limit": {
+      "title": "Monthly Limit",
+      "type": "integer"
+    },
+    "used_today": {
+      "title": "Used Today",
+      "type": "integer"
+    },
+    "used_month": {
+      "title": "Used Month",
+      "type": "integer"
+    },
+    "forecast": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Forecast"
+    },
+    "actual": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Actual"
+    },
+    "block_on_exceed": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Block On Exceed"
+    }
+  },
+  "required": [
+    "budget_id",
+    "mode",
+    "daily_limit",
+    "monthly_limit",
+    "used_today",
+    "used_month"
+  ],
+  "title": "CostBudget",
+  "type": "object"
+}

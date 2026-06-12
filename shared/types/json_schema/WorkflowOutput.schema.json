@@ -1,0 +1,26 @@
+{
+  "additionalProperties": false,
+  "description": "워크플로우 최종 산출 — D2.1-D5 §4.1 (3필드 LOCK).",
+  "properties": {
+    "user_response": {
+      "title": "User Response",
+      "type": "string"
+    },
+    "evidence_summary": {
+      "title": "Evidence Summary",
+      "type": "string"
+    },
+    "log_report": {
+      "additionalProperties": true,
+      "title": "Log Report",
+      "type": "object"
+    }
+  },
+  "required": [
+    "user_response",
+    "evidence_summary",
+    "log_report"
+  ],
+  "title": "WorkflowOutput",
+  "type": "object"
+}

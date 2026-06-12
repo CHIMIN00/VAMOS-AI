@@ -1,0 +1,77 @@
+{
+  "additionalProperties": false,
+  "description": "I-1 출력 — D2.0-02 I-1 상세 (10필드).",
+  "properties": {
+    "intent_id": {
+      "title": "Intent Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "user_goal": {
+      "title": "User Goal",
+      "type": "string"
+    },
+    "task_type": {
+      "enum": [
+        "explain",
+        "plan",
+        "code",
+        "research",
+        "summarize",
+        "design",
+        "debug",
+        "etc"
+      ],
+      "title": "Task Type",
+      "type": "string"
+    },
+    "domain_hint": {
+      "additionalProperties": true,
+      "title": "Domain Hint",
+      "type": "object"
+    },
+    "constraints": {
+      "additionalProperties": true,
+      "title": "Constraints",
+      "type": "object"
+    },
+    "risk_flags": {
+      "additionalProperties": true,
+      "title": "Risk Flags",
+      "type": "object"
+    },
+    "ambiguity": {
+      "additionalProperties": true,
+      "title": "Ambiguity",
+      "type": "object"
+    },
+    "required_artifacts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Artifacts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "intent_id",
+    "trace_id",
+    "timestamp",
+    "user_goal",
+    "task_type",
+    "domain_hint",
+    "constraints",
+    "risk_flags",
+    "ambiguity",
+    "required_artifacts"
+  ],
+  "title": "IntentFrame",
+  "type": "object"
+}

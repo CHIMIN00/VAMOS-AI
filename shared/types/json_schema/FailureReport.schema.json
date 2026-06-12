@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "description": "실패 보고 — D2.1-D5 §4.2 (4필드).",
+  "properties": {
+    "failure_cause": {
+      "title": "Failure Cause",
+      "type": "string"
+    },
+    "evidence_gap": {
+      "title": "Evidence Gap",
+      "type": "string"
+    },
+    "risk_detected": {
+      "additionalProperties": true,
+      "title": "Risk Detected",
+      "type": "object"
+    },
+    "improvement_hint": {
+      "title": "Improvement Hint",
+      "type": "string"
+    }
+  },
+  "required": [
+    "failure_cause",
+    "evidence_gap",
+    "risk_detected",
+    "improvement_hint"
+  ],
+  "title": "FailureReport",
+  "type": "object"
+}

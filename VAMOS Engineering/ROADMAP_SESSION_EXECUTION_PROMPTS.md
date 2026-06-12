@@ -899,47 +899,22 @@ VAMOS 로드맵 Phase 3, 세션 P3-2 — X1 횡단 전략 + 계획서 + Phase 3 
 
 ## 5. Phase 4
 
-### 세션 P4-0: 스킬 점검 + 타입 동기화
+### 세션 P4-0: Phase 4 진입 게이트 — 환경·도구 점검(A7) + 선행 결정 9건 + 타입 동기화(4-1) ✅ 완료 (2026-06-12)
 
-**로드맵 작업 매핑:**
+> **구판 대체**: 본 섹션의 舊프롬프트(Hook 6 표기·serde 본세션 가정)는 P4-PRE 인계판(결정 ⑦~⑮·Hook 18·DecisionSchema 20)으로 대체 집행되었다. 아래는 집행 결과 요약 — 상세는 PROGRESS.md P4-0 결과 + decisions/PHASE4-DEC-001~009.
 
-| # | 작업 | 상세 | 우선순위 | 산출물 |
-|---|------|------|---------|--------|
-| 사전 | 스킬/Hook 점검 | 11개 스킬 + 6개 Hook (A7) | **Must** | 점검 결과 |
-| 4-1 | B2c 타입 동기화 | Pydantic→Schema→serde→TS + 왕복 (A20) | **Must** | shared_schemas/ |
+**집행 결과 (전 PASS 조건 충족):**
 
-````
-VAMOS 로드맵 Phase 4, 세션 P4-0 — 스킬 점검 + 타입 동기화
+| 항목 | 결과 |
+|------|------|
+| 환경·EOL 게이트 | autocrlf=false·기준선 저장(이중 상태 683 실측, `_targets/eol_baseline_p4-0.txt`)·sot CLAUDE.md SHA 일치(45120F11)·DEC-011 §4 규칙 release_strategy §1 집행·.gitattributes 코드 확장자 EOL 규칙 추가(LFS 보존) — PHASE4-DEC-006 |
+| 도구 점검 (A7) | 스킬 11/11 + Hook **18/18**(Pre 6+Post 11+Stop 1, 경로 전건 실재) + 하네스(ruff 0.12.1·vamos_lint·pytest·ci.yml) PASS — cp949 인코딩 수리 2건(check_config_lock·vamos_lint) |
+| 선행 결정 9건 | **PHASE4-DEC-001~009** 전건 단일 결론+집행: ⑦ LangGraph V0 오케스트레이션 예외 허용(b — DEC-004 바인딩 1줄 보정) ⑧ CostGate **게이트 80/100 LOCK + 경보 70/85/95 병존**(config 키 분리, PART2 연쇄 집행) ⑨ DecisionSchema **20필드**(16+4)+[confidence] 14섹션(PART2 연쇄 집행, B4 §3.17 지시 등재) ⑩ Guardrails V0=코드 수준 등가 ⑪ D:\VAMOS 단일 repo+Phase 2 자산 승계+ci.yml 단일 정본+src-tauri/serde P4-2 순연 ⑫ EOL 자연 수렴+gitattributes ⑬ Eval 스택 Phase 5 등재 ⑭ 5-7a 전제=4-3 최소 서브셋 ⑮ seed 루트 경로·ipc 키 P4-1·VAMOS_DATA_DIR .env 집행·17섹션 라벨 정정 |
+| 4-1 타입 동기화 | seed 5종(SOT 기계 추출, 창작 0) + contracts.py **25모델**(필드 수 전건 SOT 실측 일치, DecisionSchema 20) + registries.py(EventType 123/FailureCode 36/Fallback 23/Tool 2/Node 1) + generate_types.py(JSON Schema 25+Zod TS 25) + schema_registry.toml — **왕복 테스트 25/25 PASS**(Python→JSON→TS[Node 검증]→Python; serde는 P4-2 활성화) + pytest 61 + seed↔contracts 교차 7/7 |
+| SOT 수정 지시 | `_targets/p4_0_sot_edits_pending.md` — GATE-06 #4(MASTER_SPEC L78)+C-001 3곳(+신규 발견 BEGINNER L1813)+B4 §3.17 — **사용자 승인 대기**(비차단) |
+| 수렴 | 적대 R1(6건 정정)→R2(잔존 0)→R3(필드 순서 1건 정정)→R4(전 체인 재실행 신규 0) — **수렴 선언** |
 
-■ 대상: 스킬/Hook 점검(A7, Must) + 4-1(타입 동기화, Must)
-
-■ 참조:
-  D:\VAMOS\VAMOS Engineering\STRATEGY_04_TOOL_MAINTENANCE.md §2~§3
-  D:\VAMOS\VAMOS Engineering\STRATEGY_06_INTEGRATION_AND_DEPLOY.md §2 — A20
-
-■ STEP 1: 프롬프트 자체 검증
-  a. 점검 대상(11 스킬 + 6 Hook)이 STRATEGY_04 §2와 일치?
-  b. 타입 동기화 규칙(Pydantic 정본)이 STRATEGY_06 §2.2와 일치?
-  c. "프롬프트 최종 확정"
-
-■ STEP 2: 작업 실행
-  1. 스킬 11개 + Hook 6개 동작 확인 → PROGRESS.md 기록
-  2. Pydantic 25개 모델 정의 (D2.1 + confidence_score A25)
-  3. JSON Schema 추출 → serde(Rust) 생성 → TS interface 생성
-  4. 왕복 테스트: Python→JSON→Rust→JSON→Python 일치?
-
-■ STEP 3: 산출물 검증 (반복)
-  a. 스킬 11개 전부 실행 가능?
-  b. Hook 6개 settings.json 경로 일치?
-  c. 왕복 테스트 PASS?
-  d. 25개 모델에 confidence_score 포함?
-  e. "산출물 최종 확정"
-
-■ STEP 4: PROGRESS.md 갱신
-■ STEP 5: 갱신 검증
-
-■ PASS 조건: 스킬 PASS + Hook PASS + 왕복 PASS + 산출물 확정
-````
+**P4-1 입력 인계**: ⑦ LangGraph 사용(오케스트레이션 한정·Gate 우회 금지) · ⑧ config [cost] warn=80/block=100(LOCK)+alert_thresholds=[70,85,95] · config 분모 **23**(20+confidence 3, [confidence] 섹션) + [core] ipc_max_restart=3/ipc_timeout_s=30 · DecisionSchema **20** · V0 실파일 8(GATE-03) · check_config_lock.py 분모 갱신은 4-5 바인딩 · CLAUDE.md §12/§20 갱신도 4-5 동반
 
 ---
 
@@ -969,7 +944,7 @@ VAMOS 로드맵 Phase 4, 세션 P4-1 — ORANGE CORE + Registry + config
   c. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행 (매 파일마다: 코드→ruff→vamos_lint→pytest→PASS→커밋)
-  1. I-1~I-25 스켈레톤 + 5-Phase Pipeline + 5-Gate + Defense Layer 3계층(A21) + reasoning_trace(A22) + confidence_score(A25)
+  1. ORANGE CORE 실파일 8개(활성 I-1/2/3/5/19 + stub I-8/9/20 — GATE-03, 전 25 선생성 금지) + 5-Phase Pipeline(LangGraph 오케스트레이션 전용 — PHASE4-DEC-001) + Gate 3종(Policy/Cost/Approval — 5-Gate 완성은 V1) + Defense Layer 3계층(A21) + reasoning_trace(A22) + confidence_score(A25)
   2. EventType/Failure/Fallback Registry (D2.1-D2 기반)
   3. config.v1.toml: 20개 LOCK + confidence 3개(A25) + cost_monthly_limit(A21)
   4. STEP별 체크포인트:
@@ -1275,7 +1250,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | **3** | P3-0 | 미결정 게이트 (선행, 2026-06-11 신설) | ✅ (2026-06-12, PHASE3-GATE-01~08) |
 | | P3-1 | R1 런타임 10개 LOCK | ✅ (2026-06-12, runtime_decisions.md + PHASE3-DEC-001~010) |
 | | P3-2 | X1 전략 + 계획서 + Gate | ✅ (2026-06-12, 4전략+계획서 2+3-V, tag phase3-complete + 3-AI 교차감사 확정 PHASE3-DEC-011) |
-| **4** | P4-0 | 스킬 점검 + 타입 동기화 | ⬜ |
+| **4** | P4-0 | 진입 게이트(A7+결정 9건)+타입 동기화 | ✅ |
 | | P4-1 | ORANGE CORE + Registry + config | ⬜ |
 | | P4-2 | IPC + BLUE NODE + 프론트엔드 | ⬜ |
 | | P4-3 | Phase 4 Gate | ⬜ |

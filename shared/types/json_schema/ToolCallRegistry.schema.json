@@ -1,0 +1,71 @@
+{
+  "additionalProperties": false,
+  "description": "노드별 도구 호출 등록 — D2.1-D3 §5.4 (7필드, 5+2).",
+  "properties": {
+    "tool_id": {
+      "title": "Tool Id",
+      "type": "string"
+    },
+    "node_id": {
+      "title": "Node Id",
+      "type": "string"
+    },
+    "risk_class": {
+      "enum": [
+        "low",
+        "med",
+        "high"
+      ],
+      "title": "Risk Class",
+      "type": "string"
+    },
+    "auth_method": {
+      "enum": [
+        "none",
+        "api_key",
+        "oauth2",
+        "mcp_token"
+      ],
+      "title": "Auth Method",
+      "type": "string"
+    },
+    "enabled": {
+      "title": "Enabled",
+      "type": "boolean"
+    },
+    "mcp_endpoint": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Mcp Endpoint"
+    },
+    "rate_limit": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rate Limit"
+    }
+  },
+  "required": [
+    "tool_id",
+    "node_id",
+    "risk_class",
+    "auth_method",
+    "enabled"
+  ],
+  "title": "ToolCallRegistry",
+  "type": "object"
+}

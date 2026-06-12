@@ -21,6 +21,10 @@ import re
 import sys
 from pathlib import Path
 
+# Windows cp949 콘솔 — 출력 UnicodeEncodeError 방지 (P4-0 도구 점검 수리)
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 # ---------------------------------------------------------------- 규칙 정의
 
 # VL-001: Pydantic v1 스타일 class Config (모델 내부 들여쓰기 1단 이상)

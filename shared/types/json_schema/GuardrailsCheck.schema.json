@@ -1,0 +1,65 @@
+{
+  "additionalProperties": false,
+  "description": "Guardrails 통합 판정 — D2.1-D7 §4.5 (7필드, 6+1).",
+  "properties": {
+    "check_id": {
+      "title": "Check Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "layer1_nemo": {
+      "additionalProperties": true,
+      "title": "Layer1 Nemo",
+      "type": "object"
+    },
+    "layer2_guardrails_ai": {
+      "additionalProperties": true,
+      "title": "Layer2 Guardrails Ai",
+      "type": "object"
+    },
+    "layer3_llamaguard": {
+      "additionalProperties": true,
+      "title": "Layer3 Llamaguard",
+      "type": "object"
+    },
+    "overall_decision": {
+      "enum": [
+        "allow",
+        "restrict",
+        "deny"
+      ],
+      "title": "Overall Decision",
+      "type": "string"
+    },
+    "blocked_by": {
+      "anyOf": [
+        {
+          "enum": [
+            "layer1",
+            "layer2",
+            "layer3"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Blocked By"
+    }
+  },
+  "required": [
+    "check_id",
+    "trace_id",
+    "layer1_nemo",
+    "layer2_guardrails_ai",
+    "layer3_llamaguard",
+    "overall_decision"
+  ],
+  "title": "GuardrailsCheck",
+  "type": "object"
+}

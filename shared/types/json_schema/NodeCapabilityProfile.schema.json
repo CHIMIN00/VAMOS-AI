@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "description": "노드 능력 프로파일 — D2.1-D3 §5.1 (6필드, 5+1).",
+  "properties": {
+    "node_id": {
+      "title": "Node Id",
+      "type": "string"
+    },
+    "required_tools": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Required Tools",
+      "type": "array"
+    },
+    "risk_class": {
+      "enum": [
+        "low",
+        "med",
+        "high"
+      ],
+      "title": "Risk Class",
+      "type": "string"
+    },
+    "cost_class": {
+      "enum": [
+        "v0",
+        "v1",
+        "v2",
+        "v3"
+      ],
+      "title": "Cost Class",
+      "type": "string"
+    },
+    "required_gates": {
+      "items": {
+        "enum": [
+          "policy",
+          "cost",
+          "approval",
+          "evidence",
+          "self_check"
+        ],
+        "type": "string"
+      },
+      "title": "Required Gates",
+      "type": "array"
+    },
+    "optional_tools": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Optional Tools"
+    }
+  },
+  "required": [
+    "node_id",
+    "required_tools",
+    "risk_class",
+    "cost_class",
+    "required_gates"
+  ],
+  "title": "NodeCapabilityProfile",
+  "type": "object"
+}

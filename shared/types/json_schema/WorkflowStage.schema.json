@@ -1,0 +1,45 @@
+{
+  "additionalProperties": false,
+  "description": "워크플로우 스테이지 — D2.1-D5 §4.4 (4필드 LOCK, 3+1).",
+  "properties": {
+    "stage_id": {
+      "enum": [
+        "intake",
+        "plan",
+        "execute",
+        "verify",
+        "deliver"
+      ],
+      "title": "Stage Id",
+      "type": "string"
+    },
+    "stage_name": {
+      "title": "Stage Name",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "sub_stages": {
+      "anyOf": [
+        {
+          "items": {},
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sub Stages"
+    }
+  },
+  "required": [
+    "stage_id",
+    "stage_name",
+    "description"
+  ],
+  "title": "WorkflowStage",
+  "type": "object"
+}

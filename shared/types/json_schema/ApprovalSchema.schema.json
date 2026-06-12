@@ -1,0 +1,120 @@
+{
+  "additionalProperties": false,
+  "description": "승인 객체 — D2.1-D7 §4.2 (12필드, 8+4).",
+  "properties": {
+    "approval_id": {
+      "title": "Approval Id",
+      "type": "string"
+    },
+    "approval_stage": {
+      "enum": [
+        "plan",
+        "execute"
+      ],
+      "title": "Approval Stage",
+      "type": "string"
+    },
+    "requester": {
+      "title": "Requester",
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "domain",
+        "cost",
+        "policy",
+        "external_action",
+        "storage"
+      ],
+      "title": "Scope",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "expires_at": {
+      "title": "Expires At",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "approved",
+        "denied"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "decided_by": {
+      "title": "Decided By",
+      "type": "string"
+    },
+    "risk_level": {
+      "anyOf": [
+        {
+          "enum": [
+            "P0",
+            "P1",
+            "P2"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Risk Level"
+    },
+    "cost_snapshot": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cost Snapshot"
+    },
+    "policy_snapshot": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Policy Snapshot"
+    },
+    "audit_trace_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Audit Trace Id"
+    }
+  },
+  "required": [
+    "approval_id",
+    "approval_stage",
+    "requester",
+    "scope",
+    "description",
+    "expires_at",
+    "status",
+    "decided_by"
+  ],
+  "title": "ApprovalSchema",
+  "type": "object"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_name": "ResponseEnvelope",
+  "source_document": "CLAUDE.md §12 (LOCK, L559-565)",
+  "version": "v1.0",
+  "freeze_status": "LOCK",
+  "field_count": 5,
+  "required_count": 5,
+  "optional_count": 0,
+  "fields": [
+    {
+      "name": "answer",
+      "type": "object",
+      "required": true,
+      "description": "answer{summary, details, next_actions[]}"
+    },
+    {
+      "name": "evidence",
+      "type": "object",
+      "required": true,
+      "description": "evidence{coverage(0~1), items[], qod(0~1)}"
+    },
+    {
+      "name": "self_check",
+      "type": "object",
+      "required": true,
+      "description": "self_check{score(0~1), verdict(PASS|WARN|FAIL), reasons[], retry_allowed}"
+    },
+    {
+      "name": "decision_ref",
+      "type": "object",
+      "required": true,
+      "description": "decision_ref{decision_id, gates{}}"
+    },
+    {
+      "name": "audit",
+      "type": "object",
+      "required": true,
+      "description": "audit{event_ids[], failure_codes[], fallback_ids[]}"
+    }
+  ]
+}

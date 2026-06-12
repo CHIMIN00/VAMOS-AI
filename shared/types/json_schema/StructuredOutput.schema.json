@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "description": "I-4 출력 — D2.0-02 I-4 상세 (4필드).",
+  "properties": {
+    "artifact_type": {
+      "enum": [
+        "md",
+        "json",
+        "code",
+        "diagram",
+        "etc"
+      ],
+      "title": "Artifact Type",
+      "type": "string"
+    },
+    "content": {
+      "title": "Content",
+      "type": "string"
+    },
+    "compliance_report": {
+      "additionalProperties": true,
+      "title": "Compliance Report",
+      "type": "object"
+    },
+    "artifact_meta": {
+      "additionalProperties": true,
+      "title": "Artifact Meta",
+      "type": "object"
+    }
+  },
+  "required": [
+    "artifact_type",
+    "content",
+    "compliance_report",
+    "artifact_meta"
+  ],
+  "title": "StructuredOutput",
+  "type": "object"
+}

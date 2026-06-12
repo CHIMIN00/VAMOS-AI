@@ -1,0 +1,45 @@
+{
+  "additionalProperties": false,
+  "description": "I-2 출력 — D2.0-02 I-2 상세 (6필드).",
+  "properties": {
+    "evidence_pack_id": {
+      "title": "Evidence Pack Id",
+      "type": "string"
+    },
+    "trace_id": {
+      "title": "Trace Id",
+      "type": "string"
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "items": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Items",
+      "type": "array"
+    },
+    "coverage": {
+      "additionalProperties": true,
+      "title": "Coverage",
+      "type": "object"
+    },
+    "citations_ready": {
+      "title": "Citations Ready",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "evidence_pack_id",
+    "trace_id",
+    "timestamp",
+    "items",
+    "coverage",
+    "citations_ready"
+  ],
+  "title": "EvidencePack",
+  "type": "object"
+}

@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "description": "다운시프트 정책 — D2.1-D7 §4.4 (6필드). LOCK: 80% 경고 / 100% 차단.",
+  "properties": {
+    "warn_threshold_percent": {
+      "title": "Warn Threshold Percent",
+      "type": "integer"
+    },
+    "block_threshold_percent": {
+      "title": "Block Threshold Percent",
+      "type": "integer"
+    },
+    "trigger_type": {
+      "enum": [
+        "daily",
+        "monthly"
+      ],
+      "title": "Trigger Type",
+      "type": "string"
+    },
+    "near_action": {
+      "enum": [
+        "warn",
+        "force_mini"
+      ],
+      "title": "Near Action",
+      "type": "string"
+    },
+    "exceed_action": {
+      "const": "block",
+      "title": "Exceed Action",
+      "type": "string"
+    },
+    "main_requires_approval": {
+      "title": "Main Requires Approval",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "warn_threshold_percent",
+    "block_threshold_percent",
+    "trigger_type",
+    "near_action",
+    "exceed_action",
+    "main_requires_approval"
+  ],
+  "title": "DownshiftSchema",
+  "type": "object"
+}
