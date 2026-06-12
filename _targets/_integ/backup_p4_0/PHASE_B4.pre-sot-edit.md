@@ -549,23 +549,6 @@ max_entries = 1000
 ttl_sec = 3600
 ```
 
-### 3.16 [confidence] -- 예측 신뢰도 임계값 (LOCK)
-
-> 신설: PHASE3-DEC-010 (R1-A25, LOCK-DECISION-REGISTRY §8) — P4-0 집행 (PHASE4-DEC-003, 사용자 승인 2026-06-12). V0부터 적용 (config LOCK 분모 20→23). 기존 §3.1~3.15 무변경 — 추가만.
-
-| 키 | 타입 | V1 기본값 | V2 기본값 | V3 기본값 | 설명 | 연결 스키마 |
-|----|------|----------|----------|----------|------|------------|
-| `confidence_high_threshold` | `float` | `0.85` | `0.85` | `0.85` | HIGH 분기 임계값 (LOCK) — 이상 시 정상 답변 | D2 DecisionSchema (confidence_level, DEC-010) |
-| `confidence_medium_threshold` | `float` | `0.60` | `0.60` | `0.60` | MEDIUM 분기 임계값 (LOCK) — 확신도 보통 표시 | D2 DecisionSchema (confidence_level, DEC-010) |
-| `confidence_refuse_threshold` | `float` | `0.30` | `0.30` | `0.30` | REFUSE 분기 임계값 (LOCK) — 미만 시 답변 거부 | D2 DecisionSchema (confidence_level, DEC-010) |
-
-```toml
-[confidence]
-confidence_high_threshold = 0.85     # LOCK
-confidence_medium_threshold = 0.60   # LOCK
-confidence_refuse_threshold = 0.30   # LOCK
-```
-
 ---
 
 ## 4. 버전별 프리셋 (V1/V2/V3)
@@ -712,11 +695,6 @@ enabled = true
 similarity_threshold = 0.95
 max_entries = 1000
 ttl_sec = 3600
-
-[confidence]                       # PHASE3-DEC-010 LOCK 3키 (§3.16) — P4-0 집행
-confidence_high_threshold = 0.85
-confidence_medium_threshold = 0.60
-confidence_refuse_threshold = 0.30
 ```
 
 ### 4.2 config/config.v2.toml (변경 항목만 -- 서버)

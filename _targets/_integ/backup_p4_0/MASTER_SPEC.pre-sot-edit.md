@@ -75,7 +75,7 @@
 | 38 | VAMOS_SDAR_DESIGN_SPECIFICATION.md | SPEC | I-25 SDAR 자가진단·자동복구 설계 명세 | 1647 | - | - | 참고 | 필수 | Self-Diagnosis & Auto-Repair |
 | 39 | VAMOS_BEGINNER_GUIDE.md | GUIDE | 초보자 온보딩/사용자 가이드 | 1853 | - | 참고 | 참고 | 참고 | 비개발자 대상 안내 문서 |
 
-> **분류 범례**: RULE=절대규칙, PLAN=로드맵/계획, DESIGN=아키텍처/모듈설계(01~08), SCHEMA=JSON Schema/타입(D1~D8/A1/Q1), PHASE=구현직접가이드(B1~B7, = IMPLEMENTATION 계층), SPEC=통합명세, STEP7=AI기술보강 상세, GUIDE=사용자안내
+> **분류 범례**: RULE=절대규칙, PLAN=로드맵/계획, DESIGN=아키텍처/모듈설계(01~08), SCHEMA=JSON Schema/타입(D1~D8/A1/Q1), PHASE=구현직접가이드(B1~B7), SPEC=통합명세, STEP7=AI기술보강 상세, GUIDE=사용자안내
 > **참조 수준**: 필수=반드시 읽고 준수, 참고=필요시 참조, -=해당 버전에서 불필요
 
 ---
@@ -1509,7 +1509,7 @@ vamos/
 | 항목 | LOCK 내용 |
 |------|----------|
 | Decision Lock | 한 시점/한 컨텍스트/한 결론 → locked=true |
-| Gate 우회 불가 | Policy→Approval→Cost→Evidence→SelfCheck 필수 |
+| Gate 우회 불가 | Policy→Approval→Cost→Evidence 필수 |
 | Self-check 임계값 | P0:70, P1:75, P2:80 |
 | Self-check 루프 | 자동 Soft 1회만, 이후 승인 필요 |
 | L2 저장 정책 | 기본 "승인 필요" |

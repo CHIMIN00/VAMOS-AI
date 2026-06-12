@@ -21,7 +21,7 @@
   - ⑮ seed=루트 `schemas/seed/` 확정·[core] ipc 2키(3/30) P4-1 포함·**VAMOS_DATA_DIR=.env.example 추가 집행**·config "17섹션" 라벨 정정 + ※ PART2 약기 테이블 SOT 이탈 발견(경고 주석+#3/#11/#12 교체 처분)
 - ☑ **4-1 타입 동기화 (B2c·A20)**: `schemas/seed/` 5종(D2.1-D2·CLAUDE.md §12·D2.0-02 I-모듈 상세에서 **기계 추출, 창작 0** — scripts/extract_seeds.py 카운트 assert) + `backend/vamos_core/schemas/contracts.py` **25모델**(extra="forbid" 전건, 필드 수 SOT 실측 전건 일치) + `registries.py`(기계 생성 — EventType **123**/FailureCode **36**/Fallback **23**/Tool 2/Node 1) + `scripts/generate_types.py`(JSON Schema 25종+Zod TS 25종 자동 생성) + `config/schema_registry.toml`+검증 스크립트 → **왕복 테스트 25/25 PASS**(Python→JSON→TS[무의존 Node 검증기]→Python 동일성) + **pytest 61 passed**(필드 수·extra·레지스트리 분모·네이밍 VL-005) + seed↔contracts 교차 7/7 — serde(Rust)는 P4-2 활성화(PHASE4-DEC-005)
 - ⚠️ **필드 분기 해소 기록**: IntentFrame/EvidencePack/StructuredOutput은 D2.0-02 초반 §7.3/7.13/7.33 요약(9/5/3 — timestamp·artifact_meta 누락 구판)과 후반 I-모듈 상세(10/6/4)가 병존 — **후반 상세 = 필드 정본 판정**(PART2 분모 10/6/4와 정확 일치, CLAUDE.md §12 IntentFrame 18 = 코어 10 + §11.12.1 V1 확장 8). seed에 판정 근거 기록
-- ☑ **SOT 수정 지시(승인 대기, 비차단)**: `_targets/p4_0_sot_edits_pending.md` — ①GATE-06 #4 MASTER_SPEC L78 "(= IMPLEMENTATION 계층)" ②C-001 3곳(D2.0-01 L208·MASTER_SPEC L1512·BEGINNER L1376) 5-Gate 열거 + **신규 발견 BEGINNER L1813**(순서 오기 동계열) ③PHASE_B4 §3.17 [confidence] 신설(DEC-010)
+- ☑ **SOT 수정 ✅ 사용자 승인·집행 완료 (2026-06-12)**: `_targets/p4_0_sot_edits_pending.md` 집행 기록 — ①GATE-06 #4 MASTER_SPEC L78 "(= IMPLEMENTATION 계층)"(원문 "구현직접가이드" 기준) ②C-001 4곳(D2.0-01 L208·MASTER_SPEC L1512·BEGINNER L1376·**L1813 신규 발견분 포함**) 5-Gate 전체 열거 ③**PHASE_B4 §3.16 [confidence] 신설**(실측 17섹션의 다음 번호 — 초안 §3.17 정정)+§4.1 프리셋 동반. EOL 무회귀(MASTER_SPEC CRLF 1904 보존·잔여 LF) + integrity 신규 체크 `v13_integrity_check_20260612T230000.json` **CHANGED_AS_APPROVED**(승인 4+CLAUDE.md F1 기집행분 한정) = 새 참조 기준. ⚠️ MASTER_SPEC blob LF→CRLF 수렴(이중 상태 자연 수렴 — DEC-006 경로 공시). **추가 확인: B4 §3.7 정본 자체가 warn=80/block=100 — DEC-002 병존 설계와 정확 일치**
 - ☑ 구키 revoke: 통보 미수신 유지(등재 트리거 유지·비차단) / CLAUDE.md §12 Decision 20필드·§20 분모 23 갱신은 4-5 바인딩(DEC-010 기확정 경로)
 - 📌 **P4-1 입력**: ⑦ LangGraph(오케스트레이션 한정·Gate 우회 금지·StateGraph 중첩 금지) · ⑧ [cost] 80/100 LOCK+alert 3값 · **config 23키**(20+confidence 3, 14섹션) + [core] ipc_max_restart=3/ipc_timeout_s=30 · **DecisionSchema 20** · V0 실파일 8(GATE-03) · 백업 `_targets/_integ/backup_p4_0/`
 
@@ -145,7 +145,7 @@
 **P4-1 — ORANGE CORE + Registry 연동 + config.v1.toml (B2a·R2a)** — 실파일 8(활성 I-1/2/3/5/19 + stub I-8/9/20, GATE-03) + 5-Phase Pipeline(LangGraph 오케스트레이션 전용 — PHASE4-DEC-001) + Gate 3종 + Defense Layer 1/3 + reasoning_trace + confidence 분기 + config.v1.toml **14섹션 23키**([cost] 80/100 LOCK+alert_thresholds — PHASE4-DEC-002/-003, [core] ipc 2키 — DEC-009) → P4-2(IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸) → P4-3(Phase 4 Gate, Must 11)
 → 입력: **상단 P4-0 결과 "P4-1 입력"** + runtime_decisions.md + runtime_eng_plan.md + contracts.py 25모델(4-1 산출물) + PHASE4-DEC-001~009
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / 4-5에서 check_config_lock.py 분모 20→23 + CLAUDE.md §12/§20 갱신(DEC-010 바인딩)
-→ 잔여(비차단): SOT edits 승인 대기(`_targets/p4_0_sot_edits_pending.md`) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
+→ 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)

@@ -16,7 +16,8 @@ confidence_high_threshold = 0.85      # LOCK
 confidence_medium_threshold = 0.60    # LOCK
 confidence_refuse_threshold = 0.30    # LOCK
 ```
-- 키 이름은 DEC-010 등록 명칭 그대로 보존(LOCK 명칭 불변). PHASE_B4 §3에 없는 신규 섹션이므로 **B4 SOT 동기는 수정 지시로 등재**(§3.17 신설 — 승인 후, P4-1 비차단: 구현 상세 정본은 PART2).
+- 키 이름은 DEC-010 등록 명칭 그대로 보존(LOCK 명칭 불변). PHASE_B4 §3에 없는 신규 섹션이므로 **B4 SOT 동기는 수정 지시로 등재**(승인 후, P4-1 비차단: 구현 상세 정본은 PART2).
+- ⟦집행 기록 (사용자 승인 2026-06-12)⟧ **B4 §3.16 신설 완료** — 실측 B4 §3 = 3.1~3.15(+3.8a/3.8b)=17섹션, 다음 번호 **3.16**(초안 "§3.17"은 추정 오기 정정). §4.1 V1 프리셋 toml에 [confidence] 동반 추가. integrity v13_integrity_check_20260612T230000.json CHANGED_AS_APPROVED.
 - config.v1.toml 실생성·LOCK 분모 23 적용·check_config_lock.py 분모 갱신은 **4-5 바인딩**(DEC-010 기확정 — 재론 없음).
 
 ### 3. PART2 V0-STEP-2 연쇄 갱신 (본 세션 집행, CRLF 보존)

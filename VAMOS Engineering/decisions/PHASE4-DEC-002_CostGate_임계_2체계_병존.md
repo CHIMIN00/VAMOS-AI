@@ -27,6 +27,8 @@ alert_thresholds = [70, 85, 95]   # P30-058 3단계 경보 (비-LOCK): 70 경고
 
 DEC-005(D2.0-07 §4.2 L216 LOCK + LOCK Registry §3 "80 warn → 100 block") / check_config_lock.py L28-29(D13 분모) / D2.1-D7 §4.4 / PART2 §7.5.1 L6298(BLOCKER-11 "warn=80/block=100") / PLAN-3.0 P30-058(70/85/95 — 경보 원형). 두 체계 모두 정본 근거 보유 — 역할(집행 vs 통지)이 다르므로 병존이 유일한 무손실 정합.
 
+⟦사후 보강 (SOT edits 집행 시 실측, 2026-06-12)⟧ **PHASE_B4 §3.7 L276-277 정본 자체가 `warn_threshold=80`/`block_threshold=100`(연결 스키마 D7 DownshiftSchema)** — 본 결정과 정확 일치. PART2 템플릿 70/85/95는 B4 config 정본에서도 이탈한 표기였음이 확정(결정의 추가 독립 근거).
+
 ## 기각 대안
 
 - 단일화 80/100(경보 폐기) — P30-058 정본 삭제 유발 + 70% 조기 경고의 운영 가치 상실. 기각.
