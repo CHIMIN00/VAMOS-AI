@@ -51,3 +51,13 @@
 
 ## 종합
 4항목 전건 단일 결론 확정. SOT/SOT2 물리 수정 0건(수정 지시 7건은 P4-0/P6-0/P7-0/P8-0 배정 + §b 동기화 1건은 승인 후 집행). R1 차단 0.
+
+---
+
+## ⟦집행 기록 — §b 스냅샷 동기화 (사용자 승인 2026-06-12)⟧
+
+**동기화 완료**: 루트 CLAUDE.md → docs\sot\CLAUDE.md byte 동일 복사. 양측 SHA-256 `1FF0D3C0…4862431A` 일치 · CR=0 · 48,788B · 946줄 (GOLD 상태). 구판(33,320B·709줄, SHA `192F534C…`) 백업: `_targets\_integ\backup_phase3\CLAUDE.md.sot.pre-sync-20260612`. integrity 신규 체크: `v13_integrity_check_20260612T175049.json` (changed 41 = 세션4~7 콘텐츠 수정분+본 동기화, 신규 참조 기준 — D-4 선례). 이에 따라 §a C-001의 sot CLAUDE.md L236 건은 해소 완료.
+
+**⚠️ 부수 사건 — git EOL 손상 및 전수 복구 (동일 세션)**: GATE-08 main ff 1회차 집행의 브랜치 체크아웃 왕복이 `core.autocrlf=true`(시스템 설정)와 결합해 두 브랜치 간 차이 파일 824건의 작업 트리를 LF→CRLF로 재작성함을 발견.
+- **복구**: ① repo-local `core.autocrlf=false` 설정 ② 06-04 integrity 기준 해시 ↔ 1c3cede blob의 LF/CRLF 양방 SHA 대조 + backup_session5 실측으로 824건의 역사적 디스크 EOL 기계 판정 ③ LF군 725건을 blob 원본으로 재작성(역사적 CRLF군 27건은 체크아웃이 byte 동일 재생성했으므로 무손상·무조치, 바이너리 29·LFS 14·HEAD삭제 29 제외) ④ 교차검증: 1-1 상세명세 blob = 11,960B·sha16 3AE9E739로 프로젝트 기록 불변식과 정확 일치 ⑤ 최종 검증: CLAUDE.md LF·946 GOLD / 로드맵·PROGRESS·프롬프트·STRATEGY_02 순수 LF / PART1(CR 1,329)·PART2(CR 6,454) CRLF 보존 / git diff 0 (blob 무변화 — 커밋 이력 무영향).
+- **재발 방지 규칙 (확정)**: ① 본 repo에서 브랜치 체크아웃/전환 금지 원칙 — main 동기화는 `git fetch . <branch>:main`(작업 트리 비접촉)으로 수행 ② 역사적 CRLF-디스크/LF-blob 이중 상태 파일(~684건: PART1·PART2·READINESS_REVIEW·STEP7 가이드군·D2.0-03~06 등)의 EOL 정규화 여부는 P4-0에서 결정 후보로 등재.
