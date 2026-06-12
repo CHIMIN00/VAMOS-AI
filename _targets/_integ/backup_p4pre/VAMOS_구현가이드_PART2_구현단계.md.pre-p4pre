@@ -309,7 +309,7 @@ p2_timeout_s = 300               # LOCK: 5분 (P2 승인)
 [mcp]                            # PHASE_B4 §3.9
 transport = "streamable_http"    # LOCK
 default_timeout_ms = 10000       # B4 정본: 밀리초 단위 (_ms)
-max_retries = 2                  # V1/V2=2 - V3=3 (PHASE_B4 §3.9 정본, PHASE3-GATE-07d 단일 표기)
+max_retries = 3
 
 [rbac]                           # PHASE_B4 §3.10
 default_role = "OWNER"           # OWNER/ADMIN/OPERATOR/VIEWER
@@ -485,7 +485,7 @@ p2_timeout_s = 300               # LOCK: 5분 (P2 승인)
 [mcp]                            # PHASE_B4 §3.9
 transport = "streamable_http"    # LOCK
 default_timeout_ms = 10000       # B4 정본: 밀리초 단위 (_ms)
-max_retries = 2                  # V1/V2=2 - V3=3 (PHASE_B4 §3.9 정본, PHASE3-GATE-07d 단일 표기)
+max_retries = 3
 
 [rbac]                           # PHASE_B4 §3.10
 default_role = "OWNER"           # OWNER/ADMIN/OPERATOR/VIEWER
