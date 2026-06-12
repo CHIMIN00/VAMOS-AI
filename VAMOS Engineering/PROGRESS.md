@@ -12,6 +12,7 @@
 - ☑ [수정] 11건 집행(백업 `_targets/_integ/backup_p4pre/`·EOL 무회귀 실측): 로드맵 Phase 3 stale 5곳 현행화 + Phase 5 게이트 비대칭 노트 + **6-0 V1 착수 게이트(P6-0) 행 신설**(B.2 12건 준비+GATE-06/07 배정분 착지)+Critical Path + Phase 7~8 실패 시(A1) 준용 노트 / PART2 `[mcp] max_retries` 3→2 정정(L312·L488, GATE-07d — V3 키 보존, CRLF 6454 보존)
 - ☑ P4-0 신규 입력 ⑨~⑮: confidence 3키 PART2 동기(DEC-010) · V0 GO #15 Guardrails 충족 수단 · 저장소/스캐폴딩 방침(D:\VAMOS 단일 repo·Phase 2 자산 승계·ci.yml reconcile) · .gitattributes EOL 규칙(현행 LFS 전용 — 보존 필수) · Eval 스택 의존성(ragas·deepeval·minicheck 정의처 0) · 5-7a(Must)→4-3(Should) 의존 명시 · 미세 4건(seed 경로·ipc_* 키·VAMOS_DATA_DIR·config 라벨)
 - ☑ 이연 등재: P6-0(V1→V2 TC 비용 기준 ₩93,000 모순 의심·READINESS enum drift·TC 측정 도구 6종 생산처·/health vs stdio·운영 결정 4건) / P7-0(V2 도메인/TLS 미정의) / P8-0(READINESS 전환조건 표기·PART1 B.4 Hetzner/RunPod 미반영) · 의도적 부재 3건 기록(updater·LICENSE·READINESS 실패절차)
+- ℹ️ git blob EOL: PART2 blob이 d5bc6e8에서 디스크 진실(CRLF)로 정합화(디스크 무변경·내용 diff 2줄 실측 — 이중 상태 684→683, 잔여 정규화 결정은 P4-0 유지. 보고서 §6 공시)
 
 ## Phase 3 교차감사 최종 확정 (2026-06-12)
 - 3-AI 독립 감사: Fable 5 max **CONFIRM/GO**(C0/M0/m1) · Opus 4.8 max CONDITIONAL(C0/M1) · GPT 5.5 CONDITIONAL(C0/m1, 증거팩 한정) — **CRITICAL 0·silent drop 0·fabrication 0 공통**, 디스크 감사관 실측 상호 일치(인용 10/10 verbatim·LOCK 순수 추가만·EOL diff 0)
