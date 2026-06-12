@@ -1,9 +1,23 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**Phase 3-0 미결정 게이트 통과** — 스코프 ①~⑩ 전건 확정, decisions/PHASE3-GATE-01~08)
+> 최종 갱신: 2026-06-12 (**P3-1 완료** — R1 런타임 설계 10개 LOCK, runtime_decisions.md + decisions/PHASE3-DEC-001~010)
 
 ## 현재 Phase
-**Phase 3 진행 중 — 3-0 미결정 게이트 ✅ 통과 (2026-06-12)** → 다음: **P3-1 (R1 런타임 설계 10개 LOCK)** + X1(3-8~3-13) 2트랙
+**Phase 3 진행 중 — 3-0 ✅ + 3-1~3-7c(R1) ✅ (2026-06-12)** → 다음: **P3-2 (X1 전략 3-8~3-11 + 계획서 3-12/3-13 + Phase 3 Gate)**
+
+## P3-1 결과 (2026-06-12) — R1 런타임 설계 10개 결정 확정
+- ☑ **산출물**: `VAMOS Engineering/runtime_decisions.md` 신설(결정 요약+로드맵 바인딩 — 기존 정본 비대체, 위상 L293 준수) + ADR 10건 `decisions/PHASE3-DEC-001~010`(A6)
+- ☑ 3-1 5-Gate 순서: **Policy→Approval→Cost→Evidence→SelfCheck** (D2.0-07 L969 — STRATEGY_05 §3.1 순서 오기 교정 동반)
+- ☑ 3-2 메모리 L0~L3: 계층·TTL·승격(L0→L1 자동/L1→L2 3회∨QoD≥0.7/L2→L3 크로스)·강등(pinned 제외)·B↔L 매핑 (D2.0-06 추인)
+- ☑ 3-3 Failover: GPT-4o→Claude Sonnet→Ollama, 연속 3회 타임아웃∨5xx (D2.0-02 §11.1.2 LOCK 추인)
+- ☑ 3-4 DAG: 9-State S0~S8 + S3 결론불변 + Soft loop 1회 + V1 자체 경량 프레임워크 기본·LangGraph 어댑터 한정 (D2.0-02 §2.2+D2.0-05 — 정정된 정본 매핑 사용)
+- ☑ 3-5 CostGate: 80% force_mini / 100% deny(LOCK 변경불가) (D2.0-07 §4.2 추인)
+- ☑ 3-6 IPC: JSON-RPC 2.0 subprocess + 13 메서드(PHASE_B1 §5.2 전수) + A20(Pydantic 단일 정본·자동 생성·왕복 테스트·4파일 동시 커밋)
+- ☑ 3-7 MCP: Streamable HTTP(DEC-017) + max_retries V1/V2=2·V3=3(GATE-07d 준수)
+- ☑ 3-7a A21: Defense Layer 3계층 독립(config LOCK/5-Gate/NEVER_AUTO 10 frozenset) — PART2 Security Layer와 별개 명기
+- ☑ 3-7b A22: D6 틀 내 metadata 스키마 상세(reasoning_trace/evidence_sources/confidence_score/disclaimer — top-level 불변)
+- ☑ 3-7c A25: Decision confidence_score+level 신규 + 임계값 0.85/0.60/0.30 LOCK(config 신규 3키 — 분모 20→23 V0 집행) + REFUSE 분기
+- ☑ **LOCK**: 기존 재정의 0 · 신규 3건 등록(LOCK-DECISION-REGISTRY §8: R1-A25/R1-A21/R1-A22) · 회귀 CLAUDE.md §5 모순 0
 
 ## Phase 3-0 미결정 게이트 결과 (2026-06-12) — 게이트 통과 선언
 - ☑ ① D1 이연 대장 D-1~D-4: 전건 종결/기록-전용 재확인 — 실효 OPEN 0 (GATE-01)
@@ -82,8 +96,8 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P3-1: R1 런타임 설계 10개 LOCK (3-1~3-7c, 전부 Must)** — 5-Gate/메모리 L0~L3/Failover/DAG/CostGate/IPC+A20/MCP + 3-7a(A21)/3-7b(A22, D6 기확정)/3-7c(A25) → ADR decisions/PHASE3-DEC-001~010 + runtime_decisions.md
-→ 병렬 X1(3-8~3-13) 트랙 가능 · 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-1 + _targets/DECISION_REGISTER.md + decisions/PHASE3-GATE-01~08
+**P3-2: X1 횡단 전략 + 계획서 + Phase 3 Gate** — 3-8 보안 전략(security_strategy.md, A16 체크리스트+A21 검증 방법) / 3-9 테스트(test_strategy.md — PHASE_B5 비대체 요약 바인딩) / 3-10 릴리스(release_strategy.md, A23) / 3-11 문서화(doc_strategy.md) / 3-12 runtime_eng_plan.md / 3-13 cross_eng_plan.md → 3-V 체크리스트 + Phase 3 완료 게이트(tag phase3-complete)
+→ 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-2 + runtime_decisions.md + decisions/PHASE3-DEC-001~010
 → 잔여 이관 액션(비차단): P4-0(MASTER_SPEC §0 표기 + SOT 이형 C-001 3곳) / P6-0(5건+이형 3건) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 스냅샷 동기화 집행(사용자 승인 후) — 상세 GATE-06/07
 
 ## 참조 파일

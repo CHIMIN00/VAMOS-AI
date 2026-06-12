@@ -82,7 +82,8 @@ Phase 3 X1 보안 전략에 포함:
 
 ```
 현재 5-Gate 구조:
-  PolicyGate → CostGate → ApprovalGate → EvidenceGate → SelfCheckGate
+  PolicyGate → ApprovalGate → CostGate → EvidenceGate → SelfCheckGate
+  (2026-06-12 교정: 구 표기 "Cost→Approval" 순서 오기 — 정본 D2.0-07 L969, PHASE3-DEC-001)
   → 소프트웨어 체인으로만 구성
   → PolicyGate 코드에 버그 → 위험한 요청 통과 가능
 ```
@@ -150,6 +151,8 @@ Phase 3 R1에서 스키마 확정:
   아래 신규 필드는 metadata dict 내부에 포함하거나,
   LOCK 해제(Approval Gate 필수) 후 추가하는 2가지 선택지 중
   Phase 3 R1에서 최종 결정. 현 시점에서는 "설계 의도"만 기록.
+  ⟦확정⟧ D6 (2026-06-11): 선택지 A 채택 — 선택지 B 기각.
+  스키마 상세는 PHASE3-DEC-009 (2026-06-12) 확정.
 
 선택지 A (LOCK 유지 — 권장):
   metadata dict 안에 포함:

@@ -131,6 +131,16 @@ RULE 1.3 (절대규칙)
 
 **상세**: 각 도메인 노트의 "LOCK 항목" 섹션 참조
 
+## 8. Phase 3 R1 신규 LOCK (2026-06-12 — decisions/PHASE3-DEC-001~010)
+
+> 기존 LOCK 재정의 0 — 아래 3건만 신규. 상세·근거는 `VAMOS Engineering/runtime_decisions.md` + 각 ADR.
+
+| ID | LOCK 내용 | 출처 |
+|---|---|---|
+| R1-A25 | confidence 임계값: high=0.85 / medium=0.60 / refuse=0.30 (config.v1.toml 3키 — config LOCK 분모 20→23, V0 구현 시 집행) + 분기 HIGH/MEDIUM/LOW/REFUSE | STRATEGY_05 §5.2 → PHASE3-DEC-010 |
+| R1-A21 | Defense Layer 3계층 독립(config LOCK / 5-Gate / NEVER_AUTO frozenset) — 계층 간 의존성 0, NEVER_AUTO는 config로 우회 불가 | STRATEGY_05 §3.2 + SDAR §5.1 → PHASE3-DEC-008 |
+| R1-A22 | ResponseEnvelope 확장은 metadata(dict) 내부 한정(top-level 필드 추가 금지) — 키 4종: reasoning_trace/evidence_sources/confidence_score/disclaimer | D6 + STRATEGY_05 §4.2 → PHASE3-DEC-009 |
+
 ## 관련 노드
 
 - [[VAMOS-Authority-Chain]] — 문서 위계 + 변경 프로토콜
