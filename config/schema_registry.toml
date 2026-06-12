@@ -11,7 +11,16 @@ source = "P4-0 4-1 타입 동기화 (PHASE4-DEC-005 스캐폴딩 범위)"
 [sqlite.tables]
 sessions = ["session_id:TEXT PK", "created_at:DATETIME", "mode:TEXT"]
 modules  = ["module_id:TEXT PK", "series:TEXT", "status:TEXT"]
-# memory_records 테이블 상세는 V0-STEP-5(P4-1)에서 MemoryRecord(contracts.py) 기준 확정
+# memory_records — PART2 V0-STEP-5 L1260~1275 정본 SQL (P4-1 확정).
+# MemoryRecord(contracts.py 20필드)의 저장 서브셋: id←record_id, content←content_summary,
+# metadata←잔여 필드 JSON, session_id는 L0 저장 계층 키. 구현: backend/vamos_core/storage/memory_store.py
+memory_records = [
+  "id:TEXT PK", "session_id:TEXT NOT NULL", "scope:TEXT DEFAULT 'L0'",
+  "content:TEXT NOT NULL", "embedding:BLOB", "metadata:TEXT",
+  "created_at:TIMESTAMP", "updated_at:TIMESTAMP", "expires_at:TIMESTAMP",
+  "activation_state:TEXT DEFAULT 'active'",
+]
+# 인덱스 3종: idx_session(session_id) / idx_scope(scope) / idx_expires(expires_at)
 
 [chroma.collections]
 memory_long = ["doc_id:TEXT", "embedding:VECTOR(1024)", "metadata:JSON"]
