@@ -1,6 +1,7 @@
 """config.v1.toml LOCK 값 검증 (Phase 2-4 코드 생산 Hook — STRATEGY_10 §4 4-V4).
 
-CLAUDE.md §20 / PHASE_B4_CONFIG_SPEC 정본 LOCK 20키 (D13 확정 분모).
+CLAUDE.md §20 / PHASE_B4_CONFIG_SPEC 정본 LOCK 23키
+(D13 확정 20 + PHASE3-DEC-010 confidence 3 — P4-1 분모 갱신, 4-5 바인딩 집행).
 config.v1.toml 수정 시 Hook이 호출 — LOCK 값이 정본과 다르면 위반 보고.
 파일 부재 시(V0-STEP 이전) 정상 종료.
 
@@ -20,7 +21,8 @@ except ImportError:  # pragma: no cover
     print("[LOCK-CHECK] tomllib 불가(Python<3.11) — 검증 스킵")
     sys.exit(0)
 
-# CLAUDE.md §20 정본 — LOCK 20키 (D13: PHASE_B4 §3 LOCK 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외)
+# CLAUDE.md §20 정본 — LOCK 23키 (D13 20: PHASE_B4 §3 LOCK 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외
+#                                  + PHASE3-DEC-010 confidence 3 — B4 §3.16, P4-1 집행)
 LOCK_KEYS = {
     ("core", "single_decision_lock"): True,
     ("embedding", "model"): "bge-m3",
@@ -42,6 +44,9 @@ LOCK_KEYS = {
     ("approval", "p2_timeout_s"): 300,
     ("blue_nodes", "active_node_cap"): 3,
     ("ui", "min_width"): 1280,
+    ("confidence", "confidence_high_threshold"): 0.85,
+    ("confidence", "confidence_medium_threshold"): 0.60,
+    ("confidence", "confidence_refuse_threshold"): 0.30,
 }
 
 
@@ -67,7 +72,7 @@ def main() -> int:
         for v in violations:
             print(f"  - {v}")
         return 2
-    msg = f"[LOCK-CHECK] ✅ LOCK 20키 위반 0건 ({path})"
+    msg = f"[LOCK-CHECK] ✅ LOCK 23키 위반 0건 ({path})"
     if missing:
         msg += f" · 미정의 {len(missing)}키(스캐폴딩 단계 허용): {', '.join(missing[:5])}..."
     print(msg)
