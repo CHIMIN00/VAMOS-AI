@@ -1,9 +1,9 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**Phase 2 완료** — 2-V 전항목 PASS + git tag phase2-complete)
+> 최종 갱신: 2026-06-12 (**Phase 2 최종 확정** — 2-V 전항목 PASS + git tag phase2-complete + **3-AI 교차감사 CONFIRM**[PHASE2-DEC-03])
 
 ## 현재 Phase
-**Phase 2 완료 (2026-06-12)** → 다음: **Phase 3-0 미결정 게이트** (별도 세션 권장 — 로드맵 3-0 + P3-0 프롬프트)
+**Phase 2 완료·최종 확정 (2026-06-12, 3-AI 교차감사 CONFIRM — decisions/PHASE2-DEC-03)** → 다음: **Phase 3-0 미결정 게이트** (별도 세션 권장 — 로드맵 3-0 + P3-0 프롬프트)
 
 ## Phase 2 검증 결과 (2-V) — 전항목 ☑
 - ☑ CLAUDE.md 보강 완료 — 946줄 §1~§28, §28에 A13 컨텍스트 프로토콜 포함, **GOLD 판정**
@@ -31,7 +31,8 @@
 - [x] **2-5** vamos_lint: `scripts/vamos_lint.py` VL-001~005 구현 — 위반 샘플 8건 전 규칙 탐지 PASS·정상 파일 오탐 0 (mode=error 기본, warn 폴백 내장). ruff banned-api(§8.1)는 pyproject 포함, ci.yml vamos-lint job 통합(§8.3). `commitlint.config.js` 별도 생성
 - [x] **2-6** CPS 템플릿: `VAMOS Engineering/CPS_TEMPLATE.md` / **2-7** 로딩 맵: `VAMOS Engineering/CONTEXT_LOADING_MAP.md`
 - [x] **2-8 완료 (2026-06-12)**: **D-2 종결(보수)** — 04_cat-d-media/_index.md 링크 교정(백업·LF 보존) / **D-3 종결(보완 불요)** — AUTHORITY 6/6+MASTER_INDEX+§21 라우팅 충족 / **유산 이동 집행** — back up(git 언트래킹 1)+.claude-pre-commit → `D:\VAMOS_ARCHIVE\legacy_phase2\`(42파일, 삭제 0) / **5-4 SHELL 87 → 3-0 이연 확정**(`decisions/PHASE2-DEC-02`) / **STRATEGY_11 §2.13 신설**(Phase 2 자산 16종 등재)+§5.2 집행 기록+골든셋 v2 반영
-- [ ] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조) ← **다음**
+- [x] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조) — 완료 (2026-06-12, 상기 2-V 전항목 ☑)
+- [x] **교차감사 최종 확정 (2026-06-12)**: 3-AI 독립 감사 — Fable 5 max **CONFIRM/GO**·Opus 4.8 max **CONFIRM/GO**(디스크 실측, 실측값 상호 일치)·GPT 5.5 CONDITIONAL(증거팩 미포함 구조 한계, 허위·충돌 0) → UNVERIFIABLE 12항목 **전수 디스크 재실측 해소**(다수결 아닌 증거 우선 규칙). CRITICAL/MAJOR 0(실효)·silent drop 0(3감사 공통)·원격 태그 `ls-remote` 확인. MINOR 정리: CLAUDE.md §28.4 stale 갱신(F-01, 946줄 유지)+로드맵 L40 LOCK-MCP-06 열거 보완(F-02). 기록 `decisions/PHASE2-DEC-03_교차감사_최종확정.md`
 
 ## Phase 1 — D1 검증 결과 (2026-06-04)
 - **판정: D1 PASS (CONDITIONAL)** — 값 게이트 5/5 통과, 이연 4항목 전수 등록(누락 0), 자동 정본 변경 0
@@ -68,7 +69,7 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**Phase 3-0: 미결정 게이트 (Must, 선행 — 별도 세션 권장)** — D1 이연 대장 + PART1 C.1 13건 + 분모 2건·V1 귀속·STEP7 reconcile + Phase 2 이관분(SOT 이형 9건·CLAUDE.md 스냅샷 동기화·5-4 SHELL 87)
+**Phase 3-0: 미결정 게이트 (Must, 선행 — 별도 세션 권장)** — D1 이연 대장 + PART1 C.1 13건 + 분모 2건·V1 귀속·STEP7 reconcile + Phase 2 이관분(SOT 이형 9건·CLAUDE.md 스냅샷 동기화·5-4 SHELL 87·LOCK-MCP-06 표기 뉘앙스 — 정본 체크리스트는 본 문서 L21) + 감사 권고(비차단): 구키 revoke 통보 수신 시 액션대장 등재·main 병합 정책 확정
 → 이후 R1(3-1~3-7c) / X1(3-8~3-13) 2트랙
 → Phase 3 진입 시 참조: PROGRESS.md + CONTEXT_LOADING_MAP.md(Phase 3 행) + _targets/DECISION_REGISTER.md + ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-0
 

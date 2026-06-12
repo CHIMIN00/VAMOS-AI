@@ -940,7 +940,7 @@ Phase 완료 시: git tag phase{N}-complete → git push --tags (A2) + 회고 de
 | 7 | PROGRESS.md + V1 완료 결과 + PART2 §4 + PHASE_B7(마이그레이션) + READINESS §4 + PART1 B.3 |
 | 8 | PROGRESS.md + V2 완료 결과 + PART2 §5 + READINESS §5 + PART1 B.4 |
 
-### 28.4 Phase 진행 현황 (2026-06-11)
+### 28.4 Phase 진행 현황 (2026-06-12)
 
-- Phase 0 ✅ (2026-04-04) / Phase 1 ✅ D1 PASS (2026-06-04) / **Phase 2 진행 중** / Phase 3 ◐ (SOT 2 흡수, 결정문서 7종 미생성 — 3-0 미결정 게이트 선행) / Phase 4~8 ⬜
+- Phase 0 ✅ (2026-04-04) / Phase 1 ✅ D1 PASS (2026-06-04) / **Phase 2 ✅ 최종 확정** (2026-06-12, 2-V 전항목 PASS + 3-AI 교차감사 CONFIRM — decisions/PHASE2-DEC-03) / Phase 3 ◐ (SOT 2 흡수, 결정문서 7종 미생성 — 3-0 미결정 게이트 선행) / Phase 4~8 ⬜
 - 2층 구조: **로드맵 = 마스터 + PART2 = V0·V1(·V2·V3) 실행 상세 정본** (Phase 7/8 = PART2 §4/§5)
