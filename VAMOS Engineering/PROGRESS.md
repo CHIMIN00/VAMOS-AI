@@ -1,9 +1,21 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**P3-1 완료** — R1 런타임 설계 10개 LOCK, runtime_decisions.md + decisions/PHASE3-DEC-001~010)
+> 최종 갱신: 2026-06-12 (**Phase 3 ✅ 완료** — R1 10결정 + X1 4전략 + 계획서 2 + 3-V Gate, tag phase3-complete)
 
 ## 현재 Phase
-**Phase 3 진행 중 — 3-0 ✅ + 3-1~3-7c(R1) ✅ (2026-06-12)** → 다음: **P3-2 (X1 전략 3-8~3-11 + 계획서 3-12/3-13 + Phase 3 Gate)**
+**Phase 3 ✅ 완료 (2026-06-12)** — 3-0 게이트 + 3-1~3-7c(R1 10결정) + 3-8~3-11(X1 4전략) + 3-12/3-13(계획서) + 3-V Gate 전항목 PASS → 다음: **Phase 4 — V0 구현 (P4-0 스킬 점검 + 타입 동기화)**
+
+## P3-2 결과 (2026-06-12) — X1 횡단 전략 + 계획서 + Phase 3 Gate
+- ☑ **산출물 6종** (전부 `VAMOS Engineering/` 직하, 위상 = 결정 요약+바인딩·정본 무대체):
+  - 3-8 `security_strategy.md` — 7불변×3계층 강제 + Permission Matrix(sot2 3-10 LOCK-AP-02) + 감사로그 해시체인 + A16 체크리스트 + A21 검증
+  - 3-9 `test_strategy.md` — 피라미드(단위 80%/통합 60%/E2E 100%, PHASE_B5 추인) + R1 10결정 연계 테스트
+  - 3-10 `release_strategy.md` — Git 브랜치(GATE-08 ff-only) + SemVer + Expand/Contract(A23, config 분모 20→23 Expand)
+  - 3-11 `doc_strategy.md` — 코드/설계/ADR 주체 + VAMOS HOME 124노트 갱신 규칙
+  - 3-12 `runtime_eng_plan.md` — R1 10결정 → R2a/R2b/R2c/R3/RF 매핑(V0=8/V1=32 분모 반영)
+  - 3-13 `cross_eng_plan.md` — X1 4전략 → X2/X3/XF + Phase 2 하네스 정합
+- ☑ **3-V Gate 전항목 PASS**: R1 10결정 SOT 정합 / LOCK Registry 일치+신규 3건(§8) / A20 Pydantic 정본·자동생성·수동금지(DEC-006) / A21 3계층 독립(DEC-008) / A22 reasoning_trace 스키마(DEC-009) / A25 confidence+임계값 LOCK(DEC-010) / A16 체크리스트(security §4) / 회귀 CLAUDE.md §5 모순 0
+- ☑ **Phase 3→4 인수인계**: runtime_decisions.md→R2a / IPC+A20→B2c / 4전략→X2 (전건 ☑)
+- ☑ 회고 `decisions/phase3_retro.md` (잘된 3/안된 3/바꿀 1 + autocrlf 포스트모템) · git tag **phase3-complete**
 
 ## P3-1 결과 (2026-06-12) — R1 런타임 설계 10개 결정 확정
 - ☑ **산출물**: `VAMOS Engineering/runtime_decisions.md` 신설(결정 요약+로드맵 바인딩 — 기존 정본 비대체, 위상 L293 준수) + ADR 10건 `decisions/PHASE3-DEC-001~010`(A6)
@@ -96,8 +108,10 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P3-2: X1 횡단 전략 + 계획서 + Phase 3 Gate** — 3-8 보안 전략(security_strategy.md, A16 체크리스트+A21 검증 방법) / 3-9 테스트(test_strategy.md — PHASE_B5 비대체 요약 바인딩) / 3-10 릴리스(release_strategy.md, A23) / 3-11 문서화(doc_strategy.md) / 3-12 runtime_eng_plan.md / 3-13 cross_eng_plan.md → 3-V 체크리스트 + Phase 3 완료 게이트(tag phase3-complete)
-→ 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-2 + runtime_decisions.md + decisions/PHASE3-DEC-001~010
+**Phase 4 — V0 구현 (B2 + R2 + X2)** — P4-0(스킬/Hook 점검 A7 + 타입 동기화 B2c) → P4-1(ORANGE CORE 8파일 + Registry + config.v1.toml 23키) → P4-2(IPC JSON-RPC 13 + BLUE NODE 3 스켈레톤 + Tauri 프론트) → P4-3(Phase 4 Gate, Must 11)
+→ 입력: runtime_decisions.md + runtime_eng_plan.md(R2 매핑) + cross_eng_plan.md(X2) + 4 전략 + PHASE3-GATE-03(분모 V0=8/V1=32/Must=11)
+→ ⚠️ P4-0 선행 점검: autocrlf=false 확인 + ls-files --eol 기준선([[git-eol-autocrlf-checkout-hazard]]) + READINESS §8 #4(MASTER_SPEC §0 IMPLEMENTATION 계층)+SOT 이형 C-001 수정 지시(GATE-06)
+→ 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P4-0 + CONTEXT_LOADING_MAP.md(Phase 4 행)
 → 잔여 이관 액션(비차단): P4-0(MASTER_SPEC §0 표기 + SOT 이형 C-001 3곳) / P6-0(5건+이형 3건) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 스냅샷 동기화 집행(사용자 승인 후) — 상세 GATE-06/07
 
 ## 참조 파일

@@ -1274,7 +1274,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | | P2-5 | Phase 2 Gate | ✅ (2026-06-12, tag phase2-complete + 3-AI 교차감사 CONFIRM PHASE2-DEC-03) |
 | **3** | P3-0 | 미결정 게이트 (선행, 2026-06-11 신설) | ✅ (2026-06-12, PHASE3-GATE-01~08) |
 | | P3-1 | R1 런타임 10개 LOCK | ✅ (2026-06-12, runtime_decisions.md + PHASE3-DEC-001~010) |
-| | P3-2 | X1 전략 + 계획서 + Gate | ⬜ |
+| | P3-2 | X1 전략 + 계획서 + Gate | ✅ (2026-06-12, 4전략+계획서 2+3-V, tag phase3-complete) |
 | **4** | P4-0 | 스킬 점검 + 타입 동기화 | ⬜ |
 | | P4-1 | ORANGE CORE + Registry + config | ⬜ |
 | | P4-2 | IPC + BLUE NODE + 프론트엔드 | ⬜ |
