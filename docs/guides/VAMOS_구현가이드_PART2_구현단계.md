@@ -2546,7 +2546,7 @@ Python/Rust/React 단위 테스트(~85개), CI/CD 파이프라인 완성,
 ## V1-Phase 6: AI Investing MVP + MCP (Week 13-16, Phase 4-5와 병렬)
 
 ### 실행 가이드
-> **AI 프롬프트 요약**: "V1-Phase 6 AI Investing MVP + MCP를 구현하세요. §6.8 AI Investing(포트폴리오, Circuit Breaker), §6.6 MCP 서버/클라이언트 7개, E-15 Cloud Collector를 구현합니다. Phase 4-5와 병렬 진행." <!-- ⚠️ 2026-06-11 정본화 검증: 본 문구·MUST 로드의 E-15(·RT-BNP V1)는 아래 구현 항목 표(8 core+3 v23)에 없고 V2-Phase 2 #9에 배치되어 내부 충돌 — V1 귀속은 로드맵 3-0 게이트에서 확정(확정 전 V1 스코프 아님, CONFLICT_CANDIDATE 선례 준용·자동 RESOLVE 금지) -->
+> **AI 프롬프트 요약**: "V1-Phase 6 AI Investing MVP + MCP를 구현하세요. §6.8 AI Investing(포트폴리오, Circuit Breaker), §6.6 MCP 서버/클라이언트 7개, E-15 Cloud Collector를 구현합니다. Phase 4-5와 병렬 진행." <!-- ✅ 2026-06-12 3-0 게이트 확정(PHASE3-GATE-04): E-15 본체·S-5·RT-BNP 본체는 V2 이연 확정 — V2-Phase 2 #9 배치가 정본, 본 문구의 E-15·RT-BNP 언급은 V1 스코프 아님(P7-0이 수용). V1 잔존분은 DCL 기초(V1-P2 #9)+진화 제어 정책 v23뿐 -->
 >
 > **참조 SOT 문서** (MUST 로드):
 > - `D2.0-03` §1+§3.3 (BLUE NODE P2 라이프사이클) + `VAMOS_AI_INVESTING_SPEC` (AI Investing 정본) <!-- CORRECTED 2026-03-22: 기존 D2.0-01 §5.9 → D2.0-03 §1+§3.3 -->

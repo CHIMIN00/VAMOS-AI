@@ -1,9 +1,21 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**Phase 2 최종 확정** — 2-V 전항목 PASS + git tag phase2-complete + **3-AI 교차감사 CONFIRM**[PHASE2-DEC-03])
+> 최종 갱신: 2026-06-12 (**Phase 3-0 미결정 게이트 통과** — 스코프 ①~⑩ 전건 확정, decisions/PHASE3-GATE-01~08)
 
 ## 현재 Phase
-**Phase 2 완료·최종 확정 (2026-06-12, 3-AI 교차감사 CONFIRM — decisions/PHASE2-DEC-03)** → 다음: **Phase 3-0 미결정 게이트** (별도 세션 권장 — 로드맵 3-0 + P3-0 프롬프트)
+**Phase 3 진행 중 — 3-0 미결정 게이트 ✅ 통과 (2026-06-12)** → 다음: **P3-1 (R1 런타임 설계 10개 LOCK)** + X1(3-8~3-13) 2트랙
+
+## Phase 3-0 미결정 게이트 결과 (2026-06-12) — 게이트 통과 선언
+- ☑ ① D1 이연 대장 D-1~D-4: 전건 종결/기록-전용 재확인 — 실효 OPEN 0 (GATE-01)
+- ☑ ② PART1 C.1 13건: #1~3 기결정 확인(pnpm/Poetry/CUDA) + #4~13 전건 권장안 채택 확정 (GATE-02; #10 일반 API 3회 — MCP 채널은 별도 정본)
+- ☑ ③ 분모 3건 확정: **V0 실파일 8개**(전 25 선생성 안 함, 활성5+stub3) · **V1 CORE 32**(PART2 §1.1) · **Phase 4→5 Must 11** (GATE-03 — 로드맵 4-2/5-3/6-3 확정 반영)
+- ☑ ④ V1 귀속 4건 **전부 V2 이연**(SDAR §10.1·CB1 E-15/S-5·RT-BNP 본체·4-4 MLOps 본대 — P7-0 수용, F-18 해소; D11 #10/#11은 조건부 해석으로 Phase 7 집행. PART2 L2549 CONFLICT 마커 확정 갱신) (GATE-04)
+- ☑ ⑤ STEP7 reconcile 방침: PART2 배치 = 구현 시점 정본, STEP7 V1 라벨 = 카탈로그 라벨 — V1 GO 분모는 PART2 V1 스코프 (GATE-05)
+- ☑ ⑥ READINESS §8 38건 분류: 기집행/실효 22 + supersede 3(#5=D10·#16/#17=PL-09) + 잔여 13 — 책임 게이트 배정(P4-0 1건: MASTER_SPEC §0 IMPLEMENTATION 계층 / P6-0 5건 / P7-0 9건), **R1 차단 0** (GATE-06)
+- ☑ ⑦ Phase 2 이관 4항목 (GATE-07, **SOT 물리 수정 0건**): a.SOT 이형 9건 — NO_FIX 2(C-003·C-008)+운영확정·DEFER 1(C-004→P8-0)+수정 지시 6(edits 명기, P4-0/P6-0/P7-0 배정) b.docs\sot\CLAUDE.md 스냅샷(709줄 구판) → **루트 946줄 GOLD로 동기화 채택**(byte 동일 복사, 집행은 승인 후 + integrity 재기준선) c.5-4 SHELL 87 = V2+ 확정, P7-0 수용(작성 0 유지) d.LOCK-MCP-06 단일 표기 = **config 정본 PHASE_B4 §3.9 V1/V2=2·V3=3**(LOCK-MCP-06은 Bridge 구현 상한으로 무수정 보존·재정의 0, V3 근거 보강은 P8-0)
+- ☑ ⑧ 감사 권고 2건 (GATE-08): 구키 revoke — 통보 미수신 유지(등재 트리거 유지) / main 병합 정책 **확정** — Phase 게이트마다 ff-only 동기화+push (실측 main 29 후행·분기 0)
+- ☑ ⑨ 문서 동기 3건: 세션 프롬프트 §8 추적표 P2-0~P2-5·P3-0 ✅ 갱신 + §4 P3-0 보정판 반영 + P3-2 파일명 교정 (EOL 무회귀: 로드맵 LF·PART2 CRLF 6454 보존)
+- ☑ ⑩ ADR 8건: decisions/PHASE3-GATE-01~08 (PHASE3-DEC-001~010은 P3-1 예약 — 충돌 없음. 기존 17건은 _targets/DECISION_REGISTER.md 정본 유지)
 
 ## Phase 2 검증 결과 (2-V) — 전항목 ☑
 - ☑ CLAUDE.md 보강 완료 — 946줄 §1~§28, §28에 A13 컨텍스트 프로토콜 포함, **GOLD 판정**
@@ -69,9 +81,9 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**Phase 3-0: 미결정 게이트 (Must, 선행 — 별도 세션 권장)** — D1 이연 대장 + PART1 C.1 13건 + 분모 2건·V1 귀속·STEP7 reconcile + Phase 2 이관분(SOT 이형 9건·CLAUDE.md 스냅샷 동기화·5-4 SHELL 87·LOCK-MCP-06 표기 뉘앙스 — 정본 체크리스트는 본 문서 L21) + 감사 권고(비차단): 구키 revoke 통보 수신 시 액션대장 등재·main 병합 정책 확정
-→ 이후 R1(3-1~3-7c) / X1(3-8~3-13) 2트랙
-→ Phase 3 진입 시 참조: PROGRESS.md + CONTEXT_LOADING_MAP.md(Phase 3 행) + _targets/DECISION_REGISTER.md + ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-0
+**P3-1: R1 런타임 설계 10개 LOCK (3-1~3-7c, 전부 Must)** — 5-Gate/메모리 L0~L3/Failover/DAG/CostGate/IPC+A20/MCP + 3-7a(A21)/3-7b(A22, D6 기확정)/3-7c(A25) → ADR decisions/PHASE3-DEC-001~010 + runtime_decisions.md
+→ 병렬 X1(3-8~3-13) 트랙 가능 · 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-1 + _targets/DECISION_REGISTER.md + decisions/PHASE3-GATE-01~08
+→ 잔여 이관 액션(비차단): P4-0(MASTER_SPEC §0 표기 + SOT 이형 C-001 3곳) / P6-0(5건+이형 3건) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 스냅샷 동기화 집행(사용자 승인 후) — 상세 GATE-06/07
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)

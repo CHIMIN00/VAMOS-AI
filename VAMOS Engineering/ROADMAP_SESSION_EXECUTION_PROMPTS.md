@@ -721,46 +721,57 @@ VAMOS 로드맵 Phase 2, 세션 P2-5 — Phase 2 Gate
 
 ## 4. Phase 3
 
-### 세션 P3-0: 미결정 게이트 (선행) ⟦2026-06-11 신설 — 로드맵 3-0 동기⟧
+### 세션 P3-0: 미결정 게이트 (선행) ⟦2026-06-11 신설 — 로드맵 3-0 동기 · 2026-06-12 보정판(Phase 2 이관 ⑦·감사 권고 ⑧·문서 동기 ⑨ 병합) · ✅ 집행 완료 2026-06-12 PHASE3-GATE-01~08⟧
 
 **로드맵 작업 매핑:**
 
 | # | 작업 | 상세 | 우선순위 | 산출물 |
 |---|------|------|---------|--------|
-| 3-0 | 미결정 게이트 | D1 이연 대장 + 전수진단 결정 확인 + PART1 C.1 13건 + 분모·V1 귀속·STEP7 reconcile 확정 | **Must** (선행) | 결정 기록 |
+| 3-0 | 미결정 게이트 | D1 이연 대장 + 전수진단 결정 확인 + PART1 C.1 13건 + 분모·V1 귀속·STEP7 reconcile 확정 + Phase 2 이관 4항목(SOT 이형 9건·CLAUDE.md 스냅샷·5-4 SHELL 87·LOCK-MCP-06) + 감사 권고 2건 | **Must** (선행) | 결정 기록 decisions/PHASE3-GATE-01~08 |
 
 ````
 VAMOS 로드맵 Phase 3, 세션 P3-0 — 미결정 게이트 (R1 착수 전 선행)
+[2026-06-12 보정판 — 정본 체크리스트는 PROGRESS.md L21]
 
-■ 대상: 3-0 (Must, 선행) — 로드맵 Phase 3 표 3-0 행의 게이트 스코프 ①~⑥ 전건
+■ 대상: 3-0 (Must, 선행) — 로드맵 3-0 행 스코프 ①~⑥ + Phase 2 이관 ⑦ + 감사 권고 ⑧ + 문서 동기 ⑨ + ADR 기록 ⑩
 
 ■ 참조:
-  D:\VAMOS\VAMOS_최종_로드맵.md — Phase 3 표 3-0 행 (게이트 스코프 정의)
+  D:\VAMOS\VAMOS_최종_로드맵.md — L40(이관 열거) + Phase 3 표 3-0 행
+  D:\VAMOS\VAMOS Engineering\PROGRESS.md — L21(이관 정본 체크리스트)
   D:\VAMOS\04. 구현단계\v13_results\phase0\D1_RESULTS_INDEX.md §3 — 이연 대장 D-1~D-4
   D:\VAMOS\_targets\DECISION_REGISTER.md — 기확정 17건 (D1~D7·D9~D11·D13~D19, D8·D12 결번)
   D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md §C.1 — V0 시작 전 결정 13건
   D:\VAMOS\_targets\ROADMAP_정본화_검증보고서_2026-06-11.md — 분모·귀속 충돌 상세(F-03/F-11/F-12/F-18)
+  D:\VAMOS\04. 구현단계\claude-md-verification\step1_sot_conflict.md — SOT 이형 (CONFLICT-001~008)
+  D:\VAMOS\VAMOS Engineering\decisions\PHASE2-DEC-02 / PHASE2-DEC-03 — 5-4 SHELL 이연·감사 권고
 
-■ STEP 1: 프롬프트 자체 검증
-  a. 3-0 행 스코프 ①~⑥과 본 세션 대상 일치 확인
-  b. "프롬프트 최종 확정"
+■ STEP 1: 프롬프트 자체 검증 — 스코프가 로드맵 L40+3-0 행+PROGRESS L21 합집합과 일치하는지 대조 → "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
-  1. ① D1 이연 대장 D-2~D-4 처분 확인 (D-1은 RESOLVED 기록 확인만 — 2026-06-11 기해소)
+  1. ① D1 이연 대장 D-1~D-4 상태 재확인 (D-1 RESOLVED·D-2/D-3 Phase 2-8 종결·D-4 기록만)
   2. ② PART1 C.1 #1~3 기결정 확인, #4~13 확정 + 기록
-  3. ③ 분모 확정: V0 모듈 "전 25 파일 선생성 여부"(기본 = PART2 V0-STEP-4 활성 5+stub 3) / V1 CORE 26 vs 32(기본 = PART2 §1.1 32)
-  4. ④ V1 귀속 확정: SDAR §10.1 기반 · Cloud Library CB1(E-15/S-5) · RT-BNP V1 · 4-4 MLOps 본대 — SPEC↔PART2 충돌 해소(V1 추가 or V2 이연 명시)
+  3. ③ 분모 확정 3건: V0 모듈 "전 25 파일 선생성 여부" / V1 CORE 26 vs 32 / F-03 Must 분모(9/10/11) 단일화
+  4. ④ V1 귀속 확정: SDAR §10.1 기반 · Cloud Library CB1(E-15/S-5) · RT-BNP V1 · 4-4 MLOps 본대 — V1 추가 or V2 이연 명시
   5. ⑤ STEP7 V1 라벨 ↔ PART2 V2/V3 배치 reconcile 방침 1건 (정본 우선순위: 본문 PART2 > STEP7)
-  6. ⑥ READINESS §8 문서수정 잔여 확인 (다수 세션4~7 기집행 — 잔여만)
-  7. 각 확정을 decisions/ ADR로 기록 (A6) — 기존 17건은 DECISION_REGISTER.md 정본 유지
+  6. ⑥ READINESS §8 문서수정 38건 잔여 확인 (기집행/supersede/잔여 분류 + 책임 게이트 배정)
+  7. ⑦ Phase 2 이관 4항목: a.SOT 이형 9건 처분(⚠️ SOT 자동 수정 금지 — edits 명기, 집행은 승인 후)
+     b.docs\sot\CLAUDE.md 스냅샷 동기화 여부·방식 c.5-4 SHELL 87 집행 방침 d.LOCK-MCP-06 vs PHASE_B4 단일 표기
+  8. ⑧ 감사 권고 2건: 구키 revoke 통보 수신 여부 확인 / main 병합 정책 확정 또는 명시적 보류
+  9. ⑨ 문서 동기: 본 문서 §8 추적표·§4 P3-0 프롬프트·P3-2 파일명 stale 교정
+  10. ⑩ 각 확정을 decisions/ ADR 기록 (A6) — ID는 PHASE3-GATE-01~ (PHASE3-DEC-001~010은 P3-1 예약)
 
-■ STEP 3: 산출물 검증 (반복) — 미결정 잔여 0 확인 → "게이트 통과 선언"
-■ STEP 4: PROGRESS.md 갱신
-■ STEP 5: 갱신 검증 — 로드맵 3-0 행·DECISION_REGISTER와 모순 없는지
+■ STEP 3: 산출물 검증 (반복) — 스코프 전건 단일 결론 + 미결정 잔여 0 → "게이트 통과 선언"
+■ STEP 4: PROGRESS.md 갱신 + git 커밋
+■ STEP 5: 갱신 검증 — 로드맵 3-0 행·DECISION_REGISTER·PROGRESS L21과 모순 없는지 재대조
 
 ■ 실패 시 (A1): 확정 불가 항목 발생 → 보류 사유·기한 명기 후 R1 차단 여부 판단(차단 항목만 해소 후 진행)
 
-■ PASS 조건: 스코프 ①~⑥ 전건 확정·기록 → P3-1(R1) 진입 허용
+■ PASS 조건: 스코프 ①~⑩ 전건 확정·기록 + 게이트 통과 선언 → P3-1(R1) 진입 허용
+
+⟦집행 결과 2026-06-12⟧: 전건 확정 — ADR 8건(PHASE3-GATE-01~08). 분모: V0 실파일 8(선생성 없음)·V1 CORE 32·Must 11.
+V1 귀속 4건 전부 V2 이연(P7-0 수용). SOT 이형 9건: NO_FIX 2·운영확정+DEFER 1·수정 지시 6(P4-0/P6-0/P7-0/P8-0 배정).
+스냅샷 동기화 채택(승인 후 집행). 5-4 SHELL 87 = P7-0 수용. LOCK-MCP-06: config 정본 V1/V2=2·V3=3(LOCK 무수정 보존).
+main 병합 정책: Phase 게이트 ff-only 동기화 확정.
 ````
 
 ---
@@ -849,7 +860,7 @@ VAMOS 로드맵 Phase 3, 세션 P3-2 — X1 횡단 전략 + 계획서 + Phase 3 
 ■ 참조:
   D:\VAMOS\docs\sot\BASE-1.3_VAMOS_RULE_1.3_BASE.md — 보안 정본
   D:\VAMOS\docs\guides\VAMOS_구현가이드_PART2_구현단계.md §3.5 — 테스트
-  D:\VAMOS\docs\sot\PLAN-3.0_최종완성본.md §2 — 릴리스
+  D:\VAMOS\docs\sot\PLAN-3.0_VAMOS_PLAN_3_0_최종완성본.md §2 — 릴리스
   D:\VAMOS\VAMOS Engineering\STRATEGY_05_SAFETY_AND_ETHICS.md — A16
 
 ■ STEP 1: 프롬프트 자체 검증
@@ -1255,13 +1266,13 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | **1** | P1-0 | 도구 점검 + SOT 2 완성 확인 | ✅ (2026-06-03, 30/30 도메인) |
 | | P1-1 | D1 핵심 검증 (1-2~1-5) | ✅ (2026-06-04 D1 PASS) |
 | | P1-2 | D1 보조 + 기준선 + Gate | ✅ (2026-06-04, 감사 정정 06-05, tag phase1-d1-pass) |
-| **2** | P2-0 | 외부 의존성 재확인 | ⬜ |
-| | P2-1 | CLAUDE.md 보강 | ⬜ |
-| | P2-2 | CLAUDE.md 검증 | ⬜ |
-| | P2-3 | Obsidian 노트 생성 | ⬜ |
-| | P2-4 | 린터/CI + 커스텀 린터 | ⬜ |
-| | P2-5 | Phase 2 Gate | ⬜ |
-| **3** | P3-0 | 미결정 게이트 (선행, 2026-06-11 신설) | ⬜ |
+| **2** | P2-0 | 외부 의존성 재확인 | ✅ (2026-06-11, 28/28 PASS) |
+| | P2-1 | CLAUDE.md 보강 | ✅ (2026-06-11, 946줄) |
+| | P2-2 | CLAUDE.md 검증 | ✅ (2026-06-11, GOLD) |
+| | P2-3 | Obsidian 노트 생성 | ✅ (2026-06-12, 124노트) |
+| | P2-4 | 린터/CI + 커스텀 린터 | ✅ (2026-06-11, +2-5 vamos_lint) |
+| | P2-5 | Phase 2 Gate | ✅ (2026-06-12, tag phase2-complete + 3-AI 교차감사 CONFIRM PHASE2-DEC-03) |
+| **3** | P3-0 | 미결정 게이트 (선행, 2026-06-11 신설) | ✅ (2026-06-12, PHASE3-GATE-01~08) |
 | | P3-1 | R1 런타임 10개 LOCK | ⬜ |
 | | P3-2 | X1 전략 + 계획서 + Gate | ⬜ |
 | **4** | P4-0 | 스킬 점검 + 타입 동기화 | ⬜ |
