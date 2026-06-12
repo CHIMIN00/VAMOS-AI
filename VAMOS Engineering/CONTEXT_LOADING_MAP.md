@@ -15,7 +15,7 @@
 | Phase | 작업 | 추가 로딩 (우선순) |
 |-------|------|------------------|
 | 3 (R1/X1) | 런타임 결정 | ① `_targets\DECISION_REGISTER.md`(D1~D19) ② `docs\sot\D2.0-01~08` 해당 섹션 ③ `VAMOS HOME\00_HUB\LOCK-DECISION-REGISTRY.md` ④ 3-0 게이트 결정 기록 |
-| 4 (V0 구현) | 코드 생산 | ① `docs\guides\...PART2` V0-STEP 해당부 ② `docs\sot\D2.1-D1~D8`(스키마)·`PHASE_B1~B7` ③ `backend\pyproject.toml`+`scripts\vamos_lint.py`(하네스) ④ STRATEGY_11 §3.4 ⑤ CPS_TEMPLATE.md |
+| 4 (V0 구현) | 코드 생산 | ① `VAMOS Engineering\runtime_decisions.md`+`runtime_eng_plan.md`(R1 10결정·R2 매핑 — Phase 3 산출) ② `docs\guides\...PART2` V0-STEP 해당부 ③ `docs\sot\D2.1-D1~D8`(스키마)·`PHASE_B1~B7` ④ `backend\pyproject.toml`+`scripts\vamos_lint.py`(하네스) ⑤ `decisions\PHASE3-GATE-03`(분모 V0=8)·`cross_eng_plan.md`(X2) ⑥ STRATEGY_11 §3.4 ⑦ CPS_TEMPLATE.md |
 | 5 (V0 검증) | 품질 평가 | ① `benchmarks\golden_set\`(v2 실데이터 162) + `scripts\verify_golden_set.py` ② `.claude\skills\final-review·quality-gate` ③ STRATEGY_11 §3.5 ④ READINESS V0 GO/NO-GO 16건 |
 | 6 (V1) | 기능 구현 | ① V0 완료 결과(PROGRESS+retro) ② PART1 B.2 ③ PART2 V1-Phase 해당부 |
 | 7 (V2) | Pro Server | ① V1 완료 결과 ② PART2 §4 ③ PHASE_B7(마이그레이션) ④ READINESS §4 + PART1 B.3 |

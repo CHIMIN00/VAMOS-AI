@@ -115,7 +115,7 @@
 ## 다음 작업
 **Phase 4 — V0 구현 (B2 + R2 + X2)** — P4-0(스킬/Hook 점검 A7 + 타입 동기화 B2c) → P4-1(ORANGE CORE 8파일 + Registry + config.v1.toml 23키) → P4-2(IPC JSON-RPC 13 + BLUE NODE 3 스켈레톤 + Tauri 프론트) → P4-3(Phase 4 Gate, Must 11)
 → 입력: runtime_decisions.md + runtime_eng_plan.md(R2 매핑) + cross_eng_plan.md(X2) + 4 전략 + PHASE3-GATE-03(분모 V0=8/V1=32/Must=11)
-→ ⚠️ P4-0 선행 점검: autocrlf=false 확인 + ls-files --eol 기준선([[git-eol-autocrlf-checkout-hazard]]) + READINESS §8 #4(MASTER_SPEC §0 IMPLEMENTATION 계층)+SOT 이형 C-001 수정 지시(GATE-06)
+→ ⚠️ P4-0 선행 점검: autocrlf=false 확인 + ls-files --eol 기준선([[git-eol-autocrlf-checkout-hazard]]) + **Phase 3 종결 커밋 후 sot CLAUDE.md 재동기화 확인(DEC-011 §4)** + CRLF 685 정규화 여부 결정 + READINESS §8 #4(MASTER_SPEC §0 IMPLEMENTATION 계층)+SOT 이형 C-001 수정 지시(GATE-06)
 → 참조: ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P4-0 + CONTEXT_LOADING_MAP.md(Phase 4 행)
 → 잔여 이관 액션(비차단): P4-0(MASTER_SPEC §0 표기 + SOT 이형 C-001 3곳) / P6-0(5건+이형 3건) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 스냅샷 동기화 집행(사용자 승인 후) — 상세 GATE-06/07
 

@@ -1,6 +1,6 @@
 # VAMOS 프로젝트 자산 인벤토리 (Asset Inventory)
 
-> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-12 (Phase 2-8 — §2.13 Phase 2 생성 자산 등재 + §5.2 유산 폴더 이동 집행 기록)
+> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-12 (Phase 3 완료 — §2.14 Phase 3 생성 자산 등재; Phase 2-8 §2.13 + §5.2는 기존)
 > **목적**: D:\VAMOS 내 모든 폴더/파일의 역할, 사용 시점, 매트릭스 셀 매핑, 중복/미사용 식별
 > **활용**: Phase 0-0에서 작성 → 매트릭스 갱신, CLAUDE.md 보강, Obsidian 생성의 입력 자료
 > **갱신 규칙**: 파일/폴더 추가·삭제 시 본 문서도 갱신
@@ -442,6 +442,21 @@ D:\VAMOS\
 | 14 | Obsidian 노트 (목표 122 — _NOTE_FILELIST.md 정본) | `VAMOS HOME\` | 2-3 | 지식 그래프(A16 태깅) |
 | 15 | D-2 보수 (04_cat-d-media/_index.md 1줄) | `docs\sot 2\2-2_...\` | 2-8 | D1 이연 종결 |
 | 16 | 백업 세트 (golden_set_v1/CLAUDE.md.pre-2-1/STRATEGY_11.pre-2-8 등) | `_targets\_integ\backup_phase2\` | 전 작업 | 롤백 |
+
+## 2.14 Phase 3 생성 자산 (2026-06-12 등재 — doc_strategy §2 갱신 규칙)
+
+| # | 자산 | 위치 | Phase 3 작업 | 사용처 |
+|---|------|------|------------|--------|
+| 1 | PHASE3-GATE-01~08 (ADR 8건) | `VAMOS Engineering\decisions\` | P3-0 게이트 | 분모·귀속·이관 처분 정본 기록 |
+| 2 | runtime_decisions.md (R1 10결정 요약+바인딩) | `VAMOS Engineering\` | P3-1 (3-1~3-7c) | Phase 4 R2a 입력 |
+| 3 | PHASE3-DEC-001~010 (ADR 10건) | `VAMOS Engineering\decisions\` | P3-1 | R1 결정 전문(A6) |
+| 4 | LOCK-DECISION-REGISTRY §8 (신규 LOCK 3: R1-A25/A21/A22) | `VAMOS HOME\00_HUB\` | P3-1 | Phase 4 config/코어 구현 바인딩 |
+| 5 | security/test/release/doc_strategy.md (X1 4전략) | `VAMOS Engineering\` | P3-2 (3-8~3-11) | Phase 4~6 X2/X3 입력 |
+| 6 | runtime_eng_plan.md / cross_eng_plan.md (계획서 2) | `VAMOS Engineering\` | P3-2 (3-12/3-13) | R2/X2 셀 실행 가이드 |
+| 7 | phase3_retro.md (회고 + autocrlf 포스트모템) | `VAMOS Engineering\decisions\` | P3-2 Gate | A11 회고·P4-0 개선 입력 |
+| 8 | PHASE3-DEC-011 (3-AI 교차감사 최종 확정) | `VAMOS Engineering\decisions\` | 교차감사 수합 | Phase 3 확정 정본·P4-0 권고 |
+| 9 | sot CLAUDE.md 스냅샷 동기화 (946줄 GOLD, 2회: d540332·a8ce7d1) + integrity 체크 20260612T175049 | `docs\sot\`·`04. 구현단계\...\integrity\` | GATE-07b | SOT 코퍼스 정합·새 참조 기준 |
+| 10 | git EOL 복구 체계 (repo autocrlf=false + fetch 동기화 규칙 + 분류기 선례) | `.git\config`·결정 기록 | P3-0 사고 대응 | 전 Phase git 운영 규칙 |
 
 ---
 
