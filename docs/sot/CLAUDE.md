@@ -533,15 +533,16 @@ Self-evo 체계 검증 / V3 비용 재검토 + 승인 / Loki+Grafana 배포
 
 ## 12. 핵심 스키마 (코드 생성 대상)
 
-### Decision (18필드, FREEZE)
+### Decision (20필드 = 16 required + 4 optional, FREEZE — PHASE3-DEC-010 confidence 2필드 포함, P4-1 집행)
 
 ```python
 decision_id, trace_id, timestamp, intent_frame_ref, evidence_pack_ref,
-policy_gate(block|require_approval|mask|allow), approval_required, approval_status(approved|denied|pending|expired),
+policy_gate(block|require_approval|mask|allow), approval_required, approval_status(approved|denied),
 cost_gate(normal|downshift|split|stop), routing{blue_node_id, execution_mode},
 memory_plan{save_candidate, target_layer, requires_user_approval},
 output_spec{format_constraints}, conclusion(ACCEPT|REJECT|HOLD|ESCALATE),
-locked=True, optional_signals[], verify{}, gates{}, s_module_hints{}
+locked=True, optional_signals[], verify{}, gates{}, s_module_hints{},
+confidence_score(0.0~1.0), confidence_level(HIGH|MEDIUM|LOW|REFUSE — 임계 0.85/0.60/0.30 LOCK)
 ```
 
 ### IntentFrame
@@ -726,7 +727,7 @@ vamos/
 
 ---
 
-## 20. 핵심 config.v1.toml LOCK 값 (20개 — 정본: PHASE_B4_CONFIG_SPEC §3 LOCK 표기 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외)
+## 20. 핵심 config.v1.toml LOCK 값 (23개 — D13 20[PHASE_B4 §3 LOCK 10 ∪ BASE-1.3/DESIGN 2.0 LOCK 12, 중복 2 제외] + PHASE3-DEC-010 confidence 3, P4-1 집행)
 
 | 설정 키 | 값 | LOCK |
 |---------|-----|------|
@@ -750,6 +751,9 @@ vamos/
 | approval.p2_timeout_s | 300 | LOCK |
 | blue_nodes.active_node_cap | 3 | LOCK (V1) |
 | ui.min_width | 1280 | LOCK (V1) |
+| confidence.confidence_high_threshold | 0.85 | LOCK (PHASE3-DEC-010, B4 §3.16) |
+| confidence.confidence_medium_threshold | 0.60 | LOCK (PHASE3-DEC-010, B4 §3.16) |
+| confidence.confidence_refuse_threshold | 0.30 | LOCK (PHASE3-DEC-010, B4 §3.16) |
 
 ---
 
