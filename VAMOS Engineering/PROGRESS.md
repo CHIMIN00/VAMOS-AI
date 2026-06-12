@@ -11,15 +11,12 @@
 - [x] **2-0C** OpenAI 구키 revoke: 사용자 통보 미수신 — 기록만(현행 키 HTTP 200 유효). 환경리포트 §5
 - [x] **2-1** CLAUDE.md 보강: 705→944줄(LF 무회귀), §21~§28 신설 + §2/§4/§6/§7.4/§17/§18 실측 갱신. GAP 2건 해소(§7.4: Hybrid Search BM25 0.3/Vector 0.7·Top-K 20·threshold 0.75 + MCP max_retries V1/V2=2·V3=3 [PHASE_B4 §3.9 정본]). §28에 A13 컨텍스트 테이블 포함. 백업 `_targets/_integ/backup_phase2/CLAUDE.md.pre-2-1`
 - [x] **2-2** CLAUDE.md 검증: 스킬 8종 신설(.claude/skills/claude-md-*) + 8단계 전수 실행 + Phase D 수정 10건(944→946줄, LF 무회귀) → **판정 GOLD** (UNVERIFIED 0·FAIL 0·누락 0; Symbolic 9/9·Cross-examine 91건·Consensus 50값×3라운드 값충돌 0). 회귀(R10): method-c 재실행 **12/12 PRESENT GAP 0**(비파괴 — D1 산출물·SOT 무수정). 리포트 `04. 구현단계/claude-md-verification/step1~8`. ⚠️ SOT 내부 이형 9건(C-001~C-008 등) 발견 — 기록만, **3-0 게이트 이관**
-- [⬛] **2-3 Obsidian 노트 — 부분 (43/122 생성, 71 잔여)**: 세션 한도로 생성 에이전트 7개 중단(2026-06-11). 완료 폴더 01/02/03/08/11/14 ✅, 부분 05·09·10·12·15, 미착수 04_FEATURES(9)·06_QUALITY(4)·07_SYSTEM-WIDE(13)·13_GUIDES(4)·99_RAW. **잔여 정확 목록·생성 규칙·검증 절차 = `_targets/PHASE2_RESUME_STATE.md` §3** (파일명 정본 `VAMOS HOME/_NOTE_FILELIST.md`)
+- [x] **2-3 Obsidian 노트 — 완료 (2026-06-12)**: Vault **124 .md** (17폴더 전부 목표 충족 — 도메인 35+AINV 4+설계 12+개념 36+워크플로우 3+구현 13+가이드 4+감사 3+규칙 4+RAW 1+HUB 7). 검증: **깨진 [[wikilink]] 0** (1,289링크/124노트, 코드펜스 제외 기준) · 36 도메인 전부 커버(3-7 gap 도메인 포함) · **A16 responsible-ai 태그 9노트**(요구 7+) · 샘플 10%(12표본) SOT2 대조 — 수치/LOCK **12/12 일치·창작 0·LOCK 레지스트리 모순 0** (형식 태그 3건 보정 완료). 2026-06-11 중단분(43) + 재개분(71+10) 합산
 - [x] **2-4** 린터/CI: `backend/pyproject.toml`(Poetry+DEC-002 banned-api+ruff 13룰+line-length 100+mypy strict) + `.github/workflows/ci.yml`(**단일 통합 정본** — quality/test/vamos-lint 3 job) + `backend/tests/{__init__,conftest}.py`. 검증: poetry lock 해석 정상·ruff All checks passed·pytest 0 tests(exit 5 OK)·YAML 유효. **코드 생산 Hook 2종 신설**(.py→ruff 자동, config.v1.toml→LOCK 20키 검증 `scripts/check_config_lock.py`) — 기존 16 Hook 보존(16→18). **D17 결정**: pre-commit 훅 불재도입(ci.yml 대체) — `decisions/PHASE2-DEC-01`. poetry 2.4.1/ruff 0.12.1 설치(2-0A WARN 해소)
 - [x] **2-5** vamos_lint: `scripts/vamos_lint.py` VL-001~005 구현 — 위반 샘플 8건 전 규칙 탐지 PASS·정상 파일 오탐 0 (mode=error 기본, warn 폴백 내장). ruff banned-api(§8.1)는 pyproject 포함, ci.yml vamos-lint job 통합(§8.3). `commitlint.config.js` 별도 생성
 - [x] **2-6** CPS 템플릿: `VAMOS Engineering/CPS_TEMPLATE.md` / **2-7** 로딩 맵: `VAMOS Engineering/CONTEXT_LOADING_MAP.md`
-- [⬛] **2-8 부분**: **D-2 종결(보수)** — 04_cat-d-media/_index.md 링크 교정(백업·LF 보존, 깨진 링크는 형제 7개에 없는 이상치로 판명) / **D-3 종결(보완 불요)** — AUTHORITY 6/6+MASTER_INDEX+§21 라우팅으로 충족 / 유산 폴더 실측 완료(back up·.claude-pre-commit → 이동 집행 잔여) / 5-4 SHELL 87 → 3-0 이연 권고(확정 기록 잔여) / STRATEGY_11 등록 잔여(목록 = RESUME_STATE §5)
-- [ ] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조) — Obsidian 항목만 미충족, 나머지 게이트 전부 충족 상태
-
-## ▶ 재개 지점 (2026-06-11 중단)
-**`D:\VAMOS\_targets\PHASE2_RESUME_STATE.md` 읽기 → §3 Obsidian 잔여 71개 생성 → §2 2-8 잔여 집행 → §4 Gate·마감.** 커밋 5건(8529079/6930c74/c85d348/e63e8d3/+본 저장 커밋), 브랜치 phase01-targeted-fixes.
+- [x] **2-8 완료 (2026-06-12)**: **D-2 종결(보수)** — 04_cat-d-media/_index.md 링크 교정(백업·LF 보존) / **D-3 종결(보완 불요)** — AUTHORITY 6/6+MASTER_INDEX+§21 라우팅 충족 / **유산 이동 집행** — back up(git 언트래킹 1)+.claude-pre-commit → `D:\VAMOS_ARCHIVE\legacy_phase2\`(42파일, 삭제 0) / **5-4 SHELL 87 → 3-0 이연 확정**(`decisions/PHASE2-DEC-02`) / **STRATEGY_11 §2.13 신설**(Phase 2 자산 16종 등재)+§5.2 집행 기록+골든셋 v2 반영
+- [ ] 2-V Gate + 마감(회고·tag phase2-complete·push·A12 대조) ← **다음**
 
 ## Phase 1 — D1 검증 결과 (2026-06-04)
 - **판정: D1 PASS (CONDITIONAL)** — 값 게이트 5/5 통과, 이연 4항목 전수 등록(누락 0), 자동 정본 변경 0

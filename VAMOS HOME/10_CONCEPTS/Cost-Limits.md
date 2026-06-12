@@ -1,5 +1,5 @@
 ---
-tags: [type/concept, tier/all, version/V1, lock/ABSOLUTE, responsible-ai]
+tags: [type/concept, tier/all, module/I-series, status/CORE, version/V1, lock/ABSOLUTE, responsible-ai]
 aliases: [비용 상한, Cost Ceiling, 비용 한도]
 created: 2026-06-11
 ---

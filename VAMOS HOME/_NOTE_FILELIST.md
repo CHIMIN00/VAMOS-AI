@@ -1,6 +1,6 @@
 # Vault 정본 파일명 목록 (2-3 생성 기준 — wikilink는 이 목록의 이름만 사용)
 
-> Phase 2-3 생성 보조 파일. [[링크]]는 아래 파일명(확장자 제외)만 허용. 생성 완료 후에도 링크 검증 기준으로 유지.
+> Phase 2-3 생성 보조 파일. `[[링크]]`는 아래 파일명(확장자 제외)만 허용. 생성 완료 후에도 링크 검증 기준으로 유지.
 
 ## 00_HUB (기존 7 — 재생성 금지)
 VAMOS-HOME / TIER-MAP / DEPENDENCY-GRAPH / LOCK-DECISION-REGISTRY / MODULE-MAP / 39-FILE-MASTER-INDEX / SOT2-STRUCTURE-MAP
