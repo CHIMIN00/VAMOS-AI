@@ -1,9 +1,24 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-11 (Phase 2 진행 중 — 2-0 완료)
+> 최종 갱신: 2026-06-12 (**Phase 2 완료** — 2-V 전항목 PASS + git tag phase2-complete)
 
 ## 현재 Phase
-**Phase 2 진행 중** — 2-0 완료(환경 28/28 PASS + 골든셋 v2 실데이터 162문항) → 다음: 2-1 CLAUDE.md 보강
+**Phase 2 완료 (2026-06-12)** → 다음: **Phase 3-0 미결정 게이트** (별도 세션 권장 — 로드맵 3-0 + P3-0 프롬프트)
+
+## Phase 2 검증 결과 (2-V) — 전항목 ☑
+- ☑ CLAUDE.md 보강 완료 — 946줄 §1~§28, §28에 A13 컨텍스트 프로토콜 포함, **GOLD 판정**
+- ☑ 린터: ruff 13룰 PART2 일치 + vamos_lint VL-001~005 동작(위반 샘플 전탐지·오탐 0)
+- ☑ CI: ci.yml 단일 통합(PHASE_B6 §2 정본 중재) — quality/test/vamos-lint 3 job, YAML 유효
+- ☑ 외부 의존성 E.1(9)+E.3(8) PASS (+B.1 11 — 합 28/28)
+- ☑ 회귀: /sot-check method-c 재실행 — **12/12 PRESENT, GAP 0** (D1 baseline 10/12 → 보강으로 해소, D1 산출물·SOT 무수정)
+- ☑ Obsidian 124노트 + A16 responsible-ai 태깅 9노트 (깨진 링크 0/1,289 · 샘플 12표본 수치 전수 일치)
+- ☑ (추가 게이트) 골든셋 data_status REAL_DATA 전환 + LOCK-BE-01/02 유효화
+
+## Phase 2→3 인수인계 — ☑
+- ☑ 보강된 CLAUDE.md(946줄 GOLD) → Phase 3 AI 컨텍스트 활성화 (자동 로딩 + §21 라우팅 + §28 프레임워크)
+- ☑ 린터/CI(ruff·vamos_lint·pytest·ci.yml) + Hook 18 → Phase 4 자동 실행 준비 완료
+- ☑ Obsidian Vault(124) + CPS_TEMPLATE + CONTEXT_LOADING_MAP → Phase 3~4 설계 참조·세션 골격
+- 📌 3-0 게이트 추가 이관: SOT 내부 이형 9건(step1 C-001~C-008 등) + docs\sot\CLAUDE.md 스냅샷 동기화 + 5-4 SHELL 87(PHASE2-DEC-02) + LOCK-MCP-06(3회) vs PHASE_B4(V1/V2=2·V3=3) 표기 뉘앙스 1건
 
 ## Phase 2 체크포인트 (2026-06-11)
 - [x] **2-0A** 외부 의존성 재확인: E.1(9)+E.3(8)+B.1(11) = **28/28 PASS** — `_targets/PHASE2_환경리포트.md` (변경 2 비차단: pydantic 2.12.5·디스크 / WARN 1: poetry 미설치→2-4 처리)
@@ -53,9 +68,9 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-Phase 2-0: 외부 의존성 재확인 (PART1 E.1+E.3+B.1, 2026-03-02 이후 변경 여부) — **Must**
-→ 이후 2-1 CLAUDE.md 보강(1-6 GAP 입력) / 2-4~2-5 린터·CI
-→ Phase 2 진입 시 참조: PROGRESS.md + 보강전략 + D1_RESULTS_INDEX.md(이연 4항목)
+**Phase 3-0: 미결정 게이트 (Must, 선행 — 별도 세션 권장)** — D1 이연 대장 + PART1 C.1 13건 + 분모 2건·V1 귀속·STEP7 reconcile + Phase 2 이관분(SOT 이형 9건·CLAUDE.md 스냅샷 동기화·5-4 SHELL 87)
+→ 이후 R1(3-1~3-7c) / X1(3-8~3-13) 2트랙
+→ Phase 3 진입 시 참조: PROGRESS.md + CONTEXT_LOADING_MAP.md(Phase 3 행) + _targets/DECISION_REGISTER.md + ROADMAP_SESSION_EXECUTION_PROMPTS.md §4 P3-0
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)
