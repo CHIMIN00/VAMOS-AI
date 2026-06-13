@@ -1133,41 +1133,99 @@ VAMOS 로드맵 Phase 5(V0 검증 + GO/NO-GO) 단일 세션. Phase 4 ✅ 완료(
 
 ## 7. Phase 6
 
-### 세션 P6-0: V1 준비
+### 세션 P6-0: V1 준비 (진입 게이트) — 정식판 (2026-06-13, H1~H9 embed + 2R 독립 적대검증 + 수렴; P5-1 §6 정식판과 동급)
 
 **로드맵 작업 매핑:**
 
 | # | 작업 | 상세 | 우선순위 | 산출물 |
 |---|------|------|---------|--------|
-| 사전 | 스킬 재점검 | V0 구조 변경 영향 (A7) | **Must** | 점검 결과 |
-| 사전 | B.2 확인 | PART1 V1 추가 12건 | **Must** | 준비 리포트 |
-| 사전 | 마이그레이션 | Expand/Contract 확인 (A23) | **Must** | |
-| 사전 | **DEC-011 §C 재확인** | 보류대장 I-1~I-9 부착 Phase 집행 점검(테스트 깊이·CI 배선·뮤테이션·골든 등) | **Must** | 집행 점검표 |
+| 사전 | A7 스킬/Hook 재점검 | V0 구조 변경 영향 — settings.json 배선 실측(舊 "11+6" stale) | **Must** | 점검 결과 |
+| 사전 | PART1 B.2 12건 | API Key 6 + SW 4 + GitHub Secrets 2 (가입·설치, 키 최종검증=6-9) | **Must** | 준비 리포트 |
+| 사전 | GATE-06 5건 + GATE-07 §a 3건 + C.2 #9~13 | READINESS §8 #18/#20/#25/#36/#37 · PHASE3-GATE-07 §a C-005/C-007/R-8 · C.2 결정준비물 | **Must** | 처분 기록 |
+| 사전 | V1 차단이슈 + DEC-011 §C 보류대장 | READINESS §3.1/§3.3 reconcile · I-1~I-9 부착 Phase 집행 점검 | **Must** | 집행 점검표 |
+| 사전 | **PHASE5-DEC-001 V0 이연 6건 배정** | item 2·7·11·13·15·16 활성화 6-x 배정 확인(누락 0) | **Must** | 배정 확인 |
+| 사전 | A23 마이그레이션 규칙 | Expand/Contract + config 키 + 모듈 OFF→ON + 데이터 호환 | **Must** | 규칙 확인 |
+
+> ※ 아래 정식판은 SESSION_PROMPT_SKELETON H1~H9를 embed하고 2라운드 독립 적대검증 + 수렴 라운드를 통과한 확정본이다. 새 창에 그대로 사용. (舊 단축 draft 대체 — 2026-06-13)
 
 ````
-VAMOS 로드맵 Phase 6, 세션 P6-0 — V1 준비
+📋 세션 P6-0 (작성 2026-06-13) — Phase 6: V1 구현 진입 게이트 (V1 준비 — 스킬/Hook 재점검 A7 + PART1 B.2 12건 + V1 차단이슈 해소 + DEC-011 §C 보류대장 + PHASE5-DEC-001 V0 이연 6건 활성화 배정 + A23 마이그레이션 규칙 → P6-1 진입 판정) (모델: claude-opus-4-8[1m] — Fable 5 접근 복구 시 claude-fable-5[1m] / 세션 헤더 effort = max+uc[H8: 6-0 착수 게이트 = max+uc; 교차모델 II-6은 GO/NO-GO 게이트(6-9)에만])
 
-■ 대상: 스킬 재점검 + PART1 B.2 + 마이그레이션 규칙 + DEC-011 §C 보류대장 재확인 (전부 Must)
+VAMOS 로드맵 Phase 6(V1 구현)의 **진입 게이트** 단일 세션. Phase 5 ✅ 완료(V0 GO·tag v0-release) 인계. 본 세션은 코드를 구현하지 않는다 — V1 착수에 필요한 ① 스킬/Hook 재점검(A7) ② PART1 B.2 외부 준비물 ③ V1 차단 이슈(READINESS §3.1/§3.3) 해소 점검 ④ DEC-011 §C 보류대장(I-1~I-9) 부착 Phase 집행 점검 ⑤ PHASE5-DEC-001 V0 이연 6건 활성화 배정 확인 ⑥ V0→V1 마이그레이션 규칙(A23) 확인을 수행해 **P6-1(D1'+B1'+V1 핵심 구현) 진입 가부를 판정**한다. 실제 CORE 활성화·RAG·UI·Eval은 P6-1/P6-2, V1 GO/NO-GO는 P6-3. SESSION_PROMPT_SKELETON H1~H9 전제(착수 게이트 = H3 ultracode·H5 loop-until-dry). 신규 코드 0(준비·점검·결정 등재만).
 
-■ 참조:
-  D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md — Section B.2
-  D:\VAMOS\VAMOS Engineering\STRATEGY_06_INTEGRATION_AND_DEPLOY.md §3 — A23
+⚠️ 본 프롬프트는 SESSION_PROMPT_SKELETON.md §0 "H1~H9 필수 포함"을 준수해 작성됨. STEP 1에 H1~H9 포함 확인을 넣는다.
 
-■ STEP 1: 프롬프트 자체 검증 → "확정"
+[전제 확인 — 하나라도 미충족 시 즉시 중단·보고:
+ ① git: 세션 시작 기준 HEAD = 0f6de04(P5-1 후속 로드맵 동기 커밋) — 단, 새 창 실행 시점에 `git rev-parse HEAD`로 재실측 필수(이후 커밋 가능) = main = origin/phase01-targeted-fixes = origin/main 4-way 동기 · tracked 변경 0(클린) · repo-local core.autocrlf=false · branch=phase01-targeted-fixes. ⚠️ git tag v0-release는 V0 릴리스 커밋(현재 0f6de04)을 가리킴 · phase4-complete=5a32b28. 리포 루트 사전존재 untracked 다수는 스코프 외(SKELETON H6).
+ ② backend pytest `cd backend; poetry run python -m pytest tests/ -q` = 118 passed 무회귀.
+ ③ 하네스 3-job GREEN 실측: `cd backend; poetry run ruff check .`(All passed) · `poetry run mypy vamos_core`(Success, strict=true, 26 files) · `python ../scripts/vamos_lint.py ../backend`(위반 0, 36 files; ⚠️ 리포 루트 경로 인자 — backend cwd 무인자 시 오인) · pytest 118.
+ ④ §A 갭폐쇄 도구 실재(H1): scripts/{verify_artifacts.py,check_lockfiles.py,trace_matrix.py} (+ artifact_manifest.json·trace_matrix.map.json·p4_2_manifest.json·p4_3_manifest.json·p5_1_manifest.json) — 부재 시 즉시 보고.
+ ⑤ V0 산출물 실재(V1이 위에 쌓는 기반 — 무변경 확인): backend/vamos_core/{schemas/contracts.py 25모델·schemas/registries.py 123/36/23·orange_core 7 i-modules+pipeline.py·rpc/server.py·storage/memory_store.py·safety/never_auto.py·infra/{config_loader,logger}.py}·config/config.v1.toml(14섹션·LOCK 23)·src-tauri·.vamosrules.json.
+ ⑥ 툴체인: poetry 2.4.1·cargo 1.93.1·pnpm 9.15.9·node v23.1.0·Ollama(llama3.2:3b + llama3.1:8b 둘 다) — 실재.
+ ⑦ PHASE5-DEC-001 실재(V0 이연 6건 스코프환원 + 로드맵 6-0 anchor 집행추적) · phase5_retro.md 실재 · git tag v0-release 실재 · v1-release 부재(P6-3 PASS 시 신설).
+ ⑧ ADR 디스크 실측: PHASE4-DEC-001·002·003·004·005·006·007·008·009·010·012·013 + PHASE5-DEC-001 실재(011 SOP 포함) · DEC-014 부재(신규 테스트도구·CI job 도입 시 본 게이트 이후 신설 — §D). ⚠️ "DEC-001~013 연속" 표기 금지(H9-2) — 011은 SOP·012는 P4-3 소비됨·013 jsonrpcserver 점유.]
 
-■ STEP 2: 작업 실행
-  1. 스킬 11개 + Hook 6개 재점검 (A7)
-  2. PART1 B.2: API Key 6건 + SW 4건 + GitHub 2건 준비 확인
-  3. 마이그레이션: Expand/Contract 규칙 + config 키 호환 + 데이터 호환
-  4. DEC-011 §C 보류대장(I-1~I-9) 전건 재확인 — V1 부착분(I-1 프론트 테스트/CI→6-5, I-2 뮤테이션→6-7,
-     I-3 커버리지래칫→6-2/6-7, I-4 프로퍼티→6-3/6-4, I-5 메타모픽→6-4, I-6 골든·I-8 런타임계약→5-4,
-     I-7 퍼징→6-8, I-9 회귀코퍼스→6-1) 집행 여부 점검. **신규 테스트도구·CI job 추가는 별도 ADR 선행(§D) — ※ DEC-012는 P4-3서 CI mypy 소스전환에 소비됨, 신규는 PHASE4-DEC-014+ 신설**
+■ 참조 (반드시 먼저 Read — H1 필수):
+  ★ D:\VAMOS\VAMOS Engineering\SESSION_PROMPT_SKELETON.md (H1~H9 전체 — 착수 게이트는 H3 ultracode·H4 §C Phase 6 행[I-1·2·3·4·5·7·9 — I-6/I-8 부재=5-4 종결]·H8 effort 지도[6-0 max+uc])
+  ★ D:\VAMOS\VAMOS Engineering\decisions\PHASE4-DEC-011_Opus-Fable_갭폐쇄_수단_및_SOP.md §B~§E (특히 §C 보류대장 I-1~I-9 부착열·§D ADR-게이트 경계·§E 모드. ⚠️ §D 본문은 신규도구 ADR을 "DEC-012+"로 표기하나 012는 P4-3서 CI mypy에 소비됨 — 신규는 DEC-014+ 신설이 정본[로드맵 6-0])
+  ★ D:\VAMOS\VAMOS Engineering\decisions\PHASE5-DEC-001_V0-GO-NOGO_스코프환원_16건.md (V0 이연 6건 + 집행추적 6-0 배정)
+  ★ D:\VAMOS\VAMOS Engineering\decisions\PHASE3-GATE-07_Phase2_이관_4항목_처분.md §a (이형 수정 지시 C-005·C-007·R-8 — 전건 P6-0 배정 정본)
+  ★ D:\VAMOS\VAMOS Engineering\ROADMAP_SESSION_EXECUTION_PROMPTS.md §7 (P6 canon — 본 세션=P6-0, 후속 P6-1/2/3 매핑)
+  D:\VAMOS\VAMOS_최종_로드맵.md L487~534 (Phase 6 작업 6-0~6-9 + 6-0 행 상세[A7·B.2·GATE-06 5건·GATE-07 §a 3건·C.2 #9~13·DEC-011 §C·PHASE5-DEC-001 6건] + V0→V1 마이그레이션 규칙 + 완료조건 tag v1-release)
+  ★ D:\VAMOS\docs\sot\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md §3.1~3.8(V1 착수 전 준비 — §3.1 차단이슈[V1-NNN]·§3.3 스키마 정합·§3.4 스토리지·§3.5 보안·§3.6 테스트인프라·§3.7 CI/CD·§3.8 주차순서) · §3.9(V1 GO/NO-GO — P6-3 분모, 본 세션은 참조만) · §8(파일별 수정 액션 매트릭스 — GATE-06 배정행 #18·#20·#25·#36·#37)
+  ★ D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md — Section B.2(V1 추가 준비 12건: API Key 6 + SW 4 + GitHub Secrets 2) + C.2 #9~13(결정 준비물)
+  D:\VAMOS\VAMOS Engineering\STRATEGY_06_INTEGRATION_AND_DEPLOY.md §3(§3.4 A23 V0→V1 마이그레이션 Expand/Contract)
+  D:\VAMOS\VAMOS Engineering\STRATEGY_11_ASSET_INVENTORY.md §2.15(Phase 4 V0 구현 자산)·§2.16(Phase 5 V0 검증 자산) — 재점검 대상; Phase 6 자산 §2.17은 現 부재 — P6-0서 신설
+  D:\VAMOS\VAMOS Engineering\PROGRESS.md "P5-1 결과 + P6-0 입력 ①~⑤"
+  ⚠️ D:\VAMOS\docs\guides\VAMOS_구현가이드_PART2_구현단계.md — 451KB, 섹션 지정 Read만(V1-Phase 1~6 주차 매핑·§1.1 V1 CORE 32 — 6-3 분모 확인용)
 
-■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
-■ STEP 4: PROGRESS.md 갱신
-■ STEP 5: 갱신 검증
+■ 기확정 사실 — 재론 금지 (게이트 분모·기준값):
+  - ★ P6-0 = Phase 6 진입 게이트(canon §7). 신규 코드 0 — 준비·점검·결정 등재만. 실 구현은 P6-1~P6-2, V1 GO/NO-GO는 P6-3(6-9). Phase 6 분할: P6-0(준비) → P6-1(6-1~6-4 D1'/B1'/CORE/RAG) → P6-2(6-5~6-7 UI/운영/Eval) → P6-3(6-8~6-9 API정합/배포/GO).
+  - ★ P6-0 점검 분모 (로드맵 6-0 행 — 6군): ① A7 스킬/Hook 재점검(V0 구조 변경 영향 — 현재 배선 settings.json 실측. 舊 로드맵 L494 "스킬 11+Hook 6"은 stale 시점값 — 하드코딩 금지) ② PART1 B.2 12건(API Key 6·SW 4·GitHub Secrets 2 — 가입·설치 준비, 키 실값/연결 최종 검증은 6-9) ③ GATE-06 P6-0 배정 5건(READINESS §8 액션매트릭스 #18·#20·#25·#36·#37 — 항목별 성격[문서/점검형 vs 코드/SOT 요구형] 분류 후 처분) ④ GATE-07 §a 이형 수정 지시 3건(PHASE3-GATE-07 ADR §a — C-005·C-007·R-8, SOT이므로 edits 명기·승인 후 집행) ⑤ C.2 #9~13 결정 준비물 확인(확정 자체는 6-3/6-6/6-7 이관) ⑥ DEC-011 §C 보류대장(I-1~I-9) 전건 재확인·부착 Phase 집행 점검.
+  - ★ V1 차단 이슈(READINESS §3.1/§3.3 — V1-NNN, 번호·결번은 P6-0서 디스크 재카운트·연속 단정 금지): 다수가 문서 정합 reconcile. 기해소 확인 예 = V1-015(Python 진입점, V0서 해소)·V1-001/016(I-Series 25 정본, PHASE3-GATE-03 확정). 잔여 예(V1-002 E-15·V1-003 S-5 명칭·V1-008 38 DEFER·V1-005 datetime·V1-004 enum 4·V1-006 QoD 5요소·V1-007 Front Mini·V1-010 Guardrails 4-Layer·V1-013 비용·V1-014 React·V1-009 LangChain) = P6-0서 해소 점검(SOT 수정 필요분은 edits 명기·승인). ⚠️ SOT(docs/sot) 자체 수정은 H6 — edits 명기·승인 대기.
+  - ★ PHASE5-DEC-001 V0 이연 6건 활성화 배정(로드맵 6-0 anchor — P6-0서 배정 확인, 활성화 자체는 6-x): item 2 BASE-1.3 24규칙 전수→6-1 D1'/6-3 · item 7 모듈 I-4 Multimodal(D2.0-01 §5.6 V1:ON, §C 프로퍼티-테스트 I-4와 별개)→6-3 CORE(V1 I-모듈 17 — 6-3 분모 32의 I17 구성요소) · item 11 NeMo(L1)+Guardrails AI(L2) 실설치(V0=코드등가)→6-3/6-4 · item 13 data/ chroma·graph·backups 디렉토리→6-4/6-6 · item 15 Chroma 임베디드 초기화→6-4 · item 16 Alembic→6-1 A23.
+  - ★ §C 보류대장 부착(DEC-011 §C·SKELETON H4 Phase 6 행): I-1 프론트 vitest/Playwright+Rust/TS CI 배선→6-5 · I-2 뮤테이션→6-7 · I-3 커버리지 래칫→6-2/6-7 · I-4 프로퍼티→6-3/6-4 · I-5 메타모픽→6-4 · I-7 퍼징→6-8 · I-9 회귀코퍼스→6-1. ※ **I-6 골든·I-8 런타임계약 = 5-4서 부착·종결(SKELETON H4 Phase 6 행에 부재) — Phase 6 신규 부착 대상 아님; P6-0은 5-4 집행 여부 확인만**. ⚠️ 신규 테스트도구(I-2/4/6)·CI job(I-1/3) = 잠긴 test_strategy §4("V0=0테스트·신규도구 없음")·CI 3-job 변경 → **별도 ADR(PHASE4-DEC-014+) + LOCK 절차 선행**(DEC-012는 P4-3 CI mypy 소비·013 jsonrpcserver 점유 — §D). P6-0은 ADR 미선행 시 현황·계획 등재만(코드 0), 또는 본 게이트서 DEC-014 신설(부착 Phase 6-5/6-7서 집행).
+  - ★ A23 V0→V1 마이그레이션 규칙(STRATEGY_06 §3.4·로드맵 L500): 스키마=Expand/Contract 3단계 · config=기존 키 유지+새 키 기본값 · 모듈 활성화=OFF→ON config 수준(코드 변경 없이) · 데이터 호환=V0 SQLite→V1 읽기 가능. P6-0은 규칙 확인·V1 적용 계획 점검(실 마이그레이션은 구현 세션).
+  - ★ 6-3 V1 CORE 분모 = 32 확정(PART2 §1.1 = I17+E6+S1+A2+B1+C3+D2, PHASE3-GATE-03; STRATEGY_08 표기 26은 구집계 — 충돌 시 PART2 우선). 본 세션은 분모 확인만(활성화는 P6-1 6-3).
+  - ★ V1 GO/NO-GO 분모 발산(READINESS §3.9 15줄 vs 로드맵 6-9 "PART2 §7.2 22항목=READINESS V1 21 + MCP 1") = V0 §2.8 vs §9.1 동일 유형 → **P6-3 분모 reconcile 사안**(P6-0은 flag만, 해소·단정은 P6-3).
+  - 게이트 검증 모드(P6-0 진입 게이트 — H3/§E + DEC-011): 착수 게이트 = ultracode 워크플로(II-1 적대 + II-2 N회 앙상블·심판 + II-4 역할분리 + III-3 독립검증[서술 무시·디스크/문서서 재도출] + VI-3 완전성 비평가 + II-5 loop-until-dry) + effort max. ⚠️ 착수 게이트(6-0/7-0/8-0)는 max+uc — **교차모델(II-6)은 GO/NO-GO 게이트(6-9·7-4·8-4)에만**(H8 표 정본). VI-1 에스컬레이션: 점검 N회(권장 3) 실패 시 Fable(복구 시)/사람 라우팅.
+  - 완료 태그 = 없음(P6-0은 진입 게이트 — tag v1-release는 P6-3 V1 완료 시). P6-0 PASS = P6-1 진입 허용 판정.
+  - 잠금 불변(DEC-011 §D·H6): ruff 13룰·mypy strict·vamos_lint·CI 3-job·테스트 피라미드·SOT(docs/sot·sot 2)·contracts.py/registries.py/V0 생성물 — 무수정. SOT 이형 발견 시 edits 명기·승인 대기. (CLAUDE.md 변경 시 docs\sot\CLAUDE.md SHA 재동기 — 현 SHA 683e959c, Phase 종결 시 점검.)
 
-■ PASS 조건: 스킬 PASS + B.2 준비 + 마이그레이션 확인 + DEC-011 §C 보류대장 재확인 완료
+■ 측정·운영 함정 (위반 시 오탐/사고):
+  - ⚠️ 스킬/Hook 수는 디스크 실측(settings.json 배선) — 舊 "11+6"·과거 "Hook 18"는 시점값, 하드코딩 금지(H9-2). 재점검=V0 코드구조 변경이 기존 스킬/Hook 동작·참조에 미치는 영향 확인(깨진 참조 0).
+  - ⚠️ B.2 12건 = 외부 준비물(API Key 6·SW 4·GitHub Secrets 2) — P6-0은 가입·설치 준비 점검, 키 실값/연결 최종 검증은 6-9(P6-3). 실 API 키 본문 등재 금지(.env 템플릿만).
+  - ⚠️ SOT(docs/sot) 수정(V1 차단이슈 reconcile·GATE-07 §a C-005/C-007/R-8 등)은 H6 — 반드시 edits 명기·사용자 승인 후 집행. 무단 수정 금지.
+  - ⚠️ GATE-06 5건은 "배정"일 뿐 — 코드/SOT 요구 항목은 P6-0서 무단 집행 금지(성격 분류 후 점검형만 집행, 나머지 edits 승인/부착 Phase 이관).
+  - ⚠️ 신규 테스트도구·CI job은 DEC-014+ ADR 선행(§D) — P6-0서 무단 도입 금지(현황·계획 또는 ADR 신설). ⚠️ DEC-011 §D 본문·ROADMAP_SESSION §7 P6-2가 "DEC-012"로 표기한 것은 stale — 정본은 DEC-014+(012는 P4-3 소비).
+  - ⚠️ P6-0은 신규 코드 0 — CORE/RAG/UI 구현 착수 금지(P6-1~P6-2 영역). 분모·범위 혼동 시 즉시 정정.
+  - ⚠️ V1 GO/NO-GO 분모(§3.9 15 vs 6-9 21/22) 발산 = P6-3 reconcile 사안(P6-0서 flag만). 본 세션서 단정 금지.
+  - ⚠️ 줄 수·수치·커밋·ADR 번호 인용 전 디스크 실측(H9-2). 브랜치 체크아웃 절대 금지(autocrlf EOL 사건) — main 동기는 `git fetch . phase01-targeted-fixes:main` 후 push.
+  - ⚠️ 산출물 검증 무인자 실행 금지(H2) — P6-0 전용 매니페스트 인자 필수. check_config_lock는 config 파일 경로 인자 필수(dir/무인자=false-skip 착시).
+
+■ STEP 1: 프롬프트 자체 검증 (effort high) — ① 전제 8건 디스크 실측(HEAD 4-way·v0-release·pytest 118·하네스 3-job GREEN·도구 실재·V0 산출물 무변경·PHASE5-DEC-001 실재·ADR 실측목록[연속표기 금지]) ② 참조 전건 Read 존재(PHASE3-GATE-07 ADR 포함) ③ SKELETON H1~H9 포함 확인(H1 참조·H2 산출물검증STEP·H3 착수게이트 ultracode·H4 §C[Phase 6 부착열 I-1·2·3·4·5·7·9 + I-6/I-8 5-4종결 + DEC-014+ 선행]·H5 수렴·H6 불변식·H7 컨텍스트팩·H8 effort[6-0 max+uc, 교차모델 6-9에만]·H9 작성무결성) ④ P6-0 점검 분모 6군 + V1 차단이슈 번호·결번 READINESS §3.1/§3.3 디스크 재카운트(연속 단정 금지·실측 목록만) + GATE-06 #18/#20/#25/#36/#37 각 성격(문서/코드) 사전 분류 + GATE-07 §a 3건 SOT 위치 + C.2 #9~13 각 6-x 배정 매핑 + PHASE5-DEC-001 6건 배정 + §C I-1~I-9 부착열(I-6/I-8 5-4종결 구분) 디스크 재확인 ⑤ 6-3 CORE 분모 32(≠26 구집계)·V1 GO/NO-GO는 P6-3(분모 발산 flag) 확인 → H9-4 자기검증 4항(부록 verbatim·사실 디스크실측·비발명·H1~H9 포함) → 불일치 시 수정 반복 → "프롬프트 최종 확정"
+
+■ STEP 2: V1 준비 점검 실행 (effort max+uc — 착수 게이트) — H7(IV-1 컨텍스트팩: 각 점검군별 해당 SOT 발췌만 로드·IV-4 사전점검). 신규 코드 0.
+  1. **A7 스킬/Hook 재점검**: .claude/settings.json 배선 실측 + V0 코드구조(backend/vamos_core 재배치) 변경이 VAMOS 관련 스킬/Hook(sot-check·validate·integrity·check_config_lock·vamos_lint·sot_change_detector 등)·참조에 미치는 영향 확인 → 깨진 참조 0 / 영향분 등재. (배선 Hook 다수가 V0 코드 무관 검증기일 수 있음 — VAMOS 코드 관련 배선만 식별.)
+  2. **PART1 B.2 12건**: API Key 6·SW 4·GitHub Secrets 2 준비 항목 전수 점검(가입·설치 가능 여부 — 실값 등재 금지·.env 템플릿 정합). 미준비분 사용자 액션 목록화.
+  3. **GATE-06 5건**(READINESS §8 액션매트릭스 #18·#20·#25·#36·#37): 각 항목 성격 분류(문서/점검형 vs 코드/SOT 요구형) → 문서/점검형은 P6-0 집행, 코드/SOT 요구분은 edits 명기·승인 또는 부착 Phase 이관(신규 코드 0 경계). **GATE-07 §a 3건**(PHASE3-GATE-07 ADR §a — C-005·C-007·R-8): SOT 이형 수정 지시 → edits 명기·승인 대기(무단 수정 금지). **C.2 #9~13**: 결정 준비물 확인(확정은 6-3/6-6/6-7 이관).
+  4. **V1 차단이슈**(READINESS §3.1/§3.3 — 실측 N건): 기해소(V1-015·001·016 등) 확인 + 잔여 reconcile 점검 → SOT 수정 필요분 edits 명기·승인.
+  5. **DEC-011 §C 보류대장(I-1~I-9)**: 전건 부착 Phase 집행 점검표 작성 — 신규 부착(I-1→6-5·I-2→6-7·I-3→6-2/6-7·I-4→6-3/6-4·I-5→6-4·I-7→6-8·I-9→6-1) + **I-6/I-8 = 5-4 종결 확인 행 분리**(Phase 6 부착 아님). 신규 테스트도구·CI job = DEC-014+ ADR 선행 — 현황·계획 등재 또는 **본 게이트서 PHASE4-DEC-014 신설**(부착 Phase서 집행).
+  6. **PHASE5-DEC-001 V0 이연 6건 활성화 배정 확인**(item 2→6-1/6-3·7→6-3[I17]·11→6-3/6-4·13→6-4/6-6·15→6-4·16→6-1) — 로드맵 6-0 anchor와 정합, 누락 0.
+  7. **A23 마이그레이션 규칙 확인**: Expand/Contract·config 키 호환·모듈 OFF→ON·V0 SQLite 데이터 호환 규칙 점검 + V1 적용 계획.
+  (코드 생성이 불가피한 경우[ADR 신설 등]는 문서만 — V-1 생성 결정성 메타[모델 id+temp 0+입력 해시] 기록.)
+
+■ STEP 3: 산출물 실존 검증 (H2 — effort high) — (a) P6-0 전용 매니페스트 작성(scripts/p6_0_manifest.json — 준비점검 리포트·§C 집행점검표·DEC-014[신설 시]·회고 decisions/phase6_p6-0_retro.md·갱신 PROGRESS·STRATEGY_11 §2.17, 각 path+min_bytes+must_contain) → python scripts/verify_artifacts.py scripts/p6_0_manifest.json --root . PASS/0(무인자 금지) (b) 회귀: verify_artifacts.py P5-1 10/0·P4-2 34/0·P4-3 10/0 유지 (c) trace_matrix.py --root . 미커버 0·허위 0(필요 시 6-0 요구↔점검 매핑 추가) (d) check_lockfiles.py --root . drift 0.
+
+■ STEP 4: 진입 게이트 적대검증 (H3/H5/H7 — effort max+uc) — ultracode 워크플로: 독립 적대 리뷰어(II-1) + II-2 N회 앙상블·심판 + II-4 역할분리(점검↔검증 컨텍스트 분리) + III-3 독립검증(서술 무시·디스크/SOT서 재도출) + VI-3 완전성 비평가("빠진 B.2 항? §C 미점검 I-?? V1 차단이슈 누락? PHASE5-DEC-001 6건 배정 누락? SOT 무단수정? GATE-06 코드영역 침범?") + II-5 loop-until-dry. ⚠️ **II-6 교차모델 미포함은 착수 게이트 정책 — H8 표상 6-0=max+uc, 교차모델은 GO/NO-GO 게이트(6-9) 전용. II-6 누락 아님**. → 공격 클래스: "B.2 미준비 은폐·§C 일부 미점검·I-6/I-8 Phase 6 오부착·V1 차단이슈 미해소 위장·SOT 무단수정·신규도구 ADR 미선행 강행·6-3 분모 26/32 혼동·P6-1 구현 영역 침범" → 신규 발견 0까지 반복 → "수렴 선언" → P6-1 진입 가부 판정.
+
+■ STEP 5: 마감 (effort high) — 회고 decisions/phase6_p6-0_retro.md(A11 — 잘된 3/안된 3/바꿀 1) + PROGRESS.md "P6-0 결과"(판정·6군 점검표·V1 차단이슈 상태·§C 집행점검표[I-6/I-8 5-4종결 구분]·PHASE5-DEC-001 6건 배정·B.2 준비·수렴·P6-1 입력) + 다음작업=P6-1 + STRATEGY_11 §2.17 신설(Phase 6 P6-0 산출물 자산 등재) + [DEC-014 신설 시 ADR 공시] + 로드맵 추적표(§8) P6-0 ✅(A12 대조 — 마스터 로드맵 상단 요약표 L14~24·전체구조표 L47~57·세션 §8 전수 동기) + [SOT edits 승인분 집행].
+
+■ STEP 6: 갱신 검증 + 동기 (effort high) — ADR·PROGRESS·로드맵(마스터 상단 요약표+전체구조표+세션 §8 전수)·STRATEGY_11·SKELETON 간 모순 0 재대조(특히 P6-0 분모·§C 부착열·PHASE5-DEC-001 6건·DEC-014 참조 정합) + git 커밋(명시 경로 add, git add -A 금지 — 문서·매니페스트 + [DEC-014][SOT edits 승인분]) + push(`git push origin phase01-targeted-fixes` → `git fetch . phase01-targeted-fixes:main` → `git push origin main`, 체크아웃 금지) → 4-way 동기 재확인 + git-클린 판정.
+
+■ 실패 시 (A1): B.2 미준비 → 사용자 액션 목록화·비차단 분리 / V1 차단이슈 미해소 → SOT edits 명기·승인→집행 / §C 부착 누락 → 점검표 보완 / 신규 테스트도구 필요 → DEC-014 ADR 선행 후 부착 Phase 집행(미선행 시 현황·계획만) / SOT 수정 필요 → edits 명기·승인 대기(무단 금지) / 점검 N회(권장 3) 실패 → Fable(복구 시)/사람 라우팅(VI-1) / 6-3 분모·P6-1 영역 혼동 → 즉시 정정.
+
+■ PASS 조건: 전제 8건 + H1~H9 포함 + A7 재점검(깨진 참조 0) + B.2 12건 준비 점검 + GATE-06 5건(성격 분류 후)·GATE-07 §a 3건(승인 후)·C.2 #9~13 점검 + V1 차단이슈(§3.1/§3.3 실측 전건) 상태 확정(잔여 edits 승인 경로) + DEC-011 §C I-1~I-9 부착 집행점검표(I-6/I-8 5-4종결 구분) + PHASE5-DEC-001 6건 배정 확인(누락 0) + A23 규칙 확인 + 산출물 verify_artifacts PASS/0(P6-0 신규 + P5-1 10/0·P4-2 34/0·P4-3 10/0 회귀)·trace 갭0·lock drift0 + 진입 게이트 적대검증 수렴 선언 + 회고·PROGRESS·STRATEGY_11 §2.17·로드맵 §8(+상단표 전수)·push·4-way 동기 + git-클린 → **P6-1(D1'+B1'+V1 핵심 구현) 진입 허용**. (B.2 외부 준비물 미완·신규 도구 미집행은 차단 아님 — 사용자 액션/V1 보완 A9 명기·6-9 최종 검증.)
 ````
 
 ---
@@ -1180,8 +1238,8 @@ VAMOS 로드맵 Phase 6, 세션 P6-0 — V1 준비
 |---|------|------|---------|
 | 6-1 | D1' 재검증 | V0 D3 + COND 106개 | **Must** |
 | 6-2 | B1' 확장 | vamos_lint Layer 2 | **Must** |
-| 6-3 | R2a' CORE | 26개 실제 구현 | **Must** |
-| 6-4 | R2b' 에이전트 | LangGraph 3 + RAG | **Must** |
+| 6-3 | R2a' CORE | **32개** 실제 구현 (PART2 §1.1 정본; STRATEGY_08 26=구집계) | **Must** |
+| 6-4 | R2b' 에이전트 | LangGraph 3 + RAG(BGE-M3→Chroma) | **Must** |
 
 ````
 VAMOS 로드맵 Phase 6, 세션 P6-1 — D1' + B1' + V1 핵심 구현
@@ -1191,20 +1249,22 @@ VAMOS 로드맵 Phase 6, 세션 P6-1 — D1' + B1' + V1 핵심 구현
 ■ STEP 1: 프롬프트 자체 검증
   a. D1' 범위가 V0 D3 결과 + COND 106개인지?
   b. B1' Layer 2가 187개 모듈 네이밍인지?
-  c. "프롬프트 최종 확정"
+  c. R2a' CORE 분모가 32(PART2 §1.1 — STRATEGY_08 26은 구집계)인지?
+  d. PHASE5-DEC-001 V0 이연 6건 중 6-1/6-3/6-4 부착분(item 2 24규칙→6-1/6-3·item 7 모듈 I-4→6-3·item 11 NeMo+Guardrails AI→6-3/6-4·item 15 Chroma→6-4·item 16 Alembic→6-1) 반영 확인
+  e. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
-  1. D1': /sot-conflict + /sot2-cross-ref + /validate — COND 106개 범위 추가
+  1. D1': /sot-conflict + /sot2-cross-ref + /validate — COND 106개 범위 추가 + PHASE5-DEC-001 item 2(BASE-1.3 24규칙 전수 코드매핑)·item 16(Alembic 초기 마이그레이션 A23) 활성화
      버전 간 역류: V0 결함 발견 시 수정 ≤50% → V1에서 흡수
   2. B1': vamos_lint Layer 2 (187개 모듈 네이밍 규칙)
-  3. R2a': 26개 CORE 모듈 실제 구현 (매 파일마다 하네스)
-  4. R2b': LangGraph 에이전트 3개 + BGE-M3→Chroma RAG
+  3. R2a': **32개** CORE 모듈 실제 구현 (매 파일마다 하네스) + PHASE5-DEC-001 item 7(모듈 I-4 Multimodal, V1 I-모듈 17)·item 11(NeMo L1+Guardrails AI L2) 활성화
+  4. R2b': LangGraph 에이전트 3개 + BGE-M3→Chroma RAG + PHASE5-DEC-001 item 15(Chroma 임베디드 초기화)·item 13(data/chroma·graph 디렉토리)
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
 ■ STEP 4: PROGRESS.md 갱신
 ■ STEP 5: 갱신 검증
 
-■ PASS 조건: D1' PASS + Layer 2 동작 + 26개 CORE + RAG 기본 동작
+■ PASS 조건: D1' PASS + Layer 2 동작 + 32개 CORE + RAG 기본 동작 + PHASE5-DEC-001 6-1/6-3/6-4 부착 6건(item 2·7·11·13·15·16) 활성화
 ````
 
 ---
@@ -1217,7 +1277,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-1 — D1' + B1' + V1 핵심 구현
 |---|------|------|---------|
 | 6-5 | R2c' E2E UI | reasoning_trace + confidence + **DEC-011 §C I-1**(vitest/Playwright + Rust/TS CI 배선) | Should |
 | 6-6 | R3 운영 | 모니터링 + ₩40K/월 | Should |
-| 6-7 | B3' Eval | QoD≥0.70 + 벤치마크 4개 + **DEC-011 §C I-2**(뮤테이션 테스트, DEC-012 ADR 선행) | **Must** |
+| 6-7 | B3' Eval | QoD≥0.70 + 벤치마크 4개 + **DEC-011 §C I-2**(뮤테이션 테스트, **DEC-014+ ADR 선행** — 012는 P4-3 소비) | **Must** |
 
 ````
 VAMOS 로드맵 Phase 6, 세션 P6-2 — V1 UI + 운영 + Eval
@@ -1230,15 +1290,16 @@ VAMOS 로드맵 Phase 6, 세션 P6-2 — V1 UI + 운영 + Eval
   1. R2c': 입력→응답 E2E + reasoning_trace(A22) + confidence(A25) UI 표시
      + **DEC-011 §C I-1 집행**(P4-2 GUI 셸 기반): 프론트 런타임 테스트 vitest/@testing-library/react
        (invoke 배선·A22/A25/A16 컴포넌트) + Playwright/tauri-driver E2E + Rust/TS CI job(ci.yml).
-       ⚠️ 신규 테스트도구·CI job 추가는 **PHASE4-DEC-012 ADR + LOCK 절차 선행**(잠긴 test_strategy §4·CI 3-job 변경, §D)
+       ⚠️ 신규 테스트도구·CI job 추가는 **PHASE4-DEC-014+ ADR + LOCK 절차 선행**(잠긴 test_strategy §4·CI 3-job 변경, §D — ※ DEC-012는 P4-3 CI mypy 소스전환·013은 jsonrpcserver에 소비됨, 신규는 014부터)
+     + PHASE5-DEC-001 item 13 backups 디렉토리(6-6 운영서 첫 백업 시 생성 점검)
   2. R3: SQLite 모니터링 + 비용 추적(₩40K/월) + Alert 동작
-  3. B3': QoD≥0.70 + MMLU/HumanEval/MBPP/LogicKor + **DEC-011 §C I-2**(뮤테이션 — DEC-012 ADR 선행)
+  3. B3': QoD≥0.70 + MMLU/HumanEval/MBPP/LogicKor + **DEC-011 §C I-2**(뮤테이션 — **DEC-014+ ADR 선행**)
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
 ■ STEP 4: PROGRESS.md 갱신
 ■ STEP 5: 갱신 검증
 
-■ PASS 조건: QoD≥0.70 + 벤치마크 4개 PASS + 산출물 확정 + DEC-011 §C I-1(부착분) 집행 또는 DEC-012 ADR 선행 명기
+■ PASS 조건: QoD≥0.70 + 벤치마크 4개 PASS + 산출물 확정 + DEC-011 §C I-1(부착분) 집행 또는 DEC-014+ ADR 선행 명기
 ````
 
 ---
@@ -1251,7 +1312,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-2 — V1 UI + 운영 + Eval
 |---|------|------|---------|
 | 6-8 | D3' API | 88개 계약 vs 코드 | **Must** |
 | 6-8a | 배포 검증 | /health + config + E2E (A24) | **Must** |
-| 6-9 | V1 GO/NO-GO | READINESS V1 ~20건 + B.2(12건) | **Must** |
+| 6-9 | V1 GO/NO-GO | **PART2 §7.2 22항목**(=READINESS V1 21 + MCP 1) + B.2(12건) — ⚠️ READINESS §3.9(15줄)과 발산 = P6-3서 분모 reconcile(V0 §2.8 vs §9.1 동일 유형) | **Must** |
 
 ````
 VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
@@ -1263,13 +1324,14 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 ■ STEP 1: 프롬프트 자체 검증
   a. D3' 대조 범위(88개 API)가 PHASE_B1과 일치?
   b. 배포 검증 3단계가 STRATEGY_06 §4.2와 일치?
-  c. GO/NO-GO가 READINESS V1 + PART1 B.2와 일치?
-  d. "프롬프트 최종 확정"
+  c. GO/NO-GO 분모 = PART2 §7.2 22항목(=READINESS V1 21 + MCP 1)인지? READINESS §3.9(15줄)과 발산 시 분모 reconcile 선행(V0 §2.8 vs §9.1 동일 유형 — PHASE5-DEC-001 선례)?
+  d. PHASE5-DEC-001 V0 이연 6건이 P6-1/P6-2서 활성화 완료됐는지 회귀 확인(2 24규칙·7 I-4·11 Guardrails·13 dirs·15 Chroma·16 Alembic)?
+  e. "프롬프트 최종 확정"
 
 ■ STEP 2: 작업 실행
   1. D3': 88개 API 계약 vs 실제 코드 대조 → DRIFT 0건
   2. 배포 검증 (A24): /health + config LOCK 런타임 대조 + 핵심 E2E
-  3. V1 GO/NO-GO: READINESS V1 ~20건 + PART1 B.2(12건)
+  3. V1 GO/NO-GO: PART2 §7.2 22항목(=READINESS V1 21 + MCP 1) + PART1 B.2(12건) — 분모 발산 reconcile 후 판정. ⚠️ GO/NO-GO 게이트 = ultracode max+uc+**교차모델(II-6 — GPT/Gemini/Fable, 미가용 시 인간 VI-2/VI-1, Opus 페르소나 금지)**
 
 ■ STEP 3: 산출물 검증 (반복)
   a. DRIFT 0건? b. 배포 3단계 PASS? c. GO/NO-GO 전부 충족?
