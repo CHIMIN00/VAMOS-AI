@@ -8,7 +8,7 @@
 
 ## 0. 적용 규칙 (MUST)
 
-**P4-3·5·6·7·8의 모든 세션 프롬프트는 아래 H1~H7을 빠짐없이 포함한다.** 누락 시 그 프롬프트는 미완성(갭폐쇄 미적용 = Opus가 baseline 하네스로만 동작, Fable급 아님). 프롬프트 자체 검증(STEP 1 류)에 "H1~H7 포함 확인"을 넣는다.
+**P4-3·5·6·7·8의 모든 세션 프롬프트는 아래 H1~H8을 빠짐없이 포함한다.** 누락 시 그 프롬프트는 미완성(갭폐쇄 미적용 = Opus가 baseline 하네스로만 동작, Fable급 아님). 프롬프트 자체 검증(STEP 1 류)에 "H1~H8 포함 확인"을 넣는다.
 
 ---
 
@@ -61,11 +61,32 @@
 - **IV-2 원자적 분해**: 작업 단위를 *오라클(테스트/타입/LOCK)이 완전히 경계 지을 수 있는 최소*로 쪼갠다.
 - **IV-4 STEP 사전점검 체크리스트**: 단계 진입 전 필요한 입력(SOT·스키마·선행 산출물)이 다 있는지 확인 후 진입(입력 누락 0).
 
+## H8. 단계별 effort 결정·태깅 (Must — 프롬프트 헤더 + 각 STEP)
+**규칙**: ① 세션 헤더 effort = 그 세션 STEP 중 *최대* effort 명시. ② 각 STEP 라인에 effort 태그를 부여(프롬프트 작성 시 자동 포함). ③ 모델 = Opus 4.8(Fable 5 접근 복구 시 Fable). effort는 *기본 깊이*, 갭폐쇄는 ultracode(uc) 층(H3/§E)이 담당.
+
+**effort 결정 (작업 성격 기반):**
+| effort | 적용 기준 | 예 |
+|---|---|---|
+| **medium** | 순수 전사·스캐폴딩·디렉토리·config 키·문서 (창의성·동시성 0, 오라클 자명) | config·BLUE NODE 디렉토리·Registry 전사 |
+| **high** | 표준 구현 모듈·정합 검증·Eval (로직 有·명세 명확·단일 오라클) | Registry 정의·X2/X3·D3 정합·Eval·API 정합 |
+| **max + uc** | 고위험: 3언어 seam·상태기계·동시성/spawn·RAG/에이전트·보안·DB 마이그레이션·self-evo·A2A + **착수 게이트(6-0/7-0/8-0)** | 타입동기화·ORANGE CORE·IPC/serde·CORE 활성화·LangGraph+RAG·마이그레이션·Agent Teams·self-evo·착수게이트 |
+| **max + uc + 교차모델** | 전 GO/NO-GO 게이트 + Phase 4 게이트(P4-3) (II-6) — 착수 게이트(6-0/7-0/8-0)는 *제외*(max+uc) | P4-3·5-8·6-9·7-4·8-4 |
+
+**Phase별 STEP effort 지도 (정본 — 프롬프트 작성 시 이 분류로 STEP 태깅):**
+- **Phase 4(V0)**: 4-1 타입동기화(A20 왕복) `max+uc` · 4-2 ORANGE CORE(5-Phase+Gate+Defense) `max+uc` · 4-3 IPC/serde/spawn/Tauri `max+uc` · 4-4 Registry `high` · 4-5 config `medium` · 4-6 BLUE NODE 디렉토리 `medium` · 4-7 X2 `high` · **P4-3 게이트 `max+uc+교차`**
+- **Phase 5(검증/GO)**: 5-1 Eval·5-2 QoD `high` · 5-3~5-6 D3 정합 `high` · 5-7 X3·5-7a 배포무결성 `high` · **5-8 GO/NO-GO `max+uc+교차`**
+- **Phase 6(V1)**: **6-0 P6-0 게이트 `max+uc`** · 6-1 D1'·6-2 환경확장 `high` · **6-3 CORE 활성화 `max+uc`** · **6-4 에이전트+RAG `max+uc`** · 6-5 E2E UI `high` · 6-6 운영·6-7 Eval(I-2 setup은 uc)·6-8 API정합·6-8a 배포 `high` · **6-9 GO/NO-GO `max+uc+교차`**
+- **Phase 7(V2)**: **7-0 게이트 `max+uc`** · **7-1 인프라 마이그레이션 `max+uc`+VI-2 인간(R17)** · 7-2 COND 활성화 `high` · **7-3 Agent Teams+보안 `max+uc`** · **7-4 GO/NO-GO `max+uc+교차`**
+- **Phase 8(V3)**: **8-0 게이트 `max+uc`** · **8-1 인프라(K8s/vLLM) `max+uc`+VI-2 인간** · **8-2 self-evo/EXP 모듈 `max+uc`** · **8-3 A2A/Marketplace `max+uc`+VI-2 인간** · **8-4 GO/NO-GO `max+uc+교차`**
+
+> 구현 세션은 대부분 ≥1 고위험 STEP 포함 → **세션 헤더 effort = `max`가 표준**. 순수 스캐폴딩/문서 전용 세션만 high/medium. (uc=ultracode 워크플로, §E/H3 정합)
+
 ---
 
 ## 부록 — 프롬프트 STEP에 박을 표준 문구 (복사용)
 
 ```
+■ 헤더(H8): 모델 Opus 4.8(Fable 5 접근 복구 시 Fable), effort=세션 최대 STEP(구현 세션 보통 max) — 각 STEP 라인에 effort 태그(H8 Phase지도: medium/high/max+uc/max+uc+교차)
 ■ STEP(준비·H7 §B IV): IV-1 컨텍스트 팩(해당 PART2 STEP+SOT 발췌+LOCK+스키마만 로드) · IV-2 원자적 분해(작업=오라클 경계 가능 최소) · IV-4 사전점검 체크리스트(입력 누락 0 확인 후 진입)
 ■ STEP(검증): 산출물 실존(§A III-1/2/4) — <Phase>전용 매니페스트 작성 → python scripts/verify_artifacts.py <매니페스트> --root . (무인자 금지) PASS/0
    + trace_matrix.map.json 매핑 추가 → trace_matrix.py --root . 갭0·허위0 + check_lockfiles.py --root . drift0

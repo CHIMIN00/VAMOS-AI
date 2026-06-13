@@ -53,7 +53,7 @@
 - **II-3 상시 자동 리뷰어**: 모든 diff에 독립 리뷰(코드리뷰형)를 *커밋 전*에.
 - **II-4 역할 분리**: 계획가→구현가→검증가를 별 컨텍스트로.
 - **II-5 loop-until-dry**: 각 Phase 게이트 직전, 새 발견 0될 때까지 버그 스윕.
-- **II-6 게이트 교차-모델 감사**: V0~V3 GO/NO-GO(5-8·6-9·7-4·8-4)에 Fable(복구 시)/GPT/Gemini 독립 감사역 투입 — 자기참조("Opus가 짜고 Opus가 PASS") 차단. (Phase 2/3 3-AI 감사의 구현게이트 제도화)
+- **II-6 게이트 교차-모델 감사**: GO/NO-GO 게이트(P4-3·5-8·6-9·7-4·8-4)에 Fable(복구 시)/GPT/Gemini 독립 감사역 투입 — 자기참조("Opus가 짜고 Opus가 PASS") 차단. (Phase 2/3 3-AI 감사의 구현게이트 제도화)
 - **III-3 독립 검증 에이전트**: 구현가의 *서술을 무시*하고 디스크 상태 + 테스트 결과 + `verify_artifacts.py`(§A)에서 "완료"를 *재도출*하는 독립 검증 워크플로. 본 ADR의 재검증(gap-closure-reverify 워크플로)이 이 레버의 실시 예다.
 
 **B-컨텍스트 규율 (§4 그룹 IV)**
@@ -104,7 +104,7 @@
 | 사소·기계적(config·보일러플레이트·단일파일) | Opus 평이 effort + 하네스(§A) |
 | 표준 구현 모듈 | Opus effort high/max + 자동 하네스 + 상시 리뷰(II-3) |
 | 난도·고위험 모듈(5-Gate·IPC·RAG·라우팅·V2 마이그레이션·A2A·self-evo) | **ultracode workflows**(II-1/II-2/III-3 + high) |
-| 모든 Phase GO/NO-GO 게이트(5-8·6-9·7-4·8-4) | **ultracode workflows**(II-5/II-6/VI-3 + 교차모델) |
+| 모든 GO/NO-GO 게이트(P4-3·5-8·6-9·7-4·8-4) | **ultracode workflows**(II-5/II-6/VI-3 + 교차모델) |
 
 > effort-max는 *기본 깊이*이나 단독으로는 갭을 닫지 못한다(앙상블/적대 구조 부재). 갭 폐쇄는 ultracode 워크플로 층이 담당하며, **고위험 모듈 + 전 게이트에 선택 투입**한다(전면 풀가동 금지 — 비용).
 
