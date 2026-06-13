@@ -1045,46 +1045,88 @@ VAMOS 로드맵 Phase 4, 세션 P4-3 — Phase 4 Gate
 
 ### 세션 P5-1: Eval + D3 + GO/NO-GO
 
+> **2026-06-13 정식판(H1~H9 임베드 — 구판 스텁 대체)**: 디스크 실측 검증(사실 25/25 ACCURATE·H1~H9 전수·적대셋 7종 전수) 완료. ⚠️ **5-8 분모 = READINESS §2.8 V0 GO/NO-GO 16건**(구판 "~15"는 과소계수 정정 — 디스크 실측 16). 작성 기준 HEAD=`4395b5e`(tag phase4-complete=`5a32b28`) — 실행 시점 git/수치 재실측 필수(H9-2).
+
 **로드맵 작업 매핑:**
 
 | # | 작업 | 상세 | 우선순위 | 산출물 |
 |---|------|------|---------|--------|
-| 5-1~5-2 | Eval | ragas+deepeval+promptfoo → QoD | Should | eval_results.json |
-| 5-3~5-6 | D3 정합 | 모듈/스키마/Registry/LOCK 대조 | **Must** | alignment_report.json |
-| 5-7+5-7a | 횡단+배포 | CI+commitlint + 배포 검증(A24) | **Must** | |
-| 5-8 | GO/NO-GO | Phase 5 조건 + READINESS V0 ~15건 | **Must** | V0 릴리스 판정 |
+| 5-1~5-2 | Eval | poetry eval optional(DEC-007) ragas+deepeval+promptfoo+minicheck → QoD → 멱등성 seed=42 3회(A17) | Should | eval_results.json |
+| 5-3~5-6 | D3 정합 | 모듈8/스키마25+confidence/Registry 123vs134/LOCK23 대조 — DRIFT 0 | **Must** | alignment_report.json |
+| 5-7+5-7a | 횡단+배포 | CI+commitlint + 배포무결성 3단계(A24) | **Must** | |
+| 5-8 | GO/NO-GO | Phase 5 완료조건 + **READINESS §2.8 V0 16건**(≠ Must 11 ≠ PART2 완료 13) — ultracode 게이트(max+uc+교차) | **Must** | V0 릴리스 판정 |
 
 ````
-VAMOS 로드맵 Phase 5, 세션 P5-1 — V0 검증 + GO/NO-GO
+📋 세션 P5-1 (작성 2026-06-13) — Phase 5: V0 검증 + GO/NO-GO (5-1~5-8 단일 세션, ROADMAP_SESSION_EXECUTION_PROMPTS §6 canon) — Eval 파이프라인(5-1/5-2) + D3 설계↔코드 정합(5-3~5-6) + 횡단/배포무결성(5-7/5-7a) + V0 GO/NO-GO 16건 통합 게이트(5-8) → V0 릴리스 판정 (모델: claude-opus-4-8[1m] — Fable 5 접근 복구 시 claude-fable-5[1m] / 세션 헤더 effort = max[H8: 최대 STEP=5-8 게이트 max+uc+교차; 5-1~5-7a는 high])
 
-■ 대상: 5-1~5-8 (Must: 5-3~5-8, Should: 5-1~5-2)
+VAMOS 로드맵 Phase 5(V0 검증 + GO/NO-GO) 단일 세션. Phase 4 ✅ 완료(P4-3 게이트 4-V PASS·tag phase4-complete) 인계. 본 세션은 품질 평가(Eval) + 설계↔코드 정합(D3, DRIFT 0) + 배포 무결성(A24) + 멱등성(A17) + V0 GO/NO-GO 16건을 검증해 V0 릴리스 진입을 판정한다. SESSION_PROMPT_SKELETON H1~H9 전제(게이트 5-8은 H3/H5 풀적용·교차모델). PASS 시 git tag v0-release.
 
-■ 참조:
-  D:\VAMOS\VAMOS Engineering\STRATEGY_11_ASSET_INVENTORY.md §3.5
-  D:\VAMOS\docs\sot\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md — V0 GO/NO-GO
+⚠️ 본 프롬프트는 SESSION_PROMPT_SKELETON.md §0 "H1~H9 필수 포함"을 준수해 작성됨(누락 시 Opus가 baseline 하네스로만 동작 = Fable급 아님). STEP 1에 H1~H9 포함 확인을 넣는다.
 
-■ STEP 1: 프롬프트 자체 검증
-  a. D3 대조 항목이 로드맵 5-3~5-6과 일치?
-  b. GO/NO-GO가 READINESS_GUIDE V0 섹션과 일치?
-  c. 배포 검증(A24) 3단계가 STRATEGY_06 §4.2와 일치?
-  d. "프롬프트 최종 확정"
+[전제 확인 — 하나라도 미충족 시 즉시 중단·보고:
+ ① git: 세션 시작 기준 HEAD = 4395b5e(P4-3 게이트 커밋 5a32b28 + DEC-012 forward-ref 정합 4395b5e) = main = origin/phase01-targeted-fixes = origin/main 4-way 동기(이 4 ref 동일 = 단일 해시) · tracked 변경(modified/staged) 0(클린) · repo-local core.autocrlf=false · branch=phase01-targeted-fixes. ⚠️ git tag phase4-complete는 5a32b28(게이트 PASS 커밋)을 가리킴 — HEAD보다 1커밋(문서정합) 뒤 = 정상. 리포 루트 사전존재 untracked 1100여 건은 스코프 외 — 판정 대상 = 세션 스코프 경로만(SKELETON H6).
+ ② backend pytest `cd backend; poetry run python -m pytest tests/ -q` = 118 passed 무회귀.
+ ③ 하네스 3-job 전부 GREEN 실측(P4-3 DEC-012 후): `cd backend; poetry run ruff check .`(All passed) · `poetry run mypy vamos_core`(Success, strict=true) · `python ../scripts/vamos_lint.py backend`(위반 0; ⚠️ 리포 루트서 실행 — backend/서 실행 시 "루트 부재" 오인) · pytest 118.
+ ④ §A 갭폐쇄 도구 실재(H1): scripts/{verify_artifacts.py,check_lockfiles.py,trace_matrix.py} (+ artifact_manifest.json·trace_matrix.map.json·p4_2_manifest.json·p4_3_manifest.json) — 부재 시 즉시 보고.
+ ⑤ Phase 4 산출물 실재(본 세션 검증 대상 — D3 정합 분모): contracts.py(25모델)·registries.py(123/36/23)·config/config.v1.toml(14섹션·LOCK 분모 23[물리수록 21 + V0 부재 2 정상])·V0 실파일 8(orange_core 7: i1·i2·i5·i8·i9·i19·i20 + storage/memory_store.py 1)·pipeline.py(LangGraph 5노드)·rpc/server.py(13메서드+ping)·src-tauri(serde generated.rs 25·python_manager)·safety/never_auto.py(RA_NEVER_01~10). — D3 DRIFT 수리(코드)는 A1 경로로 가능, SOT는 무수정(이형 발견 시 edits 명기·승인).
+ ⑥ 툴체인: poetry 2.4.1 · cargo 1.93.1 · pnpm 9.15.9 · node v23.1.0 — 4종 실재. Ollama llama3.2:3b 실호출 PASS(P4-1 기실측 — 멱등성/E2E 재사용).
+ ⑦ Eval 스택 미설치 상태 확인(DEC-007 — Phase 4 동안 미설치 정상): `poetry show ragas` 부재 예상 → 본 세션 5-1 직전 [tool.poetry.group.eval] optional 등재 후 설치.
+ ⑧ git tag phase4-complete 실재(직전 Phase 종결) · v0-release 부재(본 세션 PASS 시 신설).]
 
-■ STEP 2: 작업 실행 (3트랙 병렬)
-  [A] Eval: ragas+deepeval+promptfoo+minicheck → QoD → 멱등성 seed=42 3회(A17)
-  [B] D3: 모듈 수 + 스키마 필드(+confidence A25) + Registry + LOCK(+confidence 임계값)
-  [C] X3: CI pytest + commitlint → 배포 검증(A24): 앱 기동 + config 대조 + E2E
-  [통합] V0 GO/NO-GO: Phase 5 조건 + READINESS V0 ~15건
+■ 참조 (반드시 먼저 Read — H1 필수):
+  ★ D:\VAMOS\VAMOS Engineering\SESSION_PROMPT_SKELETON.md (H1~H9 전체 — 게이트 5-8은 H3/H5 풀·H8 effort 지도)
+  ★ D:\VAMOS\VAMOS Engineering\decisions\PHASE4-DEC-011_Opus-Fable_갭폐쇄_수단_및_SOP.md §A~§E (게이트 SOP·§E GO/NO-GO=ultracode 워크플로·§C 보류대장)
+  ★ D:\VAMOS\VAMOS Engineering\ROADMAP_SESSION_EXECUTION_PROMPTS.md §6 (P5-1 canon — 본 세션 매핑 5-1~5-8)
+  D:\VAMOS\VAMOS_최종_로드맵.md L435~482 (Phase 5 작업 5-1~5-8 + 5-V 검증 체크리스트 + 완료조건 tag v0-release + 게이트 비대칭 노트 L443)
+  ★ D:\VAMOS\docs\sot\VAMOS_IMPLEMENTATION_READINESS_GUIDE.md §2.7(V0 모듈)·§2.8(V0 GO/NO-GO 체크리스트 16건 — 5-8 분모 정본)
+  D:\VAMOS\VAMOS Engineering\decisions\PHASE4-DEC-007_Eval_스택_등재시점.md (Eval = poetry eval optional 그룹·버전 등재시점 실측 고정·minicheck 폴백·promptfoo 기존 스킬)
+  D:\VAMOS\VAMOS Engineering\STRATEGY_06_INTEGRATION_AND_DEPLOY.md §4 (A24 배포 무결성) · §3 (A23 마이그레이션)
+  D:\VAMOS\VAMOS Engineering\STRATEGY_11_ASSET_INVENTORY.md §3.5(Phase 5 자산: promptfoo·골든셋 v2 162문항·benchmarks) · §2.15(Phase 4 자산 — D3 분모)
+  D:\VAMOS\VAMOS Engineering\STRATEGY_02_SCOPE_AND_PRIORITY.md (Phase 5 우선순위) · PROGRESS.md "P4-3 결과 + P5-1 입력 ①~⑥"
+  D:\VAMOS\VAMOS Engineering\PHASE4-DEC-001~013 (인용 — 특히 -007 Eval·-010 confidence/A22·-012 CI mypy·-013 jsonrpcserver. ⚠️ 001~013 전건 실재 — P4-3서 012 집행 완료)
+  ⚠️ D:\VAMOS\docs\guides\VAMOS_구현가이드_PART2_구현단계.md — 451KB, 섹션 지정 Read만(D2.0-02 §7 I-모듈 상세·V0-STEP — 5-3/5-4 대조용)
 
-■ STEP 3: 산출물 검증 (반복)
-  a. DRIFT 0건? b. 배포 검증 3단계 PASS? c. GO/NO-GO 전부 충족?
-  d. 멱등성 3회 동일(A17)? e. "산출물 최종 확정"
+■ 기확정 사실 — 재론 금지 (게이트 분모·검증 기준값):
+  - ★ P5-1 = Phase 5 전체(5-1~5-8) 단일 세션(canon §6). Must = 5-3~5-8 / Should = 5-1~5-2. 5-8 = V0 GO/NO-GO 통합 게이트(max+uc+교차). 5-8 게이트는 같은 세션 자기-게이트 회피를 위해 ultracode 독립 워크플로(II-4 분리 컨텍스트)로 실행 — 컨텍스트 비대화 시 별도 창(P5-2)으로 분리 가능하나 canon 단일 세션 권장.
+  - ★ 5-8 V0 GO/NO-GO 분모 = READINESS §2.8 V0 GO/NO-GO 16건(로드맵 L440 거버넌스 교차 정본 + 로드맵 5-8 행 "Phase 5 완료조건 + READINESS V0 16건 동시 확인" — 디스크 실측 16: ①통신계층 확정 ②BASE-1.3 24규칙 코드매핑 ③PHASE_B2 디렉토리 ④PHASE_B3 의존성 설치 ⑤PHASE_B4 config LOCK 배치 ⑥D2.1 스키마→Pydantic/Zod/serde 25 ⑦I-1~I-5+I-19 스켈레톤 ⑧L0 세션메모리 ⑨LogEvent JSONL ⑩비용엔진 ₩40K/월 ⑪Guardrails L1+L2 ⑫.env+.vamosrules.json 템플릿 ⑬data/ 디렉토리 ⑭Ollama 모델 다운로드 ⑮Chroma 초기화 ⑯SQLite+Alembic 마이그레이션). 구 스텁 "~15"는 과소계수 — 디스크 실측 16. ⚠️ 로드맵 L443은 "분모 정본=PART2 §7"으로 표기하나 PART2 "§7.1"는 다수가 D2.0-02 IntentFrame 참조 — STEP 1서 PART2 §7 V0 GO/NO-GO 실위치·16 일치 재확인(디스크 검증원 = READINESS §2.8).
+  - ⚠️ V0 관련 4개 리스트 구분(혼동 절대 금지 — 수치 우연 일치, 항목 상이): (가) STRATEGY_02 Phase 4 V0 체크리스트 16 = Must 11+Should 4+Could 1 — 그중 Must 11 = P4-3 게이트 분모(이미 PASS·비대상) / (나) READINESS §2.8 V0 GO/NO-GO 16 = 본 세션 5-8 릴리스 게이트 분모(착수준비형: 의존성설치·Ollama·Chroma·SQLite 등) / (다) PART2 L1582 "V0 완료 체크리스트" 13항목(monorepo·25스키마·IPC·LangGraph·E2E·config·JSONL·pytest·Registry·L0·Tauri브릿지·CI·I-19/I-20 stub) = Phase 4 완료 기준(≈Must/Should, P4-3서 전건 검증) — 5-8서 회귀 확인용. 본 세션 PASS 핵심 = (나) 16건.
+  - ★ D3 정합 4 Must(5-3~5-6) 기준값: 5-3 모듈 = 카탈로그 25종(D9, D2.0-01 §5.6) ↔ 코드 구조 정합, V0 실파일 분모 8(orange_core 7: i1·i2·i5·i8·i9·i19·i20 + storage/memory_store 1; 선생성 미채택 PHASE3-GATE-03) / 5-4 스키마 = D2.1 vs Pydantic 25 + confidence_score(A25) 스키마(DecisionSchema)+config([confidence])+코드(score_to_level) 3곳 전부 존재 / 5-5 Registry = 코드 EventType 123/Failure 36/Fallback 23 vs SOT D2.1-D2(PART2 L1621 = 134/36/23) → ⚠️ EventType 123(V0 코드) vs 134(SOT 전체) 차이 11 = V0 서브셋 의도성 reconcile(EXP_*/V1 이벤트 포함 여부 — DRIFT인지 의도적 서브셋인지 판정) / 5-6 LOCK = config.v1.toml LOCK 분모 23(물리 수록 21 + V0 미수록 2[blue_nodes·ui — 부재 정상, 21<23이 DRIFT 아님] — check_config_lock.py 분모와 일치) vs SOT LOCK + confidence 임계 0.85/0.60/0.30(config L139~141 LOCK·DEC-010). DRIFT 0 = Phase 5 PASS 핵심.
+  - ★ Eval(5-1/5-2, Should — DEC-007): [tool.poetry.group.eval] optional 그룹 등재(dev 아님 — ragas 대형 전이의존 CI 오염 방지) → poetry install --with eval → import 검증. 도구: ragas·deepeval(버전 등재시점 실측 고정 A4) · promptfoo(기존 스킬자산 — 중복등재 불요) · minicheck(pip 불가 시 .claude/hooks/minicheck_verifier.py 폴백). 골든셋 = benchmarks/golden_set/ v2 162문항(기존 자산 — 신규 도구 아님). QoD = 5요소 가중합(정본 SOT 확인). 멱등성(A17): seed=42 고정 3회 동일 결과 + Eval 결과에 seed·반복횟수 기록.
+  - ★ 배포 무결성(5-7a, Must — A24, STRATEGY_06 §4): 3단계 = ①앱 기동(Tauri 셸 — P4-2 GUI 기동 PASS 재확인) ②config LOCK 런타임 대조 ③기본 E2E(입력→응답). 전제 = 4-3 최소 서브셋(DEC-008, 기충족).
+  - 게이트 검증 모드(5-8 — H3/H8 + DEC-011 §E): GO/NO-GO → ultracode 워크플로 필수: II-1 적대 리뷰어 + II-2 N회 앙상블·심판 + II-4 역할분리(분리 컨텍스트) + III-3 독립검증(서술 무시·디스크/실행에서 PASS 재도출) + VI-3 완전성 비평가 + II-5 loop-until-dry + II-6 교차모델 감사. II-1·II-2·II-4·III-3·VI-3·II-5·II-6 전수(H9-1 — 임의 생략 금지). II-6 = GPT/Gemini 독립 감사 우선(Fable 복구 시 Fable) → 둘 다 불가 시에만 인간(VI-2/VI-1) 승인+사유, Opus 자기 페르소나 대체 금지(자기참조).
+  - §C 부착(H4 — Phase 5 타깃 동시 적용): I-6 골든/스냅샷(5-4) · I-7 IPC/MCP 퍼징(5-7a) · I-8 런타임 계약(5-4 — IPC 경계 런타임 검증); VI-2 인간 체크포인트(IPC 계약); 게이트 5-8=H3 풀. ⚠️ I-6 골든/I-7 퍼징은 신규 테스트도구 → 별도 ADR(PHASE4-DEC-014+) 선행(DEC-012는 P4-3 CI mypy에 소비·013 jsonrpcserver 점유 — DEC-011 §D). 본 세션은 ADR 미선행 시 현황 점검·계획 등재만(코드 미생성), 또는 ADR 신설 후 집행.
+  - 완료 태그 = v0-release(Phase 5 완료·V0 릴리스 — phase4-complete와 별개). 5-V 전항목 PASS + GO/NO-GO 16 + 회고 후 신설.
+  - 잠금 불변(DEC-011 §D·H6): ruff 13룰·mypy strict·vamos_lint·CI 3-job·테스트 피라미드·SOT(docs/sot·sot 2)·contracts.py/registries.py/생성물 — 무수정. SOT 이형 발견 시 edits 명기·승인 대기. (CLAUDE.md 변경 시 docs\sot\CLAUDE.md SHA 재동기 상시 규칙 — 현 SHA 683e959c.)
 
-■ STEP 4: 회고(A11) + STRATEGY_11 갱신 + PROGRESS.md + git tag v0-release + 로드맵 대조(A12)
-■ STEP 5: 갱신 검증
+■ 측정·운영 함정 (위반 시 오탐/사고):
+  - ⚠️ DRIFT는 실행·구조 실측으로 증명(파일 존재만 보지 말 것): 모듈 8 디렉토리 실측·스키마 필드 D2.1 대조·Registry 카운트 실행·LOCK 23키 config 로드 실측. "있음=정합" 착시 금지(III-3).
+  - ⚠️ 16(V0 GO/NO-GO, READINESS §2.8) ≠ Must 11(P4-3) — 혼동 시 즉시 정정.
+  - ⚠️ Eval optional 그룹만 — --with eval 외 dev/CI 의존 트리 오염 금지(ragas 대형 전이의존). Eval 설치 실패는 5-1/5-2 Should이므로 비차단(V1 보완 A9 명기) — 단 게이트 16건과 무관.
+  - ⚠️ 멱등성 seed 고정 필수 — LLM 비결정성(seed 미고정) 시 3회 불일치=A17 위반. Ollama temperature·seed 고정 후 실행.
+  - ⚠️ DRIFT 수리 = 코드 수정(A1, 설계 정본 기준) — Phase 4 해당 STEP 재실행. SOT는 무수정(설계가 정본). SOT 자체 오류 의심 시 edits 명기·승인.
+  - ⚠️ tag = v0-release(phase4-complete 아님). 5-8 미충족 시 tag 미생성·NO-GO.
+  - ⚠️ 줄 수·수치·커밋 인용 전 디스크 [System.IO.File]::ReadAllLines/실행 실측(H9-2). 브랜치 체크아웃 절대 금지 — main 동기화는 `git fetch . phase01-targeted-fixes:main` 후 push.
+  - ⚠️ 산출물 검증 무인자 실행 금지(H2) — P5-1 전용 매니페스트 인자 필수.
 
-■ 실패 시 (A1): DRIFT 발견 → 설계 정본 기준 코드 수정 → Phase 4 해당 STEP 재실행. GO/NO-GO 미충족 → 미충족 항목 수정 → 5-8 재확인
+■ STEP 1: 프롬프트 자체 검증 (effort high) — ① 전제 8건 디스크 실측(HEAD 4395b5e 4-way·pytest 118·하네스 3-job GREEN·도구 실재·산출물 실재·Eval 미설치·태그) ② 참조 전건 Read 존재 ③ SKELETON H1~H9 포함 확인(H1 참조·H2 산출물검증STEP·H3 게이트모드·H4 §C[I-6/I-7/I-8 + ADR선행]·H5 수렴·H6 불변식·H7 컨텍스트팩·H8 effort태깅[5-8 max+uc+교차]·H9 작성무결성) ④ 5-8 분모 = READINESS §2.8 V0 GO/NO-GO 16건 디스크 재카운트(≠ Must 11 ≠ PART2 L1582 완료 13 — 4리스트 구분) + 로드맵 L443 "PART2 §7" 라벨 실위치 재확인 ⑤ D3 4 Must 기준값(모듈8·스키마+confidence 3곳·코드123 vs SOT134·LOCK23+임계 0.85/0.60/0.30) 재확인 → H9-4 자기검증 4항(부록 verbatim·사실 디스크실측·비발명·H1~H9 포함) → 불일치 시 수정 반복 → "프롬프트 최종 확정"
 
-■ PASS 조건: DRIFT 0건 + 배포 PASS + GO/NO-GO + 멱등성 + 회고 + git tag → V0 완료
+■ STEP 2: Eval 파이프라인 (5-1/5-2, Should — effort high) — H7(IV-1 컨텍스트팩: DEC-007+골든셋+promptfoo만 로드). ① [tool.poetry.group.eval] optional 등재(ragas·deepeval 버전 등재시점 실측 고정) → poetry install --with eval → import 검증(실패 시 minicheck→.claude/hooks/minicheck_verifier.py 폴백·promptfoo 기존 스킬) ② 골든셋 v2 162문항 Eval 실행 → eval_results.json ③ QoD 5요소 가중합 산출 ④ 멱등성(A17): seed=42 고정 3회 동일 + seed·반복 기록. ⚠️ Eval 설치/실행 실패 = Should 비차단(V1 보완 명기) — 게이트 16건 무관.
+
+■ STEP 3: D3 설계↔코드 정합 (5-3~5-6, Must — effort high) — H7(IV-1 컨텍스트팩: D2.0-01 §5.6 카탈로그+D2.1 스키마+registries+config만 로드·IV-4 사전점검: 산출물 ⑤ 실재 확인 후 진입). DRIFT 0 목표·실측 증명. 5-3 모듈: 카탈로그 25 ↔ 코드, V0 실파일 8 디렉토리 실측 / 5-4 스키마: 25 Pydantic vs D2.1 필드 대조 + confidence_score 스키마+config+코드 3곳 존재 확인(A25) / 5-5 Registry: 코드 123/36/23 vs SOT 134/36/23 — EventType 차이 11 V0 서브셋 의도성 판정 / 5-6 LOCK: config LOCK 분모 23(물리 21+부재 2) vs SOT + confidence 임계 0.85/0.60/0.30. → alignment_report.json. §C I-6 골든·I-8 런타임계약 동시 적용(신규 도구는 DEC-014+ ADR 선행 — 미선행 시 현황·계획만). DRIFT 발견 시 = A1(설계 정본 기준 코드 수정→Phase 4 STEP 재실행; 코드 생성 시 V-1 생성 결정성 메타 기록 — 모델 id+temperature 0+입력 해시). VI-1: D3 수리 검증 3회 실패 시 Fable(복구 시)/사람 라우팅 — Opus 무한재시도 금지.
+
+■ STEP 4: 횡단 + 배포 무결성 (5-7/5-7a, Must — effort high) — H7(IV-1 컨텍스트팩: STRATEGY_06 §4 A24+ci.yml+config만 로드·IV-4 사전점검: Tauri 셸 빌드 가능 확인 후 진입). 5-7: CI pytest 자동 + commitlint + main 병합 규칙 확인 / 5-7a(A24 3단계): ①Tauri 앱 기동(GUI — P4-2 PASS 재확인) ②config LOCK 런타임 대조 ③기본 E2E(입력→응답). §C I-7 IPC/MCP 퍼징 동시(신규 도구 DEC-014+ ADR 선행 — 미선행 시 현황·계획) · VI-2 인간 체크포인트(IPC 계약).
+
+■ STEP 5: 산출물 실존 검증 (H2 — effort high) — (a) P5-1 전용 매니페스트 작성(scripts/p5_1_manifest.json — eval_results.json·alignment_report.json·회고·갱신 PROGRESS·STRATEGY_11 등재, 각 path+min_bytes+must_contain) → python scripts/verify_artifacts.py scripts/p5_1_manifest.json --root . PASS/0(무인자 금지) (b) P4-2/P4-3 매니페스트 회귀: verify_artifacts.py scripts/p4_2_manifest.json 34/0 · p4_3_manifest.json 10/0 유지 (c) trace_matrix.py --root . 미커버 0·허위 0(필요 시 5-3~5-6 요구↔테스트 매핑 추가) (d) check_lockfiles.py --root . drift 0(eval 그룹 등재 시 poetry.lock 갱신 정합 포함).
+
+■ STEP 6: 5-8 V0 GO/NO-GO 통합 게이트 (H3/H5/H7 — effort max+uc+교차) — IV-1 컨텍스트팩(각 검증대상별 산출물·로그만 로드)·IV-4 사전점검(5-1~5-7a 산출물 전건 실재 확인 후 게이트 진입). ultracode 워크플로: 독립 적대 리뷰어 N(II-1) + II-2 N회 앙상블·심판(난도 높은 군 다회→심판) + II-4 역할분리(검증가↔구현 컨텍스트 분리 = 자기-게이트 회피) + III-3 독립검증(서술 무시·디스크/실행에서 재도출) + VI-3 완전성 비평가("빠진 16항? DRIFT 누락? Must11 혼입? 멱등성 미검?") + II-6 교차모델(GPT/Gemini 우선→둘 다 불가 시 인간 VI-2/VI-1+사유, Opus 페르소나 금지) → 검증 대상: ① READINESS §2.8 16건 전건 충족 실측 ② D3 DRIFT 0 ③ 배포무결성 3단계 PASS ④ 멱등성 3회 동일 ⑤ Defense 3계층 독립 동작 ⑥ confidence_score 스키마+config+코드 3곳 → 공격 클래스: "근거없는 GO·DRIFT 은폐·16건 일부 미충족 위장·멱등성 미실행·Must11/16 혼동·Eval 실패를 게이트 차단으로 오판·신규 도구 ADR 미선행 강행·교차모델 자기참조" → 신규 발견 0 라운드까지 반복(II-5 loop-until-dry) → "수렴 선언" → V0 GO/NO-GO 판정.
+
+■ STEP 7: 마감 (effort high) — 회고 decisions/phase5_retro.md(A11 — 잘된 3/안된 3/바꿀 1) + PROGRESS.md "P5-1 결과"(판정·16건 실측표·5-V 7항·DRIFT·멱등성·수렴·Phase 6 입력) + 다음작업=P6-0 + STRATEGY_11 §2.16 신설(Phase 5 산출물 자산 등재 — eval_results·alignment_report·eval 그룹·golden_set 실행) + git tag v0-release(GO 판정 시) + 로드맵 추적표(§8) Phase 5/P5-1 ✅(A12 대조) + ADR DEC-007 집행 공시(Eval 등재).
+
+■ STEP 8: 갱신 검증 + 동기 (effort high) — ADR·PROGRESS·로드맵(마스터+세션 §8)·STRATEGY_02/06/11·SKELETON 간 모순 0 재대조(특히 5-8 분모 16·v0-release·DEC-014+ ADR 참조 정합) + git 커밋(명시 경로 add, git add -A 금지 — 문서·산출물 + DRIFT 수리 코드[있을 시] + eval 그룹 pyproject) + push(`git push origin phase01-targeted-fixes` → `git fetch . phase01-targeted-fixes:main` → `git push origin main` → tag push, 체크아웃 금지) → 4-way 동기 재확인 + git-클린 판정(tracked 변경 0 AND 세션 스코프 untracked 의도대로).
+
+■ 실패 시 (A1): DRIFT 발견 → 설계 정본 기준 코드 수정 → Phase 4 해당 STEP 재실행·재검증 / GO/NO-GO 16건 미충족 → 미충족 항목 수정 → 5-8 재확인 / 멱등성 3회 불일치 → seed/temperature 고정 재실행(A17) / Eval 설치·실행 실패 → Should 비차단·V1 보완(A9) 명기(게이트 무관) / 신규 테스트도구(I-6/I-7) 필요 → DEC-014+ ADR 선행 후 집행(미선행 시 현황·계획만) / 교차모델 미가용 → GPT/Gemini 우선, 둘 다 불가 시 인간 승인+사유(Opus 페르소나 불충분) / 도구·하네스 실패 → 수리 후 재점검(R14) / 검증 N회(권장 3) 실패 → Fable(복구 시)/사람 라우팅(VI-1 — Opus 무한재시도 금지) / 16과 Must11 혼동 발견 → 즉시 정정.
+
+■ PASS 조건: 전제 8건 + H1~H9 포함 + D3 DRIFT 0(5-3~5-6) + 배포무결성 3단계 PASS(A24) + 멱등성 3회 동일(A17) + V0 GO/NO-GO 16건 전건 충족(READINESS §2.8) + 5-V 7항(DRIFT·confidence 3곳·Defense 3계층·배포·멱등성·16건·자산갱신) + 산출물 verify_artifacts PASS/0(P5-1 신규 + P4-2 34/0·P4-3 10/0 회귀)·trace 갭0·lock drift0 + 5-8 게이트 적대검증 수렴 선언(교차모델 또는 사유) + 회고·PROGRESS·STRATEGY_11 §2.16·tag v0-release·push·4-way 동기 + git-클린 → V0 완료 + Phase 6(P6-0 V1 준비) 진입 허용. (Eval 5-1/5-2 Should·신규 도구 I-6/I-7 미집행은 차단 아님 — V1 보완 A9 명기.)
 ````
 
 ---
@@ -1119,7 +1161,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-0 — V1 준비
   3. 마이그레이션: Expand/Contract 규칙 + config 키 호환 + 데이터 호환
   4. DEC-011 §C 보류대장(I-1~I-9) 전건 재확인 — V1 부착분(I-1 프론트 테스트/CI→6-5, I-2 뮤테이션→6-7,
      I-3 커버리지래칫→6-2/6-7, I-4 프로퍼티→6-3/6-4, I-5 메타모픽→6-4, I-6 골든·I-8 런타임계약→5-4,
-     I-7 퍼징→6-8, I-9 회귀코퍼스→6-1) 집행 여부 점검. **신규 테스트도구·CI job 추가는 PHASE4-DEC-012 ADR 선행(§D)**
+     I-7 퍼징→6-8, I-9 회귀코퍼스→6-1) 집행 여부 점검. **신규 테스트도구·CI job 추가는 별도 ADR 선행(§D) — ※ DEC-012는 P4-3서 CI mypy 소스전환에 소비됨, 신규는 PHASE4-DEC-014+ 신설**
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
 ■ STEP 4: PROGRESS.md 갱신
