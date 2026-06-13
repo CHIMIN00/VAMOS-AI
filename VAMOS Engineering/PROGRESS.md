@@ -1,9 +1,25 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-13 (**Phase 5 게이트(5-V) — V0 GO (CONDITIONAL→GO·PHASE5-DEC-001 스코프환원+인간 사인오프)·git tag v0-release**)
+> 최종 갱신: 2026-06-13 (**P6-1a — 6-1 D1' 재검증 + 6-2 B1' vamos_lint Layer 2 + Alembic V0 baseline (표준 구현·하네스 GREEN)**)
 
 ## 현재 Phase
-**Phase 6 진입 게이트 ✅ P6-0 PASS-WITH-CONDITIONS (2026-06-13)** → 다음: **P6-1 (D1' 재검증 + B1' 환경확장 + CORE 활성화 + RAG)**
+**P6-1a ✅ 완료 (2026-06-13)** — 6-1 D1' + 6-2 B1' (3분할 1/3) → 다음: **P6-1b (6-3 CORE 활성화 분모 32)**
+
+## P6-1a 결과 (2026-06-13) — Phase 6 (V1 구현) [3분할 1/3]: 6-1 D1' 재검증 + 6-2 B1' 환경확장 (표준 구현·게이트 아님)
+- ☑ **판정: PASS → P6-1b 진입 허용**. 표준 구현(effort high + 하네스 + II-3 상시 리뷰) + 고위험분 II-1 적대(Alembic 데이터 손실/호환·D1' 결함 해소). 범위 = 로드맵 6-1+6-2만(6-3 CORE·6-4 RAG = P6-1b/c 비대상).
+- ☑ **전제 9건 디스크 실측**: HEAD `787b7fc` 4-way 동기·tracked 클린·autocrlf=false / tag v0-release `0f6de04`·phase4-complete·v1-release 부재 / **pytest 118→121 passed**(+3 Alembic, 정본 `poetry run`) / ruff·mypy strict 26·vamos_lint 36→39 GREEN / §A 도구·V0 산출물·ADR(PHASE4-DEC-001~010·012·013·014 + PHASE5-DEC-001 실재; 011=SOP) / D1·D3 baseline 실재 / poetry 2.4.1·node v23.1.0·Ollama 2모델·**alembic 부재→신설**.
+- ☑ **6-1 D1' 재검증 (regression 0 → PASS)** — `04. 구현단계/v13_results/phase0/d1_prime_report.json` + `scripts/d1_prime_verify.py`(결정론·III-3 재도출):
+  - **integrity**: Jun-4 baseline(2,654 파일 SHA-256) 대비 drift 485(484 changed+1 `.pytest_cache`) = **prior-session SOT2 진화**(mtime 전건 Jun-11/12 = Obsidian 마이그레이션 commit 54f3010[HEAD ancestor], P6-1a 이전). **docs/sot 2 Jun-13+ 변경 0 → P6-1a 귀속 0**(P6-1a SOT 무수정).
+  - ⚠️ **2 비차단 CONDITION(FLAG)**: ① Jun-4 integrity baseline stale → refresh 권고. ② SOT 2 conflict/cross-ref/validate 스캔도 **stale(Jun-5, Jun-12 코퍼스 변경 前)** → D1 'active CONFLICT 0'은 현 코퍼스 기준 **CONDITIONAL**(재스캔 owed, 6-9 前/P6-1b). P6-1a는 SOT 무수정이라 *신규 conflict 0*이나 코퍼스 전체 conflict-free 단언은 재스캔 필요. (오귀속 금지: P6-0 'A7 깨진참조 0'=훅/스킬→코드 점검, ≠SOT2 cross-ref.)
+  - **D3 정합(V1 스코프 재확인)**: 코드 재도출 = baseline `alignment_report.json` (DRIFT 0) — V0 모듈 8(7 i-module+memory_store) ⊂ I-25 카탈로그 · 스키마 25 · Registry **123/36/23** 일치.
+  - **COND 106 검증범위**: COND-011~116 정본 106 등재 확인 — **검증 분모 포함만, 활성화 금지**(활성화=V2/7-2).
+  - **item 2 24규칙 매핑**: Non-goal 7(i8_policy_engine NON_GOALS) + RA_NEVER 10(safety/never_auto) + cost-downshift(i9) + 6 카테고리(prompt/RBAC/schema/RAG/logging/config-load-order) = **24행 매핑·등재**(코드 전수 활성화는 6-3).
+  - **5-3 C-04~C-08**: 비차단 이연 재확인(값게이트 영향 0). SOT 무수정.
+- ☑ **item 16 Alembic 초기 마이그레이션 (A23 — II-1 적대검증)**: `poetry add alembic`(1.18.4·lock 갱신) + `backend/alembic/`(env.py·script.py.mako·README A23) + baseline `0001_v0_baseline`(memory_store SQL frozen, CREATE TABLE IF NOT EXISTS → 기존 V0 db no-op·무손실). 회귀 테스트 3종(`tests/test_alembic_baseline.py`): drift-guard(스키마 지문 == memory_store) · V0 read-compat(upgrade 후 데이터 보존) · stamp(버전 기록+무손실) **PASS**.
+- ☑ **6-2 B1' vamos_lint Layer 2 (VL-006~008·VL-001~005 불변·backend 회귀 0)**: VL-006 모듈 ID 형식·범위(81 base 시리즈) / VL-007 15 교차용어 접두사(**COND/도메인 모듈 한정** — V0 CORE의 bare gate/score/qod 비대상) / VL-008 COND 참조 무결성(SOT 2 정본 COND-011~116 런타임 로드 = SOT 2 연동). 단위 테스트 12종(`scripts/test_vamos_lint_layer2.py`) PASS. ⚠️ **CI 3-job 강제 승격 보류**(PHASE4-DEC-014 절차 선행 — 규칙 추가+로컬 실행까지).
+- ☑ **산출물 게이트(H2)**: `scripts/p6_1a_manifest.json` → verify_artifacts PASS/0 + 회귀 P6-0 11/0·P5-1 10/0·P4-2 34/0·P4-3 10/0 · trace 요구**17**/매핑**23**/미커버0/허위0 · check_lockfiles drift 0(alembic 포함).
+- ☑ **수렴(II-3/II-1/III-3)**: 매 커밋 하네스 GREEN(pytest 121 무회귀) · Alembic 데이터 손실/V0 호환 적대 통과 · D1' 회귀 0 디스크 재확인 · 신규 발견 0.
+- 📌 **P6-1b 입력**: 6-3 CORE 활성화 분모 **32**(PART2 §1.1) · item 2 24규칙 코드 전수 활성화 · item 7/11(I-4 Multimodal·NeMo/Guardrails-AI) · `max+uc`(H8 고위험). **V1-004 enum·GO/NO-GO 분모·II-6 = P6-3 reconcile 이연(본 세션 비대상)**.
 
 ## P6-0 결과 (2026-06-13) — Phase 6 (V1 구현) 진입 게이트: A7 + B.2 + GATE-06/07 + V1 차단이슈 + §C 보류대장 + PHASE5-DEC-001 6건 + A23 → P6-1 진입 판정 (신규 코드 0)
 - ☑ **판정: PASS-WITH-CONDITIONS → P6-1 진입 허용**. 착수 게이트 = max+uc(교차모델 II-6은 6-9 전용). 게이트 적대검증 **wf_a202edf4-b5c**(7 에이전트: III-3 재도출·VI-3 완전성·II-1 적대·스코프가드 + R2 verify/fresh + 심판, loop-until-dry **converged**) → CRITICAL 0·NO-GO 0.
@@ -206,8 +222,9 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P6-1 — D1' 재검증 + B1' 환경확장 + R2a' CORE 활성화 + R2b' 에이전트+RAG** (P6-0 ✅ PASS-WITH-CONDITIONS, 2026-06-13)
-→ 입력: **상단 P6-0 결과 "P6-1 입력"** (D1' = V0 D3 + COND 106 / B1' = vamos_lint Layer2 187 네이밍 / 6-3 CORE 분모 **32**=PART2 §1.1 / I-9 회귀코퍼스 부착(6-1) / PHASE5-DEC-001 item 2 24규칙·item 16 Alembic 활성화) + A23 마이그레이션 규칙 + DEC-011 §B/§E(고위험 STEP=ultracode max+uc — H8: 6-3 CORE·6-4 RAG=max+uc) + **PHASE4-DEC-014**(신규 테스트도구·CI job 부착 Phase 집행)
+**P6-1b — 6-3 CORE 활성화 (분모 32)** (P6-1a ✅ 완료, 2026-06-13 — 6-1 D1'+6-2 B1' Layer 2+Alembic baseline)
+→ 입력: **상단 P6-1a 결과 "P6-1b 입력"** (6-3 CORE 분모 **32**=PART2 §1.1 / item 2 24규칙 코드 전수 활성화[P6-1a서 매핑·등재 완료] / item 7 I-4 Multimodal·item 11 NeMo+Guardrails-AI) + DEC-011 §B/§E(6-3 CORE=`max+uc` H8) + **PHASE4-DEC-014**(신규 테스트도구·CI job 부착 Phase 집행) + I-9 회귀코퍼스(6-1 D1' 정본 = d1_prime_verify) + B1' Layer 2 CI 강제 승격은 DEC-014 절차(P6-1a 보류)
+→ 잔여 P6-1c = 6-4 에이전트+RAG(`max+uc`).
 → ⚠️ P6-3(6-9)로 이연된 reconcile: ① V1 GO/NO-GO 분모 발산(§3.9 ~15 vs 6-9 22=V1 21+MCP 1) ② V1-004 approval_status enum READINESS 서술(4값) → 정본 2값(PL-09 FIX·MASTER_SPEC L434) 정정 ③ II-6 교차모델 복구(6-9 게이트 전용)
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
 → 잔여(비차단): P6-0 SOT 정합 5건 **✅ 집행 완료(2026-06-13 — C-005/#18·C-007·#25·#36·R-8)** / #20·#37 verify-only / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P7-0(이형 C-002·C-006 등) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)

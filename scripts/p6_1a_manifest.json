@@ -1,0 +1,85 @@
+{
+  "_comment": "P6-1a (Phase 6 V1 [3분할 1/3] — 6-1 D1' + 6-2 B1') 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. 무인자 실행 금지. 표준 구현(게이트 아님).",
+  "artifacts": [
+    {
+      "path": "scripts/d1_prime_verify.py",
+      "min_bytes": 9000,
+      "must_contain": ["6-1 D1'", "check_integrity", "base13_24rule_mapping", "cond_106_scope", "rederive_d3"]
+    },
+    {
+      "path": "04. 구현단계/v13_results/phase0/d1_prime_report.json",
+      "min_bytes": 5000,
+      "must_contain": ["6-1 D1'", "base13_24rule_mapping", "COND-011~COND-116", "regression_count", "cond_106_verification_scope"]
+    },
+    {
+      "path": "backend/alembic/versions/0001_v0_baseline.py",
+      "min_bytes": 1500,
+      "must_contain": ["0001_v0_baseline", "memory_records", "IF NOT EXISTS", "A23"]
+    },
+    {
+      "path": "backend/alembic/env.py",
+      "min_bytes": 1500,
+      "must_contain": ["VAMOS_DB_PATH", "render_as_batch", "_resolve_db_path"]
+    },
+    {
+      "path": "backend/alembic/README.md",
+      "min_bytes": 2000,
+      "must_contain": ["Expand", "Contract", "A23", "0001_v0_baseline"]
+    },
+    {
+      "path": "backend/alembic.ini",
+      "min_bytes": 500,
+      "must_contain": ["script_location", "env.py", "A23"]
+    },
+    {
+      "path": "backend/tests/test_alembic_baseline.py",
+      "min_bytes": 2500,
+      "must_contain": ["drift-guard", "read-compat", "stamp", "test_v0_data_preserved_on_upgrade"]
+    },
+    {
+      "path": "scripts/vamos_lint.py",
+      "min_bytes": 9000,
+      "must_contain": ["VL-006", "VL-007", "VL-008", "Layer 2", "_load_cond_ids", "_is_domain_module"]
+    },
+    {
+      "path": "scripts/test_vamos_lint_layer2.py",
+      "min_bytes": 2500,
+      "must_contain": ["test_vl006_out_of_range_flagged", "test_vl007_inert_on_core_file", "test_vl008_unknown_cond_flagged"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/phase6_p6-1a_retro.md",
+      "min_bytes": 2500,
+      "must_contain": ["P6-1a 회고", "Alembic", "Layer 2", "integrity drift"]
+    },
+    {
+      "path": "VAMOS Engineering/PROGRESS.md",
+      "min_bytes": 6000,
+      "must_contain": ["P6-1a 결과", "regression 0", "VL-006~008", "0001_v0_baseline", "P6-1b 입력"]
+    },
+    {
+      "path": "VAMOS Engineering/STRATEGY_11_ASSET_INVENTORY.md",
+      "min_bytes": 6000,
+      "must_contain": ["2.18 Phase 6 P6-1a", "d1_prime_verify", "vamos_lint.py Layer 2", "COND-011~116"]
+    },
+    {
+      "path": "VAMOS_최종_로드맵.md",
+      "min_bytes": 10000,
+      "must_contain": ["6-1 ✅", "6-2 ✅", "P6-1a", "P6-1b(6-3 CORE"]
+    },
+    {
+      "path": "scripts/trace_matrix.map.json",
+      "min_bytes": 2500,
+      "must_contain": ["6-1-item16-Alembic-V0-baseline", "6-2-B1-vamos_lint-Layer2"]
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "min_bytes": 1000,
+      "must_contain": ["alembic"]
+    },
+    {
+      "path": "backend/poetry.lock",
+      "min_bytes": 10000,
+      "must_contain": ["name = \"alembic\"", "name = \"mako\""]
+    }
+  ]
+}

@@ -75,6 +75,16 @@
       "id": "5-6-D3-lock",
       "source": "로드맵 5-6 / config.v1.toml LOCK 23 + confidence 임계 0.85/0.60/0.30 (P5-1 D3)",
       "tests": ["scripts/check_config_lock.py", "backend/tests/test_config.py"]
+    },
+    {
+      "id": "6-1-item16-Alembic-V0-baseline",
+      "source": "로드맵 6-1 / PHASE5-DEC-001 item 16 / STRATEGY_06 §3.4 A23 (P6-1a — V0 스키마 동결 + 무손실 호환)",
+      "tests": ["backend/tests/test_alembic_baseline.py"]
+    },
+    {
+      "id": "6-2-B1-vamos_lint-Layer2",
+      "source": "로드맵 6-2 / STRATEGY_09 §8.2 (P6-1a — VL-006~008: 187 모듈 명명·15 교차용어·SOT 2 연동)",
+      "tests": ["scripts/test_vamos_lint_layer2.py"]
     }
   ]
 }

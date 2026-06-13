@@ -503,6 +503,21 @@ D:\VAMOS\
 
 > ※ ADR 실존 목록 갱신 = PHASE4-DEC-001~010·012·013·**014** + PHASE5-DEC-001(011 SOP 포함). 게이트 = wf_a202edf4-b5c(7 에이전트, III-3/VI-3/II-1/스코프가드 + loop-until-dry converged·교차모델 II-6은 6-9 전용). 판정 = PASS-WITH-CONDITIONS(신규 코드 0·F1 pytest 118 disk-refuted). ⚠️ 엔지니어링 `PHASE4-DEC-014` ≠ 설계 `DEC-014`(QoD 공식) — 접두어 구분.
 
+## 2.18 Phase 6 P6-1a (V1 [3분할 1/3] — 6-1 D1' + 6-2 B1') 생성 자산 (2026-06-13 등재 — doc_strategy §2 갱신 규칙 · §2.17 P6-0 직계)
+
+| # | 자산 | 위치 | P6-1a 작업 | 사용처 |
+|---|------|------|-----------|--------|
+| 1 | **scripts/d1_prime_verify.py** (6-1 D1' 결정론 재검증 도구 — integrity 재해시·D3 코드 재도출·COND 106 검증범위·24규칙 매핑·5-3 이연. III-3 독립 재도출) | `scripts\` | 6-1 D1' | I-9 회귀코퍼스 정본 실행체·이후 Phase D1'' 재사용 |
+| 2 | 04. 구현단계/v13_results/phase0/**d1_prime_report.json** (D1' 결과 — regression 0·integrity drift 분류·24규칙 매핑 24행·COND-011~116) | `04. 구현단계\v13_results\phase0\` | 6-1 D1' | V1 진입 SOT/D3 정합 증빙·P6-1b 입력 |
+| 3 | **backend/alembic/** (env.py·script.py.mako·README A23·versions/0001_v0_baseline.py — V0 스키마 동결 baseline) + alembic.ini + pyproject/poetry.lock(alembic 1.18.4) | `backend\` | 6-1 item 16 | V1 데이터 계층 마이그레이션(Expand/Contract)·V0 db 무손실 호환 |
+| 4 | backend/tests/test_alembic_baseline.py (3 오라클 — drift-guard·V0 read-compat·stamp, II-1 적대) | `backend\tests\` | 6-1 item 16 | Alembic baseline↔V0 정합 회귀 |
+| 5 | **scripts/vamos_lint.py Layer 2** (VL-006 모듈 ID 범위·VL-007 15 교차용어[도메인 한정]·VL-008 COND SOT 2 연동 — VL-001~005 불변) | `scripts\` | 6-2 B1' | V1 187 모듈 명명·교차용어 정합 린트(로컬/advisory; CI 강제=DEC-014) |
+| 6 | scripts/test_vamos_lint_layer2.py (Layer 2 단위 테스트 12종 — 범위/접두사/SOT2 연동/Layer1 회귀) | `scripts\` | 6-2 B1' | Layer 2 규칙 회귀 |
+| 7 | scripts/p6_1a_manifest.json (P6-1a 산출물 매니페스트 — H2 R16 게이트) + trace_matrix.map.json(+2 매핑 17/23) | `scripts\` | H2/IV-3 | 산출물 실존 검증·추적 |
+| 8 | PROGRESS "P6-1a 결과" + 로드맵 6-1/6-2 ✅(상단표·구조표·§8) | `VAMOS Engineering\`·리포 루트 | 마감/A12 | 진행 추적·P6-1b 입력 |
+
+> ※ P6-1a = 표준 구현(게이트 아님 — H3 §E high+하네스+II-3, 고위험분 II-1). 24규칙 = Non-goal 7 + RA_NEVER 10 + cost-downshift 1 + 6 카테고리(prompt/RBAC/schema/RAG/logging/config-load-order). 187 = 81 base + COND 106(COND-011~116). 하네스 무회귀 pytest 121(118+3). ⚠️ **2 비차단 FLAG**: ① Jun-4 integrity baseline stale(485 prior-session drift, Jun-12 Obsidian) → refresh 권고. ② SOT 2 conflict/cross-ref 스캔 stale(Jun-5, 코퍼스 변경 前) → 현 코퍼스 active CONFLICT 0 CONDITIONAL·재스캔 owed(6-9 前/P6-1b). P6-1a 귀속 회귀 0(SOT 무수정). CI 강제 승격·COND 활성화는 P6-1a 비대상(DEC-014/V2 경계).
+
 ---
 
 # 3. 용도별 분류

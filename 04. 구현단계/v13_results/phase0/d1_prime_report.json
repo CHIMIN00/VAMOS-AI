@@ -1,0 +1,261 @@
+{
+  "report": "6-1 D1' — V1 진입 재검증",
+  "session": "P6-1a",
+  "date": "2026-06-13",
+  "head": "787b7fc7083bd8eddafcb4c307a5a13047f6c55b",
+  "method": "디스크 실측 + 결정론적 재도출 (III-3 — 서술 무시)",
+  "baseline": {
+    "d1_verdict": "04. 구현단계\\v13_results\\phase0\\D1_VERDICT.json",
+    "integrity_snapshot": "04. 구현단계\\v13_results\\phase0\\integrity\\integrity_snapshot.json",
+    "alignment_report": "benchmark_results\\alignment_report.json"
+  },
+  "integrity": {
+    "snapshot_date": "2026-06-04T23:38:44",
+    "snapshot_root": "D:\\VAMOS\\docs\\sot 2",
+    "files_in_snapshot": 2654,
+    "ok": 2169,
+    "changed_count": 484,
+    "missing": [
+      "Ai-investing-detail\\.pytest_cache\\README.md"
+    ],
+    "substantive_missing": [],
+    "drift_total_vs_jun4": 485,
+    "p6_1a_attributable_changes": [],
+    "baseline_stale": true,
+    "drift_attribution": "drift 전건 mtime ≤ Jun-12 (P6-1a 세션 이전, prior-session SOT2 진화 = Jun-12 Obsidian 마이그레이션 commit 54f3010[HEAD ancestor] + Jun-11 작업). docs/sot 2 Jun-13+ 변경 0 → P6-1a 귀속 0.",
+    "verdict": "P6-1a 회귀 0 — 본 세션 귀속 SOT 변경 0 (drift는 stale baseline 대비 prior-session 진화). Jun-4 integrity baseline refresh 권고(비차단 FLAG)."
+  },
+  "sot2_scan_staleness": {
+    "sot2_conflict_scan_date": "2026-06-05",
+    "sot2_validate_summary_date": "2026-06-05",
+    "corpus_last_change": "2026-06-12 (Obsidian 마이그레이션, 437 파일)",
+    "stale": true,
+    "active_conflict_0_status": "CONDITIONAL — D1(Jun-5) 스캔 기준 active CONFLICT 0이나 Jun-12 코퍼스 변경 후 재스캔 미실행 → 현 코퍼스 미검증 가정",
+    "owed": "SOT 2 conflict/cross-ref/validate 재스캔(sot_graph_builder 등) — **6-9 GO/NO-GO 전** 또는 P6-1b. P6-1a는 SOT 무수정이라 본 세션 신규 conflict 0(귀속 회귀 0)이나, 코퍼스 전체 conflict-free 단언은 재스캔 owed."
+  },
+  "d3_alignment_v1_scope": {
+    "baseline_report": "D3 설계↔코드 정합 (로드맵 5-3~5-6)",
+    "baseline_head": "eaeb20df8fc208ea0ed88d8ddb9252e8823eb082",
+    "baseline_drift_total": 0,
+    "rederived": {
+      "v0_module_files": 8,
+      "v0_module_list": [
+        "i19_approval_manager.py",
+        "i1_intent_detector.py",
+        "i20_failure_manager.py",
+        "i2_context_builder.py",
+        "i5_decision_engine.py",
+        "i8_policy_engine.py",
+        "i9_cost_manager.py",
+        "memory_store.py (I-3 L0)"
+      ],
+      "schema_models": 25,
+      "registry_events": 123,
+      "registry_failures": 36,
+      "registry_fallbacks": 23
+    },
+    "expected": {
+      "v0_module_files": 8,
+      "schema_models": 25,
+      "events": 123,
+      "failures": 36,
+      "fallbacks": 23
+    },
+    "consistent_with_baseline": true,
+    "verdict": "DRIFT 0 — 코드 재도출 카운트 = D3 baseline (V0 코드 무변경, 정합 유지)"
+  },
+  "sot_verdict_carry_forward": {
+    "source": "D1_VERDICT.json (Jun-5 스캔) — ⚠️ stale 대비 staleness 점검 동반",
+    "active_conflict_d1_baseline": 0,
+    "mismatch_sot_sot2_d1_baseline": 0,
+    "lock_mismatch_d1_baseline": 0,
+    "sdv1_critical_d1_baseline": 0,
+    "d1_verdict": "PASS_CONDITIONAL",
+    "p6_1a_attributable_sot_changes": 0,
+    "note": "P6-1a는 SOT 무수정 → 본 세션 신규 conflict 0(귀속 회귀 0). 단 D1(Jun-5) conflict/cross-ref 판정은 Jun-12 코퍼스 변경 전 산출 → 현 코퍼스 conflict-free는 CONDITIONAL (재스캔 owed, sot2_scan_staleness 참조). 오귀속 금지: P6-0 'A7 깨진참조 0'=훅/스킬 점검."
+  },
+  "cond_106_verification_scope": {
+    "source": "docs\\sot 2\\2-2_COND-Modules-Detail\\COND_MODULES_종합명세.md",
+    "count": 106,
+    "range": "COND-011~COND-116",
+    "status": "VERIFICATION-SCOPE ONLY — 검증 분모 포함. 활성화 금지(활성화=V2/7-2, 로드맵 L549 V2 active 42). COND/deferred 등재 확인.",
+    "expected": 106,
+    "ok": true
+  },
+  "base13_24rule_mapping": [
+    {
+      "rule": "NGO-2.1",
+      "desc": "실거래·주문·계좌·API 연동 금지",
+      "enforcement": "orange_core/i8_policy_engine.py NON_GOALS 7항 verbatim + _NON_GOAL_KEYWORDS deny",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.2",
+      "desc": "불법·해킹·권한상승 금지",
+      "enforcement": "orange_core/i8_policy_engine.py NON_GOALS 7항 verbatim + _NON_GOAL_KEYWORDS deny",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.3",
+      "desc": "의료·법률 단정/대리결정 금지",
+      "enforcement": "orange_core/i8_policy_engine.py NON_GOALS 7항 verbatim + _NON_GOAL_KEYWORDS deny",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.4",
+      "desc": "민감 개인정보 장기 저장 금지",
+      "enforcement": "storage/memory_store.py TTL 30d(M-30) + V0 embedding 0 (장기저장 차단)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.5",
+      "desc": "저작권·약관 위반 금지",
+      "enforcement": "orange_core/i8_policy_engine.py NON_GOALS 7항 verbatim + _NON_GOAL_KEYWORDS deny",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.6",
+      "desc": "P2 도메인 자동 생성 금지",
+      "enforcement": "orange_core/i19_approval_manager.py P2 hold + safety/never_auto.py NEVER_AUTO (HITL 승인 전 자동실행 차단)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "NGO-2.7",
+      "desc": "위험 기능 자동 실행 금지",
+      "enforcement": "orange_core/i19_approval_manager.py P2 hold + safety/never_auto.py NEVER_AUTO (HITL 승인 전 자동실행 차단)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_01",
+      "desc": "modify_safety_rules",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_02",
+      "desc": "change_cost_ceiling",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_03",
+      "desc": "alter_approval_flow",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_04",
+      "desc": "modify_non_goals",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_05",
+      "desc": "change_audit_format",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_06",
+      "desc": "alter_data_retention",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_07",
+      "desc": "modify_user_consent",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_08",
+      "desc": "escalate_own_privilege",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_09",
+      "desc": "disable_guardrails",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "RA_NEVER_10",
+      "desc": "bypass_gate",
+      "enforcement": "safety/never_auto.py NEVER_AUTO_ACTIONS frozenset + pipeline.py:97 Defense Layer 3 detect_never_auto",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "CST-DOWNSHIFT",
+      "desc": "비용 임계 강제 다운시프트/차단",
+      "enforcement": "orange_core/i9_cost_manager.py evaluate_gate() ≥100% stop / ≥80% downshift (DEC-002 CostGate LOCK)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "CAT-PROMPT",
+      "desc": "프롬프트 규약(3-Part 출력·시스템 프롬프트)",
+      "enforcement": "skeleton: 시스템 프롬프트 + 3-Part(P7-LOG); 프롬프트 주입 가드 전수 = 6-4 I-7 퍼징",
+      "status": "MAPPED-SKELETON/CONFIG (전수 활성화 6-3/6-4)"
+    },
+    {
+      "rule": "CAT-RBAC",
+      "desc": "권한·승인 RBAC(Permission Matrix)",
+      "enforcement": "config/skeleton: i19 risk_level P0/P1/P2; Permission Matrix 전수 활성화 = 6-3 + VI-2 인간",
+      "status": "MAPPED-SKELETON/CONFIG (전수 활성화 6-3/6-4)"
+    },
+    {
+      "rule": "CAT-SCHEMA",
+      "desc": "스키마 규약(Pydantic v2·extra forbid)",
+      "enforcement": "schemas/contracts.py 25모델 + infra/config_loader.py _FrozenSection(extra=forbid, R2)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "CAT-RAG",
+      "desc": "RAG 근거·검색 규약",
+      "enforcement": "skeleton: V0 RAG stub(embedding 0); 활성화 = 6-4(Chroma·임베딩 1024)",
+      "status": "MAPPED-SKELETON/CONFIG (전수 활성화 6-3/6-4)"
+    },
+    {
+      "rule": "CAT-LOGGING",
+      "desc": "로그·투명성(audit trace)",
+      "enforcement": "infra/logger.py 구조화 로깅 + LogEventSchema(EventType 123 등재 검증)",
+      "status": "MAPPED-CODE"
+    },
+    {
+      "rule": "CAT-CONFIG-ORDER",
+      "desc": "config 로드 순서·LOCK 우선",
+      "enforcement": "infra/config_loader.py _LOCK_VALUES 23키 frozen(R5 런타임 변경 ValidationError)",
+      "status": "MAPPED-CODE"
+    }
+  ],
+  "deferred_5_3_c04_c08": {
+    "items": [
+      "C-04",
+      "C-05",
+      "C-06",
+      "C-07",
+      "C-08"
+    ],
+    "kind": "LOCK-V12 상속/출처 매핑 불일치 (5-3_v12-Additions-Detail)",
+    "d1_status": "비차단 이연 (게이트 영향 없음 · 값게이트 PASS) — D1_VERDICT open_conflict_register",
+    "verdict_register_ids": [
+      "C-04",
+      "C-05",
+      "C-06",
+      "C-07",
+      "C-08"
+    ],
+    "v1_reaffirm": "active CONFLICT 0 불변(C-04~C-08은 값게이트 비차단). 정합 필요 시 SOT edits 명기·승인(H6) 후 집행 — 본 세션 SOT 무수정."
+  },
+  "alembic_item16": {
+    "status": "본 세션서 Alembic 초기 마이그레이션 신설 (A23 baseline=V0 스키마)",
+    "cross_ref": "backend/alembic/ (baseline revision = memory_records CREATE TABLE)"
+  },
+  "regression_count": 0,
+  "verdict": "PASS",
+  "conditions_non_blocking": [
+    "Jun-4 integrity baseline stale (485 prior-session drift) → refresh 권고",
+    "SOT 2 conflict/cross-ref/validate 스캔 stale (Jun-5, pre Jun-12 코퍼스 변경) → 현 코퍼스 active CONFLICT 0은 CONDITIONAL, 재스캔 owed (6-9 전/P6-1b)"
+  ],
+  "verdict_note": "PASS = P6-1a 귀속 회귀 0 + D3 DRIFT 0 + COND 106 + 24규칙 매핑 + Alembic. conditions_non_blocking 2건은 prior-session/도구 신선도 FLAG (P6-1a 결함 아님)."
+}
