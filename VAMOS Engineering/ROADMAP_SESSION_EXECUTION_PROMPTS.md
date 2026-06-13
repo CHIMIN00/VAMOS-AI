@@ -7,7 +7,15 @@
 
 ---
 
+## §0. 필수 선행 — 갭폐쇄 골격 (P4-3 이후 전 세션 프롬프트, 2026-06-13)
+
+> ⚠️ **P4-3·5·6·7·8의 모든 세션 프롬프트는 작성·실행 시 `VAMOS Engineering/SESSION_PROMPT_SKELETON.md`의 필수 골격 H1~H7을 반드시 포함한다.** (H1 참조 · **H2 산출물 실존 검증**[verify_artifacts/trace_matrix/check_lockfiles, 무인자 금지] · H3 §E 실행모드 티어 · H4 §C just-in-time 부착 · H5 loop-until-dry · H6 베이스라인+V-1 · H7 컨텍스트 규율) — 누락 시 갭폐쇄 미적용(Opus가 baseline 하네스로만 동작 = Fable급 아님). **모든 GO/NO-GO 게이트(P4-3·5-8·6-9·7-4·8-4)=ultracode 워크플로+교차모델 감사 필수.** 근거 정본: `decisions/PHASE4-DEC-011_Opus-Fable_갭폐쇄_수단_및_SOP.md` §A~§E. 프롬프트 자체검증(STEP 1류)에 "H1~H7 포함 확인"을 넣는다.
+
+---
+
 ## 목차
+
+0. [§0 필수 선행 — 갭폐쇄 골격 H1~H7](#0-필수-선행--갭폐쇄-골격-p4-3-이후-전-세션-프롬프트-2026-06-13)
 
 1. [Phase 0: 자산 인벤토리 + 전체 그림 확정](#1-phase-0)
 2. [Phase 1: SOT 2 완성 + D1 검증](#2-phase-1)
