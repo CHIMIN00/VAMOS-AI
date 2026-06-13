@@ -1,0 +1,396 @@
+{
+  "ApprovalSchema": {
+    "approval_id": "apr_01",
+    "approval_stage": "plan",
+    "audit_trace_id": null,
+    "cost_snapshot": null,
+    "decided_by": "OWNER",
+    "description": "비용 승인",
+    "expires_at": "2026-06-12T10:00:00+09:00",
+    "policy_snapshot": null,
+    "requester": "user",
+    "risk_level": "P1",
+    "scope": "cost",
+    "status": "approved"
+  },
+  "AutonomyLevelSchema": {
+    "allowed_domains": null,
+    "approval_required": true,
+    "auto_execute": false,
+    "description": "AI 제안 + 사용자 확인",
+    "level": "L1",
+    "name": "제안",
+    "notification_required": true
+  },
+  "BrainAdapterResponse": {
+    "cost_used_estimate": {
+      "relative_cost": "low",
+      "tokens": 120
+    },
+    "evidence_summary": "근거 요약",
+    "output_text": "응답",
+    "qod_hint": null,
+    "tool_calls": null,
+    "trace_id": "trc_01",
+    "warnings": []
+  },
+  "CostBudget": {
+    "actual": null,
+    "block_on_exceed": true,
+    "budget_id": "bud_v1_001",
+    "daily_limit": 1300,
+    "forecast": 35000.0,
+    "mode": "V1",
+    "monthly_limit": 40000,
+    "used_month": 12000,
+    "used_today": 650
+  },
+  "DecisionSchema": {
+    "approval_required": false,
+    "approval_status": "approved",
+    "conclusion": "ACCEPT",
+    "confidence_level": "HIGH",
+    "confidence_score": 0.91,
+    "cost_gate": "normal",
+    "decision_id": "dec_01HZX9R1ABCDE",
+    "evidence_pack_ref": "evp_01HZX9R1ABCDE",
+    "gates": {
+      "result": {
+        "cost": {
+          "mode": "normal"
+        },
+        "policy": {
+          "decision": "allow"
+        }
+      }
+    },
+    "intent_frame_ref": "if_01HZX9R1ABCDE",
+    "locked": true,
+    "memory_plan": {
+      "requires_user_approval": false,
+      "save_candidate": true,
+      "target_layer": "L1"
+    },
+    "optional_signals": [
+      {
+        "name": "qod_score",
+        "signal_id": "sig_01",
+        "source_module": "I-6",
+        "value": 0.85
+      }
+    ],
+    "output_spec": {
+      "format_constraints": "markdown"
+    },
+    "policy_gate": "allow",
+    "routing": {
+      "execution_mode": "main",
+      "selected_blue_node_id": "bn_analysis"
+    },
+    "s_module_hints": {
+      "s1_priority": "high",
+      "s3_cache_policy": "aggressive"
+    },
+    "timestamp": "2026-01-15T20:17:00+09:00",
+    "trace_id": "trc_01HZX9R1ABCDE",
+    "verify": {
+      "chain_used": [
+        "self_check",
+        "policy_check",
+        "cost_check"
+      ],
+      "refs": {
+        "cost_budget_id": "bud_01",
+        "policy_check_id": "pol_01"
+      }
+    }
+  },
+  "DownshiftSchema": {
+    "block_threshold_percent": 100,
+    "exceed_action": "block",
+    "main_requires_approval": true,
+    "near_action": "force_mini",
+    "trigger_type": "daily",
+    "warn_threshold_percent": 80
+  },
+  "EvidencePack": {
+    "citations_ready": true,
+    "coverage": {
+      "gaps": [],
+      "sufficient": true
+    },
+    "evidence_pack_id": "evp_01",
+    "items": [
+      {
+        "captured_at": "2026-06-12T10:00:00+09:00",
+        "excerpt_or_summary": "요약",
+        "qod_score": 0.9,
+        "source_ref": "doc_001",
+        "source_type": "doc"
+      }
+    ],
+    "timestamp": "2026-06-12T10:00:00+09:00",
+    "trace_id": "trc_01"
+  },
+  "FailureReport": {
+    "evidence_gap": "소스 없음",
+    "failure_cause": "파싱 실패",
+    "improvement_hint": "재시도 전략 A",
+    "risk_detected": {
+      "non_goal": false
+    }
+  },
+  "GuardrailsCheck": {
+    "blocked_by": null,
+    "check_id": "grd_001",
+    "layer1_nemo": {
+      "passed": true
+    },
+    "layer2_guardrails_ai": {
+      "passed": true
+    },
+    "layer3_llamaguard": {
+      "passed": true
+    },
+    "overall_decision": "allow",
+    "trace_id": "trc_01"
+  },
+  "IntentFrame": {
+    "ambiguity": {
+      "clarification_questions": [],
+      "is_ambiguous": false,
+      "missing_slots": []
+    },
+    "constraints": {
+      "format_constraints": "single_codeblock",
+      "must_include": [],
+      "must_not_include": []
+    },
+    "domain_hint": {
+      "candidates": [
+        "P1"
+      ],
+      "priority": "P1"
+    },
+    "intent_id": "if_01",
+    "required_artifacts": [
+      "code"
+    ],
+    "risk_flags": {
+      "approval_maybe_required": false,
+      "cost_sensitive": false,
+      "safety_sensitive": false
+    },
+    "task_type": "code",
+    "timestamp": "2026-06-12T10:00:00+09:00",
+    "trace_id": "trc_01",
+    "user_goal": "단일 코드블럭으로 파서 작성"
+  },
+  "LogEventSchema": {
+    "event_type": "oc.i1.parse.started",
+    "links": {
+      "failure_code": [
+        "OC_I1_PARSE_FAIL"
+      ]
+    },
+    "payload": {
+      "decision_id": "dec_01",
+      "trace_id": "trc_01"
+    },
+    "producer": "I-1",
+    "severity": "info",
+    "sinks": [
+      "file",
+      "db"
+    ],
+    "when": "파싱 시작 시"
+  },
+  "MCPBridgeLayer": {
+    "auth_config": null,
+    "base_url": "http://localhost:8080",
+    "bridge_id": "brg_01",
+    "discovered_tools": [
+      "tool_playwright"
+    ],
+    "health_check_interval_sec": 30,
+    "node_id": "bn_web_research",
+    "transport": "streamable_http"
+  },
+  "MemoryRecord": {
+    "activation_state": null,
+    "content_summary": "세션 요약",
+    "created_at": "2026-06-12T10:00:00+09:00",
+    "masked": false,
+    "memory_type": "B-4",
+    "policy_decision": "allow",
+    "procedure_id": null,
+    "project_id": "prj_default",
+    "provenance": null,
+    "record_id": "mem_01",
+    "required_tools": null,
+    "safety_notes": null,
+    "scope": "L0",
+    "source_refs": null,
+    "steps": null,
+    "tags": [
+      "session"
+    ],
+    "target_scope": null,
+    "trigger_conditions": null,
+    "ttl": "session_end",
+    "version": null
+  },
+  "NodeCapabilityProfile": {
+    "cost_class": "v1",
+    "node_id": "bn_web_research",
+    "optional_tools": [],
+    "required_gates": [
+      "policy",
+      "cost"
+    ],
+    "required_tools": [
+      "tool_playwright"
+    ],
+    "risk_class": "low"
+  },
+  "NodeRequestEnvelope": {
+    "budget_snapshot_id": null,
+    "constraints": {},
+    "decision_id": "dec_01",
+    "evidence_refs": null,
+    "intent_summary": "조사",
+    "node_id": "bn_web_research",
+    "policy_snapshot_id": null,
+    "project_id": "prj_default",
+    "request_id": "req_01",
+    "session_id": "ses_01",
+    "trace_id": "trc_01",
+    "ui_hints": null
+  },
+  "NodeResponseEnvelope": {
+    "domain": "research",
+    "inputs": {
+      "summary": "입력 요약"
+    },
+    "node_id": "bn_web_research",
+    "outputs": {
+      "evidence_refs": [],
+      "result": "결과"
+    },
+    "status": "success",
+    "trace_id": "trc_01"
+  },
+  "PolicyCheck": {
+    "check_id": "pol_01",
+    "decision": "allow",
+    "detected_sensitive_types": [],
+    "fallback_id": null,
+    "reasons": [
+      "non-goal 미해당"
+    ],
+    "required_approval_id": null,
+    "rule_refs": [
+      "RULE-1.3-§5"
+    ]
+  },
+  "RBACRole": {
+    "cost_approval_limit": 40000,
+    "description": "소유자",
+    "max_autonomy_level": "L1",
+    "p2_access": true,
+    "permissions": [
+      "*"
+    ],
+    "role": "OWNER"
+  },
+  "ResponseEnvelope": {
+    "answer": {
+      "details": "상세",
+      "next_actions": [],
+      "summary": "요약"
+    },
+    "audit": {
+      "event_ids": [],
+      "failure_codes": [],
+      "fallback_ids": []
+    },
+    "decision_ref": {
+      "decision_id": "dec_01",
+      "gates": {}
+    },
+    "evidence": {
+      "coverage": 0.9,
+      "items": [],
+      "qod": 0.85
+    },
+    "self_check": {
+      "reasons": [],
+      "retry_allowed": false,
+      "score": 0.9,
+      "verdict": "PASS"
+    }
+  },
+  "SourceQoD": {
+    "completeness": 0.7,
+    "computed_at": "2026-06-12T10:00:00+09:00",
+    "freshness": 0.9,
+    "project_id": "prj_default",
+    "qod_score": 0.8,
+    "reliability": 0.8,
+    "scope": "L1",
+    "source_id": "src_01"
+  },
+  "StructuredOutput": {
+    "artifact_meta": {
+      "hash": "abc",
+      "parts": 1,
+      "size": 1024
+    },
+    "artifact_type": "md",
+    "compliance_report": {
+      "citations_ok": true,
+      "missing_parts": [],
+      "output_spec_ok": true,
+      "safety_mask_applied": false
+    },
+    "content": "# 결과"
+  },
+  "ToolCallRegistry": {
+    "auth_method": "none",
+    "enabled": true,
+    "mcp_endpoint": "http://localhost:8080/mcp",
+    "node_id": "bn_web_research",
+    "rate_limit": null,
+    "risk_class": "high",
+    "tool_id": "tool_playwright"
+  },
+  "ToolRegistryEntry": {
+    "adapter_id": "llm_openai_text",
+    "category": "llm.text",
+    "cost_class": "v1",
+    "notes": "seed example only (D2.1-D4 §4.1)",
+    "outputs": [
+      "signal",
+      "log"
+    ],
+    "required_gates": [
+      "policy",
+      "cost"
+    ],
+    "risk_class": "low",
+    "tool_id": "llm_openai_text"
+  },
+  "WorkflowOutput": {
+    "evidence_summary": "근거(출처/신뢰도/QoD)",
+    "log_report": {
+      "trace_id": "trc_01"
+    },
+    "user_response": "최종 응답"
+  },
+  "WorkflowStage": {
+    "description": "입력 수집 단계",
+    "stage_id": "intake",
+    "stage_name": "Intake",
+    "sub_stages": null
+  }
+}

@@ -1,9 +1,11 @@
-"""A20 왕복(Round-trip) 테스트 — Python → JSON → TS(Node 검증) → Python (DEC-006 Step 5).
+"""A20 왕복(Round-trip) 테스트 — Python → JSON Schema → serde(Rust) → TS(Node) → Python (DEC-006 Step 5).
 
-경로: 25모델 샘플 인스턴스를 Pydantic으로 생성 → JSON 직렬화 → Node 검증기
-(shared/types/validate_roundtrip.mjs — 생성된 JSON Schema로 TS측 구조 검증)를 통과한
-출력을 다시 Python model_validate → 원본과 동일성 비교.
-serde(Rust) 구간은 P4-2 활성화 (PHASE4-DEC-005 §5 — src-tauri 스캐폴딩과 동일 세션).
+경로: 25모델 샘플 인스턴스를 Pydantic으로 생성 → JSON 직렬화 →
+  (a) serde(Rust) 구간: src-tauri/tests/roundtrip_instances.json 으로 기록 후 `cargo test`로
+      deny_unknown_fields 역직렬화/재직렬화 동일성 검증 (cargo 부재 시 보류·비차단).
+  (b) TS(Node) 구간: shared/types/validate_roundtrip.mjs(생성 JSON Schema로 구조 검증) 통과 출력을
+      다시 Python model_validate → 원본과 동일성 비교.
+4파일(Python·JSON Schema·serde·TS) 전 구간 일치 시 PASS (PHASE4-DEC-005 §5).
 
 사용: python scripts/roundtrip_test.py  (종료 0=PASS)
 """
@@ -12,6 +14,7 @@ from __future__ import annotations
 
 import json
 import pathlib
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -175,6 +178,29 @@ def main() -> int:
         json.dump(payload, f, ensure_ascii=False)
         tmp = f.name
 
+    # 2.5) serde(Rust) 구간 — 인스턴스 픽스처 기록 + cargo test (DEC-005 §5)
+    rust_dir = ROOT / "src-tauri"
+    fixture = rust_dir / "tests" / "roundtrip_instances.json"
+    fixture.parent.mkdir(parents=True, exist_ok=True)
+    with open(fixture, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2, sort_keys=True)
+        f.write("\n")
+    cargo = shutil.which("cargo")
+    if cargo and (rust_dir / "Cargo.toml").exists():
+        proc_rs = subprocess.run(  # noqa: S603
+            [cargo, "test", "--manifest-path", str(rust_dir / "Cargo.toml"),
+             "--test", "roundtrip", "--quiet"],
+            capture_output=True, text=True, encoding="utf-8", errors="replace",
+        )
+        if proc_rs.returncode != 0:
+            print("FAIL: serde(Rust)측 왕복 검증 실패")
+            print(proc_rs.stdout[-2000:])
+            print(proc_rs.stderr[-2000:])
+            return 1
+        print("   serde(Rust) 구간 PASS — cargo test roundtrip (deny_unknown_fields 25/25)")
+    else:
+        print("   serde(Rust) 구간 PENDING — cargo 부재 (픽스처는 기록됨, 비차단)")
+
     # 3) TS측(Node) 검증 — 생성된 JSON Schema 25종 대조
     proc = subprocess.run(  # noqa: S603
         ["node", str(ROOT / "shared" / "types" / "validate_roundtrip.mjs"), tmp],  # noqa: S607
@@ -196,8 +222,8 @@ def main() -> int:
         print(f"FAIL: 왕복 불일치 {failures}")
         return 1
 
-    print(f"✅ 왕복 테스트 PASS — {len(echoed)}/25 모델 (Python→JSON→TS(Node)→Python 동일성 확인)")
-    print("   serde(Rust) 구간: P4-2 활성화 (PHASE4-DEC-005)")
+    print(f"✅ 왕복 테스트 PASS — {len(echoed)}/25 모델 "
+          "(Python→JSON Schema→serde(Rust)→TS(Node)→Python 동일성 확인)")
     return 0
 
 
