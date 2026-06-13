@@ -19,6 +19,7 @@ from vamos_core.infra.config_loader import get_config
 from vamos_core.infra.logger import log_event
 from vamos_core.orange_core.i8_policy_engine import PolicyEngine
 from vamos_core.orange_core.i9_cost_manager import CostManager
+from vamos_core.orange_core.i10_tool_router import ToolRegistryRouter
 from vamos_core.orange_core.i15_evidence_qod import EvidenceQoDManager
 from vamos_core.orange_core.i19_approval_manager import ApprovalManager
 from vamos_core.schemas.contracts import DecisionSchema, EvidencePack, IntentFrame
@@ -58,11 +59,13 @@ class DecisionEngine:
         cost: CostManager | None = None,
         approval: ApprovalManager | None = None,
         evidence_qod: EvidenceQoDManager | None = None,
+        router: ToolRegistryRouter | None = None,
     ) -> None:
         self._policy = policy or PolicyEngine()
         self._cost = cost or CostManager()
         self._approval = approval or ApprovalManager()
         self._qod = evidence_qod or EvidenceQoDManager()  # I-15 (V1 EvidenceGate 활성화)
+        self._router = router or ToolRegistryRouter()  # I-10 (V1 라우팅 활성화)
 
     def _evidence_gate(
         self, evidence_pack: EvidencePack, trace_id: str | None = None
@@ -175,10 +178,7 @@ class DecisionEngine:
         else:
             score = 0.90
 
-        routing = {
-            "selected_blue_node_id": "direct_llm_v0",  # V0: BLUE NODE 없음 (P4-2)
-            "execution_mode": get_config().core.default_execution_mode,
-        }
+        routing = self._router.route(intent_frame, trace_id)  # I-10 라우팅 (V1 활성화)
         log_event("oc.i5.route.selected", producer="I-5", payload=routing, trace_id=trace_id)
 
         decision = DecisionSchema.model_validate(  # 경계 검증 의무 — 20필드 FREEZE
