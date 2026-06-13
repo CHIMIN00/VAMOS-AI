@@ -21,16 +21,20 @@ from __future__ import annotations
 
 from typing import Any, Literal, cast
 
+from vamos_core.infra.config_loader import get_config
 from vamos_core.infra.logger import log_event
 from vamos_core.schemas.contracts import DecisionSchema
 
-#: §7.53-1 LOCK — 위험도 기반 가변 PASS 임계값 (0~100 내부 척도)
-RISK_THRESHOLDS: dict[str, int] = {"P0": 70, "P1": 75, "P2": 80}
-
-#: WARN 밴드 폭 — 임계값 미만 ~ (임계값-WARN_BAND)는 WARN(비차단), 그 아래 FAIL
-WARN_BAND = 10
+#: 위험도 키 (임계값은 config [self_check] LOCK 단일 출처 — score_to_level 동형 패턴)
+RISK_KEYS: tuple[str, ...] = ("P0", "P1", "P2")
 
 SelfVerdict = Literal["PASS", "WARN", "FAIL"]
+
+
+def risk_thresholds() -> dict[str, int]:
+    """§7.53-1 LOCK 가변 임계값 — config [self_check] threshold_p0/p1/p2 (70/75/80) 단일 출처."""
+    cfg = get_config().self_check
+    return {"P0": cfg.threshold_p0, "P1": cfg.threshold_p1, "P2": cfg.threshold_p2}
 
 
 class SelfCheckEngine:
@@ -49,7 +53,7 @@ class SelfCheckEngine:
             if isinstance(entry, dict) and entry.get("gate") == "ApprovalGate":
                 detail = entry.get("detail", {})
                 cand = detail.get("risk_level")
-                if cand in RISK_THRESHOLDS:
+                if cand in RISK_KEYS:
                     risk = cast(str, cand)
         if decision.approval_required and risk == "P0":
             risk = "P2"
@@ -101,12 +105,9 @@ class SelfCheckEngine:
 
         raw = max(0, raw)
         risk = self._risk_of(decision)
-        threshold = RISK_THRESHOLDS[risk]
-        verdict: SelfVerdict = (
-            "PASS" if raw >= threshold
-            else "WARN" if raw >= threshold - WARN_BAND
-            else "FAIL"
-        )
+        threshold = risk_thresholds()[risk]
+        # §7.53-1: "score >= 임계값 → PASS", 미만 → FAIL (이진 관문, 가변 임계값). WARN 미사용.
+        verdict: SelfVerdict = "PASS" if raw >= threshold else "FAIL"
 
         # §7.53-2 — 1차 FAIL은 Soft loop 1회 허용(retry_allowed). 토폴로지 LOCK이라 실제 재실행
         # 엣지는 추가하지 않음 — 플래그로 표기(전체 루프 배선은 6-3 범위 외, 직선 그래프 보존).

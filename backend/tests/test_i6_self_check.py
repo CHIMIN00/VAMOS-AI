@@ -16,7 +16,7 @@ from vamos_core.infra.config_loader import reset_config_cache
 from vamos_core.infra.logger import new_trace_id
 from vamos_core.orange_core.i2_context_builder import ContextBuilder
 from vamos_core.orange_core.i5_decision_engine import DecisionEngine
-from vamos_core.orange_core.i6_self_check import RISK_THRESHOLDS, SelfCheckEngine
+from vamos_core.orange_core.i6_self_check import SelfCheckEngine, risk_thresholds
 from vamos_core.orange_core.pipeline import run_pipeline
 from vamos_core.schemas.contracts import DecisionSchema, IntentFrame
 
@@ -73,9 +73,9 @@ async def _decide(intent: IntentFrame) -> DecisionSchema:
     return await DecisionEngine().decide(intent, pack, intent.trace_id)
 
 
-def test_thresholds_lock():
-    """§7.53-1 LOCK — 위험도 가변 임계값 P0/P1/P2 = 70/75/80."""
-    assert RISK_THRESHOLDS == {"P0": 70, "P1": 75, "P2": 80}
+def test_thresholds_from_config_lock():
+    """§7.53-1 LOCK — 가변 임계값은 config [self_check] 단일 출처 (70/75/80)."""
+    assert risk_thresholds() == {"P0": 70, "P1": 75, "P2": 80}
 
 
 async def test_pass_normal_accept():
