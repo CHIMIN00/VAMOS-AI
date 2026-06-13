@@ -49,6 +49,12 @@ def test_t1_output_spec_code_enforced():
     assert s.compliance_report["output_spec_ok"] is False
 
 
+def test_t1_output_spec_code_enforced_empty():
+    """T1 경계: 빈 content + format=code 강제 → 코드블럭 부재이므로 output_spec_ok False."""
+    s = MultimodalInterpreter().structure_output("", output_spec={"format_constraints": "code"})
+    assert s.compliance_report["output_spec_ok"] is False
+
+
 def test_t2_missing_parts_exposed():
     """T2: must_include 누락 항목이 compliance_report.missing_parts 로 노출."""
     s = MultimodalInterpreter().structure_output(

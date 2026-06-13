@@ -96,3 +96,25 @@ def test_evaluate_below_ban_not_l2_eligible():
     assert a["sufficient"] is False
     assert a["l2_eligible"] is False  # < 0.4 → L2 금지
     assert a["low_qod_count"] == 3
+
+
+def test_low_qod_event_links_failure_and_fallback():
+    """저QoD 이벤트 links에 failure_code + fallback_id 동반 (감사 트레일 정합 — i20 매핑)."""
+    import glob
+    import json
+    from pathlib import Path
+
+    from vamos_core.infra.config_loader import get_config
+
+    EvidenceQoDManager().evaluate(_pack([0.2, 0.3]), new_trace_id())  # low QoD < 0.7
+    log_dir = Path(get_config().storage.log_path).parent
+    events: list[dict] = []
+    for f in glob.glob(str(log_dir / "vamos_*.jsonl")):
+        for ln in Path(f).read_text(encoding="utf-8").splitlines():
+            if ln.strip():
+                events.append(json.loads(ln))
+    qod = [e for e in events if e["event_type"] == "ui.main.qod.updated"]
+    assert qod, "ui.main.qod.updated 이벤트 미발행"
+    links = qod[-1]["links"]
+    assert "OC_I2_EVIDENCE_QOD_LOW" in links.get("failure_code", [])
+    assert "FB_RAG_SWITCH_SOURCE" in links.get("fallback_id", [])

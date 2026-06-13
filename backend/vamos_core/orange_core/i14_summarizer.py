@@ -30,7 +30,7 @@ class SummarizerDistiller:
     @staticmethod
     def summarize(content: str, max_chars: int = DEFAULT_SUMMARY_CHARS,
                   trace_id: str | None = None) -> str:
-        """문장경계 절단 결정론 요약 (max_chars 이내, 경계 우선)."""
+        """문장경계 절단 결정론 요약 (경계 우선; 경계 부재 시 max_chars+말줄임표 1자)."""
         text = (content or "").strip()
         if len(text) <= max_chars:
             summary = text

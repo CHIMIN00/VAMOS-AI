@@ -40,9 +40,10 @@ class OutputRenderer:
             try:
                 body = "```json\n" + json.dumps(
                     json.loads(content), ensure_ascii=False, indent=2) + "\n```"
-            except ValueError:
+                rendered = True
+            except ValueError:  # 파싱 실패 → 원문 fallback, 렌더 실패 표기
                 body = content
-            rendered = True
+                rendered = False
         elif atype == "code":
             body = content if "```" in content else f"```\n{content}\n```"
             rendered = True

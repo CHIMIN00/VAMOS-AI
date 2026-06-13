@@ -44,6 +44,13 @@ def test_render_code_keeps_existing_fence():
     assert r["body"] == "```py\nx=1\n```"
 
 
+def test_render_invalid_json_rendered_false():
+    """artifact_type=json 인데 파싱 실패 → 원문 fallback + rendered=False (렌더 실패 표기)."""
+    r = OutputRenderer().render({"artifact_type": "json", "content": "{broken json"})
+    assert r["rendered"] is False
+    assert r["body"] == "{broken json"
+
+
 def test_render_diagram_deferred_stub():
     """비텍스트 — 결정론 렌더 불가, 6-4 위임 stub."""
     r = OutputRenderer().render({"artifact_type": "diagram", "content": "graph TD"})

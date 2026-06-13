@@ -28,7 +28,7 @@ from vamos_core.schemas.contracts import DecisionSchema
 #: 위험도 키 (임계값은 config [self_check] LOCK 단일 출처 — score_to_level 동형 패턴)
 RISK_KEYS: tuple[str, ...] = ("P0", "P1", "P2")
 
-SelfVerdict = Literal["PASS", "WARN", "FAIL"]
+SelfVerdict = Literal["PASS", "FAIL"]  # §7.53-1 이진 관문 (WARN 미사용 — 계약은 허용하나 미생성)
 
 
 def risk_thresholds() -> dict[str, int]:

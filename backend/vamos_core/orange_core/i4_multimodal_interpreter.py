@@ -80,7 +80,8 @@ class MultimodalInterpreter:
         fmt = spec.get("format_constraints")
         # output_spec 위반: 강제 포맷이 code인데 코드블럭 부재, 또는 필수 항목 누락
         output_spec_ok = not missing_parts
-        if fmt == "code" and "```" not in content and content.strip():
+        # 강제 포맷 code인데 코드블럭 부재 → 위반 (빈/공백 content도 code 미충족이므로 위반)
+        if fmt == "code" and "```" not in content:
             output_spec_ok = False
 
         structured = StructuredOutput.model_validate({  # 경계 검증 의무 — 4필드

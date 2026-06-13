@@ -134,7 +134,7 @@ async def test_pipeline_self_check_activated():
     assert env is not None
     sc = env.self_check
     assert set(sc) == {"score", "verdict", "reasons", "retry_allowed"}  # 5필드 계약(내부힌트 제외)
-    assert sc["verdict"] in ("PASS", "WARN", "FAIL")
+    assert sc["verdict"] in ("PASS", "FAIL")  # I-6 이진 관문 (WARN 미생성)
     # SelfCheckGate reasoning_trace 가 SKIP에서 실판정으로 갱신됨
     trace = final["decision"].gates["reasoning_trace"]
     self_gate = next(t for t in trace if t["gate"] == "SelfCheckGate")

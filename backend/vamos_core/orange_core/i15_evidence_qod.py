@@ -69,7 +69,8 @@ class EvidenceQoDManager:
                                "qod": qod, "coverage": coverage, "sufficient": sufficient,
                                "items": len(items)},
                       trace_id=trace_id, severity="warn" if low else "info",
-                      links={"failure_code": ["OC_I2_EVIDENCE_QOD_LOW"]} if low else None)
+                      links={"failure_code": ["OC_I2_EVIDENCE_QOD_LOW"],
+                             "fallback_id": ["FB_RAG_SWITCH_SOURCE"]} if low else None)
         return {
             "qod": qod,
             "coverage": coverage,
