@@ -180,7 +180,7 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
             trace_id=trace_id,
         )
         out: VamosState = {"self_check": report, "pipeline_state": "S6_SELF_CHECKED"}
-        if decision.gates:  # SelfCheckGate SKIP → 실판정 (PASS/WARN→PASS, FAIL→FAIL)
+        if decision.gates:  # SelfCheckGate SKIP → 실판정 (비-FAIL→PASS 방어 매핑, I-6=PASS/FAIL)
             gate_result = "PASS" if report["verdict"] != "FAIL" else "FAIL"
             for entry in decision.gates.get("reasoning_trace", []):
                 if entry.get("gate") == "SelfCheckGate":
