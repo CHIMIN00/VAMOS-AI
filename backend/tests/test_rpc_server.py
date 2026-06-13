@@ -56,6 +56,13 @@ def test_all_13_methods_return_normal_result() -> None:
         assert resp["result"]["v0_stub"] is True
 
 
+def test_system_ping_returns_pong() -> None:
+    """헬스체크 인프라(13 분모와 별개): system.ping → pong (Stage Gate #5)."""
+    resp = _call("system.ping", {})
+    assert resp["result"] == "pong"
+    assert "system.ping" not in server.RPC_METHODS  # 13 비즈니스 분모 불변
+
+
 def test_unknown_method_returns_minus_32601() -> None:
     """Stage Gate #3: 미존재 메서드 → -32601."""
     resp = _call("does.not.exist", {"trace_id": "t1"})

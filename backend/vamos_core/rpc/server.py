@@ -153,6 +153,12 @@ def mcp_tools_discover(trace_id: str, bridge_id: str, **kwargs: Any) -> Result:
     return Success(_stub("mcp.tools.discover", trace_id, bridge_id=bridge_id, tools=[]))
 
 
+# ── 헬스체크 인프라 (13 비즈니스 메서드 분모와 별개 — Stage Gate #5 ping/pong) ──
+@method(name="system.ping")
+def system_ping(**kwargs: Any) -> Result:
+    return Success("pong")
+
+
 def dispatch_request(raw: str) -> str:
     """단일 JSON-RPC 요청 문자열 → 응답 문자열 (테스트/루프 공통)."""
     return dispatch(raw)
