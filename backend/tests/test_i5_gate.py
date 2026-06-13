@@ -115,19 +115,27 @@ async def test_approval_gate_p2_hold():
     assert p2.confidence_level == "REFUSE"
 
 
-async def test_evidence_gate_stub_always_sufficient():
-    """Stage Gate #13: EvidenceGate 스텁 — 항상 sufficient."""
+async def test_evidence_gate_empty_pack_sufficient():
+    """Stage Gate #13: EvidenceGate — I-15(V1) 빈 팩(RAG 미수집)=직답 sufficient(무회귀)."""
     d = await _decide(_intent())
     ev = d.gates["reasoning_trace"][3]
     assert ev["gate"] == "EvidenceGate"
     assert ev["result"] == "PASS"
-    assert ev["detail"]["v0_stub"] is True
+    assert ev["detail"]["qod"] == 0.0  # 빈 팩 = 근거 0
+    assert ev["detail"]["items"] == 0
+    assert "v0_stub" not in ev["detail"]
+    assert d.gates["evidence_assessment"]["sufficient"] is True
 
 
 async def test_evidence_insufficient_forces_refuse(monkeypatch):
     """PHASE4-DEC-010/DEC-010: EvidenceGate insufficient → 강제 REFUSE (단위 테스트 강제 검증)."""
     engine = DecisionEngine()
-    monkeypatch.setattr(engine, "_evidence_gate", lambda pack: False)
+    monkeypatch.setattr(
+        engine, "_evidence_gate",
+        lambda pack, trace_id=None: {
+            "sufficient": False, "qod": 0.2, "coverage": 0.0,
+            "items_evaluated": 1, "l2_eligible": False, "low_qod_count": 1},
+    )
     d = await _decide(_intent(), engine=engine)
     assert d.confidence_score == 0.0
     assert d.confidence_level == "REFUSE"

@@ -61,6 +61,13 @@ def _stage(trace_id: str, stage: str, state_code: str) -> None:
               payload={"stage": stage, "pipeline_state": state_code}, trace_id=trace_id)
 
 
+def _evidence_assess(decision: DecisionSchema) -> dict[str, Any]:
+    """I-15 assessment 추출 (i5가 decision.gates 에 적재 — deliver 재평가 회피)."""
+    gates = decision.gates or {}
+    assess = gates.get("evidence_assessment") if isinstance(gates, dict) else None
+    return assess if isinstance(assess, dict) else {}
+
+
 def build_pipeline(llm: ChatModel | None = None) -> Any:
     """StateGraph 컴파일 — llm 주입은 테스트/모킹용 (기본 ChatOllama, config 유래)."""
     detector = IntentDetector(llm=llm)
@@ -194,14 +201,16 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
             summary = _LEVEL_MESSAGES["REFUSE"] if level == "REFUSE" else (
                 "요청이 거부되었습니다."
             )
+        pack = state.get("evidence_pack")  # I-15 산출 (decision.gates 경유)
+        assess = _evidence_assess(decision)
         envelope = ResponseEnvelope.model_validate(  # 경계 검증 의무 — 5필드 LOCK
             {
                 "answer": {"summary": summary, "details": state.get("llm_response") or "",
                            "next_actions": []},
-                "evidence": {
-                    "coverage": 0.0,  # V0 빈 EvidencePack
-                    "items": [],
-                    "qod": 0.0,
+                "evidence": {  # I-15 Evidence & QoD 산출 (decision.gates 경유, 빈 팩=0.0)
+                    "coverage": assess.get("coverage", 0.0),
+                    "items": pack.items if pack is not None else [],
+                    "qod": assess.get("qod", 0.0),
                 },
                 "self_check": {  # I-6 산출 (verify 노드) — 미존재 시 보수적 PASS
                     k: v for k, v in (state.get("self_check") or {

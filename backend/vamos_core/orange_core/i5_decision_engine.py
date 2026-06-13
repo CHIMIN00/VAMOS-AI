@@ -19,6 +19,7 @@ from vamos_core.infra.config_loader import get_config
 from vamos_core.infra.logger import log_event
 from vamos_core.orange_core.i8_policy_engine import PolicyEngine
 from vamos_core.orange_core.i9_cost_manager import CostManager
+from vamos_core.orange_core.i15_evidence_qod import EvidenceQoDManager
 from vamos_core.orange_core.i19_approval_manager import ApprovalManager
 from vamos_core.schemas.contracts import DecisionSchema, EvidencePack, IntentFrame
 
@@ -56,15 +57,21 @@ class DecisionEngine:
         policy: PolicyEngine | None = None,
         cost: CostManager | None = None,
         approval: ApprovalManager | None = None,
+        evidence_qod: EvidenceQoDManager | None = None,
     ) -> None:
         self._policy = policy or PolicyEngine()
         self._cost = cost or CostManager()
         self._approval = approval or ApprovalManager()
+        self._qod = evidence_qod or EvidenceQoDManager()  # I-15 (V1 EvidenceGate 활성화)
 
-    @staticmethod
-    def _evidence_gate(evidence_pack: EvidencePack) -> bool:
-        """EvidenceGate — V0 스텁: 항상 sufficient (PART2 L1023). V1: QoD/coverage 실평가."""
-        return True
+    def _evidence_gate(
+        self, evidence_pack: EvidencePack, trace_id: str | None = None
+    ) -> dict[str, Any]:
+        """EvidenceGate — V1: I-15 Evidence & QoD Manager 실평가 → assessment 반환.
+
+        빈 팩=직답 sufficient 보존(무회귀). 단위 테스트는 본 메서드 치환으로 insufficient 강제.
+        """
+        return self._qod.evaluate(evidence_pack, trace_id)
 
     async def decide(
         self,
@@ -123,13 +130,15 @@ class DecisionEngine:
                       payload={"to_model": get_config().cost.downshift_model},
                       trace_id=trace_id, severity="warn")
 
-        # ④ EvidenceGate — V0 스텁: 항상 sufficient (PART2 L1023).
+        # ④ EvidenceGate — V1: I-15 Evidence & QoD 실평가 (빈 팩=직답 sufficient 보존).
         # insufficient → 강제 REFUSE 배선(DEC-010)은 단위 테스트가 게이트 치환으로 검증.
-        evidence_sufficient = self._evidence_gate(evidence_pack)
+        evidence_assessment = self._evidence_gate(evidence_pack, trace_id)
+        evidence_sufficient = bool(evidence_assessment["sufficient"])
         trace.append(GateTraceEntry(
             gate="EvidenceGate", result="PASS" if evidence_sufficient else "FAIL",
-            detail={"v0_stub": True, "sufficient": evidence_sufficient,
-                    "items": len(evidence_pack.items)},
+            detail={"sufficient": evidence_sufficient, "qod": evidence_assessment["qod"],
+                    "coverage": evidence_assessment["coverage"],
+                    "items": evidence_assessment["items_evaluated"]},
         ))
         # ⑤ SelfCheckGate — verify 노드 슬롯 예약 (DEC-001: SKIP = V0 미구현 슬롯 → PASS 갱신)
         trace.append(GateTraceEntry(gate="SelfCheckGate", result="SKIP",
@@ -196,7 +205,8 @@ class DecisionEngine:
                     "policy_gate": policy_gate,
                     "approval_status": approval.status,
                     "cost_gate": cost_gate,
-                    "evidence_gate": "sufficient",
+                    "evidence_gate": "sufficient" if evidence_sufficient else "insufficient",
+                    "evidence_assessment": evidence_assessment,  # I-15 (deliver 노드 envelope 유래)
                 },
                 "confidence_score": score,
                 "confidence_level": score_to_level(score),
