@@ -14,7 +14,7 @@
     {
       "path": "VAMOS Engineering/PROGRESS.md",
       "min_bytes": 5000,
-      "must_contain": ["P4-3 결과", "Phase 4 게이트(4-V) PASS", "phase4-complete", "Must 11 전건 실측 PASS"]
+      "must_contain": ["P4-3 결과", "Phase 4 게이트(4-V)", "phase4-complete", "Must 11 전건 실측 PASS"]
     },
     {
       "path": "VAMOS Engineering/STRATEGY_11_ASSET_INVENTORY.md",
