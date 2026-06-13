@@ -66,3 +66,41 @@ impl AppState {
         Ok(Value::Bool(true))
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn dummy() -> AppState {
+        AppState::new(SpawnConfig {
+            python_exe: "python".into(),
+            module: "x".into(),
+            cwd: ".".into(),
+            pythonpath: None,
+            timeout_s: 1,
+            max_restart: 0,
+        })
+    }
+
+    #[test]
+    fn config_get_seeded_and_missing() {
+        let s = dummy();
+        assert_eq!(s.config_get("core.autonomy_level").unwrap(), Value::String("L1".into()));
+        assert_eq!(s.config_get("does.not.exist").unwrap(), Value::Null);
+    }
+
+    #[test]
+    fn config_set_rejects_all_lock_keys() {
+        let s = dummy();
+        for k in LOCKED_CONFIG_KEYS {
+            assert!(s.config_set(k, "x").is_err(), "LOCK 키 {k} 거부 실패(A21 L1)");
+        }
+    }
+
+    #[test]
+    fn config_set_allows_non_lock_key() {
+        let s = dummy();
+        assert!(s.config_set("ui.theme", "dark").is_ok());
+        assert_eq!(s.config_get("ui.theme").unwrap(), Value::String("dark".into()));
+    }
+}

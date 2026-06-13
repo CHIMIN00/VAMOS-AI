@@ -48,3 +48,19 @@ fn python_spawn_health_dispatch_restart() {
     assert_eq!(res2, "pong");
     assert!(bridge.restart_count() >= 1, "자동 재시작 카운트 증가 확인");
 }
+
+#[test]
+fn restart_budget_exhausted_rejects() {
+    // 재시작 budget 경계(max_restart=0) — 종료 후 call은 재시작 불가로 실패해야 한다.
+    if std::env::var("VAMOS_PYTHON").is_err() {
+        eprintln!("SKIP: VAMOS_PYTHON 미설정");
+        return;
+    }
+    let mut config = SpawnConfig::from_env(&backend_dir());
+    config.max_restart = 0;
+    let mut bridge = PythonBridge::spawn(config).expect("초기 스폰 실패");
+    bridge.shutdown();
+    let r = bridge.call("system.ping", json!({}));
+    assert!(r.is_err(), "budget 0 소진 시 call은 실패해야 함");
+    assert_eq!(bridge.restart_count(), 0, "재시작 budget 0 — 카운트 불변");
+}

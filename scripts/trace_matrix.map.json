@@ -35,6 +35,26 @@
       "id": "I-1-intent-parse",
       "source": "로드맵 4-2 ORANGE CORE I-1",
       "tests": ["backend/tests/test_i1.py"]
+    },
+    {
+      "id": "DEC-006-IPC-13methods",
+      "source": "PART2 V0-STEP-3 / PHASE_B1 §5.2 / 로드맵 4-1 (P4-2)",
+      "tests": ["backend/tests/test_rpc_server.py"]
+    },
+    {
+      "id": "DEC-006-A20-serde-rust",
+      "source": "PART2 V0-STEP-3 / DEC-005 §5 (P4-2 serde 활성화). 드라이버가 cargo test roundtrip(.rs) 구동",
+      "tests": ["scripts/roundtrip_test.py"]
+    },
+    {
+      "id": "DEC-008-5-7a-python-spawn",
+      "source": "PART2 V0-STEP-3 Stage Gate #4~#6 / DEC-008 (P4-2 5-7a). 드라이버가 cargo test bridge_spawn(.rs) 구동",
+      "tests": ["scripts/ipc_spawn_check.py"]
+    },
+    {
+      "id": "4-6-blue-node-scaffold",
+      "source": "로드맵 4-6 / PHASE_B2 §5.3 (P4-2 디렉토리 스캐폴딩)",
+      "tests": ["backend/tests/test_blue_nodes_scaffold.py"]
     }
   ]
 }

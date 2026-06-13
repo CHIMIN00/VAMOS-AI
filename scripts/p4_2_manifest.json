@@ -1,0 +1,175 @@
+{
+  "_comment": "P4-2 산출물 실존 검증 매니페스트 (R16 착시 방어). verify_artifacts.py 전용 인자. 무인자(기본 매니페스트)는 갭폐쇄 5건만 검증하므로 P4-2 검증에는 반드시 본 파일을 인자로 전달.",
+  "artifacts": [
+    {
+      "path": "src-tauri/src/models/generated.rs",
+      "min_bytes": 2000,
+      "must_contain": ["deny_unknown_fields", "pub fn roundtrip_validate", "MODEL_NAMES", "pub struct DecisionSchema"]
+    },
+    {
+      "path": "src-tauri/src/bridge/python_manager.rs",
+      "min_bytes": 2000,
+      "must_contain": ["pub struct PythonBridge", "fn spawn", "fn health_check", "max_restart", "system.ping"]
+    },
+    {
+      "path": "src-tauri/src/commands/mod.rs",
+      "min_bytes": 800,
+      "must_contain": ["tauri::command", "decision_create", "workflow_start", "ui_config_set"]
+    },
+    {
+      "path": "src-tauri/src/state.rs",
+      "min_bytes": 800,
+      "must_contain": ["pub struct AppState", "LOCKED_CONFIG_KEYS", "config_set"]
+    },
+    {
+      "path": "src-tauri/tauri.conf.json",
+      "min_bytes": 300,
+      "must_contain": ["frontendDist", "ai.vamos.app"]
+    },
+    {
+      "path": "src-tauri/tests/bridge_spawn.rs",
+      "min_bytes": 800,
+      "must_contain": ["python_spawn_health_dispatch_restart", "health_check", "restart_count"]
+    },
+    {
+      "path": "src-tauri/tests/roundtrip_instances.json",
+      "min_bytes": 1000,
+      "must_contain": ["DecisionSchema", "ResponseEnvelope"]
+    },
+    {
+      "path": "backend/vamos_core/rpc/server.py",
+      "min_bytes": 2000,
+      "must_contain": ["RPC_METHODS", "langgraph.workflow.run", "def dispatch_request", "_business_error", "server.ready"]
+    },
+    {
+      "path": "backend/tests/test_rpc_server.py",
+      "min_bytes": 1500,
+      "must_contain": ["test_all_13_methods_return_normal_result", "minus_32601", "minus_32602"]
+    },
+    {
+      "path": "backend/vamos_core/blue_nodes/__init__.py",
+      "min_bytes": 300,
+      "must_contain": ["V0_BLUE_NODE_DOMAINS", "dev", "research", "content"]
+    },
+    {
+      "path": "backend/tests/test_blue_nodes_scaffold.py",
+      "min_bytes": 400,
+      "must_contain": ["NODE_REGISTRY_SEED", "V0_BLUE_NODE_DOMAINS"]
+    },
+    {
+      "path": "shared/types/vamos.ts",
+      "min_bytes": 2000,
+      "must_contain": ["DecisionSchemaSchema", "z.object"]
+    },
+    {
+      "path": "src/ipc.ts",
+      "min_bytes": 400,
+      "must_contain": ["decision_create", "workflow_start", "ui_config_set"]
+    },
+    {
+      "path": "src/App.tsx",
+      "min_bytes": 1500,
+      "must_contain": ["ConfidenceBadge", "WhyButton", "Disclaimer"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/PHASE4-DEC-013_jsonrpcserver_채택_및_버전핀.md",
+      "min_bytes": 1500,
+      "must_contain": ["PHASE4-DEC-013", "jsonrpcserver", "5.0"]
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "min_bytes": 300,
+      "must_contain": ["pub fn run", "generate_handler", "AppState"]
+    },
+    {
+      "path": "src-tauri/src/main.rs",
+      "min_bytes": 100,
+      "must_contain": ["vamos_app_lib::run"]
+    },
+    {
+      "path": "src-tauri/src/bridge/mod.rs",
+      "min_bytes": 80,
+      "must_contain": ["python_manager", "PythonBridge"]
+    },
+    {
+      "path": "src-tauri/src/models/mod.rs",
+      "min_bytes": 80,
+      "must_contain": ["roundtrip_validate", "MODEL_NAMES"]
+    },
+    {
+      "path": "src-tauri/build.rs",
+      "min_bytes": 20,
+      "must_contain": ["tauri_build::build"]
+    },
+    {
+      "path": "src-tauri/Cargo.toml",
+      "min_bytes": 400,
+      "must_contain": ["tauri", "serde", "tokio", "tauri-build"]
+    },
+    {
+      "path": "src-tauri/capabilities/default.json",
+      "min_bytes": 100,
+      "must_contain": ["core:default", "main"]
+    },
+    {
+      "path": "src-tauri/tests/roundtrip.rs",
+      "min_bytes": 800,
+      "must_contain": ["roundtrip_validate", "deny_unknown_fields_rejects_extra_all_models"]
+    },
+    {
+      "path": "backend/vamos_core/rpc/__init__.py",
+      "min_bytes": 100,
+      "must_contain": ["JSON-RPC"]
+    },
+    {
+      "path": "backend/vamos_core/blue_nodes/dev/__init__.py",
+      "min_bytes": 50,
+      "must_contain": ["DOMAIN", "dev"]
+    },
+    {
+      "path": "backend/vamos_core/blue_nodes/research/__init__.py",
+      "min_bytes": 50,
+      "must_contain": ["DOMAIN", "research"]
+    },
+    {
+      "path": "backend/vamos_core/blue_nodes/content/__init__.py",
+      "min_bytes": 50,
+      "must_contain": ["DOMAIN", "content"]
+    },
+    {
+      "path": "scripts/ipc_spawn_check.py",
+      "min_bytes": 800,
+      "must_contain": ["VAMOS_PYTHON", "bridge_spawn", "cargo"]
+    },
+    {
+      "path": "scripts/generate_types.py",
+      "min_bytes": 4000,
+      "must_contain": ["generated.rs", "deny_unknown_fields", "roundtrip_validate"]
+    },
+    {
+      "path": "src/components/ConfidenceBadge.tsx",
+      "min_bytes": 300,
+      "must_contain": ["A25", "신뢰도"]
+    },
+    {
+      "path": "src/components/WhyButton.tsx",
+      "min_bytes": 300,
+      "must_contain": ["A22", "reasoning_trace"]
+    },
+    {
+      "path": "src/components/Disclaimer.tsx",
+      "min_bytes": 200,
+      "must_contain": ["A16"]
+    },
+    {
+      "path": "src/types/ipc.ts",
+      "min_bytes": 200,
+      "must_contain": ["DecisionResult", "confidence_level"]
+    },
+    {
+      "path": "package.json",
+      "min_bytes": 300,
+      "must_contain": ["@tauri-apps/api", "react", "zod", "zustand"]
+    }
+  ]
+}
