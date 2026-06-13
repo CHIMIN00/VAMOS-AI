@@ -2,9 +2,10 @@
 
 PHASE4-DEC-001: LangGraph는 오케스트레이션 전용 예외(StateGraph 정의·노드 간 전이 한정) —
 Gate/Decision 판정 우회 금지, StateGraph 중첩 금지, START/END 상수 사용.
-노드: intake(I-1) → plan(I-2+I-5) → execute(LLM) → verify(SelfCheckGate 스텁, M-14)
-→ deliver(ResponseEnvelope 5필드). 토폴로지는 정본 직선 보존 — Gate deny 시 조기 종료는
-execute/verify pass-through로 구현(LLM 미호출, deliver에서 거부 응답).
+노드: intake(I-1) → plan(I-2+I-5+I-15 EvidenceGate) → execute(LLM+I-9) → verify(I-6 Self-check,
+M-14) → deliver(I-11 Output Composer → ResponseEnvelope 5필드). V1-Phase 1(P6-1b): verify/
+EvidenceGate/answer 스텁이 I-6/I-15/I-11 로 활성화(토폴로지·5-Gate·9-State 무변경). 토폴로지는
+정본 직선 보존 — Gate deny 시 조기 종료는 execute/verify pass-through로 구현(LLM 미호출).
 상태: S0_RECEIVED~S8_DONE (D2.0-02 §2.2 LOCK, 9-State).
 A21 배선: L1=config LOCK frozen(config_loader) / L2=5-Gate(I-5) / L3=NEVER_AUTO frozenset
 (safety.never_auto — plan 노드에서 게이트와 독립 판정, DEC-008).
@@ -23,6 +24,7 @@ from vamos_core.orange_core.i2_context_builder import ContextBuilder
 from vamos_core.orange_core.i5_decision_engine import DecisionEngine
 from vamos_core.orange_core.i6_self_check import SelfCheckEngine
 from vamos_core.orange_core.i9_cost_manager import CostManager, count_tokens
+from vamos_core.orange_core.i11_output_composer import OutputComposer
 from vamos_core.orange_core.i20_failure_manager import FailureManager
 from vamos_core.safety.never_auto import detect_never_auto
 from vamos_core.schemas.contracts import (
@@ -31,13 +33,6 @@ from vamos_core.schemas.contracts import (
     IntentFrame,
     ResponseEnvelope,
 )
-
-#: DEC-010 행동 분기 사용자 문구 (PHASE3-DEC-010 표)
-_LEVEL_MESSAGES = {
-    "MEDIUM": "⚠ 확신도 보통",
-    "LOW": "⚠ 불확실한 답변입니다. 직접 확인을 권장합니다",
-    "REFUSE": "판단이 어렵습니다. 더 많은 정보가 필요합니다",
-}
 
 
 class VamosState(TypedDict, total=False):
@@ -74,6 +69,7 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
     builder = ContextBuilder()
     engine = DecisionEngine()
     self_checker = SelfCheckEngine()
+    composer = OutputComposer()
     cost = CostManager()
     failures = FailureManager()
     injected_llm = llm
@@ -192,21 +188,14 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
         decision = state["decision"]
         assert decision is not None  # noqa: S101
         level = decision.confidence_level
-        if state.get("llm_response") and level != "REFUSE":
-            prefix = _LEVEL_MESSAGES.get(level)
-            summary = f"{prefix}\n{state['llm_response']}" if prefix else state["llm_response"]
-        elif decision.conclusion == "HOLD":
-            summary = "승인 대기(HOLD) — P2 작업은 명시적 승인이 필요합니다."
-        else:
-            summary = _LEVEL_MESSAGES["REFUSE"] if level == "REFUSE" else (
-                "요청이 거부되었습니다."
-            )
+        # I-11 Output Composer — answer 3필드 합성 (DEC-010 분기 문구 단일 출처)
+        answer = composer.compose(decision, state.get("llm_response"),
+                                  state.get("self_check"), trace_id=trace_id)
         pack = state.get("evidence_pack")  # I-15 산출 (decision.gates 경유)
         assess = _evidence_assess(decision)
         envelope = ResponseEnvelope.model_validate(  # 경계 검증 의무 — 5필드 LOCK
             {
-                "answer": {"summary": summary, "details": state.get("llm_response") or "",
-                           "next_actions": []},
+                "answer": answer,
                 "evidence": {  # I-15 Evidence & QoD 산출 (decision.gates 경유, 빈 팩=0.0)
                     "coverage": assess.get("coverage", 0.0),
                     "items": pack.items if pack is not None else [],
