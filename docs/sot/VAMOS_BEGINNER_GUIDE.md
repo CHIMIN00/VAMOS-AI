@@ -665,6 +665,19 @@ ORANGE CORE가 사용하는 주요 데이터 구조 3가지:
 | Memory(기억) | Store(저장) | MEMORY | S7 |
 | Reflection(성찰) | Verify(검증) | SELF-CHECK→DONE | S6→S8 |
 
+## 4.3 B-Series ↔ L-Series 메모리 매핑표 (CC-009 — LOCK 변경 불가)
+
+메모리 **B-시리즈**(기억 유형)와 저장 **L-시리즈**(계층)는 번호가 1:1 순서로 대응하지 **않고 비직관적으로 교차**합니다. 혼동을 피하기 위한 정본 매핑(READINESS §6.10):
+
+| B-Series (메모리 유형) | L-Series (저장 계층) |
+|----------------------|--------------------|
+| B-1 Episodic(일화) | L1 |
+| B-2 Procedural(절차) | L3 |
+| B-3 Semantic(의미) | L2 |
+| B-4 Working(작업) | L0 |
+
+> ⚠️ 이 교차 매핑은 **LOCK(변경 불가)**입니다 — B 번호 ≠ L 번호 순서. (예: B-2 절차기억 → L3, B-4 작업기억 → L0)
+
 ---
 
 # 5장. BLUE NODES 상세 — 분야별 전문가

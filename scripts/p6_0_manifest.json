@@ -1,0 +1,60 @@
+{
+  "_comment": "P6-0 (Phase 6 V1 진입 게이트) 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. DEC-014 ADR·회고·SOT 정합 5건·SKELETON 정정·갱신문서. 무인자 실행 금지. 신규 코드 0(점검·결정·SOT 정합만).",
+  "artifacts": [
+    {
+      "path": "VAMOS Engineering/decisions/PHASE4-DEC-014_신규_테스트도구_CI_job_도입_방침.md",
+      "min_bytes": 2000,
+      "must_contain": ["PHASE4-DEC-014", "뮤테이션", "프로퍼티 기반", "DEC-012", "부착 Phase"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/phase6_p6-0_retro.md",
+      "min_bytes": 1500,
+      "must_contain": ["회고", "PASS-WITH-CONDITIONS", "SourceQoD", "wf_a202edf4-b5c"]
+    },
+    {
+      "path": "VAMOS Engineering/PROGRESS.md",
+      "min_bytes": 6000,
+      "must_contain": ["P6-0 결과", "PASS-WITH-CONDITIONS", "깨진 참조 0", "PHASE4-DEC-014", "P6-1 입력"]
+    },
+    {
+      "path": "VAMOS Engineering/STRATEGY_11_ASSET_INVENTORY.md",
+      "min_bytes": 6000,
+      "must_contain": ["2.17 Phase 6 P6-0", "PHASE4-DEC-014", "B↔L 매핑표", "wf_a202edf4-b5c"]
+    },
+    {
+      "path": "VAMOS_최종_로드맵.md",
+      "min_bytes": 10000,
+      "must_contain": ["P6-0 진입 게이트 ✅ PASS-WITH-CONDITIONS", "6-0 ✅", "P6-1"]
+    },
+    {
+      "path": "VAMOS Engineering/SESSION_PROMPT_SKELETON.md",
+      "min_bytes": 5000,
+      "must_contain": ["PHASE4-DEC-014", "DEC-012", "stale"]
+    },
+    {
+      "path": "docs/sot/VAMOS_MASTER_SPECIFICATION.md",
+      "min_bytes": 10000,
+      "must_contain": ["SourceQoD(데이터·RAG 소스 품질)", "PLAN-3.0 5요소", "GATE-07 §a C-005"]
+    },
+    {
+      "path": "docs/sot/D2.0-06_06. VAMOS_DESIGN_2.0_STORAGE_MEMORY.md",
+      "min_bytes": 10000,
+      "must_contain": ["Matryoshka 경량 옵션", "GATE-07 §a C-007", "결정 정본"]
+    },
+    {
+      "path": "docs/sot/VAMOS_STEP7_F-I_상세명세서.md",
+      "min_bytes": 5000,
+      "must_contain": ["최소 운영 목표", "₩40,000", "READINESS §8 #25"]
+    },
+    {
+      "path": "docs/sot/STEP7_STEP6통합_마스터인덱스.md",
+      "min_bytes": 2000,
+      "must_contain": ["CC-011 / GATE-07 §a R-8", "범위 묶음(range bundle) 전개"]
+    },
+    {
+      "path": "docs/sot/VAMOS_BEGINNER_GUIDE.md",
+      "min_bytes": 10000,
+      "must_contain": ["B-Series ↔ L-Series", "CC-009", "B-2 Procedural(절차) | L3"]
+    }
+  ]
+}

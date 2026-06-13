@@ -41,7 +41,7 @@
 | P4-2 (로드맵 4-1/4-3/4-6) | **I-1** Rust/TS 하네스(4-3 셸 직후 — clippy/eslint/vitest 로컬)·**I-6** 골든/스냅샷(IPC 페이로드·생성 스키마, 4-2)·**I-8** 런타임 계약(4-1 — 4-1분은 잠긴 mypy strict로 충족, 신규 IPC 런타임검증은 5-4); VI-2 인간(IPC 계약 JSON-RPC 13) | I-1 CI job·I-6 신규 테스트 = `PHASE4-DEC-012+` ADR 선행 |
 | P4-3 (Phase 4 Gate) | 신규 코드 0 — **게이트=H3 풀적용**(ultracode+교차모델+VI-3) | — |
 | Phase 5 (V0 검증/GO) | **I-6** 골든/스냅샷(5-4)·**I-7** IPC/MCP 퍼징(5-7a)·**I-8** 런타임 계약(5-4); VI-2 인간(IPC 계약); 게이트 5-8=H3 풀 | I-6 신규 테스트 = ADR 선행 |
-| **Phase 6 (V1)** | **I-1** 완성(6-5 clippy/eslint/vitest/Playwright→CI)·**I-2** 뮤테이션·**I-3** 커버리지 래칫·**I-4** 프로퍼티·**I-5** 메타모픽(RAG/에이전트)·**I-7** 퍼징(6-8)·**I-9** V0→V1 회귀코퍼스; VI-2 인간(5-Gate·Permission Matrix); 게이트 6-9=H3 풀 | 신규 테스트도구(I-2/4)·CI job(I-1/3) = `PHASE4-DEC-012+` ADR 선행 |
+| **Phase 6 (V1)** | **I-1** 완성(6-5 clippy/eslint/vitest/Playwright→CI)·**I-2** 뮤테이션·**I-3** 커버리지 래칫·**I-4** 프로퍼티·**I-5** 메타모픽(RAG/에이전트)·**I-7** 퍼징(6-8)·**I-9** V0→V1 회귀코퍼스; VI-2 인간(5-Gate·Permission Matrix); 게이트 6-9=H3 풀 | 신규 테스트도구(I-2/4)·CI job(I-1/3) = **`PHASE4-DEC-014`** ADR 선행(P6-0 신설 2026-06-13 — 012는 P4-3 CI-mypy·013은 jsonrpcserver에 소비됨; 旧 "DEC-012+" 표기 stale) |
 | Phase 7 (V2) | **I-5** 메타모픽(마이그레이션/인프라)·I-1 확장; VI-2 인간(마이그레이션 스크립트); 게이트 7-4=H3 풀 | 신규 CI job = ADR |
 | Phase 8 (V3) | **I-5** 메타모픽(self-evo/A2A); VI-2 인간(Federated/A2A); 게이트 8-4=H3 풀 | 신규 CI job = ADR |
 - 원칙: §C는 "능력 한계"가 아니라 *순서/성숙도* 보류 — 타깃 코드가 생기는 phase에서 그 코드와 *동시*(harness-first/concurrent)에 적용. 코드보다 그물이 늦는 구간 0.
@@ -101,7 +101,7 @@
    + trace_matrix.map.json 매핑 추가 → trace_matrix.py --root . 갭0·허위0 + check_lockfiles.py --root . drift0
 ■ STEP(검증·적대): [게이트/고위험이면] ultracode 워크플로 — 독립 적대 리뷰어(II-1) + II-2 N회 앙상블·심판 + II-4 역할분리 + III-3 독립검증 + VI-3 완전성비평가 (게이트는 II-6 교차모델 = GPT/Gemini 우선 → 불가 시 인간 VI-2/VI-1, **Opus 페르소나 금지**) → 신규발견 0까지 loop-until-dry → 수렴 선언
 ■ 모드: 표준=effort high/max+하네스+상시리뷰(II-3) / 고위험·게이트=ultracode max (PHASE4-DEC-011 §E). VI-1: 검증 3회 실패→Fable/사람 라우팅(무한재시도 금지). V-1: 생성 모델id+temp 고정·런 메타.
-■ §C: 본 Phase 타깃 코드에 해당하는 §C 항목 동시 적용(H4 표; 신규 도구/CI job은 PHASE4-DEC-012 ADR 선행). VI-2: 고폭발반경 모듈(IPC·5-Gate·Permission Matrix·마이그레이션·A2A)은 인간 체크포인트.
+■ §C: 본 Phase 타깃 코드에 해당하는 §C 항목 동시 적용(H4 표; 신규 도구/CI job은 PHASE4-DEC-014 ADR 선행 — 旧 "DEC-012" 표기 stale, 012=CI-mypy/013=jsonrpcserver 소비). VI-2: 고폭발반경 모듈(IPC·5-Gate·Permission Matrix·마이그레이션·A2A)은 인간 체크포인트.
 ```
 
 > ※ `ROADMAP_SESSION_EXECUTION_PROMPTS.md` §0에 본 골격 "전 Phase 프롬프트 필수 H1~H9" 링크 **완료**(커밋 `5c9d090`·H8/H9 반영 `194a4e3`+후속).

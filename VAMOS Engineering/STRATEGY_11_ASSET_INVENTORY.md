@@ -1,6 +1,6 @@
 # VAMOS 프로젝트 자산 인벤토리 (Asset Inventory)
 
-> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-13 (Phase 4 완료 — §2.15 Phase 4 생성 자산 등재; §2.13 Phase 2·§2.14 Phase 3 직계)
+> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-13 (P6-0 Phase 6 진입 게이트 — §2.17 P6-0 생성 자산 등재; §2.15 Phase 4·§2.16 Phase 5 직계)
 > **목적**: D:\VAMOS 내 모든 폴더/파일의 역할, 사용 시점, 매트릭스 셀 매핑, 중복/미사용 식별
 > **활용**: Phase 0-0에서 작성 → 매트릭스 갱신, CLAUDE.md 보강, Obsidian 생성의 입력 자료
 > **갱신 규칙**: 파일/폴더 추가·삭제 시 본 문서도 갱신
@@ -489,6 +489,19 @@ D:\VAMOS\
 | 8 | git tag **v0-release** | git | 5-8 완료 | V0 릴리스 기준점 — Phase 6(V1) 회귀 비교 |
 
 > ※ ADR 실존 목록 갱신 = PHASE4-DEC-001~010·012·013 + **PHASE5-DEC-001**(011 SOP 포함). 게이트 = wf_0229a151-bb3(9 에이전트, II-6 교차모델 미가용→인간 사인오프). Eval 골든셋 162 = §2.13 Phase 2 자산(v2, D14) 소비처.
+
+## 2.17 Phase 6 P6-0 (V1 진입 게이트) 생성 자산 (2026-06-13 등재 — doc_strategy §2 갱신 규칙 · §2.16 Phase 5 직계)
+
+| # | 자산 | 위치 | P6-0 작업 | 사용처 |
+|---|------|------|----------|--------|
+| 1 | **PHASE4-DEC-014** (신규 테스트도구·CI job 도입 계획 ADR — I-1 CI배선/I-2 뮤테이션/I-3 래칫/I-4 프로퍼티 부착 Phase·LOCK 절차·旧 "DEC-012+" stale 정정) | `VAMOS Engineering\decisions\` | §C/DEC-014 | 6-2/6-3/6-4/6-5/6-7 부착 Phase 도구 도입 근거 |
+| 2 | phase6_p6-0_retro.md (A11 회고 — 잘된3/안된3/바꿀1) | `VAMOS Engineering\decisions\` | 마감 | Phase 6 진입 교훈 |
+| 3 | scripts/p6_0_manifest.json (P6-0 산출물 매니페스트 — H2 R16 착시 게이트) | `scripts\` | H2/IV-3 | 산출물 실존 검증·P6-1 회귀 baseline |
+| 4 | **SOT 정합 정정 5건**(승인 후 집행, LOCK 값 무변경): MASTER_SPEC §8.8·§17.4(SourceQoD vs 출력QoD 용도구분 C-005/#18) · D2.0-06 S7D-027/014(embedding 기본 1024+Matryoshka256 C-007) · STEP7_F-I(₩40,000 LOCK vs $8 목표 #25) · STEP7_STEP6통합_마스터인덱스(CC-011 range-bundle 사유 R-8) · BEGINNER_GUIDE §4.3(B↔L 매핑표 #36/CC-009) | `docs\sot\` | GATE-06/07 §a | V1 착수 전 SOT 정합 (D3 DRIFT 0 계약 보존) |
+| 5 | SESSION_PROMPT_SKELETON H4/부록 정정 ("DEC-012+"→"PHASE4-DEC-014") | `VAMOS Engineering\` | DEC-014 동기 | 후속 Phase 프롬프트 골격 정합 |
+| 6 | PROGRESS "P6-0 결과" + 로드맵 P6-0 ✅(상단표·구조표·§8 6-0 행) | `VAMOS Engineering\`·리포 루트 | 마감/A12 | 진행 추적·다음 P6-1 입력 |
+
+> ※ ADR 실존 목록 갱신 = PHASE4-DEC-001~010·012·013·**014** + PHASE5-DEC-001(011 SOP 포함). 게이트 = wf_a202edf4-b5c(7 에이전트, III-3/VI-3/II-1/스코프가드 + loop-until-dry converged·교차모델 II-6은 6-9 전용). 판정 = PASS-WITH-CONDITIONS(신규 코드 0·F1 pytest 118 disk-refuted). ⚠️ 엔지니어링 `PHASE4-DEC-014` ≠ 설계 `DEC-014`(QoD 공식) — 접두어 구분.
 
 ---
 

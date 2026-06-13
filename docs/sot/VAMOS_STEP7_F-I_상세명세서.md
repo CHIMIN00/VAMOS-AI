@@ -393,6 +393,8 @@ Web App(Next.js PWA) → API Gateway(Nginx/Traefik + Rate Limit + Auth) → Appl
 | 모니터링 | $0 | $0(Free) | ~$20 |
 | **합계** | **<=$8/mo** | **<=$50/mo** | **<=$250/mo** |
 
+> ⚠️ **비용 기준 구분 (V1-013 / READINESS §8 #25)**: 위 V1 `<=$8/mo`는 **최소 운영 목표**(스마트 라우팅 기준 예상치)이다. **월간 비용 상한 정본(LOCK) = ₩40,000/월** (BASE-1.3 §5 ABSOLUTE LOCK · D7 정본). $8 목표와 ₩40,000 상한은 별개 기준이며 — 상한 초과 시 CostGate가 차단한다(₩40,000 ≈ $30).
+
 ### S7F-061 | CRITICAL | V1 | 스마트 모델 라우팅 비용 최적화
 
 - **전략**: 간단한 질문(40%) → 로컬 Ollama $0, 분류/태깅(15%) → GPT-4o-mini $0.15/1M, 요약/검색(20%) → Gemini Flash $0.10/1M, 코딩/분석(15%) → Claude Sonnet $3/1M, 깊은 추론(10%) → Claude Opus $15/1M. 월 1000 요청: 단일 모델 ~$15 → 스마트 라우팅 ~$5(67% 절감)

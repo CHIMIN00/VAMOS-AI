@@ -983,11 +983,13 @@ get_by_id(id: str) → VectorRecord | None
 
 ## 8.8 QoD (Quality of Data) 점수 체계 (DEC-010 LOCK)
 
+> ⚠️ **용도 구분 (V1-006 / GATE-07 §a C-005)**: 본 §8.8 가중치 공식은 **SourceQoD(데이터·RAG 소스 품질)** *한정*이다(freshness 포함 4요소 — D2.1-D6 SourceQoDSchema 정본). **출력 QoD(답변 품질) 정본 = PLAN-3.0 5요소** — 정확성 0.30 + 관련성 0.25 + 완전성 0.20 + 안전성 0.15 + 효율성 0.10 (BEGINNER_GUIDE 품질평가 절과 일치). 두 체계를 혼동하지 말 것. (설계 네임스페이스 `DEC-014` = 본 SourceQoD 공식 결정이며, 엔지니어링 ADR `PHASE4-DEC-014`와 별개.)
+
 **스케일**: 0.0~1.0
 
-**가중치 공식 (DEC-014)**:
+**가중치 공식 (SourceQoD — 소스 품질 한정, DEC-014)**:
 ```
-qod_score = relevance × 0.30 + accuracy × 0.25 + freshness × 0.25 + completeness × 0.20
+qod_score(source) = relevance × 0.30 + accuracy × 0.25 + freshness × 0.25 + completeness × 0.20
 ```
 
 **출처별 QoD 가중치**:
@@ -1539,7 +1541,7 @@ vamos/
 | 항목 | LOCK 내용 |
 |------|----------|
 | QoD 스케일 | 0.0~1.0 (DEC-010) |
-| QoD 가중치 | relevance 0.30 + accuracy 0.25 + freshness 0.25 + completeness 0.20 (DEC-014) |
+| SourceQoD 가중치 (데이터·소스 품질 한정) | relevance 0.30 + accuracy 0.25 + freshness 0.25 + completeness 0.20 (DEC-014) — 출력 QoD는 PLAN-3.0 5요소(정확성 0.30·관련성 0.25·완전성 0.20·안전성 0.15·효율성 0.10), §8.8 참조 (V1-006/C-005) |
 | Semantic Cache | cosine ≥ 0.95 |
 | Embedding | V1=BGE-M3(로컬)/text-embedding-3-small(클라우드) (DEC-005) |
 | Vector | V1=Chroma, V2+=Qdrant 우선 |

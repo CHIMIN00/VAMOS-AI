@@ -3,7 +3,21 @@
 > 최종 갱신: 2026-06-13 (**Phase 5 게이트(5-V) — V0 GO (CONDITIONAL→GO·PHASE5-DEC-001 스코프환원+인간 사인오프)·git tag v0-release**)
 
 ## 현재 Phase
-**Phase 5 ✅ 완료 — P5-1 V0 GO/NO-GO PASS (2026-06-13)** → 다음: **Phase 6 (P6-0 V1 준비 게이트)**
+**Phase 6 진입 게이트 ✅ P6-0 PASS-WITH-CONDITIONS (2026-06-13)** → 다음: **P6-1 (D1' 재검증 + B1' 환경확장 + CORE 활성화 + RAG)**
+
+## P6-0 결과 (2026-06-13) — Phase 6 (V1 구현) 진입 게이트: A7 + B.2 + GATE-06/07 + V1 차단이슈 + §C 보류대장 + PHASE5-DEC-001 6건 + A23 → P6-1 진입 판정 (신규 코드 0)
+- ☑ **판정: PASS-WITH-CONDITIONS → P6-1 진입 허용**. 착수 게이트 = max+uc(교차모델 II-6은 6-9 전용). 게이트 적대검증 **wf_a202edf4-b5c**(7 에이전트: III-3 재도출·VI-3 완전성·II-1 적대·스코프가드 + R2 verify/fresh + 심판, loop-until-dry **converged**) → CRITICAL 0·NO-GO 0.
+- ☑ **전제 8건 디스크 실측**: HEAD `b440b6f` 4-way 동기·클린·autocrlf=false / tag v0-release(annotated)→`0f6de04`·v1-release 부재 / **pytest 118 passed**(정본 명령 `poetry run`; jsonrpcserver-5.0.9 poetry.lock 핀 DEC-013 — bare `python -m pytest`는 수집 실패, 정본 아님) / ruff·mypy strict 26·vamos_lint 36 GREEN / §A 도구·V0 산출물(orange_core 7 i-module+pipeline.py)·ADR 001~013+PHASE5-DEC-001 실재·DEC-014 신설.
+- ☑ **A7 스킬/Hook 재점검**: settings.json 실측 = 스킬 ~66·Hook 18(3 이벤트) — 舊 로드맵 "11+6"은 stale. VAMOS 코드(backend/vamos_core) 참조 Hook/스킬 **0 → 깨진 참조 0**(Hook은 EA/CLAUDE.md/SOT 검증기, V0 코드구조 변경 무영향).
+- ☑ **PART1 B.2 12건**: API Key 6(Tavily·SerpAPI·E2B·Unstructured.io = V1 필수 4 / NewsAPI·Finnhub = V2 RT-BNP 옵션 2) + SW 4(Docker Desktop[실측 29.2.1]·Tauri Signing Key·Playwright·SQLCipher) + GitHub Secrets 2. .env.example 템플릿·tauri.conf.json 실재. **외부 가입/설치·키 실값은 사용자 액션(A9 비차단)·6-9 최종 검증**.
+- ☑ **GATE-06 5건 + GATE-07 §a 3건 (SOT 정합 — 승인 후 집행)**: 7 타깃 전부 docs/sot/. **집행 5건**: ① #18=C-005 MASTER_SPEC §8.8·§17.4 — SourceQoD(데이터 4요소) vs 출력QoD(PLAN 5요소) 용도구분 추가(LOCK 값 무변경) ② C-007 D2.0-06 S7D-027/014 — embedding "V1기본 256"→**1024 기본**+Matryoshka256 옵션(결정 정본·config LOCK 20 정합) ③ #25 STEP7_F-I — ₩40,000 LOCK 상한 vs $8 운영목표 구분 ④ #36/CC-009 BEGINNER §4.3 — B↔L(B-Series↔L-Series) 매핑표 신설(READINESS §6.10·LOCK) ⑤ R-8 마스터인덱스 — CC-011 range-bundle 사유 병기. **verify-only 2건**: #20(D2.1-D6 SourceQoDSchema — 리터럴 "5출력필드 반영"은 **C-005에 superseded**·잠긴 계약 DN-009 v3.0.0 보존 → 무편집) · #37(STEP7_보강 ~1,485 비고 L6 **기충족**).
+- ☑ **V1 차단이슈(READINESS §3.1/§3.3 — V1-001~016, 결번 011·012=LOW/INFO 해소)**: 기해소 다수(V1-015 Python진입점=V0 / V1-001/016 I-25 / V1-005 utcnow / V1-007 Front Mini / V1-009 LangChain / V1-010 4-Layer / V1-014 React18 = GATE-06 §A 기집행). 잔여 reconcile = 상기 SOT 5건으로 해소. ⚠️ **V1-004 enum staleness flag**: READINESS §3.3.1/§3.9 "approval_status 4값(+pending/expired)" vs MASTER_SPEC L434 실측 **2값(approved/denied) PL-09 FIX**(GATE-06 §B #16/#17 superseded) → 정본=2값, READINESS 서술 정정은 **P6-3 reconcile 이연**.
+- ☑ **DEC-011 §C 보류대장(I-1~I-9)**: Phase 6 부착 = I-1(6-5)·I-2(6-7)·I-3(6-2/6-7)·I-4(6-3/6-4)·I-5(6-4)·I-7(6-8)·I-9(6-1). **I-6 골든·I-8 런타임계약 = 5-4(Phase 5) 부착·종결 — Phase 6 신규 아님**. 신규 테스트도구(I-2/4)·CI job(I-1/3) = **PHASE4-DEC-014 신설**(旧 "DEC-012+" stale 정정·SKELETON H4/부록 동기) — 집행은 부착 Phase.
+- ☑ **PHASE5-DEC-001 V0 이연 6건 활성화 배정(누락 0)**: item 2(24규칙)→6-1/6-3 · 7(I-4 Multimodal 모듈, §C 프로퍼티-I-4와 별개)→6-3 · 11(NeMo+Guardrails-AI)→6-3/6-4 · 13(chroma·graph·backups dirs)→6-4/6-6 · 15(Chroma)→6-4 · 16(Alembic)→6-1 A23.
+- ☑ **A23 V0→V1 마이그레이션 규칙**: 스키마 Expand/Contract 3단계 · config 기존키 유지+새키 기본값 · 모듈 OFF→ON config 수준(코드 무변경) · V0 SQLite→V1 읽기 호환. 6-1서 Alembic 적용 계획.
+- ☑ **산출물 게이트(H2)**: `scripts/p6_0_manifest.json` → verify_artifacts PASS/0 + 회귀 P5-1 10/0·P4-2 34/0·P4-3 10/0 · trace 요구15/매핑21/미커버0/허위0 · check_lockfiles drift 0.
+- 🔴 **II-6 교차모델 미가용 지속**: 착수 게이트(6-0)는 정책상 max+uc(교차모델 제외, H8) — 누락 아님. **6-9 GO/NO-GO서 GPT/Gemini/Fable 복구 우선**.
+- 📌 **P6-1 입력**: D1' 재검증(V0 D3 + COND 106) · B1' vamos_lint Layer2(187 네이밍) · 6-3 CORE 활성화 분모 **32**(PART2 §1.1, ≠구집계 26) · I-9 회귀코퍼스 부착 · item 2/16 활성화(24규칙·Alembic). **V1 GO/NO-GO 분모 발산(§3.9 ~15 vs 6-9 22=V1 21+MCP 1) = P6-3 reconcile flag**.
 
 ## P5-1 결과 (2026-06-13) — Phase 5 (V0 검증 + GO/NO-GO): Eval + D3 정합 + 배포무결성 + 멱등성 + V0 16건 게이트 → V0 릴리스 판정
 - ☑ **판정: V0 GO (CONDITIONAL→GO)**. 게이트 본체 전건 PASS, §2.8 16건 중 6건(2·7·11·13·15·16)이 'V0-스코프상 정당 이연/등가'로 미기록 상태 → **ADR PHASE5-DEC-001** 스코프환원 기록 + **인간 사인오프(VI-2/VI-1 — II-6 교차모델 미가용 정규 폴백)** → GO. tag **v0-release**.
@@ -192,11 +206,11 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P6-0 — Phase 6 (V1 구현) 진입 게이트** (Phase 5 ✅ 완료·V0 GO, tag v0-release)
-→ 입력: **상단 P5-1 결과 "P6-0 입력" ①~⑤** (V0 GO 완료·tag v0-release / §C I-1~I-9 전건 재확인[신규 테스트도구·CI job = DEC-014+ ADR 선행] / V1 활성화: Chroma 벡터·RAG(I-2)·graph_db·Alembic·24규칙 잔여·I-4·NeMo/Guardrails-AI / II-6 교차모델 복구[6-9 게이트] / Eval QoD≥0.85 V1 RAG) + PHASE5-DEC-001(스코프환원 6건) + DEC-011 §B/§E(게이트=ultracode 교차모델, GPT/Gemini 우선·불가시 인간)
-→ ⚠️ 분모 라벨 정정: V0 GO/NO-GO 16건 디스크 검증원 = **READINESS §2.8**(상기 L196 'PART2 §7.1'은 부정확 — PART2 §7.1은 IntentFrame/I-모듈 상세). PHASE5-DEC-001 참조.
+**P6-1 — D1' 재검증 + B1' 환경확장 + R2a' CORE 활성화 + R2b' 에이전트+RAG** (P6-0 ✅ PASS-WITH-CONDITIONS, 2026-06-13)
+→ 입력: **상단 P6-0 결과 "P6-1 입력"** (D1' = V0 D3 + COND 106 / B1' = vamos_lint Layer2 187 네이밍 / 6-3 CORE 분모 **32**=PART2 §1.1 / I-9 회귀코퍼스 부착(6-1) / PHASE5-DEC-001 item 2 24규칙·item 16 Alembic 활성화) + A23 마이그레이션 규칙 + DEC-011 §B/§E(고위험 STEP=ultracode max+uc — H8: 6-3 CORE·6-4 RAG=max+uc) + **PHASE4-DEC-014**(신규 테스트도구·CI job 부착 Phase 집행)
+→ ⚠️ P6-3(6-9)로 이연된 reconcile: ① V1 GO/NO-GO 분모 발산(§3.9 ~15 vs 6-9 22=V1 21+MCP 1) ② V1-004 approval_status enum READINESS 서술(4값) → 정본 2값(PL-09 FIX·MASTER_SPEC L434) 정정 ③ II-6 교차모델 복구(6-9 게이트 전용)
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
-→ 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
+→ 잔여(비차단): P6-0 SOT 정합 5건 **✅ 집행 완료(2026-06-13 — C-005/#18·C-007·#25·#36·R-8)** / #20·#37 verify-only / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P7-0(이형 C-002·C-006 등) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)
