@@ -29,6 +29,17 @@ pytest-cov = ">=6.0.0,<7.0"             # PHASE_B3 정본
 ruff = ">=0.8.0,<1.0"                   # PHASE_B3 정본
 mypy = ">=1.0"
 
+# PHASE4-DEC-007: Eval 스택 — Phase 5(5-1) 착수 시 optional 그룹 등재 (dev 아님 — ragas 대형
+# 전이의존이 V0 CI 3-job을 오염하지 않도록 격리). 설치: `poetry install --with eval`.
+# 버전 = 등재 시점(2026-06-13) 실측 고정 (A4 LOCK). minicheck = pip 미가용 →
+# .claude/hooks/minicheck_verifier.py 폴백. promptfoo = Phase 2 스킬 자산 기존재(중복 등재 불요).
+[tool.poetry.group.eval]
+optional = true
+
+[tool.poetry.group.eval.dependencies]
+ragas = ">=0.4.3,<0.5"                  # 등재시점 최신 0.4.3 (A4 LOCK)
+deepeval = ">=4.0.6,<5.0"               # 등재시점 최신 4.0.6 (A4 LOCK)
+
 [tool.ruff]
 target-version = "py311"
 line-length = 100                        # PHASE_B6 정본 (120 아님)

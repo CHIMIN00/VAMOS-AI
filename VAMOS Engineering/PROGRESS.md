@@ -1,9 +1,19 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-13 (**Phase 4 게이트(4-V) PASS — NO-GO→수리(DEC-012)→재게이트 GO·git tag phase4-complete**)
+> 최종 갱신: 2026-06-13 (**Phase 5 게이트(5-V) — V0 GO (CONDITIONAL→GO·PHASE5-DEC-001 스코프환원+인간 사인오프)·git tag v0-release**)
 
 ## 현재 Phase
-**Phase 4 ✅ 완료 — P4-3 게이트(4-V) PASS (2026-06-13)** → 다음: **Phase 5 (P5-1 Eval + D3 정합 + V0 GO/NO-GO 16건)**
+**Phase 5 ✅ 완료 — P5-1 V0 GO/NO-GO PASS (2026-06-13)** → 다음: **Phase 6 (P6-0 V1 준비 게이트)**
+
+## P5-1 결과 (2026-06-13) — Phase 5 (V0 검증 + GO/NO-GO): Eval + D3 정합 + 배포무결성 + 멱등성 + V0 16건 게이트 → V0 릴리스 판정
+- ☑ **판정: V0 GO (CONDITIONAL→GO)**. 게이트 본체 전건 PASS, §2.8 16건 중 6건(2·7·11·13·15·16)이 'V0-스코프상 정당 이연/등가'로 미기록 상태 → **ADR PHASE5-DEC-001** 스코프환원 기록 + **인간 사인오프(VI-2/VI-1 — II-6 교차모델 미가용 정규 폴백)** → GO. tag **v0-release**.
+- ☑ **5-V 횡단 7항 전건 PASS** (게이트 wf_0229a151-bb3, 9 에이전트 III-3 독립재도출+II-1 적대 3+VI-3 완전성, loop-until-dry): ① **D3 DRIFT 0**(모듈 25↔8·스키마 25/25 왕복 serde·Registry 123/36/23=D2.1-D2 §5.1·LOCK 23/0) ② confidence_score 3곳(DecisionSchema+config [confidence] 0.85/0.60/0.30+score_to_level) ③ Defense 3계층 독립(L1 config frozen / L2 5-Gate / L3 never_auto RA_NEVER) ④ 배포 A24 3단계(vamos-app.exe+rpc 8테스트 / config LOCK 런타임 / E2E run_pipeline→oc.done) ⑤ 멱등성 A17(seed=42·temp=0 3회 동일 — per-prompt 워밍업으로 KV-cache 잔여 제어) ⑥ V0 16건(아래) ⑦ 자산갱신(STRATEGY_11 §2.16).
+- ☑ **V0 GO/NO-GO 16건(READINESS §2.8 — ≠ Must 11 ≠ PART2 완료 13)**: 디스크실측 SATISFIED 10(1·3·4·5·6·8·9·10·12·14) + SATISFIED_BY_DESIGN 2(11 Guardrails=P4-0⑩ 코드등가 / 16 SQLite programmatic·Alembic 이연) + DEFERRED_V1 1(15 Chroma=V1) + 부분/리터럴-이연 3(2 24규칙 안전핵심 부분코드화 / 7 I-4=V1:ON / 13 data 5종중 logs·sqlite 활성) — 6건 환원 ADR 기록.
+- ☑ **5-1/5-2 Eval (Should·DEC-007)**: [tool.poetry.group.eval] optional 등재(ragas 0.4.3·deepeval 4.0.6 A4 핀) → `poetry install --with eval` → import PASS. 골든셋 v2 162문항(mmlu 50/humaneval 20/mbpp 50/logickor 42) Ollama llama3.2:3b 실행 → mmlu 56%·humaneval 45%·mbpp 66%·logickor 95.2% · **QoD 5요소 가중합 0.8471**(Accuracy 0.30+Relevance 0.25+Completeness 0.20+Safety 0.15+Efficiency 0.10, CLAUDE.md:300 PLAN정본) → `benchmark_results/eval_results.json`(seed·반복 기록). QoD<0.85=V0 스켈레톤+mini모델 한계, V1 RAG+main모델 30일 목표(A9 비차단).
+- ☑ **산출물 게이트(H2)**: `scripts/p5_1_manifest.json` → verify_artifacts PASS/0 + P4-2 회귀 34/0·P4-3 10/0 · trace_matrix 요구15(5-3~5-6 +4)·매핑21·미커버0·허위0 · check_lockfiles drift 0(eval 그룹 등재 후 poetry.lock 정합).
+- ⚠️ **비차단 flag(정정 권고)**: ① PART2 L1621 'EventType 134'=stale(정본 D2.1-D2 §5.1=123·코드 123) ② 본 PROGRESS L186/로드맵 L443 'V0 16건=PART2 §7.1' 라벨 부정확 → 디스크 검증원=READINESS §2.8 ③ data/backups 디렉토리 미생성(backup_enabled=true) ④ 하네스 false-skip(check_config_lock=config 파일경로 인자 필수·vamos_lint=backend 경로).
+- 🔴 **II-6 교차모델 미가용**: GPT/Gemini/Fable 환경 미접근 → 게이트는 Opus 앙상블(II-1/II-2/III-3/VI-3/II-5)+인간 사인오프로 수행(H9-3 Opus 페르소나 대체 금지 준수). V1 게이트(6-9)서 복구 우선.
+- 📌 **P6-0 입력**: ① V0 GO 완료·tag v0-release ② §C I-1~I-9 전건 재확인(I-1 CI배선·I-6 골든·I-7 퍼징=DEC-014+ ADR 선행) ③ V1 활성화: Chroma 벡터/RAG(I-2)·graph_db·Alembic(스키마 진화)·24규칙 잔여·I-4·NeMo/Guardrails-AI ④ II-6 교차모델 복구 ⑤ Eval QoD≥0.85(V1 RAG).
 
 ## P4-3 결과 (2026-06-13) — Phase 4 게이트(4-V): Must 11 + A20/A21/A22/A25 + 게이트 적대검증(ultracode) → Phase 5 진입 판정
 - ☑ **판정: PASS — Phase 5 진입 허용 (수리 후)**. 서사: **NO-GO(CI 2/3 RED)** → 사용자(VI-1/VI-2) "수리 인가 + 재게이트" → A1 수리(ADR **PHASE4-DEC-012**) → **재게이트 converged GO**. 신규 코드 0 원칙은 게이트 자체에 적용되었고, 발견된 결함 수리는 A1 경로(사용자 인가)로 집행.
@@ -182,8 +192,9 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P5-1 — Phase 5 (V0 검증 + GO/NO-GO): Eval 파이프라인 + D3 정합 + V0 GO/NO-GO 16건)** (Phase 4 ✅ 완료, tag phase4-complete)
-→ 입력: **상단 P4-3 결과 "P5-1 입력" ①~⑥** (V0 GO/NO-GO 16건=PART2 §7.1 릴리스 게이트 분모 / Eval 스택 poetry `eval` optional / D3 정합 / 5-7a 배포무결성 기실측 / 잔여 V1 hardening 비차단[tests strict 88·UI vitest·Rust/Node CI job] / 백업) + PHASE4-DEC-012(CI mypy 소스전환·VL-004 면제) + DEC-011 §B/§E(게이트=ultracode 교차모델, GPT/Gemini 우선·불가시 인간)
+**P6-0 — Phase 6 (V1 구현) 진입 게이트** (Phase 5 ✅ 완료·V0 GO, tag v0-release)
+→ 입력: **상단 P5-1 결과 "P6-0 입력" ①~⑤** (V0 GO 완료·tag v0-release / §C I-1~I-9 전건 재확인[신규 테스트도구·CI job = DEC-014+ ADR 선행] / V1 활성화: Chroma 벡터·RAG(I-2)·graph_db·Alembic·24규칙 잔여·I-4·NeMo/Guardrails-AI / II-6 교차모델 복구[6-9 게이트] / Eval QoD≥0.85 V1 RAG) + PHASE5-DEC-001(스코프환원 6건) + DEC-011 §B/§E(게이트=ultracode 교차모델, GPT/Gemini 우선·불가시 인간)
+→ ⚠️ 분모 라벨 정정: V0 GO/NO-GO 16건 디스크 검증원 = **READINESS §2.8**(상기 L196 'PART2 §7.1'은 부정확 — PART2 §7.1은 IntentFrame/I-모듈 상세). PHASE5-DEC-001 참조.
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
 → 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 

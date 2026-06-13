@@ -1,0 +1,55 @@
+{
+  "_comment": "P5-1 (Phase 5 V0 검증 + GO/NO-GO) 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. Eval·D3 정합·게이트 판정·회고·갱신문서·.vamosrules 템플릿. 무인자 실행 금지.",
+  "artifacts": [
+    {
+      "path": "benchmark_results/eval_results.json",
+      "min_bytes": 400,
+      "must_contain": ["qod_score", "idempotency", "qod_factors", "162"]
+    },
+    {
+      "path": "benchmark_results/alignment_report.json",
+      "min_bytes": 1500,
+      "must_contain": ["drift_total", "5-5_registry", "confidence_score_a25_three_locations", "123"]
+    },
+    {
+      "path": "benchmark_results/v0_go_nogo_gate_report.json",
+      "min_bytes": 2000,
+      "must_contain": ["CONDITIONAL-GO", "d3_drift", "idempotency_a17_identical", "deploy_a24"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/PHASE5-DEC-001_V0-GO-NOGO_스코프환원_16건.md",
+      "min_bytes": 2000,
+      "must_contain": ["스코프 환원", "v0-release", "D2.0-01", "P4-0 결정⑩"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/phase5_retro.md",
+      "min_bytes": 1200,
+      "must_contain": ["회고", "V0 GO", "멱등성", "Phase 6 입력"]
+    },
+    {
+      "path": ".vamosrules.json",
+      "min_bytes": 800,
+      "must_contain": ["non_goals", "cost_ceiling", "never_auto_actions", "approval_structure"]
+    },
+    {
+      "path": "scripts/run_v0_eval.py",
+      "min_bytes": 3000,
+      "must_contain": ["QOD_WEIGHTS", "run_idempotency", "seed", "162"]
+    },
+    {
+      "path": "VAMOS Engineering/PROGRESS.md",
+      "min_bytes": 5000,
+      "must_contain": ["P5-1 결과", "V0 GO (CONDITIONAL→GO)", "D3 DRIFT 0", "v0-release"]
+    },
+    {
+      "path": "VAMOS Engineering/STRATEGY_11_ASSET_INVENTORY.md",
+      "min_bytes": 5000,
+      "must_contain": ["2.16 Phase 5", "eval_results.json", "PHASE5-DEC-001"]
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "min_bytes": 800,
+      "must_contain": ["tool.poetry.group.eval", "ragas", "deepeval", "optional = true"]
+    }
+  ]
+}

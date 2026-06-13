@@ -55,6 +55,26 @@
       "id": "4-6-blue-node-scaffold",
       "source": "로드맵 4-6 / PHASE_B2 §5.3 (P4-2 디렉토리 스캐폴딩)",
       "tests": ["backend/tests/test_blue_nodes_scaffold.py"]
+    },
+    {
+      "id": "5-3-D3-module-catalog",
+      "source": "로드맵 5-3 / D2.0-01 §5.6 카탈로그 25 ↔ V0 코드 8 (P5-1 D3)",
+      "tests": ["backend/tests/test_pipeline.py", "backend/tests/test_i1.py"]
+    },
+    {
+      "id": "5-4-D3-schema-field",
+      "source": "로드맵 5-4 / D2.1 vs Pydantic 25 + confidence_score 3곳 (P5-1 D3)",
+      "tests": ["scripts/validate_schema_registry.py", "scripts/roundtrip_test.py", "backend/tests/test_schemas.py"]
+    },
+    {
+      "id": "5-5-D3-registry",
+      "source": "로드맵 5-5 / D2.1-D2 §5.1~5.3 EventType 123/Failure 36/Fallback 23 (P5-1 D3)",
+      "tests": ["scripts/gen_registries_py.py", "backend/tests/test_schemas.py"]
+    },
+    {
+      "id": "5-6-D3-lock",
+      "source": "로드맵 5-6 / config.v1.toml LOCK 23 + confidence 임계 0.85/0.60/0.30 (P5-1 D3)",
+      "tests": ["scripts/check_config_lock.py", "backend/tests/test_config.py"]
     }
   ]
 }

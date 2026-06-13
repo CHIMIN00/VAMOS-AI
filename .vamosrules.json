@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "schema": ".vamosrules v1 (BASE-1.3 §6.4 구조화 형식 요건)",
+    "precedence": "BASE-1.3 텍스트 문서 우선 — 충돌 시 BASE 문서가 정본 (§6.4)",
+    "auto_load": "ORANGE CORE 초기화 시 자동 로딩 (§6.4)",
+    "source": "BASE-1.3 §2 Non-goal / config.v1.toml LOCK / safety/never_auto.py RA_NEVER",
+    "version": "V0 (2026-06-13, P5-1 item 12 — READINESS §2.8)"
+  },
+  "non_goals": [
+    {"id": "2.1", "rule": "실거래·주문·계좌·API 연동", "action": "deny"},
+    {"id": "2.2", "rule": "불법 행위·해킹·권한 상승", "action": "deny"},
+    {"id": "2.3", "rule": "의료·법률 단정적 판단 또는 대리 결정 제공", "action": "deny"},
+    {"id": "2.4", "rule": "민감 개인정보 장기 저장", "action": "deny"},
+    {"id": "2.5", "rule": "저작권·약관 위반", "action": "deny"},
+    {"id": "2.6", "rule": "P2 도메인 자동 생성 금지", "action": "deny"},
+    {"id": "2.7", "rule": "위험 기능 자동 실행 금지", "action": "deny"}
+  ],
+  "cost_ceiling": {
+    "monthly_limit_krw": 40000,
+    "daily_limit_krw": 1300,
+    "warn_threshold_pct": 80,
+    "block_threshold_pct": 100,
+    "currency": "KRW",
+    "lock": true
+  },
+  "self_evolution": {
+    "enabled": false,
+    "note": "V0 자율진화/Self-evo 비활성 (autonomy_level=L1, EXP/V3 기능). NEVER_AUTO 수리 액션 절대 자동 실행 금지.",
+    "never_auto_actions": [
+      "modify_safety_rules", "change_cost_ceiling", "alter_approval_flow",
+      "modify_non_goals", "change_audit_format", "alter_data_retention",
+      "modify_user_consent", "escalate_own_privilege", "disable_guardrails", "bypass_gate"
+    ]
+  },
+  "approval_structure": {
+    "default_autonomy": "L1",
+    "hitl_p2": "OFF",
+    "approval_timeout_s": 600,
+    "p2_timeout_s": 300,
+    "apply_procedure": "AI 제안 → 설명·로그 → 사용자 승인 → 반영 (BASE-1.3 §6.3)"
+  }
+}

@@ -1317,8 +1317,8 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | **4** | P4-0 | 진입 게이트(A7+결정 9건)+타입 동기화 | ✅ |
 | | P4-1 | ORANGE CORE + Registry + config | ✅ |
 | | P4-2 | IPC + BLUE NODE + 프론트엔드 | ✅ (2026-06-13 — IPC 13 + serde 왕복 4파일 + Tauri 셸 + 5-7a) |
-| | P4-3 | Phase 4 Gate | ⬜ |
-| **5** | P5-1 | Eval + D3 + GO/NO-GO | ⬜ |
+| | P4-3 | Phase 4 Gate | ✅ (2026-06-13, 4-V NO-GO→수리 DEC-012→재게이트 GO, tag phase4-complete) |
+| **5** | P5-1 | Eval + D3 + GO/NO-GO | ✅ (2026-06-13, V0 GO·DRIFT 0·5-V 전건·CONDITIONAL→GO PHASE5-DEC-001 스코프환원+인간 사인오프, tag v0-release) |
 | **6** | P6-0 | V1 준비 + 스킬 재점검 | ⬜ |
 | | P6-1 | D1' + B1' + V1 핵심 | ⬜ |
 | | P6-2 | V1 UI + 운영 + Eval | ⬜ |

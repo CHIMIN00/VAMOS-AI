@@ -475,6 +475,21 @@ D:\VAMOS\
 
 > ※ ADR 실존 목록 = PHASE4-DEC-001~010, 012, 013 (011 SOP 포함). **DEC-012는 P4-3 게이트가 집행**(CI mypy 소스전환+VL-004 테스트면제). 추가 신규 CI job(I-1 vitest/Playwright 등)은 별도 ADR(DEC-014+) 선행 — DEC-011 §D 불변.
 
+## 2.16 Phase 5 (V0 검증 + GO/NO-GO) 생성 자산 (2026-06-13 등재 — doc_strategy §2 갱신 규칙 · §2.15 Phase 4 직계)
+
+| # | 자산 | 위치 | Phase 5 작업 | 사용처 |
+|---|------|------|------------|--------|
+| 1 | [tool.poetry.group.eval] optional 그룹 (ragas 0.4.3·deepeval 4.0.6, A4 핀) + poetry.lock 갱신 | `backend\pyproject.toml`·`backend\poetry.lock` | 5-1 (DEC-007 집행) | V0/V1 Eval 실행 — dev/CI 격리(optional) |
+| 2 | scripts/run_v0_eval.py (골든셋 162 러너 + QoD 5요소 + A17 멱등성 모드, seed=42·temp=0·per-prompt 워밍업) | `scripts\` | 5-1/5-2/A17 | Eval 재현·멱등성 게이트 |
+| 3 | benchmark_results/eval_results.json (mmlu 56/he 45/mbpp 66/lk 95.2·QoD 0.8471·idempotency·seed·반복 기록) | `benchmark_results\` | 5-1/5-2 | V0 품질 기준선·V1 QoD 비교 |
+| 4 | benchmark_results/alignment_report.json (D3 5-3~5-6 정합·DRIFT 0 실측) + v0_go_nogo_gate_report.json (5-8 게이트 판정·16건·5-V) | `benchmark_results\` | 5-3~5-6/5-8 | D3 정합 증거·게이트 판정서 |
+| 5 | scripts/p5_1_manifest.json (P5-1 산출물 매니페스트) + trace_matrix.map.json 5-3~5-6 4행 추가(요구 15·매핑 21) | `scripts\` | H2/IV-3 | 산출물 실존·명세↔테스트 추적 |
+| 6 | .vamosrules.json (BASE-1.3 §6.4 — non_goals/cost/self_evo/approval) | 리포 루트 | 5-8 item 12 | ORANGE CORE 초기화 BASE 규칙 자동로딩 템플릿 |
+| 7 | PHASE5-DEC-001 (V0 GO/NO-GO 16건 스코프환원 6건) + phase5_retro.md | `VAMOS Engineering\decisions\` | 5-8/마감 | 릴리스 판정 근거(A6)·회고(A11) |
+| 8 | git tag **v0-release** | git | 5-8 완료 | V0 릴리스 기준점 — Phase 6(V1) 회귀 비교 |
+
+> ※ ADR 실존 목록 갱신 = PHASE4-DEC-001~010·012·013 + **PHASE5-DEC-001**(011 SOP 포함). 게이트 = wf_0229a151-bb3(9 에이전트, II-6 교차모델 미가용→인간 사인오프). Eval 골든셋 162 = §2.13 Phase 2 자산(v2, D14) 소비처.
+
 ---
 
 # 3. 용도별 분류
