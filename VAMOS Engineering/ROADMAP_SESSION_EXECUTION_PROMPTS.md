@@ -1092,11 +1092,12 @@ VAMOS 로드맵 Phase 5, 세션 P5-1 — V0 검증 + GO/NO-GO
 | 사전 | 스킬 재점검 | V0 구조 변경 영향 (A7) | **Must** | 점검 결과 |
 | 사전 | B.2 확인 | PART1 V1 추가 12건 | **Must** | 준비 리포트 |
 | 사전 | 마이그레이션 | Expand/Contract 확인 (A23) | **Must** | |
+| 사전 | **DEC-011 §C 재확인** | 보류대장 I-1~I-9 부착 Phase 집행 점검(테스트 깊이·CI 배선·뮤테이션·골든 등) | **Must** | 집행 점검표 |
 
 ````
 VAMOS 로드맵 Phase 6, 세션 P6-0 — V1 준비
 
-■ 대상: 스킬 재점검 + PART1 B.2 + 마이그레이션 규칙 (전부 Must)
+■ 대상: 스킬 재점검 + PART1 B.2 + 마이그레이션 규칙 + DEC-011 §C 보류대장 재확인 (전부 Must)
 
 ■ 참조:
   D:\VAMOS\docs\guides\VAMOS_구현가이드_PART1_진입전.md — Section B.2
@@ -1108,12 +1109,15 @@ VAMOS 로드맵 Phase 6, 세션 P6-0 — V1 준비
   1. 스킬 11개 + Hook 6개 재점검 (A7)
   2. PART1 B.2: API Key 6건 + SW 4건 + GitHub 2건 준비 확인
   3. 마이그레이션: Expand/Contract 규칙 + config 키 호환 + 데이터 호환
+  4. DEC-011 §C 보류대장(I-1~I-9) 전건 재확인 — V1 부착분(I-1 프론트 테스트/CI→6-5, I-2 뮤테이션→6-7,
+     I-3 커버리지래칫→6-2/6-7, I-4 프로퍼티→6-3/6-4, I-5 메타모픽→6-4, I-6 골든·I-8 런타임계약→5-4,
+     I-7 퍼징→6-8, I-9 회귀코퍼스→6-1) 집행 여부 점검. **신규 테스트도구·CI job 추가는 PHASE4-DEC-012 ADR 선행(§D)**
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
 ■ STEP 4: PROGRESS.md 갱신
 ■ STEP 5: 갱신 검증
 
-■ PASS 조건: 스킬 PASS + B.2 준비 + 마이그레이션 확인
+■ PASS 조건: 스킬 PASS + B.2 준비 + 마이그레이션 확인 + DEC-011 §C 보류대장 재확인 완료
 ````
 
 ---
@@ -1161,9 +1165,9 @@ VAMOS 로드맵 Phase 6, 세션 P6-1 — D1' + B1' + V1 핵심 구현
 
 | # | 작업 | 상세 | 우선순위 |
 |---|------|------|---------|
-| 6-5 | R2c' E2E UI | reasoning_trace + confidence | Should |
+| 6-5 | R2c' E2E UI | reasoning_trace + confidence + **DEC-011 §C I-1**(vitest/Playwright + Rust/TS CI 배선) | Should |
 | 6-6 | R3 운영 | 모니터링 + ₩40K/월 | Should |
-| 6-7 | B3' Eval | QoD≥0.70 + 벤치마크 4개 | **Must** |
+| 6-7 | B3' Eval | QoD≥0.70 + 벤치마크 4개 + **DEC-011 §C I-2**(뮤테이션 테스트, DEC-012 ADR 선행) | **Must** |
 
 ````
 VAMOS 로드맵 Phase 6, 세션 P6-2 — V1 UI + 운영 + Eval
@@ -1174,14 +1178,17 @@ VAMOS 로드맵 Phase 6, 세션 P6-2 — V1 UI + 운영 + Eval
 
 ■ STEP 2: 작업 실행
   1. R2c': 입력→응답 E2E + reasoning_trace(A22) + confidence(A25) UI 표시
+     + **DEC-011 §C I-1 집행**(P4-2 GUI 셸 기반): 프론트 런타임 테스트 vitest/@testing-library/react
+       (invoke 배선·A22/A25/A16 컴포넌트) + Playwright/tauri-driver E2E + Rust/TS CI job(ci.yml).
+       ⚠️ 신규 테스트도구·CI job 추가는 **PHASE4-DEC-012 ADR + LOCK 절차 선행**(잠긴 test_strategy §4·CI 3-job 변경, §D)
   2. R3: SQLite 모니터링 + 비용 추적(₩40K/월) + Alert 동작
-  3. B3': QoD≥0.70 + MMLU/HumanEval/MBPP/LogicKor
+  3. B3': QoD≥0.70 + MMLU/HumanEval/MBPP/LogicKor + **DEC-011 §C I-2**(뮤테이션 — DEC-012 ADR 선행)
 
 ■ STEP 3: 산출물 검증 (반복) → "산출물 최종 확정"
 ■ STEP 4: PROGRESS.md 갱신
 ■ STEP 5: 갱신 검증
 
-■ PASS 조건: QoD≥0.70 + 벤치마크 4개 PASS + 산출물 확정
+■ PASS 조건: QoD≥0.70 + 벤치마크 4개 PASS + 산출물 확정 + DEC-011 §C I-1(부착분) 집행 또는 DEC-012 ADR 선행 명기
 ````
 
 ---
