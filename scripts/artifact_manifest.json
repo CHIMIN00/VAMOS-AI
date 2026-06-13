@@ -1,0 +1,30 @@
+{
+  "_comment": "산출물 실존 검증 매니페스트 (R16 착시 방어 — §4 III-1/2/4). verify_artifacts.py가 소비. 동결 산출물은 sha256 핀 추가 권장; 활성 파일은 min_bytes+must_contain로 부분 착시 방어.",
+  "artifacts": [
+    {
+      "path": "scripts/verify_artifacts.py",
+      "min_bytes": 800,
+      "must_contain": ["R16", "def verify_entry", "def main"]
+    },
+    {
+      "path": "scripts/check_lockfiles.py",
+      "min_bytes": 800,
+      "must_contain": ["V-2", "def check_python", "tomllib"]
+    },
+    {
+      "path": "scripts/trace_matrix.py",
+      "min_bytes": 800,
+      "must_contain": ["IV-3", "def analyze", "uncovered"]
+    },
+    {
+      "path": "scripts/trace_matrix.map.json",
+      "min_bytes": 100,
+      "must_contain": ["requirements", "DEC-006"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/PHASE4-DEC-011_Opus-Fable_갭폐쇄_수단_및_SOP.md",
+      "min_bytes": 3000,
+      "must_contain": ["PHASE4-DEC-011", "보류 대장", "프로세스 SOP", "R16"]
+    }
+  ]
+}

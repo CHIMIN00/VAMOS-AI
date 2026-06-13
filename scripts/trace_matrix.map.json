@@ -1,0 +1,40 @@
+{
+  "_comment": "명세→테스트 추적 매핑 시드 (§4 IV-3). test_strategy.md §3 R1 10결정 연계 핵심 테스트의 기계적 매핑. 모집단(PART2 V0~V3 STEP 전수)은 각 Phase 진행과 함께 증분 — ADR PHASE4-DEC-011 §C.",
+  "requirements": [
+    {
+      "id": "DEC-006-A20-roundtrip",
+      "source": "PART2 §2 V0-STEP-3 / test_strategy §3 / 로드맵 4-V",
+      "tests": ["scripts/roundtrip_test.py", "backend/tests/test_schemas.py"]
+    },
+    {
+      "id": "DEC-001-5Gate-order",
+      "source": "test_strategy §3 / 로드맵 3-1",
+      "tests": ["backend/tests/test_i5_gate.py"]
+    },
+    {
+      "id": "DEC-004-LangGraph-pipeline",
+      "source": "로드맵 3-4 / 4-2 5-Phase Pipeline",
+      "tests": ["backend/tests/test_pipeline.py"]
+    },
+    {
+      "id": "DEC-005-Downshift-thresholds",
+      "source": "test_strategy §3 / config.v1.toml LOCK 80·100",
+      "tests": ["backend/tests/test_config.py"]
+    },
+    {
+      "id": "DEC-010-A25-confidence-REFUSE",
+      "source": "test_strategy §3 / 로드맵 3-7c",
+      "tests": ["backend/tests/test_i5_gate.py"]
+    },
+    {
+      "id": "I-3-L0-memory-CRUD",
+      "source": "로드맵 4-2 / V0-STEP-5 L0 메모리",
+      "tests": ["backend/tests/test_storage.py"]
+    },
+    {
+      "id": "I-1-intent-parse",
+      "source": "로드맵 4-2 ORANGE CORE I-1",
+      "tests": ["backend/tests/test_i1.py"]
+    }
+  ]
+}

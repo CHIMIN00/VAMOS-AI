@@ -5,6 +5,8 @@
 ## 현재 Phase
 **Phase 4 진행 중 — P4-1 ✅ 완료 (2026-06-12)** → 다음: **P4-2 (IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸 — 하단 P4-1 결과의 "P4-2 입력" 참조)**
 
+- 🔧 **2026-06-13 갭폐쇄**: PHASE4-DEC-011(Opus↔Fable 갭폐쇄 수단·SOP) + scripts 3종(verify_artifacts·check_lockfiles·trace_matrix) + 2시드(artifact_manifest·trace_matrix.map) — 미커밋분 → P4-2 시작 전 독립 커밋(verify 5/0·trace 갭0·lock drift 0 실측·pytest 108 무회귀)
+
 ## P4-1 결과 (2026-06-12) — ORANGE CORE 8파일 + Registry 연동 + config.v1.toml (B2a·R2a: 로드맵 4-2+4-4+4-5)
 - ☑ **판정: PASS — P4-2 진입 허용** (수렴 선언: 적대 R1 공격 6종 전건 증거 방어 → R2 신규 발견 0. Stage Gate 23항 전건 실측 — 보류 0, `_targets/p4_1_stage_gate_실측_2026-06-12.md`)
 - ☑ **실파일 8/8 (GATE-03 분모)**: `backend/vamos_core/orange_core/{i1_intent_detector, i2_context_builder, i5_decision_engine, i8_policy_engine, i9_cost_manager, i19_approval_manager, i20_failure_manager}.py` 7 + I-3 구현체 `storage/memory_store.py` 1. 분모 외 지원: `orange_core/pipeline.py`·`infra/{config_loader, logger}.py`·`safety/never_auto.py`. 전 모듈 async·경계 model_validate 의무·전이 LogEvent·전 코드 LF(git i/lf·w/lf)
