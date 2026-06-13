@@ -23,7 +23,8 @@
     "p6_1a_attributable_changes": [],
     "baseline_stale": true,
     "drift_attribution": "drift 전건 mtime ≤ Jun-12 (P6-1a 세션 이전, prior-session SOT2 진화 = Jun-12 Obsidian 마이그레이션 commit 54f3010[HEAD ancestor] + Jun-11 작업). docs/sot 2 Jun-13+ 변경 0 → P6-1a 귀속 0.",
-    "verdict": "P6-1a 회귀 0 — 본 세션 귀속 SOT 변경 0 (drift는 stale baseline 대비 prior-session 진화). Jun-4 integrity baseline refresh 권고(비차단 FLAG)."
+    "verdict": "P6-1a 회귀 0 — 본 세션 귀속 SOT 변경 0 (drift는 stale baseline 대비 prior-session 진화). Jun-4 integrity baseline refresh 권고(비차단 FLAG).",
+    "p6_1b_resolution": "RESOLVED (P6-1b STEP 0, 2026-06-14) — integrity baseline refresh: integrity_snapshot.json 재생성(2654→2658, Jun-4 정본=integrity_snapshot.jun4.json backup 보존). d1_prime_verify 재실행 drift=0/ok=2658/baseline_stale=False/regression=0 PASS."
   },
   "sot2_scan_staleness": {
     "sot2_conflict_scan_date": "2026-06-05",
@@ -31,7 +32,8 @@
     "corpus_last_change": "2026-06-12 (Obsidian 마이그레이션, 437 파일)",
     "stale": true,
     "active_conflict_0_status": "CONDITIONAL — D1(Jun-5) 스캔 기준 active CONFLICT 0이나 Jun-12 코퍼스 변경 후 재스캔 미실행 → 현 코퍼스 미검증 가정",
-    "owed": "SOT 2 conflict/cross-ref/validate 재스캔(sot_graph_builder 등) — **6-9 GO/NO-GO 전** 또는 P6-1b. P6-1a는 SOT 무수정이라 본 세션 신규 conflict 0(귀속 회귀 0)이나, 코퍼스 전체 conflict-free 단언은 재스캔 owed."
+    "owed": "SOT 2 conflict/cross-ref/validate 재스캔(sot_graph_builder 등) — **6-9 GO/NO-GO 전** 또는 P6-1b. P6-1a는 SOT 무수정이라 본 세션 신규 conflict 0(귀속 회귀 0)이나, 코퍼스 전체 conflict-free 단언은 재스캔 owed.",
+    "p6_1b_resolution": "RESOLVED (P6-1b STEP 0, 2026-06-14) — 현 코퍼스 재스캔: active CONFLICT 0(36 CONFLICT_LOG OPEN ledger 실측) · real_lock_mismatch 0(advisory 26 hit 전수 삼중분류 FP) · design_content_broken 0(canonical 1=2-2 nav-ref carry-forward, 범위 외). CONDITIONAL 해소. evidence=04. 구현단계/v13_results/phase0/p6_1b_step0_rescan_report.json"
   },
   "d3_alignment_v1_scope": {
     "baseline_report": "D3 설계↔코드 정합 (로드맵 5-3~5-6)",
@@ -257,5 +259,9 @@
     "Jun-4 integrity baseline stale (485 prior-session drift) → refresh 권고",
     "SOT 2 conflict/cross-ref/validate 스캔 stale (Jun-5, pre Jun-12 코퍼스 변경) → 현 코퍼스 active CONFLICT 0은 CONDITIONAL, 재스캔 owed (6-9 전/P6-1b)"
   ],
-  "verdict_note": "PASS = P6-1a 귀속 회귀 0 + D3 DRIFT 0 + COND 106 + 24규칙 매핑 + Alembic. conditions_non_blocking 2건은 prior-session/도구 신선도 FLAG (P6-1a 결함 아님)."
+  "verdict_note": "PASS = P6-1a 귀속 회귀 0 + D3 DRIFT 0 + COND 106 + 24규칙 매핑 + Alembic. conditions_non_blocking 2건은 prior-session/도구 신선도 FLAG (P6-1a 결함 아님).",
+  "conditions_non_blocking_status": {
+    "flag1_integrity_baseline": "RESOLVED (P6-1b STEP 0) — baseline 재생성 drift 0",
+    "flag2_sot2_rescan": "RESOLVED (P6-1b STEP 0) — 현 코퍼스 active CONFLICT 0 재확인"
+  }
 }
