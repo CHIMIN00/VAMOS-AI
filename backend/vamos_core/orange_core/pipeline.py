@@ -21,6 +21,7 @@ from vamos_core.infra.config_loader import get_config
 from vamos_core.infra.logger import log_event, new_trace_id
 from vamos_core.orange_core.i1_intent_detector import ChatModel, IntentDetector
 from vamos_core.orange_core.i2_context_builder import ContextBuilder
+from vamos_core.orange_core.i4_multimodal_interpreter import MultimodalInterpreter
 from vamos_core.orange_core.i5_decision_engine import DecisionEngine
 from vamos_core.orange_core.i6_self_check import SelfCheckEngine
 from vamos_core.orange_core.i9_cost_manager import CostManager, count_tokens
@@ -49,6 +50,7 @@ class VamosState(TypedDict, total=False):
     failure_codes: list[str]
     fallback_ids: list[str]
     self_check: dict[str, Any] | None  # I-6 산출 (verify 노드 → deliver 노드)
+    structured_output: dict[str, Any] | None  # I-4 산출 (execute 노드 구조화)
 
 
 def _stage(trace_id: str, stage: str, state_code: str) -> None:
@@ -68,6 +70,7 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
     detector = IntentDetector(llm=llm)
     builder = ContextBuilder()
     engine = DecisionEngine()
+    interpreter = MultimodalInterpreter()
     self_checker = SelfCheckEngine()
     composer = OutputComposer()
     cost = CostManager()
@@ -150,7 +153,14 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
             trace_id=trace_id,
             cost_krw=0.0,  # V0 로컬 Ollama = ₩0 (D10)
         )
-        return {"llm_response": text, "pipeline_state": "S5_OUTPUT_READY"}
+        # I-4 Multimodal Interpreter — raw_output → StructuredOutput (compliance 점검)
+        pack = state.get("evidence_pack")
+        structured = interpreter.structure_output(
+            text, decision.output_spec,
+            citations_ready=pack.citations_ready if pack is not None else False,
+            trace_id=trace_id)
+        return {"llm_response": text, "structured_output": structured.model_dump(),
+                "pipeline_state": "S5_OUTPUT_READY"}
 
     async def verify_node(state: VamosState) -> VamosState:
         """SelfCheckGate 위치 (M-14) — V1: I-6 Self-check Engine 활성화 (V0 스텁 대체).
