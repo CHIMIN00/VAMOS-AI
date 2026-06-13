@@ -85,6 +85,51 @@
       "id": "6-2-B1-vamos_lint-Layer2",
       "source": "로드맵 6-2 / STRATEGY_09 §8.2 (P6-1a — VL-006~008: 187 모듈 명명·15 교차용어·SOT 2 연동)",
       "tests": ["scripts/test_vamos_lint_layer2.py"]
+    },
+    {
+      "id": "6-3-I6-self-check-engine",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-6 + D2.0-02 §7.51~7.53 (P6-1b — verify 노드 활성화)",
+      "tests": ["backend/tests/test_i6_self_check.py"]
+    },
+    {
+      "id": "6-3-I15-evidence-qod",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-15 + D2.0-02 §7.90~7.92 (P6-1b — EvidenceGate 활성화)",
+      "tests": ["backend/tests/test_i15_evidence_qod.py"]
+    },
+    {
+      "id": "6-3-I11-output-composer",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-11 (P6-1b — D2.0-02 0:1 GAP 신규 최소)",
+      "tests": ["backend/tests/test_i11_output_composer.py"]
+    },
+    {
+      "id": "6-3-I10-tool-router",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-10 + D2.0-02 §7.63~7.68 (P6-1b — 라우팅 활성화)",
+      "tests": ["backend/tests/test_i10_tool_router.py"]
+    },
+    {
+      "id": "6-3-I4-multimodal-interpreter",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-4 + D2.0-02 §7.31~7.40 (P6-1b — 출력 구조화, 멀티모달 6-4)",
+      "tests": ["backend/tests/test_i4_multimodal_interpreter.py"]
+    },
+    {
+      "id": "6-3-I16-knowledge-search",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-16 (P6-1b — 검색 인터페이스+결정론 폴백, RAG 6-4)",
+      "tests": ["backend/tests/test_i16_knowledge_search.py"]
+    },
+    {
+      "id": "6-3-I14-summarizer-distiller",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-14 (P6-1b — D2.0-02 0:1 GAP 신규 최소)",
+      "tests": ["backend/tests/test_i14_summarizer.py"]
+    },
+    {
+      "id": "6-3-I13-output-renderer",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-13 (P6-1b — D2.0-02 0:1 GAP 신규 최소, 멀티모달 렌더 6-4)",
+      "tests": ["backend/tests/test_i13_output_renderer.py"]
+    },
+    {
+      "id": "6-3-I17-blue-node-manager",
+      "source": "로드맵 6-3 / D2.0-01 §5.6 I-17 + D2.0-03 BLUE_NODES (P6-1b — 레지스트리+요청봉투, 실행 6-4)",
+      "tests": ["backend/tests/test_i17_blue_node_manager.py"]
     }
   ]
 }

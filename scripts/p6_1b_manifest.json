@@ -1,0 +1,115 @@
+{
+  "_comment": "P6-1b (Phase 6 V1 [6-3 CORE 활성화 2분할 1/2] — I-Series 17 CORE 신규 9 활성화) 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. 무인자 실행 금지. 표준 구현(게이트 아님).",
+  "artifacts": [
+    {
+      "path": "backend/vamos_core/orange_core/i6_self_check.py",
+      "min_bytes": 3000,
+      "must_contain": ["I-6 Self-check Engine", "run_self_check", "risk_thresholds", "ui.main.selfcheck", "retry_allowed", "FB_DENY_WITH_REASON"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i15_evidence_qod.py",
+      "min_bytes": 3000,
+      "must_contain": ["I-15 Evidence & QoD Manager", "score_qod", "filter_by_qod", "QOD_L2_BAN", "QOD_HOLD", "ui.main.qod.updated"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i11_output_composer.py",
+      "min_bytes": 2500,
+      "must_contain": ["I-11 Output Composer", "def compose", "LEVEL_MESSAGES", "next_actions", "ui.cli.output.streamed"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i10_tool_router.py",
+      "min_bytes": 2500,
+      "must_contain": ["I-10 Tool Registry/Router", "def route", "ToolRegistryEntry", "TOOL_REGISTRY_SEED", "ui.node.selected", "direct_llm_v0"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i4_multimodal_interpreter.py",
+      "min_bytes": 3000,
+      "must_contain": ["I-4 Multimodal Interpreter", "structure_output", "interpret_input", "StructuredOutput", "oc.i4.output.structured", "compliance_report"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i16_knowledge_search.py",
+      "min_bytes": 2500,
+      "must_contain": ["I-16 Knowledge Search Engine", "def search", "OC_I2_RAG_NO_SOURCE", "FB_RAG_RETRY_EXPAND", "6-4"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i14_summarizer.py",
+      "min_bytes": 2500,
+      "must_contain": ["I-14 Summarizer & Memory Distiller", "def summarize", "def distill", "COMPACTION_TRIGGER", "ui.frontmini.summary.ready"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i13_output_renderer.py",
+      "min_bytes": 2000,
+      "must_contain": ["I-13 Multimodal Output Renderer", "def render", "SURFACES", "ui.main.artifact.created", "6-4"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i17_blue_node_manager.py",
+      "min_bytes": 2500,
+      "must_contain": ["I-17 Blue Node Manager", "build_request", "NodeRequestEnvelope", "NODE_REGISTRY_SEED", "ui.node.context.loaded", "FB_ROUTE_SAFE_NODE"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/pipeline.py",
+      "min_bytes": 9000,
+      "must_contain": ["SelfCheckEngine", "OutputComposer", "MultimodalInterpreter", "structured_output", "self_check", "_evidence_assess"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/i5_decision_engine.py",
+      "min_bytes": 8000,
+      "must_contain": ["EvidenceQoDManager", "ToolRegistryRouter", "evidence_assessment", "_evidence_gate", "self._router.route"]
+    },
+    {
+      "path": "backend/tests/test_i6_self_check.py",
+      "min_bytes": 2000,
+      "must_contain": ["test_pass_normal_accept", "test_safety_violation_fail_deny_fallback", "test_pipeline_self_check_activated"]
+    },
+    {
+      "path": "backend/tests/test_i15_evidence_qod.py",
+      "min_bytes": 2000,
+      "must_contain": ["test_evaluate_empty_pack_sufficient_no_regression", "test_evaluate_below_ban_not_l2_eligible", "QOD_L2_BAN"]
+    },
+    {
+      "path": "backend/tests/test_i11_output_composer.py",
+      "min_bytes": 1500,
+      "must_contain": ["test_compose_hold_p2_next_action", "test_compose_conclusion_immutable"]
+    },
+    {
+      "path": "backend/tests/test_i10_tool_router.py",
+      "min_bytes": 1500,
+      "must_contain": ["test_registry_loads_seed_as_contract", "test_i5_routing_uses_i10"]
+    },
+    {
+      "path": "backend/tests/test_i4_multimodal_interpreter.py",
+      "min_bytes": 1500,
+      "must_contain": ["test_t1_output_spec_code_enforced", "test_t2_missing_parts_exposed"]
+    },
+    {
+      "path": "backend/tests/test_i16_knowledge_search.py",
+      "min_bytes": 1200,
+      "must_contain": ["test_search_ranks_by_keyword_overlap", "test_search_no_match_empty_with_fallback"]
+    },
+    {
+      "path": "backend/tests/test_i14_summarizer.py",
+      "min_bytes": 1200,
+      "must_contain": ["test_distill_keeps_top_ratio", "test_compaction_needed_threshold"]
+    },
+    {
+      "path": "backend/tests/test_i13_output_renderer.py",
+      "min_bytes": 1200,
+      "must_contain": ["test_render_diagram_deferred_stub", "test_render_json_pretty_fenced"]
+    },
+    {
+      "path": "backend/tests/test_i17_blue_node_manager.py",
+      "min_bytes": 1200,
+      "must_contain": ["test_build_request_contract", "test_build_request_unknown_node_raises_with_fallback"]
+    },
+    {
+      "path": "scripts/p6_1b_step0_rescan.py",
+      "min_bytes": 5000,
+      "must_contain": ["P6-1b STEP 0", "scan_open_conflicts", "refresh_baseline", "active_conflict"]
+    },
+    {
+      "path": "04. 구현단계/v13_results/phase0/p6_1b_step0_rescan_report.json",
+      "min_bytes": 1500,
+      "must_contain": ["P6-1b STEP 0", "flag1_sot2_rescan", "flag2_integrity_baseline_refresh", "RESOLVED"]
+    }
+  ]
+}
