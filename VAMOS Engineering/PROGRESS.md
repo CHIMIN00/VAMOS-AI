@@ -1,11 +1,24 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**P4-1 완료 — ORANGE CORE 8파일 + config.v1.toml 14섹션/LOCK 23 + E2E·Ollama 실측 PASS**)
+> 최종 갱신: 2026-06-13 (**P4-2 완료 — IPC JSON-RPC 13 + A20 serde 왕복 4파일 + Tauri 셸 + Python 스폰(5-7a) + BLUE NODE 스캐폴딩 + React UI**)
 
 ## 현재 Phase
-**Phase 4 진행 중 — P4-1 ✅ 완료 (2026-06-12)** → 다음: **P4-2 (IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸 — 하단 P4-1 결과의 "P4-2 입력" 참조)**
+**Phase 4 진행 중 — P4-2 ✅ 완료 (2026-06-13)** → 다음: **P4-3 (Phase 4 Gate — Must 11 + V0 GO/NO-GO 16항 — 하단 P4-2 결과의 "P4-3 입력" 참조)**
 
 - 🔧 **2026-06-13 갭폐쇄**: PHASE4-DEC-011(Opus↔Fable 갭폐쇄 수단·SOP) + scripts 3종(verify_artifacts·check_lockfiles·trace_matrix) + 2시드(artifact_manifest·trace_matrix.map) — 미커밋분 → P4-2 시작 전 독립 커밋(verify 5/0·trace 갭0·lock drift 0 실측·pytest 108 무회귀)
+
+## P4-2 결과 (2026-06-13) — IPC JSON-RPC 13 + A20 serde 왕복 + Tauri 셸 + BLUE NODE + UI (B2c·R2c: 로드맵 4-1 serde·4-3·4-6·4-7 + V0-STEP-3)
+- ☑ **판정: PASS — P4-3 진입 허용** (수렴 선언: 독립 적대검증 ultracode 2라운드 — R1 5리뷰어 clean + 완전성비평가 실 findings 5건[major 2·minor 3]·nit 1 → 수정 4 + 잠금-순연 명기 1 → R2 fix-verify·critic 양자 clean·**신규 실 findings 0 = converged**). §E 고위험 Must(serde/IPC/spawn) ultracode 워크플로 적용.
+- ☑ **Must 전건 (V0 게이트 직결)**:
+  - **① A20 serde 활성화 (4-1 완성, DEC-005 §5)**: `generate_types.py` serde 슬롯 활성 → `src-tauri/src/models/generated.rs`(25 구조체·`#[serde(deny_unknown_fields)]`=extra='forbid'·`roundtrip_validate` 디스패처) + **왕복 4파일 PASS 25/25**(Python→JSON Schema→serde[Rust cargo test 컴파일]→TS[Node]→Python 동일성). deny 미지필드 거부 **25/25 negative**. contracts.py/registries.py **무변경**(git diff 0).
+  - **② V0-STEP-3 IPC (PHASE_B1 §5.2 / DEC-006)**: `backend/vamos_core/rpc/server.py` — jsonrpcserver 13 메서드 stub(파라미터 검증 -32602·미존재 -32601 자동) + ready 센티넬(stdout 첫 줄) + structlog→stderr(M-5) + 비즈니스 에러 -32000 `data.failure_code`=FailureCodeRegistry 등재값. `system.ping`(헬스 인프라, 13 분모 별개). test_rpc_server 8건.
+  - **③ Rust python_manager + Tauri 셸 (5-7a 서브셋, DEC-008)**: `bridge/python_manager.rs` 스폰(`python -m vamos_core.rpc.server`·env 경유·하드코딩 0)+stdin/stdout 파이프+stderr 별도스레드+ready 대기+health(ping/pong)+자동재시작(max=3)+타임아웃(30s) / `commands/` 5종(#[tauri::command] Result<T,String>) / `state.rs` AppState(브릿지 지연스폰+인메모리 config·LOCK 키 거부 A21 L1) / main·lib·build.rs·tauri.conf.json·capabilities·icon → **cargo build(Tauri) PASS** + **5-7a 스폰 통합 PASS**(spawn+ready+ping/pong+dispatch+자동재시작 / 재시작 budget 경계). ※ GUI 창 기동(cargo run)은 디스플레이 필요 → 컴파일+스폰통합으로 검증 대체(비차단).
+- ☑ **Should**: 4-3 React UI(5 커맨드 invoke 배선 + ConfidenceBadge[A25]/WhyButton[A22 reasoning_trace]/Disclaimer[A16], `pnpm build` tsc+vite PASS) / 4-6 BLUE NODE 디렉토리 스캐폴딩(dev/research/content __init__·구현 0·E-Series V1-Phase 3·seed 충돌없음) / 4-7 X2(보안 7항목 스캔 CRITICAL 0·테스트 보강·commitlint 준수 — `_targets/p4_2_x2_report_2026-06-13.md`).
+- ☑ **의존성·하네스**: Python `jsonrpcserver>=5.0,<6.0`(PHASE4-DEC-013·PART2 V0-STEP-3 L410·B3 미핀) / Rust Cargo(tauri 2·serde·serde_json·tokio·tauri-build) / Node package.json(react 18.3·@tauri-apps/api 2.2·zustand 5·vite 6·typescript 5.7·zod 3.24). **3-stack 락 정합 drift 0**. **pytest 108→118**(+10: rpc 8·blue_nodes 2) 무회귀 · ruff(backend) clean · 신규 backend mypy clean · cargo build/test 전건 PASS.
+- ☑ **산출물 게이트(§A)**: `scripts/p4_2_manifest.json`(34 산출물) → **verify_artifacts PASS 34/0** · `trace_matrix.map.json` V0-STEP-3 4행 추가 → 요구 11·매핑 12·미커버 0·**허위매핑 0** · Stage Gate 8항+V0-STEP-1 잔여+A20+5-7a 전건 실측(`_targets/p4_2_stage_gate_실측_2026-06-13.md`).
+- ☑ **신규 ADR PHASE4-DEC-013**: jsonrpcserver 채택+버전핀(§1.3.1 #3 — B3 미핀 공백 ADR 메움). PHASE4-DEC-012는 CI job 추가 게이트용으로 **예약(본 세션 미생성 — 로컬 하네스로 진행, §D 준수)**.
+- ⚠️ **이형/순연 기록(SOT·로드맵 무수정)**: ① 로드맵 L379 BLUE NODE 'Productivity'=오기(정본 content) → edits 명기·승인대기(`_targets/p4_2_roadmap_edits_pending.md`) ② 舊 세션표(§8) "IPC V0-STEP-4 / Pipeline V0-STEP-5 Must / BLUE NODE Must" 오류 → 추적표 교정 주석 집행(IPC=STEP-3·STEP4/5는 P4-1 완료·4-6=Should) ③ UI 런타임 테스트(vitest)=PHASE4-DEC-011 §C I-1 **잠금-순연**(4-3/6-5 ADR-게이트) — V0 게이트=tsc+vite(통과), 적대검증 인지·수용.
+- 📌 **P4-3 입력**: ① **Must 11 분모**(GATE-03 — 로드맵 4-2/5-3/6-3) + V0 GO/NO-GO 16항 현황 점검 ② serde 왕복·IPC 13·5-7a 전건 PASS(차단 0) ③ **PENDING/보류**: cargo run GUI 창 기동(디스플레이) · UI vitest(I-1 순연) · CI Rust/Node job(PHASE4-DEC-012 ADR 선행 시) — 전부 비차단·게이트 판정 시 사유 명기 ④ contracts.py/registries.py/SOT 무변경 유지 ⑤ 잔여 Should 완료(4-3 UI 스켈레톤 이상·4-6·4-7 전건 집행) ⑥ Ollama 실측 기완료(P4-1) ⑦ 백업 `_targets/_integ/backup_p4_2/`
 
 ## P4-1 결과 (2026-06-12) — ORANGE CORE 8파일 + Registry 연동 + config.v1.toml (B2a·R2a: 로드맵 4-2+4-4+4-5)
 - ☑ **판정: PASS — P4-2 진입 허용** (수렴 선언: 적대 R1 공격 6종 전건 증거 방어 → R2 신규 발견 0. Stage Gate 23항 전건 실측 — 보류 0, `_targets/p4_1_stage_gate_실측_2026-06-12.md`)
@@ -158,8 +171,8 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P4-2 — IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸 (B2c·R2c)** → P4-3(Phase 4 Gate, Must 11)
-→ 입력: **상단 P4-1 결과 "P4-2 입력" ①~⑦** (**pnpm ✅ 설치 완료 2026-06-13 — pnpm 9.15.9**[npm 전역 `C:\Users\dkscl\AppData\Roaming\npm`·PATH 등재·fresh-shell 검증]. ⚠️ corepack 경로 2회 실패 회피: ① `corepack enable` EPERM[Program Files 쓰기 권한] ② 번들 corepack 0.29.4 keyid 서명 검증 버그 → npm 전역 설치로 대체. ⚠️ **pnpm 9.x 핀 필수** — 최신 10.x는 `node:sqlite` 요구하나 node v23.1.0 미지원[ERR_UNKNOWN_BUILTIN_MODULE], P4-2 cargo/Tauri 환경 점검 시 Node 업그레이드 또는 9.x 유지 판단. 버전 핀 SOT 제약 없음[PART1 C.1 #1 채택만] / src-tauri+serde 활성화[DEC-005 순연·generate_types.py serde 슬롯 NotImplemented 기존재] / JSON-RPC 13 메서드[PHASE_B1 §5.2·[core] ipc_max_restart=3/ipc_timeout_s=30 기수록] / BLUE NODE 3 스켈레톤+Tauri 셸 / Ollama 실측 기완료 차단 0 / D2.1-D5 §4.9 ResponseEnvelopeSchema 9필드는 IPC 직렬화 계층 활성[PHASE4-DEC-010 결정 1-4] / Rust toolchain·cargo 설치 여부는 P4-2 진입 시 점검 / 백업 `_targets/_integ/backup_p4_1/`) + runtime_decisions.md + runtime_eng_plan.md R2c + contracts.py 25모델 + PHASE4-DEC-005(serde 순연)/-009(ipc 키)/-010
+**P4-3 — Phase 4 Gate (Must 11 분모 + V0 GO/NO-GO 16항)** → Phase 5(P5-1 Eval+D3+GO/NO-GO)
+→ 입력: **상단 P4-2 결과 "P4-3 입력" ①~⑦** (Must 11 GATE-03 분모 점검 / serde 왕복·IPC 13·5-7a 전건 PASS·차단 0 / PENDING=cargo run GUI·UI vitest[I-1 순연]·CI Rust·Node job[DEC-012 ADR 선행] 전부 비차단 / contracts·registries·SOT 무변경 유지 / 잔여 Should 완료 / 백업 `_targets/_integ/backup_p4_2/`) + PHASE4-DEC-013(jsonrpcserver) + PHASE4-DEC-011 §B/§E(게이트=ultracode 교차모델 감사)
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
 → 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 

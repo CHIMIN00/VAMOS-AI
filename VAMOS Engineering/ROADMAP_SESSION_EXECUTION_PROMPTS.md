@@ -978,6 +978,11 @@ VAMOS 로드맵 Phase 4, 세션 P4-1 — ORANGE CORE + Registry + config
 | 4-3 | 프론트엔드 | Tauri+React + A22 + A25 + A16 | Should | frontend/ |
 | 4-7 | X2 횡단 실행 | 보안 스캔 + 테스트 작성 + 커밋 린트 | Should | 보안/테스트 리포트 |
 
+> ⚠️ **舊 표 오류 교정 (2026-06-13 P4-2 집행 시 — 마스터 로드맵 L355 2층 구조 우선)**:
+> (1) **IPC = V0-STEP-3**(舊 "V0-STEP-4" 오기). V0-STEP-4(ORANGE CORE)·V0-STEP-5(저장소)는 **P4-1에서 이미 완료**(재집행 안 함). 舊 "Pipeline V0-STEP-5 Must" 행은 P4-1 산출(LangGraph 직선 5노드)로 충족됨 — P4-2 비대상.
+> (2) **4-6 BLUE NODE = Should**(舊 "Must" 오기, 마스터 L379). V0 스코프 = **디렉토리 스캐폴딩만**(노드 로직 E-Series E-1~E-6 = V1-Phase 3). 노드명 = **dev/research/content**(舊 "Productivity" 오기 — D2.0-03 L214 도메인 예시; 정본 L353~357 = Content. `_targets/p4_2_roadmap_edits_pending.md`).
+> 실집행 분해: **Must = serde 왕복(A20 4파일) + IPC 13 스텁 + python_manager 스폰/헬스/재시작 + Tauri 셸 5-7a 서브셋**; **Should = 4-3 UI / 4-6 스캐폴딩 / 4-7 X2**.
+
 ````
 VAMOS 로드맵 Phase 4, 세션 P4-2 — IPC + BLUE NODE + 프론트엔드
 
@@ -1254,7 +1259,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | | P3-2 | X1 전략 + 계획서 + Gate | ✅ (2026-06-12, 4전략+계획서 2+3-V, tag phase3-complete + 3-AI 교차감사 확정 PHASE3-DEC-011) |
 | **4** | P4-0 | 진입 게이트(A7+결정 9건)+타입 동기화 | ✅ |
 | | P4-1 | ORANGE CORE + Registry + config | ✅ |
-| | P4-2 | IPC + BLUE NODE + 프론트엔드 | ⬜ |
+| | P4-2 | IPC + BLUE NODE + 프론트엔드 | ✅ (2026-06-13 — IPC 13 + serde 왕복 4파일 + Tauri 셸 + 5-7a) |
 | | P4-3 | Phase 4 Gate | ⬜ |
 | **5** | P5-1 | Eval + D3 + GO/NO-GO | ⬜ |
 | **6** | P6-0 | V1 준비 + 스킬 재점검 | ⬜ |
