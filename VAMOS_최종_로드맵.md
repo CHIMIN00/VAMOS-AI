@@ -376,7 +376,7 @@ Phase 4 착수 전:
 | 4-3 | R2c: 프론트엔드 스켈레톤 | Tauri 앱 셸 + React UI + IPC + **"왜?" 버튼(A22)** + **신뢰도 표시(A25)** + **면책 조항(A16)**. ※ 최소 서브셋(셸 기동+Python spawn)은 5-7a(Must)의 전제로 한정 격상 — PHASE4-DEC-008 | Should | ⓑ | src/ + src-tauri/ |
 | 4-4 | R2a: Registry 정의 | EventType/Failure/Fallback Registry | **Must** | 순차 | |
 | 4-5 | R2a: config.v1.toml | LOCK 값 포함. **confidence 임계값 3개(A25)** + **cost_monthly_limit(A21 Layer1)** | **Must** | 순차 | |
-| 4-6 | R2b: BLUE NODE 스켈레톤 | 디렉토리 스캐폴딩만(PHASE_B2 — PART2 V0 스코프 E-Series 0; 노드 구현 E-1~E-6은 V1-Phase 3, 3노드 명칭 Dev/Research/Productivity는 D2.0-03) | Should | 순차 | backend/vamos_core/blue_nodes/ |
+| 4-6 | R2b: BLUE NODE 스켈레톤 | 디렉토리 스캐폴딩만(PHASE_B2 — PART2 V0 스코프 E-Series 0; 노드 구현 E-1~E-6은 V1-Phase 3, 3노드 명칭 Dev/Research/Content는 D2.0-03 L353~357 ['Productivity'는 L213 도메인 예시 오기 → 2026-06-13 교정, P4-2]) | Should | 순차 | backend/vamos_core/blue_nodes/ |
 | 4-7 | X2: 횡단 실행 | 보안 스캔 + 테스트 작성 + 커밋 린트 | Should | ⓒ | 리포트 |
 
 ```
