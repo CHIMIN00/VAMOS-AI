@@ -520,6 +520,22 @@ D:\VAMOS\
 
 ---
 
+## 2.19 Phase 6 P6-1b (V1 [6-3 CORE 활성화 2분할 1/2] — I-Series 17 CORE 완성) 생성 자산 (2026-06-14 등재 — §2.18 P6-1a 직계)
+
+| # | 자산 | 위치 | P6-1b 작업 | 사용처 |
+|---|------|------|-----------|--------|
+| 1 | **신규 9 I-module** (i4_multimodal_interpreter·i6_self_check·i10_tool_router·i11_output_composer·i13_output_renderer·i14_summarizer·i15_evidence_qod·i16_knowledge_search·i17_blue_node_manager) | `backend\vamos_core\orange_core\` | 6-3 CORE | I-Series 17 CORE V1-Phase 1 — V1 ORANGE CORE 본체 |
+| 2 | **pipeline.py / i5_decision_engine.py 배선** (verify→I-6 · EvidenceGate→I-15 · deliver answer→I-11 · execute 구조화→I-4 · 라우팅→I-10) | `backend\vamos_core\orange_core\` | 6-3 CORE | V0 스텁 활성화(토폴로지·5-Gate·9-State 무변경) |
+| 3 | **신규 9 단위 테스트** (test_i4/i6/i10/i11/i13/i14/i15/i16/i17 — 61 테스트, T1/T2·경계·폴백·이벤트 정본) | `backend\tests\` | 6-3 CORE | 모듈 회귀·적대 검증 7건 회귀 포함 |
+| 4 | **scripts/p6_1b_step0_rescan.py** (SOT2 재스캔 + integrity baseline refresh — 결정론, III-3) + p6_1b_step0_rescan_report.json | `scripts\`·`04. 구현단계\v13_results\phase0\` | STEP 0 | 2 FLAG 해소 재현 도구·증거 |
+| 5 | **integrity_snapshot.json**(2658 refresh) + integrity_snapshot.jun4.json(Jun-4 정본 backup) | `04. 구현단계\v13_results\phase0\integrity\` | STEP 0 | baseline drift 0 기준선·Jun-4 보존 |
+| 6 | scripts/p6_1b_manifest.json (22 항목 — H2 R16) + trace_matrix.map.json(+9 매핑 26/32) | `scripts\` | H2/IV-3 | 산출물 실존 검증·추적 |
+| 7 | PROGRESS "P6-1b 결과" + 회고 decisions/phase6_p6-1b_retro.md + 로드맵 6-3 부분진행 | `VAMOS Engineering\`·리포 루트 | 마감/A12 | 진행 추적·P6-1b-2 입력 |
+
+> ※ P6-1b = 표준 구현(게이트 아님 — H3 §E max+ultracode, II-1/II-2/II-4/III-3 풀가동). I-Series 17 = 기존 8 + 신규 9. 하네스 pytest 121→**182** · mypy 26→**35 files** · vamos_lint 0/**57**. **잠긴 분모 변경 0**(contracts 25·registries 123/36/23 — 등록 식별자 재사용, log_event 강제검증으로 미등록 차단). **핵심 발견**: D2.0-02 §7 I-번호 [LEGACY](L624) → 정본 D2.0-01 §5.6 + §4.0 매핑(I-13/14=0:1 GAP 신규·I-17=D2.0-03). **6-3/6-4 경계**: 실 RAG/임베딩(I-2/16)·멀티모달(I-4/13)·LLM요약(I-14)·노드실행(I-17)=6-4, 6-3=인터페이스+결정론. **적대 검증**: round-1 7건 수리(major correctness 2)·round-2 dry. 신규 식별자(이벤트/실패코드/폴백) 추가 0 → SOT 무수정.
+
+---
+
 # 3. 용도별 분류
 
 ## 3.1 "SOT 검증할 때" (D1 실행)

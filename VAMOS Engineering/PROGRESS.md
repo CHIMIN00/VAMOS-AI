@@ -1,9 +1,20 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-13 (**P6-1a — 6-1 D1' 재검증 + 6-2 B1' vamos_lint Layer 2 + Alembic V0 baseline (표준 구현·하네스 GREEN)**)
+> 최종 갱신: 2026-06-14 (**P6-1b — I-Series 17 CORE 완성 (6-3 CORE 활성화 2분할 1/2, 신규 9 모듈·하네스 GREEN 182·적대 검증 수렴)**)
 
 ## 현재 Phase
-**P6-1a ✅ 완료 (2026-06-13)** — 6-1 D1' + 6-2 B1' (3분할 1/3) → 다음: **P6-1b (6-3 CORE 활성화 분모 32)**
+**P6-1b ✅ 완료 (2026-06-14)** — I-Series 17 CORE 완성 (6-3 2분할 1/2) → 다음: **P6-1b-2 (E6+S1+A2+B1+C3+D2 15 모듈)**
+
+## P6-1b 결과 (2026-06-14) — Phase 6 (V1 구현) [6-3 CORE 활성화 2분할 1/2]: I-Series 17 CORE 완성 (표준 구현·게이트 아님)
+- ☑ **판정: PASS → P6-1b-2 진입 허용** (max + ultracode). 범위 = I-Series 17 CORE(V1-Phase 1)만. E6+S1+A2+B1+C3+D2(15)=P6-1b-2 · 6-4 RAG=P6-1c 비대상.
+- ☑ **I-Series 17 CORE 전수 활성화**: 기존 8(I-1,2,3,5,8,9,19,20) + **신규 9(I-4,6,10,11,13,14,15,16,17)** 구현·배선·단위테스트. 파이프라인 V0 스텁 활성화: verify→**I-6**(자기검증 4-검증) · EvidenceGate→**I-15**(QoD <0.4 L2금지/<0.7 HOLD) · deliver answer→**I-11** · execute 구조화→**I-4** · 라우팅→**I-10**. 하네스 **pytest 121→182** · mypy strict 26→35 · ruff clean · vamos_lint 0/57.
+- ☑ **STEP 0 — P6-1a 2 비차단 FLAG 해소**: ① SOT2 재스캔 현 코퍼스 **active CONFLICT 0**(36 CONFLICT_LOG OPEN ledger 실측) ② integrity baseline refresh(2654→2658, drift→0, Jun-4 backup 보존). 도구 `scripts/p6_1b_step0_rescan.py`+report. carry-forward: 2-2 nav-ref broken(범위 외→6-9/2-2 이연).
+- ☑ **핵심 발견 — D2.0-02 [LEGACY] 번호 reconcile**: D2.0-02 §7 I-모듈 번호는 PLAN-2.0 legacy(L624 배너), 정본=D2.0-01 §5.6 + §4.0 매핑. I-13/I-14(0:1 GAP 신규)·I-17(D2.0-03). 기존 V0 코드가 D2.0-01 준거임을 tiebreaker 확인.
+- ☑ **잠긴 분모 변경 0**: contracts 25·registries 123/36/23(등록 식별자 재사용 — log_event 강제검증)·5-Gate·9-State·confidence·토폴로지 불변. SOT-edit 승인 불요(SOT 무수정). 6-3/6-4 경계 엄수(실 RAG/임베딩/멀티모달/노드실행/LLM요약=6-4).
+- ☑ **STEP 3 검증**: verify_artifacts p6_1b **22/0**(회귀 p6_1a 16/p6_0 11/p5_1 10/p4_2 34/p4_3 10) · trace 26/32/미커버 0/허위 0 · lockfile drift 0.
+- ☑ **STEP 4 적대 검증(ultracode loop-until-dry)**: round-1 17에이전트 → **확정 7건 수리(major correctness 2: I-4 빈-code 가드·I-13 json rendered + major spec 1: I-15 fallback_id 누락 + minor 4)**. round-2 4에이전트 → dry 수렴(contracts WARN 지적은 오탐 판정 — A20 잠긴 계약이 WARN 허용, III-3 독립 판단으로 계약 보존). 교훈: 단위테스트 green만으로 불충분, II-1/II-2 필수.
+- 🎯 **commit 14건**(8ba3fcb→ad576d5, push 후 4-way) · tag 없음(v1-release=6-9). 회고 `VAMOS Engineering/decisions/phase6_p6-1b_retro.md`.
+- 📌 **P6-1b-2 입력**: E6+S1+A2+B1+C3+D2(15) · 등록 식별자 재사용 전략 계승 · 6-3/6-4 경계 · max+uc · 신규 식별자 필요 시 SOT edits 승인. **item 11 NeMo/Guardrails·V1-004·II-6 = P6-3/6-4 이연**.
 
 ## P6-1a 결과 (2026-06-13) — Phase 6 (V1 구현) [3분할 1/3]: 6-1 D1' 재검증 + 6-2 B1' 환경확장 (표준 구현·게이트 아님)
 - ☑ **판정: PASS → P6-1b 진입 허용**. 표준 구현(effort high + 하네스 + II-3 상시 리뷰) + 고위험분 II-1 적대(Alembic 데이터 손실/호환·D1' 결함 해소). 범위 = 로드맵 6-1+6-2만(6-3 CORE·6-4 RAG = P6-1b/c 비대상).
