@@ -1,0 +1,55 @@
+{
+  "_comment": "P4-3 게이트(4-V) 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. 게이트 판정·회고·갱신문서 + 수리(DEC-012) 집행 증거 + Must 11 핵심 증거파일. 무인자 실행 금지.",
+  "artifacts": [
+    {
+      "path": "VAMOS Engineering/decisions/PHASE4-DEC-012_CI-mypy-소스전환_및_VL004-테스트면제.md",
+      "min_bytes": 1500,
+      "must_contain": ["mypy", "vamos_core", "VL-004", "strict = true", "P4-3"]
+    },
+    {
+      "path": "VAMOS Engineering/decisions/phase4_retro.md",
+      "min_bytes": 1200,
+      "must_contain": ["회고", "asymmetric-tolerance", "PASS", "NO-GO"]
+    },
+    {
+      "path": "VAMOS Engineering/PROGRESS.md",
+      "min_bytes": 5000,
+      "must_contain": ["P4-3 결과", "Phase 4 게이트(4-V) PASS", "phase4-complete", "Must 11 전건 실측 PASS"]
+    },
+    {
+      "path": "VAMOS Engineering/STRATEGY_11_ASSET_INVENTORY.md",
+      "min_bytes": 5000,
+      "must_contain": ["2.15 Phase 4", "ORANGE CORE", "DEC-012"]
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "min_bytes": 800,
+      "must_contain": ["mypy vamos_core", "quality", "vamos-lint", "PHASE4-DEC-012"]
+    },
+    {
+      "path": "scripts/vamos_lint.py",
+      "min_bytes": 3000,
+      "must_contain": ["is_test", "PHASE4-DEC-012", "VL-004"]
+    },
+    {
+      "path": "backend/vamos_core/schemas/contracts.py",
+      "min_bytes": 3000,
+      "must_contain": ["ALL_MODELS", "extra=\"forbid\"", "DecisionSchema"]
+    },
+    {
+      "path": "config/config.v1.toml",
+      "min_bytes": 1000,
+      "must_contain": ["[confidence]", "[cost]", "monthly_limit"]
+    },
+    {
+      "path": "backend/vamos_core/orange_core/pipeline.py",
+      "min_bytes": 2000,
+      "must_contain": ["add_node(\"intake\"", "add_node(\"deliver\"", "StateGraph"]
+    },
+    {
+      "path": "backend/vamos_core/safety/never_auto.py",
+      "min_bytes": 800,
+      "must_contain": ["NEVER_AUTO", "RA_NEVER_01", "is_never_auto", "frozenset"]
+    }
+  ]
+}

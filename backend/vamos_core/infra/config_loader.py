@@ -310,7 +310,7 @@ def load_config(
     cli_args: list[str] | None = None,
 ) -> VamosConfig:
     """3단계 로딩 (M-6): TOML → ENV → CLI. LOCK은 전 단계 변경 불가."""
-    path = Path(config_path or os.environ.get("VAMOS_CONFIG_PATH", _DEFAULT_CONFIG_PATH))
+    path = Path(config_path or os.environ.get("VAMOS_CONFIG_PATH") or _DEFAULT_CONFIG_PATH)
     with open(path, "rb") as f:
         data: dict[str, Any] = tomllib.load(f)
     _env_overrides(data)

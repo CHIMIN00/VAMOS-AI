@@ -21,7 +21,7 @@ jobs:
       - name: Ruff lint
         run: cd backend && poetry run ruff check .
       - name: Mypy type check
-        run: cd backend && poetry run mypy tests/  # V0 전 단계: 코드 디렉토리 생성 전 — V0-STEP-1 후 'mypy .' 전환
+        run: cd backend && poetry run mypy vamos_core  # PHASE4-DEC-012: V0-STEP-1 후 소스 디렉토리로 전환(strict 게이트 = 제품 소스). tests는 strict 제외(pytest+ruff가 커버)
 
   test:
     name: Python Tests (pytest + coverage)

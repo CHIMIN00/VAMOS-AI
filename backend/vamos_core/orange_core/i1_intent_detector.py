@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 import uuid
 from datetime import UTC, datetime
-from typing import Any, Protocol
+from typing import Any, Protocol, cast
 
 from vamos_core.infra.config_loader import get_config
 from vamos_core.infra.logger import log_event
@@ -52,7 +52,8 @@ class IntentDetector:
             from langchain_community.chat_models import ChatOllama
 
             mini = get_config().llm.mini_model.removeprefix("ollama/")
-            self._llm = ChatOllama(model=mini, temperature=get_config().llm.temperature)
+            self._llm = cast(ChatModel,
+                             ChatOllama(model=mini, temperature=get_config().llm.temperature))
         return self._llm
 
     async def parse_intent(
@@ -123,7 +124,7 @@ class IntentDetector:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise ValueError("LLM 응답에 JSON 객체 없음")
-        return json.loads(text[start : end + 1])
+        return cast("dict[str, Any]", json.loads(text[start : end + 1]))
 
     @staticmethod
     def _build_frame(user_input: str, trace_id: str, d: dict[str, Any]) -> IntentFrame:

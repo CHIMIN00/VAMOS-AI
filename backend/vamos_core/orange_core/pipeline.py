@@ -12,7 +12,7 @@ A21 배선: L1=config LOCK frozen(config_loader) / L2=5-Gate(I-5) / L3=NEVER_AUT
 
 from __future__ import annotations
 
-from typing import Any, TypedDict
+from typing import Any, TypedDict, cast
 
 from langgraph.graph import END, START, StateGraph
 
@@ -132,8 +132,8 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
         if client is None:
             from langchain_community.chat_models import ChatOllama
 
-            client = ChatOllama(model=model_id.removeprefix("ollama/"),
-                                temperature=cfg.temperature)
+            client = cast(ChatModel, ChatOllama(model=model_id.removeprefix("ollama/"),
+                                                temperature=cfg.temperature))
         prompt = state["intent_frame"].user_goal if state["intent_frame"] else state["user_input"]
         result = await client.ainvoke(prompt)
         text = str(result.content)
@@ -229,4 +229,5 @@ async def run_pipeline(user_input: str, llm: ChatModel | None = None) -> VamosSt
         "failure_codes": [],
         "fallback_ids": [],
     }
-    return await app.ainvoke(initial)
+    final: VamosState = await app.ainvoke(initial)
+    return final

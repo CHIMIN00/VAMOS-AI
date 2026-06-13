@@ -63,12 +63,12 @@ class CostManager:
     async def get_daily_usage(self) -> float:
         """오늘 사용량(₩) 합산 — config cost.daily_limit 대조용."""
         today = datetime.now(UTC).date().isoformat()
-        return sum(e["cost_krw"] for e in self._iter_entries() if e["date"][:10] == today)
+        return float(sum(e["cost_krw"] for e in self._iter_entries() if e["date"][:10] == today))
 
     async def get_monthly_usage(self) -> float:
         """이번 달 사용량(₩) 합산 — config cost.monthly_limit 대조용."""
         month = datetime.now(UTC).strftime("%Y-%m")
-        return sum(e["cost_krw"] for e in self._iter_entries() if e["date"][:7] == month)
+        return float(sum(e["cost_krw"] for e in self._iter_entries() if e["date"][:7] == month))
 
     async def evaluate_gate(
         self, trace_id: str, usage_override_krw: float | None = None

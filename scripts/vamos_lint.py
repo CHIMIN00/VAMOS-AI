@@ -84,10 +84,13 @@ def lint_file(path: Path, text: str) -> list[tuple[str, int, str]]:
             findings.append(("VL-003", line_of(m.start()),
                              "CORE→COND 역방향 import 금지 (R7) — COND는 CORE 소비만 가능"))
 
-    # VL-004
-    for m in RE_LOCK_ASSIGN.finditer(text):
-        findings.append(("VL-004", line_of(m.start()),
-                         "LOCK config 키 런타임 재할당 금지 (R5/D13) — config.v1.toml LOCK 값은 불변"))
+    # VL-004 — 프로덕션 코드 한정 (PHASE4-DEC-012). test 코드는 LOCK 재할당이 ValidationError로
+    # *거부됨을 검증*하므로 면제(R5 의도 = 런타임 덮어쓰기 금지이지, 거부 테스트 금지가 아님).
+    is_test = path.name.startswith("test_") or "tests" in parts
+    if not is_test:
+        for m in RE_LOCK_ASSIGN.finditer(text):
+            findings.append(("VL-004", line_of(m.start()),
+                             "LOCK config 키 런타임 재할당 금지 (R5/D13) — config.v1.toml LOCK 값은 불변"))
 
     # VL-005
     for m in RE_EVENT_BAD.finditer(text):

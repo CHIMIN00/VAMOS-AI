@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import uuid
 from datetime import UTC, datetime
-from typing import Any, Literal
+from typing import Any, Literal, cast
 
 from pydantic import BaseModel, ConfigDict
 
@@ -22,6 +22,9 @@ from vamos_core.orange_core.i9_cost_manager import CostManager
 from vamos_core.orange_core.i19_approval_manager import ApprovalManager
 from vamos_core.schemas.contracts import DecisionSchema, EvidencePack, IntentFrame
 
+#: 게이트 결과 5종 (mypy: dict-lookup 결과를 Literal로 좁히기 위한 단일 별칭)
+GateResult = Literal["PASS", "FAIL", "DOWNSHIFT", "DENY", "SKIP"]
+
 
 class GateTraceEntry(BaseModel):
     """A22 reasoning_trace 엔트리 — PHASE3-DEC-009 스키마 (Decision.gates 내 수용, DEC-010)."""
@@ -29,7 +32,7 @@ class GateTraceEntry(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     gate: Literal["PolicyGate", "ApprovalGate", "CostGate", "EvidenceGate", "SelfCheckGate"]
-    result: Literal["PASS", "FAIL", "DOWNSHIFT", "DENY", "SKIP"]
+    result: GateResult
     detail: dict[str, Any] = {}
 
 
@@ -77,16 +80,17 @@ class DecisionEngine:
 
         # ① PolicyGate (DEC-001 — 최우선)
         policy_check = await self._policy.check(intent_frame, trace_id)
-        policy_result = {"deny": "DENY", "restrict": "DOWNSHIFT", "allow": "PASS"}[
+        policy_result = cast(GateResult, {"deny": "DENY", "restrict": "DOWNSHIFT", "allow": "PASS"}[
             policy_check.decision
-        ]
+        ])
         trace.append(GateTraceEntry(gate="PolicyGate", result=policy_result,
                                     detail={"check_id": policy_check.check_id,
                                             "reasons": policy_check.reasons}))
 
         # ② ApprovalGate — P2 hold (V0: 즉시 미승인, I-19)
         priority = str(intent_frame.domain_hint.get("priority", "P0"))
-        risk: Literal["P0", "P1", "P2"] = priority if priority in ("P0", "P1", "P2") else "P0"
+        risk = cast(Literal["P0", "P1", "P2"],
+                    priority if priority in ("P0", "P1", "P2") else "P0")
         approval_needed = risk == "P2" or bool(
             intent_frame.risk_flags.get("approval_maybe_required")
         )
@@ -110,7 +114,8 @@ class DecisionEngine:
         cost_gate = await self._cost.evaluate_gate(trace_id, cost_usage_override)
         trace.append(GateTraceEntry(
             gate="CostGate",
-            result={"normal": "PASS", "downshift": "DOWNSHIFT", "stop": "DENY"}[cost_gate],
+            result=cast(GateResult,
+                        {"normal": "PASS", "downshift": "DOWNSHIFT", "stop": "DENY"}[cost_gate]),
             detail={"cost_gate": cost_gate},
         ))
         if cost_gate == "downshift":

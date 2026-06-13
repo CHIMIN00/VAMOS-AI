@@ -1,9 +1,20 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-13 (**P4-2 완료 — IPC JSON-RPC 13 + A20 serde 왕복 4파일 + Tauri 셸 + Python 스폰(5-7a) + BLUE NODE 스캐폴딩 + React UI**)
+> 최종 갱신: 2026-06-13 (**Phase 4 게이트(4-V) PASS — NO-GO→수리(DEC-012)→재게이트 GO·git tag phase4-complete**)
 
 ## 현재 Phase
-**Phase 4 진행 중 — P4-2 ✅ 완료 (2026-06-13)** → 다음: **P4-3 (Phase 4 Gate — Must 11 + V0 GO/NO-GO 16항 — 하단 P4-2 결과의 "P4-3 입력" 참조)**
+**Phase 4 ✅ 완료 — P4-3 게이트(4-V) PASS (2026-06-13)** → 다음: **Phase 5 (P5-1 Eval + D3 정합 + V0 GO/NO-GO 16건)**
+
+## P4-3 결과 (2026-06-13) — Phase 4 게이트(4-V): Must 11 + A20/A21/A22/A25 + 게이트 적대검증(ultracode) → Phase 5 진입 판정
+- ☑ **판정: PASS — Phase 5 진입 허용 (수리 후)**. 서사: **NO-GO(CI 2/3 RED)** → 사용자(VI-1/VI-2) "수리 인가 + 재게이트" → A1 수리(ADR **PHASE4-DEC-012**) → **재게이트 converged GO**. 신규 코드 0 원칙은 게이트 자체에 적용되었고, 발견된 결함 수리는 A1 경로(사용자 인가)로 집행.
+- 🔴 **게이트가 잡은 핵심 결함 (독립 적대검증 III-3 — PROGRESS "PASS 단언" 디스크 반증)**: CI 3-job 중 **2개가 배선 그대로 RED** — ① `ci.yml:24` `mypy tests/`=88 errors(quality RED, stale placeholder 전환 미집행) + 소스 `mypy vamos_core`=**12개 실제 strict 타입결함**(Optional LLM `.ainvoke` NPE·`str`→`Literal` 게이트결과 등 — mypy가 tests만 봐서 한 번도 게이트 안 됨) ② `vamos_lint.py backend`=1 violation(test_config.py:75 LOCK-거부 테스트 오탐, vamos-lint RED). 완전성비평가(VI-3) **asymmetric-tolerance 논거**(pytest엔 exit-5 V0 관용 있으나 mypy/lint엔 없음 → "V0이라 봐준다" 불성립)로 NO-GO 정당화.
+- ☑ **A1 수리(PHASE4-DEC-012, 사용자 인가 — 잠금 강도 불변·스코프 교정만)**: ① 소스 mypy 12건 수정(`pipeline·i1·i5·i9·config_loader` — cast 7+float 2+or-chain 1, **순수 타입레벨 런타임 무변경**) ② `ci.yml` mypy `tests/`→`vamos_core`(strict=true 유지·제품 소스 게이트) ③ `vamos_lint.py` VL-004 테스트 파일 면제(R5 의도=런타임 덮어쓰기 금지이지 거부테스트 금지 아님). contracts.py/registries.py/SOT **무변경**.
+- ☑ **Must 11 전건 실측 PASS**: 1 monorepo 6디렉토리 / 2 contracts ALL_MODELS=25·non-forbid 0 / 3 IPC rpc 13메서드+ping·test 8·ipc_spawn_check 5-7a PASS / 4 pipeline 5노드(intake→plan→execute→verify→deliver) / 5 E2E pipeline·Ollama / 6 config VamosConfig 14섹션 frozen / 7 registries 123/36/23+is_valid / 8 ruff All passed / **9 vamos_lint `backend` 위반 0(수리후)** / **10 CI 3-job 전부 GREEN 실측(수리후) — quality(ruff+mypy vamos_core exit0)·test(pytest 118)·vamos-lint(0)** / 11 pytest **118 passed**.
+- ☑ **4-V 추가 4항**: A20 왕복 25/25(serde cargo deny_unknown_fields 포함) · A21 3층(L1 config frozen ValidationError / L2 5-Gate pipeline 배선 / L3 NEVER_AUTO frozenset RA_NEVER_01~10 `is_never_auto` 단독판정) · A22 DecisionSchema `gates` 필드(reasoning_trace 수용처 DEC-010) · A25 confidence 임계(0.85/0.60/0.30)+REFUSE 분기 단위테스트.
+- ☑ **갭폐쇄 도구·산출물 게이트**: verify_artifacts P4-2 매니페스트 회귀 **34/0** + P4-3 매니페스트 PASS · trace_matrix 요구11·매핑12·미커버0·허위0 · check_lockfiles drift 0(Python/Node/Rust).
+- ☑ **게이트 적대검증 수렴(H3/H5 ultracode)**: R1(5 에이전트 III-3 그룹재도출 A/B/C PASS·D FAIL + VI-3 완전성비평가 NO-GO) → 수리 → R2(CI 재도출 all_green + 적대 회귀비평가 fixes_sound=true·masked_bug 0·pytest118/roundtrip25·25/IPC PASS, GO) → **신규 발견 0 = converged**. **II-6 교차모델**: 워크플로 에이전트=Opus 자기참조(H9-3상 불충족), GPT/Gemini 환경 미접근 → **인간(사용자) VI-1/VI-2 게이트 승인으로 대체**(수리 인가 판정).
+- ☑ **마감**: 회고 `decisions/phase4_retro.md`(A11) + STRATEGY_11 §2.15 Phase 4 자산 등재 + 로드맵 추적표 §8 P4-3 ✅ + **git tag `phase4-complete`**.
+- 📌 **P5-1 입력**: ① Phase 5 = V0 GO/NO-GO 16건(PART2 §7.1) 분모 — P4-3 비대상이던 릴리스 게이트 ② Eval 스택(ragas·deepeval·minicheck) poetry `eval` optional 그룹 등재(DEC-009 ⑬) ③ D3 정합(모듈수·스키마·Registry·LOCK) ④ 5-7a 배포무결성(GUI 기동 기실측) ⑤ **잔여 V1 hardening 후보**(비차단): 테스트 strict 타입화 88건(6-7) · UI vitest(I-1·6-5) · Rust/Node CI job(DEC-012+ ADR·6-5) ⑥ 백업/회귀 기준선.
 
 - 🔧 **2026-06-13 갭폐쇄**: PHASE4-DEC-011(Opus↔Fable 갭폐쇄 수단·SOP) + scripts 3종(verify_artifacts·check_lockfiles·trace_matrix) + 2시드(artifact_manifest·trace_matrix.map) — 미커밋분 → P4-2 시작 전 독립 커밋(verify 5/0·trace 갭0·lock drift 0 실측·pytest 108 무회귀)
 
@@ -171,8 +182,8 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P4-3 — Phase 4 Gate (Must 11 분모 + V0 GO/NO-GO 16항)** → Phase 5(P5-1 Eval+D3+GO/NO-GO)
-→ 입력: **상단 P4-2 결과 "P4-3 입력" ①~⑦** (Must 11 GATE-03 분모 점검 / serde 왕복·IPC 13·5-7a 전건 PASS·차단 0 / PENDING=cargo run GUI·UI vitest[I-1 순연]·CI Rust·Node job[DEC-012 ADR 선행] 전부 비차단 / contracts·registries·SOT 무변경 유지 / 잔여 Should 완료 / 백업 `_targets/_integ/backup_p4_2/`) + PHASE4-DEC-013(jsonrpcserver) + PHASE4-DEC-011 §B/§E(게이트=ultracode 교차모델 감사)
+**P5-1 — Phase 5 (V0 검증 + GO/NO-GO): Eval 파이프라인 + D3 정합 + V0 GO/NO-GO 16건)** (Phase 4 ✅ 완료, tag phase4-complete)
+→ 입력: **상단 P4-3 결과 "P5-1 입력" ①~⑥** (V0 GO/NO-GO 16건=PART2 §7.1 릴리스 게이트 분모 / Eval 스택 poetry `eval` optional / D3 정합 / 5-7a 배포무결성 기실측 / 잔여 V1 hardening 비차단[tests strict 88·UI vitest·Rust/Node CI job] / 백업) + PHASE4-DEC-012(CI mypy 소스전환·VL-004 면제) + DEC-011 §B/§E(게이트=ultracode 교차모델, GPT/Gemini 우선·불가시 인간)
 → 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
 → 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 

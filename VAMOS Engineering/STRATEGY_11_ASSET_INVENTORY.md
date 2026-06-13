@@ -1,6 +1,6 @@
 # VAMOS 프로젝트 자산 인벤토리 (Asset Inventory)
 
-> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-12 (Phase 3 완료 — §2.14 Phase 3 생성 자산 등재; Phase 2-8 §2.13 + §5.2는 기존)
+> **작성일**: 2026-04-04 · **최종 갱신**: 2026-06-13 (Phase 4 완료 — §2.15 Phase 4 생성 자산 등재; §2.13 Phase 2·§2.14 Phase 3 직계)
 > **목적**: D:\VAMOS 내 모든 폴더/파일의 역할, 사용 시점, 매트릭스 셀 매핑, 중복/미사용 식별
 > **활용**: Phase 0-0에서 작성 → 매트릭스 갱신, CLAUDE.md 보강, Obsidian 생성의 입력 자료
 > **갱신 규칙**: 파일/폴더 추가·삭제 시 본 문서도 갱신
@@ -457,6 +457,23 @@ D:\VAMOS\
 | 8 | PHASE3-DEC-011 (3-AI 교차감사 최종 확정) | `VAMOS Engineering\decisions\` | 교차감사 수합 | Phase 3 확정 정본·P4-0 권고 |
 | 9 | sot CLAUDE.md 스냅샷 동기화 (946줄 GOLD, 2회: d540332·a8ce7d1) + integrity 체크 20260612T175049 | `docs\sot\`·`04. 구현단계\...\integrity\` | GATE-07b | SOT 코퍼스 정합·새 참조 기준 |
 | 10 | git EOL 복구 체계 (repo autocrlf=false + fetch 동기화 규칙 + 분류기 선례) | `.git\config`·결정 기록 | P3-0 사고 대응 | 전 Phase git 운영 규칙 |
+
+---
+
+## 2.15 Phase 4 (V0 구현) 생성 자산 (2026-06-13 등재 — doc_strategy §2 갱신 규칙 · §2.13 Phase 2·§2.14 Phase 3 직계)
+
+| # | 자산 | 위치 | Phase 4 작업 | 사용처 |
+|---|------|------|------------|--------|
+| 1 | backend/vamos_core/ ORANGE CORE (i1·i2·i5·i8·i9·i19·i20 + storage/memory_store + infra/{config_loader,logger} + safety/never_auto) | `backend\vamos_core\` | P4-1 (4-2/4-4/4-5) | V0 코어 파이프라인·Phase 5 D3 정합 분모 |
+| 2 | orange_core/pipeline.py (LangGraph 5노드 직선) + schemas/{contracts.py 25모델, registries.py 123/36/23} | `backend\vamos_core\` | P4-0/4-1 | E2E 흐름·타입 계약 정본 |
+| 3 | config/config.v1.toml (14섹션·LOCK 23키 frozen) + schema_registry.toml | `config\` | P4-1 (4-5) | 런타임 LOCK 적용·Phase 5 LOCK 대조 |
+| 4 | rpc/server.py (JSON-RPC 13메서드+ping) + src-tauri/ (python_manager spawn·commands·serde generated.rs 25) | `backend\vamos_core\rpc\`·`src-tauri\` | P4-2 (4-1 serde·4-3 IPC) | IPC seam·5-7a 배포무결성 |
+| 5 | shared/types/ (vamos.ts·json_schema·validate_roundtrip.mjs) + src/ (React UI: ConfidenceBadge/WhyButton/Disclaimer) + blue_nodes/{dev,research,content} 스캐폴딩 | `shared\`·`src\`·`backend\vamos_core\blue_nodes\` | P4-2 (4-1/4-3/4-6) | 3언어 타입동기·UI·V1 E-Series 슬롯 |
+| 6 | scripts/ (roundtrip_test·generate_types·ipc_spawn_check·verify_artifacts·trace_matrix·check_lockfiles + p4_2/p4_3 매니페스트) | `scripts\` | P4-0~P4-3 | 하네스·산출물 게이트·재현 |
+| 7 | PHASE4-DEC-001~010·012·013 (ADR — 012 결번 아님, P4-3 집행) + phase4_retro.md | `VAMOS Engineering\decisions\` | P4-0~P4-3 | 결정 전문(A6)·회고(A11) |
+| 8 | SESSION_PROMPT_SKELETON.md (H1~H9 갭폐쇄 골격) + PHASE4-DEC-011(Opus↔Fable SOP) | `VAMOS Engineering\` | P4-2/P4-3 갭폐쇄 | Phase 5~8 프롬프트 필수 포함 골격 |
+
+> ※ ADR 실존 목록 = PHASE4-DEC-001~010, 012, 013 (011 SOP 포함). **DEC-012는 P4-3 게이트가 집행**(CI mypy 소스전환+VL-004 테스트면제). 추가 신규 CI job(I-1 vitest/Playwright 등)은 별도 ADR(DEC-014+) 선행 — DEC-011 §D 불변.
 
 ---
 
