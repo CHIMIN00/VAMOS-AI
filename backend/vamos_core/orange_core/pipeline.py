@@ -21,6 +21,7 @@ from vamos_core.infra.logger import log_event, new_trace_id
 from vamos_core.orange_core.i1_intent_detector import ChatModel, IntentDetector
 from vamos_core.orange_core.i2_context_builder import ContextBuilder
 from vamos_core.orange_core.i5_decision_engine import DecisionEngine
+from vamos_core.orange_core.i6_self_check import SelfCheckEngine
 from vamos_core.orange_core.i9_cost_manager import CostManager, count_tokens
 from vamos_core.orange_core.i20_failure_manager import FailureManager
 from vamos_core.safety.never_auto import detect_never_auto
@@ -52,6 +53,7 @@ class VamosState(TypedDict, total=False):
     pipeline_state: str
     failure_codes: list[str]
     fallback_ids: list[str]
+    self_check: dict[str, Any] | None  # I-6 산출 (verify 노드 → deliver 노드)
 
 
 def _stage(trace_id: str, stage: str, state_code: str) -> None:
@@ -64,6 +66,7 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
     detector = IntentDetector(llm=llm)
     builder = ContextBuilder()
     engine = DecisionEngine()
+    self_checker = SelfCheckEngine()
     cost = CostManager()
     failures = FailureManager()
     injected_llm = llm
@@ -147,17 +150,34 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
         return {"llm_response": text, "pipeline_state": "S5_OUTPUT_READY"}
 
     async def verify_node(state: VamosState) -> VamosState:
-        """SelfCheckGate 위치 (M-14) — V0 스텁: 항상 pass. V1에서 I-6 연동."""
+        """SelfCheckGate 위치 (M-14) — V1: I-6 Self-check Engine 활성화 (V0 스텁 대체).
+
+        I-6 결정론 4-검증 → self_check 보고서. reasoning_trace SelfCheck SKIP → 실판정 갱신
+        (감사 기록 — S3 conclusion 불변, DEC-010). 직선 토폴로지 보존(soft loop = retry_allowed).
+        """
         trace_id = state["trace_id"]
         _stage(trace_id, "verify", "S6_SELF_CHECKED")
         decision = state["decision"]
-        if decision is not None and decision.gates:
-            # DEC-010: reasoning_trace SelfCheck SKIP → PASS 갱신 (감사 기록 — 결론 불변)
+        if decision is None:
+            return {"pipeline_state": "S6_SELF_CHECKED"}
+        report = self_checker.run_self_check(
+            decision,
+            llm_response=state.get("llm_response"),
+            failure_codes=state.get("failure_codes", []),
+            trace_id=trace_id,
+        )
+        out: VamosState = {"self_check": report, "pipeline_state": "S6_SELF_CHECKED"}
+        if decision.gates:  # SelfCheckGate SKIP → 실판정 (PASS/WARN→PASS, FAIL→FAIL)
+            gate_result = "PASS" if report["verdict"] != "FAIL" else "FAIL"
             for entry in decision.gates.get("reasoning_trace", []):
                 if entry.get("gate") == "SelfCheckGate":
-                    entry["result"] = "PASS"
-                    entry["detail"] = {"v0_stub": True, "verdict": "pass"}
-        return {"pipeline_state": "S6_SELF_CHECKED"}
+                    entry["result"] = gate_result
+                    entry["detail"] = {"verdict": report["verdict"], "score": report["score"],
+                                       "risk": report["_risk"], "threshold": report["_threshold"]}
+        fb = report.get("_fallback_id")
+        if fb is not None:  # 2회 연속 FAIL 수렴 fallback (게이트 결과 우선, 02 §6.3 정본)
+            out["fallback_ids"] = [*state.get("fallback_ids", []), fb]
+        return out
 
     async def deliver_node(state: VamosState) -> VamosState:
         trace_id = state["trace_id"]
@@ -183,8 +203,11 @@ def build_pipeline(llm: ChatModel | None = None) -> Any:
                     "items": [],
                     "qod": 0.0,
                 },
-                "self_check": {"score": 1.0, "verdict": "PASS", "reasons": [],
-                               "retry_allowed": False},
+                "self_check": {  # I-6 산출 (verify 노드) — 미존재 시 보수적 PASS
+                    k: v for k, v in (state.get("self_check") or {
+                        "score": 1.0, "verdict": "PASS", "reasons": [], "retry_allowed": False,
+                    }).items() if not k.startswith("_")  # 내부 힌트(_risk 등) 제외 — 5필드 계약
+                },
                 "decision_ref": {  # A22 V0 연계 (PHASE4-DEC-010 — confidence 단일 출처 Decision)
                     "decision_id": decision.decision_id,
                     "gates": decision.gates or {},

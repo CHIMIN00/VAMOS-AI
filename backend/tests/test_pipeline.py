@@ -119,12 +119,13 @@ def test_never_auto_frozenset_verbatim():
 
 
 async def test_selfcheck_skip_to_pass_in_envelope(_env):
-    """DEC-010: verify 노드가 SelfCheck SKIP→PASS 갱신 — envelope decision_ref 반영."""
+    """V1(P6-1b): verify 노드 I-6 활성화 — SelfCheck SKIP→실판정(PASS) envelope 반영."""
     state = await run_pipeline("설명해줘", llm=_FakeLLM())
     trace = state["response_envelope"].decision_ref["gates"]["reasoning_trace"]
     self_check = next(t for t in trace if t["gate"] == "SelfCheckGate")
     assert self_check["result"] == "PASS"
-    assert self_check["detail"]["v0_stub"] is True
+    assert self_check["detail"]["verdict"] == "PASS"  # I-6 실판정 (v0_stub 대체)
+    assert "v0_stub" not in self_check["detail"]
     # 결론 불변 (S3 후 단일결정 원칙)
     assert state["decision"].conclusion == "ACCEPT"
 
