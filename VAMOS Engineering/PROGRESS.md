@@ -1,9 +1,23 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-12 (**P4-0 완료 — Phase 4 진입 게이트 PASS + 4-1 타입 동기화 왕복 25/25**)
+> 최종 갱신: 2026-06-12 (**P4-1 완료 — ORANGE CORE 8파일 + config.v1.toml 14섹션/LOCK 23 + E2E·Ollama 실측 PASS**)
 
 ## 현재 Phase
-**Phase 4 진행 중 — P4-0 ✅ 완료 (2026-06-12)** → 다음: **P4-1 (ORANGE CORE 8파일 + Registry 연동 + config.v1.toml 23키 — 하단 P4-0 결과의 "P4-1 입력" 참조)**
+**Phase 4 진행 중 — P4-1 ✅ 완료 (2026-06-12)** → 다음: **P4-2 (IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸 — 하단 P4-1 결과의 "P4-2 입력" 참조)**
+
+## P4-1 결과 (2026-06-12) — ORANGE CORE 8파일 + Registry 연동 + config.v1.toml (B2a·R2a: 로드맵 4-2+4-4+4-5)
+- ☑ **판정: PASS — P4-2 진입 허용** (수렴 선언: 적대 R1 공격 6종 전건 증거 방어 → R2 신규 발견 0. Stage Gate 23항 전건 실측 — 보류 0, `_targets/p4_1_stage_gate_실측_2026-06-12.md`)
+- ☑ **실파일 8/8 (GATE-03 분모)**: `backend/vamos_core/orange_core/{i1_intent_detector, i2_context_builder, i5_decision_engine, i8_policy_engine, i9_cost_manager, i19_approval_manager, i20_failure_manager}.py` 7 + I-3 구현체 `storage/memory_store.py` 1. 분모 외 지원: `orange_core/pipeline.py`·`infra/{config_loader, logger}.py`·`safety/never_auto.py`. 전 모듈 async·경계 model_validate 의무·전이 LogEvent·전 코드 LF(git i/lf·w/lf)
+- ☑ **4-5 config**: `config/config.v1.toml` **14섹션**(B4 13+[confidence] — B4 §4.1+PART2 V0 템플릿 정본 추출, 창작 0) · LOCK 물리 21 수록+[core] ipc 2키(3/30, DEC-009)+alert_thresholds=[70,85,95](DEC-002) · `check_config_lock.py` 분모 20→**23** 갱신 → Hook ✅ "LOCK 23키 위반 0건"(미정의 2키=blue_nodes·ui V0 부재 정상 경로) · `config_loader.py` VamosConfig+서브모델 14종·3단계 로딩(TOML→ENV `VAMOS_{SECTION}_{KEY}`→CLI·LOCK 전 단계 변경 불가)·frozen(런타임 변경 시 ValidationError — Defense Layer 1)·get_config() 싱글톤
+- ☑ **4-2 코어**: LangGraph StateGraph 직선 5노드(intake→plan→execute→verify→deliver, START/END 상수 — DEC-001 오케스트레이션 한정·중첩 0·Gate 우회 0) + S0_RECEIVED~S8_DONE 전이 기록 + Gate deny/hold 시 조기 종료(토폴로지 정본 보존 — execute pass-through·LLM 미호출) + 4-Gate(Policy→Approval→Cost→Evidence)+SelfCheckGate verify 스텁(SKIP→PASS 갱신) + **A21 3계층**(L1 config frozen / L2 게이트 / L3 `safety/never_auto.py` RA_NEVER_01~10 frozenset verbatim — 게이트 독립 차단 테스트 PASS) + ResponseEnvelope 5필드 LOCK
+- ☑ **신규 ADR PHASE4-DEC-010** (A22 수용처 이형 단일 결론): reasoning_trace V0 수용처 = **Decision.gates["reasoning_trace"]**(기존 optional dict — 20필드 FREEZE 무변경)+decision_ref 연계. D2.1-D5 §4.9 9필드(metadata)는 P4-2 IPC/UI 계층 표현으로 별개 활성. **confidence V0 산출 스텁 명기**(SOT 산출식 미정의 — §1.3.1 #3): insufficient→0.0 REFUSE(강제·단위테스트 검증) / block·stop·denied→0.0 / unknown·ambiguous→0.50 LOW / 그 외 0.90 HIGH — level은 config LOCK 임계(0.85/0.60/0.30)에서 단일 함수 파생
+- ☑ **4-4 Registry 연동**: LogEvent 발행 시 `registries.is_valid_event_type` 검증 의무(미등록 거부 테스트 PASS) + I-20 FAILURE_TO_FALLBACK 매핑(D2.0-02 모듈 절 기반 V0 서브셋·registries 양방 검증·로그만)
+- ☑ **저장·로깅(V0-STEP-5)**: memory_store(PART2 SQL 정본·CRUD 5종·TTL `min(close, created+30d)` M-30·aiosqlite — 실DB `backend/data/sqlite/vamos.db` 생성 실측) + logger(structlog JSONL·정본 7필드 매핑 표·trace_id UUID v4 필수·`vamos_{date}.jsonl`) + schema_registry.toml [sqlite.tables] memory_records 동기 등재(P4-0 주석 예고분 집행)
+- ☑ **하네스·테스트**: 의존성 4종(aiosqlite/tiktoken/structlog/aiofiles — B3 정본 버전, poetry venv 일치) · **pytest 108 passed**(기존 61 무회귀 + 신규 47: config 14·storage/logger 10·i1 5·i5 10(REFUSE 강제 경로 포함)·pipeline 8) · ruff/vamos_lint 0건 · 25모델 contracts.py/registries.py **무변경**(git diff 0) · 커밋 6건(d53c1a8→5a6e991) 매 커밋 하네스 PASS
+- ☑ **Ollama 실호출 PASS(PENDING 아님)**: ChatOllama llama3.2:3b 실응답 + **실모델 E2E** `S8_DONE | ACCEPT | locked=True | confidence 0.9 HIGH` + 실답변·JSONL trace 일관
+- ☑ **CLAUDE.md 갱신(4-5 바인딩·DEC-010 경로)**: §12 Decision 18→**20필드**(confidence 2필드+**approval_status 4값→D7 정본 2값(approved|denied) 동기 — DN-014·contracts.py 정합, 공시**) + §20 표 20→**23키**(confidence 3행) — 946→**950줄**(+4)·CR 0 + docs\sot\CLAUDE.md byte 재복사 **SHA-256 683E959C 일치**(기승인 운영 규칙)
+- ⚠️ **이형 발견 2건(기록 — SOT 무수정)**: ① PHASE_B4 §4.1 프리셋 `sinks=["file"]`+`[[logging.sinks]]` 동일 키 충돌(유효 TOML 불가) — V0 config는 PART2 V0 템플릿 표기 채택, B4 정비는 SOT edits 후보 ② CLAUDE.md §16 레지스트리 요약 수치(53+/20/13)는 P4-0 실측(123/36/23) 대비 stale — 본 세션 범위(§12/§20) 외, 차기 CLAUDE.md 정비 후보
+- 📌 **P4-2 입력**: ① **pnpm 설치 필요**(실측 부재 — node v23.1.0 실재) ② src-tauri 스캐폴딩+serde 활성화(DEC-005 순연분 — generate_types.py serde 슬롯 NotImplemented 기존재) ③ JSON-RPC 13 메서드(PHASE_B1 §5.2 — [core] ipc_max_restart=3/ipc_timeout_s=30 기수록) ④ BLUE NODE 3 스켈레톤+Tauri 셸 ⑤ Ollama 실측 기완료(차단 0) ⑥ D2.1-D5 §4.9 ResponseEnvelopeSchema(9필드·metadata)는 IPC 직렬화 계층에서 활성(PHASE4-DEC-010 결정 1-4) ⑦ 백업 `_targets/_integ/backup_p4_1/`
 
 ## P4-0 결과 (2026-06-12) — Phase 4 진입 게이트: 환경·도구(A7) + 선행 결정 9건 + 4-1 타입 동기화
 - ☑ **판정: PASS — P4-1 진입 허용** (수렴 선언: 적대 R1 6건 정정→R2 잔존 0→R3 1건 정정→R4 신규 0)
@@ -142,10 +156,10 @@
 - ⚠️ SDV-4 LOCK WARN 1 (5-3 C-04~C-08) — 비차단 이연 등록(D1_RESULTS_INDEX §3). 6-5는 RESOLVED
 
 ## 다음 작업
-**P4-1 — ORANGE CORE + Registry 연동 + config.v1.toml (B2a·R2a)** — 실파일 8(활성 I-1/2/3/5/19 + stub I-8/9/20, GATE-03) + 5-Phase Pipeline(LangGraph 오케스트레이션 전용 — PHASE4-DEC-001) + Gate 3종 + Defense Layer 1/3 + reasoning_trace + confidence 분기 + config.v1.toml **14섹션 23키**([cost] 80/100 LOCK+alert_thresholds — PHASE4-DEC-002/-003, [core] ipc 2키 — DEC-009) → P4-2(IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸) → P4-3(Phase 4 Gate, Must 11)
-→ 입력: **상단 P4-0 결과 "P4-1 입력"** + runtime_decisions.md + runtime_eng_plan.md + contracts.py 25모델(4-1 산출물) + PHASE4-DEC-001~009
-→ 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / 4-5에서 check_config_lock.py 분모 20→23 + CLAUDE.md §12/§20 갱신(DEC-010 바인딩)
-→ 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
+**P4-2 — IPC JSON-RPC 13 + src-tauri 스캐폴딩+serde 활성화 + BLUE NODE 3 + Tauri 셸 (B2c·R2c)** → P4-3(Phase 4 Gate, Must 11)
+→ 입력: **상단 P4-1 결과 "P4-2 입력" ①~⑦** (pnpm 설치 필요·node v23.1.0 실재 / src-tauri+serde 활성화[DEC-005 순연·generate_types.py serde 슬롯 NotImplemented 기존재] / JSON-RPC 13 메서드[PHASE_B1 §5.2·[core] ipc_max_restart=3/ipc_timeout_s=30 기수록] / BLUE NODE 3 스켈레톤+Tauri 셸 / Ollama 실측 기완료 차단 0 / D2.1-D5 §4.9 ResponseEnvelopeSchema 9필드는 IPC 직렬화 계층 활성[PHASE4-DEC-010 결정 1-4] / 백업 `_targets/_integ/backup_p4_1/`) + runtime_decisions.md + runtime_eng_plan.md R2c + contracts.py 25모델 + PHASE4-DEC-005(serde 순연)/-009(ipc 키)/-010
+→ 매 커밋 하네스: 코드 생성 → ruff → vamos_lint → pytest → PASS → 커밋 / A20 왕복은 Rust serde 컴파일 검증 동반(DEC-005)
+→ 잔여(비차단): ~~SOT edits 승인 대기~~ → **✅ 집행 완료(2026-06-12)** / 차기 CLAUDE.md 정비 후보(§16 레지스트리 수치 53+/20/13 → 실측 123/36/23) / B4 §4.1 sinks TOML 키 충돌(SOT edits 후보) / P6-0(5건+이형 3건+A-06 등) / P7-0(9건+이형 2건+5-4 SHELL 87) / P8-0(C-004 V3 근거) / 구키 revoke(사용자)
 
 ## 참조 파일
 - 04. 구현단계/v13_results/phase0/D1_RESULTS_INDEX.md (D1 산출물 인덱스 + 게이트 + 이연대장)

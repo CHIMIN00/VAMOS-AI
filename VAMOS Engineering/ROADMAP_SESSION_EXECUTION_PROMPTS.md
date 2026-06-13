@@ -918,7 +918,9 @@ VAMOS 로드맵 Phase 3, 세션 P3-2 — X1 횡단 전략 + 계획서 + Phase 3 
 
 ---
 
-### 세션 P4-1: ORANGE CORE + Registry + config
+### 세션 P4-1: ORANGE CORE + Registry + config ✅ 완료 (2026-06-12)
+
+> **구판 대체**: 아래 舊프롬프트는 P4-0 인계 확정판(전제 5건·참조 라인 지정·A22/confidence ADR 선확정·Stage Gate 23항 실측)으로 대체 집행되었다(§5 구판 보정분 유지). 집행 결과: 실파일 8/8 + pipeline(LangGraph 직선 5노드) + safety NEVER_AUTO 10 + config.v1.toml 14섹션(LOCK 물리 21)+check_config_lock 23키 + PHASE4-DEC-010 + pytest 108(61 무회귀 포함) + Ollama 실호출/실모델 E2E PASS + CLAUDE.md §12 Decision 20·§20 LOCK 23(950줄·sot SHA 683E959C 일치). 상세는 PROGRESS.md "P4-1 결과" + `_targets/p4_1_stage_gate_실측_2026-06-12.md`.
 
 **로드맵 작업 매핑:**
 
@@ -1251,7 +1253,7 @@ VAMOS 로드맵 Phase 6, 세션 P6-3 — V1 Gate
 | | P3-1 | R1 런타임 10개 LOCK | ✅ (2026-06-12, runtime_decisions.md + PHASE3-DEC-001~010) |
 | | P3-2 | X1 전략 + 계획서 + Gate | ✅ (2026-06-12, 4전략+계획서 2+3-V, tag phase3-complete + 3-AI 교차감사 확정 PHASE3-DEC-011) |
 | **4** | P4-0 | 진입 게이트(A7+결정 9건)+타입 동기화 | ✅ |
-| | P4-1 | ORANGE CORE + Registry + config | ⬜ |
+| | P4-1 | ORANGE CORE + Registry + config | ✅ |
 | | P4-2 | IPC + BLUE NODE + 프론트엔드 | ⬜ |
 | | P4-3 | Phase 4 Gate | ⬜ |
 | **5** | P5-1 | Eval + D3 + GO/NO-GO | ⬜ |
