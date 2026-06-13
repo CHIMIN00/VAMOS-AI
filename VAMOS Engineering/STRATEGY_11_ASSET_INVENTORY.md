@@ -534,6 +534,21 @@ D:\VAMOS\
 
 > ※ P6-1b = 표준 구현(게이트 아님 — H3 §E max+ultracode, II-1/II-2/II-4/III-3 풀가동). I-Series 17 = 기존 8 + 신규 9. 하네스 pytest 121→**182** · mypy 26→**35 files** · vamos_lint 0/**57**. **잠긴 분모 변경 0**(contracts 25·registries 123/36/23 — 등록 식별자 재사용, log_event 강제검증으로 미등록 차단). **핵심 발견**: D2.0-02 §7 I-번호 [LEGACY](L624) → 정본 D2.0-01 §5.6 + §4.0 매핑(I-13/14=0:1 GAP 신규·I-17=D2.0-03). **6-3/6-4 경계**: 실 RAG/임베딩(I-2/16)·멀티모달(I-4/13)·LLM요약(I-14)·노드실행(I-17)=6-4, 6-3=인터페이스+결정론. **적대 검증**: round-1 7건 수리(major correctness 2)·round-2 dry. 신규 식별자(이벤트/실패코드/폴백) 추가 0 → SOT 무수정.
 
+## 2.20 Phase 6 P6-1b-2 (V1 [6-3 CORE 활성화 2분할 2/2] — E6+S1+A2+B1+C3+D2 15 모듈 → 6-3 분모 32 완성) 생성 자산 (2026-06-14 등재 — §2.19 P6-1b 직계)
+
+| # | 자산 | 위치 | P6-1b-2 작업 | 사용처 |
+|---|------|------|-------------|--------|
+| 1 | **reasoning 패키지** (_common BaseVerifier/BaseReasoningEngine·c1_logic_verifier·c2_math_verifier·c3_code_verifier·d1_think_engine·d2_multimodal_engine) | `backend\vamos_core\reasoning\` | 6-3 CORE | C-1/2/3 + D-1/2 — 검증·추론 엔진(설계 1-1 통합·결정론, 실 LLM/solver 6-4) |
+| 2 | **adapters 패키지** (a1_multibrain_adapter·a2_preset_modularization) | `backend\vamos_core\adapters\` | 6-3 CORE | A-1 5-step 라우팅(BrainAdapterResponse 재사용)·A-2 프리셋 CRUD |
+| 3 | **storage/b3_memory_decay.py** (지수감쇠 `0.5^(days/30)`·classify·DecayEvaluation) | `backend\vamos_core\storage\` | 6-3 CORE | B-3 Memory Decay — memory_store(I-3) 연계·자동삭제 금지(LOCK-MR-005) |
+| 4 | **tools 패키지** (_base BaseExternalTool·e1~e6·__init__ I-10 합성) | `backend\vamos_core\tools\` | 6-3 CORE | E-1~6 외부도구 ToolRegistryEntry 등록 + invoke stub(실 API/실행 6-4) |
+| 5 | **orange_core/s1_self_check_surface.py** (I-6+I-15 wrap) | `backend\vamos_core\orange_core\` | 6-3 CORE | S-1 항상-ON 최소검증 surface(재구현 금지) |
+| 6 | **신규 10 단위 테스트** (test_c1/c2/c3/d1/d2/b3/a1/a2/s1/e_series — 72 테스트, 적대 수리 13 포함) | `backend\tests\` | 6-3 CORE | 모듈 회귀·적대 검증 round-1 17건 회귀 |
+| 7 | scripts/p6_1b_2_manifest.json (28 항목 — H2 R16) + trace_matrix.map.json(+15 매핑 41) | `scripts\` | H2/IV-3 | 산출물 실존 검증·추적 |
+| 8 | PROGRESS "P6-1b-2 결과" + 회고 decisions/phase6_p6-1b-2_retro.md + 로드맵 6-3 ✅ 완료 | `VAMOS Engineering\`·리포 루트 | 마감/A12 | 진행 추적·P6-1c 입력 |
+
+> ※ P6-1b-2 = 표준 구현(게이트 아님 — H3 §E max+ultracode, II-1/II-2/II-4/III-3 풀가동). 15 = E6+S1+A2+B1+C3+D2 → I-17(P6-1b)와 합쳐 **6-3 분모 32 전건 완성**. 하네스 pytest 182→**254** · mypy 35→**55 files** · vamos_lint 0/**87**. **잠긴 분모 변경 0**(contracts 25 재사용[A-1=BrainAdapterResponse·E=ToolRegistryEntry·B-3=MemoryRecord, C/D=내부 dataclass]·registries 123/36/23 등록 식별자 재사용[설계 brain.route.*/memory.decay.* 미등록 → ui.node.selected/mem.reference.updated 재매핑]·config 14섹션[B-3 모듈 상수]). **신규 의존성 0**(stdlib만). **6-3/6-4 경계**: 실 LLM/외부 API/RAG/실 solver(Z3)/Docker 샌드박스(E-4)/멀티모달 모델 = 6-4(`defer_to_6_4` 마커). 잠긴 TOOL_REGISTRY_SEED(2) 무변경(라우터 합성). **적대 검증**: round-1 7 finders → 17건 수리(major correctness 5: C-2 0-나눗셈 escape·C-1 부분문자열/불용어 2·D-2 confidence 붕괴·B-3 naive 타임스탬프)·round-2 8 fix 독립 재검증 dry. **pre-existing stale anchor 2건**(p6_1a/p6_0 로드맵) durable substring 교정. 신규 식별자 추가 0 → SOT 무수정.
+
 ---
 
 # 3. 용도별 분류

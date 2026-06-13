@@ -1,9 +1,20 @@
 # VAMOS 진행 상태
 
-> 최종 갱신: 2026-06-14 (**P6-1b — I-Series 17 CORE 완성 (6-3 CORE 활성화 2분할 1/2, 신규 9 모듈·하네스 GREEN 182·적대 검증 수렴)**)
+> 최종 갱신: 2026-06-14 (**P6-1b-2 — E6+S1+A2+B1+C3+D2 15 모듈 완성 → 6-3 분모 32 전건 완성·로드맵 6-3 ✅·하네스 GREEN 254·적대 17건 수리·round-2 dry**)
 
 ## 현재 Phase
-**P6-1b ✅ 완료 (2026-06-14)** — I-Series 17 CORE 완성 (6-3 2분할 1/2) → 다음: **P6-1b-2 (E6+S1+A2+B1+C3+D2 15 모듈)**
+**P6-1b-2 ✅ 완료 (2026-06-14)** — E6+S1+A2+B1+C3+D2 15 모듈 6-3 활성화 → **6-3 CORE 분모 32 전건 완성** → 다음: **P6-1c (6-4 RAG/실 LLM/멀티모달/실 solver)**
+
+## P6-1b-2 결과 (2026-06-14) — Phase 6 (V1 구현) [6-3 CORE 활성화 2분할 2/2]: E6+S1+A2+B1+C3+D2 15 모듈 (표준 구현·게이트 아님)
+- ☑ **판정: PASS → 6-3 전건 32 완성 → P6-1c 진입 허용** (max + ultracode). 6-4 RAG = P6-1c 비대상.
+- ☑ **15 모듈 6-3 활성화**: **S-1**(I-6/I-15 wrap surface) · **C-1/C-2/C-3**(논리/수식/코드 검증기 — 결정론, 실 SAT/SymPy/Z3/샌드박스 6-4) · **D-1/D-2**(Think/Multimodal 엔진 — 전략선택·융합·골격, 실 LLM 6-4) · **B-3**(Memory Decay 지수감쇠 `0.5^(days/30)`·임계 0.3/0.1·memory_store 연계) · **A-1**(MultiBrain 5-step 라우팅·BrainAdapterResponse 계약 재사용, 실 멀티-LLM 6-4) · **A-2**(Preset CRUD) · **E-1~E-6**(외부도구 ToolRegistryEntry 등록 + invoke stub, 실 API/실행 6-4). I-Series 17(P6-1b) + 15 = **6-3 분모 32 완성**.
+- ☑ **명명/위치 정본근거**: `reasoning/`(C+D, 설계 1-1 통합·BaseVerifier/BaseReasoningEngine) · `adapters/`(A) · `tools/`(E §5.8) · `storage/b3_memory_decay.py` · `orange_core/s1_self_check_surface.py`(§5.7). VL-006 시리즈 범위 검증.
+- ☑ **잠긴 분모 변경 0**: contracts 25(A-1=BrainAdapterResponse·E=ToolRegistryEntry·B-3=MemoryRecord 재사용, C/D 결과=모듈 내부 dataclass) · registries 123/36/23(등록 식별자 재사용·설계 이벤트 재매핑) · config 14섹션(B-3 모듈 상수, I-15 선례) · 토폴로지/5-Gate/9-State 불변. **신규 의존성 0**(stdlib). SOT 무수정.
+- ☑ **6-3/6-4 경계 엄수**: 6-3 = 인터페이스+결정론+stub(`defer_to_6_4` 마커). 6-4 = 실 LLM I/O·외부 API·RAG·임베딩·멀티모달 모델·실 solver(Z3)·Docker 샌드박스(E-4). 잠긴 TOOL_REGISTRY_SEED(2) 무변경(라우터 합성 seed 2 + E 6 = 8).
+- ☑ **STEP 3 검증**: verify_artifacts p6_1b_2 **28/0**(회귀 p6_1b 22/p6_1a 16/p6_0 11/p5_1 10/p4_2 34/p4_3 10) · trace **41/미커버 0/허위 0**(+15) · lockfile drift 0. ⚠️ pre-existing stale anchor 2건(p6_1a/p6_0 로드맵 휘발성 status 문자열, P6-1b 편집 잔재) durable substring 교정.
+- ☑ **STEP 4 적대 검증(ultracode loop-until-dry)**: round-1 7 finders → **19 후보 → 17 확정 수리(major 5)**: C-2 0-나눗셈/오버플로 escape·C-1 부분문자열 부정 매칭·C-1 불용어 허위모순·D-2 confidence 타입붕괴·B-3 naive 타임스탬프 TypeError + minor 12(D-1 부분문자열·A-1 오버라이드 후보밖·A-2 patch버전·S-1 키셋 + test-gap 8). round-2 8 fix 독립 재검증 → **전건 correct·new_defect 0 → dry 수렴**. 교훈(P6-1b 재확인): 단위테스트 green 코드에 major correctness 5건 잠복.
+- 🎯 **하네스 pytest 182→254**(신규 59 + 적대 수리 13) · mypy strict 35→55 files · ruff clean · vamos_lint 0/87. commit + push 4-way · tag 없음(v1-release=6-9). 회고 `VAMOS Engineering/decisions/phase6_p6-1b-2_retro.md`.
+- 📌 **P6-1c 입력**: 6-4 RAG/임베딩/실 LLM/멀티모달 모델/실 solver/Docker 샌드박스 — 본 6-3 모듈의 `defer_to_6_4` 마커가 진입점. item 11 NeMo/Guardrails·V1-004·II-6 = P6-3/6-4 이연. B-3 운영컬럼 DB 마이그레이션 = 6-4/후속.
 
 ## P6-1b 결과 (2026-06-14) — Phase 6 (V1 구현) [6-3 CORE 활성화 2분할 1/2]: I-Series 17 CORE 완성 (표준 구현·게이트 아님)
 - ☑ **판정: PASS → P6-1b-2 진입 허용** (max + ultracode). 범위 = I-Series 17 CORE(V1-Phase 1)만. E6+S1+A2+B1+C3+D2(15)=P6-1b-2 · 6-4 RAG=P6-1c 비대상.

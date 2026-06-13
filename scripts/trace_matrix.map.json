@@ -4,132 +4,295 @@
     {
       "id": "DEC-006-A20-roundtrip",
       "source": "PART2 §2 V0-STEP-3 / test_strategy §3 / 로드맵 4-V",
-      "tests": ["scripts/roundtrip_test.py", "backend/tests/test_schemas.py"]
+      "tests": [
+        "scripts/roundtrip_test.py",
+        "backend/tests/test_schemas.py"
+      ]
     },
     {
       "id": "DEC-001-5Gate-order",
       "source": "test_strategy §3 / 로드맵 3-1",
-      "tests": ["backend/tests/test_i5_gate.py"]
+      "tests": [
+        "backend/tests/test_i5_gate.py"
+      ]
     },
     {
       "id": "DEC-004-LangGraph-pipeline",
       "source": "로드맵 3-4 / 4-2 5-Phase Pipeline",
-      "tests": ["backend/tests/test_pipeline.py"]
+      "tests": [
+        "backend/tests/test_pipeline.py"
+      ]
     },
     {
       "id": "DEC-005-Downshift-thresholds",
       "source": "test_strategy §3 / config.v1.toml LOCK 80·100",
-      "tests": ["backend/tests/test_config.py"]
+      "tests": [
+        "backend/tests/test_config.py"
+      ]
     },
     {
       "id": "DEC-010-A25-confidence-REFUSE",
       "source": "test_strategy §3 / 로드맵 3-7c",
-      "tests": ["backend/tests/test_i5_gate.py"]
+      "tests": [
+        "backend/tests/test_i5_gate.py"
+      ]
     },
     {
       "id": "I-3-L0-memory-CRUD",
       "source": "로드맵 4-2 / V0-STEP-5 L0 메모리",
-      "tests": ["backend/tests/test_storage.py"]
+      "tests": [
+        "backend/tests/test_storage.py"
+      ]
     },
     {
       "id": "I-1-intent-parse",
       "source": "로드맵 4-2 ORANGE CORE I-1",
-      "tests": ["backend/tests/test_i1.py"]
+      "tests": [
+        "backend/tests/test_i1.py"
+      ]
     },
     {
       "id": "DEC-006-IPC-13methods",
       "source": "PART2 V0-STEP-3 / PHASE_B1 §5.2 / 로드맵 4-1 (P4-2)",
-      "tests": ["backend/tests/test_rpc_server.py"]
+      "tests": [
+        "backend/tests/test_rpc_server.py"
+      ]
     },
     {
       "id": "DEC-006-A20-serde-rust",
       "source": "PART2 V0-STEP-3 / DEC-005 §5 (P4-2 serde 활성화). 드라이버가 cargo test roundtrip(.rs) 구동",
-      "tests": ["scripts/roundtrip_test.py"]
+      "tests": [
+        "scripts/roundtrip_test.py"
+      ]
     },
     {
       "id": "DEC-008-5-7a-python-spawn",
       "source": "PART2 V0-STEP-3 Stage Gate #4~#6 / DEC-008 (P4-2 5-7a). 드라이버가 cargo test bridge_spawn(.rs) 구동",
-      "tests": ["scripts/ipc_spawn_check.py"]
+      "tests": [
+        "scripts/ipc_spawn_check.py"
+      ]
     },
     {
       "id": "4-6-blue-node-scaffold",
       "source": "로드맵 4-6 / PHASE_B2 §5.3 (P4-2 디렉토리 스캐폴딩)",
-      "tests": ["backend/tests/test_blue_nodes_scaffold.py"]
+      "tests": [
+        "backend/tests/test_blue_nodes_scaffold.py"
+      ]
     },
     {
       "id": "5-3-D3-module-catalog",
       "source": "로드맵 5-3 / D2.0-01 §5.6 카탈로그 25 ↔ V0 코드 8 (P5-1 D3)",
-      "tests": ["backend/tests/test_pipeline.py", "backend/tests/test_i1.py"]
+      "tests": [
+        "backend/tests/test_pipeline.py",
+        "backend/tests/test_i1.py"
+      ]
     },
     {
       "id": "5-4-D3-schema-field",
       "source": "로드맵 5-4 / D2.1 vs Pydantic 25 + confidence_score 3곳 (P5-1 D3)",
-      "tests": ["scripts/validate_schema_registry.py", "scripts/roundtrip_test.py", "backend/tests/test_schemas.py"]
+      "tests": [
+        "scripts/validate_schema_registry.py",
+        "scripts/roundtrip_test.py",
+        "backend/tests/test_schemas.py"
+      ]
     },
     {
       "id": "5-5-D3-registry",
       "source": "로드맵 5-5 / D2.1-D2 §5.1~5.3 EventType 123/Failure 36/Fallback 23 (P5-1 D3)",
-      "tests": ["scripts/gen_registries_py.py", "backend/tests/test_schemas.py"]
+      "tests": [
+        "scripts/gen_registries_py.py",
+        "backend/tests/test_schemas.py"
+      ]
     },
     {
       "id": "5-6-D3-lock",
       "source": "로드맵 5-6 / config.v1.toml LOCK 23 + confidence 임계 0.85/0.60/0.30 (P5-1 D3)",
-      "tests": ["scripts/check_config_lock.py", "backend/tests/test_config.py"]
+      "tests": [
+        "scripts/check_config_lock.py",
+        "backend/tests/test_config.py"
+      ]
     },
     {
       "id": "6-1-item16-Alembic-V0-baseline",
       "source": "로드맵 6-1 / PHASE5-DEC-001 item 16 / STRATEGY_06 §3.4 A23 (P6-1a — V0 스키마 동결 + 무손실 호환)",
-      "tests": ["backend/tests/test_alembic_baseline.py"]
+      "tests": [
+        "backend/tests/test_alembic_baseline.py"
+      ]
     },
     {
       "id": "6-2-B1-vamos_lint-Layer2",
       "source": "로드맵 6-2 / STRATEGY_09 §8.2 (P6-1a — VL-006~008: 187 모듈 명명·15 교차용어·SOT 2 연동)",
-      "tests": ["scripts/test_vamos_lint_layer2.py"]
+      "tests": [
+        "scripts/test_vamos_lint_layer2.py"
+      ]
     },
     {
       "id": "6-3-I6-self-check-engine",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-6 + D2.0-02 §7.51~7.53 (P6-1b — verify 노드 활성화)",
-      "tests": ["backend/tests/test_i6_self_check.py"]
+      "tests": [
+        "backend/tests/test_i6_self_check.py"
+      ]
     },
     {
       "id": "6-3-I15-evidence-qod",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-15 + D2.0-02 §7.90~7.92 (P6-1b — EvidenceGate 활성화)",
-      "tests": ["backend/tests/test_i15_evidence_qod.py"]
+      "tests": [
+        "backend/tests/test_i15_evidence_qod.py"
+      ]
     },
     {
       "id": "6-3-I11-output-composer",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-11 (P6-1b — D2.0-02 0:1 GAP 신규 최소)",
-      "tests": ["backend/tests/test_i11_output_composer.py"]
+      "tests": [
+        "backend/tests/test_i11_output_composer.py"
+      ]
     },
     {
       "id": "6-3-I10-tool-router",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-10 + D2.0-02 §7.63~7.68 (P6-1b — 라우팅 활성화)",
-      "tests": ["backend/tests/test_i10_tool_router.py"]
+      "tests": [
+        "backend/tests/test_i10_tool_router.py"
+      ]
     },
     {
       "id": "6-3-I4-multimodal-interpreter",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-4 + D2.0-02 §7.31~7.40 (P6-1b — 출력 구조화, 멀티모달 6-4)",
-      "tests": ["backend/tests/test_i4_multimodal_interpreter.py"]
+      "tests": [
+        "backend/tests/test_i4_multimodal_interpreter.py"
+      ]
     },
     {
       "id": "6-3-I16-knowledge-search",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-16 (P6-1b — 검색 인터페이스+결정론 폴백, RAG 6-4)",
-      "tests": ["backend/tests/test_i16_knowledge_search.py"]
+      "tests": [
+        "backend/tests/test_i16_knowledge_search.py"
+      ]
     },
     {
       "id": "6-3-I14-summarizer-distiller",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-14 (P6-1b — D2.0-02 0:1 GAP 신규 최소)",
-      "tests": ["backend/tests/test_i14_summarizer.py"]
+      "tests": [
+        "backend/tests/test_i14_summarizer.py"
+      ]
     },
     {
       "id": "6-3-I13-output-renderer",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-13 (P6-1b — D2.0-02 0:1 GAP 신규 최소, 멀티모달 렌더 6-4)",
-      "tests": ["backend/tests/test_i13_output_renderer.py"]
+      "tests": [
+        "backend/tests/test_i13_output_renderer.py"
+      ]
     },
     {
       "id": "6-3-I17-blue-node-manager",
       "source": "로드맵 6-3 / D2.0-01 §5.6 I-17 + D2.0-03 BLUE_NODES (P6-1b — 레지스트리+요청봉투, 실행 6-4)",
-      "tests": ["backend/tests/test_i17_blue_node_manager.py"]
+      "tests": [
+        "backend/tests/test_i17_blue_node_manager.py"
+      ]
+    },
+    {
+      "id": "6-3-S1-self-check-surface",
+      "source": "로드맵 6-3 / D2.0-01 §5.7 S-1 (P6-1b-2 — I-6/I-15 항상-ON wrap)",
+      "tests": [
+        "backend/tests/test_s1_self_check_surface.py"
+      ]
+    },
+    {
+      "id": "6-3-C1-logic-verifier",
+      "source": "로드맵 6-3 / D2.0-01 §5.11 C-1 + 1-1/01_logic (P6-1b-2 — 결정론 모순탐지, SAT/LLM 6-4)",
+      "tests": [
+        "backend/tests/test_c1_logic_verifier.py"
+      ]
+    },
+    {
+      "id": "6-3-C2-math-verifier",
+      "source": "로드맵 6-3 / D2.0-01 §5.11 C-2 + 1-1/02_math (P6-1b-2 — 안전 산술평가, SymPy/Z3 6-4)",
+      "tests": [
+        "backend/tests/test_c2_math_verifier.py"
+      ]
+    },
+    {
+      "id": "6-3-C3-code-verifier",
+      "source": "로드맵 6-3 / D2.0-01 §5.11 C-3 + 1-1/03_code (P6-1b-2 — ast 구문/정적보안, 샌드박스 E-4 6-4)",
+      "tests": [
+        "backend/tests/test_c3_code_verifier.py"
+      ]
+    },
+    {
+      "id": "6-3-D1-think-engine",
+      "source": "로드맵 6-3 / D2.0-01 §5.12 D-1 + 1-1/04_think (P6-1b-2 — 전략선택/골격, 실 LLM 6-4)",
+      "tests": [
+        "backend/tests/test_d1_think_engine.py"
+      ]
+    },
+    {
+      "id": "6-3-D2-multimodal-engine",
+      "source": "로드맵 6-3 / D2.0-01 §5.12 D-2 + 1-1/05_multimodal+3-2 (P6-1b-2 — 융합전략/패스스루, 모델 6-4)",
+      "tests": [
+        "backend/tests/test_d2_multimodal_engine.py"
+      ]
+    },
+    {
+      "id": "6-3-B3-memory-decay",
+      "source": "로드맵 6-3 / D2.0-01 §5.10 B-3 + 6-4/01_memory-hierarchy (P6-1b-2 — 지수감쇠 결정론, memory_store 연계)",
+      "tests": [
+        "backend/tests/test_b3_memory_decay.py"
+      ]
+    },
+    {
+      "id": "6-3-A1-multibrain-adapter",
+      "source": "로드맵 6-3 / D2.0-01 §5.9 A-1 + 6-9_Brain-Adapter-HAL (P6-1b-2 — 5-step 라우팅, 실 LLM 6-4)",
+      "tests": [
+        "backend/tests/test_a1_multibrain_adapter.py"
+      ]
+    },
+    {
+      "id": "6-3-A2-preset-modularization",
+      "source": "로드맵 6-3 / D2.0-01 §5.9 A-2 + guides PART2 §6 (P6-1b-2 — 프리셋 CRUD, ties I-13)",
+      "tests": [
+        "backend/tests/test_a2_preset_modularization.py"
+      ]
+    },
+    {
+      "id": "6-3-E1-coding-helper",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-1 (P6-1b-2 — ToolRegistry 등록, 실 LLM 6-4)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
+    },
+    {
+      "id": "6-3-E2-web-search",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-2 (P6-1b-2 — ToolRegistry 등록, 외부 API 6-4)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
+    },
+    {
+      "id": "6-3-E3-document-parser",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-3 (P6-1b-2 — ToolRegistry 등록, 실 파싱 6-4)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
+    },
+    {
+      "id": "6-3-E4-code-executor",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-4 (P6-1b-2 — ToolRegistry 등록, Docker 샌드박스 6-4/6-2)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
+    },
+    {
+      "id": "6-3-E5-image-analyzer",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-5 (P6-1b-2 — ToolRegistry 등록, 비전 API 6-4)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
+    },
+    {
+      "id": "6-3-E6-z3-solver",
+      "source": "로드맵 6-3 / D2.0-01 §5.8 E-6 (P6-1b-2 — ToolRegistry 등록, 실 solver 6-4)",
+      "tests": [
+        "backend/tests/test_e_series_tools.py"
+      ]
     }
   ]
 }

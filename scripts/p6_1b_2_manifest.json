@@ -1,0 +1,145 @@
+{
+  "_comment": "P6-1b-2 (Phase 6 V1 [6-3 CORE 활성화 2분할 2/2] — E6+S1+A2+B1+C3+D2 = 15 모듈 활성화, 6-3 분모 32 완성) 산출물 실존 검증 매니페스트 (R16 착시 방어 — H2). verify_artifacts.py 전용 인자. 무인자 실행 금지. 표준 구현(게이트 아님).",
+  "artifacts": [
+    {
+      "path": "backend/vamos_core/orange_core/s1_self_check_surface.py",
+      "min_bytes": 2000,
+      "must_contain": ["S-1 Self-check Engine", "class SelfCheckSurface", "run_self_check", "minimal_check", "assess_evidence", "I-6", "I-15"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/_common.py",
+      "min_bytes": 2500,
+      "must_contain": ["BaseVerifier", "BaseReasoningEngine", "def judge", "CONFIDENCE_PASS", "should_escalate", "LOCK-VR-05"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/c1_logic_verifier.py",
+      "min_bytes": 3000,
+      "must_contain": ["C-1 Logic Verifier", "class LogicVerifier", "LogicVerifyRequest", "contradiction", "defer_to_6_4"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/c2_math_verifier.py",
+      "min_bytes": 4000,
+      "must_contain": ["C-2 Math Verifier", "class MathVerifier", "MathVerifyRequest", "_safe_eval", "z3_solver_E-6", "atol"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/c3_code_verifier.py",
+      "min_bytes": 4000,
+      "must_contain": ["C-3 Code Verifier", "class CodeVerifier", "CodeVerifyRequest", "ast.parse", "docker_sandbox_E-4", "is_secure"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/d1_think_engine.py",
+      "min_bytes": 3000,
+      "must_contain": ["D-1 Think Engine", "class ThinkEngine", "select_strategy", "reasoning_trace", "cot", "tot", "got"]
+    },
+    {
+      "path": "backend/vamos_core/reasoning/d2_multimodal_engine.py",
+      "min_bytes": 3000,
+      "must_contain": ["D-2 Multimodal Engine", "class MultimodalEngine", "select_fusion", "confidence_per_modality", "I-4", "I-13"]
+    },
+    {
+      "path": "backend/vamos_core/storage/b3_memory_decay.py",
+      "min_bytes": 4000,
+      "must_contain": ["B-3 Memory Decay", "compute_decay_score", "HALF_LIFE_DAYS", "DECAY_THRESHOLD_REVIEW", "mem.reference.updated", "DEMOTE_CANDIDATE"]
+    },
+    {
+      "path": "backend/vamos_core/adapters/a1_multibrain_adapter.py",
+      "min_bytes": 5000,
+      "must_contain": ["A-1 MultiBrain Adapter", "class MultiBrainAdapter", "classify_complexity", "gate_check", "BrainAdapterResponse", "ui.node.selected", "fallback_chain"]
+    },
+    {
+      "path": "backend/vamos_core/adapters/a2_preset_modularization.py",
+      "min_bytes": 2000,
+      "must_contain": ["A-2 Preset Modularization", "class PresetStore", "PresetBundle", "def apply", "I-13"]
+    },
+    {
+      "path": "backend/vamos_core/tools/_base.py",
+      "min_bytes": 2000,
+      "must_contain": ["BaseExternalTool", "def entry", "def invoke", "ToolRegistryEntry", "ui.tool.call.started", "deferred_to_6_4"]
+    },
+    {
+      "path": "backend/vamos_core/tools/__init__.py",
+      "min_bytes": 1200,
+      "must_contain": ["E_SERIES_TOOLS", "build_tool_router_with_e_series", "e_series_entries", "TOOL_REGISTRY_SEED"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e1_coding_helper.py",
+      "min_bytes": 600,
+      "must_contain": ["E-1 Coding", "class CodingHelper", "e1_coding_helper"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e2_web_search.py",
+      "min_bytes": 600,
+      "must_contain": ["E-2 Web Search", "class WebSearch", "FB_USE_WEB_SEARCH"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e3_document_parser.py",
+      "min_bytes": 600,
+      "must_contain": ["E-3 Document Parser", "class DocumentParser", "FB_REQ_REUPLOAD"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e4_code_executor.py",
+      "min_bytes": 700,
+      "must_contain": ["E-4 Code Executor", "class CodeExecutor", "approval", "high"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e5_image_analyzer.py",
+      "min_bytes": 600,
+      "must_contain": ["E-5 Image Analyzer", "class ImageAnalyzer", "llm.vision"]
+    },
+    {
+      "path": "backend/vamos_core/tools/e6_z3_solver.py",
+      "min_bytes": 600,
+      "must_contain": ["E-6 Z3 Solver", "class Z3Solver", "solver.smt"]
+    },
+    {
+      "path": "backend/tests/test_s1_self_check_surface.py",
+      "min_bytes": 1500,
+      "must_contain": ["SelfCheckSurface", "test_surface_self_check_matches_i6"]
+    },
+    {
+      "path": "backend/tests/test_c1_logic_verifier.py",
+      "min_bytes": 1200,
+      "must_contain": ["LogicVerifier", "test_negation_contradiction_detected"]
+    },
+    {
+      "path": "backend/tests/test_c2_math_verifier.py",
+      "min_bytes": 1200,
+      "must_contain": ["MathVerifier", "test_no_eval_used"]
+    },
+    {
+      "path": "backend/tests/test_c3_code_verifier.py",
+      "min_bytes": 1200,
+      "must_contain": ["CodeVerifier", "test_eval_security_issue"]
+    },
+    {
+      "path": "backend/tests/test_d1_think_engine.py",
+      "min_bytes": 1200,
+      "must_contain": ["ThinkEngine", "test_strategy_got_multi_branch"]
+    },
+    {
+      "path": "backend/tests/test_d2_multimodal_engine.py",
+      "min_bytes": 1200,
+      "must_contain": ["MultimodalEngine", "test_image_modality_deferred"]
+    },
+    {
+      "path": "backend/tests/test_b3_memory_decay.py",
+      "min_bytes": 1500,
+      "must_contain": ["MemoryDecay", "test_decay_score_half_life"]
+    },
+    {
+      "path": "backend/tests/test_a1_multibrain_adapter.py",
+      "min_bytes": 1500,
+      "must_contain": ["MultiBrainAdapter", "test_invoke_returns_contract_stub"]
+    },
+    {
+      "path": "backend/tests/test_a2_preset_modularization.py",
+      "min_bytes": 1000,
+      "must_contain": ["PresetStore", "test_apply_preserves_user_override"]
+    },
+    {
+      "path": "backend/tests/test_e_series_tools.py",
+      "min_bytes": 1500,
+      "must_contain": ["E_SERIES_TOOLS", "test_i10_router_composition_unchanged_seed"]
+    }
+  ]
+}
